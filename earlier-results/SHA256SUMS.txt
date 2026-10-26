@@ -1,0 +1,2 @@
+1faf966c8127b4ffa2c5aa0e439e0c2c1d724afbe3928cb4afaffc7279871e2a  mordell-earlier-proofs-2026-10-27.zip
+5664b6970a3508365c6599a2f79e0f8a2f3d12d79f141e351a4c902b88f4ebb7  five_point_proof.pdf

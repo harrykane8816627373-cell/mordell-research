@@ -1,0 +1,119 @@
+{
+  "scope": "Native file index; archive internal paths and source transforms are in its source_provenance.json",
+  "files": [
+    {
+      "path": "algebra_identity_check.py",
+      "bytes": 5570,
+      "sha256": "f4424ddbe43ffb601af5301d0f180276c1483a68e5fa70259fd8db8b17f6d367",
+      "git_blob_sha": "2865930d0840cd8c21271736ddeb60f5bf884d0e"
+    },
+    {
+      "path": "five_point_method.md",
+      "bytes": 7765,
+      "sha256": "a6d9c5c22fe847e8c6570961d565aa7de631cf96daa3d3633c65210844b39520",
+      "git_blob_sha": "0adee60ebac31b1fe70bb151d1c084e2de950997"
+    },
+    {
+      "path": "five_point_proof.pdf",
+      "bytes": 390344,
+      "sha256": "5664b6970a3508365c6599a2f79e0f8a2f3d12d79f141e351a4c902b88f4ebb7",
+      "git_blob_sha": "f5a8d1a49f69f646f479070836e0adfeb657ca3f"
+    },
+    {
+      "path": "five_point_proof.tex",
+      "bytes": 42697,
+      "sha256": "60bef83fb51e70badd39998da417678a8e3b0ef4281a2a8e0feca1bf791fee40",
+      "git_blob_sha": "f6641e52713e61a828a32496cb4de7e2306702a1"
+    },
+    {
+      "path": "general_n_algebraic.tex",
+      "bytes": 7735,
+      "sha256": "f98d43b879598bf761ef6b8cc634eb354718d7a087afc1967cb26239a0ce7419",
+      "git_blob_sha": "f8317b7e2081554814e3beee612cdcfe14ef90f5"
+    },
+    {
+      "path": "general_n_notes.tex",
+      "bytes": 382476,
+      "sha256": "fddeca4f8c6ef10535d1c04e86402d0e4e6c4a2563f0c175b43f747d129a1167",
+      "git_blob_sha": "3da95625e54c3eabfd70e7c70e4d294e0dc9ffe0"
+    },
+    {
+      "path": "general_n_proof.md",
+      "bytes": 15380,
+      "sha256": "eac863666e7e1188f7b20221fce1095b934b520c1478940ceca618f2951948e1",
+      "git_blob_sha": "836390c315d9f80ee4550eafb75f32225e9471dc"
+    },
+    {
+      "path": "general_n_structural.tex",
+      "bytes": 10546,
+      "sha256": "d092b015424c395d33d294112d4c12867265fb6af8253f337b15e7f06868fae1",
+      "git_blob_sha": "23ff18c736d38dcbb6dbb5022af81d678cbbf8f0"
+    },
+    {
+      "path": "generalization_check.py",
+      "bytes": 7215,
+      "sha256": "1a1037cf0ba84ceb20b8e0f4b8cfaacb3b81c095c7d0ffcf63719a52e2bc3739",
+      "git_blob_sha": "a4aa7862cf995728f9eda75f43bdc5e0b8fa35f5"
+    },
+    {
+      "path": "mordell-earlier-proofs-2026-10-27.zip",
+      "bytes": 1398131,
+      "sha256": "1faf966c8127b4ffa2c5aa0e439e0c2c1d724afbe3928cb4afaffc7279871e2a",
+      "git_blob_sha": "b6fd3b4608ee8f1b694419d9b95d4047e5ffaa49"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4650,
+      "sha256": "e8e40043a403b59d94a1a3475c11bcc4c5fd3355196263b6f771dc426e13abe9",
+      "git_blob_sha": "4c64c4ef8e4deb2ff60498b8fef2444b555a5c7b"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "bytes": 193,
+      "sha256": "0757422d57d3f76888c617f274dd8375c077052f7ae9c7c93595ec6e81874f50",
+      "git_blob_sha": "22ed8652a453f3053d89fbae4bfc49dc076d5184"
+    },
+    {
+      "path": "six_seven_coverage_audit.md",
+      "bytes": 8831,
+      "sha256": "785871fec5c986c02c738c9432c00c9f6aa1016cef43eb2a7a280f51188f5158",
+      "git_blob_sha": "72bcfbbe86b83d37206e9e13866add92debadb06"
+    },
+    {
+      "path": "six_seven_origin_proof.tex",
+      "bytes": 4030,
+      "sha256": "4ed25c3228f195e6ae41a0c817f6bd432d7413df37f62b5f68de930b0f8439c2",
+      "git_blob_sha": "688426f9fccaef3d58fe0936f275d792b0e47af1"
+    },
+    {
+      "path": "six_seven_proof.tex",
+      "bytes": 49079,
+      "sha256": "3e4b3ed41f9fea320ab21909747e7dcc93fa9a6fb21a03c140f7fbe3fb71ad06",
+      "git_blob_sha": "f4cbf50799a0d17bc59acb440570a40d1f75f5c0"
+    },
+    {
+      "path": "six_seven_proof_fragment.tex",
+      "bytes": 11797,
+      "sha256": "f07db2756fd80198adb474ff88763699a921ef755ce10e3a8778dce9738cd601",
+      "git_blob_sha": "2e6ee41b854b319302cbfc80927c8fa2f887f597"
+    },
+    {
+      "path": "six_seven_verification.md",
+      "bytes": 6744,
+      "sha256": "eb503f90a87578e55347b7e4651a02ae77d2d703f3bdffa664a1a5e27fdb686b",
+      "git_blob_sha": "f5f0f4eb7177befa621bf9800b37c61036bc73c7"
+    },
+    {
+      "path": "verification_report.json",
+      "bytes": 1998,
+      "sha256": "6e860d71448cc2be4e4126ccdb9771a2d0950c860099598e0bec784045ee4ab7",
+      "git_blob_sha": "8859a66f5567519edb86348c9c76aaac8bcb56cd"
+    },
+    {
+      "path": "verify_mordell.py",
+      "bytes": 11783,
+      "sha256": "5be8951e66b7f205c8b47fb5c249f462d13bd30c62aa6525d6ee5259395f6319",
+      "git_blob_sha": "03decedb536a6c439a7fba33fbc1149da0980053"
+    }
+  ]
+}

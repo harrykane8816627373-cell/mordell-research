@@ -1,0 +1,1114 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={A second-order and moment proof of the five-point Mordell inequality},
+  pdfauthor={Fengcan Jiang}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\pos}[1]{[#1]_+}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\diag}{\operatorname{diag}}
+\numberwithin{equation}{section}
+\title{A second-order and moment proof\\of the five-point Mordell inequality}
+\author{Fengcan Jiang}
+\date{October 3, 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a computer-assisted proof of the sharp five-point Mordell
+discriminant inequality by using second-order conditions and low-degree
+moments at a maximizer. A general variational estimate bounds the variance
+of the squared radii and the second complex power sum. For five points,
+a two-dimensional projection supplies a constraint connecting the third
+and fourth power sums. A quartic majorant for the logarithm then reduces
+the global comparison to a two-variable inequality. Near the unit circle,
+an angular concavity estimate and a weighted Laplacian give a separate
+exclusion argument whose constants are verified algebraically.
+One scalar branch is excluded by a uniform rational estimate; the
+remaining branch is certified by exact rational interval arithmetic
+in a short Python program using only the standard library.
+The argument is independent of the classification of stationary
+configurations. We also give a moment-matrix hierarchy for arbitrary
+point counts and an explicit local radial gap for six points.
+\end{abstract}
+
+\noindent\textbf{Keywords:} discriminant inequality; Vandermonde product;
+second-order optimality; moment bounds; exact interval arithmetic.
+
+\noindent\textbf{2020 Mathematics Subject Classification:}
+26D15, 30C10, 65G30.
+
+\section{Introduction}
+For $n\ge2$ and $z=(z_1,\ldots,z_n)\in\C^n$, write
+\[
+ \Delta_n(z)=\prod_{i<j}|z_i-z_j|^2,\qquad
+ \mathcal S_n=\left\{z:\sum_i|z_i|^2=n\right\}.
+\]
+The problem considered by Mordell \cite{Mordell} asks when the regular
+$n$-gon on the unit circle maximizes $\Delta_n$ on $\mathcal S_n$.
+For a monic polynomial with roots $z_i$, this product is the absolute
+value of its discriminant.
+
+Wang \cite{Wang} gives a proof of the five-point inequality by exact
+algebraic classification of the stationary equations, followed by
+discriminant comparison. The present paper gives a different proof of
+the same sharp inequality. Its starting point is the second-order
+condition at a maximizer. The analytic reduction uses a complex
+symmetric matrix, a two-dimensional projection, and a quartic logarithm
+majorant; the final certificate involves only two real variables.
+
+\begin{theorem}[Five-point inequality; cf.\ \cite{Wang}]
+\label{thm:main}
+If $z_1,\ldots,z_5\in\C$ and $\sum_i|z_i|^2=5$, then
+\begin{equation}\label{eq:main}
+ \Delta_5(z)\le5^5.
+\end{equation}
+Equality holds precisely when, after a permutation,
+$z_j=e^{i\theta}e^{2\pi i(j-1)/5}$ for some $\theta\in\R$.
+\end{theorem}
+
+The proof is computer-assisted. Every reduction from
+\eqref{eq:main} to the scalar inequalities is given below.
+The ancillary program \texttt{verify\_mordell.py} certifies the constants
+and the final scalar inequality with rational arithmetic and integer
+square roots. It requires no computer algebra system or numerical
+optimizer. A separate ancillary script checks the distance-moment
+expansions and the polynomial encoding.
+
+The general second-order estimates admit a hierarchy of higher-moment
+constraints, developed in Section \ref{sec:extensions}. The local
+angular argument also extends to six points. These extensions concern
+the structure of local maximizers; the bound $\Delta_n\le n^n$ itself
+fails for $n\ge6$, as shown by Chalk \cite{Chalk}.
+
+\section{Second-order estimates}
+\subsection{A general radial bound}
+We use the Hermitian inner product $\ip{x}{y}=\sum_i\overline{x_i}y_i$;
+a superscript $\mathsf T$ denotes transpose, and $*$ denotes conjugate
+transpose. Powers of vectors below are taken coordinatewise.
+
+\begin{proposition}\label{prop:general}
+Let $n\ge2$, and let $z$ be a collision-free local maximizer of
+$\Delta_n$ on $\mathcal S_n$. Set
+\[
+ t_i=|z_i|^2,\quad s=\sum_i(t_i-1)^2,\quad
+ p_2=\sum_i z_i^2,\quad \lambda=\frac{n-1}{2}.
+\]
+Then
+\begin{equation}\label{eq:stationary-general}
+ \sum_{j\ne i}\frac1{z_i-z_j}=\lambda\overline{z_i},
+ \qquad \sum_i z_i=0.
+\end{equation}
+The complex symmetric matrix
+\begin{equation}\label{eq:B}
+ B_{ij}=-\frac1{(z_i-z_j)^2}\quad(i\ne j),\qquad
+ B_{ii}=\sum_{j\ne i}\frac1{(z_i-z_j)^2}
+\end{equation}
+satisfies
+\begin{equation}\label{eq:B-general}
+ B\one=0,\qquad Bz=\lambda\overline z,\qquad
+ \norm{B}_{\op}\le\lambda.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:radial-general}
+ 3ns+|p_2|^2\le n^2,\qquad
+ |z_i-z_j|^2\ge\frac{2n}{(n-1)^2}.
+\end{equation}
+If $n\ge3$, the second power sum also satisfies
+\begin{equation}\label{eq:power-radial}
+ |p_2|^2\le
+ \frac{ns(n+s)}{s+n(n-2)^2/(n-1)^2}.
+\end{equation}
+For the real weighted Laplacian with weights
+$|z_i-z_j|^{-2}$, one has
+\begin{equation}\label{eq:L-general}
+ Lt=(n-1)(t-\one).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Lagrange multipliers for $\log\Delta_n$ give the first equation
+in \eqref{eq:stationary-general} with a real multiplier.
+Multiplying by $z_i$ and summing yields
+$\lambda n=n(n-1)/2$; summing the equations gives the zero centroid.
+The first two identities in \eqref{eq:B-general} follow directly.
+
+For $\ip{z}{h}=0$, every phase multiple of $h$ is a real tangent vector
+to $\mathcal S_n$. The second derivative of the Lagrangian is
+\[
+ -2\Rea(h^{\mathsf T}Bh)-2\lambda\norm{h}^2.
+\]
+Its nonpositivity for every phase implies
+$|h^{\mathsf T}Bh|\le\lambda\norm h^2$.
+Write any vector as $h+\alpha z$ with $\ip z h=0$.
+Since $h^{\mathsf T}Bz=0$ and $z^{\mathsf T}Bz=\lambda n$,
+the same quadratic bound holds for all vectors.
+For unit vectors $x,y$, the identity
+\[
+4x^{\mathsf T}By=(x+y)^{\mathsf T}B(x+y)
+ -(x-y)^{\mathsf T}B(x-y)
+\]
+and the parallelogram law give $|x^{\mathsf T}By|\le\lambda$.
+Taking the supremum proves the operator norm bound.
+
+Pairwise expansion gives
+$Bz^{\circ2}=(n-1)(t-\one)$. Applying \eqref{eq:B-general} to
+$z^{\circ2}-p_2\one/n$ yields
+\[
+ (n-1)^2s\le\lambda^2
+ \left(\sum_i t_i^2-\frac{|p_2|^2}{n}\right).
+\]
+As $\sum_i t_i^2=n+s$, this is the first bound in
+\eqref{eq:radial-general}. To sharpen the entry bound, let
+$P_0=I-\one\one^{\mathsf T}/n$. Since $B=P_0BP_0$ and
+$\norm{P_0e_i}^2=(n-1)/n$, we have
+$|B_{ij}|\le\lambda(n-1)/n$.
+This proves the second inequality.
+To prove \eqref{eq:power-radial}, multiply the stationary equations
+by $z_i^3$ and sum. Since $\sum_i z_i=0$, pairwise expansion gives
+$\sum_i t_i z_i^2=(2n-3)p_2/(n-1)$. Thus
+\[
+ \ip{t-\one}{z^{\circ2}-p_2\one/n}
+   =\frac{n-2}{n-1}p_2.
+\]
+Cauchy--Schwarz yields
+$((n-2)/(n-1))^2|p_2|^2
+ \le s(n+s-|p_2|^2/n)$.
+Rearranging proves \eqref{eq:power-radial}, including $s=0$.
+Finally, multiply \eqref{eq:stationary-general} by $z_i$, take real
+parts, and use
+$2\Rea(z_i/(z_i-z_j))=1+(t_i-t_j)/|z_i-z_j|^2$.
+This gives \eqref{eq:L-general}.
+\end{proof}
+
+\subsection{Five-point moments and a Gram matrix}
+From now on $n=5$, and we work at a collision-free local maximizer.
+In addition to $t_i$ and $s$, put
+\begin{equation}\label{eq:notation}
+\begin{gathered}
+ T=\sum_i t_i^2=5+s,\qquad U=\sum_i t_i^3,\qquad V=\sum_i t_i^4,\\
+ p_j=\sum_i z_i^j,\quad q=|p_2|^2,\quad p=|p_3|^2,\quad
+ w=|p_4|,\quad m=\sum_i t_i^2z_i^2.
+\end{gathered}
+\end{equation}
+Proposition \ref{prop:general} gives
+\begin{equation}\label{eq:domain}
+ 0\le s\le\frac53,\qquad
+ 0\le q\le \min\left\{25-15s,\frac{80s(5+s)}{45+16s}\right\}.
+\end{equation}
+Multiplication of the stationary equations by $z_i^2,z_i^3,z_i^4$,
+followed by summation and pairing, gives
+\begin{equation}\label{eq:mixed}
+ \sum_i t_i z_i=0,\qquad
+ \sum_i t_i z_i^2=\frac74p_2,\qquad
+ \sum_i t_i z_i^3=\frac32p_3.
+\end{equation}
+For example, for the middle identity the pair sum is
+$4p_2+\sum_{i<j}z_i z_j=7p_2/2$.
+Direct expansion also gives
+\begin{equation}\label{eq:B-powers}
+ Bz^{\circ2}=4(t-\one),\qquad
+ Bz^{\circ4}=(8t-9\one)\circ z^{\circ2}-p_2\one.
+\end{equation}
+
+The matrix $4I-B^*B$ is positive semidefinite.
+Let $D$ be its Gram matrix on the two vectors
+$z^{\circ2}-p_2\one/5$ and $z^{\circ4}-p_4\one/5$.
+Using \eqref{eq:mixed}--\eqref{eq:B-powers}, its entries are
+\begin{equation}\label{eq:D}
+\begin{aligned}
+ D_{22}&=20-12s-\frac45q,\\
+ D_{44}&=-60V+144U-81T+5q-\frac45w^2,\\
+ D_{24}&=-28m+83p_2-\frac45\overline{p_2}p_4.
+\end{aligned}
+\end{equation}
+In particular,
+\begin{equation}\label{eq:D-psd}
+ D_{22},D_{44}\ge0,\qquad |D_{24}|^2\le D_{22}D_{44}.
+\end{equation}
+
+\section{A two-dimensional projection constraint}
+\begin{lemma}\label{lem:projection}
+For $s>0$ at a collision-free local maximizer,
+\begin{equation}\label{eq:w-lower}
+ w\ge T-\frac{2q}{5}-\frac{9q}{8s}-\frac{p}{5-\sqrt q}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+By \eqref{eq:domain}, $q<25$.
+Thus $E=\operatorname{span}_{\C}\{\one,z,\overline z\}$ has
+dimension three: $\one$ is orthogonal to the other two vectors, whose
+Gram determinant is $25-q>0$.
+The vector $u=t-\one$ is real, lies in $E^\perp$, and has norm squared $s$.
+Let $v$ be the orthogonal projection of $z^{\circ2}$ onto $E^\perp$.
+The Gram matrix of $z,\overline z$ is
+$\left(\begin{smallmatrix}5&\overline{p_2}\\p_2&5\end{smallmatrix}\right)$.
+Since $\ip z {z^{\circ2}}=0$ and
+$\ip{\overline z}{z^{\circ2}}=p_3$, the linear part of the
+projection onto $E$ is
+\[
+ \frac{-\overline{p_2}p_3z+5p_3\overline z}{25-q}.
+\]
+Consequently,
+\begin{equation}\label{eq:projection-identities}
+\begin{aligned}
+ \norm v^2&=T-\frac q5-\frac{5p}{25-q},&
+ \ip u v&=\frac34p_2,\\
+ v^{\mathsf T}v&=p_4-\frac{p_2^2}{5}
+    +\frac{\overline{p_2}p_3^2}{25-q}.
+\end{aligned}
+\end{equation}
+The conjugation-invariant space $E^\perp$ has a real orthonormal basis
+$u/\sqrt s,e$. Write $v=a\,u/\sqrt s+b e$.
+Then $|a|^2=9q/(16s)$ and
+\[
+ |v^{\mathsf T}v|=|a^2+b^2|
+ \ge\norm v^2-2|a|^2
+ =\norm v^2-\frac{9q}{8s}.
+\]
+Combine this with \eqref{eq:projection-identities} and the triangle
+inequality. The coefficient of $p$ becomes
+$(5+\sqrt q)/(25-q)=1/(5-\sqrt q)$, proving the assertion.
+\end{proof}
+
+\section{Excluding small nonzero radial variance}
+\begin{proposition}[Local radial gap]\label{prop:gap}
+A collision-free local maximizer satisfies either $s=0$ or $s>1/20$.
+\end{proposition}
+\begin{proof}
+Suppose $0<s\le1/20$, and write $z_i=r_i e^{i\theta_i}$.
+For $\delta_i=t_i-1$, we have $\sum_i\delta_i=0$ and
+$\sum_i\delta_i^2=s$. Hence
+\begin{equation}\label{eq:local-radii}
+ t_i\ge1-\sqrt{4s/5}\ge\frac45,\qquad
+ \frac78<r_ir_j<\frac98.
+\end{equation}
+For completeness, set $a=(t_i+t_j)/2$, $b=(t_i-t_j)/2$.
+Cauchy--Schwarz for the remaining three deviations gives
+$s\ge(10/3)(a-1)^2+2b^2$.
+It follows that
+$t_i t_j\ge a^2-s/2+(5/3)(a-1)^2$.
+This last expression is increasing for
+$a\ge1-\sqrt{3s/10}>7/8$, since its derivative is $(16a-10)/3$.
+At the left endpoint it equals $a^2$, so
+$r_ir_j\ge1-\sqrt{3s/10}>7/8$.
+The upper bound follows from $r_ir_j\le a\le1+\sqrt{3s/10}<9/8$;
+here $(1/8)^2>3/200$.
+
+Let $\overline r=5^{-1}\sum_i r_i$ and
+$\sigma=\sum_i(r_i-\overline r)^2$.
+Using $(r_i+r_j)^2\ge4r_ir_j>7/2$,
+\begin{equation}\label{eq:sigma}
+ \sigma=\frac15\sum_{i<j}
+       \frac{(t_i-t_j)^2}{(r_i+r_j)^2}
+ <\frac{2s}{7}\le\frac1{70},\qquad
+ (r_i-r_j)^2<\frac{4s}{7}\le\frac1{35}.
+\end{equation}
+All squared distances are at least $1/2$ by
+Proposition \ref{prop:general}. Thus
+\[
+ \sin^2\frac{\theta_i-\theta_j}{2}
+ =\frac{|z_i-z_j|^2-(r_i-r_j)^2}{4r_ir_j}
+ >\frac{11}{105}>\frac1{10}.
+\]
+The angles are distinct and all the corresponding half-angle cotangents
+have absolute value less than $3$.
+
+Lift and order the angles so that
+$\theta_1<\cdots<\theta_5<\theta_1+2\pi$, and put
+\[
+ \mathcal C(\theta)=\sum_{i<j}
+       \log|e^{i\theta_i}-e^{i\theta_j}|^2.
+\]
+For $\sum_i h_i=0$,
+\[
+ h^{\mathsf T}\nabla^2\mathcal C(\theta)h
+ =-\frac12\sum_{i<j}
+   \csc^2\frac{\theta_i-\theta_j}{2}(h_i-h_j)^2
+ \le-\frac52\norm h^2.
+\]
+Let $\theta^*$ be the equally spaced angles with the same mean, and let
+$\eta=\norm{\theta-\theta^*}$. The ordered region of span less than
+$2\pi$, intersected with the fixed-mean hyperplane, is convex.
+Integration of the preceding Hessian bound along the connecting segment
+gives
+\begin{equation}\label{eq:eta-gradient}
+ \eta\le\frac25\norm{\nabla\mathcal C(\theta)}.
+\end{equation}
+The angular stationary equations for the actual radii imply
+\begin{equation}\label{eq:angular-stationary}
+ \frac{\partial\mathcal C}{\partial\theta_i}
+ =\sum_{j\ne i}\cot\frac{\theta_i-\theta_j}{2}
+       \frac{(r_i-r_j)^2}{|z_i-z_j|^2}.
+\end{equation}
+The incidence matrix of $K_5$ has operator norm $\sqrt5$.
+For $v_i=r_i-\overline r$, the zero sum gives
+$\max_i v_i^2\le4\sigma/5$, and expansion yields
+$\sum_{i<j}(v_i-v_j)^4=5\sum_i v_i^4+3\sigma^2\le7\sigma^2$.
+Combining these observations with
+\eqref{eq:eta-gradient}--\eqref{eq:angular-stationary}, if squared
+distances are at least $d$ and cotangents at most $h$ in absolute value,
+then
+\begin{equation}\label{eq:eta-basic}
+ \eta\le\gamma\sigma h/d,\qquad \gamma=\frac{2\sqrt{35}}5.
+\end{equation}
+Initially $d=1/2,h=3$ and \eqref{eq:sigma} give
+$\eta<3\gamma/35<21/100$.
+
+We next use only algebraic constants. Put
+\begin{equation}\label{eq:algebraic-trig}
+\begin{gathered}
+ S_1=\sqrt{\frac{5-\sqrt5}{8}},\quad C_1=\frac{1+\sqrt5}{4},
+ \qquad
+ S_2=\sqrt{\frac{5+\sqrt5}{8}},\quad C_2=\frac{\sqrt5-1}{4},\\
+ P_j(u)=S_j(1-u^2/4)-C_j u/\sqrt2,\qquad
+ N(u)=C_1+S_1u/\sqrt2.
+\end{gathered}
+\end{equation}
+Here $S_j=\sin(j\pi/5)$, $C_j=\cos(j\pi/5)$.
+The inequalities $\cos x\ge1-x^2/2$ and $\sin x\le x$ for $x\ge0$
+give
+\[
+ \sin(j\pi/5-u/\sqrt2)\ge P_j(u),\qquad
+ \cos(\pi/5-u/\sqrt2)\le N(u).
+\]
+If $\eta\le u\le21/100$, each pairwise angular error is at most
+$\sqrt2u$. Consequently every absolute half-angle sine is at least
+$P_1(u)>0$ and the absolute cotangent is at most $N(u)/P_1(u)$.
+Equations \eqref{eq:local-radii}, \eqref{eq:sigma}, and
+\eqref{eq:eta-basic} then give
+\begin{equation}\label{eq:algebraic-iteration}
+ \eta<\frac{\gamma N(u)}{245P_1(u)^3}.
+\end{equation}
+The exact algebraic checks in the ancillary program prove
+\begin{equation}\label{eq:two-steps}
+ \frac{\gamma N(21/100)}{245P_1(21/100)^3}<\frac9{100},
+ \qquad
+ \frac{\gamma N(9/100)}{245P_1(9/100)^3}<\frac3{50}.
+\end{equation}
+Thus $\eta<3/50$. The same algebraic checks give
+\begin{equation}\label{eq:weights}
+ \frac{2}{7P_1(3/50)^2}<\frac{19}{20},\qquad
+ \frac{2}{7P_2(3/50)^2}<\frac13.
+\end{equation}
+These bound the inverse squared distances on consecutive pairs
+and diagonals in the cyclic order, respectively.
+
+Let $L$ be the real Laplacian with weights $|z_i-z_j|^{-2}$.
+Comparison in the positive semidefinite order with a pentagon of
+edge weight $19/20$ and diagonal weight $1/3$ gives
+\begin{equation}\label{eq:spectral-gap}
+ \lambda_{\max}(L)\le
+ \frac{19}{20}\frac{5+\sqrt5}{2}
+ +\frac13\frac{5-\sqrt5}{2}<4.
+\end{equation}
+The two Laplacians of the pentagon and its complement are simultaneously
+diagonalized by the discrete Fourier basis; their nonzero eigenvalues
+are $(5\pm\sqrt5)/2$ in complementary order.
+However, \eqref{eq:L-general} gives $L(t-\one)=4(t-\one)$.
+As $s>0$, this contradicts \eqref{eq:spectral-gap}.
+\end{proof}
+
+\section{A quartic logarithm majorant}
+Put
+\begin{equation}\label{eq:majorant-constants}
+ a=\frac{5-\sqrt5}{2},\quad b=\frac{5+\sqrt5}{2},\quad
+ c=\frac15-\frac{2}{5\sqrt5}\log\frac ba,\quad k=\frac9{2500}.
+\end{equation}
+The following bounds are certified in the ancillary program:
+\begin{equation}\label{eq:c-bounds}
+ \frac{22}{3}k<c<C:=\frac{278365}{10000000}<\frac{17}{2}k.
+\end{equation}
+Let $H$ be the cubic interpolating $\log x$ and its derivative at $a,b$.
+Solving the four interpolation conditions gives
+\begin{equation}\label{eq:H}
+ H(x)=\frac12\log5-\frac74-\frac{25c}{4}
+ +(1+15c)x-\left(\frac1{10}+\frac{15c}{2}\right)x^2+cx^3.
+\end{equation}
+
+\begin{lemma}\label{lem:majorant}
+For $0<x\le R:=41/6$,
+\begin{equation}\label{eq:majorant}
+ \log x\le H(x)-k(x^2-5x+5)^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Add the node $R$ to the double nodes $a,b$.
+The quartic Hermite interpolant is
+$H(x)-k_R(x^2-5x+5)^2$, where
+\[
+ k_R=\frac{H(R)-\log R}{(R^2-5R+5)^2}.
+\]
+The fifth derivative of $\log x$ is positive.
+Its Hermite remainder has the sign of
+$(x-a)^2(x-b)^2(x-R)$, hence is nonpositive for $0<x\le R$.
+The exact series check in Appendix \ref{app:certificate} proves
+$k_R>k$. This yields \eqref{eq:majorant}.
+\end{proof}
+
+All squared distances at a local maximizer belong to this range:
+\[
+ |z_i-z_j|^2\le2(t_i+t_j)
+ \le4+2\sqrt{6s/5}\le4+2\sqrt2<41/6.
+\]
+Write $d_{ij}=|z_i-z_j|^2$ and
+$\mathcal Q=\sum_{i<j}(d_{ij}^2-5d_{ij}+5)^2$.
+Expansion using \eqref{eq:mixed} gives
+\begin{equation}\label{eq:distance-moments}
+\begin{aligned}
+ \sum_{i<j}d_{ij}&=25,\\
+ \sum_{i<j}d_{ij}^2&=5T+50+q,\\
+ \sum_{i<j}d_{ij}^3&=5U+45T+\frac{21}{2}q-p,\\
+ \sum_{i<j}d_{ij}^4&=5V+80U+18T^2+49q-12p+w^2
+                 +12\Rea(m\overline{p_2}).
+\end{aligned}
+\end{equation}
+These identities can be checked uniformly by putting
+$M_{\alpha\beta}=\sum_i z_i^\alpha\overline{z_i}^{\,\beta}$ and using
+\begin{equation}\label{eq:moment-expansion}
+ \sum_{i<j}d_{ij}^r=
+ \frac12\sum_{\alpha,\beta=0}^r(-1)^{\alpha+\beta}
+ \binom r\alpha\binom r\beta
+ M_{r-\alpha,r-\beta}M_{\alpha\beta}.
+\end{equation}
+
+The regular pentagon has five squared distances $a$ and five $b$.
+Subtract its value in \eqref{eq:majorant} and use
+\eqref{eq:distance-moments} to obtain
+\begin{equation}\label{eq:log-bound}
+ \log\Delta_5-5\log5\le
+ \left(-\frac12+\frac{15c}{2}\right)s+5c(U-5)
+ +\left(-\frac1{10}+3c\right)q-cp-k\mathcal Q.
+\end{equation}
+The moment expansion of $\mathcal Q$ is
+\begin{equation}\label{eq:Q-expand}
+\begin{aligned}
+ \mathcal Q={}&5V+30U+18T^2-275T+750-21q-2p+w^2\\
+             &+12\Rea(m\overline{p_2}).
+\end{aligned}
+\end{equation}
+Set
+\[
+ R_0=5V+30U+18T^2-275T+750,\qquad
+ D_0=-60V+144U-81T+5q.
+\]
+Solving \eqref{eq:D} for $m$ and applying \eqref{eq:D-psd} gives
+\begin{equation}\label{eq:Q-lower}
+ \mathcal Q\ge R_0+\frac{102}{7}q-2p+w^2-\frac{12}{35}qw
+       -\frac37\sqrt{qD_{22}D_0}.
+\end{equation}
+Indeed, the contribution of $m$ is
+\[
+12\Rea(m\overline{p_2})
+ =\frac{249}{7}q-\frac{12}{35}\Rea(\overline{p_2}^{\,2}p_4)
+ -\frac37\Rea(D_{24}\overline{p_2}).
+\]
+Also $D_0=D_{44}+4w^2/5\ge D_{44}\ge0$, so replacing $D_{44}$
+by $D_0$ in the square root weakens the lower bound in the required
+direction.
+
+\section{Reduction to two variables}
+\subsection{Eliminating the complex power sums}
+Assume $s>0$. Put $L_0=T-2q/5-9q/(8s)$ and $w_0=6q/35$.
+Lemma \ref{lem:projection} implies
+$p\ge(5-\sqrt q)\pos{L_0-w}$.
+The expression to be bounded below after combining
+\eqref{eq:log-bound} and \eqref{eq:Q-lower} is
+$k(w^2-12qw/35)+(c-2k)p$.
+It satisfies
+\begin{equation}\label{eq:eliminate-pw}
+ k(w^2-12qw/35)+(c-2k)p
+ \ge k\left(\pos{T-\left(\frac47+\frac9{8s}\right)q}^{\,2}
+                  -\frac{36q^2}{1225}\right).
+\end{equation}
+To see this, complete the square at $w_0$.
+If $L_0\le w_0$, the unconstrained minimum at $w_0$ is feasible.
+If $L_0>w_0$, the minimum is at $L_0$ provided
+\[
+ L_0-w_0\le\frac{c-2k}{2k}(5-\sqrt q).
+\]
+Here $L_0>0$ implies
+$q<T/(2/5+9/(8s))\le800/129<25/4$.
+By \eqref{eq:c-bounds}, the last right-hand side is greater than
+$(8/3)(5/2)=20/3\ge T\ge L_0-w_0$.
+This proves the asserted piecewise minimum.
+
+\subsection{Eliminating the radial moments}
+Cauchy--Schwarz and projection of $t^{\circ2}$ onto the orthogonal
+vectors $\one,t-\one$ give
+\begin{equation}\label{eq:UV}
+ U\ge\frac{T^2}{5},\qquad
+ V\ge V_0(U,s):=\frac{T^2}{5}+\frac{(U-T)^2}{s}.
+\end{equation}
+The zero-sum deviations $\delta_i=t_i-1$ also satisfy
+\[
+ \sum_i\delta_i^3\ge-\frac3{\sqrt{20}}s^{3/2}.
+\]
+For a proof, at an extremum of the third moment on
+$\sum\delta_i=0$, $\sum\delta_i^2=s$, the multiplier equation is a
+quadratic in $\delta_i$. Thus at most two values occur; checking
+multiplicities $1+4$ and $2+3$ gives the stated sharp lower bound.
+Consequently,
+\begin{equation}\label{eq:U0}
+ U\ge U_0(s)=
+ \begin{cases}
+ 5+3s-\dfrac3{\sqrt{20}}s^{3/2},&0<s\le5/4,\\[2pt]
+ (5+s)^2/5,&5/4\le s\le5/3.
+ \end{cases}
+\end{equation}
+The two candidates meet at $s=5/4$, as follows by setting
+$x=\sqrt{s/20}$ and factoring
+$1-3x-4x^2=(1-4x)(1+x)$.
+
+After \eqref{eq:eliminate-pw}, the right-hand side of the logarithm
+bound decreases with $V$: its nonradical derivative is $-5k$ and
+the radicand decreases with $V$.
+We may therefore set $V=V_0(U,s)$.
+For $U\ge U_0(s)$,
+\[
+ \partial_U V_0=\frac{2(U-T)}s
+ \ge\begin{cases}
+ 4-3\sqrt{s/5}\ge5/2,&s\le5/4,\\
+ 2(5+s)/5\ge5/2,&s\ge5/4.
+ \end{cases}
+\]
+Hence $\partial_U D_0\le-6$, while the remaining derivative is at most
+$5c-(85/2)k<0$. We may also set $U=U_0(s)$.
+Both downward substitutions increase $D_0$, preserving its
+nonnegativity along the substitution path.
+Finally the resulting upper bound increases with $c$, with derivative
+$(15/2)s+5(U_0-5)+3q>0$, so we may replace $c$ by the rational upper
+bound $C$ in \eqref{eq:c-bounds}.
+
+Define
+\begin{equation}\label{eq:scalar-definitions}
+\begin{gathered}
+ U_*=U_0(s),\quad V_*=\frac{(5+s)^2}{5}
+                  +\frac{(U_*-5-s)^2}{s},\\
+ A_q=\frac1{10}-3C+\frac{102k}{7},\quad
+ B_q=\frac{36k}{1225},\quad D_q=\frac{3k}{7},\\
+ f(s)=\left(-\frac12+\frac{15C}{2}\right)s+5C(U_*-5)\\
+ \hspace{15mm}-k\{5V_*+30U_*+18(5+s)^2-275(5+s)+750\},\\
+ D_*(s)=-60V_*+144U_*-81(5+s).
+\end{gathered}
+\end{equation}
+We have proved the following scalar reduction.
+
+\begin{proposition}\label{prop:scalar}
+At a collision-free local maximizer with $s>0$,
+\begin{equation}\label{eq:F-bound}
+ \log\Delta_5-5\log5\le F(s,q),
+\end{equation}
+where
+\begin{equation}\label{eq:F}
+\begin{aligned}
+ F(s,q)={}&f(s)-A_q q+B_q q^2\\
+ &+D_q\sqrt{q(20-12s-4q/5)(D_*(s)+5q)}\\
+ &-k\pos{5+s-\left(\frac47+\frac9{8s}\right)q}^{\,2}.
+\end{aligned}
+\end{equation}
+The parameters satisfy \eqref{eq:domain}, and both nontrivial factors
+inside the square root are nonnegative.
+\end{proposition}
+
+\section{Exact certificate and completion of the proof}
+\begin{lemma}[Scalar certificate]\label{lem:certificate}
+With the constants in \eqref{eq:scalar-definitions},
+\begin{equation}\label{eq:certificate}
+ F(s,q)<0\qquad
+ \left(\frac1{20}\le s\le\frac53,\quad
+ 0\le q\le\min\left\{25-15s,\frac{80s(5+s)}{45+16s}\right\}\right).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We treat \eqref{eq:certificate} in two regions:
+\[
+ \mathrm A:\ s=20x^2,\quad\frac1{20}\le x\le\frac14;
+ \qquad
+ \mathrm B:\ \frac54\le s\le\frac53.
+\]
+In A, $U_*=5+60x^2-60x^3$ and
+$V_*=5+120x^2-240x^3+260x^4$.
+In B, $U_*=(5+s)^2/5$ and $V_*=(5+s)^3/25$.
+The endpoint $20(1/20)^2=1/20$ exactly matches the local gap,
+and the regions meet at $s=5/4$.
+
+Region A starts with its containing rectangle and $0\le q\le25$.
+For a rectangle $[x_l,x_h]\times[q_l,q_h]$, put
+$s_{\min}=20x_l^2$, $s_{\max}=20x_h^2$, and replace $q_h$ by
+\[
+ \min\left\{q_h,25-15s_{\min},
+            \frac{80s_{\max}(5+s_{\max})}{45+16s_{\max}}\right\}.
+\]
+The last expression is justified by \eqref{eq:power-radial} and the
+monotonicity of $80s(5+s)/(45+16s)$ for $s\ge0$.
+Discard an empty rectangle. Evaluate the interval form of
+\eqref{eq:F}, clipping its radicand factors to their nonnegative parts.
+If the upper endpoint is negative, accept the rectangle.
+Otherwise bisect its longer normalized side, using scales $1/5$ and
+$1$. The depth-first search exhausts all rectangles.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Region & Visited nodes & Accepted rectangles & Maximum depth\\
+\midrule
+A & 183 & 92 & 21\\
+\bottomrule
+\end{tabular}
+\end{center}
+No rectangles remain unresolved. Every accepted upper endpoint is less
+than the following convenient rational bound:
+\begin{equation}\label{eq:certificate-margins}
+ -\frac1{200000}.
+\end{equation}
+All comparisons use exact fractions. The interval arithmetic and the
+constant checks are detailed in Appendix \ref{app:certificate}.
+Pruning removes only infeasible points and each bisection covers its
+parent, so the finite certified cover proves the assertion.
+
+On the second branch no subdivision is necessary. In fact,
+\begin{equation}\label{eq:branch-b-analytic}
+ F(s,q)\le-\frac{56657645489}{1713169664000}<-\frac3{100}
+ \qquad\left(\frac54\le s\le\frac53,\quad 0\le q\le25-15s\right).
+\end{equation}
+To see this, write
+\[
+ f(s)=a_0s+b_0s^2-\frac{k}{5}s^3,\quad
+ a_0=-\frac12+\frac{35}{2}C+20k,\quad b_0=C-27k.
+\]
+The rational inequalities $b_0<0$ and $a_0+(5/2)b_0<0$
+imply that $f$ is decreasing for $s\ge5/4$. Likewise,
+\[
+ D_*(s)=15+27s-\frac{36}{5}s^2-\frac{12}{5}s^3
+\]
+is decreasing on this interval, since its derivative is at most $-9/4$.
+Consequently $f(s)\le-9181/256000$, $D_*(s)\le525/16$,
+$q\le25/4$, $20-12s-(4/5)q\le5$, and
+$D_*(s)+5q\le1025/16$. Put
+\[
+ \alpha=A_q-\frac{25}{4}B_q=\frac{6692069}{98000000}>0.
+\]
+Dropping the nonpositive cutoff term in $F$ and completing the square
+in $\sqrt q$ gives
+\[
+ F(s,q)\le-\frac{9181}{256000}-\alpha q
+       +D_q\sqrt{\frac{5125}{16}q}
+ \le-\frac{9181}{256000}
+       +\frac{5125D_q^2}{64\alpha}
+ =-\frac{56657645489}{1713169664000}.
+\]
+Every constant comparison in this argument is checked exactly in the
+ancillary program.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+The constraint sphere is compact, and a regular pentagon gives
+$\Delta_5=5^5>0$. A global maximizer exists and is collision-free.
+If $0<s\le1/20$, Proposition \ref{prop:gap} excludes it.
+If $s\ge1/20$, Proposition \ref{prop:scalar} and
+Lemma \ref{lem:certificate} give $\Delta_5<5^5$, a contradiction.
+Thus $s=0$ at every global maximizer, so $|z_i|=1$.
+
+For completeness, the classical unit-circle conclusion can be read
+directly from the root polynomial, as in \cite{Mordell}.
+Let $P(\zeta)=\prod_i(\zeta-z_i)$.
+The stationary equations give
+\[
+ \frac{P''(z_i)}{2P'(z_i)}
+ =\sum_{j\ne i}\frac1{z_i-z_j}=2\overline{z_i}=\frac2{z_i}.
+\]
+The polynomial $\zeta P''(\zeta)-4P'(\zeta)$ has degree at most three
+and vanishes at five distinct points, so it is zero.
+Coefficient comparison gives $P(\zeta)=\zeta^5-\alpha$, $|\alpha|=1$.
+The roots are precisely a unit regular pentagon, and
+$\Delta_5=\prod_i|P'(z_i)|=5^5$.
+This establishes both the inequality and all equality cases.
+\end{proof}
+
+\begin{remark}
+The local gap is a statement about every local maximizer, whereas
+\eqref{eq:F-bound} need not exclude a local maximizer whose value is
+strictly below $5^5$. The global comparison in the final proof uses the
+known regular-pentagon competitor.
+\end{remark}
+
+\section{A general moment hierarchy and its limitations}
+\label{sec:extensions}
+The second-order method extends to arbitrary $n$, although the target
+$\Delta_n\le n^n$ does not: Chalk's counterexample already disproves this
+bound for every $n\ge6$ \cite{Chalk}. We record constraints that remain
+valid at all collision-free local maximizers and a quantitative six-point
+consequence. The polygonal spectral calculation below records a
+limitation of the method; it is not presented as a new stability result.
+
+\subsection{Higher-degree second-order constraints}
+Work at a collision-free local maximizer on $\mathcal S_n$, and put
+$p_k=\sum_i z_i^k$, $p_0=n$, and $\lambda=(n-1)/2$.
+For every $k\ge1$, the stationary equations imply
+\begin{equation}\label{eq:general-mixed-hierarchy}
+ \sum_i t_i z_i^k=
+ \frac{(2n-k-1)p_k+\sum_{j=1}^{k-1}p_jp_{k-j}}{n-1}.
+\end{equation}
+Indeed, multiply the stationary equation by $z_i^{k+1}$, sum, and pair
+indices; the result before division by $\lambda$ is
+$\frac12\{\sum_{j=0}^k p_jp_{k-j}-(k+1)p_k\}$.
+For $k\ge2$ a related coordinatewise identity is
+\begin{equation}\label{eq:general-B-hierarchy}
+ Bz^{\circ k}=
+ \left(k\lambda t-(k-1)(n-k/2)\one\right)\circ z^{\circ(k-2)}
+ -\sum_{j=1}^{k-2}(k-1-j)p_jz^{\circ(k-2-j)}.
+\end{equation}
+To verify it, expand
+$z_i^k-z_j^k=(z_i-z_j)\sum_{r=0}^{k-1}z_i^{k-1-r}z_j^r$
+and then use, for $r\ge1$,
+\[
+ \sum_{j\ne i}\frac{z_j^r}{z_i-z_j}
+ =\lambda z_i^r\overline z_i
+ -\sum_{\ell=0}^{r-1}p_\ell z_i^{r-1-\ell}+r z_i^{r-1}.
+\]
+
+\begin{proposition}[Moment Gram hierarchy]\label{prop:moment-hierarchy}
+For any finite set of positive integers $\mathcal K$, set
+$x_k=z^{\circ k}-p_k\one/n$ and define
+\begin{equation}\label{eq:general-D-hierarchy}
+ D_{k\ell}=\lambda^2\ip{x_k}{x_\ell}
+       -\ip{Bz^{\circ k}}{Bz^{\circ\ell}},\qquad k,\ell\in\mathcal K.
+\end{equation}
+Then $D$ is Hermitian positive semidefinite. Its entries are polynomials
+in mixed moments, with the identities
+\eqref{eq:general-mixed-hierarchy}--\eqref{eq:general-B-hierarchy}
+providing exact reductions.
+\end{proposition}
+\begin{proof}
+The matrix $\lambda^2I-B^*B$ is positive semidefinite by
+Proposition~\ref{prop:general}, and $B\one=0$. Thus $D$ is its Gram
+matrix on the vectors $x_k$. Constant projection removes a nonnegative
+term that would otherwise weaken the constraints.
+\end{proof}
+
+For an explicit reusable instance, write
+\[
+ T=\sum_i t_i^2=n+s,\quad U=\sum_i t_i^3,\quad V=\sum_i t_i^4,
+ \quad q=|p_2|^2,\quad w=|p_4|,\quad m=\sum_i t_i^2z_i^2.
+\]
+The submatrix on $\mathcal K=\{2,4\}$ has entries
+\begin{equation}\label{eq:general-D24}
+\begin{aligned}
+ D_{22}&=\frac{(n-1)^2}{4}\left(n-3s-\frac qn\right),\\
+ D_{44}&=-\frac{15(n-1)^2}{4}V+12(n-1)(n-2)U
+       -9(n-2)^2T+nq-\frac{(n-1)^2}{4n}w^2,\\
+ D_{24}&=-\frac{7(n-1)^2}{4}m+(7n^2-22n+18)p_2
+       -\frac{(n-1)^2}{4n}\overline{p_2}p_4.
+\end{aligned}
+\end{equation}
+They satisfy $D_{22},D_{44}\ge0$ and
+$|D_{24}|^2\le D_{22}D_{44}$.
+These formulas follow from
+$Bz^{\circ4}=(2(n-1)t-3(n-2)\one)\circ z^{\circ2}-p_2\one$
+and \eqref{eq:general-mixed-hierarchy}, and reduce exactly to
+\eqref{eq:D} when $n=5$. Increasing $\mathcal K$ supplies additional
+necessary constraints; it does not by itself prove a global upper bound.
+
+\subsection{The dimensional obstruction in the projection step}
+Assume $n\ge3$ and $s>0$, set $p=|p_3|^2$, and let
+$E=\operatorname{span}_{\C}\{\one,z,\overline z\}$.
+The radial bound gives $q<n^2$, so $\dim E=3$.
+Let $u=t-\one$ and let $v$ be the projection of $z^{\circ2}$ onto
+$E^\perp$. The computation in Lemma~\ref{lem:projection} now gives
+\begin{equation}\label{eq:general-projection-identities}
+\begin{aligned}
+ \norm v^2&=T-\frac qn-\frac{np}{n^2-q},&
+ \ip u v&=\frac{n-2}{n-1}p_2,\\
+ v^{\mathsf T}v&=p_4-\frac{p_2^2}{n}
+                  +\frac{\overline{p_2}p_3^2}{n^2-q}.
+\end{aligned}
+\end{equation}
+Since $u\in E^\perp$ and $\norm u^2=s$, Cauchy--Schwarz proves the
+dimension-independent bound
+\begin{equation}\label{eq:general-projection-CS}
+ \frac{(n-2)^2}{(n-1)^2}q
+ \le s\left(T-\frac qn-\frac{np}{n^2-q}\right).
+\end{equation}
+Dropping the last nonpositive term recovers \eqref{eq:power-radial}.
+For $n=5$, $E^\perp$ admits an orthonormal basis of two real vectors,
+and the further
+bound on $|v^{\mathsf T}v|$ used earlier is available.
+For $n\ge6$ that particular argument fails: after fixing the real
+direction $u$, two real orthonormal directions $e_1,e_2$ remain, and
+$b(e_1+i e_2)$ has positive Hermitian norm but zero transpose square.
+Thus no analogous lower bound follows solely from the norm and the
+component along $u$. Additional moment constraints would be needed.
+
+\subsection{A quantitative six-point radial gap}
+\begin{proposition}\label{prop:six-gap}
+At a collision-free local maximizer of $\Delta_6$ on $\mathcal S_6$,
+either $s=0$ or $s>1/200$.
+\end{proposition}
+\begin{proof}
+Suppose $0<s\le1/200$, and write $z_i=r_i e^{i\theta_i}$.
+For $a=(t_i+t_j)/2$ and $b=(t_i-t_j)/2$, the zero-sum deviations give
+$s\ge3(a-1)^2+2b^2$.
+The function $a^2-s/2+\frac32(a-1)^2$ is increasing for $a>3/5$,
+so its value at $a=1-\sqrt{s/3}$ proves
+\[
+ \frac{23}{24}<1-\sqrt{s/3}\le r_ir_j
+ \le1+\sqrt{s/3}<\frac{25}{24}.
+\]
+Here $s/3\le1/600<1/576$.
+With $\sigma=\sum_i(r_i-\overline r)^2$, the same pairwise variance
+identities as in the five-point proof give
+\[
+ \sigma=\frac16\sum_{i<j}
+       \frac{(t_i-t_j)^2}{(r_i+r_j)^2}<\frac{6s}{23},
+ \qquad (r_i-r_j)^2<\frac{12s}{23}\le\frac3{1150}.
+\]
+The strengthened general distance bound gives $d_{ij}\ge12/25$.
+Consequently,
+\[
+ \sin^2\frac{\theta_i-\theta_j}{2}
+ >\frac{12/25-3/1150}{25/6}>\frac1{10};
+ \qquad \left|\cot\frac{\theta_i-\theta_j}{2}\right|<3.
+\]
+Order the lifted angles and let $\theta^*$ be the equally spaced
+six-point angles with the same mean. The circle logarithmic product
+has Hessian at most $-3I$ on the mean-zero subspace. Its gradient
+at the actual angles is given by \eqref{eq:angular-stationary}, with
+six indices in place of five. The incidence matrix of $K_6$ has norm
+$\sqrt6$, while, for $v_i=r_i-\overline r$,
+\[
+ \sum_{i<j}(v_i-v_j)^4
+ =6\sum_i v_i^4+3\sigma^2\le8\sigma^2.
+\]
+Thus the angular error satisfies
+\[
+ \eta:=\norm{\theta-\theta^*}
+ \le\frac4{\sqrt3}\frac{\sigma h}{d}
+ <\frac73\frac{6s}{23}\,3\,\frac{25}{12}
+ =\frac{175s}{46}\le\frac7{368}<\frac1{50}.
+\]
+Every half-angle error is at most $\eta/\sqrt2<1/70$, since
+$\sqrt2>7/5$.
+As sine is $1$-Lipschitz, the absolute half-angle sines in the three
+cyclic separation classes are greater than $17/35$, $59/70$, and
+$69/70$, respectively; here $\sqrt3/2>6/7$.
+Multiplication by $4r_ir_j>23/6$ gives
+\[
+ d_{ij}>\frac{9}{10},\qquad d_{ij}>\frac83,\qquad
+ d_{ij}>\frac{100}{27}
+\]
+in those three classes. Hence their Laplacian weights are less than
+$a_0=10/9$, $b_0=3/8$, $c_0=27/100$.
+The comparison circulant Laplacian has nonzero eigenvalues
+$a_0+3b_0+2c_0$, $3a_0+3b_0$, and $4a_0+2c_0$, so
+\[
+ \lambda_{\max}(L)\le\frac{2243}{450}<5.
+\]
+This contradicts $L(t-\one)=5(t-\one)$ and $s>0$.
+All numerical comparisons are rational inequalities or follow by
+squaring positive rational numbers.
+\end{proof}
+
+
+\subsection{Why a six-point global argument needs a different target}
+The inverse-distance Laplacian of the unit regular polygon similarly
+has eigenvalues $k(n-k)/2$, $0\le k\le n-1$.
+Indeed, its $k$th eigenvalue is
+$\frac12\sum_{r=1}^{n-1}
+|\sin(k\pi r/n)/\sin(\pi r/n)|^2$; expansion of
+$|\sum_{j=0}^{k-1}e^{2\pi i jr/n}|^2$ and Fourier orthogonality
+give $k(n-k)/2$.
+The largest eigenvalue is $\frac12\lfloor n^2/4\rfloor$.
+The strict spectral margin below $n-1$ holds for $2\le n\le6$, is zero
+at $n=7$, and is absent for $n\ge8$. Thus the local exclusion by strict
+Laplacian comparison cannot be copied unchanged for $n\ge7$.
+
+For completeness, Chalk's competitor consists of the origin and a
+regular $(n-1)$-gon of radius $\sqrt{n/(n-1)}$. It has
+\begin{equation}\label{eq:Chalk-competitor}
+ \Delta_n=(n-1)^{n-1}
+       \left(\frac n{n-1}\right)^{n(n-1)/2}.
+\end{equation}
+At $n=6$ its ratio to $6^6$ is
+$6^9/5^{10}=10077696/9765625>1$.
+For real $x\ge6$, twice the logarithm of this ratio is
+$g(x)=x(x-3)\log x-(x-1)(x-2)\log(x-1)$, whose derivative is
+\[
+ g'(x)=(2x-3)\log\frac{x}{x-1}-1
+ \ge\frac{2x-5}{2x-1}>0.
+\]
+The lower bound uses
+$\log(1+y)\ge2y/(2+y)$ for $y\ge0$, which follows by
+differentiation. Hence \eqref{eq:Chalk-competitor} exceeds $n^n$
+for every integer $n\ge6$.
+Proposition~\ref{prop:six-gap} therefore separates the regular hexagon
+from possible global maximizers, rather than proving that it is
+globally optimal. A full six-point sharp bound would require a new
+global comparison and additional constraints beyond the
+two-dimensional projection.
+
+
+\appendix
+\section{Exact arithmetic and reproducibility}\label{app:certificate}
+\subsection{Interval operations}
+All endpoints in the program are instances of Python's
+\texttt{fractions.Fraction}. Addition, subtraction, multiplication,
+positive-part evaluation and squaring use their elementary outward
+interval formulas. Division is performed only when the denominator
+interval has positive lower endpoint.
+
+For a nonnegative rational $v=a/b$, an outward square-root interval
+with denominator $2^{40}$ is obtained from
+\[
+ m=\operatorname{isqrt}\left(\left\lfloor
+              a\,2^{80}/b\right\rfloor\right).
+\]
+Its lower endpoint is $m/2^{40}$; the upper endpoint is this value
+when it squares exactly to $v$, and otherwise $(m+1)/2^{40}$.
+For a nondegenerate interval the lower and upper endpoint calculations
+are applied separately. Thus no floating-point approximation enters
+a mathematical decision. Wall-clock timings in the JSON output have
+no role in certification.
+
+The factor $20-12s-4q/5$ is nonnegative in the target domain.
+The other factor is also positive: in A,
+\[
+ D_*=15+x^2(-180+5760x-15600x^2)\ge15-180/16>0,
+\]
+since $0\le x\le1/4$.
+In B, put $T=5+s\in[25/4,20/3]$; then
+$D_*=T(-12T^2+144T-405)/5>0$ by checking the endpoints of the
+concave quadratic. Clipping interval factors to their nonnegative
+parts is therefore valid, including rectangles extending outside the
+curved domain boundary.
+
+\subsection{Transcendental and algebraic constants}
+The only transcendental checks concern logarithms.
+The coefficient $c$ has the positive-series representation
+\[
+ c=\frac15-\frac4{25}\sum_{j=0}^{\infty}
+                \frac1{(2j+1)5^j}.
+\]
+After $N$ terms the series tail is at most
+$5/(4(2N+1)5^N)$. The program uses $N=24$.
+For rational $x\ge1$, with $y=(x-1)/(x+1)$,
+\[
+ \log x=2\sum_{j=0}^{\infty}\frac{y^{2j+1}}{2j+1}.
+\]
+After $N$ terms, its tail is at most
+$2y^{2N+1}/((2N+1)(1-y^2))$.
+Using $N=120$ at $x=5$ and $x=41/6$ certifies
+\eqref{eq:c-bounds} and
+$H(R)-\log R-k(R^2-5R+5)^2>0$.
+
+The checks in \eqref{eq:two-steps}--\eqref{eq:spectral-gap}
+use the algebraic constants \eqref{eq:algebraic-trig}, each enclosed by
+the integer-square-root procedure above.
+No numerical value of $\pi$ or trigonometric series is required.
+The underlying bounds $\sin x\le x$ and $\cos x\ge1-x^2/2$ follow
+by integration of $\cos x\le1$ and $\sin x\le x$ for $x\ge0$.
+
+\subsection{Polynomial expressions and source files}
+To make the interval encoding explicit, in A the functions in
+\eqref{eq:scalar-definitions} simplify to
+\begin{equation}\label{eq:branch-A}
+\begin{aligned}
+ f(20x^2)&=x^2\bigl(-10+450C-500k
+             +x(-300C+3000k-8500kx)\bigr),\\
+ D_*(20x^2)&=15+x^2(-180+5760x-15600x^2).
+\end{aligned}
+\end{equation}
+In B, with $T=5+s$,
+\begin{equation}\label{eq:branch-B}
+\begin{aligned}
+ f(s)&=\left(-\frac12+\frac{15C}{2}\right)s
+       +5C(T^2/5-5)
+       -k(T^3/5+24T^2-275T+750),\\
+ D_*(s)&=T(-12T^2+144T-405)/5.
+\end{aligned}
+\end{equation}
+
+\noindent\begin{minipage}{\textwidth}
+The ancillary files supplied with this manuscript are:
+\begin{itemize}
+\item \texttt{verify\_mordell.py};
+\item \texttt{verification\_result.json};
+\item \texttt{algebra\_identity\_check.py};
+\item \texttt{algebra\_identity\_result.json};
+\item \texttt{generalization\_check.py};
+\item \texttt{generalization\_result.json}.
+\end{itemize}
+\end{minipage}
+From their directory, the full certificate is reproduced by
+\begin{verbatim}
+python verify_mordell.py --output verification_result.json
+python algebra_identity_check.py
+python generalization_check.py
+\end{verbatim}
+The first command must be run with both regions, its default.
+The program exits unsuccessfully if any scalar region is unresolved
+or a constant comparison fails. Explicit exception checks remain active
+under Python's optimization option \texttt{-O}.
+
+The second script independently expands \eqref{eq:moment-expansion}
+as formal polynomials over $\Q$, substitutes the mixed-moment
+relations, and checks all four identities in
+\eqref{eq:distance-moments}. It also derives
+\eqref{eq:branch-A}--\eqref{eq:branch-B} from
+\eqref{eq:scalar-definitions} and checks exact point encodings.
+Its point checks are an encoding audit; the covering proof for region A
+of \eqref{eq:certificate} is performed by the interval program, while
+region B is handled by \eqref{eq:branch-b-analytic}.
+The third script checks the general Gram coefficients and supporting
+polynomial identities, the six-point rational constants, and the
+exact six-point value in \eqref{eq:Chalk-competitor}.
+The recursive identities and the spectral and variational arguments
+are proved analytically above; finite script checks support those
+proofs and do not replace them.
+
+\section*{Acknowledgement of assistance}
+AI assistance through OpenAI's Codex was used for mathematical
+exploration, exact-arithmetic verification support, and manuscript
+preparation. The author is responsible for the final mathematical
+claims and for checking the accompanying proof and source code.
+
+\begin{thebibliography}{9}
+\bibitem{Mordell}
+L.~J. Mordell, \emph{On a discriminant inequality},
+Canadian Journal of Mathematics \textbf{12} (1960), 699--704.
+\href{https://doi.org/10.4153/CJM-1960-063-5}
+{doi:10.4153/CJM-1960-063-5}.
+
+
+\bibitem{Chalk}
+J.~H.~H. Chalk, \emph{A note on a discriminant inequality},
+Canadian Mathematical Bulletin \textbf{3} (1960), no.~1, 7--9.
+\href{https://doi.org/10.4153/CMB-1960-002-x}
+{doi:10.4153/CMB-1960-002-x}.
+
+\bibitem{Wang}
+J.~Wang, \emph{The Five-Point Case of Mordell's Discriminant Inequality},
+arXiv:2610.00358v1, 2026.
+\url{https://arxiv.org/abs/2610.00358}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,191 @@
+\section{A fixed finite moment determines the exact maximum}
+\label{sec:fixed-moment-reconstruction}
+
+The moment limit can be turned into an explicitly prescribed finite
+algebraic selection, without constructing the stationary-value polynomial.
+The price is a prohibitive uniform height bound and a very large moment
+order. This result is an effective finiteness theorem, rather than a
+simple product expression or a practical computation of previously
+unknown point counts.
+
+For $n\ge3$, put $r=2n$, $d=n(n-1)=2N$, and define the integers
+\begin{equation}\label{eq:uniform-height-constants}
+ h_n=\max\{8^N,4n+2\},\qquad
+ D_n=rd(d-1)^{r-1},\qquad
+ H_n=(16h_nd^r)^{r2^rd^r}.
+\end{equation}
+These constants are deliberately generous.
+
+\begin{lemma}[An explicit annihilator height bound]
+\label{lem:uniform-height-bound}
+There is a nonzero $q_n\in\mathbb Z[T]$ satisfying
+\[
+ q_n(M_n)=0,\qquad \deg q_n\le D_n,\qquad
+ \max_j|[T^j]q_n|\le H_n.
+\]
+The bound is for an annihilating polynomial, without a claim that its
+primitive irreducible factor has the same coefficient bound.
+\end{lemma}
+\begin{proof}
+In the $r$ real coordinates $(x_i,y_i)$, the constraint
+\[
+ S=\left\{(x,y):\sum_i(x_i^2+y_i^2)=n\right\}
+\]
+is a compact connected sphere defined by one integer polynomial.
+Each factor $(x_i-x_j)^2+(y_i-y_j)^2$ has coefficient $\ell^1$ norm $8$.
+Consequently $\Delta_n$ has degree $d$ and coefficient height at most
+$8^N$. The defining sphere polynomial has degree $2$ and coefficient
+height $n\le8^N$.
+
+Apply the deformation and resultant construction of
+Jeronimo--Perrucci--Tsigaridas~\cite[Proposition~2.7 and the proof of
+Theorem~1.1]{JPT} to the polynomial $-\Delta_n$ on this sphere.
+Their construction supplies a nonzero integer polynomial vanishing at
+$-M_n$, including when the minimizing set has positive dimension.
+There are either $s=0$ or $s=1$ active constraints in that construction;
+the degree bound is
+\[
+ \binom rs d^s(d-1)^{r-s}\le rd(d-1)^{r-1}.
+\]
+The coefficient estimate explicitly derived in their proof is
+\[
+ (2^{4-r/2}\widetilde H d^r)^{r2^rd^r},\qquad
+ \widetilde H=\max\{H_{\rm input},2r+2m_{\rm input}\}.
+\]
+Here $H_{\rm input}=8^N$ and $m_{\rm input}=1$, so
+$\widetilde H=h_n$. Replacing $2^{4-r/2}$ by the larger integer $16$
+gives $H_n$. Finally replace $T$ by $-T$ in the annihilator, which
+does not change its coefficient magnitudes.
+\end{proof}
+
+For positive integers $D,H$, let $\mathcal A(D,H)$ be the finite set
+of all distinct positive real roots of nonzero integer polynomials of
+degree at most $D$ and coefficient height at most $H$.
+Multiplicity and repetition across different polynomials are ignored.
+
+\begin{lemma}[Uniform separation without a factor-height estimate]
+\label{lem:universal-resultant-separation}
+Set
+\[
+ B(D,H)=(2D)!\bigl[(D+1)H2^D\bigr]^{2D},\qquad
+ \delta(D,H)=\frac1{B(D,H)+1}.
+\]
+Any two distinct elements of $\mathcal A(D,H)$ are separated by at
+least $\delta(D,H)$.
+\end{lemma}
+\begin{proof}
+Choose integer polynomials $f,g$ of positive degrees at most $D$ and
+coefficient heights at most $H$, with $f(\alpha)=g(\beta)=0$.
+The polynomial
+\[
+ R(u)=\operatorname{Res}_t(f(t),g(t+u))\in\mathbb Z[u]
+\]
+is nonzero: over $\mathbb C$ its roots, with multiplicities, are the
+finitely many differences between roots of $g$ and roots of $f$.
+Thus $\gamma=\beta-\alpha$ is a nonzero root of $R$.
+
+The coefficient $\ell^1$ norm of $g(t+u)$ is at most
+$(D+1)H2^D$. Every polynomial entry of the Sylvester matrix has
+$\ell^1$ norm bounded by this number, including the entries from $f$.
+The matrix has order at most $2D$. Expanding its determinant and using
+submultiplicativity of the coefficient $\ell^1$ norm gives
+\[
+ \|R\|_1\le(2D)![(D+1)H2^D]^{2D}=B(D,H).
+\]
+Write $R(u)=u^aQ(u)$ with $Q(0)\ne0$. The integer $Q(0)$ has
+absolute value at least one, while every coefficient of $Q$ has
+absolute value at most $B=B(D,H)$. If $0<|\gamma|<1/(B+1)$, then
+\[
+ \left|\sum_{j\ge1}[u^j]Q\,\gamma^j\right|
+ \le\frac{B|\gamma|}{1-|\gamma|}<1\le|Q(0)|,
+\]
+contradicting $Q(\gamma)=0$.
+This argument permits repeated roots and requires no factorization.
+\end{proof}
+
+Use $B_n=B(D_n,H_n)$ and $\delta_n=1/(B_n+1)$, and put
+\begin{equation}\label{eq:explicit-fixed-moment-order}
+ U_n=\left(\frac{2n}{n-1}\right)^N,\qquad
+ m=n-2,\qquad L_n=m(N+m+1),\qquad
+ K_n=\left\lceil4U_nL_n(B_n+1)\right\rceil^2.
+\end{equation}
+The complete coefficient expansion in
+\eqref{eq:coefficient-moment}, evaluated at this prescribed $K_n$,
+gives the rational number $A_{n,K_n}$. Let
+\[
+ E_n=\binom{K_nN+n-2}{n-2}.
+\]
+
+\begin{theorem}[A finite coefficient-only algebraic selection]
+\label{thm:fixed-moment-reconstruction}
+For every $n\ge3$, the exact value $M_n$ is the unique element
+$\xi\in\mathcal A(D_n,H_n)$ satisfying
+\begin{equation}\label{eq:fixed-moment-root-selector}
+ \boxed{\qquad A_{n,K_n}\le\xi^{K_n}\le E_nA_{n,K_n}.\qquad}
+\end{equation}
+For $n=2$, $M_2=4$ directly.
+Thus a single finite moment, whose index is fixed from $n$ before any
+geometric calculation, determines the exact maximum.
+\end{theorem}
+\begin{proof}
+The identity
+\[
+ \sum_{i<j}|z_i-z_j|^2
+ =n\sum_i|z_i|^2-\left|\sum_i z_i\right|^2\le n^2
+\]
+and AM--GM give $M_n\le U_n$.
+The moment enclosure~\eqref{eq:moment-enclosure} places $M_n$ in
+\[
+ I_n=[A_{n,K_n}^{1/K_n},(E_nA_{n,K_n})^{1/K_n}].
+\]
+This interval has length at most $\delta_n/2$. Indeed, abbreviating
+$K=K_n$, the elementary bounds
+$E_n\le[K(N+m)]^m$, $\log K\le\sqrt K$ for $K\ge1$, and
+$\log(N+m)\le N+m$ give
+\[
+ \frac{\log E_n}{K}
+ \le\frac{m[\log K+\log(N+m)]}{K}
+ \le\frac{L_n}{\sqrt K}\le\frac{\delta_n}{4U_n}.
+\]
+The last quantity is at most $1/2$, so $e^x-1\le2x$ implies
+$E_n^{1/K}-1\le\delta_n/(2U_n)$. The lower endpoint of $I_n$
+is at most $M_n\le U_n$, whence
+\[
+ |I_n|=A_{n,K}^{1/K}(E_n^{1/K}-1)\le\delta_n/2.
+\]
+By Lemma~\ref{lem:uniform-height-bound}, $M_n$ belongs to
+$\mathcal A(D_n,H_n)$. By
+Lemma~\ref{lem:universal-resultant-separation}, no two distinct
+elements of that finite set can lie in $I_n$. This proves existence
+and uniqueness in~\eqref{eq:fixed-moment-root-selector}.
+\end{proof}
+
+To implement the theorem, enumerate the finitely many bounded integer
+coefficient arrays, isolate and deduplicate their positive real roots,
+and compute the complete expansion of $V_n^{K_n}$. Real algebraic
+arithmetic decides the two inequalities in
+\eqref{eq:fixed-moment-root-selector} exactly. Factoring a polynomial
+containing the selected root and supplying a rational isolating
+interval produces the canonical exact-output representation described
+earlier. No enumeration of stationary shapes or construction of their
+critical-value polynomial is required by this procedure.
+
+The constants make this procedure prohibitively expensive, even for
+small $n$. The sharper degree estimate $n^{2n-4}$ from
+Theorem~\ref{thm:exact-algorithm} remains useful; the larger $D_n$ here
+is used only to obtain an explicit height bound. The theorem replaces
+an unspecified limiting process by finite algebraic selection, and
+does not supply a short closed expression or an executed new maximum
+for $n\ge8$. The standard-library checker
+\texttt{algebraic\_verify.py} verifies small exact moment examples,
+translation resultants including repeated roots, and the prescribed
+moment-order inequality on manageable constants. It does not execute
+the universal polynomial enumeration or the worst-case moment order.
+
+% Bibliography entry to insert in the main document:
+% \bibitem{JPT}
+% G.~Jeronimo, D.~Perrucci and E.~Tsigaridas,
+% \emph{On the minimum of a polynomial function on a basic closed
+% semialgebraic set and applications},
+% SIAM Journal on Optimization \textbf{23} (2013), no.~1, 241--255.
+% \href{https://doi.org/10.1137/110857751}{doi:10.1137/110857751}.

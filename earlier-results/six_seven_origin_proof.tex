@@ -1,0 +1,121 @@
+% Standalone fragment; uses only the usual amsmath/amssymb/amsthm preamble.
+\section{A direct global bound for six and seven points containing the origin}
+\label{sec:noclass-origin67}
+
+The following argument treats every radius and angle simultaneously.
+It does not assume stationarity, a reflection, or a prescribed number
+of radial layers.
+
+\begin{theorem}\label{thm:noclass-origin67}
+Let $m\in\{5,6\}$ and $w_1,\ldots,w_m\in\mathbb C$ satisfy
+$\sum_i|w_i|^2=m$. Put
+\[
+ W(w)=\prod_i|w_i|^2\prod_{i<j}|w_i-w_j|^2,\qquad
+ D=\sum_i(|w_i|^2-1)^2.
+\]
+Then
+\[
+ W(w)\le m^m\exp\!\left(-\frac{D}{2m^3}\right)\le m^m.
+\]
+Equality in the final bound holds exactly for a rotated unit regular
+$m$-gon. Consequently, for $n=6,7$, every configuration containing
+the origin and satisfying $\sum_i|z_i|^2=n$ obeys
+\[
+ \Delta_n(z)\le
+ C_n:=\frac{n^{n(n-1)/2}}{(n-1)^{(n-1)(n-2)/2}}.
+\]
+If the other $n-1$ points are denoted by $z_i$, the sharper bound is
+\[
+ \Delta_n(z)\le C_n\exp\!\left[
+ -\frac{1}{2(n-1)^3}
+ \sum_i\left(\frac{n-1}{n}|z_i|^2-1\right)^2\right].
+\]
+The equality configuration is the origin together with a regular
+$(n-1)$-gon of squared radius $n/(n-1)$.
+\end{theorem}
+
+\begin{proof}
+If a point is zero or two points coincide, $W=0$, so suppose otherwise.
+Write $t_i=|w_i|^2$ and
+\[
+ S_m(t)=\sum_{k=1}^m t^k,\qquad
+ P_m(t)=S_m'(t)^2-S_m(t)S_m''(t).
+\]
+We first prove
+\begin{equation}\label{eq:noclass-origin-curvature}
+ -(\log S_m)''(t)=\frac{P_m(t)}{S_m(t)^2}
+ \ge\frac1{m^3}\qquad(0<t\le m).
+\end{equation}
+The ascending coefficient lists of $P_m$ are
+\[
+\begin{array}{c|l}
+m&[t^0,t^1,\ldots]P_m\\ \hline
+5&(1,2,2,0,-5,4,8,8,5)\\
+6&(1,2,2,0,-5,-14,0,8,11,10,6).
+\end{array}
+\]
+For $0\le t\le1$, express
+$P_m(t)=\sum_{k=0}^{d}b_k\binom dk t^k(1-t)^{d-k}$.
+The exact Bernstein coefficient lists are
+\[
+\begin{array}{c|c|l}
+m&d&(b_0,\ldots,b_d)\\ \hline
+5&8&
+\left(1,\frac54,\frac{11}7,\frac{55}{28},\frac{33}{14},
+\frac{75}{28},\frac{45}{14},\frac{25}4,25\right)\\[2pt]
+6&12&
+\left(1,\frac76,\frac{15}{11},\frac{35}{22},\frac{182}{99},
+\frac{91}{44},\frac{145}{66},\frac{827}{396},
+\frac{262}{165},\frac7{10},\frac7{33},\frac72,21\right).
+\end{array}
+\]
+Every coefficient is at least $1/m$. Since the Bernstein basis sums
+to one and $S_m(t)\le m$ on this interval, the desired curvature
+bound follows there. These are polynomial identities, verifiable by
+the elementary formula
+\[
+ b_k=\sum_{i=0}^{\min(k,\deg P_m)}
+ [t^i]P_m\,\frac{\binom ki}{\binom di}.
+\]
+For $t\ge1$, put $x=t-1$. The ascending coefficient lists of
+$P_m(1+x)-m(1+x)^{2m-2}$ are
+\[
+\begin{array}{c|l}
+5&(20,110,300,460,415,220,64,8,0)\\
+6&(15,150,668,1576,2235,2030,1204,456,101,10,0).
+\end{array}
+\]
+Thus $P_m(t)\ge m t^{2m-2}$ for $t\ge1$. On $1\le t\le m$,
+$S_m(t)\le m t^m$, giving
+$P_m/S_m^2\ge1/(m t^2)\ge1/m^3$ and completing
+\eqref{eq:noclass-origin-curvature}.
+
+Taylor's inequality for this strongly concave function gives
+\[
+ \log S_m(t)\le\log m+\frac{m+1}{2}(t-1)
+                   -\frac{(t-1)^2}{2m^3}.
+\]
+All $t_i$ lie in $(0,m]$, and $\sum_i(t_i-1)=0$. Summing therefore
+gives $\prod_iS_m(t_i)\le m^m e^{-D/(2m^3)}$.
+For the square Vandermonde matrix $V_{ik}=w_i^k$, $1\le i,k\le m$,
+\[
+ |\det V|^2=W(w).
+\]
+Hadamard's inequality on its rows gives
+$W\le\prod_iS_m(t_i)$, proving the claimed bounds.
+
+Final equality requires $D=0$ and orthogonal rows. With $t_i=1$,
+orthogonality says
+$\sum_{k=1}^m(w_i\overline{w_j})^k=0$ for $i\ne j$.
+Hence every ratio $w_i/w_j$ is a nontrivial $m$th root of unity,
+so the $m$ distinct points form a rotated regular $m$-gon.
+Finally use $w_i=\sqrt{(n-1)/n}\,z_i$. There are
+$n(n-1)/2$ squared distances in $\Delta_n$, so the scaling factor
+is $(n/(n-1))^{n(n-1)/2}$, yielding the stated $C_n$.
+\end{proof}
+
+The source \texttt{noclass\_checks.py} replays both derivative
+polynomials, both Bernstein identities, and both shifted identities
+coefficient by coefficient with standard-library rational arithmetic.
+This origin-containing theorem does not assert that every global
+maximizer has an origin point.

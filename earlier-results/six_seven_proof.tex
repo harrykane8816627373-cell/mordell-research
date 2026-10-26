@@ -1,0 +1,1178 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,array,booktabs}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\title{Mordell's distance product:\\published closure for six and seven points\\and new eight-point exclusions}
+\author{}
+\date{8 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The unrestricted six- and seven-point values are complete using the
+published physical classification of Faug\`ere--Svartz and fresh exact
+retained-chart comparisons. Eight points remain open. New results
+exclude every centrally symmetric physical stationary configuration
+on two orthogonal axes, classify the previously untreated unbalanced
+axis branch, and exclude three entire boundary subcharts of the
+first-nonzero-fourth-coefficient chart. A further exact reduction
+determines the coupled phases of every nonreflected three-radius
+population \(1+3+4\) candidate in the global radius range from two
+radii; its degenerate triangle branch is proved reflected.
+The radii satisfy a further explicit degree-six algebraic curve.
+This reduction does not exhaust that population.
+The general even chart and unrestricted eight-point comparison are
+not claimed complete. The earlier nonclassification regional results
+remain valid and available in the companion addendum.
+\end{abstract}
+\tableofcontents
+
+\section*{Normalizations and explicit earlier inputs}
+For \(\sum_i|z_i|^2=n\), write
+\(\Delta_n=\prod_{i<j}|z_i-z_j|^2\). The central polygon candidate is
+\[
+ C_n=\frac{n^{n(n-1)/2}}
+ {(n-1)^{(n-1)(n-2)/2}},
+ \qquad C_8=\frac{8^{28}}{7^{21}}.
+\]
+The three coordinate conventions used below are related by
+\(u=\sqrt{7/8}\,z\), \(w=2u=\sqrt{7/2}\,z\) for eight points.
+Their moments are respectively \(8,7,28\), and their force constants
+are \(7/2,4,1\). Every change of convention is stated locally.
+
+The global structural corollary in Section~2 uses the previously
+proved no-origin two-level exclusion, global radius and subset-spread
+bounds, and the completed centered three-level \(2+2+4\) certificate.
+The corresponding source proofs are included as prerequisites in
+the replay package. These are explicit inputs to that corollary.
+The new axis instability theorem itself needs none of those global
+cuts. Section~1 explicitly identifies the published classification
+inputs; local root disks are not asserted to reconstruct them.
+% Fragment: requires amsmath, amssymb, booktabs, theorem/proof environments,
+% and the bibliography entries FS, FSdata, FSdataSeven.
+\section{Six and seven points: closure using the published classification}
+\label{sec:classification-bridge67}
+
+Let $N_n=n(n-1)/2$, $\Delta_n(z)=\prod_{i<j}|z_i-z_j|^2$, and
+\[
+ C_6=\frac{6^{15}}{5^{10}},\qquad C_7=\frac{7^{21}}{6^{15}}.
+\]
+This section uses the published physical classification of
+Faug\`ere--Svartz~\cite{FS}. Its finite arithmetic postprocessing was
+replayed afresh in \texttt{classification\_bridge/replay}; no numerical
+screening decision is used in the proof.
+
+\paragraph{The classification input.}
+We use the following consequence of the exact computation reported in
+\cite[Sections~5.3--5.7]{FS}, with the archived author data
+\cite{FSdata,FSdataSeven}: every collision-free physical stationary shape
+for $n=6,7$, modulo complex scaling and permutation, is represented in
+the retained coefficient charts described below. The computation includes
+unstable and collinear equilibria. Section~5.3 uses first-nonzero-coefficient
+charts and the collision saturation $hD=1$; its Remark~6 explains the
+positive real rescaling after coefficient normalization. Section~5.4
+filters the actual pointwise conjugate equations. These sections occur on
+proceedings p.~176, and Section~5.7 on p.~177.
+
+For $n=6$, the retained parameter degrees are
+$22,28,12,4,2,1,1,6,2,1,1$, totaling $80$.
+The literal $\texttt{N=7}$ header in the archived six-point file is a
+metadata error; its variables are $e_2,\ldots,e_6$. The eleven forward
+substitution checks into the six-point necessary equations were also
+replayed. Forward substitution does not establish chart completeness.
+
+For $n=7$, \cite[Section~7, Figure~4, p.~178]{FS} is an essential part of
+the input. The $e_2=1$ component has degree
+$526=6+18+356+82+64$. The figure declares the degree-$356$ branch physically
+empty. Its polynomial, coordinate maps and arithmetic exclusion certificate
+are absent from the local package. The retained degrees are
+$1,1,2,6,18,82,64$, totaling $174$. The degree-$18$ branch is retained and
+independently excluded here. Thus $174$ is the number of retained parameter
+roots, not the number of all complex algebraic candidates. The missing
+degree-$356$ physical exclusion and original chart completeness are cited
+published inputs. Theorem~5 of~\cite{FS} supplies the symmetric equations;
+the subsequent computation supplies the classification used here.
+
+\begin{lemma}[Scaling and the original conjugate equations]
+\label{lem:cb67-reduction}
+A global maximizer of $\Delta_n$ on $\sum_i|z_i|^2=n$ is collision-free,
+centered, and physical stationary. If $w_i=\alpha z_i$, $\alpha\ne0$,
+$Q=\sum_i|w_i|^2$ and $P(t)=\prod_i(t-w_i)$, then
+\begin{equation}\label{eq:cb67-force}
+ QP''(w_i)-2N_n\overline{w_i}P'(w_i)=0\quad(1\le i\le n),
+\end{equation}
+and the moment-$n$ value of its shape is
+\begin{equation}\label{eq:cb67-value}
+ \mathcal V_n(w)=\left(\frac nQ\right)^{N_n}
+                    \prod_{i<j}|w_i-w_j|^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Compactness gives a maximizer; a regular $n$-gon gives a positive value,
+so its points are distinct. If $c=n^{-1}\sum_i z_i\ne0$, translation by
+$-c$ preserves all differences and reduces the moment to $n-n|c|^2<n$.
+Rescaling to moment $n$ strictly increases the positive objective. Hence
+$c=0$.
+
+The Lagrange equations for $\log\Delta_n$ on the smooth sphere are
+$F_i(z)=\lambda\overline{z_i}$, where
+$F_i(z)=\sum_{j\ne i}(z_i-z_j)^{-1}$ and $\lambda$ is real.
+Pairwise summation gives $\sum_i z_iF_i(z)=N_n$, so
+$\lambda=N_n/n>0$. For $w=\alpha z$,
+$F_i(w)=\lambda|\alpha|^{-2}\overline{w_i}$.
+Writing $\kappa=\lambda|\alpha|^{-2}$ gives $\kappa Q=N_n$.
+Since $P'(w_i)\ne0$ and $F_i(w)=P''(w_i)/(2P'(w_i))$, this proves
+\eqref{eq:cb67-force}. Scaling to moment $n$ proves
+\eqref{eq:cb67-value}.
+
+The centered polynomial is
+$P(t)=t^n+\sum_{k=2}^n(-1)^ke_k t^{n-k}$.
+Its first nonzero $e_k$ can be normalized to $1$ by a complex scale
+$\alpha^k e_k=1$. Earlier zero coefficients remain zero, and
+\eqref{eq:cb67-value} is unchanged. Moreover $u=\sqrt\kappa\,w$ satisfies
+$F_i(u)=\overline{u_i}$ in the standard physical units, so the positive-force
+classification applies. Coefficient normalization then returns precisely
+the homogeneous charts described in Remark~6 of~\cite{FS}.
+\end{proof}
+
+\paragraph{The rational certificate and its exact tests.}
+The polynomial conventions are
+\[
+ \begin{split}
+ P_6(t)&=t^6+e_2t^4-e_3t^3+e_4t^2-e_5t+e_6,\\
+ P_7(t)&=t^7+e_2t^5-e_3t^4+e_4t^3-e_5t^2+e_6t-e_7.
+ \end{split}
+\]
+All coefficient charts are parsed as rational polynomials rather than
+executed. Parameter disks have radii $10^{-70}$ for $n=6$ and $10^{-250}$
+for $n=7$; point-root disks have radii $10^{-12}$ and $10^{-10}$,
+respectively. For a Gaussian rational $a$ put
+$\|a\|_1=|\Re a|+|\Im a|$ and
+$\|a\|_\infty=\max(|\Re a|,|\Im a|)$, so
+$\|a\|_\infty\le |a|\le\|a\|_1$.
+
+For a nominal polynomial $p_0$ with coefficient errors $\epsilon_j$ and
+$a_k=p_0^{(k)}(c)/k!$, the strict test
+\[
+ \|a_0\|_1+\sum_{k\ge2}\|a_k\|_1r^k
+       +\sum_j\epsilon_j(\|c\|_1+r)^j
+ <r\|a_1\|_\infty
+\]
+is Rouch\'e comparison with $a_1(t-c)$ on $|t-c|=r$. It certifies exactly
+one root counting multiplicity. Disjoint disks and degree counts certify
+every retained parameter root and every point root. For high-degree
+seven-point parameter polynomials the same remainder is bounded by
+$r^2\sup_{|t|\le B}|p_0''(t)|/2$, with the rationally computed integer
+$B=\lceil\|c\|_1+r\rceil$.
+Coefficient errors include parameter variation and rational rounding of
+the coefficient centers.
+
+For point centers $c_i$ with common radius $r$, set
+$Q_0=\sum_i|c_i|^2$ and
+$E_Q=\sum_i(2\|c_i\|_1r+r^2)$.
+At one point let $v_j=p_0^{(j)}(c_i)$ and let $E_j$ bound
+$|P^{(j)}(w_i)-v_j|$, with parameter and point uncertainty included.
+The residual in \eqref{eq:cb67-force} differs from
+$Q_0v_2-2N_n\overline{c_i}v_1$ by at most
+\[
+ E_Q\|v_2\|_1+(Q_0+E_Q)E_2
+ +2N_n\{r\|v_1\|_1+(\|c_i\|_1+r)E_1\}.
+\]
+If its nominal $\|\cdot\|_\infty$ exceeds this quantity at any one point,
+the entire candidate is physically excluded. In particular this tests the
+actual conjugate of each corresponding root, not an unordered conjugate
+set of roots. When no exclusion is used, $Q_0>E_Q$ and
+\begin{equation}\label{eq:cb67-upper}
+ U_n=\left(\frac n{Q_0-E_Q}\right)^{N_n}
+ \prod_{i<j}\bigl(|c_i-c_j|^2+4r\|c_i-c_j\|_1+4r^2\bigr)
+\end{equation}
+is a rigorous rational upper bound for \eqref{eq:cb67-value}.
+
+\begin{proposition}[Fresh exhaustive retained-chart replay]
+\label{prop:cb67-replay}
+For $n=6$ the $80$ parameter roots and $480$ point-root disks split into
+$69$ force exclusions, $10$ strictly smaller candidates, and the exact
+central pentagon. For $n=7$ the $174$ retained parameter roots and $1218$
+point-root disks split into $155$ force exclusions, $18$ strictly smaller
+candidates, and the exact central hexagon. Every nonattaining physical
+stationary shape has moment-$n$ value at most $6^6$ or $7^7$, respectively.
+\end{proposition}
+\begin{proof}
+The fresh full runs of \path{certify_fs6_disks.py} \texttt{--verify} and
+\path{certify_fs7_disks.py} \texttt{--verify}, under
+$\texttt{python -B -S -O}$, check every strict inequality just described.
+Their decisions use integers and $\texttt{fractions.Fraction}$, with
+explicit exceptions active under $\texttt{-O}$. The resulting branch
+counts and largest upward-rounded integer bounds are:
+\begin{center}\begin{tabular}{rrrrrl}
+\toprule
+$n$&Chart&Parameters&Excluded&Bounded&Largest bound or exact chart\\
+\midrule
+6&1&22&20&2&$3170$\\
+6&2&28&28&0&---\\
+6&3&12&12&0&---\\
+6&4&4&2&2&$42454$\\
+6&5&2&2&0&---\\
+6&6&1&0&1&$18699$\\
+6&7&1&0&1&$18699$\\
+6&8&6&4&2&$22400$ (other bound $133$)\\
+6&9&2&1&1&$7225$\\
+6&10&1&0&0&$P=t(t^5-1)$, attaining\\
+6&11&1&0&1&$6^6=46656$, exact\\
+\midrule
+7&1&1&0&1&$7^7=823543$, exact\\
+7&2&1&0&0&$P=t(t^6+1)$, attaining\\
+7&3&2&1&1&$40253$\\
+7&4&6&4&2&$159666$\\
+7&5&18&18&0&---\\
+7&6&82&78&4&$268962$\\
+7&7&64&54&10&$822629$\\
+\bottomrule
+\end{tabular}\end{center}
+The independent aggregation script checks all degree counts, decision
+partitions, displayed maxima, unique attaining charts and the exact
+integer comparisons
+\[
+ 6^9=10077696>9765625=5^{10},\qquad
+ 7^{14}=678223072849>470184984576=6^{15}.
+\]
+Consequently $6^6<C_6$ and $7^7<C_7$. The differences are exactly
+\[
+ C_6-6^6=\frac{14559984576}{9765625}>0,\qquad
+ C_7-7^7=\frac{171328311330611239}{470184984576}>0.
+\]
+These are gaps for other physical stationary shapes; no uniform fixed gap
+is asserted for arbitrary configurations approaching an attaining one.
+The auxiliary eleven-component substitution replay proves forward
+containment only. Published completeness remains the stated input.
+\end{proof}
+
+\begin{theorem}[Complete six- and seven-point global values]
+\label{thm:cb67-global}
+Using the stated published physical classification, every configuration
+with $\sum_i|z_i|^2=n$ satisfies
+\[
+ \Delta_6\le\frac{6^{15}}{5^{10}},\qquad
+ \Delta_7\le\frac{7^{21}}{6^{15}}.
+\]
+Equality holds precisely for the origin together with a regular pentagon
+of radius $\sqrt{6/5}$, or a regular hexagon of radius $\sqrt{7/6}$,
+respectively, up to rotation and permutation.
+\end{theorem}
+\begin{proof}
+A global maximizer satisfies Lemma~\ref{lem:cb67-reduction}.
+Published physical coverage puts it in a retained chart, and
+Proposition~\ref{prop:cb67-replay} bounds its value by $C_n$.
+This also closes the previously untreated configurations with no origin:
+if any such configuration exceeded $C_n$, the compact sphere would have
+a global maximizer exceeding $C_n$, contrary to the same argument.
+
+Attainment is checked directly, without inferring physical sufficiency
+from a failed exclusion test. Put $m=n-1$ and take the roots of
+$P(t)=t(t^m-a)$, $|a|=1$. Their moment is $m$.
+Since $|P'(0)|=1$ and $|P'(w)|=m$ at each nonzero root,
+the modulus of the monic discriminant is $m^m$, so their squared
+pair-distance product is $m^m$.
+At a nonzero root, $P''(w)/(2P'(w))=n/(2w)$, while the force at the origin
+is zero. Thus the original physical equation also holds directly.
+Scaling to moment $n$ gives
+\[
+ (n/m)^{N_n}m^m
+ =\frac{n^{N_n}}{(n-1)^{(n-1)(n-2)/2}}=C_n\quad(n=6,7).
+\]
+Every equality configuration is itself a global maximizer. The strict
+retained-chart comparisons force it into the unique attaining chart.
+Moment normalization fixes the radius, and the remaining complex phase
+is an overall rotation. This proves both equality classifications.
+\end{proof}
+
+% Section fragment. Requires amsmath, amssymb, amsthm and theorem environments.
+% New complete branch; old proofs and generated resultants remain unchanged.
+\section{Complete instability of centrally symmetric eight-point axis configurations}
+\label{sec:eight-even-new-axes}
+
+We use force-one coordinates $w$, so true stationarity is
+\[
+ \sum_{j\ne i}\frac1{w_i-w_j}=\overline{w_i},\qquad
+ \sum_i|w_i|^2=28.
+\]
+For a centrally symmetric collision-free configuration with no origin,
+write its eight roots as $\pm\sqrt{y_i}$, $1\le i\le4$, where
+the $y_i$ are distinct and nonzero. Put
+\[
+ q(y)=\prod_{i=1}^4(y-y_i),\quad H=q'+2yq'',\quad T_i=|y_i|.
+\]
+The actual force equations, with their physical signs and pairing, are
+\begin{equation}\label{eq:eight-even-new-physical}
+ \frac{H(y_i)}{2q'(y_i)}=T_i
+ =\frac12+2y_i\sum_{j\ne i}\frac1{y_i-y_j}.
+\end{equation}
+Pairwise summation gives $\sum_iT_i=14$. The moment-eight coordinates
+are $z=\sqrt{2/7}\,w$, multiplying the product by $(2/7)^{28}$.
+No unordered resultant-root matching is used in this section.
+
+\subsection{The full symmetry-breaking Hessian and a universal test vector}
+On perturbations assigning the same displacement $s_i$ to both
+$\sqrt{y_i}$ and $-\sqrt{y_i}$, the inverse-square Hessian has block
+\[
+ C_{ij}=-\frac{2(y_i+y_j)}{(y_i-y_j)^2}\quad(i\ne j),\qquad
+ C_{ii}=-\sum_{j\ne i}C_{ij}.
+\]
+Indeed, its off-diagonal entry is exactly
+$-(\sqrt{y_i}-\sqrt{y_j})^{-2}-(\sqrt{y_i}+\sqrt{y_j})^{-2}$.
+Thus $C=C^{\mathsf T}$ and $C\mathbf1=0$.
+If $\sum_i s_i=0$, the eight-point displacement is centered;
+its moment-tangent condition holds automatically because the
+contributions of each opposite pair cancel. The second-order term
+of $\log\Delta_8-\sum_i|w_i|^2$ on this displacement is
+\[
+ -2\|s\|^2-2\Re(s^{\mathsf T}Cs).
+\]
+Every phase multiple remains a legal tangent vector. Therefore an
+actual local maximum must satisfy
+\begin{equation}\label{eq:eight-even-new-C-contract}
+ |s^{\mathsf T}Cs|\le\|s\|^2\quad(s\perp\mathbf1),\qquad
+ \|C\|\le1.
+\end{equation}
+The equivalence follows from Takagi factorization, using $C\mathbf1=0$.
+These perturbations break central symmetry and must be retained even
+when the candidate polynomial is even.
+
+The physical force identity gives
+\[
+ Cy=2T-7\mathbf1.
+\]
+When all four $y_i$ are real, define
+\[
+ m=\sum_i y_i,\quad S_2=\sum_i y_i^2=\sum_iT_i^2,\quad
+ v=y-\frac m4\mathbf1.
+\]
+The centered input $v$ obeys
+\begin{equation}\label{eq:eight-even-new-defect}
+ \|v\|^2=S_2-m^2/4,\quad
+ \|Cv\|^2=4S_2-196,\quad
+ \|v\|^2-\|Cv\|^2=196-3S_2-m^2/4.
+\end{equation}
+The last quantity must be nonnegative at a full local maximum.
+
+\begin{theorem}\label{thm:eight-even-new-axes-unstable}
+Every collision-free, no-origin, centrally symmetric physical
+stationary eight-point configuration supported on two orthogonal
+lines through the origin is unstable in the full eight-point problem.
+Equivalently, all physical stationary configurations with four real
+quartic roots $y_i$ fail the necessary contraction condition
+\eqref{eq:eight-even-new-C-contract}.
+\end{theorem}
+\begin{proof}
+Rotate the two lines to the real and imaginary axes. Their squared
+roots $y_i$ are real. Multiplying all $w_i$ by $\mathrm i$ exchanges
+positive and negative $y_i$, preserving stationarity and instability.
+It suffices to consider zero, one, or two positive quartic roots.
+
+If all roots are positive, $m=14$ and $Cv=2v$; if all are negative,
+$m=-14$ and $Cv=-2v$. Since the roots are distinct, $v\ne0$.
+Thus $\|C\|\ge2>1$ in both cases.
+
+Suppose there is one positive root $A$ and three negative roots.
+Write
+\[
+ f(y)=y^3+by^2+cy+d,\qquad q(y)=(y-A)f(y).
+\]
+The physical moment gives $b=14-A$. At every negative root,
+$H+2yq'=0$, so this polynomial has zero remainder modulo $f$.
+After substitution of $b=14-A$, the three remainder coefficients,
+in decreasing powers of $y$, are
+\[
+ -2(15A+2c-105),\quad
+ 2(3A^2+Ac-42A+3c-3d),\quad -Ac+4Ad+d.
+\]
+The first two imply
+\[
+ c=\frac{105-15A}{2},\qquad
+ d=\frac{105-8A-3A^2}{2}.
+\]
+Already the first identity gives
+\[
+ m=2A-14,\qquad S_2=A^2+b^2-2c=2A^2-13A+91.
+\]
+Consequently
+\[
+ \|v\|^2=A^2+A+42,\qquad
+ \|Cv\|^2=8A^2-52A+168,
+\]
+and the defect is the strictly negative exact square certificate
+\begin{equation}\label{eq:eight-even-new-unbalanced-square}
+ \|v\|^2-\|Cv\|^2
+ =-7A^2+53A-126
+ =-7\left(A-\frac{53}{14}\right)^2-\frac{719}{28}<0.
+\end{equation}
+This excludes the whole one-positive/three-negative physical branch,
+not just a sample or a radial subinterval.
+
+It remains to treat two positive and two negative roots. Order them
+in the convex open chamber $y_1<y_2<0<y_3<y_4$. The physical
+equations are exactly the gradient equations of
+\[
+ \Phi(y)=\sum_i\log|y_i|+
+             4\sum_{i<j}\log|y_i-y_j|-2\sum_i|y_i|.
+\]
+Within this fixed-sign ordered chamber the absolute-value term is
+affine, and for every nonzero real $h$,
+\[
+ h^{\mathsf T}(\nabla^2\Phi)h
+ =-\sum_i\frac{h_i^2}{y_i^2}
+   -4\sum_{i<j}\frac{(h_i-h_j)^2}{(y_i-y_j)^2}<0.
+\]
+Thus $\Phi$ is strictly concave, and there is at most one stationary
+point in the chamber. No existence statement is needed here.
+Negating and reversing the ordered roots preserves the chamber,
+the objective, and the stationary equations. If an actual stationary
+point exists, uniqueness forces its root set to be
+$\{-R,-S,S,R\}$ with $R>S>0$.
+The moment gives $R+S=7$, and the physical force at $R$ reads
+\[
+ R=\frac32+\frac{4R^2}{R^2-S^2}.
+\]
+With $D=R-S$ this is $5D^2=98$, so
+$S_2=(R+S)^2+(R-S)^2=343/5$ and $m=0$. Equation
+\eqref{eq:eight-even-new-defect} gives
+\[
+ \|v\|^2-\|Cv\|^2=-49/5<0.
+\]
+Equivalently $\|Cy\|^2/\|y\|^2=8/7>1$.
+Every possible sign chamber is therefore unstable.
+\end{proof}
+
+\subsection{A complete physical classification of the unbalanced axis branch}
+\begin{proposition}\label{prop:eight-even-new-axis-classification}
+Up to rotation, permutation, and exchange of the two axes, there is
+exactly one physical stationary configuration with two points on one
+axis and six on the other. Its positive quartic root $A$ is the unique
+positive root of
+\[
+ Q(A)=12A^3+20A^2-307A-105,
+ \qquad 22/5<A<9/2,
+\]
+and its three negative roots are the roots of
+\[
+ f(y)=y^3+(14-A)y^2+
+       \frac{105-15A}{2}y+\frac{105-8A-3A^2}{2}.
+\]
+They lie respectively in $(-9,-6)$, $(-6,-1)$, and $(-1,0)$.
+The most negative root is below $-49/8$, also violating the global
+force-one radius bound. The Hessian exclusion above needs no such bound.
+\end{proposition}
+\begin{proof}
+The first two negative-root remainder coefficients force the displayed
+$f$. Exact division and substitution then give both identities
+\[
+ (H+2yq')\bmod f=-Q(A)/2,\qquad
+ H(A)-2Aq'(A)=-Q(A)/2.
+\]
+Thus every physical solution has $Q(A)=0$. Its coefficients have one
+Descartes sign change, while $Q(22/5)<0<Q(9/2)$, giving exactly one
+positive root.
+On this rational interval the coefficients lie in
+\[
+ 19/2<b<48/5,\quad 75/4<c<39/2,\quad 33/8<d<293/50.
+\]
+The monotonicity of $d=(105-8A-3A^2)/2$ is immediate for $A>0$.
+Direct rational interval signs give
+$f(-9)<0$, $f(-6)>0$, $f(-1)<0$, and $f(0)>0$ uniformly.
+Therefore $f$ has three distinct negative real roots in the indicated
+disjoint intervals and no others. Also $f(-49/8)>0$, placing its
+leftmost root below $-49/8$.
+These roots and $A$ are nonzero and distinct, hence $q'$ does not
+vanish at them. The two exact force identities now give
+$H/(2q')=-y=|y|$ on each negative root and $H/(2q')=A=|A|$ at
+the positive root. For each square root $w$, this implies
+$P''(w)/(2P'(w))=|w|^2/w=\overline w$, including both signs.
+This proves existence, uniqueness and genuine physical pairing,
+rather than only necessary squared or setwise equations.
+\end{proof}
+
+\subsection{A reflection exclusion specifically for global even candidates}
+\begin{corollary}\label{cor:eight-even-new-no-reflection-global}
+Every still-unexcluded no-origin centrally symmetric eight-point
+global maximizer has four distinct nonzero radial levels and no
+reflection symmetry axis.
+\end{corollary}
+\begin{proof}
+The existing no-origin two-level theorem excludes all global candidates
+with at most two radial levels. With three levels, central symmetry
+centers each level automatically and forces the population $2+2+4$.
+The completed three-level certificate
+\texttt{n8\_algebra\_threelevel\_224.tex}, Proposition
+\texttt{prop:eight-centered-threelevel-224}, excludes that complete
+global branch. Its four-point-layer domain $3/8<c<49/32$ in
+$u=\sqrt{7/8}\,z$ coordinates follows from the strict four-point
+internal-moment bound and the global one-point radius bound.
+This uses the completed $2+2+4$ certificate, not the earlier
+structural reduction that left this case open.
+
+Thus a remaining even global candidate must have four different
+values of $|y_i|$. If it has a reflection axis, the centroid at zero
+forces the axis through zero. Rotate it to the real axis. Its even
+root polynomial $P$ and quartic $q$ then have real coefficients.
+Any nonreal quartic root would have a distinct conjugate root with
+the same modulus, impossible with four distinct moduli. All four
+quartic roots must therefore be real, and Theorem
+\ref{thm:eight-even-new-axes-unstable} rules out a local, hence a
+global, maximum. This proves the reflection exclusion for global
+candidates; it does not assert instability of every non-axis
+reflection-symmetric stationary configuration.
+\end{proof}
+
+The program \path{axis_even_check.py} uses Python's standard library.
+Its Fraction sparse-polynomial arithmetic passes
+42 exact checks under \texttt{-B -S -O}. It verifies the original
+force remainders, genuine sign matching, rational root intervals,
+the complete square and balanced-sign defects, and independent
+rational audits of the universal $C$ action.
+The analytic strict-concavity and full Hessian implications are
+proved above. The general complex quartic branch with four distinct
+moduli and no reflection axis remains unresolved.
+
+\subsection{Recalled two-square theorem used by the next exclusion}
+The following proposition is an earlier proved input, reproduced here
+for the first-fourth-coefficient argument. It is not a new result of
+this addendum. Its block \(C\) is the same block defined above.
+\begin{proposition}[All stationary two-square configurations are unstable]
+\label{prop:n8-two-square-unstable}
+Every collision-free stationary eight-point configuration consisting
+of two concentric square rings is unstable under perturbations that
+break central symmetry. In force-one scale the largest singular value
+of the same-pair block $C$ has square
+\[
+\begin{aligned}
+ \frac{64}{49}&\quad\hbox{(regular octagon)},\\
+ \frac{532}{245}&\quad\hbox{(aligned unequal squares)},\\
+ \frac87&\quad\hbox{(staggered unequal squares)}.
+\end{aligned}
+\]
+In particular none is a local maximum among unrestricted eight-point
+configurations.
+\end{proposition}
+\begin{proof}
+Let $R,S>0$ be the squared ring radii. Rotate the first square so its
+fourth powers are $R^2$. Multiplying its pointwise force equation by
+the point gives
+\[
+ R=\frac32+\frac{4R^2}{R^2-X},
+\]
+where $|X|=S^2$ is the fourth power on the other square. Reality of
+the left side forces $X$ real, hence $X=\varepsilon S^2$,
+$\varepsilon=1$ or $-1$. The moment gives $R+S=7$.
+For $\varepsilon=1$, collision-freeness requires $R\ne S$ and the
+force equation gives $(R-S)^2=98/5$. For $\varepsilon=-1$, subtract
+the force equations of the two rings to obtain either $R=S=7/2$ or
+$R^2+S^2=28$, equivalently $(R-S)^2=7$.
+
+The quartic roots are $\{R,-R,S,-S\}$ in the aligned case and
+$\{R,-R,iS,-iS\}$ in the staggered case. In this order the block is
+\[
+ C=\begin{pmatrix}
+ A+B&0&-A&-B\\
+ 0&-A-B&B&A\\
+ -A&B&A-B&0\\
+ -B&A&0&B-A
+ \end{pmatrix}.
+\]
+Here aligned rings have
+$A=2(R+S)/(R-S)^2$, $B=2(R-S)/(R+S)^2$; staggered rings have
+$A=2(R+iS)/(R-iS)^2$, $B=\overline A$.
+Let $J$ interchange the first two and last two coordinates. Then
+$JCJ=-C$ and $C\mathbf1=0$. The even and odd eigenspaces of $J$
+both have dimension two. In an orthonormal real basis of these
+spaces, with the first even vector proportional to $\mathbf1$,
+$C$ therefore has the form
+\[
+ \begin{pmatrix}
+ 0&0&0&0\\0&0&\alpha&\beta\\
+ 0&\alpha&0&0\\0&\beta&0&0
+ \end{pmatrix}.
+\]
+Its two nonzero singular values are equal, with square
+$|\alpha|^2+|\beta|^2=\tfrac12\operatorname{Tr}(CC^*)
+=4(|A|^2+|B|^2)$.
+For aligned rings, $A=5/7$ and $B^2=8/245$, giving $532/245$.
+For staggered rings, $|A|^2=|B|^2=4/(R^2+S^2)$, giving
+$32/(R^2+S^2)$. The equal and unequal stationary choices yield
+$64/49$ and $8/7$, respectively. Each exceeds one and hence violates
+the necessary Hessian contraction proved above.
+\end{proof}
+
+
+% Additive fragment: three entire boundary subcharts of first-e4.
+\section{Three exact boundary exclusions in the eight-point first-\texorpdfstring{\(e_4\)}{e4} chart}
+\label{sec:first4-three-boundaries}
+
+This fragment proves a new exclusion on three complete subcharts of
+\[
+ p(X)=X^8+X^4+bX^3+cX^2+dX+u.
+\]
+The normalization applies when \(e_2=e_3=0\) and the coefficient
+\(e_4\ne0\): a nonzero complex scaling makes that coefficient one.
+It does not cover arbitrary \(b,c,d\). The conclusion is that a
+collision-free physical stationary configuration in any of the three
+subcharts
+\[
+ (b,d)=(0,0),\qquad(c,d)=(0,0),\qquad(b,c)=(0,0)
+\]
+must have \(b=c=d=0\). Its roots therefore consist of two concentric
+squares. The previously proved two-square instability excludes every
+such configuration as an unrestricted local or global maximum.
+
+\subsection{Original necessary equations and the reality limitation}
+Write \(\delta=\operatorname{Res}_X(p,p')\). Noncollision is exactly
+\(\delta\ne0\). At a physical stationary shape of moment \(Q>0\),
+\[
+ F_i(x)=\sum_{j\ne i}\frac1{x_i-x_j}
+       =\frac{28}{Q}\overline{x_i},\qquad
+ g_i=\frac{p''(x_i)}{p'(x_i)}=\frac{56}{Q}\overline{x_i}.
+\]
+Thus \(x_i=2F_i(g)\), and the \(g_i\) are distinct. Define the
+original resultant generators by
+\[
+ R_0(Y)=\operatorname{Res}_X(p,Yp'-p''),\quad
+ R_t(Y)=\left.\partial_T\operatorname{Res}_X
+          (p,(Y+TX)p'-p'')\right|_{T=0},
+\]
+\[
+ E_1=[Y^5]R_t,\qquad
+ E_r=[Y^{6-r}]R_t-(8-r)(7-r)[Y^{8-r}]R_0
+       \quad(2\le r\le6).
+\]
+Indeed, for \(H(Y)=\prod_i(Y-g_i)\), the double-force identity gives
+\[
+ \frac{R_t(Y)}{\delta}
+ =\sum_i\frac{x_iH(Y)}{Y-g_i}
+ =2\sum_{i<j}\frac{H(Y)}{(Y-g_i)(Y-g_j)}
+ =H''(Y).
+\]
+Hence \(R_t=R_0''\) and every physical stationary shape has
+\(E_1=\cdots=E_6=0\). These equations are only necessary. They do
+not impose actual conjugate pairing or make a complex algebraic
+solution physical. No sufficiency assertion, numerical coverage, or
+claim about positive-dimensional physical branches is used below.
+These generators use the double-force first variation, distinct from
+the squared-force resultant in the general even-chart model.
+
+\subsection{The full even boundary \texorpdfstring{\(b=d=0\)}{b=d=0}}
+Put \(q=c^2\) and define
+\begin{align*}
+ D={}&-27q^2+144qu-4q+256u^3-128u^2+16u,\\
+ A={}&-27q^2-432qu-4q+1792u^3+1664u^2-16u.
+\end{align*}
+Exact specialization of the original six generators gives
+\[
+ \delta=256uD^2,\qquad E_1=E_3=E_5=0,\qquad
+ E_2=6144cAD,\quad E_4=-8192F,\quad E_6=16384cG.
+\]
+Here the polynomials \(F,G\), all six specialized original generators,
+and the exact division quotients are recorded without omission in
+\texttt{even\_original.json} and \texttt{even\_certificate.json}.
+Assume \(c\ne0\) and \(\delta\ne0\). Then \(uD\ne0\), and \(E_2=0\)
+forces \(A=0\). Exact polynomial division yields
+\[
+ F=a_FA+\frac{256u}{3}f,\qquad
+ G=a_GA-\frac{32}{3}g,
+\]
+where
+\begin{align*}
+ f={}&(362880u^4+5241888u^3+3679416u^2+5478u+1)q\\
+    &-16128000u^5-27921408u^4-11577856u^3+154816u^2-584u,\\
+ g={}&(28340928u^4+33146928u^3-3734172u^2-17271u-28)q\\
+    &-169666560u^5-91799040u^4+13605760u^3-134560u^2-112u.
+\end{align*}
+Consequently \(f=g=0\). For \(M=u(12u+1)^4\), the exact resultants are
+\[
+ \operatorname{Res}_q(f,g)=24M H_0,\qquad
+ \operatorname{Res}_q(A,f)=48M H_1,
+\]
+with
+\begin{align*}
+ H_0={}&794740800u^4+545326096u^3-28268724u^2-237885u-686,\\
+ H_1={}&237081600u^6-2605639680u^5-4050501504u^4\\
+       &-1508424768u^3-25375852u^2-452060u-49.
+\end{align*}
+The explicit rational polynomials
+\(\alpha,\beta\) in \texttt{even\_certificate.json}
+(degrees five and three) certify the formal identity
+\[
+ \alpha H_0+\beta H_1=1,\qquad
+ \frac{\alpha}{24}\operatorname{Res}_q(f,g)
+ +\frac{\beta}{48}\operatorname{Res}_q(A,f)=u(12u+1)^4.
+\]
+The coefficient lists, rather than a computed gcd or a Groebner
+statement, are the certificate. Since the two resultants vanish and
+\(u\ne0\), one has \(u=-1/12\). But
+\[
+ f(q,-1/12)=\frac{7360}{9}(27q+8),
+\]
+so \(q=-8/27\), and \(D(-8/27,-1/12)=0\), contradicting
+\(\delta\ne0\). Thus \(c=0\).
+
+\subsection{The full \texorpdfstring{\(b\)}{b}-only boundary \texorpdfstring{\(c=d=0\)}{c=d=0}}
+Assume \(b\ne0\), and put \(v=b^4\). Here
+\[
+ E_1=4096b^3u^2(20u+27)(60u+1)^2,\qquad u^2\mid\delta.
+\]
+Noncollision implies \(u\ne0\); hence \(u=-27/20\) or \(-1/60\).
+The relevant exact generators are
+\[
+ E_2=1536b^2u^2B,\qquad E_5=2304b^3uC,
+\]
+\begin{align*}
+ B={}&(-112500u+13125)v+
+       2662400u^3-276480u^2-98816u+384,\\
+ C={}&(1687500u-16875)v+
+       232243200u^3+2498560u^2+326656u.
+\end{align*}
+All divided factors are nonzero under the stated assumptions, so
+\(B=C=0\). At \(u=-27/20\), their exact values satisfy
+\[
+ B=165000v-\frac{34603008}{5},\quad
+ C=-2295000v-\frac{2836463616}{5},\quad
+ -\frac{17B}{811008000}-\frac{C}{663552000}=1,
+\]
+which is impossible. At \(u=-1/60\),
+\[
+ B=15000v+\frac{262144}{135},\quad
+ C=-45000v-\frac{262144}{45},
+\]
+so \(v=-32768/253125\). Direct exact substitution in the original
+discriminant gives
+\[
+ \delta(-1/60,-32768/253125)=0.
+\]
+This is the second contradiction.
+Thus \(b=0\). Full specialized generator and discriminant formulas are
+in \texttt{b\_only\_original.json}; the two branch certificates are in
+\texttt{single\_odd\_reduce.json}.
+
+\subsection{The full \texorpdfstring{\(d\)}{d}-only boundary \texorpdfstring{\(b=c=0\)}{b=c=0}}
+Assume \(d\ne0\), and put \(v=d^4\). Three exact generators suffice:
+\[
+ E_2=-1536d^2B,\qquad E_3=-1024d^3C,\qquad
+ E_6=-917504d^2H,
+\]
+\begin{align*}
+ B={}&(-470596u+50421)v+
+       2408448u^4-716800u^3+37888u^2-2304u,\\
+ C={}&2470629v+6146560u^4-11283328u^3
+           +1378272u^2-219240u+10368,\\
+ H={}&(-941192u-151263)v+5531904u^4+344960u^3-67440u^2.
+\end{align*}
+Their nonzero scalar factors can be divided out, hence \(B=C=H=0\).
+For \(N=(28u+9)^2\), the two exact resultants are
+\[
+ \operatorname{Res}_v(B,C)=-134456N K_0,\qquad
+ \operatorname{Res}_v(C,H)=134456N K_1,
+\]
+\[
+ K_0=27440u^3-14504u^2+1239u-48,\qquad
+ K_1=54880u^3+2450u^2-3045u+144.
+\]
+The following explicit rational polynomials certify
+\(\alpha_dK_0+\beta_dK_1=1\):
+\begin{align*}
+ \alpha_d={}&\frac{89622225}{80734112}u^2+
+             \frac{358103305}{3875237376}u-
+             \frac{469880965}{7750474752},\\
+ \beta_d={}&-\frac{89622225}{161468224}u^2+
+             \frac{263473525}{968809344}u-
+             \frac{102804247}{7750474752}.
+\end{align*}
+Therefore the two vanishing resultants force \((28u+9)^2=0\), or
+\(u=-9/28\). At this value,
+\[
+ C=3(823543v+221184),\qquad
+ \delta=-\frac{(823543v+221184)^2}{823543}.
+\]
+Thus \(C=0\) contradicts \(\delta\ne0\). This proves \(d=0\),
+including the possible origin boundary \(u=0\), without dividing by
+\(u\). Full original formulas are in \texttt{d\_only\_original.json}.
+
+\subsection{Consequence and exact replay}
+In all three subcharts the only noncollision physical stationary
+possibility is \(p=X^8+X^4+u\). Its two distinct nonzero fourth-power
+roots give two concentric square rings. The existing physical
+two-square theorem, proved in
+\texttt{source/n8/n8\_next\_even\_model.tex},
+gives symmetry-breaking singular-value squares
+\(64/49\), \(532/245\), or \(8/7\), each greater than one.
+Hence no shape in these three whole subcharts is an unrestricted
+local maximum.
+
+\texttt{reconstruct\_chart.py} reconstructs each subchart from \(p\)
+using the exact \(15\)-by-\(15\) Sylvester determinant. The derivative
+is the sum of eight row-replacement determinants with
+\(q_1=Xp'-8p\); this is equivalent modulo \(p\) to \(Xp'\).
+Each subchart passes ten formal identities, including comparison of
+all six \(E_r\) and \(\delta\) with the saved original first-\(e_4\)
+generators. No points are sampled.
+\texttt{verify\_certificates.py} uses only standard-library sparse
+polynomial arithmetic over \(\mathbb Q\) to replay \(46\) formal
+factorizations, division identities, resultant formulas and Bezout
+certificates. It passes both normally and with \texttt{-S -O}.
+The unrestricted first-\(e_4\) chart with multiple nonzero coefficients
+\(b,c,d\) remains unresolved by this fragment.
+
+\section{An exact phase reduction for the unresolved \texorpdfstring{\(1+3+4\)}{1+3+4} branch}
+\label{sec:134-generic-phase}
+
+This section supplies necessary equations for a remaining branch; it
+does not exhaust it. Use coordinates \(u\) with moment seven and force
+constant four. Suppose a no-origin physical stationary configuration
+has exactly three distinct squared radii \(r,c,e\), with populations
+\(1,3,4\), and all three radial group sums are nonzero. The two sum
+identities \(\sum u_i=\sum |u_i|^2u_i=0\) make these sums collinear.
+Rotate their common line so that the singleton is \(x>0\), and put
+\[
+ r=x^2=7-3c-4e,\quad
+ a=x\frac{e-r}{c-e},\qquad b=x\frac{r-c}{c-e}.
+\]
+The triangle and quadrilateral root polynomials are necessarily
+\[
+ T(X)=X^3-aX^2-\frac{af}{c}X+f,\qquad |f|^2=c^3,
+\]
+\[
+ G(X)=X^4-bX^3+qX^2-\frac{bd}{e}X+d,
+ \qquad |d|^2=e^4,\quad e^2q=d\overline q.
+\]
+For actual global candidates the existing radius bound gives
+\(0<c,e<49/32<13/8\).
+
+For \(p_j=\sum_i u_i^j\), stationarity gives, by pairwise summation,
+\begin{equation}\label{eq:134-new-recursion}
+ \sum_i |u_i|^2u_i^j
+ =\frac{15-j}{8}p_j+
+       \frac18\sum_{h=1}^{j-1}p_hp_{j-h}\qquad(j\ge1).
+\end{equation}
+The imaginary parts for \(j=2,3\) are
+\[
+ (c-13/8)\frac ac\Im f-(e-13/8)\Im q=0,
+\]
+\[
+ (c-3/2)(a^2/c-1)\Im f+
+             (e-3/2)b(-\Im q+\Im d/e)=0.
+\]
+In particular \(\Im f\ne0\) forces \(\Im q\ne0\).
+
+\begin{lemma}[The entire degenerate triangle branch is reflected]
+\label{lem:134-new-degenerate-reflected}
+For a physical stationary \(1+3+4\) configuration as above, if
+\(a^2=c\), then the entire configuration is invariant under conjugation.
+This assertion does not require the global radius bound.
+\end{lemma}
+\begin{proof}
+The triangle factors as \(T=(X-a)(X^2-f/a)\). Centering gives
+\(b=-x-a\ne0\), and the first radial sum gives
+\[
+ e=\frac{x^3+a^3}{x+a}=x^2-xa+a^2.
+\]
+Put \(t=x/a\). The moment constraint then gives
+\[
+ c=\frac7{5t^2-4t+7}\le\frac{35}{31}<\frac{13}{8},\qquad
+ e=\frac{7(t^2-t+1)}{5t^2-4t+7},
+\]
+\[
+ \frac32-e=\frac{c}{14}\bigl((t+1)^2+6\bigr)>0.
+\]
+Thus both low imaginary identities have nonzero nonresonant factors.
+If \(\Im f=0\), the second moment gives \(\Im q=0\), and the third
+gives \(\Im d=0\), since \(a^2/c-1=0\) and \(b\ne0\).
+All coefficients are then real and the configuration is reflected.
+
+Suppose instead \(\Im f\ne0\); then \(\Im q\ne0\). The third
+moment gives \(\Im d=e\Im q\). The circle identity
+\(e^2q=d\overline q\) now forces
+\[
+ d=e(q-e),\qquad
+ G=(X^2-bX+e)(X^2+q-e).
+\]
+Indeed its imaginary part gives \(\Re d=e\Re q-e^2\).
+The triangle and quadrilateral each consist of one antipodal pair
+together with a reflected remainder. The other four roots have
+polynomial \((X-x)(X-a)(X^2-bX+e)\) with real coefficients.
+Consequently all odd global power sums and all their radial weighted
+sums are real. In particular
+\[
+ p_3=x^3+a^3+b^3-3eb=3(x+a)(x-a)^2\ne0.
+\]
+Here \(x+a\ne0\) because \(b\ne0\), and \(x-a\ne0\) because
+\(r\ne c\). The fifth moment identity has imaginary part
+\(p_3\Im p_2/4=0\), so \(\Im p_2=0\).
+But Newton's identity gives
+\[
+ \Im p_2=2\left(\frac{\Im f}{a}-\Im q\right),\qquad
+ \Im q=\frac1a\frac{c-13/8}{e-13/8}\Im f.
+\]
+These imply \(c=e\), contradicting the distinct radial levels.
+Thus the nonreflected possibility is impossible.
+\end{proof}
+
+\begin{proposition}[Generic phases determined by the two radii]
+\label{prop:134-new-phases}
+Within this global radius range, every nonreflected physical
+configuration in this branch has \(\Im f\ne0\), \(a^2\ne c\) and
+\(e\ne3/2\). Its real parts
+\(\Re f/x\) and \(\Re q\) are uniquely determined rational functions
+of \(c,e\) by the fourth and fifth moment identities.
+Thus the generic phase reduction covers every nonreflected candidate
+in the stated radius range, although it does not exclude them.
+\end{proposition}
+\begin{proof}
+The lemma rules out \(a^2=c\) for a nonreflected configuration.
+We first show that it has \(\Im f\ne0\). If \(\Im f=0\), then
+\(\Im q=0\). For \(e\ne3/2\), the third imaginary identity gives
+\(\Im d=0\), so it is reflected. For \(e=3/2\) and \(q\ne0\),
+the circle identity also gives \(\Im d=0\). It remains to treat
+\(e=3/2,q=0\). If \(\Im d\ne0\), the global second power sum is
+real and the fourth moment identity forces the quadrilateral fourth
+power sum \(b^4+4d(b^2/e-1)\) real. Thus \(b^2=e\).
+But \(r+3c=1\), \(0<c<1/3\), and the radial sum formula gives
+\[
+ |b|=\frac{\sqrt{1-3c}\,|1-4c|}{3/2-c}
+       <\frac67<\sqrt{3/2},
+\]
+since \(|1-4c|\le1\) and \(3/2-c>7/6\).
+This contradicts \(b^2=e\). Hence this resonance is reflected too,
+and a nonreflected configuration must have \(\Im f\ne0\).
+
+Now if \(e=3/2\), the third imaginary identity forces \(a^2=c\):
+the moment constraint gives \(c<1/3\), hence \(c\ne3/2\).
+The lemma excludes this. All three stated nondegeneracy conditions
+therefore hold. Write
+\[
+ \alpha=\frac{e-r}{c-e},\quad \beta=\frac{r-c}{c-e},\quad
+ \kappa=\frac{\alpha(c-13/8)}{c(e-13/8)},
+\]
+\[
+ \lambda=e\left[\kappa-
+    \frac{(c-3/2)(r\alpha^2/c-1)}{(e-3/2)r\beta}\right].
+\]
+All displayed denominators are nonzero: \(r,c,e\) are positive and
+distinct, and \(a,b\ne0\). Put \(h=\Im f\ne0\),
+\(U=\Re f/x\), \(Q=\Re q\). The two low imaginary identities and
+the imaginary part of \(e^2q=d\overline q\) give
+\begin{equation}\label{eq:134-new-parameters}
+ f=xU+\mathrm i h,\quad q=Q+\mathrm i x\kappa h,\quad
+ d=\frac{\lambda}{\kappa}Q-e^2+\mathrm i x\lambda h.
+\end{equation}
+
+Let \(t_j,g_j\) be the power sums of the monic polynomials \(T,G\),
+respectively, computed by Newton's identities, and set
+\(p_j=x^j+t_j+g_j\). Define the explicit polynomial expressions
+\[
+ Z_j=x^{j+2}+ct_j+eg_j-\frac{15-j}{8}p_j
+                  -\frac18\sum_{h'=1}^{j-1}p_{h'}p_{j-h'}.
+\]
+Substitution of \eqref{eq:134-new-parameters} and \(x^2=r\) gives
+\[
+ \begin{pmatrix}\Im Z_4/(xh)\\\Im Z_5/h\end{pmatrix}
+       =M(c,e)\begin{pmatrix}U\\Q\end{pmatrix}+N(c,e).
+\]
+Both entries are affine in \(U,Q\), and independent of \(h\).
+This can also be seen directly from Newton's identities: through
+degree five the triangle sums contain only \(f,f^2\), and the
+quadrilateral sums only \(q,q^2,d,dq\); their imaginary parts after
+division by \(h\) are affine. The moment products on the right have
+the same property because \(p_1=0\).
+Here \(N\) is unambiguously obtained from the displayed finite
+recurrence by setting \(U=Q=0\); no solving or root sampling defines
+it. For compact explicit matrix formulas put
+\[
+ K=7c^2+24ce-35c+25e^2-70e+49,
+\]
+\[
+ L_1=80ce-126c-124e+195,\qquad
+ L_2=80ce-124c-126e+195.
+\]
+Direct expansion gives
+\begin{align*}
+ M_{11}&=\frac{r(8c-13)(8e-11)(e-r)^2}
+                    {2c^2(c-e)^2(8e-13)},&
+ M_{12}&=\frac{(8c-11)(e-r)}{2c(c-e)},\\
+ M_{21}&=\frac{r(e-r)(r-c)(4e-5)L_1K}
+                  {2c^2(c-e)^3(2e-3)(8e-13)},&
+ M_{22}&=\frac{(4c-5)(r-c)L_2K}
+                  {2c(c-e)^2(8c-13)(2e-3)}.
+\end{align*}
+Their exact determinant factors as
+\begin{equation}\label{eq:134-new-determinant}
+ \det M=-\frac{r(e-r)^2(r-c)JK}
+               {2c^3(c-e)^3(2e-3)(8e-13)},\qquad
+ J=128ce-208c-208e+335.
+\end{equation}
+One has the strictly positive global-domain bound
+\[
+ J\ge\frac{297}{32}>0
+ \quad\text{on}\quad
+ 0\le c,e\le49/32,\quad 3c+4e\le7.
+\]
+Indeed \(J\) decreases in each variable on this polygon. On its
+oblique moment edge, substitution \(e=(7-3c)/4\) makes \(J\) a
+concave quadratic, whose minimum is at an endpoint. The five vertex
+values are \(335,33/2,297/32,13,33/2\).
+Finally the exact identity
+\[
+ (c-e)^2(a^2-c)=(r-c)K
+\]
+shows that \(K\ne0\) on the generic branch. Thus \(\det M\ne0\),
+and \(M(U,Q)^{\mathsf T}+N=0\) determines both real parts rationally.
+This proves the proposition.
+\end{proof}
+
+The remaining necessary circle constraints now include the explicit
+two-radius conditions
+\[
+ h^2=c^3-rU^2>0,\qquad
+ \frac{\lambda}{\kappa}
+       \bigl(Q^2+r\kappa^2h^2\bigr)-2e^2Q=0.
+\]
+The second is the real part of \(e^2q=d\overline q\); together with
+\eqref{eq:134-new-parameters} it also gives \(|d|^2=e^4\).
+The signs \(h\) and \(-h\) give conjugate configurations. These
+necessary conditions still require the full force remainders and
+actual common-circle root tests; they are not sufficient physical
+equations and do not establish finite coverage.
+In the exceptional branch, \(a^2=c\) factors the triangle explicitly:
+\[
+                  T(X)=(X-a)(X^2-f/a).
+\]
+It consists of a real point and an antipodal pair on that circle.
+The lemma eliminates its entire nonreflected part. A value or force
+exhaustion for reflected configurations of this population, and the
+remaining generic two-radius force problem, are still open here.
+
+The independently reconstructed checker
+\path{phase_reduction_check.py} uses exact SymPy arithmetic for ten
+formal tests: the original Newton recurrences, affine dependence,
+the determinant factorization, the degeneracy identity, and all
+vertex signs. No numerical roots or sampling certify this reduction.
+The independent companion-matrix program \path{phase_independent_audit.py}
+also reconstructs the low force moments, checks every printed matrix
+entry, both reflected degeneracy arguments, and the additional
+radius curve below. Its 57 exact checks pass independently of the
+Newton-recurrence implementation. A further 22-identity audit supplies
+a Bernstein certificate for the whole resonant radius interval.
+
+% Appendable supplement after the generic I4/I5 phase reduction.
+\begin{proposition}[A degree-six curve for the remaining radial parameters]
+\label{prop:eight-134-new-real-radius-curve}
+In the nonreflected physical $1+3+4$ branch in the stated global
+radius range, put $r=7-3c-4e$, $U=\Re f/x$, $Q=\Re q$, and retain
+the established parameters $\kappa,\lambda$.
+Define
+\begin{align*}
+ P_2={}&24c^3+192c^2e-309c^2+248ce^2-950ce+833c\\
+       &\quad+48e^3-469e^2+1015e-637,\\
+ P_3={}&36c^3+162c^2e-213c^2+236ce^2-630ce+406c\\
+       &\quad+126e^3-487e^2+609e-245,\\
+ K={}&7c^2+24ce-35c+25e^2-70e+49,\\
+ P_6={}&3(2c-3)KP_2-(8c-13)(e-r)(c-e)P_3.
+\end{align*}
+Every such physical stationary configuration satisfies
+\[
+                         P_6(c,e)=0.
+\]
+This is an additional necessary radius condition, not an exhaustion
+of its real roots or of physical stationary configurations.
+\end{proposition}
+\begin{proof}
+Let $Z_j$ denote the mixed force remainder already defined in the
+phase reduction. Under $f=xU+\mathrm ih$, $q=Q+\mathrm ix\kappa h$,
+$d=(\lambda/\kappa)Q-e^2+\mathrm ix\lambda h$, the two low real
+moments have the form
+\[
+ \Re Z_2=A_2U+B_2Q+N_2,\qquad
+ \Re Z_3/x=A_3U+B_3Q+N_3.
+\]
+Exact expansion, or companion-matrix traces, gives
+\begin{align*}
+ A_2&=\frac{r(e-r)(8c-13)}{4c(c-e)},&
+ B_2&=-\frac{8e-13}{4},&
+ N_2&=\frac{rP_2}{4(c-e)^2},\\
+ A_3&=\frac{3(2c-3)(r-c)K}{2c(c-e)^2},&&&
+ N_3&=\frac{(r-c)P_3}{2(c-e)^2},\\
+ B_3&=-\frac{3(2c-3)(8e-13)(r-c)K}
+               {2(c-e)(8c-13)r(e-r)}.
+\end{align*}
+The two coefficient rows have the same homogeneous null direction:
+\[
+ A_2B_3-A_3B_2=0.
+\]
+Their constant compatibility is exactly
+\[
+ A_2N_3-A_3N_2
+       =-\frac{r(r-c)}{8c(c-e)^4}\,P_6(c,e).
+\]
+The force equations set both real remainders to zero. Since
+$r>0$, $c>0$, and the three radial levels are distinct, the
+displayed nonzero prefactor forces $P_6=0$.
+Every identity here was independently reconstructed from companion
+traces in \path{phase_independent_audit.py}; the checker also verifies
+all six low-real coefficients separately.
+\end{proof}
+
+For possible further elimination, the second real moment and fourth
+imaginary moment give another invertible pair. Its exact determinant is
+\[
+ \det\begin{pmatrix}A_2&B_2\\M_{11}&M_{12}\end{pmatrix}
+       =\frac{r\alpha^2(8c-13)(4c+4e-11)}{4c^2}.
+\]
+On the global polygon,
+$c+e\le7/4+c/4\le273/128<11/4$, so this determinant does not
+vanish. This observation is recorded as a further algebraic route;
+it does not replace the established fourth/fifth imaginary-moment
+parameterization or prove that the remaining radius curve is empty.
+
+\section{What is now complete and what remains}
+With the stated published classification, the six- and seven-point
+unrestricted problems, including all no-origin configurations, are
+complete. The classification-free replacements are separate research
+questions; their incompleteness does not reopen these global values.
+
+Eight points are still incomplete. A remaining no-origin global
+candidate has at least three radial levels. If centrally symmetric,
+it has four distinct levels and no reflection axis. Three-radius
+configurations with nonzero collinear radial sums can still have
+populations \(1+2+5\), \(1+3+4\), \(2+2+4\), or \(2+3+3\).
+The \(1+3+4\) reduction above excludes nonreflected degeneracy, but
+does not exhaust its remaining two-radius force system or its
+reflected configurations.
+General multiple-coefficient first-fourth charts and configurations
+with four or more radial levels are also not exhausted.
+
+The earlier fixed-origin theorem proves its entire eight-point
+comparison. The companion regional addendum excludes the explicit
+near-origin region for actual global maximizers. These narrow the remaining
+no-origin problem. No finite sampling, necessary algebraic equation,
+or successful inequality check is substituted for missing coverage.
+
+\begin{thebibliography}{9}
+\bibitem{FS}
+J.-C.~Faug\`ere and J.~Svartz,
+\emph{Solving polynomial systems globally invariant under an action of
+the symmetric group and application to the equilibria of \(N\) vortices
+in the plane}, Proceedings of ISSAC 2012, 170--178.
+\href{https://doi.org/10.1145/2442829.2442856}{doi:10.1145/2442829.2442856}.
+\bibitem{FSdata}
+J.-C.~Faug\`ere and J.~Svartz, author computational archive,
+\emph{Vortices for \(N=6\)}, exact coefficient bases supplied as
+\path{archivepolsys_vortices_N6.txt}.
+\bibitem{FSdataSeven}
+J.-C.~Faug\`ere and J.~Svartz, author computational archive,
+\emph{Vortices for \(N=7\)}, retained exact coefficient bases supplied as
+\path{archivepolsys_vortices_N7.txt}.
+\end{thebibliography}
+\end{document}

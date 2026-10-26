@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "date": "2026-10-27",
+  "jobs": [
+    {
+      "script": "five_point/verify_mordell.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.281
+    },
+    {
+      "script": "five_point/algebra_identity_check.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.188
+    },
+    {
+      "script": "five_point/generalization_check.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.187
+    },
+    {
+      "script": "six_seven/verify_manifest.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.204
+    },
+    {
+      "script": "six_seven/certify_fs6_disks.py",
+      "args": [
+        "--verify"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.359
+    },
+    {
+      "script": "six_seven/certify_fs7_disks.py",
+      "args": [
+        "--verify"
+      ],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 65.641
+    },
+    {
+      "script": "six_seven/verify_fs6_components_exact.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.735
+    },
+    {
+      "script": "general_n/audited_supplement/exact_check.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 2.781
+    },
+    {
+      "script": "general_n/structural_and_algebraic/structural_verify.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 0.625
+    },
+    {
+      "script": "general_n/structural_and_algebraic/algebraic_verify.py",
+      "args": [],
+      "status": "PASS",
+      "returncode": 0,
+      "seconds": 1.078
+    }
+  ],
+  "full_eight_point_bound_proved": false,
+  "six_seven_coverage": "Uses the explicitly cited published Faugere-Svartz classification; does not independently reconstruct all chart coverage.",
+  "seconds": 79.25
+}

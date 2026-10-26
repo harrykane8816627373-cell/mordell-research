@@ -1,0 +1,285 @@
+% Fragment for main.tex: uses its theorem/proof environments and booktabs.
+% This replacement distinguishes the published coverage input from the
+% independently replayable finite arithmetic certificate.
+\section{Exact six- and seven-point proofs with an explicit coverage input}
+\label{sec:six-seven-improved-proof}
+
+Put $N_n=n(n-1)/2$ and
+\[
+ C_6=\frac{6^{15}}{5^{10}},\qquad
+ C_7=\frac{7^{21}}{6^{15}}.
+\]
+The proof has two separate inputs. The published Faug\`ere--Svartz
+computation supplies coverage of all physical stationary shapes.
+The rational certificates supplied here cover and compare every algebraic
+candidate in the retained charts. The latter verification does not
+recompute the former decomposition.
+
+\begin{lemma}[Reduction to normalized coefficient charts]
+\label{lem:six-seven-chart-reduction}
+A global maximizer of $\Delta_n$ on $\sum_i|z_i|^2=n$ exists, is
+collision-free, and has $\sum_i z_i=0$. If $w_i=\alpha z_i$ for
+$\alpha\ne0$, and $P(t)=\prod_i(t-w_i)$, $Q=\sum_i|w_i|^2$, then
+\begin{equation}\label{eq:six-seven-uniform-residual}
+ QP''(w_i)-2N_n\overline{w_i}P'(w_i)=0\quad(1\le i\le n),
+\end{equation}
+and its value at moment $n$ is
+\begin{equation}\label{eq:six-seven-uniform-value}
+ \mathcal V_n(w)=\left(\frac nQ\right)^{N_n}
+                    \prod_{i<j}|w_i-w_j|^2.
+\end{equation}
+Every such shape can be put in a chart in which the first nonzero
+elementary symmetric coefficient is $1$; complex scaling loses no
+physical shape and preserves \eqref{eq:six-seven-uniform-value}.
+\end{lemma}
+\begin{proof}
+The constraint sphere is compact and the objective is continuous.
+A regular $n$-gon gives a positive value, whereas a collision gives
+zero, so a maximizer has distinct points. Let $c=n^{-1}\sum_i z_i$.
+Translation by $-c$ preserves all pair differences and changes the
+moment to $n-n|c|^2$. If $c\ne0$, rescaling the translated points to
+moment $n$ strictly increases the positive objective, a contradiction.
+
+The Lagrange equations for $\log\Delta_n$ at a maximizer are
+\[
+ F_i(z):=\sum_{j\ne i}\frac1{z_i-z_j}=\lambda\overline{z_i}.
+\]
+Pairwise summation gives
+$\sum_i z_iF_i(z)=\sum_{i<j}(z_i-z_j)/(z_i-z_j)=N_n$.
+Consequently $\lambda=N_n/n>0$. Under $w_i=\alpha z_i$,
+$F_i(w)=\lambda|\alpha|^{-2}\overline{w_i}$, and the positive
+force constant $\kappa=\lambda|\alpha|^{-2}$ obeys $\kappa Q=N_n$.
+The identity $F_i(w)=P''(w_i)/(2P'(w_i))$ proves the residual equation.
+Scaling a shape of moment $Q$ to moment $n$ multiplies every squared
+pair difference by $n/Q$, proving the value formula.
+
+The centered root polynomial is
+$P(t)=t^n+\sum_{k=2}^n(-1)^ke_k t^{n-k}$.
+Some $e_k$ is nonzero, since otherwise every root would be zero.
+Choosing $\alpha$ with $\alpha^ke_k=1$ normalizes its first nonzero
+coefficient, with all earlier coefficients still zero.
+\end{proof}
+
+\paragraph{The exact external coverage statement.}
+We use the collision-saturated coefficient-chart computation reported in
+Faug\`ere--Svartz~\cite[Sections~5.3--5.7]{FS}, with the archived
+author bases~\cite{FSdata,FSdataSeven}, in the following precise form:
+every collision-free physical stationary shape for $n=6$ or $n=7$,
+up to complex scaling and permutation, is represented in the retained
+charts specified below. This is a necessary coverage statement; the
+charts may also contain nonphysical algebraic candidates. Theorem~5
+of~\cite{FS} gives the symmetric equations, whereas the chart
+classification is the subsequent published computation.
+This coverage concerns solutions of the original physical equilibrium
+equations, including unstable and collinear configurations; it is not a
+classification restricted to stable equilibria. Sections~5.3--5.4 and
+5.7 occur on proceedings pages~176 and~177, respectively.
+
+For $n=6$ the author file supplies eleven components, of parameter
+degrees
+\[
+ 22,28,12,4,2,1,1,6,2,1,1,
+\]
+with total $80$. Its header $\texttt{N=7}$ is a metadata typo: the
+linked file is $\texttt{vortices\_N6.txt}$ and its variables are
+$e_2,\ldots,e_6$. Exact substitution into the six-point coefficient
+equations supplies an additional integrity check. It proves forward
+containment, and does not by itself prove completeness of these charts.
+
+For $n=7$, Section~7 and Figure~4 of~\cite[p.~178]{FS} are also used. Their
+$e_2=1$ component has degree $526$, decomposed into degrees
+$6,18,356,82,64$. Figure~4 marks the degree-$356$ branch physically
+empty. Its polynomial and its independent real-feasibility certificate
+are absent from our supplied files. The retained file has seven charts,
+of parameter degrees
+\[
+ 1,1,2,6,18,82,64,
+\]
+with total $174$. The degree-$18$ branch, also marked physically
+empty in the paper, is retained and independently excluded below.
+Thus our seven-point verification includes all $174$ retained
+coefficient candidates, and does not claim to include the missing
+$356$ complex candidates. Their physical exclusion remains a cited
+external input.
+
+\begin{proposition}[Exact comparison on every retained chart]
+\label{prop:six-seven-retained-comparison}
+For every retained six-point candidate that satisfies
+\eqref{eq:six-seven-uniform-residual},
+$\mathcal V_6\le C_6$. Equality can occur only for
+$P(t)=t(t^5-1)$.
+For every retained seven-point candidate that satisfies the same
+residual with $n=7$, $\mathcal V_7\le C_7$. Equality can occur only
+for $P(t)=t(t^6+1)$.
+\end{proposition}
+\begin{proof}
+The coefficient conventions are
+\[
+ \begin{split}
+ P_6(t)&=t^6+e_2t^4-e_3t^3+e_4t^2-e_5t+e_6,\\
+ P_7(t)&=t^7+e_2t^5-e_3t^4+e_4t^3-e_5t^2+e_6t-e_7.
+ \end{split}
+\]
+The standard-library programs
+$\texttt{certify\_fs6\_disks.py}$ and
+$\texttt{certify\_fs7\_disks.py}$ parse the exact author polynomials
+without executing them. They isolate every parameter root and every
+root of the associated point polynomial in disjoint Gaussian-rational
+disks. Each disk contains one root by a strict rational Rouch\'e
+inequality, and the number of disks equals the polynomial degree.
+Thus no parameter root or point root in any retained chart is omitted.
+Coefficient uncertainty from the parameter disk is included throughout.
+
+Here are the replayed six-point results. ``Bounded'' means a strict
+upper bound on the normalized objective; it does not assert that the
+candidate satisfies the physical equations.
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule
+Component&Parameters&Force excluded&Bounded&Upper endpoint\\
+\midrule
+1&22&20&2&$3170$\\
+2&28&28&0&---\\
+3&12&12&0&---\\
+4&4&2&2&$42454$\\
+5&2&2&0&---\\
+6&1&0&1&$18699$\\
+7&1&0&1&$18699$\\
+8&6&4&2&$22400$, $133$\\
+9&2&1&1&$7225$\\
+10&1&0&0&$C_6$, attaining\\
+11&1&0&1&$6^6$, exact\\
+\bottomrule
+\end{tabular}
+\end{center}
+There are $80$ parameter roots and $480$ point-root disks.
+The $69$ force exclusions and $10$ strictly smaller candidates leave
+one attaining chart. Every displayed upper endpoint is at most $6^6$,
+and
+\[
+ C_6>6^6\quad\Longleftrightarrow\quad
+ 6^9=10077696>9765625=5^{10}.
+\]
+
+The seven-point results are
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule
+Chart&Parameters&Force excluded&Bounded&Upper endpoint\\
+\midrule
+1&1&0&1&$7^7=823543$, exact\\
+2&1&0&0&$C_7$, attaining\\
+3&2&1&1&$40253$\\
+4&6&4&2&$159666$\\
+5&18&18&0&---\\
+6&82&78&4&$268962$\\
+7&64&54&10&$822629$\\
+\bottomrule
+\end{tabular}
+\end{center}
+There are $174$ parameter roots and $1218$ point-root disks.
+The $155$ force exclusions and $18$ strictly smaller candidates leave
+one attaining chart. Every displayed upper endpoint is at most $7^7$,
+and
+\[
+ C_7>7^7\quad\Longleftrightarrow\quad
+ 7^{14}=678223072849>470184984576=6^{15}.
+\]
+The force exclusions and objective bounds are justified uniformly on
+the exact root disks by the estimates given next. All deciding checks
+use explicit exceptions and remain active under Python $\texttt{-O}$.
+\end{proof}
+
+\paragraph{Root coverage, physical exclusions and value bounds.}
+Write $\|c\|_1=|\Re c|+|\Im c|$ and
+$\|c\|_\infty=\max\{|\Re c|,|\Im c|\}$ for Gaussian rationals.
+Let $p_0$ be a nominal polynomial, let its coefficient of $t^j$ have
+uncertainty at most $\epsilon_j$, and put
+$a_k=p_0^{(k)}(c)/k!$. The test
+\[
+ \|a_0\|_1+\sum_{k\ge2}\|a_k\|_1r^k
+       +\sum_j\epsilon_j(\|c\|_1+r)^j
+ <r\|a_1\|_\infty
+\]
+compares the allowed polynomial on $|t-c|=r$ with its nominal
+linear term $a_1(t-c)$. Rouch\'e's theorem therefore gives exactly
+one root, counted with multiplicity. Pairwise disk disjointness and
+the degree count prove exhaustive coverage in each retained chart.
+
+Let $c_i$ be the point-root centers, of common radius $r$, and set
+\[
+ Q_0=\sum_i|c_i|^2,\qquad
+ E_Q=\sum_i(2\|c_i\|_1r+r^2).
+\]
+Then $|Q-Q_0|\le E_Q$. Let $v_j=p_0^{(j)}(c_i)$ and let $E_j$
+bound $|P^{(j)}(w_i)-v_j|$, including coefficient and root variation.
+The actual physical residual differs from
+$Q_0v_2-2N_n\overline{c_i}v_1$ by at most
+\[
+ E_Q\|v_2\|_1+(Q_0+E_Q)E_2
+ +2N_n\{r\|v_1\|_1+(\|c_i\|_1+r)E_1\}.
+\]
+If the nominal residual's $\|\cdot\|_\infty$ exceeds this bound
+at even one point, the entire coefficient candidate is nonphysical.
+This tests the actual pointwise conjugate pairing, rather than only
+equality of two unordered sets of roots.
+
+For each surviving candidate, $Q_0>E_Q$ and
+\begin{equation}\label{eq:six-seven-rational-upper}
+ U_n=\left(\frac n{Q_0-E_Q}\right)^{N_n}
+ \prod_{i<j}\bigl(|c_i-c_j|^2+4r\|c_i-c_j\|_1+4r^2\bigr)
+\end{equation}
+is a rational upper bound on \eqref{eq:six-seven-uniform-value}.
+The tables give upward-rounded integer endpoints of these rational
+bounds, or the exact regular-polygon values. Hence their strict
+comparison with $C_n$ proves the proposition without needing to
+establish physical sufficiency for any bounded candidate.
+
+\begin{theorem}[Global values using the published physical coverage]
+\label{thm:six-seven-global-improved}
+For $\sum_i|z_i|^2=n$,
+\[
+ M_6=\frac{6^{15}}{5^{10}},\qquad
+ M_7=\frac{7^{21}}{6^{15}}.
+\]
+Equality for $n=6$ holds exactly for the origin and a regular
+pentagon of radius $\sqrt{6/5}$; equality for $n=7$ holds exactly
+for the origin and a regular hexagon of radius $\sqrt{7/6}$,
+in each case up to rotation and permutation.
+\end{theorem}
+\begin{proof}
+Every global maximizer is a collision-free centered physical stationary
+shape by Lemma~\ref{lem:six-seven-chart-reduction}. The stated external
+coverage places it in a retained chart, and
+Proposition~\ref{prop:six-seven-retained-comparison} gives the upper
+bound with a strict gap for every chart other than the attaining one.
+
+To verify attainment independently of the classification, put
+$m=n-1$ and consider the roots of $P(t)=t(t^m-a)$, $|a|=1$.
+They are the origin and a rotated unit regular $m$-gon, with moment
+$m$ and squared pair-distance product $m^m$. At every nonzero root,
+$P''(w)/(2P'(w))=n/(2w)$, and the force at the origin is zero.
+Thus the residual equation holds directly. Scaling to moment $n$
+gives
+\[
+ (n/m)^{N_n}m^m
+ =\frac{n^{N_n}}{(n-1)^{(n-1)(n-2)/2}}.
+\]
+For $n=6,7$ this is respectively $C_6,C_7$.
+The strict comparisons already prove that an attaining shape must
+belong to this chart. Moment normalization fixes its radius and
+the remaining complex phase is exactly an overall rotation, proving
+both equality classifications.
+\end{proof}
+
+\paragraph{Reproducibility boundary.}
+The exact replay counts are $80=69+10+1$ and $174=155+18+1$.
+The six-point component-identity checker has also been changed from
+$\texttt{assert}$ statements to explicit arithmetic checks, so its
+decisions remain active under $\texttt{python -S -O}$.
+An independent reconstruction of the saturated Gr\"obner decompositions
+is not included, and the missing seven-point degree-$356$ physical
+exclusion is not claimed to have been reproduced. A proof using the
+published classification and an entirely standalone computational
+classification are different reproducibility claims; the theorem here
+uses the former.

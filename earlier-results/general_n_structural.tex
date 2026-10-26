@@ -1,0 +1,286 @@
+\section{New rational constraints from subset scaling}
+\label{sec:subset-scaling-new}
+
+The following arguments supply necessary conditions for global maximizers
+without assuming any polygonal or reflection symmetry. They improve the
+separation and radius constants in the existing compact formulation, but
+do not by themselves classify the maximizing shapes for arbitrary $n$.
+All proofs below are self-contained; no priority assertion is intended.
+Put $N=n(n-1)/2$ and $\lambda=(n-1)/2$.
+
+\begin{lemma}[A boundary maximum derivative]\label{lem:boundary-derivative-new}
+Let $q$ be a nonconstant polynomial with
+$|q(1)|=\max_{|t|=1}|q(t)|$. Then $q(1)\ne0$ and
+\[
+                 \Re\frac{q'(1)}{q(1)}>0.
+\]
+\end{lemma}
+\begin{proof}
+Set $f=q/q(1)$ and $b=f(0)$. The maximum-modulus principle gives
+$|f|\le1$ in the unit disk, and $|b|<1$ since $f$ is nonconstant.
+Schwarz--Pick, applied to $f$ at zero, gives for $0<r<1$
+\[
+ \left|\frac{f(r)-b}{1-\overline b f(r)}\right|\le r.
+\]
+Using the elementary identity for this disk automorphism yields
+\[
+ 1-|f(r)|^2\ge
+ (1-r^2)\frac{|1-\overline b f(r)|^2}{1-|b|^2}.
+\]
+Divide by $2(1-r)$ and let $r\uparrow1$. Since $f(1)=1$ and $f$
+is analytic across the boundary, this gives
+\[
+ \Re f'(1)\ge\frac{|1-b|^2}{1-|b|^2}>0.
+\]
+\end{proof}
+
+\begin{theorem}[Every-subset internal moment]\label{thm:subset-spread-new}
+Let $z_1,\ldots,z_n$ be a global maximizer with
+$\sum_i|z_i|^2=n$. For a subset $S$ of size $m$, put
+\[
+ a_S=\frac1m\sum_{i\in S}z_i,\qquad
+ Q_S=\sum_{i\in S}|z_i-a_S|^2.
+\]
+For every proper subset with $2\le m<n$,
+\begin{equation}\label{eq:subset-spread-new}
+             Q_S>\frac{m(m-1)}{n-1}.
+\end{equation}
+For the full set $Q_S=n$, and for a singleton $Q_S=0$.
+\end{theorem}
+\begin{proof}
+A maximizer is centered and collision-free. Homogeneity shows that it
+also globally maximizes
+\[
+ \Phi(z)=\Delta_n(z)\exp\left(-\lambda\sum_i|z_i|^2\right)
+\]
+over all of $\C^n$: for a fixed nonzero shape of moment $Q$, the best
+scale satisfies $s^2Q=N/\lambda=n$.
+Fix a proper subset $S$, all outside points, and its centroid $a_S$.
+Write $y_i=z_i-a_S$, so $\sum_{i\in S}y_i=0$, and replace the subset
+by $a_S+t y_i$. Up to a positive factor independent of $t$, the
+conditional objective is
+\[
+ |P(t)|^2e^{-\alpha|t|^2},\qquad
+ P(t)=t^k q(t),\qquad k=\frac{m(m-1)}2,\qquad
+ \alpha=\lambda Q_S,
+\]
+where
+\[
+ q(t)=\prod_{i\in S,\ j\notin S}(a_S+t y_i-z_j).
+\]
+The original $t=1$ globally maximizes this expression. On the unit
+circle the Gaussian factor and $|t|^{2k}$ are constant, so
+$|q(1)|=\max_{|t|=1}|q(t)|$. Stationarity at $t=1$ gives
+\[
+ \frac{P'(1)}{P(1)}=\alpha,
+ \qquad \frac{q'(1)}{q(1)}=\alpha-k.
+\]
+The polynomial $q$ is nonconstant: some $y_i\ne0$ because $m\ge2$
+and the points are distinct; its outside factors have positive degree.
+If a $y_i=0$, its outside factors are nonzero constants by
+collision-freeness. Thus the degree cannot cancel in the product.
+Lemma~\ref{lem:boundary-derivative-new} yields $\alpha>k$, proving
+\eqref{eq:subset-spread-new}. The full-set and singleton statements
+follow from centering and the prescribed moment.
+\end{proof}
+
+\begin{remark}
+For closed rational optimization constraints one may relax the strict
+inequality to $Q_S\ge m(m-1)/(n-1)$. This weaker version also follows
+using only the usual maximum-modulus principle: if
+$M_q(r)=\max_{|t|=r}|q(t)|$, then $M_q$ is nondecreasing, while
+$r^{2k}e^{-\alpha r^2}$ is strictly increasing for
+$r<\sqrt{k/\alpha}$. Consequently a global radial maximizer at $r=1$
+requires $\alpha\ge k$.
+\end{remark}
+
+\begin{corollary}[Pair and triple separation]\label{cor:pair-triple-new}
+For $n\ge3$ every pair in a global maximizer satisfies
+\begin{equation}\label{eq:pair-new-rational}
+                    |z_i-z_j|^2>\frac4{n-1}.
+\end{equation}
+For $n\ge4$ every triple $S$ satisfies
+\begin{equation}\label{eq:triple-new-rational}
+ Q_S>\frac6{n-1},\qquad
+ \sum_{\{i,j\}\subset S}|z_i-z_j|^2>\frac{18}{n-1}.
+\end{equation}
+At force-one scale $w_i=\sqrt\lambda\,z_i$, these become
+$|w_i-w_j|^2>2$, and respectively $Q_S(w)>3$ and a triple
+squared-distance sum greater than $9$.
+\end{corollary}
+\begin{proof}
+For any $m$ points,
+$mQ_S=\sum_{\{i,j\}\subset S}|z_i-z_j|^2$.
+Apply Theorem~\ref{thm:subset-spread-new} for $m=2,3$ and rescale.
+For $n=2$ the pair squared distance is $4$ in the original scale and
+$2$ at force-one scale. Since $e>2$, \eqref{eq:pair-new-rational}
+is strictly stronger than $8/[e(n-1)]$ whenever $n\ge3$.
+\end{proof}
+
+\begin{corollary}[Radius and every-subset centroid]\label{cor:subset-centroid-new}
+For $n\ge3$ and every nonempty proper subset $S$ of size $m$,
+\begin{equation}\label{eq:subset-centroid-new}
+ \left|\sum_{i\in S}z_i\right|^2
+      <\frac{2m^2(n-m)^2}{n(n-1)}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:radius-new-rational}
+                    |z_i|^2<\frac{2(n-1)}n.
+\end{equation}
+At force-one scale the bounds are
+\[
+ \left|\sum_{i\in S}w_i\right|^2
+       <\frac{m^2(n-m)^2}{n},\qquad
+ |w_i|^2<\rho_n:=\frac{(n-1)^2}{n}.
+\]
+All displayed strict inequalities may be relaxed to nonstrict rational
+constraints retaining every global maximizer. For $n=2$ the radius
+inequality is equality.
+\end{corollary}
+\begin{proof}
+Let $T$ be the complement. Centering gives
+\[
+ n=Q_S+Q_T+\frac{n}{m(n-m)}
+                    \left|\sum_{i\in S}z_i\right|^2.
+\]
+Theorem~\ref{thm:subset-spread-new} gives
+\[
+ Q_S+Q_T>
+ \frac{m(m-1)+(n-m)(n-m-1)}{n-1}
+ =n-\frac{2m(n-m)}{n-1}.
+\]
+Singleton blocks have internal moment zero; at least one block has
+size at least two when $n\ge3$, so the sum is strict. Rearrangement
+proves \eqref{eq:subset-centroid-new}, and $m=1$ gives
+\eqref{eq:radius-new-rational}.
+\end{proof}
+
+\begin{proposition}[Directional majorization]\label{prop:projection-new}
+Fix an angle $\theta$, and sort
+$x_i=\Re(e^{-i\theta}z_i)$ in decreasing order. Put
+$c=\sqrt{2/[n(n-1)]}$ and $b_i=c(n+1-2i)$. Then $(x_i)$ is
+majorized by $(b_i)$: for $1\le m<n$,
+\[
+ \sum_{i=1}^m x_i\le c m(n-m)=\sum_{i=1}^m b_i,
+ \qquad \sum_i x_i=\sum_i b_i=0.
+\]
+For $n\ge3$ every proper partial-sum inequality is strict. Consequently,
+for every convex real function $\varphi$,
+\[
+                   \sum_i\varphi(x_i)\le\sum_i\varphi(b_i).
+\]
+In particular, for $n\ge3$,
+\begin{equation}\label{eq:quadrupole-new}
+ \sum_i x_i^2<\frac{2(n+1)}3,\qquad
+ \left|\sum_i z_i^2\right|<\frac{n+4}3.
+\end{equation}
+For real $t\ne0$,
+\[
+ \sum_i e^{t x_i}\le\frac{\sinh(nct)}{\sinh(ct)}.
+\]
+The ratio has continuous value $n$ at $t=0$.
+\end{proposition}
+\begin{proof}
+Apply Corollary~\ref{cor:subset-centroid-new} to the subset giving the
+largest $m$ projections; the projection of its sum is bounded by the
+modulus of that sum. The arithmetic progression $(b_i)$ has the stated
+partial sums, proving majorization. The convex-function inequality is
+the elementary majorization inequality. For the square it is strict
+because strict proper partial sums exclude a permutation of $(b_i)$.
+Now
+\[
+ \sum_i b_i^2=\frac{2(n+1)}3,\qquad
+ \max_\theta\sum_i\Re(e^{-i\theta}z_i)^2
+       =\frac12\left(n+\left|\sum_i z_i^2\right|\right),
+\]
+which proves \eqref{eq:quadrupole-new}. The exponential expression is
+just the finite geometric sum over the arithmetic progression.
+\end{proof}
+
+\begin{remark}[Population cut]
+If a disk of radius $r$ contains $m$ points, then its internal moment
+is at most $mr^2$. For a proper subset with $m\ge2$, the new theorem
+therefore gives $m-1<(n-1)r^2$. This is a useful finite population cut,
+but its coefficient is still twice the limiting bulk count in the
+uniform disk of radius $\sqrt2$. No density classification or exact
+all-$n$ formula follows from this cut alone.
+\end{remark}
+
+\subsection{Rational trace bounds using coefficient Euclidean norms}
+Write the force-one polynomial as
+$P(t)=\prod_i(t-w_i)=t^n+c_1t^{n-1}+\cdots+c_n$, and let
+$V_{ji}=w_i^j$ for $0\le j<n$. On physical roots the Hermitian trace
+matrix is $H=VV^*$. Put $d=n-1$, $\rho_n=(n-1)^2/n$, and define
+\[
+ T_{n,k}=\binom dk^2\rho_n^k\quad(0\le k\le d),\qquad
+ A_n=\sum_{k=0}^dT_{n,k},\qquad T_n=\max_{0\le k\le d}T_{n,k}.
+\]
+All these constants are positive rationals.
+
+\begin{proposition}[Improved compact coefficient constants]\label{prop:trace-new}
+Every global maximizer at force-one scale satisfies
+\begin{equation}\label{eq:trace-new}
+ H\succeq\mu_n I,\qquad
+ \mu_n=\frac{2^d}{nA_n},\qquad
+ |c_k|^2\le\binom nk^2\rho_n^k.
+\end{equation}
+Let $R(t)=\sum_{\ell=0}^{n-1}r_\ell t^\ell$ be the unique polynomial
+of degree below $n$ satisfying $R(w_i)=\overline w_i$. Then
+\begin{equation}\label{eq:conjugation-coeff-new}
+ |r_\ell|^2\le B_n:=\frac{NnT_n}{2^d}.
+\end{equation}
+At $n=6$ the constants are
+\[
+ \rho_6=\frac{25}6,\qquad A_6=\frac{138927151}{7776},\qquad
+ \mu_6=\frac{41472}{138927151}>\frac1{3350},\qquad
+ B_6=\frac{48828125}{2304}<21193.
+\]
+\end{proposition}
+\begin{proof}
+The radius bound is $|w_i|^2\le\rho_n$, and the pair bound is
+$|w_i-w_j|^2\ge2$. Hence
+\[
+ |P'(w_i)|^2=\prod_{j\ne i}|w_i-w_j|^2\ge2^d.
+\]
+For the Lagrange polynomial
+\[
+ L_i(t)=\frac{\prod_{j\ne i}(t-w_j)}{P'(w_i)},
+\]
+the coefficient of $t^{d-k}$ has squared modulus at most
+$T_{n,k}/2^d$. Thus its squared coefficient Euclidean norm is at most
+$A_n/2^d$. These coefficient vectors form the inverse of $V^T$;
+therefore
+\[
+ \|V^{-1}\|_F^2\le\frac{nA_n}{2^d},\qquad
+ \lambda_{\min}(H)\ge\|V^{-1}\|_F^{-2}\ge\mu_n.
+\]
+The elementary symmetric functions give the bound on $c_k$.
+Finally, interpolation gives $R=\sum_i\overline w_i L_i$.
+For each coefficient, Cauchy--Schwarz and $\sum_i|w_i|^2=N$ give
+\[
+ |r_\ell|^2\le
+ \left(\sum_i|w_i|^2\right)
+ \left(\sum_i|[t^\ell]L_i|^2\right)
+ \le\frac{NnT_n}{2^d}.
+\]
+The six-point values follow by rational arithmetic.
+\end{proof}
+
+The disk localizing matrix can now use
+\[
+ J_{jk}=\rho_n H_{jk}-H_{j+1,k+1}
+       =\bigl[V\operatorname{diag}(\rho_n-|w_i|^2)V^*\bigr]_{jk}.
+\]
+For the separation-product cut, the quotient-algebra polynomial
+$D(t)=P'(t)\overline{P'}(R(t))$ satisfies
+\[
+ K_{jk}=\operatorname{Tr}\bigl(t^jR(t)^k[D(t)-2^d]\bigr)
+       =\bigl[V\operatorname{diag}(|P'(w_i)|^2-2^d)V^*\bigr]_{jk}.
+\]
+Hence both $J\succeq0$ and $K\succeq0$ are closed rational necessary
+conditions for every global maximizer. As with the existing model,
+$K$ bounds products of separations and does not independently impose
+every pair inequality equivalently. These strengthened cuts preserve
+the exact maximum when added to a model whose physical points are
+actual moment-$n$ configurations; they do not turn necessary conditions
+into a classification theorem.
