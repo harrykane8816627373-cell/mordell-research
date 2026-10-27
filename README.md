@@ -16,6 +16,16 @@
 p_k=\sum_i z_i^k.
 ```
 
+## 有限 n 更新：严格子集有效余量与有理下界
+
+[完整证明、构型证书和代码](finite-n/README.md) · [完整离线包](finite-n/mordell-finite-n-2026-10-27.zip)。对全局最优构型、2 ≤ m < n，原有严格子集矩界已加强为带显式正有理余量的全 n 不等式；八点时特别给出
+
+```math
+|z_i|^2\lt \frac74-\frac{2187}{36871384}.
+```
+
+对每个有限 n ≥ 2，给出正多边形、中心正多边形、高斯平均、方格、三角格和有理 Rayleigh 矩下界的合并包络。三角格坐标及距离平方均由整数二次型精确计算；在已核验的 n ≤ 30 中，有13个点数严格提高旧包络。前三阶系数矩实际计算到 n=7，提供独立整数展开核对和相对误差停止准则。八点完整锐界仍未证明。
+
 ## 一般 n 更新：确定的线性项与有限上界
 
 [下载本专题论文与离线验证包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。
@@ -93,5 +103,6 @@ python -B -S verify_all.py --all --offline
 未指定许可证，不作全球优先权声明。来源与 AI 协作说明在完整归档的 `docs/PROVENANCE.md`，引用建议在 `CITATION.md`。
 
 **English:** Jiang Fengcan's ongoing research archive on the eight-point Mordell discriminant problem, developed with assistance from OpenAI Codex. Partial theorems, exact certificates and reproducible verification code are preserved. The unconditional sharp inequality remains open; AI-assisted cross-review is not external peer review.
+
 
 
