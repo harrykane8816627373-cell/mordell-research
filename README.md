@@ -6,11 +6,19 @@
 
 在归一化 $\sum_{i=1}^8|z_i|^2=8$ 下，目标是
 
-$$\Delta_8=\prod_{i<j}|z_i-z_j|^2\stackrel{?}{\le}\frac{8^{28}}{7^{21}}.$$
+```math
+\Delta_8=\prod_{i<j}|z_i-z_j|^2\le\frac{8^{28}}{7^{21}}.
+```
 
-目标等号配置为原点加半径平方 $8/7$ 的正七边形；$p_k=\sum_i z_i^k$。
+目标等号配置为原点加半径平方 8/7 的正七边形。矩记号为
+
+```math
+p_k=\sum_i z_i^k.
+```
 
 ## 一般 n 更新：确定的线性项与有限上界
+
+[下载本专题论文与离线验证包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。
 
 [查看完整证明、PDF、精确常数与代码](asymptotics/README.md)。将既有 Sandier–Serfaty 重整化能量定理精确应用于矩约束，得到
 
@@ -41,9 +49,9 @@ M_n\le n^{n/2}\left(\frac{2n}{n-1}\right)^{n(n-1)/2}e^{-n(n-1)/4}.
 |五点|$M_5=3125$，等号单位正五边形；作者二阶条件与矩方法|[五点PDF](earlier-results/five_point_proof.pdf)|
 |六点|$M_6=6^{15}/5^{10}$，等号原点加正五边形|[六七点证明](earlier-results/six_seven_proof.tex)|
 |七点|$M_7=7^{21}/6^{15}$，等号原点加正六边形|[覆盖依赖与精确复核](earlier-results/six_seven_verification.md)|
-|一般$n$|有限上下界、唯一最优上界参数、渐近律、高斯整数构造、多环与稳定性等定理|[一般n证明](earlier-results/general_n_proof.md)|
+|一般 n|有限上下界、唯一最优上界参数、渐近律、高斯整数构造、多环与稳定性等定理|[一般n证明](earlier-results/general_n_proof.md)|
 
-此处$M_n$采用$\sum|z_i|^2=n$。六七点全局证明明确使用Faugère–Svartz已发表完整物理分类覆盖，附保留80/174参数根的独立有理算术复核；另有不调用分类的六七点含原点类证明。一般n的历史待补项目逐条区分，没有宣称简单闭式全局解。
+此处 Mₙ 采用 ∑|zᵢ|² = n 的归一化。六七点全局证明明确使用Faugère–Svartz已发表完整物理分类覆盖，附保留80/174参数根的独立有理算术复核；另有不调用分类的六七点含原点类证明。一般n的历史待补项目逐条区分，没有宣称简单闭式全局解。
 
 ## 2026-10-27 的八点研究进展
 
