@@ -1,5 +1,7 @@
 # 严格子集方法的有效化与每个有限 n 的下界
 
+> 发布状态：说明页已提交，配套证明、代码和数据文件尚待补齐。
+
 研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**；推导、程序与内部复核含 OpenAI Codex 协作。日期：2026-10-27。
 
 本专题补全严格性细节，给出全局最优构型的显式有理余量，并把有限点数下界整理为可计算的精确证书。既有严格子集定理、系数矩和矩比收敛性已经在[此前稿件](../earlier-results/general_n_notes.tex)中；本轮增加的是有效余量、三角整数格构造、有理 Rayleigh 改善及可执行复核。不作全球优先权声明。
@@ -8,7 +10,7 @@
 
 ```math
 M_n=\max_{\sum_i|z_i|^2=n}\Delta_n(z),\qquad
-\Delta_n(z)=\prod_{i<j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
+\Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 ```
 
 对任意全局最大构型、任意真子集 S，只有在 2 ≤ m = |S| < n 时断言严格不等式。单点子集两边均为零；全体点时为等式。这里没有将全局结论推广到所有驻点或局部极大点。
@@ -16,7 +18,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\Delta_n(z),\qquad
 ```math
 \bar z_S=\frac1m\sum_{i\in S}z_i,\qquad
 Q_S=\sum_{i\in S}|z_i-\bar z_S|^2
->\frac{m(m-1)+2\varepsilon_{n,m}}{n-1},
+\gt \frac{m(m-1)+2\varepsilon_{n,m}}{n-1},
 \quad
 \varepsilon_{n,m}=\frac1{2(1+B)\sum_{j=0}^{m(n-m)-1}B^j},
 \quad B=\frac{3n-m-1}{m-1}.
@@ -26,8 +28,8 @@ Q_S=\sum_{i\in S}|z_i-\bar z_S|^2
 
 ```math
 \varepsilon_{8,7}=\frac{2187}{9217846},\qquad
-Q_S>6+\frac{2187}{32262461},\qquad
-|z_i|^2<\frac74-\frac{2187}{36871384}.
+Q_S\gt 6+\frac{2187}{32262461},\qquad
+|z_i|^2\lt \frac74-\frac{2187}{36871384}.
 ```
 
 这些是排除候选构型的必要约束；不能反向当作 M_n 的下界。下界由下面的构型或精确平均独立建立。
@@ -62,13 +64,13 @@ q(a,b)=|a+b\omega|^2=a^2+ab+b^2.
 
 ```math
 D_n=n\sum_iq(v_i)-q\left(\sum_i v_i\right)
-=\sum_{i<j}q(v_i-v_j)>0,
+=\sum_{i\lt j}q(v_i-v_j)\gt 0,
 ```
 
 ```math
 \boxed{\displaystyle
 T_n=\left(\frac{n^2}{D_n}\right)^N
-       \prod_{i<j}q(v_i-v_j)\in\mathbb Q_{>0}.}
+       \prod_{i\lt j}q(v_i-v_j)\in\mathbb Q_{\gt 0}.}
 ```
 
 证明：取 zᵢ = n(vᵢ−平均值)/√Dₙ。二次型恒等式给出总二阶矩 n，每个距离平方乘以 n²/Dₙ，因而距离积恰为 Tₙ。取同样规则、改用 q(a,b)=a²+b²，就得到已有的高斯整数格下界 Sₙ。
@@ -90,15 +92,15 @@ J_{n,k}=\sum_\alpha c_{k,\alpha}^2\prod_i\alpha_i!,\quad
 对 n ≥ 3，令：
 
 ```math
-A=\mu_1\mu_3-\mu_2^2>0,\quad
-B=\mu_3-\mu_1\mu_2>0,\quad a=A/B,
+A=\mu_1\mu_3-\mu_2^2\gt 0,\quad
+B=\mu_3-\mu_1\mu_2\gt 0,\quad a=A/B,
 ```
 
 ```math
 \boxed{\displaystyle
 R_n=\frac{\mu_3-2a\mu_2+a^2\mu_1}
             {\mu_2-2a\mu_1+a^2}
->\frac{\mu_3}{\mu_2}>\frac{\mu_2}{\mu_1}>\mu_1.}
+\gt \frac{\mu_3}{\mu_2}\gt \frac{\mu_2}{\mu_1}\gt \mu_1.}
 ```
 
 Rₙ 是以 (Δₙ−a)² 为非负权重的精确平均，因此不超过 Mₙ。这一公式给每个有限 n 一个有限整数和所定义的正有理下界。[完整矩方法证明](MOMENT_METHOD.md)还给出 Hankel 矩阵推广，以及只用整数比较即可结束的相对误差证书。高阶系数的成本会迅速增长，不能把有限公式理解成廉价算法。
