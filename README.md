@@ -16,6 +16,16 @@
 p_k=\sum_i z_i^k.
 ```
 
+## 一般 n 新进展：严格递推与有效全局网格
+
+[完整证明、代码及有限证书](global-n/README.md) · [离线包](global-n/mordell-global-n-2026-10-27.zip)。联合已有严格子集矩、力方程与二阶稳定性，证明标准化最大值在 n≥4 时逐点严格下降，并由随机子集的平面四阶方差给普通跨点数递推加入显式折扣。
+
+```math
+ d_n=\frac{n-1}{n}M_n^{2/[n(n-1)]},\qquad d_2=d_3=2,\quad d_n\lt d_{n-1}\ (n\ge4).
+```
+
+另补齐旧稿缺网格定义的待补项：明确有限整数网格 Gₙ(q)，当 q≥(n+1)ceil√((n−1)/2) 时，以完整二阶抵消得到对数误差≤7n(n−1)/(12q²)的有效全局包围，并将已有子集余量转为安全删格条件。该证书要求穷尽规定网格；已执行小网格共230336个集合，大型1%计划未执行。一般 n 简洁锐值公式、八点完整锐界仍未得到。
+
 ## 有限 n 更新：严格子集有效余量与有理下界
 
 [完整证明、构型证书和代码](finite-n/README.md) · [完整离线包](finite-n/mordell-finite-n-2026-10-27.zip)。对全局最优构型、2 ≤ m < n，原有严格子集矩界已加强为带显式正有理余量的全 n 不等式；八点时特别给出
@@ -103,6 +113,7 @@ python -B -S verify_all.py --all --offline
 未指定许可证，不作全球优先权声明。来源与 AI 协作说明在完整归档的 `docs/PROVENANCE.md`，引用建议在 `CITATION.md`。
 
 **English:** Jiang Fengcan's ongoing research archive on the eight-point Mordell discriminant problem, developed with assistance from OpenAI Codex. Partial theorems, exact certificates and reproducible verification code are preserved. The unconditional sharp inequality remains open; AI-assisted cross-review is not external peer review.
+
 
 
 
