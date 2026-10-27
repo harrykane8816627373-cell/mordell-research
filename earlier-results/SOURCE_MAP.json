@@ -63,9 +63,12 @@
     },
     {
       "path": "README.md",
-      "bytes": 4650,
-      "sha256": "e8e40043a403b59d94a1a3475c11bcc4c5fd3355196263b6f771dc426e13abe9",
-      "git_blob_sha": "4c64c4ef8e4deb2ff60498b8fef2444b555a5c7b"
+      "bytes": 4898,
+      "sha256": "198957f0906f92474f6310a87b3a76942a896d4a59778cb747ad02df3875b8e7",
+      "git_blob_sha": "034591dda596823e86bdcbc33d2dd2c9726b7702",
+      "transforms": [
+        "Unicode display notation and new sequel link; historical proof data unchanged."
+      ]
     },
     {
       "path": "SHA256SUMS.txt",
