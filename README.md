@@ -7,7 +7,7 @@
 在归一化 $\sum_{i=1}^8|z_i|^2=8$ 下，目标是
 
 ```math
-\Delta_8=\prod_{i<j}|z_i-z_j|^2\le\frac{8^{28}}{7^{21}}.
+\Delta_8=\prod_{i\lt j}|z_i-z_j|^2\le\frac{8^{28}}{7^{21}}.
 ```
 
 目标等号配置为原点加半径平方 8/7 的正七边形。矩记号为
@@ -29,7 +29,7 @@ p_k=\sum_i z_i^k.
 结合三角晶格计算与经典圆盘平滑界，本项目已核验的区间收紧为
 
 ```math
-0.402178895223365173209539459449<\gamma<0.403426409720027345291383939271.
+0.402178895223365173209539459449\lt \gamma\lt 0.403426409720027345291383939271.
 ```
 
 另有对每个 n ≥ 2 的显式有限上界
@@ -93,4 +93,5 @@ python -B -S verify_all.py --all --offline
 未指定许可证，不作全球优先权声明。来源与 AI 协作说明在完整归档的 `docs/PROVENANCE.md`，引用建议在 `CITATION.md`。
 
 **English:** Jiang Fengcan's ongoing research archive on the eight-point Mordell discriminant problem, developed with assistance from OpenAI Codex. Partial theorems, exact certificates and reproducible verification code are preserved. The unconditional sharp inequality remains open; AI-assisted cross-review is not external peer review.
+
 
