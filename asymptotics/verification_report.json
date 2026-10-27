@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "date": "2026-10-27",
+  "jobs": [
+    {
+      "script": "verify_gamma_bounds.py",
+      "returncode": 0,
+      "status": "PASS",
+      "seconds": 0.375,
+      "published_certificate_matches_replay": true
+    },
+    {
+      "script": "verify_finite_bound.py",
+      "returncode": 0,
+      "status": "PASS",
+      "seconds": 1.313,
+      "published_certificate_matches_replay": true
+    }
+  ],
+  "full_eight_point_bound_proved": false,
+  "scope": "Exact constants and scalar coefficient identities. Analytic proofs and explicitly cited external theorems require reading README.md.",
+  "seconds": 1.703
+}

@@ -1,0 +1,414 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=25mm]{geometry}
+\usepackage{microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Linear Asymptotics and a Disk-Smearing Bound for the Mordell Distance Product},pdfauthor={Fengcan Jiang}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\,d}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\D}{\mathcal D}
+\newcommand{\pos}[1]{\left(#1\right)_+}
+\numberwithin{equation}{section}
+\title{Linear Asymptotics and a Disk-Smearing Bound\\
+for the Mordell Distance Product}
+\author{Fengcan Jiang}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For the maximum \(M_n\) of the squared distance product under
+\(\sum_{i=1}^n|z_i|^2=n\), we give an exact finite-\(n\) conversion to the
+ground-state energy of a planar Coulomb gas with quadratic confinement.
+The deterministic theorem of Sandier and Serfaty then yields
+\(\log M_n=(\frac12\log2-\frac14)n^2+\frac n2\log n+\gamma n+o(n)\).
+The microscopic constant satisfies
+\(0.4021788952233<\gamma<0.4034264097201\).
+The lower endpoint is the triangular-lattice comparison of
+B\'etermin and Sandier; the upper endpoint agrees with the classical
+disk-smearing bound discussed by Lauritsen.
+A self-contained smearing argument also proves an explicit finite-\(n\)
+upper bound. Its exact deficit splits into Coulomb discrepancy,
+boundary leakage, and pair-overlap terms. For eight points this gives a
+concrete positive-gap problem, which remains unsolved.
+\end{abstract}
+
+\section{The variational problem and its normalization}
+All logarithms are natural. For \(n\ge2\), put \(N=n(n-1)/2\) and define
+\begin{equation}\label{eq:Mn}
+ \Delta_n(z)=\prod_{i<j}|z_i-z_j|^2,\qquad
+ M_n=\max_{\substack{z\in\C^n\\\sum_i|z_i|^2=n}}\Delta_n(z).
+\end{equation}
+Compactness gives a maximizer, and a configuration of distinct points
+shows that its value is positive. In particular, a maximizer has no
+collisions. We use the ordered-pair Coulomb Hamiltonian
+\begin{equation}\label{eq:H}
+ H_n(x)=-\sum_{i\ne j}\log|x_i-x_j|
+              +\frac n2\sum_i|x_i|^2,\qquad E_n=\min_{\C^n}H_n .
+\end{equation}
+Thus \(H_n=-\log\Delta_n+(n/2)Q\), where \(Q=\sum_i|x_i|^2\).
+The confinement controls the logarithmic interaction at infinity, and
+collisions have infinite energy, so the minimum is attained away from
+collisions.
+
+\begin{proposition}[Exact global conversion]\label{prop:bridge}
+For every \(n\ge2\),
+\begin{equation}\label{eq:bridge}
+ \log M_n=A_n-E_n,\qquad
+ A_n=N\left[1-\log\left(1-\frac1n\right)\right].
+\end{equation}
+Every minimizer of \(H_n\) has \(Q=n-1\). Multiplication by
+\(\sqrt{n/(n-1)}\) maps such minimizers to maximizers in \eqref{eq:Mn},
+and the inverse scaling maps maximizers to minimizers.
+\end{proposition}
+\begin{proof}
+For every \(Q>0\), homogeneity gives
+\[
+ \max_{\sum_i|x_i|^2=Q}\Delta_n(x)=(Q/n)^N M_n.
+\]
+Consequently \(E_n\) is the minimum, over \(Q>0\), of
+\[
+ -\log M_n-N\log(Q/n)+nQ/2.
+\]
+Its derivative is \(-N/Q+n/2\), and its second derivative is \(N/Q^2>0\).
+Its unique minimum is \(Q=2N/n=n-1\). Evaluation proves
+\eqref{eq:bridge} and the assertions about equality and scaling.
+\end{proof}
+This is a global identity; no prescribed shape or stationary-point
+classification enters it. Its normalization correction has the
+convergent expansion
+\begin{equation}\label{eq:Aseries}
+ A_n-\frac{n^2}{2}
+ =-\frac12\sum_{k=0}^{\infty}
+       \frac{n^{-k}}{(k+1)(k+2)}
+ =-\frac14-\frac1{12n}+O(n^{-2}).
+\end{equation}
+Keeping the first tail term and bounding the rest geometrically yields
+\[
+ -\frac14-\frac1{12(n-1)}
+ \ \le\ A_n-\frac{n^2}{2}\
+ \le-\frac14-\frac1{12n}.
+\]
+In particular, the conversion contributes no additional term of order
+\(n\). The constant \(-1/4\) in this conversion is not an established
+constant term in the asymptotic expansion of \(\log M_n\).
+
+\section{The Coulomb theorem and the coefficient gamma}
+For \(g(x)=-\log|x|\), write
+\[
+ \D(\mu)=\iint g(x-y)\dd\mu(x)\dd\mu(y),\qquad
+ I_V(\mu)=\D(\mu)+\int V\dd\mu,\quad V(x)=|x|^2/2.
+\]
+There is no factor \(1/2\) in \(\D\). The equilibrium probability measure
+and its value are
+\begin{equation}\label{eq:equilibrium}
+ \mu_0=\frac1{2\pi}\ind_{\{|x|\le\sqrt2\}}\dd x,\qquad
+ I_0=I_V(\mu_0)=\frac34-\frac12\log2.
+\end{equation}
+Indeed, the logarithmic potential of a uniform disk of radius \(R\)
+equals \(\log R-\frac12+|x|^2/(2R^2)\) inside the disk and
+\(\log|x|\) outside it. For \(R=\sqrt2\), its negative plus \(V/2\) is
+constant on the disk and larger outside. The disk's second moment is
+one, giving \eqref{eq:equilibrium}.
+
+We specify the energy convention needed for the linear coefficient.
+Let \(\mathcal A_1\) be the class in Sandier--Serfaty
+\cite{SS}: its fields satisfy
+\[
+ \operatorname{div}E=2\pi(\nu-1),\qquad
+ \operatorname{curl}E=0,\qquad
+ \nu=\sum_{p\in\Lambda}\delta_p,
+\]
+where \(\Lambda\) is discrete and
+\(\sup_{R>1}\nu(B_R)/|B_R|<\infty\).
+With the cutoffs \(\chi_R\) of their Definition 1.3, set
+\[
+ W(E)=\limsup_{R\to\infty}\frac1{|[-R,R]^2|}
+ \lim_{\eta\downarrow0}\left[
+ \frac12\int_{\R^2\setminus\bigcup_{p\in\Lambda}B(p,\eta)}
+                  \chi_R|E|^2
+       +\pi\log\eta\sum_{p\in\Lambda}\chi_R(p)\right].
+\]
+We write \(W_*=\min_{\mathcal A_1}W\).
+The choice of density and of the half-Dirichlet normalization is part
+of this definition. A different convention changes the numerical
+value assigned to \(W_*\).
+
+\begin{theorem}[Linear asymptotic term]\label{thm:asymptotic}
+There is a constant, independent of \(n\),
+\begin{equation}\label{eq:gamma}
+ \gamma=-\frac{W_*}{\pi}-\frac12\log(2\pi)
+\end{equation}
+such that
+\begin{equation}\label{eq:asymptotic}
+ \log M_n=\left(\frac12\log2-\frac14\right)n^2
+                 +\frac n2\log n+\gamma n+o(n).
+\end{equation}
+\end{theorem}
+\begin{proof}
+The quadratic potential satisfies the growth and regularity
+hypotheses (1.11)--(1.13) of \cite{SS}: it is smooth,
+\(V/2-\log|x|\to+\infty\), its Laplacian is the positive constant two,
+and the equilibrium support has smooth circular boundary.
+The deterministic conclusion of Theorem 2(C), together with their
+equations (1.23) and (1.40), therefore gives
+\[
+ E_n=n^2I_0-\frac n2\log n+
+ \left[\frac{W_*}{\pi}-\frac12\int m_0\log m_0\dd x\right]n+o(n).
+\]
+Here \(m_0=1/(2\pi)\) on its support and has total mass one, so the
+coefficient in brackets is \(W_*/\pi+\frac12\log(2\pi)\).
+Substitution into \eqref{eq:bridge}, using \eqref{eq:Aseries} and
+\eqref{eq:equilibrium}, proves the claim.
+\end{proof}
+The proof applies the deterministic ground-state theorem directly.
+No exchange of the large-\(n\) and zero-temperature limits is required.
+This use of the published theorem, also formulated in
+B\'etermin--Sandier \cite{BS}, is an external analytic input.
+
+\section{A finite-size disk-smearing bound}
+Let \(\sigma_r\) be uniform probability measure on the disk \(B_r\),
+and let \(T_rf=f*\sigma_r\). Direct angular averaging gives
+\begin{equation}\label{eq:potential}
+ (T_rg)(d)=
+ \begin{cases}
+ -\log r+\frac12-\dfrac{d^2}{2r^2},&0\le d<r,\\
+ -\log d,&d\ge r.
+ \end{cases}
+\end{equation}
+In particular \(T_rg\le g\). Positivity of the averaging operator then
+gives \(T_r^2g\le T_rg\le g\). These inequalities allow overlapping
+disks; no point-separation assumption is made.
+Integration of \eqref{eq:potential} gives the two constants
+\begin{equation}\label{eq:self}
+ \D(\sigma_r)=-\log r+\frac14,\qquad
+ \int|u|^2\dd\sigma_r(u)=\frac{r^2}{2}.
+\end{equation}
+
+\begin{theorem}[Explicit global upper bound]\label{thm:finite}
+For every \(n\ge2\),
+\begin{equation}\label{eq:Un}
+ M_n\le U_n:=
+ n^{n/2}\left(\frac{2n}{n-1}\right)^N e^{-N/2}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:gammaU}
+ \gamma\le\gamma_D:=\frac34-\frac12\log2.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For any collision-free points \(x_i\), set
+\(\mu_x=n^{-1}\sum_i\sigma_r(\,\cdot-x_i)\).
+Including and then subtracting exactly \(n\) self-terms yields
+\[
+ \sum_{i\ne j}g(x_i-x_j)
+ \ge n^2\D(\mu_x)-n\D(\sigma_r).
+\]
+Moreover,
+\(n^2\int V\dd\mu_x=(n/2)\sum_i|x_i|^2+n^2r^2/4\).
+Since \(I_V(\mu_x)\ge I_0\), \eqref{eq:self} gives
+\[
+ H_n(x)\ge n^2I_0+n\log r-\frac n4-\frac{n^2r^2}{4}.
+\]
+The right side is maximal at \(r^2=2/n\). Thus
+\begin{equation}\label{eq:Ln}
+ E_n\ge L_n:=
+ n^2I_0-\frac n2\log n
+           +n\left(\frac12\log2-\frac34\right).
+\end{equation}
+The exact conversion \eqref{eq:bridge} simplifies to
+\(A_n-L_n=\log U_n\), proving \eqref{eq:Un}.
+Comparison with \eqref{eq:asymptotic} proves \eqref{eq:gammaU}.
+\end{proof}
+This finite-\(n\) proof does not use the asymptotic theorem.
+For example, \eqref{eq:Aseries} also gives the strict bound
+\[
+ \log M_n<
+ \left(\frac12\log2-\frac14\right)n^2+\frac n2\log n
+                    +\gamma_Dn-\frac14.
+\]
+The final \(-1/4\) is a correction in this upper bound, not an established
+boundary correction for the true optimum.
+
+The upper endpoint \eqref{eq:gammaU} agrees with the classical
+Lieb--Narnhofer and Sari--Merlini smearing bound discussed in
+Lauritsen \cite{Lau}; see Appendix B and Remark 4.5 in the cited
+arXiv version. We do not claim this universal endpoint as a new
+constant bound. The preceding argument gives its direct specialization
+to the finite moment-constrained distance product.
+
+\section{The triangular comparison and numerical certificates}
+B\'etermin--Sandier \cite[Section 7.3]{BS} compute the energy of the
+unit-density triangular lattice:
+\[
+ \frac1\pi W(\Lambda_\triangle)
+  =\log\pi-\frac12\log3-3\log\Gamma(1/3)+\frac32\log2 .
+\]
+Because \(W_*\le W(\Lambda_\triangle)\), the negative sign in
+\eqref{eq:gamma} gives
+\begin{equation}\label{eq:interval}
+ \gamma_\triangle\le\gamma\le\gamma_D,\qquad
+ \gamma_\triangle=
+ 3\log\Gamma(1/3)+\frac12\log3-2\log2-\frac32\log\pi.
+\end{equation}
+The companion rational interval certificates give, in particular,
+\[
+ \boxed{\quad
+ 0.4021788952233<\gamma<0.4034264097201 .
+ \quad}
+\]
+These decimal endpoints strictly enclose the constants in
+\eqref{eq:interval}; they are not a numerical identification of
+\(\gamma\). Identifying \(\gamma\) with \(\gamma_\triangle\) would require
+the triangular value to minimize \(W\) over the full admissible class.
+Optimality within the Bravais-lattice family alone is insufficient.
+
+The program \texttt{verify\_gamma\_bounds.py} certifies the numerical
+enclosures using rational arithmetic, a Machin formula for \(\pi\),
+integer square roots, and controlled exponential, logarithmic and
+Dedekind-eta series. It evaluates an established analytic lattice
+formula; it does not prove the Coulomb asymptotic theorem or the
+global crystallization assertion.
+
+\section{An exact nonnegative deficit and the eight-point problem}
+Keep \(r^2=2/n\), let \(K_r=T_r^2g\), and define
+\begin{equation}\label{eq:zeta}
+ \zeta(\rho)=
+ \begin{cases}
+ 0,&0\le\rho\le\sqrt2,\\
+ \rho^2/4-\log\rho-\frac12+\frac12\log2,&\rho>\sqrt2.
+ \end{cases}
+\end{equation}
+This is the equilibrium obstacle excess. It is nonnegative.
+For \(\nu_x=\mu_x-\mu_0\), expansion about \(\mu_0\) gives
+\begin{equation}\label{eq:meanfielddeficit}
+ I_V(\mu_x)-I_0=\D(\nu_x)+2\int\zeta\dd\mu_x.
+\end{equation}
+The signed measure \(\nu_x\) has zero total mass, bounded density and
+compact support. If \(U_{\nu_x}=g*\nu_x\), integration by parts gives
+\[
+ \D(\nu_x)=\frac1{2\pi}\int_{\R^2}|\nabla U_{\nu_x}|^2\dd x\ge0.
+\]
+The zero mass eliminates the boundary term at infinity.
+
+\begin{proposition}[Exact deficit identity]\label{prop:deficit}
+Every collision-free configuration satisfies
+\begin{equation}\label{eq:deficit}
+ \begin{split}
+ H_n(x)-L_n={}&n^2\D(\nu_x)+2n^2\int\zeta\dd\mu_x\\
+ &+\sum_{i\ne j}
+      \bigl[g(x_i-x_j)-K_r(x_i-x_j)\bigr].
+ \end{split}
+\end{equation}
+All three terms on the right are nonnegative. The point-pair term
+vanishes for a pair at distance at least \(2r\).
+\end{proposition}
+\begin{proof}
+The exact smoothed-pair sum, including self-terms, is
+\(n^2\D(\mu_x)=\sum_{i\ne j}K_r(x_i-x_j)+n\D(\sigma_r)\).
+Combine this with the exact smoothed moment formula in the proof of
+Theorem~\ref{thm:finite}, \eqref{eq:self}, and \(r^2=2/n\).
+The result is
+\[
+ H_n-L_n=n^2[I_V(\mu_x)-I_0]+\sum_{i\ne j}(g-K_r)(x_i-x_j).
+\]
+Now use \eqref{eq:meanfielddeficit}. The kernel comparison proves
+nonnegativity. If \(d\ge2r\), the first smoothed potential agrees with
+\(g\) throughout the second disk, and its second average also equals
+\(g(d)\); hence the pair gap is zero.
+\end{proof}
+There is also a simple explicit lower estimate. For \(d>0\),
+\begin{equation}\label{eq:pairlower}
+ g(d)-K_r(d)\ge
+ \pos{1-d/r}^{\,2}+\frac1{16}\pos{1-d/(2r)}^{\,4}.
+\end{equation}
+To see this, put \(h_r=g-T_rg\). Formula~\eqref{eq:potential} gives
+\(h_r(d)\ge\pos{1-d/r}^2\), and \(g-K_r=h_r+T_rh_r\).
+If \(d<2r\), put \(\varepsilon=1-d/(2r)\).
+The disk of radius \(r\varepsilon/2\) at the midpoint of the two
+centers lies in their overlap. Its normalized area is
+\(\varepsilon^2/4\), and \(h_r\ge\varepsilon^2/4\) there.
+This proves the second term of \eqref{eq:pairlower}.
+
+For \(Q(x)=n-1\), define \(z=\sqrt{n/(n-1)}x\). The conversion
+\eqref{eq:bridge} now holds for this individual configuration as
+\begin{equation}\label{eq:configdeficit}
+ H_n(x)-L_n=\log U_n-\log\Delta_n(z).
+\end{equation}
+For eight points the conjectured sharp value is
+\(C_8=8^{28}/7^{21}\). Thus its global upper bound is equivalent to
+the following positive-gap assertion over all configurations with
+\(Q(x)=7\):
+\begin{equation}\label{eq:gap8}
+ H_8(x)-L_8\ge\delta_8,\qquad
+ \delta_8=\log(U_8/C_8)=40\log2-7\log7-14 .
+\end{equation}
+Here the smoothing radius is \(r=1/2\). The rational companion
+certificate establishes, for example,
+\[
+ 0<\delta_8<0.104517,\qquad 1<U_8/C_8<1.110174.
+\]
+Equation~\eqref{eq:deficit} therefore reformulates the remaining
+eight-point problem in terms of three continuous, nonnegative costs.
+It does not establish the positive gap in \eqref{eq:gap8}, and does not
+exclude the general nonzero-moment branch by itself.
+
+\section{Verification, attribution and scope}
+The companion archive contains two standard-library acceptance programs:
+\path{verify_gamma_bounds.py} and \path{verify_finite_bound.py}.
+They include rational interval certificates. A unified entry point
+checks source hashes and runs them in a temporary copy:
+\begin{center}
+ \texttt{python -B -S verify\_all.py}.
+\end{center}
+The programs audit constants, algebraic bookkeeping and interval
+enclosures. The analytic averaging inequalities and the external
+ground-state theorem remain parts of the mathematical proof; this is
+not a proof-assistant formalization.
+
+The linear coefficient exists by the published theorem of
+Sandier--Serfaty, its triangular comparison uses
+B\'etermin--Sandier, and the strong upper endpoint is consistent with
+the classical smearing literature summarized by Lauritsen.
+This paper records a normalization audit, a finite-\(n\) specialization,
+and an exact deficit formulation. It makes no global priority claim.
+
+The project and source material are attributed to Fengcan Jiang.
+Preparation, computation and cross-checking included assistance from
+OpenAI Codex. AI-assisted checking is not independent external peer
+review. The exact microscopic minimum, an effective uniform rate in the
+\(o(n)\) remainder, true finite-\(n\) boundary corrections, and the
+unconditional eight-point sharp inequality are not established here.
+
+\begin{thebibliography}{9}
+\bibitem{SS}
+E.~Sandier and S.~Serfaty,
+\emph{2D Coulomb Gases and the Renormalized Energy},
+arXiv:1201.3503v2 (2013).
+\url{https://arxiv.org/abs/1201.3503v2}.
+
+\bibitem{BS}
+L.~B\'etermin and E.~Sandier,
+\emph{Renormalized Energy and Asymptotic Expansion of Optimal
+Logarithmic Energy on the Sphere},
+Constructive Approximation \textbf{47} (2018), 39--74;
+arXiv:1404.4485v5.
+\url{https://doi.org/10.1007/s00365-016-9357-z}.
+
+\bibitem{Lau}
+A.~B.~Lauritsen,
+\emph{Floating Wigner crystal and periodic jellium configurations},
+Journal of Mathematical Physics \textbf{62} (2021), 083305;
+arXiv:2103.07975v2.
+\url{https://doi.org/10.1063/5.0053494}.
+\end{thebibliography}
+\end{document}

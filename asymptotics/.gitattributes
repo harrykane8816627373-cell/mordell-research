@@ -1,0 +1,2 @@
+# Preserve source/certificate bytes for hash verification across platforms.
+* -text

@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "arithmetic": "Integer/Fraction polynomial identities and outward rational intervals; no floating-point acceptance",
+  "uniform_disk_moment_coefficient": "1/2",
+  "uniform_disk_self_energy_constant": "1/4",
+  "lens_lower_bound_coefficient": "1/16",
+  "finite_bound": "U_n = n^(n/2) * (2*n/(n-1))^(n*(n-1)/2) * exp(-n*(n-1)/4)",
+  "eight_point_delta_exact": "40*log(2) - 7*log(7) - 14",
+  "eight_point_log_gap": {
+    "lower": "0.104516179010619240951815654224",
+    "upper": "0.104516179010619240951815654225"
+  },
+  "eight_point_U_over_candidate": {
+    "lower": "1.110173355227421266086298291940",
+    "upper": "1.110173355227421266086298291941"
+  },
+  "finite_scalar_spot_checks": [
+    {
+      "n": 2,
+      "log_upper": {
+        "lower": "1.579441541679835928251696364374",
+        "upper": "1.579441541679835928251696364375"
+      },
+      "bridge_correction": {
+        "lower": "-0.306852819440054690582767878542",
+        "upper": "-0.306852819440054690582767878541"
+      }
+    },
+    {
+      "n": 3,
+      "log_upper": {
+        "lower": "3.443755299006493611278603566151",
+        "upper": "3.443755299006493611278603566152"
+      },
+      "bridge_correction": {
+        "lower": "-0.283604675675506854065960653607",
+        "upper": "-0.283604675675506854065960653606"
+      }
+    },
+    {
+      "n": 5,
+      "log_upper": {
+        "lower": "8.186502099826801588337170450745",
+        "upper": "8.186502099826801588337170450746"
+      },
+      "bridge_correction": {
+        "lower": "-0.268564486857902442337049096902",
+        "upper": "-0.268564486857902442337049096901"
+      }
+    },
+    {
+      "n": 6,
+      "log_upper": {
+        "lower": "11.007309467992664036871684274332",
+        "upper": "11.007309467992664036871684274333"
+      },
+      "bridge_correction": {
+        "lower": "-0.265176648090680606824229622683",
+        "upper": "-0.265176648090680606824229622682"
+      }
+    },
+    {
+      "n": 7,
+      "log_upper": {
+        "lower": "14.103940589824872455780992238984",
+        "upper": "14.103940589824872455780992238985"
+      },
+      "bridge_correction": {
+        "lower": "-0.262835723627575609849616913688",
+        "upper": "-0.262835723627575609849616913687"
+      }
+    },
+    {
+      "n": 8,
+      "log_upper": {
+        "lower": "17.464766215884445824786906244404",
+        "upper": "17.464766215884445824786906244405"
+      },
+      "bridge_correction": {
+        "lower": "-0.261121006513366551902378613923",
+        "upper": "-0.261121006513366551902378613922"
+      }
+    },
+    {
+      "n": 10,
+      "log_upper": {
+        "lower": "24.945771794769950899102946876808",
+        "upper": "24.945771794769950899102946876809"
+      },
+      "bridge_correction": {
+        "lower": "-0.258776795397816444762455862231",
+        "upper": "-0.258776795397816444762455862230"
+      }
+    },
+    {
+      "n": 20,
+      "log_upper": {
+        "lower": "76.401012975564120074603606246869",
+        "upper": "76.401012975564120074603606246870"
+      },
+      "bridge_correction": {
+        "lower": "-0.254274066365398649022732591610",
+        "upper": "-0.254274066365398649022732591609"
+      }
+    },
+    {
+      "n": 100,
+      "log_upper": {
+        "lower": "1236.086215545965983875664991601221",
+        "upper": "1236.086215545965983875664991601222"
+      },
+      "bridge_correction": {
+        "lower": "-0.250837525167866141433155085189",
+        "upper": "-0.250837525167866141433155085188"
+      }
+    }
+  ],
+  "global_sharp_eight_point_bound_proved": false,
+  "scope": "Universal coefficient identities are checked as polynomials; displayed finite values are scalar checks. The analytic energy inequalities and external asymptotic theorem require the accompanying mathematical proof."
+}

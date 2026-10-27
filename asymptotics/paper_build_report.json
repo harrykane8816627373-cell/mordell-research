@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "pages": 6,
+  "pdf_bytes": 335244,
+  "pdf_sha256": "7b8f693ef2fc77e9ea6a9c13b6535d96be63559ebb41b918014f2c7f721cf2b3",
+  "source_tex_sha256": "1bb0a8f3ab2ee38181a63b5128e8b4102e7bf8b5a6f38cb4377ddcd681dc264a",
+  "compiler_warnings": 0,
+  "undefined_references": false,
+  "all_pages_rendered_and_reviewed": true,
+  "private_text_or_path_matches": false,
+  "author": "Fengcan Jiang",
+  "scope": "AI-assisted internal document QA; not independent external peer review."
+}

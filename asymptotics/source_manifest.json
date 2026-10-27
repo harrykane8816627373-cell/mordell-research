@@ -1,0 +1,61 @@
+{
+  "format": "mordell-general-n-linear-2026-10-27-v1",
+  "scope": "Published proof, verification sources and data; the manifest and replay report are not self-hashed.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 84,
+      "sha256": "230461938140bebc01ac9fc8c64eadc6a83d393c726af5f3864ff1dc31ba81ba"
+    },
+    {
+      "path": "finite_bound_certificate.json",
+      "bytes": 3767,
+      "sha256": "655626d11966b41b04f379959e6b0c906ed96fc5e84fcca7526c70d5883e3b56"
+    },
+    {
+      "path": "gamma_bounds_certificate.json",
+      "bytes": 1881,
+      "sha256": "135e5a278b3b564447e882c14ac562af820b4c146e6ddd9b9d3985059e12eb09"
+    },
+    {
+      "path": "paper_build_report.json",
+      "bytes": 493,
+      "sha256": "0c047aaa1bbcfeb22f7e9840fc79902ff9c4aae955358454ef6bedd72bd39473"
+    },
+    {
+      "path": "proof.pdf",
+      "bytes": 335244,
+      "sha256": "7b8f693ef2fc77e9ea6a9c13b6535d96be63559ebb41b918014f2c7f721cf2b3"
+    },
+    {
+      "path": "proof.tex",
+      "bytes": 16343,
+      "sha256": "1bb0a8f3ab2ee38181a63b5128e8b4102e7bf8b5a6f38cb4377ddcd681dc264a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9923,
+      "sha256": "f04472539955f0d3918c8197e887a2e84ce4a44e9f33ec658e6aa5e3f54f97ec"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 1229,
+      "sha256": "a9c2dacd3655163a406481140484de873ffcc4f0bdc708dbb288b8b4a826a2ef"
+    },
+    {
+      "path": "verify_all.py",
+      "bytes": 2759,
+      "sha256": "63781e70a318601f116ed6badf23f50d03e9521b4f7f4472c7a531f97a1de3f0"
+    },
+    {
+      "path": "verify_finite_bound.py",
+      "bytes": 3848,
+      "sha256": "bcfa597afc21d0a65442ed3ca154d05c04beed43fe3c61714673ea2ea65dc180"
+    },
+    {
+      "path": "verify_gamma_bounds.py",
+      "bytes": 5894,
+      "sha256": "b0b4547d0282a2529aaac3d1434a20c65e6ac0f91ce09c2f51e6af1c69d0f7f8"
+    }
+  ]
+}
