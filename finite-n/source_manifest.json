@@ -1,0 +1,60 @@
+{
+  "format": "mordell-source-manifest-v1",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "file": "MOMENT_METHOD.md",
+      "bytes": 6294,
+      "sha256": "97e4d303d77d8340c297b2d28f47c59f72a5f048c24cc97e0360f61be1f9ebde"
+    },
+    {
+      "file": "README.md",
+      "bytes": 6714,
+      "sha256": "d65ecc4c9df933216cdbcd9deb506838ea2dcb2c579ae9a4abfa903f371033a6"
+    },
+    {
+      "file": "REVIEW.md",
+      "bytes": 1295,
+      "sha256": "646f92befc8ce7e180823d985e5cf3a4d17866ce3aff2e691d6b3e58cef4a907"
+    },
+    {
+      "file": "SUBSET_PROOF.md",
+      "bytes": 8988,
+      "sha256": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43"
+    },
+    {
+      "file": "finite_lower_bounds.py",
+      "bytes": 9401,
+      "sha256": "1bd1ffd0ca07ab0169d2f80d6a3eac8d1018c3611cb10fee6d328faab7785c59"
+    },
+    {
+      "file": "moment_values.json",
+      "bytes": 2733,
+      "sha256": "ad335ae23125cb01344fe8d1e7c58b2c0e146cf63198fbde48f1d6fbeee334b4"
+    },
+    {
+      "file": "triangular_comparison.md",
+      "bytes": 3189,
+      "sha256": "2942e1917e1e59d4d0fa0beb869395f8ab61d3ee8527ed7643cec6b16535a81e"
+    },
+    {
+      "file": "triangular_lattice.py",
+      "bytes": 11150,
+      "sha256": "a4ad1ceacdfec8468b84b3df9e23685412c2a6f63b0d153912274d93b815cb60"
+    },
+    {
+      "file": "triangular_lattice_values.json",
+      "bytes": 237329,
+      "sha256": "6830dbb9c569197b67619f0ff3c94eb63aad8f29e984c2b0a048de99afa15b56"
+    },
+    {
+      "file": "verify_all.py",
+      "bytes": 5421,
+      "sha256": "2eadeebdf3647bbe65e9d68b525dac24f369de07006f673b21740b6ff3bf0f93"
+    }
+  ]
+}

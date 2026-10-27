@@ -1,0 +1,128 @@
+{
+  "format": "mordell-subset-finite-lower-replay-v1",
+  "result": "PASS",
+  "source_files_sha256_matched": 11,
+  "independent_direct_norm_cases": 12,
+  "coefficient_moments_replayed_n": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "independent_n3_closed_formula_orders": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "lattice_certificates_replayed_n": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "rational_subset_constant_cases": 406,
+  "eight_point_subset_constants": "PASS",
+  "integer_stopping_checks": [
+    {
+      "n": 2,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 0
+    },
+    {
+      "n": 3,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 53
+    },
+    {
+      "n": 4,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 132
+    },
+    {
+      "n": 5,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 224
+    },
+    {
+      "n": 6,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 322
+    },
+    {
+      "n": 7,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 427
+    },
+    {
+      "n": 8,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 536
+    },
+    {
+      "n": 9,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 649
+    },
+    {
+      "n": 10,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 765
+    },
+    {
+      "n": 11,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 884
+    },
+    {
+      "n": 12,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 1006
+    },
+    {
+      "n": 13,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 1130
+    },
+    {
+      "n": 14,
+      "relative_error": "1/10",
+      "sufficient_ratio_order": 1256
+    }
+  ],
+  "floating_point_acceptance": false,
+  "global_eight_point_sharp_bound_proved": false,
+  "finite_cases_do_not_replace_all_n_proofs": true
+}
