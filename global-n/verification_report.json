@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "source_files_checked": 11,
+  "grid_configurations_replayed": 230336,
+  "grid_cases": 3,
+  "independent_normalization_cases": 372,
+  "exact_stopping_boundaries": 98,
+  "subset_cut_square_roundings": 20,
+  "young_inequality_cases": 36,
+  "variance": {
+    "passed": true,
+    "arithmetic": "fractions.Fraction",
+    "fourth_distance_identities": 20,
+    "subset_variance_identities": 89,
+    "deletion_endpoints": 20,
+    "equality_cases": 8,
+    "subsets_enumerated": 3127,
+    "coefficient_sign_checks": 4850
+  },
+  "second_order": {
+    "passed": true,
+    "exact_checks": 1803,
+    "square_perturbation_instances": 20,
+    "arithmetic": "fractions.Fraction; no floating point",
+    "scope": "Finite implementation and constant checks; the all-n analytic proof is GRID_PROOF.md."
+  },
+  "scope": "Finite exact checks; all-n theorems require GRID_PROOF.md and RECURRENCE_PROOF.md. Large plans were not executed."
+}

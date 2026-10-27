@@ -1,0 +1,58 @@
+{
+  "rows": [
+    {
+      "n": 3,
+      "epsilon": "1/100",
+      "q": 19,
+      "A": 22,
+      "grid_points": 2025,
+      "configurations": "1381911300",
+      "search_executed": false
+    },
+    {
+      "n": 5,
+      "epsilon": "1/100",
+      "q": 35,
+      "A": 45,
+      "grid_points": 8281,
+      "configurations": "324121720258704186",
+      "search_executed": false
+    },
+    {
+      "n": 7,
+      "epsilon": "1/100",
+      "q": 50,
+      "A": 66,
+      "grid_points": 17689,
+      "configurations": "107393201386500054047884092",
+      "search_executed": false
+    },
+    {
+      "n": 8,
+      "epsilon": "1/100",
+      "q": 58,
+      "A": 77,
+      "grid_points": 24025,
+      "configurations": "2749669174318483086767809858575",
+      "search_executed": false
+    },
+    {
+      "n": 10,
+      "epsilon": "1/100",
+      "q": 73,
+      "A": 98,
+      "grid_points": 38809,
+      "configurations": "2133329181320542428444027015528702062680",
+      "search_executed": false
+    },
+    {
+      "n": 30,
+      "epsilon": "1/100",
+      "q": 227,
+      "A": 316,
+      "grid_points": 400689,
+      "configurations": "4571840088162308512188272175500918736804316754464931930846421768480195700594046454446340098086266749754264253733170694816834967582946224",
+      "search_executed": false
+    }
+  ]
+}

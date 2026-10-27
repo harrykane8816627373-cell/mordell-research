@@ -1,0 +1,60 @@
+{
+  "algorithm": "SHA256",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "file": "grid_bounds.py",
+      "bytes": 7596,
+      "sha256": "bf17acc93f0ce8acd66910463120c13ed302c579a33db401dd73781e1234c85e"
+    },
+    {
+      "file": "grid_plans.json",
+      "bytes": 1362,
+      "sha256": "22be46dff8b2fecbbb9c80a2ba8e668f8f085256ab5d18dfae3cc2089f0ec3a0"
+    },
+    {
+      "file": "GRID_PROOF.md",
+      "bytes": 7395,
+      "sha256": "f46138acc81e697da3011ad068125602f9e016544e775d052d65d8578798f69c"
+    },
+    {
+      "file": "grid_values.json",
+      "bytes": 2119,
+      "sha256": "76d8443bceb1b2beeaff098fd60a1479cc15acaa7e896b79d719316a8c59dbcb"
+    },
+    {
+      "file": "README.md",
+      "bytes": 5187,
+      "sha256": "f858a19df8f9798f397462412aff09bd23526b1ba4de097fcfe074a911149666"
+    },
+    {
+      "file": "RECURRENCE_PROOF.md",
+      "bytes": 9179,
+      "sha256": "51cfbd7e56a70ff1bf5f00a1c4766dec025ab1ccf15d4e7ab8498f6f83bf3a93"
+    },
+    {
+      "file": "REVIEW.md",
+      "bytes": 1371,
+      "sha256": "aff654f741179dfcc97e2aa6a65c0e292775849e28ffc2aa7dca523ef435a3e5"
+    },
+    {
+      "file": "verify_all.py",
+      "bytes": 5546,
+      "sha256": "6949f9a092ff77fcb6035fcd01f26f83f239c0dcfb7be88e3545ad69f603683b"
+    },
+    {
+      "file": "verify_recursion_variance.py",
+      "bytes": 3844,
+      "sha256": "65734012f202692ebb97a44498dca1fea264d6cd5c4e6cb964d9a633094c0ee1"
+    },
+    {
+      "file": "verify_second_order_grid.py",
+      "bytes": 3987,
+      "sha256": "72381aebbbb9634c6c369d8a11736106f9dacdce338c521ca69274461092a082"
+    }
+  ]
+}
