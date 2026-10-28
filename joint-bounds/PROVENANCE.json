@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "research_initiator_and_source_material": "蒋丰灿（Fengcan Jiang）",
+  "collaboration": "OpenAI Codex derivation, code, exact replay, and independent AI cross-review",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "parent_commit": "83d50bfb0685c088431955c9bfd1e67652331f77",
+  "existing_inputs": [
+    "Original all-n polar population and radius family; previous exact phase graph solver",
+    "Existing disk Coulomb decomposition and radial-cell certificates",
+    "Existing strict subset theorem, explicit rational slack, and planar subset variance",
+    "Complete published finite lower-bound envelope and all stored one-step ascent witnesses"
+  ],
+  "new_supplement": [
+    "Orthogonal radial-plus-holomorphic-moment certificate",
+    "Explicit positive finite-n correction to disk U_n through finite Newton coefficient majorization",
+    "Uniform inner-six-ring contraction: over 10 percent for all continuous phases and n>=13",
+    "Sharp two-moment logarithmic expectation envelope and stronger subset recurrence"
+  ],
+  "primary_external_context": [
+    "https://arxiv.org/abs/2103.07975v2",
+    "https://arxiv.org/abs/1201.3503v2"
+  ],
+  "external_dependency_retained": "Six/seven-point sharp inputs used in subset formula comparison retain the repository's Faugere-Svartz physical-classification caveat. The new all-n disk correction does not depend on that classification.",
+  "limits": [
+    "The full eight-point sharp bound and general nonzero-moment branch remain open",
+    "No unknown unrestricted sharp finite-n value is established",
+    "No improved linear gamma or exact gamma is established",
+    "No global priority claim, external peer review, or complete proof-assistant formalization",
+    "Historical archives retain their original bytes; current webpage hashes are updated separately"
+  ]
+}

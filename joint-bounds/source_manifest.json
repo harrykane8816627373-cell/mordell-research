@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-28",
+  "base_commit": "83d50bfb0685c088431955c9bfd1e67652331f77",
+  "scope": "Pinned new sources, exact reports, and unchanged runtime/proof inputs; excludes this manifest, timing report and ZIP to avoid circular hashes.",
+  "files": [
+    {
+      "path": "asymptotics/README.md",
+      "bytes": 9923,
+      "sha256": "f04472539955f0d3918c8197e887a2e84ce4a44e9f33ec658e6aa5e3f54f97ec"
+    },
+    {
+      "path": "configuration-bounds/ascent_envelope_comparison.json",
+      "bytes": 293976,
+      "sha256": "ad759b6f6cab9271f503acb671e4054a46cc8f9da5725557da24f15975db2825"
+    },
+    {
+      "path": "configuration-bounds/baseline_finite_lower_bounds.py",
+      "bytes": 9401,
+      "sha256": "1bd1ffd0ca07ab0169d2f80d6a3eac8d1018c3611cb10fee6d328faab7785c59"
+    },
+    {
+      "path": "configuration-bounds/compare_envelopes.py",
+      "bytes": 5218,
+      "sha256": "58f5cf4cbb7402bb9766d3d6c08d995b29a12dc54de58a8f13ec6abb63e7309f"
+    },
+    {
+      "path": "configuration-bounds/moment_values.json",
+      "bytes": 2733,
+      "sha256": "ad335ae23125cb01344fe8d1e7c58b2c0e146cf63198fbde48f1d6fbeee334b4"
+    },
+    {
+      "path": "configuration-bounds/phase_graph.py",
+      "bytes": 6292,
+      "sha256": "96bfd31ceee32939bff7ace5fcc6c3871357501496e779daec1c80599577bd13"
+    },
+    {
+      "path": "configuration-bounds/phase_graph_comparison.json",
+      "bytes": 134520,
+      "sha256": "1867281d6867d61c9244c84d47118d31e0cdeaae4e6bba1b1cebc99c320ec79d"
+    },
+    {
+      "path": "configuration-bounds/polar_refinement.py",
+      "bytes": 4449,
+      "sha256": "8cd05fc38780ea34f8a4d4e5042f56b679da466e1e3e329713d9090f43bc8128"
+    },
+    {
+      "path": "configuration-bounds/radial_audit.md",
+      "bytes": 9076,
+      "sha256": "a0bbefab4226b7723c5fe7359053235c1a642bbe79cc1f629d3fb7bfb2d7106a"
+    },
+    {
+      "path": "configuration-bounds/radial_distribution.py",
+      "bytes": 6664,
+      "sha256": "a4c3621af2eea72a3823277ee66e12798b970d4d64005d6bd928db194498adb2"
+    },
+    {
+      "path": "configuration-bounds/rational_ascent.py",
+      "bytes": 4758,
+      "sha256": "7c597b55e9c630721296179ae82f2c0d0dc207eb22cbcd52e21987f36859f09e"
+    },
+    {
+      "path": "configuration-bounds/saved_rational_bounds.json",
+      "bytes": 11761,
+      "sha256": "1b7455e72a57c6278945681894840fe2272b2dc90e1c2b4a767b60813ac3c68f"
+    },
+    {
+      "path": "configuration-bounds/triangular_lattice.py",
+      "bytes": 11150,
+      "sha256": "a4ad1ceacdfec8468b84b3df9e23685412c2a6f63b0d153912274d93b815cb60"
+    },
+    {
+      "path": "earlier-results/six_seven_coverage_audit.md",
+      "bytes": 8926,
+      "sha256": "e9cfb89900697cad99ff350e09077b3a72ea4ba0a6b497cdf749e1cb5ddb22b4"
+    },
+    {
+      "path": "finite-n/SUBSET_PROOF.md",
+      "bytes": 8988,
+      "sha256": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43"
+    },
+    {
+      "path": "global-n/RECURRENCE_PROOF.md",
+      "bytes": 9587,
+      "sha256": "aa1d4908b34e6840bd7150dc6cef4662d3924231d7efae427dfccd11f1cbaa50"
+    },
+    {
+      "path": "joint-bounds/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "joint-bounds/ANGULAR_PROOF.md",
+      "bytes": 11427,
+      "sha256": "a76748beee83e62e389528177914112dfe6d44a9dc24cc29664d5c8b7fb9e883"
+    },
+    {
+      "path": "joint-bounds/PROVENANCE.json",
+      "bytes": 1888,
+      "sha256": "16dd01b4de02391f0fee956f8b94df4a31e6331b1e8450c3e3a3475226c4090d"
+    },
+    {
+      "path": "joint-bounds/RADIAL_CONTRACTION.md",
+      "bytes": 5010,
+      "sha256": "6237db492e8b4aa0b9b053171f90906aaa268879d65d47172c120d2a860d7aee"
+    },
+    {
+      "path": "joint-bounds/README.md",
+      "bytes": 5417,
+      "sha256": "02e38d6f9c7159a5e4441a13b07a0eed1de4f6d2bbb2606bd1073fc92e1c06f2"
+    },
+    {
+      "path": "joint-bounds/SUBSET_MOMENT.md",
+      "bytes": 7108,
+      "sha256": "4aa37c14451ad167a3a7ebb7793d4d062f742fbfa556f144b8d71ec19a42a609"
+    },
+    {
+      "path": "joint-bounds/angular_bounds.py",
+      "bytes": 6244,
+      "sha256": "4e4902401e98c21fd371a8b47f6531ba65478ffd5aac311047e4f4f6e8527aee"
+    },
+    {
+      "path": "joint-bounds/angular_verification.json",
+      "bytes": 10185,
+      "sha256": "01b8365eb032058d9421b4c946c0eded30422001fb409aad6b39ded420fe3259"
+    },
+    {
+      "path": "joint-bounds/build_package.py",
+      "bytes": 2182,
+      "sha256": "2a36daf5fcd612f941c3fb04b92f5f84f3e9535a69bab40185bf03a29843d976"
+    },
+    {
+      "path": "joint-bounds/phase_search.py",
+      "bytes": 5602,
+      "sha256": "b5df999c79ac80e4b4c92a771a9e487499fe8ca7493156b1aa3e1ebb8eb9a6d3"
+    },
+    {
+      "path": "joint-bounds/phase_search_verification.json",
+      "bytes": 142905,
+      "sha256": "a3c58c4034cd140d12f25cf02bfc0b0ec64e2e8c2f95274f3259e1aeea7baf85"
+    },
+    {
+      "path": "joint-bounds/subset_moment.py",
+      "bytes": 7935,
+      "sha256": "6e54703c4d7ea7a96bf2c52ac0137e28ba74b4504eb179c9a44a501f14c90bc6"
+    },
+    {
+      "path": "joint-bounds/subset_moment_comparison.json",
+      "bytes": 172202,
+      "sha256": "ef91a618d9ec5c91667c8e591e0a2f168f2063c17e81f6c06165f213b5471845"
+    },
+    {
+      "path": "joint-bounds/verify_all.py",
+      "bytes": 4031,
+      "sha256": "c8d0e195e7122736e2dbe856fd92a6c218c5140c6bdb5f5174ba2212a0a7f8dc"
+    },
+    {
+      "path": "joint-bounds/verify_angular_bounds.py",
+      "bytes": 6763,
+      "sha256": "3fa9b50ffb7d0f0d54417d5abb558376fb362c2d9a90d09c6723251cd854273a"
+    },
+    {
+      "path": "joint-bounds/verify_phase_search.py",
+      "bytes": 7718,
+      "sha256": "e1f24f2e6189a48edbd2672425f5c7a58dbfa6cfe9dcb36b75bf55d02291b1e3"
+    },
+    {
+      "path": "joint-bounds/verify_subset_moment.py",
+      "bytes": 8061,
+      "sha256": "5ab6065d5c1c32925149235b6e204a39d7350cac65121fc751b89bee2a5f10c1"
+    },
+    {
+      "path": "source-review/DELETION_REFINEMENT.md",
+      "bytes": 4577,
+      "sha256": "0492c9b0e858269dfbb321edd1fd4b02bf26182a8579a89af1da624738addc77"
+    }
+  ]
+}
