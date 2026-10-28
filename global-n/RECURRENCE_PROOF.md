@@ -7,7 +7,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,
 \qquad N_n=\frac{n(n-1)}2.
 ```
 
-This note supplies a structural recurrence and a quantitative strictness factor. It does **not** determine every exact value of M_n. The ordinary deletion/subset comparison is elementary and may already be classical; no priority claim is made. The new use here is to retain its variance loss explicitly in terms of planar fourth moments. In the comparisons actually made below, this recurrence does not improve the previously published disk-smearing upper envelope.
+Source correction (2026-10-28): the supplied complete revised manuscript already proves the ordinary recurrence and strict adjacent monotonicity, with the same force-equation argument below. These are restored source results, not first obtained in this note. The general planar subset-variance identity and its quantitative loss are retained as subsequent supplements. See ../source-review/SOURCE_REVIEW.md. This note supplies a structural recurrence and a quantitative strictness factor. It does **not** determine every exact value of M_n. The ordinary deletion/subset comparison is elementary and may already be classical; no priority claim is made. The new use here is to retain its variance loss explicitly in terms of planar fourth moments. In the comparisons actually made below, this recurrence does not improve the previously published disk-smearing upper envelope.
 
 ## 1. Exact variance identity
 

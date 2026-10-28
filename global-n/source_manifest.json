@@ -18,8 +18,8 @@
     },
     {
       "file": "GRID_PROOF.md",
-      "bytes": 7395,
-      "sha256": "f46138acc81e697da3011ad068125602f9e016544e775d052d65d8578798f69c"
+      "bytes": 7608,
+      "sha256": "b19d350d2934e534f1b54a0e75b86a5c8d8a135871dbea7774a0c285999744e2"
     },
     {
       "file": "grid_values.json",
@@ -28,18 +28,18 @@
     },
     {
       "file": "README.md",
-      "bytes": 5187,
-      "sha256": "f858a19df8f9798f397462412aff09bd23526b1ba4de097fcfe074a911149666"
+      "bytes": 5569,
+      "sha256": "8593aa91bfd341f13fa9c983ee9fb5fd0aeff00a59a076d231121a0917497ccd"
     },
     {
       "file": "RECURRENCE_PROOF.md",
-      "bytes": 9179,
-      "sha256": "51cfbd7e56a70ff1bf5f00a1c4766dec025ab1ccf15d4e7ab8498f6f83bf3a93"
+      "bytes": 9587,
+      "sha256": "aa1d4908b34e6840bd7150dc6cef4662d3924231d7efae427dfccd11f1cbaa50"
     },
     {
       "file": "REVIEW.md",
-      "bytes": 1371,
-      "sha256": "aff654f741179dfcc97e2aa6a65c0e292775849e28ffc2aa7dca523ef435a3e5"
+      "bytes": 1720,
+      "sha256": "1fb942075b69ec6ebd61f206644df46c9a0422fcbdef139b191609c18b711881"
     },
     {
       "file": "verify_all.py",

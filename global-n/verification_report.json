@@ -24,5 +24,6 @@
     "arithmetic": "fractions.Fraction; no floating point",
     "scope": "Finite implementation and constant checks; the all-n analytic proof is GRID_PROOF.md."
   },
-  "scope": "Finite exact checks; all-n theorems require GRID_PROOF.md and RECURRENCE_PROOF.md. Large plans were not executed."
+  "scope": "Finite exact checks; all-n theorems require GRID_PROOF.md and RECURRENCE_PROOF.md. Large plans were not executed.",
+  "source_attribution_corrected": "2026-10-28; ordinary strict recurrence and original grids restored to supplied source; unchanged mathematical code/certificates."
 }
