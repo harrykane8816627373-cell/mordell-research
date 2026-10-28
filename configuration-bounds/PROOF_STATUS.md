@@ -10,14 +10,14 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 
 |范围|已取得的结果|证明入口与适用边界|
 |---|---|---|
-|五点|$M_5=3125$，等号单位正五边形，允许旋转、重排|[作者方法](../earlier-results/five_point_method.md)、[PDF](../earlier-results/five_point_proof.pdf)、[TeX](../earlier-results/five_point_proof.tex)；主线为二阶条件、径向矩、投影及四次对数上界|
-|六、七点|$M_6=6^{15}/5^{10}$、$M_7=7^{21}/6^{15}$，等号原点加相应正多边形|[主稿](../earlier-results/six_seven_proof.tex)、[复核](../earlier-results/six_seven_verification.md)、[覆盖审计](../earlier-results/six_seven_coverage_audit.md)；全局证明依赖 Faugère–Svartz 完整物理驻点分类，七点356次枝的物理排空为论文输入，未在本地独立重建|
+|五点|$`M_5=3125`$，等号单位正五边形，允许旋转、重排|[作者方法](../earlier-results/five_point_method.md)、[PDF](../earlier-results/five_point_proof.pdf)、[TeX](../earlier-results/five_point_proof.tex)；主线为二阶条件、径向矩、投影及四次对数上界|
+|六、七点|$`M_6=6^{15}/5^{10}`$、$`M_7=7^{21}/6^{15}`$，等号原点加相应正多边形|[主稿](../earlier-results/six_seven_proof.tex)、[复核](../earlier-results/six_seven_verification.md)、[覆盖审计](../earlier-results/six_seven_coverage_audit.md)；全局证明依赖 Faugère–Svartz 完整物理驻点分类，七点356次枝的物理排空为论文输入，未在本地独立重建|
 |六、七点含原点类|不调用上述分类的锐界与方差惩罚|[独立证明](../earlier-results/six_seven_origin_proof.tex)；结论仅适用于含原点类|
-|八点|候选值 $8^{28}/7^{21}$ 可达；若干低矩、几何与稳定分支已证|[完整八点归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)；完整无条件上界及一般 $p_2p_3\ne0$ 分支未解决|
+|八点|候选值 $`8^{28}/7^{21}`$ 可达；若干低矩、几何与稳定分支已证|[完整八点归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)；完整无条件上界及一般 $`p_2p_3\ne0`$ 分支未解决|
 |中心正多边形类|5≤n≤10模旋转严格局部最大；n=10使用四阶项，n≥11有显式增益扰动|[一般 n 审核第6、7节](../earlier-results/general_n_proof.md)；五点中心正方形、十点中心正九边形仍全局次优|
 |一般 n|已有有限上下界、全局网格包围、结构与渐近定理|没有得到所有有限 n 的简洁锐值公式；有限代数刻画不代表已执行巨大消元或枚举|
 
-八点已证的 $p_2=0$、$p_3=0$ 分类保留真实驻点及相应稳定约束；七点共任意圆、六共圆且两例外等距、两直线等类别各有假设。连续核已连接部分远端带，尚有过渡区域未覆盖。不能去掉条件后把这些成果拼接为完整八点证明。
+八点已证的 $`p_2=0`$、$`p_3=0`$ 分类保留真实驻点及相应稳定约束；七点共任意圆、六共圆且两例外等距、两直线等类别各有假设。连续核已连接部分远端带，尚有过渡区域未覆盖。不能去掉条件后把这些成果拼接为完整八点证明。
 
 ## 2. 既有一般 n 方法与后续联合
 
@@ -29,9 +29,9 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |严格真子集内部矩约束|对全局最优构型及2≤m<n严格成立；已加强为显式正有理余量|[完整证明](../finite-n/SUBSET_PROOF.md)；单点两边为零，全体点为等式，不推广到所有驻点|
 |标准化最大值相邻严格下降|原稿已有完整证明；后续加入随机子集四阶方差折扣|[来源核对](../source-review/SOURCE_REVIEW.md)、[全局方法专题](../global-n/README.md)|
 |完整有效网格|原稿已有定义与误差证明；后续联合稳定矩阵、点距与较小整数箱改善|[原审核第9节](../earlier-results/general_n_proof.md)、[混合网格](../source-review/HYBRID_GRID.md)；上界要求完整覆盖，抽样只给下界|
-|不同半径层数|任意全局最优者有 $K\gt\sqrt n/12$；渐近下端为11/50|[联合专题](../source-review/README.md)；不要求规则角度|
-|确定的线性渐近项|$\log M_n=(\frac12\log2-\frac14)n^2+\frac n2\log n+\gamma n+o(n)$|[渐近专题](../asymptotics/README.md)说明 Sandier–Serfaty 外部输入与尺度校正；精确γ、真实有限 n 边界修正未解决|
-|全 n 圆盘上界|$M_n\le U_n=n^{n/2}(2n/(n-1))^N e^{-N/2}$|[证明与三项非负缺额](../asymptotics/README.md)；经典普适界不登记为项目原创，本轮未刷新无条件Uₙ|
+|不同半径层数|任意全局最优者有 $`K\gt\sqrt n/12`$；渐近下端为11/50|[联合专题](../source-review/README.md)；不要求规则角度|
+|确定的线性渐近项|$`\log M_n=(\frac12\log2-\frac14)n^2+\frac n2\log n+\gamma n+o(n)`$|[渐近专题](../asymptotics/README.md)说明 Sandier–Serfaty 外部输入与尺度校正；精确γ、真实有限 n 边界修正未解决|
+|全 n 圆盘上界|$`M_n\le U_n=n^{n/2}(2n/(n-1))^N e^{-N/2}`$|[证明与三项非负缺额](../asymptotics/README.md)；经典普适界不登记为项目原创，本轮未刷新无条件Uₙ|
 
 ## 3. 本轮有限构型与上下界
 
@@ -42,7 +42,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |有效径向CDF与中心空洞限制|[证明](radial_audit.md)、[实现](radial_distribution.py)、[核验](radial_distribution_verification.json)|任意归一化无碰撞构型由缺额控制；输入可达下界后，全局最优者CDF误差为O(n⁻¹ᐟ³)，至少一点距重心O(n⁻¹ᐟ⁴)；不推出精确原点|
 |有宽度径向带及构型类上界|[径向证明](radial_audit.md)与有理单元证书|带宽定理要求库仑尺度平方半径落在[0,2]；一般单元证书不要求所有半径≤2。n=100厚环例有δ≥1225/6，而全局最优δ≤1657/12，故该整类无全局最优者|
 
-设 $\delta(z)=\log(U_n/\Delta_n(z))$，径向CDF结论为
+设 $`\delta(z)=\log(U_n/\Delta_n(z))`$，径向CDF结论为
 
 ```math
 \sup_{s\ge0}\left|

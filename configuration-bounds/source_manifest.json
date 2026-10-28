@@ -100,9 +100,9 @@
     },
     {
       "path": "PROOF_STATUS.md",
-      "bytes": 8189,
-      "sha256": "710a6ff28132477536432d5c9b2b49ac256880b1524a493ac684eaffb76ba953",
-      "git_blob_sha": "f2978c88f2cdd4bd9e3fe682b1a669bc7b4c4ff2"
+      "bytes": 8290,
+      "sha256": "f6b8f5863540f2f9947c40b766feb21ff1d399073a8400d3782a577e6d894c7b",
+      "git_blob_sha": "bf6dee403cf03f02965c69e562d5fa01cfe06020"
     },
     {
       "path": "PROVENANCE.json",
@@ -161,14 +161,14 @@
     {
       "path": "status_update_manifest.json",
       "bytes": 1568,
-      "sha256": "16a8dcba5afc6590af940a12c52f77b2736d9b9b3f4f9723816c96c579b7b9f5",
-      "git_blob_sha": "5385fdd33db5da50e5862e4856bcabea88858456"
+      "sha256": "dc19f57522cfc6355dff7e92d61256e8e5ada89d37144ce0edb3e04dc18164a5",
+      "git_blob_sha": "5b261f8facc23b2d07b948916c8e83abd6adbfdd"
     },
     {
       "path": "status_updates.zip",
-      "bytes": 24571,
-      "sha256": "c2acfa024f5e3f87f0c9600cc6bc190b41bdfdae0ee7a54d961a99a518a03d52",
-      "git_blob_sha": "5cd2ec2fd6d24f15115a7a2785e4d0523576e4ed"
+      "bytes": 24646,
+      "sha256": "09f81bece3e9c0268815df51d894be1a1a439569eaa95942372e5385d2e6e304",
+      "git_blob_sha": "ce2cdc79110fe2cf36f677064bafa6902b252d7c"
     },
     {
       "path": "triangular_lattice.py",
