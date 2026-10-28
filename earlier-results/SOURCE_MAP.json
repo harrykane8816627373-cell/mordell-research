@@ -39,9 +39,9 @@
     },
     {
       "path": "general_n_proof.md",
-      "bytes": 18708,
-      "sha256": "38618ca9d803d5c27b49a14693abadd3b2b120dd4ca1c39af6f32e367c049a56",
-      "git_blob_sha": "b3c6f71bc141023307dbba01d98bf2173b132267",
+      "bytes": 19034,
+      "sha256": "b86550cb40b72e38ffdc393f67ae01f38429a06797d1cc695b59d4dda4ca31cc",
+      "git_blob_sha": "4a2e2297768490271f5b1ab8d5dce95cbab55ec9",
       "current_update": "2026-10-28: source-complete proof-status correction; historical offline ZIP unchanged."
     },
     {
@@ -64,9 +64,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 6364,
-      "sha256": "653977d89fd9c1fcf9bb13f4ea0f07304fd20ac74f45981ae3b74e14e16fab42",
-      "git_blob_sha": "b7e33592d350dba1a354587e9def8c1f63680876",
+      "bytes": 6453,
+      "sha256": "a02a4fe43bd74a219d16726f72b37cb1e16015500bc20beb82e1a3fd2a422e01",
+      "git_blob_sha": "ebacb307f5c7f7baeb577c570f8ba4444cb98f0b",
       "transforms": [
         "Unicode display notation and new sequel link; historical proof data unchanged."
       ],

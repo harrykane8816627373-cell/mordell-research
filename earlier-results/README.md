@@ -8,9 +8,9 @@
 
 |类别|结论|证明入口|
 |---|---|---|
-|五点|$M_5=5^5=3125$；等号仅单位正五边形，允许旋转与重排|[作者原稿PDF](five_point_proof.pdf)、[TeX](five_point_proof.tex)、[方法衔接与审阅](five_point_method.md)|
-|六点|$M_6=6^{15}/5^{10}$；等号仅原点加半径 √(6/5) 的正五边形|[六七点主稿](six_seven_proof.tex)、[精确证明片段](six_seven_proof_fragment.tex)|
-|七点|$M_7=7^{21}/6^{15}$；等号仅原点加半径 √(7/6) 的正六边形|[精确复核说明](six_seven_verification.md)、[覆盖审计](six_seven_coverage_audit.md)|
+|五点|$`M_5=5^5=3125`$；等号仅单位正五边形，允许旋转与重排|[作者原稿PDF](five_point_proof.pdf)、[TeX](five_point_proof.tex)、[方法衔接与审阅](five_point_method.md)|
+|六点|$`M_6=6^{15}/5^{10}`$；等号仅原点加半径 √(6/5) 的正五边形|[六七点主稿](six_seven_proof.tex)、[精确证明片段](six_seven_proof_fragment.tex)|
+|七点|$`M_7=7^{21}/6^{15}`$；等号仅原点加半径 √(7/6) 的正六边形|[精确复核说明](six_seven_verification.md)、[覆盖审计](six_seven_coverage_audit.md)|
 |六七点含原点类|不调用驻点分类的锐界与方差惩罚证明|[独立证明](six_seven_origin_proof.tex)|
 |一般 n|显式有限上下界、参数最优性、线性渐近项、有效网格、精确代数框架与下述结构结果|[当前状态审核](general_n_proof.md)、[完整原修订稿](../source-review/revised_main.tex)、[后期不分类增补](general_n_notes.tex)|
 
@@ -22,11 +22,15 @@
 
 取 n ≥ 2，N = n(n−1)/2，Pₙ = 0!1!⋯(n−1)!，Sₘ(x) = ∑ₖ₌₀ᵐ xᵏ/k!。对任意 α > 0，
 
-$$\frac{n!(n-2)!n^NP_n}{(N+n-2)!}\le M_n\le\frac{P_nS_{n-1}(\alpha)^n}{\alpha^N}.$$
+```math
+\frac{n!(n-2)!n^NP_n}{(N+n-2)!}\le M_n\le\frac{P_nS_{n-1}(\alpha)^n}{\alpha^N}.
+```
 
 上界函数有唯一最优正参数，且
 
-$$\log M_n=\left(\frac{\log2}{2}-\frac14\right)n^2+\frac n2\log n+O(n).$$
+```math
+\log M_n=\left(\frac{\log2}{2}-\frac14\right)n^2+\frac n2\log n+O(n).
+```
 
 O(n)是这里保留的历史初等精度，当前已加强为确定的γn+o(n)，见[渐近专题](../asymptotics/README.md)。还包括：高斯整数及全n有理多环构造；十点超过中心正九边形113/100的简例和更强的>121/100保存整数构型；5≤n≤10中心正多边形的严格局部极大性（十点使用四阶横向消元），但十点全局次优；n≥11显式改善；Hermite共线子类精确值及六点特定majorant的障碍；全局真子集内部矩约束；有限代数选择与关键值增广后有限精确证书。巨量枚举没有据此宣称已执行。
 
