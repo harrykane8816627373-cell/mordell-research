@@ -13,8 +13,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 6714,
-      "sha256": "d65ecc4c9df933216cdbcd9deb506838ea2dcb2c579ae9a4abfa903f371033a6"
+      "bytes": 7251,
+      "sha256": "71731a45eb7319c37979b01fde755079f34a922b19916abcb9b05b66379c8dd0"
     },
     {
       "file": "REVIEW.md",
@@ -56,5 +56,6 @@
       "bytes": 5421,
       "sha256": "2eadeebdf3647bbe65e9d68b525dac24f369de07006f673b21740b6ff3bf0f93"
     }
-  ]
+  ],
+  "current_native_status_date": "2026-10-28"
 }

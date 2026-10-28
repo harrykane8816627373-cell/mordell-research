@@ -2,6 +2,8 @@
 
 研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**；推导、程序与内部复核含 OpenAI Codex 协作。日期：2026-10-27。
 
+**当前包络入口更新（2026-10-28）：** 本页保留该批三角格、矩及子集余量证书。完整原稿已有的全n有理多环及n6..12保存整数构型现已恢复；相位和中心化改善后的完整比较见[source-review](../source-review/README.md)。进一步的构型和上下界见[configuration-bounds](../configuration-bounds/README.md)。本页旧ZIP是2026-10-27历史快照，当前网页状态说明及source_manifest中的相应字节索引单独更新；旧数据与ZIP内部清单保持原字节。
+
 本专题补全严格性细节，给出全局最优构型的显式有理余量，并把有限点数下界整理为可计算的精确证书。既有严格子集定理、系数矩和矩比收敛性已经在[此前稿件](../earlier-results/general_n_notes.tex)中；本轮增加的是有效余量、三角整数格构造、有理 Rayleigh 改善及可执行复核。不作全球优先权声明。
 
 ## 1. 归一化与本轮结论
@@ -126,3 +128,4 @@ python -B -S finite_lower_bounds.py 3 5 7 --moment-order 3
 本轮把真子集严格约束有效化，并提供每个有限 n 的有理下界。八点合并构型下界仍达到中心正七边形候选值；无条件全局上界仍未达到该值，一般非零矩分支尚未排空。以上结论没有确定精确 γ 或有限 n 的真实边界修正。[线性渐近项与圆盘上界专题](../asymptotics/README.md)继续独立保留。
 
 未指定许可证；未将通常的 Gaussian、Parseval、Rayleigh 商理论或外部重整化能量定理宣称为项目原创。
+
