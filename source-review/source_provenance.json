@@ -1,0 +1,831 @@
+{
+  "sources": [
+    {
+      "label": "original",
+      "archive": "mordell_n_global_source.zip",
+      "bytes": 119080,
+      "sha256": "9f75e160b40fde25f4d6bcedbaf2a0e97a8f7a19d53c06edf94e6be47d05c518",
+      "members": [
+        {
+          "member": "anc/README.txt",
+          "bytes": 3001,
+          "sha256": "e0d4ce92d0a9e36c5ae2beb08b5116d55b7c582a5f4145b6ff7db741fb9ffb8f"
+        },
+        {
+          "member": "anc/SOURCE_SHA256.json",
+          "bytes": 2054,
+          "sha256": "dbe8a6d02fef56e17275f2c55b370685b2ecc7e0b5ba0227f3620348f6ab1b24"
+        },
+        {
+          "member": "anc/critical_value_eliminant.sage.py",
+          "bytes": 1869,
+          "sha256": "95e3a1ee5b2b51496e708d0fa1e06b04b9b70ead2736d198533f94c299f83a8e"
+        },
+        {
+          "member": "anc/critical_value_result.json",
+          "bytes": 11311,
+          "sha256": "b7963918789aa0ff7e13ede19a4d2163adf4370cf88cdc78f33b3777458d1a47"
+        },
+        {
+          "member": "anc/explore_candidates.py",
+          "bytes": 5491,
+          "sha256": "3beeaa62cab409b63f8f8fcc78bd07b8228c074eb4bc265edf47c6539e5b9a23"
+        },
+        {
+          "member": "anc/grid_global_result.json",
+          "bytes": 2677,
+          "sha256": "fa10091aea2d7ca6ef8203e7da520559ec0f826e41e35d02ee79466ce0bd6df5"
+        },
+        {
+          "member": "anc/hermite_result.json",
+          "bytes": 19506,
+          "sha256": "b83bca116fe65762a541d2b710094d56b5fc2d1ba66449662fa96f2343197e5d"
+        },
+        {
+          "member": "anc/numerical_candidates.json",
+          "bytes": 34093,
+          "sha256": "f7199bcc0a4d6c91a16000ce3e4bbec95bdb7e5f0ef575c6f3f5872805cced24"
+        },
+        {
+          "member": "anc/polygon_perturbation_result.json",
+          "bytes": 7955,
+          "sha256": "0aabed60897bd4796b12589af10d5bb3ca22f976d80d19eecf09dc17c3a9837f"
+        },
+        {
+          "member": "anc/research_notes_zh.md",
+          "bytes": 10499,
+          "sha256": "255be689867dcec1ddec426d5084ef0d2cf6060ce896dce82699edbf98c8534d"
+        },
+        {
+          "member": "anc/saved_candidates_audit.json",
+          "bytes": 1787,
+          "sha256": "460a4234bf79c51427b2a213d264e1431829ee56e7b33f6a9cc421c13fed4df5"
+        },
+        {
+          "member": "anc/stationary_polynomial_result.json",
+          "bytes": 3133,
+          "sha256": "5173cf0cbdf6e549a1b6dd504b76a800f5c7c04a5c4792d31074fc3b6595a1b7"
+        },
+        {
+          "member": "anc/verification_result.json",
+          "bytes": 220779,
+          "sha256": "16419b4138be33d3256c45a295dc9bd61551450bbd449d1e79a63779a4fac6c4"
+        },
+        {
+          "member": "anc/verify_constructions.py",
+          "bytes": 6766,
+          "sha256": "778153714d1e62c5ccd25959e090eb22673598ca5a647f1b843194dba736894d"
+        },
+        {
+          "member": "anc/verify_critical_value.py",
+          "bytes": 4045,
+          "sha256": "ece884ad1db78c08e2100dc32c95effdd53d86822d2dc9662c783aa1ad8d7201"
+        },
+        {
+          "member": "anc/verify_global_grid.py",
+          "bytes": 4570,
+          "sha256": "cbae80be9a5a340686b3efd77fc310664180f5296d4e6e4bd524e876bffa9d9a"
+        },
+        {
+          "member": "anc/verify_hermite.py",
+          "bytes": 4879,
+          "sha256": "a85333e18c9ee74b90188d15d15b133fd59dcf78fdb60d94c24e205edd351faa"
+        },
+        {
+          "member": "anc/verify_polygon_perturbations.py",
+          "bytes": 9412,
+          "sha256": "0b474b0e3acfd5dcbbf58cb25ca42b229700f566e07da8e6b39c480776975209"
+        },
+        {
+          "member": "anc/verify_saved_candidates.py",
+          "bytes": 3932,
+          "sha256": "3b3ba2298bbd22a57528ebb16076add2aee8f1b3adf12e400aeb576c8cc4d2a9"
+        },
+        {
+          "member": "anc/verify_stationary_polynomial.py",
+          "bytes": 7175,
+          "sha256": "feb6d8d46409f0e24ea2ac661498551df9d80d8206d0d4945abe925881f89a19"
+        },
+        {
+          "member": "main.tex",
+          "bytes": 51619,
+          "sha256": "12a2ad4a9c470d8d678123466d966bc75539ff2b0d284d335408751da79f73d2"
+        }
+      ]
+    },
+    {
+      "label": "revised",
+      "archive": "mordell_n_global_revised_source.zip",
+      "bytes": 1433048,
+      "sha256": "075c5d017a1f9c48abd3415a20769a72a6b1d10d06faa8c48c117ec1ab222ddb",
+      "members": [
+        {
+          "member": "anc/all_n_deletion_radius.tex",
+          "bytes": 8152,
+          "sha256": "5fb2fa2f02e1b88325959002a905b4322c47f9bbdc86522c0fc4043fef783ffb"
+        },
+        {
+          "member": "anc/all_n_deletion_result.json",
+          "bytes": 8043,
+          "sha256": "6528b43e0aeaa5f067ec2e19718f533f099e99b55c700098d0a98ec2a5759854"
+        },
+        {
+          "member": "anc/all_n_polar_gap.tex",
+          "bytes": 1759,
+          "sha256": "76ad0e9a8da259cf3397fec0ae73192b154ac53b04d3e1e30ea154c48e5dd089"
+        },
+        {
+          "member": "anc/all_n_rings_exact_result.json",
+          "bytes": 58963,
+          "sha256": "221c4d04be35b5ce1077743665d65942f50c74437538f1189c0dd3f3da630018"
+        },
+        {
+          "member": "anc/all_n_rings_independent_audit.md",
+          "bytes": 3289,
+          "sha256": "4c081d2d7ebde75f565339dbad15edfc3759cf22050c6a9321b5cadceeb5c6dc"
+        },
+        {
+          "member": "anc/all_n_rings_notes.md",
+          "bytes": 3426,
+          "sha256": "a2ceb66460d79dad621a8ac57ff579b8e20e35f43c89f3a7fd278582c37c00b1"
+        },
+        {
+          "member": "anc/all_n_rings_section.tex",
+          "bytes": 11923,
+          "sha256": "7f52814a41b4f545e60226b884c80ea08d54930cb47b502c4f8bf0eb4ab28165"
+        },
+        {
+          "member": "anc/all_n_rings_verify.py",
+          "bytes": 5079,
+          "sha256": "b0e5c5945f41f6a81d8adf85130e15fdf8a20dfae739028fd34335e66efd3c9f"
+        },
+        {
+          "member": "anc/all_n_structure_audit.md",
+          "bytes": 6281,
+          "sha256": "165d0ae7bea30830f57d77086957558954122af80270def5244051252e5b90ca"
+        },
+        {
+          "member": "anc/all_n_structure_radial.tex",
+          "bytes": 6775,
+          "sha256": "e83ac071b28e65f10ba5fc7285e6bec82071b8f950ea65981bc58764bbc0560b"
+        },
+        {
+          "member": "anc/all_n_structure_radial_results.json",
+          "bytes": 2996,
+          "sha256": "2df95a241e6c7d9d40df30fdbf657c3d33bf085929c40b0b4fb5601c5834a599"
+        },
+        {
+          "member": "anc/all_n_structure_radial_verify.py",
+          "bytes": 6386,
+          "sha256": "a522a45673cf2899bb0fa082d1b62744575c212daa5db586cae8d14c60c188fc"
+        },
+        {
+          "member": "anc/all_n_uniform_checks.json",
+          "bytes": 2867,
+          "sha256": "68a07256c5be17d73f2e36f975847c8b5996926d8974eba9b3e9ec5a7ef7470c"
+        },
+        {
+          "member": "anc/all_n_uniform_checks.py",
+          "bytes": 7120,
+          "sha256": "e802d82d0a82c58347fc2e0202de6fbdca17228c5cfeb54356813e8a8a34d701"
+        },
+        {
+          "member": "anc/all_n_uniform_linear_constant.tex",
+          "bytes": 7595,
+          "sha256": "6100273661085607c8ea0da2e68de5c50f0f5b61ed40371fb54e557b7ef3e83e"
+        },
+        {
+          "member": "anc/all_n_uniform_notes.md",
+          "bytes": 5505,
+          "sha256": "1f712240afdd21e57b846fbb6ce8b141820b01f11b5a571b7149783f987e6398"
+        },
+        {
+          "member": "anc/all_n_uniform_partition.tex",
+          "bytes": 4047,
+          "sha256": "366b10b3282ae90457557a6210cf5fbde04c3adc74be091d3e4dd560bf6c523e"
+        },
+        {
+          "member": "anc/archivepolsys_vortices_N6.txt",
+          "bytes": 15468,
+          "sha256": "2f2a0bff38005d3f3a009efd99f6d90baeae791ad4fa4bf6d49d4a0cbafb8c36"
+        },
+        {
+          "member": "anc/archivepolsys_vortices_N7.txt",
+          "bytes": 846241,
+          "sha256": "d8cd0bc601071a7b4c0f7e9124c613eca9e3902cc58b29d8871686d541e73530"
+        },
+        {
+          "member": "anc/build_fs6_resultant.py",
+          "bytes": 2361,
+          "sha256": "f9e972a32fb1d2f9a819372b838021c5c082cc735bc272342d831344ad8e029f"
+        },
+        {
+          "member": "anc/bw6_exact_results.json",
+          "bytes": 2233,
+          "sha256": "4707a152784731c353763a4b4d7a8664f9e91309c1b491120e692a8e7e9ca295"
+        },
+        {
+          "member": "anc/certify_fs6_disks.py",
+          "bytes": 12540,
+          "sha256": "c3a6b9f5b099633d5d3cc587bf957828fa46113d2ead63cb00b257a8ff8372e9"
+        },
+        {
+          "member": "anc/certify_fs7_disks.py",
+          "bytes": 9009,
+          "sha256": "72ec7c8b1e0f0ab66aa523c775f37c8989f1105fda1475c082da886ea6576b4c"
+        },
+        {
+          "member": "anc/critical_value_eliminant.sage.py",
+          "bytes": 1869,
+          "sha256": "95e3a1ee5b2b51496e708d0fa1e06b04b9b70ead2736d198533f94c299f83a8e"
+        },
+        {
+          "member": "anc/critical_value_result.json",
+          "bytes": 11311,
+          "sha256": "b7963918789aa0ff7e13ede19a4d2163adf4370cf88cdc78f33b3777458d1a47"
+        },
+        {
+          "member": "anc/examples_exact_audit.md",
+          "bytes": 5923,
+          "sha256": "7a0609d5674141bb6eb651beeabdf7425e964134d3e6338dec1422bc10c60c74"
+        },
+        {
+          "member": "anc/examples_five_sturm_result.json",
+          "bytes": 1082,
+          "sha256": "83abf749429a58714f4b57a477149aed7e95fd5a9d0d796de4a0f1506ce75b7d"
+        },
+        {
+          "member": "anc/examples_five_sturm_verify.py",
+          "bytes": 6438,
+          "sha256": "6ac5a70f02eda1c4ae33cc6abb7b2b5e725fb9ac328218169a23300766de35a5"
+        },
+        {
+          "member": "anc/examples_four_exact.tex",
+          "bytes": 3540,
+          "sha256": "bdedbbd14e54dd99bc61ed0b0e69658f991bf3d9891fe82dec0eb7a2c8459452"
+        },
+        {
+          "member": "anc/examples_four_exact_result.json",
+          "bytes": 250,
+          "sha256": "ab35d49bd4b1739bdca882b983cefc34a183b36a75e36261d981b138fc14ea25"
+        },
+        {
+          "member": "anc/examples_four_exact_verify.py",
+          "bytes": 4749,
+          "sha256": "f67545f1be9e07900ad0480f996378826c6a70a5eb43a51130414950d42a0b8c"
+        },
+        {
+          "member": "anc/examples_four_values.tex",
+          "bytes": 1962,
+          "sha256": "e853ca1d83618520f124e81759f118769e56d7b751c85122ed9fbe2cef9ffb93"
+        },
+        {
+          "member": "anc/examples_separation_result.json",
+          "bytes": 268,
+          "sha256": "ced39a2d9e05937bc72dbf0fedd6be49e3074337c7cc3c8f290535da550025be"
+        },
+        {
+          "member": "anc/examples_unified_exact.tex",
+          "bytes": 9455,
+          "sha256": "86207cec71b6c3d23e126d2df39fece17e80bc9ec693fa09d334c9d4218e0c2c"
+        },
+        {
+          "member": "anc/examples_unified_exact_checks.json",
+          "bytes": 2874,
+          "sha256": "69647d31b1afd6048a29423819386636200620a582bf008949ef24d02944be3f"
+        },
+        {
+          "member": "anc/examples_uniform_separation.tex",
+          "bytes": 4924,
+          "sha256": "0af4b622b726cb7d99fe9ebf2b831b9368d40c707de0909f19da193fdae6b24a"
+        },
+        {
+          "member": "anc/examples_value_sos.tex",
+          "bytes": 6630,
+          "sha256": "1cafb92e1a7f3def76def2c0cf53f417a8cfce7ff26f3dcec9c2f4d0aae53b2f"
+        },
+        {
+          "member": "anc/examples_value_sos_result.json",
+          "bytes": 835,
+          "sha256": "21f978125145cd4e79ac36c2bed026acf5c0f053149ca9c7e0e96057bb75b7c7"
+        },
+        {
+          "member": "anc/explore_candidates.py",
+          "bytes": 5491,
+          "sha256": "3beeaa62cab409b63f8f8fcc78bd07b8228c074eb4bc265edf47c6539e5b9a23"
+        },
+        {
+          "member": "anc/framework_verification_result.json",
+          "bytes": 503,
+          "sha256": "c491c9ca6cfc09ef2a3c68324ed784661bc4ba781bc803c077be68329dd441c1"
+        },
+        {
+          "member": "anc/fs6_certificate_notes.md",
+          "bytes": 2953,
+          "sha256": "8763ae28397608cda2dc3f55c5990b2fb9598396df7ead613c4a9bd18691b557"
+        },
+        {
+          "member": "anc/fs6_disk_certificate.json",
+          "bytes": 138252,
+          "sha256": "1ed77668415ff70b983548504723f0324f80d04df3249a7b949cc4de158370ff"
+        },
+        {
+          "member": "anc/fs6_disk_verification_result.json",
+          "bytes": 36817,
+          "sha256": "ed48050541f2a7d83b9e3022c002779f30fce2b38373678b6bd8c40fb528b04f"
+        },
+        {
+          "member": "anc/fs6_exact_component_checks.json",
+          "bytes": 1764,
+          "sha256": "fd089e4d079db4573694ca829362043a05de8ae57d1c92edfd1e2125d25582b2"
+        },
+        {
+          "member": "anc/fs6_literature_audit.md",
+          "bytes": 10026,
+          "sha256": "69ec1560a2e0882381526ba9e62d8e2c8f97e758a24dfe3107fa60eb4167e6c2"
+        },
+        {
+          "member": "anc/fs6_numerical_screen.json",
+          "bytes": 108413,
+          "sha256": "1a7e2c924836c45d7b030c2e5a240769b4f295fc934ddcaf54b72ec19df594d2"
+        },
+        {
+          "member": "anc/fs6_parsed_exact.json",
+          "bytes": 19710,
+          "sha256": "420e917e0a9db639f5fd79b44715348ab56144e08d3ec7e9effcebcb49185fda"
+        },
+        {
+          "member": "anc/fs6_resultant_data.json",
+          "bytes": 28082,
+          "sha256": "8f7a59605da7fba7042f405f0d07d2b5899af14851c783d617bfa11a471750f1"
+        },
+        {
+          "member": "anc/fs7_coverage_and_certificate_audit.md",
+          "bytes": 4057,
+          "sha256": "b8369498cd11320a49dda0c2572d31d771acdd83901e0c3e6a8c53c28160841f"
+        },
+        {
+          "member": "anc/fs7_disk_certificate.json",
+          "bytes": 454736,
+          "sha256": "199ecc8130c3cf0dde359121ed6d93c73b8ca6e265d544e66d9685c0de61651b"
+        },
+        {
+          "member": "anc/fs7_disk_verification_result.json",
+          "bytes": 17064,
+          "sha256": "2cf8317b14d8fbe093afec1f2b8baca170f2bab82aa0f62545a1f3bed42f11dd"
+        },
+        {
+          "member": "anc/fs7_figure.png",
+          "bytes": 76112,
+          "sha256": "d6b788956b602e803536d85ea0bac3b8b0981c1f9e0d53cb40847af3ddaf41af"
+        },
+        {
+          "member": "anc/fs_hal_file.pdf",
+          "bytes": 260532,
+          "sha256": "d0bad7a5027d2072f2f20626442fe2b6e33310b13c4ceb57f1c62651df681de8"
+        },
+        {
+          "member": "anc/fs_issac_original.pdf",
+          "bytes": 367359,
+          "sha256": "a674f8fdbb436529b1f8601377da8412b9e2ffca20b2258488c81342b399fc62"
+        },
+        {
+          "member": "anc/general_radial_caps_result.json",
+          "bytes": 174,
+          "sha256": "90721db4b3b3d96bf2578087e182967d8c7f1a358ae164a82d9135aff61d27c7"
+        },
+        {
+          "member": "anc/grid_global_result.json",
+          "bytes": 2677,
+          "sha256": "fa10091aea2d7ca6ef8203e7da520559ec0f826e41e35d02ee79466ce0bd6df5"
+        },
+        {
+          "member": "anc/hermite_result.json",
+          "bytes": 19506,
+          "sha256": "b83bca116fe65762a541d2b710094d56b5fc2d1ba66449662fa96f2343197e5d"
+        },
+        {
+          "member": "anc/literature_agent.md",
+          "bytes": 10026,
+          "sha256": "69ec1560a2e0882381526ba9e62d8e2c8f97e758a24dfe3107fa60eb4167e6c2"
+        },
+        {
+          "member": "anc/moment_hierarchy_result.json",
+          "bytes": 34114,
+          "sha256": "400d3ad00e06961a173cecd3d2ed5e11bd33e20ebe7b788d84fb531d6de9ba64"
+        },
+        {
+          "member": "anc/n5_complete_verification.py",
+          "bytes": 15478,
+          "sha256": "24e0b1e470e5290fe2f6e730bdd0ba27c462583460f546a8a4657daf1dad3757"
+        },
+        {
+          "member": "anc/n5_complete_verification_20261005.log",
+          "bytes": 5149,
+          "sha256": "4cb3ce2bfcc57cb1e3f68ae3af65a5e21b2d8492f052a261468dd4eec98a9517"
+        },
+        {
+          "member": "anc/n6_certificate_independent_audit.md",
+          "bytes": 4771,
+          "sha256": "941abf08366e455e55d2007d7b6780743af4e20b8b95eb5e9fb17ce384100263"
+        },
+        {
+          "member": "anc/numerical_candidates.json",
+          "bytes": 34093,
+          "sha256": "f7199bcc0a4d6c91a16000ce3e4bbec95bdb7e5f0ef575c6f3f5872805cced24"
+        },
+        {
+          "member": "anc/origin_polygon_section.tex",
+          "bytes": 2916,
+          "sha256": "da3fb7976f7892505e231e2d44a9187b1d3b8df26a9721c9a9d7e69f59fabb75"
+        },
+        {
+          "member": "anc/origin_polygon_verification.json",
+          "bytes": 4247,
+          "sha256": "19ee189530d36e67fd34cb9fc507890be8d3af27ad279b3bcb192808db0701b4"
+        },
+        {
+          "member": "anc/origin_polygon_verify.py",
+          "bytes": 2848,
+          "sha256": "b587c8dc238f3be750bcf54bc40aab27080de5f813b732f722c1034185cdef55"
+        },
+        {
+          "member": "anc/parse_fs6_numerical.py",
+          "bytes": 6986,
+          "sha256": "0e96d64ddbbadcd936ca8964e9cf8f1319d254bfd54a62085a461426f5396a73"
+        },
+        {
+          "member": "anc/parse_fs7_exact.py",
+          "bytes": 4295,
+          "sha256": "e05ba11f481448ca66fc4b929183c234dc574f6312b292cd02204837f5028f26"
+        },
+        {
+          "member": "anc/polar_nonoptimal_result.json",
+          "bytes": 549,
+          "sha256": "0301fcfc7b9d474cbee5833246c43f5f47949f555989c0c1a1ffc33a06f37e23"
+        },
+        {
+          "member": "anc/polygon_perturbation_result.json",
+          "bytes": 7955,
+          "sha256": "0aabed60897bd4796b12589af10d5bb3ca22f976d80d19eecf09dc17c3a9837f"
+        },
+        {
+          "member": "anc/progress_20261003_zh.md",
+          "bytes": 13012,
+          "sha256": "5c439ba8c8ab2568aea6ac3a6457d1ccb3bcb19bf2358416f0a83d1b97adc66f"
+        },
+        {
+          "member": "anc/progress_20261005_before_examples_zh.md",
+          "bytes": 10087,
+          "sha256": "1f9c03e8709fe2bfba1fbec8ecf8c49835c234895c7cbc6dc0bb56159753cbd0"
+        },
+        {
+          "member": "anc/README.txt",
+          "bytes": 3001,
+          "sha256": "e0d4ce92d0a9e36c5ae2beb08b5116d55b7c582a5f4145b6ff7db741fb9ffb8f"
+        },
+        {
+          "member": "anc/research_notes_zh.md",
+          "bytes": 10499,
+          "sha256": "255be689867dcec1ddec426d5084ef0d2cf6060ce896dce82699edbf98c8534d"
+        },
+        {
+          "member": "anc/saved_candidates_audit.json",
+          "bytes": 1787,
+          "sha256": "460a4234bf79c51427b2a213d264e1431829ee56e7b33f6a9cc421c13fed4df5"
+        },
+        {
+          "member": "anc/screen_fs7_numerical.py",
+          "bytes": 4245,
+          "sha256": "0da01993f414355a738c5b739816f1f9110734ad171debf746068553c55a7f4f"
+        },
+        {
+          "member": "anc/seven_global_section.tex",
+          "bytes": 5338,
+          "sha256": "d62bfcc92dd5f282e2c07c4a06758e8ea47017cb857be15f6e45ff761f0a36e5"
+        },
+        {
+          "member": "anc/SOURCE_SHA256.json",
+          "bytes": 2054,
+          "sha256": "dbe8a6d02fef56e17275f2c55b370685b2ecc7e0b5ba0227f3620348f6ab1b24"
+        },
+        {
+          "member": "anc/stationary_polynomial_result.json",
+          "bytes": 3133,
+          "sha256": "5173cf0cbdf6e549a1b6dd504b76a800f5c7c04a5c4792d31074fc3b6595a1b7"
+        },
+        {
+          "member": "anc/verification_result.json",
+          "bytes": 220779,
+          "sha256": "16419b4138be33d3256c45a295dc9bd61551450bbd449d1e79a63779a4fac6c4"
+        },
+        {
+          "member": "anc/verify_all_n_deletion.py",
+          "bytes": 4351,
+          "sha256": "cecf881c6a318f83b00a785d97e47d9f0e084118ea109eef77b1489dee22f146"
+        },
+        {
+          "member": "anc/verify_constructions.py",
+          "bytes": 6766,
+          "sha256": "778153714d1e62c5ccd25959e090eb22673598ca5a647f1b843194dba736894d"
+        },
+        {
+          "member": "anc/verify_critical_value.py",
+          "bytes": 4045,
+          "sha256": "ece884ad1db78c08e2100dc32c95effdd53d86822d2dc9662c783aa1ad8d7201"
+        },
+        {
+          "member": "anc/verify_examples_separation.py",
+          "bytes": 2557,
+          "sha256": "b251edeb63857ed911b78d50890f22db9d2c4e5b4eacd171071b00cc0d572008"
+        },
+        {
+          "member": "anc/verify_examples_unified_exact.py",
+          "bytes": 12498,
+          "sha256": "2d2f404e62f3ffd827081907a69281d6af56af4cd5250fc033fe537296294809"
+        },
+        {
+          "member": "anc/verify_examples_value_sos.py",
+          "bytes": 3260,
+          "sha256": "b71c2bd9d47e4e84ee027874540c20a7c6fe0612fb7dc2fa86dae663a0dac641"
+        },
+        {
+          "member": "anc/verify_framework.py",
+          "bytes": 2245,
+          "sha256": "d8b03b235e4524bdbfba62ea594e3bffc4920576f6235aa5850740c7e4118ece"
+        },
+        {
+          "member": "anc/verify_fs6_components_exact.py",
+          "bytes": 5780,
+          "sha256": "d84f25f045def9998f7a2f3d2732dad1603347eb79b9f47d7ee69677ebbfd6da"
+        },
+        {
+          "member": "anc/verify_fs6_dual_standard.py",
+          "bytes": 8091,
+          "sha256": "95b2d8dc10f1eabae7960012c549cf6d002df1f8921510601d64dc731f6510e6"
+        },
+        {
+          "member": "anc/verify_general_radial_caps.py",
+          "bytes": 3440,
+          "sha256": "04deec3c5c696c95112dc6dc70fbbc772d22555250d171cd06d66930ffaaa6e1"
+        },
+        {
+          "member": "anc/verify_global_grid.py",
+          "bytes": 4570,
+          "sha256": "cbae80be9a5a340686b3efd77fc310664180f5296d4e6e4bd524e876bffa9d9a"
+        },
+        {
+          "member": "anc/verify_hermite.py",
+          "bytes": 4879,
+          "sha256": "a85333e18c9ee74b90188d15d15b133fd59dcf78fdb60d94c24e205edd351faa"
+        },
+        {
+          "member": "anc/verify_improved_grid.py",
+          "bytes": 2385,
+          "sha256": "0ce080fefa6d1a838ad3417e7589d0c8e6c0c3bfa83e6e4e57fbf9db082e8b4b"
+        },
+        {
+          "member": "anc/verify_moment_hierarchy.py",
+          "bytes": 6665,
+          "sha256": "e77098305b402d39d1f49942f89742dd23db3ddf3cfb4a3eea20e0187fc68a2c"
+        },
+        {
+          "member": "anc/verify_n6_stability.py",
+          "bytes": 2691,
+          "sha256": "a1da0d42740652bbbb4a55c22bc2bbf8879b534af8b11160e1ce08b381e6c430"
+        },
+        {
+          "member": "anc/verify_polar_nonoptimal.py",
+          "bytes": 1902,
+          "sha256": "d5df86735cb9a10ddb8a38c53d3cae1cc1ef33aea808b21384a869920f7c289f"
+        },
+        {
+          "member": "anc/verify_polygon_perturbations.py",
+          "bytes": 9412,
+          "sha256": "0b474b0e3acfd5dcbbf58cb25ca42b229700f566e07da8e6b39c480776975209"
+        },
+        {
+          "member": "anc/verify_saved_candidates.py",
+          "bytes": 3932,
+          "sha256": "3b3ba2298bbd22a57528ebb16076add2aee8f1b3adf12e400aeb576c8cc4d2a9"
+        },
+        {
+          "member": "anc/verify_six_spectral.py",
+          "bytes": 5143,
+          "sha256": "a4e48a9172a86702370acc66f25bbdd576f55547a5a121ee46f7a9cce19eb4c6"
+        },
+        {
+          "member": "anc/verify_spectral_agent.py",
+          "bytes": 3788,
+          "sha256": "02b96cc8677500f58183b8f832f5ef26ce99acb73beb19d73aeedcf7ce1daf71"
+        },
+        {
+          "member": "anc/verify_spectral_second_level.py",
+          "bytes": 5512,
+          "sha256": "51c459831cc9231bb241f0f5c7ca05816cf0eedc85992c66f236a2b73694fe23"
+        },
+        {
+          "member": "anc/verify_stationary_polynomial.py",
+          "bytes": 7175,
+          "sha256": "feb6d8d46409f0e24ea2ac661498551df9d80d8206d0d4945abe925881f89a19"
+        },
+        {
+          "member": "main.tex",
+          "bytes": 199525,
+          "sha256": "1325f95a5330f883efcfddb50520b69bbe0f1b578e0cd017996df03e1be996ae"
+        },
+        {
+          "member": "README.md",
+          "bytes": 8333,
+          "sha256": "cf55af6076a226f9b775710af40888b9055084265df6bb2acbebba8c1d5428e2"
+        },
+        {
+          "member": "统一框架与本轮进展.md",
+          "bytes": 8362,
+          "sha256": "f654d1560d3a0a9fea6260a5395578578e6461b4f530f93184f3a672fa3ef771"
+        },
+        {
+          "member": "SHA256SUMS.json",
+          "bytes": 10978,
+          "sha256": "4f00dacfd91c30d6adfefcd4ff3eea6ca4c30c629c9f10e4a46c6273b32187de"
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "unchanged": [
+      "anc/verify_stationary_polynomial.py",
+      "anc/saved_candidates_audit.json",
+      "anc/polygon_perturbation_result.json",
+      "anc/verify_hermite.py",
+      "anc/verify_global_grid.py",
+      "anc/verify_critical_value.py",
+      "anc/SOURCE_SHA256.json",
+      "anc/numerical_candidates.json",
+      "anc/verify_saved_candidates.py",
+      "anc/grid_global_result.json",
+      "anc/research_notes_zh.md",
+      "anc/critical_value_eliminant.sage.py",
+      "anc/verify_constructions.py",
+      "anc/explore_candidates.py",
+      "anc/verification_result.json",
+      "anc/verify_polygon_perturbations.py",
+      "anc/stationary_polynomial_result.json",
+      "anc/hermite_result.json",
+      "anc/critical_value_result.json",
+      "anc/README.txt"
+    ],
+    "changed": [
+      "main.tex"
+    ],
+    "added": [
+      "README.md",
+      "SHA256SUMS.json",
+      "anc/all_n_deletion_radius.tex",
+      "anc/all_n_deletion_result.json",
+      "anc/all_n_polar_gap.tex",
+      "anc/all_n_rings_exact_result.json",
+      "anc/all_n_rings_independent_audit.md",
+      "anc/all_n_rings_notes.md",
+      "anc/all_n_rings_section.tex",
+      "anc/all_n_rings_verify.py",
+      "anc/all_n_structure_audit.md",
+      "anc/all_n_structure_radial.tex",
+      "anc/all_n_structure_radial_results.json",
+      "anc/all_n_structure_radial_verify.py",
+      "anc/all_n_uniform_checks.json",
+      "anc/all_n_uniform_checks.py",
+      "anc/all_n_uniform_linear_constant.tex",
+      "anc/all_n_uniform_notes.md",
+      "anc/all_n_uniform_partition.tex",
+      "anc/archivepolsys_vortices_N6.txt",
+      "anc/archivepolsys_vortices_N7.txt",
+      "anc/build_fs6_resultant.py",
+      "anc/bw6_exact_results.json",
+      "anc/certify_fs6_disks.py",
+      "anc/certify_fs7_disks.py",
+      "anc/examples_exact_audit.md",
+      "anc/examples_five_sturm_result.json",
+      "anc/examples_five_sturm_verify.py",
+      "anc/examples_four_exact.tex",
+      "anc/examples_four_exact_result.json",
+      "anc/examples_four_exact_verify.py",
+      "anc/examples_four_values.tex",
+      "anc/examples_separation_result.json",
+      "anc/examples_unified_exact.tex",
+      "anc/examples_unified_exact_checks.json",
+      "anc/examples_uniform_separation.tex",
+      "anc/examples_value_sos.tex",
+      "anc/examples_value_sos_result.json",
+      "anc/framework_verification_result.json",
+      "anc/fs6_certificate_notes.md",
+      "anc/fs6_disk_certificate.json",
+      "anc/fs6_disk_verification_result.json",
+      "anc/fs6_exact_component_checks.json",
+      "anc/fs6_literature_audit.md",
+      "anc/fs6_numerical_screen.json",
+      "anc/fs6_parsed_exact.json",
+      "anc/fs6_resultant_data.json",
+      "anc/fs7_coverage_and_certificate_audit.md",
+      "anc/fs7_disk_certificate.json",
+      "anc/fs7_disk_verification_result.json",
+      "anc/fs7_figure.png",
+      "anc/fs_hal_file.pdf",
+      "anc/fs_issac_original.pdf",
+      "anc/general_radial_caps_result.json",
+      "anc/literature_agent.md",
+      "anc/moment_hierarchy_result.json",
+      "anc/n5_complete_verification.py",
+      "anc/n5_complete_verification_20261005.log",
+      "anc/n6_certificate_independent_audit.md",
+      "anc/origin_polygon_section.tex",
+      "anc/origin_polygon_verification.json",
+      "anc/origin_polygon_verify.py",
+      "anc/parse_fs6_numerical.py",
+      "anc/parse_fs7_exact.py",
+      "anc/polar_nonoptimal_result.json",
+      "anc/progress_20261003_zh.md",
+      "anc/progress_20261005_before_examples_zh.md",
+      "anc/screen_fs7_numerical.py",
+      "anc/seven_global_section.tex",
+      "anc/verify_all_n_deletion.py",
+      "anc/verify_examples_separation.py",
+      "anc/verify_examples_unified_exact.py",
+      "anc/verify_examples_value_sos.py",
+      "anc/verify_framework.py",
+      "anc/verify_fs6_components_exact.py",
+      "anc/verify_fs6_dual_standard.py",
+      "anc/verify_general_radial_caps.py",
+      "anc/verify_improved_grid.py",
+      "anc/verify_moment_hierarchy.py",
+      "anc/verify_n6_stability.py",
+      "anc/verify_polar_nonoptimal.py",
+      "anc/verify_six_spectral.py",
+      "anc/verify_spectral_agent.py",
+      "anc/verify_spectral_second_level.py",
+      "统一框架与本轮进展.md"
+    ],
+    "removed": []
+  },
+  "internal_manifest_checks": [
+    {
+      "label": "original",
+      "checked": 20,
+      "all_match": true,
+      "name_remapped": [],
+      "failed": []
+    },
+    {
+      "label": "revised",
+      "checked": 105,
+      "all_match": true,
+      "name_remapped": [],
+      "failed": []
+    }
+  ],
+  "curation": "source_evidence.zip contains the original source plus selected revised proof/code evidence; third-party paper PDFs are represented by citations in the preserved manuscript.",
+  "evidence_members": [
+    "original/anc/critical_value_eliminant.sage.py",
+    "original/anc/critical_value_result.json",
+    "original/anc/explore_candidates.py",
+    "original/anc/grid_global_result.json",
+    "original/anc/hermite_result.json",
+    "original/anc/numerical_candidates.json",
+    "original/anc/polygon_perturbation_result.json",
+    "original/anc/README.txt",
+    "original/anc/research_notes_zh.md",
+    "original/anc/saved_candidates_audit.json",
+    "original/anc/SOURCE_SHA256.json",
+    "original/anc/stationary_polynomial_result.json",
+    "original/anc/verification_result.json",
+    "original/anc/verify_constructions.py",
+    "original/anc/verify_critical_value.py",
+    "original/anc/verify_global_grid.py",
+    "original/anc/verify_hermite.py",
+    "original/anc/verify_polygon_perturbations.py",
+    "original/anc/verify_saved_candidates.py",
+    "original/anc/verify_stationary_polynomial.py",
+    "original/main.tex",
+    "revised/main.tex",
+    "revised/anc/verify_improved_grid.py",
+    "revised/anc/all_n_rings_verify.py",
+    "revised/anc/verify_polar_nonoptimal.py",
+    "revised/anc/verify_all_n_deletion.py",
+    "revised/anc/all_n_uniform_checks.py",
+    "revised/anc/all_n_structure_radial_verify.py",
+    "revised/anc/verify_spectral_agent.py",
+    "revised/anc/verify_spectral_second_level.py",
+    "revised/anc/verify_framework.py",
+    "revised/anc/verify_examples_unified_exact.py",
+    "revised/anc/verify_examples_value_sos.py",
+    "revised/anc/verify_stationary_polynomial.py",
+    "revised/anc/all_n_deletion_radius.tex",
+    "revised/anc/all_n_structure_radial.tex",
+    "revised/anc/all_n_uniform_linear_constant.tex",
+    "revised/anc/all_n_uniform_partition.tex",
+    "revised/anc/all_n_rings_section.tex",
+    "revised/anc/all_n_polar_gap.tex",
+    "revised/anc/examples_unified_exact.tex",
+    "revised/anc/examples_value_sos.tex"
+  ]
+}

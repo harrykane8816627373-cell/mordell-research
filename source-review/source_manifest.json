@@ -1,0 +1,135 @@
+{
+  "algorithm": "SHA256",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 9,
+      "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
+      "file": "baseline_finite_lower_bounds.py",
+      "bytes": 9401,
+      "sha256": "1bd1ffd0ca07ab0169d2f80d6a3eac8d1018c3611cb10fee6d328faab7785c59"
+    },
+    {
+      "file": "compare_envelopes.py",
+      "bytes": 5218,
+      "sha256": "58f5cf4cbb7402bb9766d3d6c08d995b29a12dc54de58a8f13ec6abb63e7309f"
+    },
+    {
+      "file": "DELETION_REFINEMENT.md",
+      "bytes": 4577,
+      "sha256": "0492c9b0e858269dfbb321edd1fd4b02bf26182a8579a89af1da624738addc77"
+    },
+    {
+      "file": "HYBRID_GRID.md",
+      "bytes": 4177,
+      "sha256": "c79ba91090cd7179665c7120977d56fbe635c9db297f853a2c0ffe1eac5cd582"
+    },
+    {
+      "file": "hybrid_grid_bounds.py",
+      "bytes": 4681,
+      "sha256": "0a3e88b52e4a4d6eccd194ba8271295524bcf68ffae8494c09962c01a0aea4e9"
+    },
+    {
+      "file": "lower_bound_comparison.json",
+      "bytes": 184997,
+      "sha256": "cbbbd4a18660850bf17d1a3b3dbd753c64a7d1e2376876f15206ddf8352006d7"
+    },
+    {
+      "file": "moment_values.json",
+      "bytes": 2733,
+      "sha256": "ad335ae23125cb01344fe8d1e7c58b2c0e146cf63198fbde48f1d6fbeee334b4"
+    },
+    {
+      "file": "original_main.tex",
+      "bytes": 51619,
+      "sha256": "12a2ad4a9c470d8d678123466d966bc75539ff2b0d284d335408751da79f73d2"
+    },
+    {
+      "file": "POLAR_REFINEMENT.md",
+      "bytes": 6040,
+      "sha256": "70fff40bcaf5a7faef136b4f38d53682d35f21d16254db758e729ed9907a91b3"
+    },
+    {
+      "file": "polar_refinement.py",
+      "bytes": 4449,
+      "sha256": "8cd05fc38780ea34f8a4d4e5042f56b679da466e1e3e329713d9090f43bc8128"
+    },
+    {
+      "file": "QUANTITATIVE_SPECTRAL_GAP.md",
+      "bytes": 4212,
+      "sha256": "0041d2ee366c34750a386e503b9dc917be7e8470f5a0d67d01d45c3a85fdef6b"
+    },
+    {
+      "file": "RADIAL_LAYERS.md",
+      "bytes": 6465,
+      "sha256": "f076adde5646d7050600c79ada90037c241c8815890f988ebe78207ac31a5e80"
+    },
+    {
+      "file": "README.md",
+      "bytes": 5727,
+      "sha256": "79fa251aecc9adc11b962670ee24c483cb0f655a6e05acfb5481d88b0866cbff"
+    },
+    {
+      "file": "REVIEW.md",
+      "bytes": 1490,
+      "sha256": "3a647578601b3a41fe8e82b475c231101e5aa3a086ef6ab8ea6c0b3a0ac3b1e9"
+    },
+    {
+      "file": "revised_main.tex",
+      "bytes": 199525,
+      "sha256": "1325f95a5330f883efcfddb50520b69bbe0f1b578e0cd017996df03e1be996ae"
+    },
+    {
+      "file": "saved_rational_bounds.json",
+      "bytes": 11761,
+      "sha256": "1b7455e72a57c6278945681894840fe2272b2dc90e1c2b4a767b60813ac3c68f"
+    },
+    {
+      "file": "source_evidence.zip",
+      "bytes": 242975,
+      "sha256": "866fd7e5a1cc4e5eea31981c84330a6cec759b0f8ab4bc305c47b197d60a9585"
+    },
+    {
+      "file": "source_provenance.json",
+      "bytes": 31632,
+      "sha256": "8b8d3ac80a5bc3670058b7ca1fe852d4473d48ad8a2f834607dc0d3b4389bd42"
+    },
+    {
+      "file": "SOURCE_REVIEW.md",
+      "bytes": 4998,
+      "sha256": "29553538e852c4cc1408d1cc484ed23bc4252fde119587be32656189f70308ca"
+    },
+    {
+      "file": "triangular_lattice.py",
+      "bytes": 11150,
+      "sha256": "a4ad1ceacdfec8468b84b3df9e23685412c2a6f63b0d153912274d93b815cb60"
+    },
+    {
+      "file": "verify_all.py",
+      "bytes": 5385,
+      "sha256": "b259d821ca134b5f072b9c5d3f705f847115335b5b96ffbba0f06f9576e07b5e"
+    },
+    {
+      "file": "verify_deletion_refinement.py",
+      "bytes": 2112,
+      "sha256": "b58b5e908888f0e962b0202d8df3a57e4eeffd45cd2c5e43e6d86cf53b8d869a"
+    },
+    {
+      "file": "verify_hybrid_grid.py",
+      "bytes": 2382,
+      "sha256": "019da3a344d0a41b4e3beba97c16f66765f496fe0aa485edb0722db63b2107fb"
+    },
+    {
+      "file": "verify_quantitative_spectral_gap.py",
+      "bytes": 4004,
+      "sha256": "0ebce020844be9315c9e1da62f58322bdbc0ae47a2504b2e531aa2625d565f45"
+    },
+    {
+      "file": "verify_radial_layers.py",
+      "bytes": 4874,
+      "sha256": "f4f059632148b4f51336b3761129040c2dbcc1c1e29a876eb47e7aa56813104c"
+    }
+  ]
+}

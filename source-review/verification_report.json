@@ -1,0 +1,183 @@
+{
+  "passed": true,
+  "source_files_checked": 26,
+  "original_internal_hashes": 20,
+  "revised_internal_hashes": 105,
+  "source_replay_entries": [
+    {
+      "script": "verify_global_grid.py",
+      "passed": true
+    },
+    {
+      "script": "verify_polygon_perturbations.py",
+      "passed": true
+    },
+    {
+      "script": "verify_saved_candidates.py",
+      "passed": true
+    },
+    {
+      "script": "verify_improved_grid.py",
+      "passed": true
+    },
+    {
+      "script": "all_n_rings_verify.py",
+      "passed": true
+    },
+    {
+      "script": "verify_polar_nonoptimal.py",
+      "passed": true
+    },
+    {
+      "script": "verify_all_n_deletion.py",
+      "passed": true
+    },
+    {
+      "script": "all_n_uniform_checks.py",
+      "passed": true
+    },
+    {
+      "script": "all_n_structure_radial_verify.py",
+      "passed": true
+    },
+    {
+      "script": "verify_spectral_agent.py",
+      "passed": true
+    },
+    {
+      "script": "verify_spectral_second_level.py",
+      "passed": true
+    },
+    {
+      "script": "verify_framework.py",
+      "passed": true
+    },
+    {
+      "script": "verify_examples_unified_exact.py",
+      "passed": true
+    },
+    {
+      "script": "verify_examples_value_sos.py",
+      "passed": true
+    },
+    {
+      "script": "verify_stationary_polynomial.py",
+      "passed": true
+    }
+  ],
+  "new_replay_entries": [
+    {
+      "script": "verify_radial_layers.py",
+      "passed": true
+    },
+    {
+      "script": "verify_deletion_refinement.py",
+      "passed": true
+    },
+    {
+      "script": "verify_quantitative_spectral_gap.py",
+      "passed": true
+    },
+    {
+      "script": "verify_hybrid_grid.py",
+      "passed": true
+    },
+    {
+      "script": "polar_refinement.py",
+      "passed": true
+    },
+    {
+      "script": "compare_envelopes.py",
+      "passed": true
+    }
+  ],
+  "complete_original_grid_sets": 1874376,
+  "envelope_counts_n_min": 2,
+  "envelope_counts_n_max": 100,
+  "restored_polar_gain_count": 42,
+  "restored_saved_gains": [
+    10,
+    11,
+    12
+  ],
+  "new_gain_count_after_full_restoration": 43,
+  "radial_checks": {
+    "passed": true,
+    "arithmetic": "integers and Fraction; no floating decisions",
+    "gamma_lower": "5357877/2000000",
+    "pi_upper": "355/113",
+    "gamma_gap_strictly_below": "1/800",
+    "finite_K_factor": "1/16",
+    "enhanced_finite_K_factor": "1/12",
+    "asymptotic_K_factor": "11/50",
+    "gap_integral_cases": 36,
+    "support_width_cases": 420,
+    "scope": "Constants and finite identity checks; RADIAL_LAYERS.md proves the all-n energy argument."
+  },
+  "spectral_checks": {
+    "passed": true,
+    "arithmetic": "integer and fractions.Fraction",
+    "multinomial_comparisons": 9126,
+    "three_point_exact_levels": 3,
+    "two_monomial_block_comparisons": 234,
+    "examples": [
+      {
+        "n": 3,
+        "known_M": "27",
+        "level_zero_upper": "54",
+        "gap_lower_r_0_1_2_5": [
+          "27/4",
+          "27/16",
+          "27/40",
+          "27/224"
+        ]
+      },
+      {
+        "n": 4,
+        "known_M": "256",
+        "level_zero_upper": "8192/5",
+        "gap_lower_r_0_1_2_5": [
+          "108",
+          "108/7",
+          "27/7",
+          "18/77"
+        ]
+      },
+      {
+        "n": 5,
+        "known_M": "3125",
+        "level_zero_upper": "1953125/21",
+        "gap_lower_r_0_1_2_5": [
+          "1510",
+          "1510/11",
+          "755/33",
+          "1510/3003"
+        ]
+      },
+      {
+        "n": 6,
+        "known_M": "470184984576/9765625",
+        "level_zero_upper": "313456656384/35035",
+        "gap_lower_r_0_1_2_5": [
+          "456694084359806976/19073486328125",
+          "28543380272487936/19073486328125",
+          "57086760544975872/324249267578125",
+          "9514460090829312/6160736083984375"
+        ]
+      },
+      {
+        "n": 7,
+        "known_M": "558545864083284007/470184984576",
+        "level_zero_upper": "11398895185373143/8314020",
+        "gap_lower_r_0_1_2_5": [
+          "7288675949339641768628567977/12281884428929630994432",
+          "7288675949339641768628567977/270201457436451881877504",
+          "7288675949339641768628567977/3107316760519196641591296",
+          "7288675949339641768628567977/807902357734991126813736960"
+        ]
+      }
+    ],
+    "scope": "Quantifies a spectral-method obstruction; no new unknown M_n computed. Known n6,n7 values retain original external classification dependencies."
+  },
+  "scope": "All-n conclusions require the proof texts. No large precision grid, FS classification recomputation, or unknown general-n sharp value is claimed."
+}

@@ -1,0 +1,4855 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,microtype,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={Small-point global maxima and uniform exact certification for the Mordell discriminant problem},
+pdfauthor={Fengcan Jiang}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\E}{\mathbb E}
+\numberwithin{equation}{section}
+\title{Small-point global maxima and uniform exact certification\\for the Mordell discriminant problem}
+\author{Fengcan Jiang\thanks{Email:
+\href{mailto:2255214397@stu.xjtu.edu.cn}{\texttt{2255214397@stu.xjtu.edu.cn}}.}}
+\date{October 5, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the six- and seven-point maxima of the squared Vandermonde
+product under a prescribed total quadratic moment. Their unique maximizing
+shapes are the origin with a regular pentagon or hexagon, with values
+$6^{15}/5^{10}$ and $7^{21}/6^{15}$ at moments six and seven.
+The proofs invoke the published Faug\`ere--Svartz decomposition and physical
+coverage, followed by independent integer and rational root-disk certificates.
+The seven-point check covers $174$ algebraic candidates and $1218$ point roots;
+the external exclusion of a degree-$356$ branch is stated explicitly.
+Small cases supply a cubic selector for all physical four-point stationary
+values and explicit exact sum-of-squares certificates.
+We prove finite exact certificates after critical-value augmentation, without
+assuming isolated stationary shapes, and simplify conjugate pairing by a
+bordered Hermitian trace test. A simultaneous pair-replacement argument
+strengthens the global separation bound and the compact certification model.
+Uniform convergent moment and spectral bounds, deletion monotonicity, radial
+cuts and a fixed global disk support the framework for arbitrary point counts.
+An explicit rational polar construction matches the first two asymptotic
+terms but is strictly suboptimal at linear order. Classical renormalized-energy
+theory identifies the global linear coefficient with a microscopic energy
+minimum. No finite simple closed expression for every point count is obtained.
+\end{abstract}
+
+\section{Scope and normalization}
+For $n\ge2$, put
+\[
+ \Delta_n(z)=\prod_{i<j}|z_i-z_j|^2,\qquad
+ M_n=\max_{\sum_i|z_i|^2=n}\Delta_n(z),\qquad
+ N=\frac{n(n-1)}2,\qquad P_n=\prod_{k=0}^{n-1}k!.
+\]
+The maximum exists by compactness; it is positive and has no
+collisions, since a unit regular polygon has value $n^n$.
+Every maximizer has zero centroid: centering preserves the distances
+and decreases the quadratic moment by $n$ times the squared centroid;
+rescaling a nonzero centroid configuration to the constraint would
+strictly increase its product.
+
+The five-point equality $M_5=5^5$ is proved by Wang \cite{Wang}.
+Chalk's center-plus-polygon construction \cite{Chalk} disproves
+$M_n=n^n$ for $n\ge6$. The present note provides general constructions
+and global bounds. The six-point value is determined below using the
+published exhaustive coefficient decomposition and a new independent
+rational certificate. The current revision gives additional structural results and an explicit
+all-point-count rational construction, while distinguishing attainable
+values from global maxima. The seven-point value and finite augmented certificates are established in Section~\ref{sec:examples-bordered-trace}. No finite closed formula for all $M_n$ is claimed.
+The asymptotic context is classical Gaussian weighted Fekete theory
+and the planar logarithmic gas \cite{AOC,SS}. No claim of priority is
+made for these asymptotic terms or elementary bounds.
+
+\section{The exact six-point global maximum}
+\label{sec:six-global-exact}
+
+The exhaustive six-vortex coefficient decomposition of
+Faug\`ere--Svartz~\cite[Sections~5.3 and~5.7]{FS}, together with
+the archived author bases~\cite{FSdata}, supplies eleven triangular
+components, covering eighty complex coefficient solutions after the
+normalization by the first nonzero elementary symmetric coefficient.
+We use the authors' lexicographic bases, rather than a numerical list
+of equilibria.  The archived file is reproduced with the certificate.
+Its first comment says \texttt{N=7}; its eleven bases involve only
+$e_2,\ldots,e_6$ and are the six-point data linked as
+\texttt{vortices\_N6.txt} on the authors' index.
+The accompanying author solution document, whose six-vortex section
+is on pages~7--10, independently identifies these data.
+We invoke the published algebraic decomposition as an external
+completeness input: every physical stationary six-point shape is
+represented by these bases after coefficient normalization.
+Only this necessary coverage is used; homogenized coefficient
+solutions may also include nonphysical candidates.
+The verifier below certifies the subsequent root
+coverage and comparisons; it does not recompute that decomposition.
+The coefficient convention is
+\begin{equation}\label{eq:six-coeff-convention}
+ P(t)=t^6+e_2t^4-e_3t^3+e_4t^2-e_5t+e_6.
+\end{equation}
+The certificate below tests the actual conjugate pairing of every
+candidate; an equality between unordered sets of dual roots is
+insufficient.
+
+\begin{theorem}\label{thm:six-global}
+For $\sum_{i=1}^6|z_i|^2=6$,
+\[
+ \prod_{i<j}|z_i-z_j|^2\le
+ \frac{6^{15}}{5^{10}}=\frac{470184984576}{9765625}.
+\]
+Equality holds precisely for the origin together with a regular
+pentagon of radius $\sqrt{6/5}$, up to rotation and permutation.
+\end{theorem}
+
+\begin{proof}
+A maximizer is collision-free and centered.  Its coefficients belong
+to the exhaustive decomposition just described, after multiplication
+of all roots by a common nonzero complex number.  If $w_1,\ldots,w_6$
+are the roots in one such coefficient chart, write
+$Q=\sum_i|w_i|^2$.  Physical stationarity requires
+\[
+ \frac{P''(w_i)}{2P'(w_i)}=\kappa\overline{w_i},
+ \qquad \kappa>0.
+\]
+Multiplication by $w_i$ and summation gives $\kappa Q=15$;
+therefore every root must satisfy the polynomial residual identity
+\begin{equation}\label{eq:six-force-residual}
+ QP''(w_i)-30\overline{w_i}P'(w_i)=0.
+\end{equation}
+The objective of the configuration rescaled to moment six is
+\begin{equation}\label{eq:six-chart-value}
+ \left(\frac6Q\right)^{15}\prod_{i<j}|w_i-w_j|^2.
+\end{equation}
+
+The independent rational-arithmetic verifier in the certificate
+bundle exhausts the eighty coefficient solutions.  It excludes
+sixty-nine solutions by \eqref{eq:six-force-residual}.  The remaining
+eleven consist of the central pentagon and ten candidates with
+certified strict upper bounds below $6^{15}/5^{10}$, as follows.
+The component numbers are those of the supplied author file;
+opposite signs of $e_3$ may describe the same shape after rotation.
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule
+Component&Solutions&Excluded&Not excluded&Upper bound\\
+\midrule
+1&22&20&2&$3170$\\
+2&28&28&0&---\\
+3&12&12&0&---\\
+4&4&2&2&$42454$\\
+5&2&2&0&---\\
+6&1&0&1&$18699$\\
+7&1&0&1&$18699$\\
+8&6&4&2&$22400$ and $133$\\
+9&2&1&1&$7225$\\
+10&1&0&1&$6^{15}/5^{10}$, exact\\
+11&1&0&1&$6^6=46656$, exact\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here ``not excluded'' means that the necessary force test did not
+exclude the candidate; no sufficiency assertion is needed for the
+ten strict upper bounds.
+Component ten has $P(t)=t(t^5-1)$, whose roots are the origin and a
+unit regular pentagon.  Its moment is five, and its discriminant
+product is $5^5$; \eqref{eq:six-chart-value} gives $6^{15}/5^{10}$.
+Component eleven has $P(t)=t^6+1$ and is a unit regular hexagon.
+All other remaining rows have a strict upper bound smaller than
+the central-pentagon value.  This proves the upper bound and the
+equality classification.
+\end{proof}
+
+\subsection{Rational verification of root coverage and inequalities}
+\label{sec:six-disk-certificate}
+The frozen centers in \texttt{fs6\_disk\_certificate.json} are
+Gaussian rationals.  Parameter disks have radius $10^{-70}$; the
+six root disks for each parameter have radius $10^{-12}$.
+Floating-point arithmetic is used only to propose these centers.
+Verification uses integer and rational arithmetic, and does not
+import a numerical package or a computer algebra system.
+
+For a Gaussian rational $c$, let $|c|_1=|\Re c|+|\Im c|$ and
+$|c|_\infty=\max(|\Re c|,|\Im c|)$.  Suppose a polynomial
+$p_0$ approximates $p$, and the error in its coefficient of $t^j$
+is at most $\epsilon_j$.  Put
+$a_k=p_0^{(k)}(c)/k!$.  The checker verifies
+\begin{equation}\label{eq:six-rouche}
+ |a_0|_1+\sum_{k\ge2}|a_k|_1r^k
+ +\sum_j\epsilon_j(|c|_1+r)^j
+ <r|a_1|_\infty.
+\end{equation}
+On the circle $|t-c|=r$, this bounds the difference between
+$p(t)$ and $a_1(t-c)$ strictly below $|a_1(t-c)|$.
+Rouch\'e's theorem proves that each disk contains exactly one
+root, counted with multiplicity.  The disks are pairwise disjoint,
+and their number equals the degree of the relevant polynomial;
+hence no complex roots are omitted.
+
+For a coefficient expressed as $f(b)/A$, where the parameter lies
+in $|b-b_0|\le\rho$, its certified error before rational rounding
+is bounded by
+\[
+ \frac1{|A|}\sum_k|f_k|
+ \bigl\{(|b_0|_1+\rho)^k-|b_0|_1^k\bigr\}.
+\]
+This propagates the parameter disk into coefficient errors in
+\eqref{eq:six-rouche}, so the six root disks are valid uniformly
+for the exact algebraic parameter.
+
+Let $c_1,\ldots,c_6$ be the root-disk centers, and let their common
+radius be $r$.  The verifier sets
+\[
+ Q_0=\sum_i|c_i|^2,\qquad
+ E_Q=\sum_i(2|c_i|_1r+r^2).
+\]
+Then $|Q-Q_0|\le E_Q$.  Taylor bounds for $P'$ and $P''$ and
+the coefficient-error bounds give an explicit rational error for
+\eqref{eq:six-force-residual}.  If the infinity norm of its center
+residual exceeds that error, the candidate is excluded.  The
+sixty-nine exclusions all have strictly positive rational margins.
+For every remaining candidate outside components ten and eleven,
+the checker verifies $Q_0>E_Q$ and the strict rational inequality
+\begin{equation}\label{eq:six-disk-upper}
+ \left(\frac6{Q_0-E_Q}\right)^{15}
+ \prod_{i<j}\left(
+ |c_i-c_j|^2+4|c_i-c_j|_1r+4r^2\right)
+ <\frac{6^{15}}{5^{10}}.
+\end{equation}
+The expression on the left bounds \eqref{eq:six-chart-value}.
+The integer bounds in the table are the upward-rounded endpoints
+of these rational bounds; the hexagon value is computed exactly.
+All decisive checks are explicit exceptions, so running Python
+with optimization enabled does not disable certification.
+
+\subsection{The exact coefficient equations and the classification input}
+\label{subsec:fs6-equations-audit}
+For completeness, we specify both the equation convention and the external
+classification input. Write
+\[
+ p(X)=X^6+e_2X^4-e_3X^3+e_4X^2-e_5X+e_6
+\]
+for the centered polynomial with distinct roots $x_1,\ldots,x_6$, and set
+\[
+ \delta=\operatorname{Res}(p,p'),\qquad
+ g_i=\frac{p''(x_i)}{p'(x_i)},\qquad
+ S_k=\sum_i g_i^k,\qquad m_k=\sum_i x_i g_i^k.
+\]
+The basic partial-fraction identity gives
+$g_i=2\sum_{j\ne i}(x_i-x_j)^{-1}$, hence
+$S_1=m_0=0$ and $m_1=30$.
+Define the dual resultant and its first variation by
+\[
+ R_0(Y)=\operatorname{Res}_X(p,Yp'-p''),\qquad
+ R_t(Y)=\left.\partial_T\operatorname{Res}_X
+ (p,(Y+TX)p'-p'')\right|_{T=0}.
+\]
+Then, directly from the product formula for resultants,
+\[
+ R_0=\delta\prod_i(Y-g_i),\qquad
+ R_t=\delta\sum_i x_i\prod_{j\ne i}(Y-g_j).
+\]
+Let $R_0/\delta=Y^6+q_2Y^4+q_3Y^3+q_4Y^2+q_5Y+q_6$.
+The four polynomial equations used in the certificate are
+\begin{align*}
+ E_1&=[Y^3]R_t, & E_2&=[Y^2]R_t-12[Y^4]R_0,\\
+ E_3&=[Y]R_t-6[Y^3]R_0, & E_4&=[1]R_t-2[Y^2]R_0.
+\end{align*}
+Synthetic division gives
+\begin{align*}
+ E_1/\delta&=m_2, & E_2/\delta&=m_3+18q_2,\\
+ E_3/\delta&=m_4+q_2m_2+24q_3,
+ &E_4/\delta&=m_5+q_2m_3+q_3m_2+28q_4.
+\end{align*}
+Using $S_2=-2q_2$, $S_3=-3q_3$ and
+$S_4=2q_2^2-4q_4$, we obtain the exact equivalence
+\[
+ E_1=\cdots=E_4=0
+ \quad\Longleftrightarrow\quad
+ m_2=0,\quad m_3=9S_2,\quad m_4=8S_3,
+ \quad m_5=7S_4+S_2^2.
+\]
+These are the first four nontrivial symmetric vortex equations in the
+Faug\`ere--Svartz computation, with the doubled force $g=p''/p'$.
+If the $g_i$ are also distinct, define
+$h_i=x_i-2\sum_{j\ne i}(g_i-g_j)^{-1}$.
+The elementary pairwise-sum identity gives
+\[
+ 2\sum_i g_i^k\sum_{j\ne i}\frac1{g_i-g_j}
+ =\sum_{a=0}^{k-1}(S_{k-1-a}S_a-S_{k-1}).
+\]
+Consequently the four equations, together with $m_0=0,m_1=30$,
+are precisely $\sum_i h_i g_i^k=0$ for $0\le k\le5$.
+The Vandermonde matrix in the distinct $g_i$ is invertible, so $h_i=0$.
+The symmetric equations therefore recover the double-force system on this
+collision-free locus. Physical solutions additionally require
+\[
+ g_i=\frac{30}{Q}\overline{x_i},\qquad Q=\sum_i|x_i|^2,
+\]
+which is exactly the residual checked by the rational certificate.
+
+The external classification result invoked here is the exhaustive rational
+Gr\"obner and triangular computation reported by Faug\`ere and Svartz,
+ISSAC 2012, Sections~5.3--5.7, together with their archived author data
+\texttt{vortices\_N6.txt}. Section~5.3 splits according to the first nonzero
+coefficient, normalizes it to $1$, adds the collision-saturation equation
+$h\delta=1$, and decomposes every chart. Section~5.7 reports the exact
+$n=6$ rational computation (Table~4). Only its coverage consequence is
+needed: every physical stationary six-point shape occurs among the
+eleven supplied triangular components. Theorem~5 of that paper supplies
+the symmetric equations; it should not be described as a separate numbered
+theorem asserting the eleven-component classification.
+Complex scaling used for chart normalization changes the force constant
+to a positive multiple, so it loses no physical shape. Although the data
+file's first comment says $N=7$, the author index names it as the six-point
+file, and Section~4 of the author solution appendix explicitly labels the
+matching six-point catalogue. This is a harmless header typo.
+
+As an additional independent integrity check, exact rational substitution
+verifies $E_1=\cdots=E_4=0$ on the first eight components; direct
+power-sum calculations verify the three exceptional components.
+The discriminant is relatively prime to the corresponding eliminants.
+This check proves containment and consistency of conventions. Exhaustive
+coverage uses the published classification computation just cited;
+the subsequent root isolation, physical exclusions and objective bounds
+are certified independently by the supplied rational checker.
+
+\section{Explicit universal bounds}
+\label{general_sec_bounds}
+\begin{theorem}\label{general_thm_bounds}
+Put $S_m(x)=\sum_{k=0}^m x^k/k!$. For every $\alpha>0$,
+\begin{equation}\label{general_eq_bounds}
+ L_n:=\frac{n!(n-2)!\,n^N P_n}{(N+n-2)!}
+ \le M_n\le U_n(\alpha):=\frac{P_n S_{n-1}(\alpha)^n}{\alpha^N}.
+\end{equation}
+The upper bound has a unique minimizing parameter $\alpha_n>0$,
+characterized by
+\begin{equation}\label{general_eq_optimal_alpha}
+ \sum_{k=0}^{n-1}(2k-(n-1))\frac{\alpha_n^k}{k!}=0.
+\end{equation}
+In particular,
+\begin{equation}\label{general_eq_exponential_upper}
+ M_n\le\widehat U_n:=e^N\left(\frac nN\right)^NP_n.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Take independent standard complex Gaussian variables $Z_j$,
+each with density $\pi^{-1}e^{-|z|^2}$. Their moments satisfy
+$\E(Z^k\overline Z^{\,\ell})=0$ for $k\ne\ell$ and $k!$ for $k=\ell$.
+Expansion of the squared Vandermonde determinant gives
+$\E\Delta_n(Z)=n!P_n$.
+
+Let $Y_j=Z_j-n^{-1}\sum_iZ_i$ and $R^2=\sum_j|Y_j|^2$.
+A unitary change of Gaussian coordinates shows that $R^2$ has the
+$\Gamma(n-1,1)$ distribution and is independent of
+$W=\sqrt n\,Y/R$, the uniform direction on the zero-centroid sphere.
+Translation invariance and homogeneity give
+\[
+ n!P_n=\E\Delta_n(Y)
+ =\frac{\Gamma(N+n-1)}{\Gamma(n-1)n^N}\,\E\Delta_n(W).
+\]
+Thus $L_n=\E\Delta_n(W)\le M_n$.
+
+For the upper bound, apply row Hadamard to
+$A_{jk}=\alpha^{k/2}z_j^k/\sqrt{k!}$, $0\le k<n$.
+Writing $t_j=|z_j|^2$, this gives
+\[
+ \frac{\alpha^N}{P_n}\Delta_n(z)
+ \le\prod_{j=1}^nS_{n-1}(\alpha t_j)
+ \le S_{n-1}(\alpha)^n.
+\]
+The second inequality is Jensen, since $\sum_jt_j=n$
+and $\log S_m$ is concave on $[0,\infty)$.
+For $m=1$ this is immediate. For $m\ge2$, use $S'_m=S_{m-1}$,
+$S''_m=S_{m-2}$ and
+\[
+ S_{m-1}(x)^2-S_m(x)S_{m-2}(x)
+ =\frac{x^{m-1}}{(m-1)!}
+ \left(1+\sum_{k=1}^{m-1}
+         \left(1-\frac km\right)\frac{x^k}{k!}\right)\ge0.
+\]
+This proves \eqref{general_eq_bounds}.
+
+Set $m=n-1$ and $q(\alpha)=\alpha S'_m(\alpha)/S_m(\alpha)$.
+For the distribution on $\{0,\ldots,m\}$ with probabilities
+proportional to $\alpha^k/k!$, $q$ is the mean of $k$, and
+$dq/d\log\alpha$ is its strictly positive variance.
+Thus $q$ increases from $0$ to $m$. The logarithmic derivative of
+$U_n(\alpha)$ with respect to $\log\alpha$ is $nq(\alpha)-N$,
+so its unique zero is the global minimum, giving
+\eqref{general_eq_optimal_alpha}. Finally, $S_m(\alpha)\le e^\alpha$
+and $\alpha=N/n$ prove \eqref{general_eq_exponential_upper}.
+\end{proof}
+
+The lower bound is an average, not a proposed extremal configuration.
+For rational $\alpha$, $U_n(\alpha)$ is rational, giving a fully exact
+finite interval. The optimal parameter is algebraic by
+\eqref{general_eq_optimal_alpha} and can be enclosed by polynomial
+root isolation. For $n=2$, $L_2=U_2(1)=4$.
+For example, $\alpha=11/4$ gives the exact bound $M_6<89309$, whereas
+the central pentagon gives $M_6\ge48146.9424205824$.
+The decimal lower endpoint here is exact; its value is $6^{15}/5^{10}$.
+
+\begin{corollary}\label{general_cor_asymptotic}
+With $c=\tfrac12\log2-\tfrac14$,
+\begin{equation}\label{general_eq_asymptotic}
+ \log M_n=cn^2+\frac n2\log n+O(n).
+\end{equation}
+\end{corollary}
+\begin{proof}
+Summing Stirling's formula, or applying Euler--Maclaurin to
+$\log P_n=n\log\Gamma(n)-\sum_{k=1}^{n-1}k\log k$, gives
+\[
+ \log P_n=\frac{n^2}{2}\log n-\frac{3n^2}{4}
+            +\frac n2\log(2\pi)+O(\log n).
+\]
+Substitution in \eqref{general_eq_exponential_upper} yields
+\[
+ \log\widehat U_n=cn^2+\frac n2\log n
+                      +\frac n2\log\pi+O(\log n).
+\]
+The exact ratio of the upper and lower bounds is
+\[
+ \frac{\widehat U_n}{L_n}
+ =e^NN^{-N}\frac{(N+n-2)!}{n!(n-2)!}.
+\]
+Stirling gives the logarithm of this ratio as
+$(2-\log2)n+O(\log n)$, proving the assertion.
+\end{proof}
+
+\section{Global geometry and monotonicity across point counts}
+\label{sec:deletion-radius}
+
+The exact six-point value can be propagated to larger point counts
+without assuming their maximizing shapes. A separate weighted-polynomial
+argument confines every global maximizer to a fixed disk. These are
+finite, explicit improvements to the certification framework; neither
+asserts a closed formula for every maximum.
+
+\subsection{Subset deletion and a strictly decreasing normalized maximum}
+Write $N_j=j(j-1)/2$ and
+\[
+ d_j=\frac{j-1}{j}M_j^{1/N_j}.
+\]
+\begin{theorem}\label{thm:subset-monotonic}
+For $2\le m<n$,
+\begin{equation}\label{eq:subset-upper}
+ M_n\le
+ \left[\frac{n(m-1)}{m(n-1)}M_m^{1/N_m}\right]^{N_n}.
+\end{equation}
+Equivalently, $d_n\le d_m$. Moreover,
+\[
+ d_2=d_3=2,\qquad d_n<d_{n-1}\quad(n\ge4),\qquad
+ \lim_{n\to\infty}d_n=\frac2{\sqrt e}.
+\]
+In particular, the six-point theorem gives the explicit bound
+\begin{equation}\label{eq:six-seed-all-n}
+ M_n<\left(\frac{n}{n-1}\,5^{1/3}\right)^{N_n}
+ \qquad(n>6).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Choose a centered maximizer with moment $n$. For each $m$-element
+subset $S$, let $\mu_S=m^{-1}\sum_{i\in S}z_i$ and
+\[
+ Q_S=\sum_{i\in S}|z_i-\mu_S|^2
+     =\frac1m\sum_{\{i,j\}\subset S}|z_i-z_j|^2.
+\]
+All $Q_S$ are positive. Homogeneity and the definition of $M_m$ give
+\[
+ \Delta_m(z_S)\le M_m(Q_S/m)^{N_m}.
+\]
+Each pair occurs in exactly $\binom{n-2}{m-2}$ subsets, while
+centering gives $\sum_{i<j}|z_i-z_j|^2=n^2$. Therefore
+\[
+ \prod_{|S|=m}\Delta_m(z_S)
+   =\Delta_n(z)^{\binom{n-2}{m-2}},\qquad
+ \frac1{\binom nm}\sum_{|S|=m}Q_S
+   =\frac{n(m-1)}{n-1}.
+\]
+Apply the arithmetic--geometric mean inequality to $Q_S/m$ and
+use $\binom nm N_m=\binom{n-2}{m-2}N_n$. This proves
+\eqref{eq:subset-upper} and monotonicity.
+
+For strictness take $m=n-1$ and suppose equality holds. Equality
+in the arithmetic--geometric mean implies all deleted moments are
+equal. Since
+\[
+ Q_{\{1,\ldots,n\}\setminus\{i\}}
+  =n-\frac n{n-1}|z_i|^2,
+\]
+we have $|z_i|^2=1$ for every $i$. Every deleted subset must also
+be a global maximizer after centering and scaling. Its centered
+coordinates are $v_j=z_j+z_i/(n-1)$, its moment is
+$n(n-2)/(n-1)$, and its force constant is
+$\kappa=(n-1)^2/(2n)$. Subtract its stationary force equation from
+the original one, whose constant is $(n-1)/2$. For every $i\ne j$
+this gives
+\[
+ \frac1{z_j-z_i}
+ =\frac{n-1}{2n}(\overline z_j-\overline z_i),\qquad
+ |z_j-z_i|^2=\frac{2n}{n-1}.
+\]
+Four distinct equidistant points cannot lie in the real plane:
+after translating one to zero, the Gram matrix of the other three
+would have diagonal $a$ and off-diagonal $a/2$ for $a>0$, hence rank
+three. This contradicts planarity when $n\ge4$. Thus every such
+step is strict. The exact values $M_2=4,M_3=27$ give $d_2=d_3=2$.
+Finally Corollary~\ref{general_cor_asymptotic} gives
+$\log d_n\to2c=\log2-1/2$. The six-point value gives
+$d_6=5^{1/3}$, proving \eqref{eq:six-seed-all-n}.
+\end{proof}
+
+There is also a shape-sensitive version of the one-point deletion bound.
+For every centered moment-$n$ configuration with distinct points and
+$n\ge3$, writing $t_i=|z_i|^2$, one has
+\begin{equation}\label{eq:deletion-variance}
+\begin{split}
+ \log\Delta_n(z)\le{}&\frac n{n-2}\log M_{n-1}
+  +N_n\log\frac{n(n-2)}{(n-1)^2}\\
+ &-\frac1{4(n-1)}\sum_i(t_i-1)^2.
+\end{split}
+\end{equation}
+Indeed $x_i=Q_{-i}/(n-1)=n/(n-1)-nt_i/(n-1)^2$
+lies in $(0,n/(n-1)]$, where $(\log x)''\le-(n-1)^2/n^2$.
+Taylor's inequality around the common mean
+$n(n-2)/(n-1)^2$, followed by summation and the deletion product
+identity, gives precisely the displayed variance penalty. The
+resulting recursive bound is useful at modest point counts and can
+be intersected with the Hadamard, moment and spectral bounds. Its
+six-point seed alone is weaker at the leading asymptotic scale.
+
+\subsection{A fixed disk containing every global maximizer}
+\begin{theorem}\label{thm:global-fixed-disk}
+Every global maximizer in the original moment-$n$ normalization satisfies
+\begin{equation}\label{eq:global-fixed-radius}
+                         |z_i|^2\le2\quad(1\le i\le n).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Put $\lambda=(n-1)/2$. Homogeneity shows that a moment-$n$
+maximizer also maximizes
+\[
+ \Phi(z)=\Delta_n(z)\exp\left(-\lambda\sum_i|z_i|^2\right)
+\]
+over the whole space: at a fixed nonzero shape with moment $Q$,
+the scale $s$ maximizes $s^{2N_n}e^{-\lambda s^2Q}$ at
+$s^2Q=N_n/\lambda=n$.
+
+Fix all coordinates except $z_i$ and put
+$p(u)=\prod_{j\ne i}(u-z_j)$, a polynomial of degree $d=n-1$.
+The remaining objective is $|p(u)|^2e^{-\lambda|u|^2}$.
+For any $R>0$, the maximum-modulus principle, applied to
+$p(u)/u^d$ on the exterior disk including infinity, gives
+\[
+ |p(u)|\le\left(\frac{|u|}R\right)^d
+                  \max_{|v|=R}|p(v)|\qquad(|u|\ge R).
+\]
+Equivalently, apply the usual disk principle to the polynomial
+$v^dp(1/v)$. Choose $R^2=d/\lambda=2$. For $r>R$,
+\[
+ \left(\frac rR\right)^{2d}e^{-\lambda(r^2-R^2)}<1,
+\]
+because its logarithmic derivative is $2d/r-2\lambda r<0$.
+Thus an exterior point has a strictly smaller weighted polynomial
+value than some point on $|v|=R$. It cannot be a global maximizer.
+This proves \eqref{eq:global-fixed-radius}.
+\end{proof}
+
+The fixed-disk argument uses global optimality and must not be applied
+indiscriminately to all stationary shapes or local maxima. The radial
+stability cuts proved earlier have the broader local scope.
+
+\subsection{A smaller compact trace model}
+The fixed disk also strengthens the coefficient model. In force-$1$
+coordinates $w_i=\sqrt{(n-1)/2}\,z_i$, it says $|w_i|^2\le n-1$.
+Put $a_n=\lceil\sqrt{n-1}\rceil$ and
+\[
+ \mu'_n=\frac1{n(1+a_n)^{2(n-1)}},\qquad
+ C'_n=na_n(1+a_n)^{n-1}.
+\]
+Every global maximum satisfies the rational closed bounds
+\begin{equation}\label{eq:smaller-coefficient-bounds}
+ H\succeq\mu'_n I,\qquad
+ |c_k|^2\le\binom nk^2(n-1)^k,\qquad
+ |r_\ell|^2\le(C'_n)^2.
+\end{equation}
+To see this, each Lagrange polynomial has coefficient $\ell^1$ norm
+at most $(1+a_n)^{n-1}$: every root has modulus at most $a_n$,
+and all separating factors have modulus greater than one by
+Lemma~\ref{lem:global-separation} after force rescaling. Thus
+$\|V^{-1}\|_F^2\le n(1+a_n)^{2(n-1)}$ and
+$\|R\|_1\le na_n(1+a_n)^{n-1}$. The elementary symmetric functions
+give the middle bound without the integer rounding.
+
+The disk itself can be imposed without choosing roots. Extend the
+quotient traces $H_{jk}=\operatorname{Tr}(t^jR^k)$ to indices $n$
+by monic reduction, and form the localizing matrix
+\[
+ J_{jk}=(n-1)H_{jk}-H_{j+1,k+1},\qquad 0\le j,k<n.
+\]
+On a genuinely conjugate-paired configuration,
+\[
+ J=V\,\operatorname{diag}(n-1-|w_i|^2)\,V^*.
+\]
+Since $V$ is invertible, $J\succeq0$ is equivalent to the radius
+condition at every root. Replacing the bounds of
+Theorem~\ref{thm:compact-trace} by
+\eqref{eq:smaller-coefficient-bounds} and adding $J\succeq0$ gives
+a smaller compact rational semialgebraic model with exactly the
+same maximum. It retains every global maximizer and still excludes
+false conjugate pairings. For six points the positivity margin
+improves from $1/362797056$ to $1/6291456$, and the auxiliary
+coefficient bound decreases from $233280$ to $18432$.
+
+\begin{corollary}\label{cor:fixed-disk-grid}
+In the certified grid construction, the coordinate box can be reduced to
+\[
+ |a|,|b|\le R_q,\qquad
+ R_q=\min\{R\in\mathbb Z_{\ge0}:R^2\ge2q^2\}.
+\]
+The complete grid maximum $B_n^{\rm disk}(q)$ still satisfies
+\[
+ B_n^{\rm disk}(q)\le M_n
+ \le B_n^{\rm disk}(q)e^{E_n(q)}\qquad(q\ge n),
+\]
+with the same exponent as Theorem~\ref{thm:grid-sharper}. For logarithmic
+accuracy $0<\varepsilon\le1$, choosing
+$q=\lceil n/\sqrt\varepsilon\rceil$ gives coordinate height
+$O(n/\sqrt\varepsilon)$. For $n=6,q=10$, the box radius is $15$.
+\end{corollary}
+\begin{proof}
+Rounding $qz_i$ of a global maximizer lies in this box by
+\eqref{eq:global-fixed-radius}. Every subsequent centering, normalization,
+distinctness and Taylor estimate is unchanged. Completeness of the
+enumeration is still essential; the smaller box alone does not make
+high-dimensional exhaustive enumeration inexpensive.
+\end{proof}
+
+\section{A deterministic construction for every number of points}
+\label{general_sec_lattice}
+The uniform disk limit is a classical feature of quadratic weighted
+Fekete problems; see \cite{AOC,SS}. The following construction supplies
+explicit points and exact finite products. Its optimality statement
+concerns the leading $n^2$ scale, not the maximum at each finite $n$.
+
+\begin{theorem}\label{general_thm_lattice}
+Order the Gaussian integers $v\in\mathbb Z+i\mathbb Z$ by increasing
+$|v|^2$, breaking ties lexicographically by $(\Re v,\Im v)$, and take
+the first $n$ distinct points $v_1,\ldots,v_n$. Define
+\begin{equation}\label{general_eq_lattice}
+ \mu_v=\frac1n\sum_jv_j,\quad
+ D_n=n\sum_j|v_j|^2-\left|\sum_jv_j\right|^2,\quad
+ w_j=\frac{n(v_j-\mu_v)}{\sqrt{D_n}}.
+\end{equation}
+Then $D_n$ is a positive integer, $\sum_jw_j=0$,
+$\sum_j|w_j|^2=n$, and
+\begin{equation}\label{general_eq_lattice_product}
+ \Delta_n(w)=\left(\frac{n^2}{D_n}\right)^N
+                 \prod_{i<j}|v_i-v_j|^2\in\Q_{>0}.
+\end{equation}
+Furthermore,
+\begin{equation}\label{general_eq_lattice_asymptotic}
+ \lim_{n\to\infty}\frac{\log\Delta_n(w)}{n^2}=c,\qquad
+ \log M_n-\log\Delta_n(w)=o(n^2).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Centering and scaling give the finite identities. Positivity of $D_n$
+follows because the points are distinct and $n\ge2$.
+Put $R_n=\max_{j\le n}|v_j|$ and $a_n=n/\sqrt{D_n}$.
+Covering lattice points by unit squares proves
+\[
+ \#\{v:|v|\le R\}=\pi R^2+O(R+1),\qquad
+ \sum_{|v|\le R}|v|^2=\frac\pi2R^4+O(R^3+1).
+\]
+Only $O(R_n+1)$ boundary points can be omitted when a radius shell
+is cut by the tie rule. The full disk has zero coordinate sum, so
+$\sum_{j\le n}v_j=O(R_n^2+1)$ and $\mu_v=O(1)$.
+Consequently
+\[
+ R_n^2\sim\frac n\pi,\quad
+ \sum_j|v_j-\mu_v|^2\sim\frac{n^2}{2\pi},\quad
+ a_n^2\sim\frac{2\pi}{n},\quad a_nR_n\longrightarrow\sqrt2.
+\]
+Riemann sums over unit squares show that
+$\mu_n=n^{-1}\sum_j\delta_{w_j}$ converges weakly to the uniform
+probability measure $\mu$ on $|z|\le\sqrt2$.
+Their supports lie in a common bounded disk for large $n$.
+
+The minimum pair distance is at least $a_n$.
+Packing lattice squares gives, for $r\ge a_n$, at most
+$C(r/a_n)^2\le C'nr^2$ other points within distance $r$ of each point.
+Thus the ordered-pair count $H_n(r)$ is zero for $r<a_n$ and
+satisfies $H_n(r)\le C'n^2r^2$ for $r\ge a_n$.
+For $0<\varepsilon<1$, layer integration gives
+\begin{align*}
+ \frac1{n^2}\sum_{\substack{i\ne j\\|w_i-w_j|<\varepsilon}}
+       -\log|w_i-w_j|
+ &=\frac{H_n(\varepsilon)}{n^2}|\log\varepsilon|
+       +\frac1{n^2}\int_0^\varepsilon\frac{H_n(r)}r\,dr\\
+ &\le C'\varepsilon^2
+             \left(|\log\varepsilon|+\frac12\right).
+\end{align*}
+For fixed $\varepsilon$, the truncated kernel
+$\max\{\log|z-u|,\log\varepsilon\}$ is continuous on the common
+compact support. Weak convergence gives convergence of its double
+integrals, and its diagonal empirical contribution is
+$\log\varepsilon/n$.
+First let $n\to\infty$ and then $\varepsilon\downarrow0$ to obtain
+\[
+ \frac{\log\Delta_n(w)}{n^2}
+ =\frac1{n^2}\sum_{i\ne j}\log|w_i-w_j|
+ \longrightarrow\iint\log|z-u|\,d\mu(z)d\mu(u).
+\]
+For $R=\sqrt2$, the angular mean identity
+\[
+ \frac1{2\pi}\int_0^{2\pi}\log|r-se^{i\theta}|\,d\theta
+ =\log\max\{r,s\}
+\]
+gives the disk potential
+$\log R-\tfrac12+|z|^2/(2R^2)$ for $|z|\le R$.
+Since $\int|z|^2d\mu=R^2/2$, its average is $\log R-1/4=c$.
+This proves the limit. The remaining assertion follows from
+Corollary~\ref{general_cor_asymptotic} and $\Delta_n(w)\le M_n$.
+\end{proof}
+
+\section{Exact multi-ring lower-bound constructions}
+Let $\delta\in\{0,1\}$ indicate the presence of the origin.
+Ring $a$ consists of $m_a\ge2$ points
+$r_a\exp(i(\theta_a+2\pi j/m_a))$, $0\le j<m_a$, with $r_a>0$.
+Require
+\[
+ n=\delta+\sum_a m_a,\qquad \sum_a m_ar_a^2=n.
+\]
+For two rings define $g_{ab}=\gcd(m_a,m_b)$ and
+$L_{ab}=\operatorname{lcm}(m_a,m_b)$.
+
+\begin{proposition}\label{prop:rings}
+The exact product of this configuration is
+\begin{equation}\label{eq:rings}
+\begin{split}
+ \Delta_n={}&\prod_a m_a^{m_a}
+       r_a^{m_a(m_a-1)+2\delta m_a}\\
+ &\quad\cdot\prod_{a<b}
+ \left|r_a^{L_{ab}}e^{iL_{ab}\theta_a}
+       -r_b^{L_{ab}}e^{iL_{ab}\theta_b}\right|^{2g_{ab}}.
+\end{split}
+\end{equation}
+Consequently this expression is a lower bound for $M_n$.
+\end{proposition}
+\begin{proof}
+Each ring is the root set of
+$z^{m_a}-r_a^{m_a}e^{im_a\theta_a}$, whose absolute discriminant
+is $m_a^{m_a}r_a^{m_a(m_a-1)}$.
+The absolute resultant of $z^m-A$ and $z^k-B$ is
+$|A^{k/g}-B^{m/g}|^g$, where $g=\gcd(m,k)$:
+the values of $z^k$ on the first root set traverse the roots of
+$u^{m/g}-A^{k/g}$, each with multiplicity $g$.
+Squaring this resultant gives every cross-ring squared distance.
+Each origin-to-ring product contributes $r_a^{2m_a}$.
+Multiplying proves the formula, also when cross-ring collisions make
+both sides zero.
+\end{proof}
+
+With two rings of populations $a,b$ and $\delta$ origin points,
+write $g=\gcd(a,b)$, $L=ab/g$, and $x=r^2/s^2$.
+The optimal relative phase within this family is
+$\theta_2-\theta_1=\pi/L$ modulo $2\pi/L$.
+Set
+$A=a(a-1)/2+\delta a$ and $B=b(b-1)/2+\delta b$.
+Then $N=A+B+ab$, $s^2=n/(ax+b)$, and the family maximum reduces to
+\begin{equation}\label{eq:two-rings}
+ \max_{x>0} a^ab^bn^N
+       \frac{x^A(1+x^{L/2})^{2g}}{(ax+b)^N}.
+\end{equation}
+The interior critical equation is
+\begin{equation}\label{eq:ring-critical}
+ Ab-a(B+ab)x+b(A+ab)x^{L/2}-aBx^{L/2+1}=0.
+\end{equation}
+It follows by logarithmic differentiation and
+$gL=ab$. For odd $L$, substituting $x=\rho^2$ makes this a polynomial
+with integer exponents, so exact root isolation and value comparison
+can certify the optimum within the chosen family.
+For three or more rings, the relative phases must be optimized together;
+pairwise opposite phases need not be simultaneously possible.
+Family optimization alone does not prove unrestricted optimality.
+
+\subsection{A strict ten-point improvement on the central polygon}
+The center-plus-$(n-1)$-gon value is
+\[
+ C_n=(n-1)^{n-1}\left(\frac n{n-1}\right)^N.
+\]
+For $n=10$, consider instead the roots of
+\begin{equation}\label{eq:ten-polynomial}
+ (z^2-u)(z^8+v^4),\qquad u=\frac18,\quad v=\frac{39}{32}.
+\end{equation}
+They are $\pm\sqrt u$ and the vertices of a regular octagon of
+radius $\sqrt v$, rotated by $\pi/8$.
+They satisfy $2u+8v=10$ and have product
+\begin{equation}\label{eq:ten-product}
+ D_{10}=4u\,8^8v^{28}(u^4+v^4)^4,\qquad
+ \frac{D_{10}}{C_{10}}>\frac{113}{100}>1.
+\end{equation}
+The last inequality is a rational comparison verified by the
+accompanying program. Thus the central polygon cannot be the general
+finite-$n$ answer. This two-ring example is a certified lower bound,
+and is not asserted to maximize $\Delta_{10}$.
+
+\section{An explicit rational polar construction for every point count}
+\label{sec:polar-all-n}
+
+Put $c_*=(\log2)/2-1/4$ and
+$\gamma_{\rm pol}=(\log6)/2-1/2$.
+The following finite product is an attainable lower bound for every
+$n$; it does not assert the unrestricted maximizing geometry.
+
+\begin{theorem}\label{thm:polar-all-n}
+For $n\ge2$, let $k$ be the largest nonnegative integer with
+$n_0=3k(k+1)\le n$, and put $r=n-n_0$.
+For each $1\le j\le k$, take a regular $6j$-gon centered at zero
+with squared radius $6j^2/n$ and phase zero.  If $r>0$, add an
+outer regular $r$-gon of squared radius $(n+n_0)/n$ and phase zero;
+for $r=1$ this means one point on the positive real axis.
+These points have quadratic moment $n$ and no collisions.
+
+Write $(m_a,b_a)$ for the population and squared-radius numerator
+of each ring, namely $(6j,6j^2)$ and, if present, $(r,n+n_0)$.
+For each pair put $g_{ab}=\gcd(m_a,m_b)$ and
+$L_{ab}=m_am_b/g_{ab}$.  All $L_{ab}$ are even.  Then
+\begin{equation}\label{eq:polar-rational-all-n}
+ D_n=\frac1{n^N}
+ \prod_a m_a^{m_a}b_a^{m_a(m_a-1)/2}
+ \prod_{a<b}(b_b^{L_{ab}/2}-b_a^{L_{ab}/2})^{2g_{ab}}
+ \le M_n,\qquad N=\frac{n(n-1)}2.
+\end{equation}
+In particular $D_n$ is an explicit positive rational number.
+Moreover, as $n\to\infty$,
+\begin{equation}\label{eq:polar-three-term}
+ \log D_n=c_*n^2+\frac n2\log n+\gamma_{\rm pol}n+O(\sqrt n).
+\end{equation}
+For the subsequence $n=3k(k+1)$ the remainder improves to
+$O(\log n)$.
+The construction strictly improves the central polygon for every
+$n\ge13$:
+\[
+ D_n>C_n=(n-1)^{n-1}\left(\frac n{n-1}\right)^N.
+\]
+At $n=18$ it gives the particularly simple bound
+\begin{equation}\label{eq:polar-eighteen}
+ M_{18}\ge\frac{2^{162}455^{12}}{3^{111}}>970\,C_{18}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The population sum is $n$.  Using
+$\sum_{j=1}^k j^3=[k(k+1)/2]^2$, the moment is
+\[
+ \frac{36}{n}\sum_{j=1}^k j^3+
+ \frac{r(n+n_0)}n
+ =\frac{n_0^2+r(2n_0+r)}n=n.
+\]
+The radii increase strictly; the outer radius, if present, is
+larger than the last inner radius.  An inner population is even,
+so every cross-ring least common multiple is even.  The existing
+resultant formula for rings therefore gives
+\eqref{eq:polar-rational-all-n}, with integral exponents and an
+integer numerator before reduction.  The one-point ring causes
+no difficulty.  If desired, centering and renormalizing the
+$r=1$ case only increases its product.
+
+We give uniform estimates that prove the asymptotic assertions.
+For arbitrary increasing ring radii $u_j=R_j^2$, let
+$p_j=m_j/n$ and $s_j=\sum_{i\le j}p_i$.
+The present radii satisfy
+\[
+ u_j=s_{j-1}+s_j,\qquad \sum_jp_ju_j=1.
+\]
+Factoring the outer radius from every cross-ring resultant gives
+the exact identity
+\begin{equation}\label{eq:polar-energy-decomposition}
+ \log D_n=n^2F+H+T,
+\end{equation}
+where
+\[
+ F=\frac12\sum_jp_ju_j\log u_j,
+ \qquad H=\sum_jm_j\log(m_j/\sqrt{u_j}),
+\]
+and
+\[
+ T=\sum_{a<b}2g_{ab}\log(1-q_{ab}),\qquad
+ q_{ab}=(u_a/u_b)^{L_{ab}/2}.
+\]
+The function $f(s)=s\log(2s)$, with $f(0)=0$, has
+$f''(s)=1/s$.  Thus $F$ is its composite midpoint sum on
+the partition $s_j$, and
+\[
+ \int_0^1f(s)\,ds=c_*.
+\]
+
+First consider $r=0$, so $n_0=3K$ with $K=k(k+1)$.
+Here $p_j=2j/K$, $u_j=2j^2/K$, and
+\[
+ F_k=\frac12\log(2/K)+\frac4{K^2}\sum_{j=1}^k j^3\log j.
+\]
+Euler--Maclaurin with the fourth-derivative remainder gives
+\begin{equation}\label{eq:polar-em-exact}
+ \sum_{j=1}^k j^3\log j
+ =\frac{K^2}{4}\log k-\frac{k^4}{16}
+  +\frac{k^2}{12}+E_k,
+ \quad
+ -\frac1{48}-\frac{\log k}{60}
+ \le E_k\le-\frac1{48}.
+\end{equation}
+Indeed, the explicit third-derivative term is
+$-(\log k)/120$, while the remainder is bounded in modulus by
+$\int_1^k(6/x)\,dx/720=(\log k)/120$.
+Writing
+\[
+ A(t)=\frac12\log(1+t)
+ -\frac{t(6+9t+2t^2)}{12(1+t)^2},
+\]
+one has $A'(t)=-t^3/[6(1+t)^3]$, hence
+$-t^4/24\le A(t)\le0$ for $0\le t\le1$.
+Substitution into \eqref{eq:polar-em-exact} yields the useful
+finite bounds
+\begin{equation}\label{eq:polar-midpoint-cost}
+ \frac{n_0}{2}-\frac34
+ \le n_0^2(c_*-F_k)
+ \le\frac{n_0}{2}+\frac34+\frac35\log k.
+\end{equation}
+Also $H=(n_0/2)\log(6n_0)$ exactly.
+
+The cross-ring correction is bounded independently of $k$.
+For inner rings $i<j$, put $d=\gcd(i,j)$ and $h=j-i$.
+Then
+\[
+ q_{ij}=(i/j)^{6ij/d}
+ \le e^{-6ih/d}\le e^{-6\max(i,h)},
+ \qquad g_{ij}=6d\le6\min(i,h).
+\]
+The first inequality uses $\log(j/i)\ge(j-i)/j$.
+Since $-\log(1-q)\le q/(1-q)$, summing by
+$t=\max(i,h)$ and using
+$\sum_{\max(i,h)=t}\min(i,h)=t^2$ proves
+\begin{equation}\label{eq:polar-cross-constant}
+ -B_6\le T\le0,\qquad
+ B_6=\frac{12e^{-6}(1+e^{-6})}{(1-e^{-6})^4}<1.
+\end{equation}
+Together with \eqref{eq:polar-midpoint-cost}, this proves the
+three-term expansion with an $O(\log n)$ remainder on the
+subsequence.
+
+For general $r>0$, the inner part of the midpoint-error integral
+is a scaling of the old partition by $a=n_0/n$.
+The affine term introduced by scaling $f(as)$ cancels in midpoint
+error.  Consequently its contribution to $n^2(c_*-F)$ is
+exactly $n_0^2(c_*-F_k)$.
+The last interval has length $p=r/n$ and left endpoint $a$.
+Its midpoint error lies between zero and $p^3/(24a)$.
+Thus, since $r<6(k+1)$,
+\[
+ 0\le n^2E_{\rm last}\le\frac{r^3}{24n_0}
+ <\frac{3(k+1)^2}{k}\le12k.
+\]
+The angular term now satisfies
+\[
+ H=\frac n2\log(6n)
+ +r\log\frac r{\sqrt{6(n+n_0)}}.
+\]
+The last term lies between $-6(k+2)/e$ and zero.
+For the lower bound use $x\log x\ge-1/e$ and
+$\sqrt{6(n+n_0)}\le6(k+2)$.
+For the upper bound, the factorization
+\[
+ r^2-6(n+n_0)=(r-6(k+1))(r+6k)<0
+\]
+shows $r<\sqrt{6(n+n_0)}$.
+
+For cross terms between inner ring $j$ and the extra ring, put
+$U=\sqrt{(n+n_0)/6}$.  Then
+$k+2/5\le U<k+1$ and $L\ge6j$.
+For $j<U/2$, $q\le2^{-6j}$.
+For $j\ge U/2$,
+$q\le\exp[-3(k-j+2/5)]$.
+With $2g\le12j$, their total logarithmic correction is therefore
+at least $-Ak-B$, where
+\[
+ A=\frac{12e^{-6/5}}
+ {(1-e^{-6/5})(1-e^{-3})}<6,
+ \qquad
+ B=\frac{12/64}{(1-1/64)^3}<1.
+\]
+Combining all estimates gives, for $n\ge6$,
+\begin{equation}\label{eq:polar-uniform-remainder}
+ -21k-\log(k+1)-9
+ \le\log D_n-c_*n^2-\frac n2\log n-\gamma_{\rm pol}n
+ \le3k+4.
+\end{equation}
+Since $k=O(\sqrt n)$, this proves
+\eqref{eq:polar-three-term} for every point count.
+
+Finally $c_*>9/100$, $\gamma_{\rm pol}>7/20$, and
+$\log C_n\le n\log n+n/2$.
+For $n\ge80$, use $\log n\le n/8$,
+$k\le n/12$, and $\log(k+1)\le k$ in
+\eqref{eq:polar-uniform-remainder} to obtain
+\[
+ \log(D_n/C_n)>
+ \frac{11n^2}{400}-2n-9>0.
+\]
+The last polynomial is positive and increasing for $n\ge80$.
+The remaining cases $13\le n<80$ are exact rational comparisons
+in \texttt{all\_n\_rings\_verify.py}; the verifier also checks
+all rational bounds on constants used above.
+For $n=18$, the two radii squared are $1/3$ and $4/3$,
+with populations six and twelve, giving
+\eqref{eq:polar-eighteen} by the resultant formula.
+\end{proof}
+
+\subsection{Why the sixfold population slope is selected}
+For an integer $c\ge2$, take $n=ck(k+1)/2$, populations $cj$,
+and radii $j\sqrt{2/[k(k+1)]}$.
+The same calculation yields
+\[
+ \log D_{c,k}=c_*n^2+\frac n2\log n+
+ \left(\frac12\log c-\frac c{12}\right)n+O_c(\log n).
+\]
+The cross correction is bounded by
+$2ce^{-c}(1+e^{-c})/(1-e^{-c})^4$.
+The function $(\log c)/2-c/12$ has its unique maximum at $c=6$.
+This selects sixfold population growth within this explicit
+construction family, without proving that the family itself is
+globally optimal.
+
+\subsection{An exact obstruction for two rings with unequal populations}
+\begin{proposition}\label{prop:two-ring-population-obstruction}
+A physical stationary configuration consisting of exactly two
+concentric regular polygons of positive radii, with populations
+$a,b\ge2$ and optionally their common center, must have $a=b$.
+For $a\ne b$, even the maximum over all radii and relative phases
+within this two-ring family is strictly smaller than $M_{a+b+\delta}$.
+\end{proposition}
+
+\begin{proof}
+Write the polygons as the roots of $z^a-A$ and $z^b-B$,
+where $A,B\ne0$, and assume no collisions.
+At a point $z$ on the second polygon, multiply the force by $z$:
+\[
+ z\sum_{w\ne z}\frac1{z-w}
+ =\frac{b-1}{2}+\delta+\frac{az^a}{z^a-A}.
+\]
+Stationarity makes the left side equal to
+$\kappa|z|^2$, a constant on this polygon.
+The map $t\mapsto at/(t-A)$ is injective away from its pole,
+so $z^a$ must be constant on all $b$ points.  Thus $b$ divides $a$.
+Interchanging the polygons gives $a$ divides $b$, proving $a=b$.
+The family maximum is attained on the compact moment surface;
+a positive maximum has neither collapsed rings nor collisions.
+If it equalled the unrestricted maximum, its configuration would
+be stationary, contradicting the divisibility argument.
+\end{proof}
+
+Consequently the eighteen-point construction in
+\eqref{eq:polar-eighteen} satisfies the stronger strict inequality
+\[
+ M_{18}>D_{18}>970C_{18}.
+\]
+The existing ten-point construction with populations two and eight
+is likewise strictly submaximal, even after complete optimization
+within that two-ring family.  This obstruction is specific to
+two nonzero rings; no analogous assertion is made here for
+three or more rings, where additional forces can interact.
+
+\section{A quantitative obstruction to every fixed number of regular rings}
+\label{sec:fixed-ring-obstruction}
+
+\begin{proposition}\label{prop:fixed-ring-gap}
+Let $R_{n,K}$ be the supremum of the discriminant product over
+configurations consisting of at most $K$ concentric regular
+polygons and optionally the origin, with quadratic moment $n$.
+For every fixed $K$,
+\[
+ \limsup_{n\to\infty}\frac{\log R_{n,K}}{n^2}
+ \le c_*-\frac1{24K^2}<c_*.
+\]
+Hence no fixed-$K$ regular-ring formula can supply the general
+global maximum; its ratio to $M_n$ decays exponentially in $n^2$.
+\end{proposition}
+
+\begin{proof}
+Order the radii increasingly.  Bounding a cross resultant by
+twice its outer-radius power bounds the entire product by
+$2^{2\sum_{a<b}g_{ab}}$ times its radial outer-power expression.
+For fixed $K$ this factor contributes only $O_K(n)$ to its
+logarithm.  The angular factors contribute at most $n\log n$.
+For populations $m_j$ and an optional origin indicator $\delta$,
+the radial exponent is
+\[
+ W_j=\frac{m_j}{2}
+   \bigl(2\sum_{i<j}m_i+m_j-1+2\delta\bigr),
+ \qquad \sum_jW_j=N.
+\]
+Under $\sum_jm_ju_j=n$, its optimum has
+\[
+ u_j=\frac{nW_j}{Nm_j}
+ =\frac{2\sum_{i<j}m_i+m_j-1+2\delta}{n-1}.
+\]
+Taking a subsequence of population proportions gives a partition
+$0=s_0\le s_1\le\cdots\le s_K=1$, allowing zero intervals.
+After division by $n^2$, the radial logarithm tends to
+\[
+ F=\sum_jp_j f\bigl((s_{j-1}+s_j)/2\bigr),
+ \qquad p_j=s_j-s_{j-1},\quad f(s)=s\log(2s).
+\]
+This remains valid at zero intervals by continuity of
+$s\log s$; the finite-$n$ corrections are $o(n^2)$.
+Because $f(s)-s^2/2$ is convex on $[0,1]$, Jensen's inequality
+on each interval gives
+\[
+ \int_{s_{j-1}}^{s_j}f(s)\,ds
+ -p_jf\bigl((s_{j-1}+s_j)/2\bigr)
+ \ge\frac{p_j^3}{24}.
+\]
+Summing and using $\sum_jp_j^3\ge K^{-2}$ proves
+$F\le c_*-1/(24K^2)$.
+The already established global asymptotic
+$\log M_n/n^2\to c_*$ finishes the comparison.
+\end{proof}
+
+For arbitrary global maximizing configurations, the number of
+distinct radii about their centroid also tends to infinity,
+without an angular regularity assumption.
+Indeed, scale a maximizer by
+$\sqrt{(n-1)/(2n)}$.  The resulting points maximize the weighted
+Vandermonde for the Ginibre potential $Q(z)=|z|^2$.
+The classical weighted Fekete equidistribution theorem recalled
+in Section~1.2 of Ameur--Ortega-Cerd\`a~\cite{AOC}
+(Theorem~1.1 of their arXiv version) implies
+convergence back in the original scale to uniform area measure
+on the disk of radius $\sqrt2$.
+Their squared-radius distributions therefore converge to the
+uniform law on $[0,2]$.
+Probability measures supported on at most $K$ radii in a fixed
+compact interval form a weakly closed set, so bounded $K$ would
+contradict this continuous limit.  The explicit gap above is
+stronger within the regular-ring family.
+
+\section{Exact six-point subclasses and a majorant obstruction}
+Write $C_6=6^{15}/5^{10}$, the value of the origin together with a
+regular pentagon of radius $\sqrt{6/5}$. These subclass results
+complement Theorem~\ref{thm:six-global}.
+The unrestricted six-point value is now certified by the exhaustive
+algebraic argument in Section~\ref{sec:six-global-exact}.
+
+\begin{proposition}[Configurations containing the origin]
+If $\sum_{i=1}^6|z_i|^2=6$ and some $z_i=0$, then $\Delta_6\le C_6$.
+Equality holds precisely for the origin and a regular pentagon of
+radius $\sqrt{6/5}$, up to rotation and permutation.
+\end{proposition}
+\begin{proof}
+Assume $z_6=0$. Apply the five-point theorem of Wang \cite{Wang} to
+$\sqrt{5/6}(z_1,\ldots,z_5)$, and arithmetic--geometric mean to
+the five squared radii. Homogeneity gives
+\[
+ \Delta_6=\Delta_5(z_1,\ldots,z_5)\prod_{i=1}^5|z_i|^2
+ \le5^5(6/5)^{10}(6/5)^5=C_6.
+\]
+The equality conditions give exactly the asserted configuration.
+\end{proof}
+
+\begin{proposition}[Two concentric equilateral triangles]
+Among configurations consisting of two equilateral triangles centered
+at the origin with $\sum_i|z_i|^2=6$, the largest product is $6^6$,
+attained precisely by a unit regular hexagon.
+\end{proposition}
+\begin{proof}
+Let $a,b\ge0$ be the squared radii, so $a+b=2$.
+If $ab=0$ there are collisions. Otherwise the ring discriminants are
+$3^3a^3$ and $3^3b^3$. Their resultant gives the cross-distance product
+$|a^{3/2}-b^{3/2}e^{3i\phi}|^6$, where $\phi$ is the relative rotation.
+Thus, with $p=\sqrt{ab}\in(0,1]$,
+\[
+ \Delta_6\le3^6(ab)^3(a^{3/2}+b^{3/2})^6
+ =3^6\{8p^2-6p^4+2p^5\}^3.
+\]
+The derivative of the expression in braces is
+$2p(8-12p^2+5p^3)>0$: the last factor decreases on $[0,1]$
+and equals $1$ at $p=1$. Its maximum is $4$, hence
+$\Delta_6\le3^6\cdot4^3=6^6$.
+Equality requires $a=b=1$ and $3\phi=\pi$ modulo $2\pi$,
+giving a regular hexagon. Finally $6^6<C_6$ because
+$C_6/6^6=6^9/5^{10}>1$.
+\end{proof}
+
+\subsection{Hermite majorants adapted to a candidate}
+Suppose a candidate has $r$ distinct positive squared distances
+$a_1,\ldots,a_r$. Let $H$ be the Hermite polynomial of degree at
+most $2r-1$ satisfying $H(a_j)=\log a_j$ and $H'(a_j)=1/a_j$.
+Then
+\[
+ \log x\le H(x)\quad(x>0),\qquad
+ \log\Delta_n\le\sum_{i<j}H(|z_i-z_j|^2).
+\]
+The interpolation remainder is a nonpositive multiple of
+$P(x)=\prod_j(x-a_j)^2$, since
+$(\log x)^{(2r)}=-(2r-1)!/x^{2r}<0$.
+The sum of $H$ is a finite combination of distance moments;
+stationary identities and second-order Gram matrices supply
+necessary constraints on those moments.
+
+If an upper endpoint $R>\max_j a_j$ is available, set
+$\kappa_R=(H(R)-\log R)/P(R)>0$.
+Adding the interpolation node $R$ gives
+$\log x\le H(x)-\kappa_RP(x)$ for $0<x\le R$:
+the next derivative is positive and the remainder has the sign of
+$P(x)(x-R)$. Any verified $0<k\le\kappa_R$ also gives a valid majorant.
+
+For the central pentagon the nodes are
+\[
+ a_1=6/5,\qquad
+ a_2=3(5-\sqrt5)/5,\qquad a_3=3(5+\sqrt5)/5,
+\]
+each occurring five times.
+A regular hexagon has squared-distance multiplicities $6,6,3$ at
+$1,3,4$, respectively. The exact interval check
+\texttt{verify\_hermite.py} shows that its degree-five majorant satisfies
+\[
+ \frac2{25}<6H(1)+6H(3)+3H(4)-\log C_6<\frac{83}{1000}.
+\]
+Even the maximal interpolation correction at $R=15/2$ leaves
+this gap greater than $3/100$.
+Thus this majorant alone is insufficient. The separate certified
+comparison in Section~\ref{sec:six-global-exact} supplies the
+unrestricted optimum.
+
+\section{Local certificates and explicit improving perturbations}
+\label{sec:local-certificates}
+The spectral stability of polygonal vortex equilibria has a substantial
+classical literature; see Cabral--Schmidt \cite{CS}.
+We give direct constrained-discriminant calculations, with explicit
+Taylor bounds and an exact treatment of a degenerate ten-point case.
+We make no claim of priority for the polygonal stability thresholds.
+
+\subsection{The complete central-polygon spectrum}
+Write $n=m+1$, $m\ge4$, $r^2=n/m$, $\omega=e^{2\pi i/m}$, and
+\[
+ z^*=(0,r,r\omega,\ldots,r\omega^{m-1}),\qquad \lambda=m/2.
+\]
+The root polynomial $z(z^m-r^m)$ or a geometric sum verifies
+\[
+ \sum_{j\ne i}\frac1{z_i^*-z_j^*}=\lambda\overline{z_i^*}.
+\]
+Define the complex symmetric matrix
+\[
+ B_{ij}=-\frac1{(z_i^*-z_j^*)^2}\quad(i\ne j),\qquad
+ B_{ii}=\sum_{j\ne i}\frac1{(z_i^*-z_j^*)^2}.
+\]
+Let $\langle x,y\rangle=\sum_i\overline{x_i}y_i$, and put
+\[
+ E=\{h\in\C^n:\ \sum_i h_i=0,\ \langle z^*,h\rangle=0\}.
+\]
+This is a local slice for the zero-centroid sphere modulo rotation.
+Its normalized chart is
+\begin{equation}\label{eq:local-chart}
+ z(h)=\frac{\sqrt n\,(z^*+h)}{\sqrt{n+\|h\|^2}}.
+\end{equation}
+The Taylor expansion of
+$F(h)=\log\Delta_n(z(h))-\log C_n$ has quadratic term
+\begin{equation}\label{eq:quadratic-slice}
+ Q_2(h)=-\Re(h^{\mathsf T}Bh)-\lambda\|h\|^2.
+\end{equation}
+Indeed, expand each $2\Re\log(1+(h_i-h_j)/(z_i^*-z_j^*))$
+and subtract $N\log(1+\|h\|^2/n)$; the linear term vanishes
+by stationarity and $h\in E$.
+
+Set
+\[
+ f_k=\frac1{\sqrt m}(0,1,\omega^k,\ldots,\omega^{(m-1)k}),
+ \quad 1\le k<m,\qquad
+ u=\frac{(-m,1,\ldots,1)}{\sqrt{m(m+1)}}.
+\]
+Together with $\mathbf1/\sqrt n$, these form a Hermitian orthonormal
+basis. Direct divided-difference expansion and the identity
+$\sum_{j=0}^{m-1}\omega^{jk}=0$ for $m\nmid k$ give
+\begin{align}
+ B\mathbf1&=0,& Bf_1&=\lambda f_{m-1},\notag\\
+ Bf_2&=\gamma u,& Bu&=\gamma f_{m-2},\label{eq:central-spectrum-map}\\
+ Bf_k&=c_kf_{k-2}\quad(3\le k<m),&
+ \gamma&=\frac m{\sqrt{m+1}},\quad
+ c_k=\frac{1-(k-2)(m-k)/2}{r^2}.\notag
+\end{align}
+For example, on ring coordinates and $3\le k<m$, the expansion is
+\[
+ (B(z^*)^{\circ k})_i
+ =\bigl(1-(k-2)(m-k)/2\bigr)(z_i^*)^{k-2};
+\]
+the center coordinate is zero, since its corresponding power sum
+vanishes. For $k=2$, the center coordinate supplies the vector $u$.
+The output vectors in \eqref{eq:central-spectrum-map} are distinct
+orthonormal basis vectors, so the singular values of $B$ are
+\begin{equation}\label{eq:central-singular-values}
+ 0,\quad\lambda,\quad\gamma,\quad\gamma,
+ \quad |c_k|\ (3\le k<m).
+\end{equation}
+On $E$ the singular value $\lambda$ associated with $f_1$
+has been removed. Since
+\[
+ \max_{3\le k<m}(k-2)(m-k)
+ =\left\lfloor\frac{(m-2)^2}{4}\right\rfloor,
+\]
+the nontrivial singular values are strictly below $\lambda$
+for $4\le m\le8$. Thus the central polygon is a strict local
+maximum modulo rotations for $5\le n\le9$.
+For $m=9$, $c_5=c_6=-\lambda$; the remaining singular values on $E$
+are strictly smaller. For $m\ge10$, some $|c_k|>\lambda$.
+An explicit improving direction for that case is given below.
+
+\subsection{An explicit six-point neighborhood certificate}
+\begin{theorem}\label{thm:six-basin}
+Take $n=6$ and $z^*$ as above. For $h\in E$ with
+$0<\|h\|\le1/25$, the chart \eqref{eq:local-chart} satisfies
+\begin{equation}\label{eq:six-basin}
+ \log\Delta_6(z(h))\le\log C_6-\frac14\|h\|^2.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For $m=5$, $c_3=c_4=0$, and the norm of $B$ restricted to $E$
+is $\gamma=5/\sqrt6$. Hence \eqref{eq:quadratic-slice} gives
+$Q_2(h)\le-\delta\|h\|^2$, where
+$\delta=5/2-5/\sqrt6>9/20$.
+The last strict inequality follows from $25/6<(41/20)^2$.
+
+Write $\rho=\|h\|$ and
+$v_{ij}=(h_i-h_j)/(z_i^*-z_j^*)$.
+The smallest squared distance at $z^*$ is $r^2=6/5$, so
+\[
+ \max_{i<j}|v_{ij}|\le\sqrt{5/3}\,\rho<\frac43\rho=:b_\rho,
+ \qquad
+ \sum_{i<j}|v_{ij}|^2\le\frac6{r^2}\rho^2=5\rho^2.
+\]
+Here the second inequality uses
+$\sum_{i<j}|h_i-h_j|^2=6\|h\|^2$ for $\sum_i h_i=0$.
+For $|v|<1$,
+\[
+ |\log(1+v)-v+v^2/2|
+ \le\frac{|v|^3}{3(1-|v|)}.
+\]
+Also $\log(1+x)\ge x-x^2/2$ for $x\ge0$.
+Applying these bounds to the exact chart product gives
+\[
+ F(h)\le-\delta\rho^2+
+ \left(\frac{10b_\rho}{3(1-b_\rho)}+\frac5{24}\rho^2\right)\rho^2.
+\]
+For $\rho\le1/25$, the coefficient in parentheses is at most
+$40/213+1/3000<1/5$. Consequently
+$F(h)<-(9/20-1/5)\rho^2=-\rho^2/4$.
+This proves the stated non-strict bound.
+\end{proof}
+
+This theorem excludes a concrete neighborhood from a search for a
+strictly better six-point competitor. It makes no comparison with
+configurations outside that neighborhood.
+
+\subsection{Ten points: a strict local maximum that is not global}
+\begin{theorem}\label{thm:ten-local-trap}
+For $n=10$, the origin plus a regular nine-gon of radius $\sqrt{10/9}$
+is a strict local maximum modulo rotations. It is not a global maximum.
+\end{theorem}
+\begin{proof}
+The failure of global optimality is already certified by
+\eqref{eq:ten-product}. We prove strict local maximality.
+Now $m=9$, $r=\sqrt{10/9}$ and $\omega=e^{2\pi i/9}$.
+The only null directions of $Q_2$ on $E$ are
+\[
+ h(a)_0=0,\qquad
+ h(a)_{j+1}=r(a\omega^{5j}+\overline a\,\omega^{6j}),
+ \qquad a\in\C.
+\]
+In fact, on the two relevant Fourier modes, writing their
+coefficients as $a,b$ gives $Q_2=-45|a-\overline b|^2$.
+Let $W\subset E$ be the real orthogonal complement of this
+two-dimensional nullspace. On $W$ write
+$Q_2(v)=-(v,Av)_{\R}$, with $A$ positive definite.
+
+For $h=h(1)$ put
+$u_{ij}=(h_i-h_j)/(z_i^*-z_j^*)$ and
+$a_i=\sum_{j\ne i}u_{ij}^2/(z_i^*-z_j^*)$.
+Finite root-of-unity sums give
+\begin{align*}
+ \sum_{i<j}u_{ij}&=0,&\sum_{i<j}u_{ij}^2&=-90,\\
+ \sum_{i<j}u_{ij}^3&=0,&\sum_{i<j}u_{ij}^4&=2970,\\
+ a_0&=-9/r,&
+ a_{j+1}&=(1-15\omega^{7j}-10\omega^{8j})/r.
+\end{align*}
+These finite identities are also checked exactly in
+$\Q(\omega)$ with $\omega^6+\omega^3+1=0$ by
+\texttt{verify\_polygon\_\allowbreak perturbations.py}.
+The first four sums can independently be obtained by expanding the
+divided differences and using
+\[
+ \sum_{i\ne j}\omega^{pi+qj}
+ =m^2\mathbf1_{m\mid p}\mathbf1_{m\mid q}
+       -m\mathbf1_{m\mid p+q}.
+\]
+
+The straight null-direction quartic term is
+$-2970/2+45\cdot2^2/2=-1395$.
+For a transverse correction $th+t^2k$, $k\in W$, the coefficient
+of $t^4$ is
+\begin{equation}\label{eq:ten-effective-quartic}
+ -1395+Q_2(k)+L(k),\qquad
+ L(k)=2\Re\sum_i a_i k_i.
+\end{equation}
+The optimizing correction is
+\[
+ (k_0)_0=-12r,\qquad
+ (k_0)_{j+1}=r(4/3-(17/3)\omega^{2j}).
+\]
+It lies in $W$. The projected real gradient of $L$ on $E$ is
+$2\overline a+18z^*$, and direct substitution in
+\eqref{eq:central-spectrum-map} gives
+$2Ak_0=2\overline a+18z^*$.
+Positive definiteness on $W$ therefore makes $k_0$ the unique maximizer
+of $Q_2(k)+L(k)$ there. Writing $k=r(-9c,c+d\omega^{2j})$ reduces the equation for the
+correction to $5c+\overline d=1$, $5d+10\overline c=-15$, hence
+$c=4/3$, $d=-17/3$. Fourier orthogonality gives
+$\|k\|^2=r^2(90c^2+9d^2)$,
+$k^TBk=180cd$, and $L(k)=180c-270d$ at this real solution.
+The exact constants are
+\[
+ \|k_0\|^2=\frac{4490}{9},\quad
+ \Re(k_0^{\mathsf T}Bk_0)=-1360,\quad
+ Q_2(k_0)=-885,\quad L(k_0)=1770.
+\]
+Thus the largest effective quartic coefficient is
+$-1395+885=-510<0$.
+
+For completeness, the negative quartic coefficient controls every
+null direction, rather than only $h(1)$.
+The cyclic relabeling combined with physical rotation that fixes
+$z^*$ acts by $a\mapsto\omega^{-4}a$ on the nullspace.
+As this phase has order nine, its invariant homogeneous cubic
+polynomial is zero and its invariant homogeneous quartic polynomial
+is a multiple of $|a|^4$.
+The implicit function theorem on $W$ gives a unique nearby transverse
+maximizer $w(a)=O(|a|^2)$ for each small $a$.
+Its reduced value is therefore
+\[
+ F(h(a)+w(a))=-510|a|^4+O(|a|^5).
+\]
+It is strictly negative for small $a\ne0$.
+Continuity preserves strict concavity in the transverse variables,
+so any other nearby transverse choice has smaller value.
+This proves strict local maximality on the normalized slice.
+Nonzero centroids strictly decrease the normalized value relative
+to their centered configuration, so the conclusion also holds on
+the full constraint, modulo rotations.
+\end{proof}
+
+This exact local trap explains why even careful local searches and
+second-order tests cannot alone certify the finite global maximum.
+
+\subsection{A certified improvement for every \texorpdfstring{$n\ge11$}{n >= 11}}
+\begin{theorem}\label{thm:all-n-improvement}
+Let $m=n-1\ge10$, $k=\lfloor(m+2)/2\rfloor$,
+$q=\lfloor(m-2)^2/4\rfloor$, and
+\[
+ b=\begin{cases}1&m\text{ even},\\2&m\text{ odd},\end{cases}
+ \qquad A_m=\frac{bm}{2}(q-m-3)>0,\qquad H=m+2.
+\]
+Choose the explicit rational step
+\[
+ t_m=\min\left\{\frac1{2H},\frac{A_m}{4NH^3}\right\}.
+\]
+Set $h_0=0$ and, on the ring,
+\[
+ h_{j+1}=\begin{cases}
+ r\omega^{kj},&m\text{ even},\\
+ r(\omega^{kj}+\omega^{(m+2-k)j}),&m\text{ odd}.
+ \end{cases}
+\]
+Then the explicit configuration
+\[
+ y_j=\frac{z_j^*+t_mh_j}{\sqrt{1+bt_m^2}}
+\]
+has zero centroid, quadratic moment $n$, distinct points, and
+\begin{equation}\label{eq:all-n-strict-gain}
+ \log\Delta_n(y)-\log C_n\ge\frac23 A_m t_m^2>0.
+\end{equation}
+Consequently $M_n>C_n$ for every $n\ge10$, using the separate
+ten-point construction when $n=10$.
+\end{theorem}
+\begin{proof}
+Fourier orthogonality gives $\sum h_j=0$,
+$\langle z^*,h\rangle=0$, and $\|h\|^2=bn$.
+For even $m$, $2k-2=m$, and \eqref{eq:central-spectrum-map} gives
+$h^{\mathsf T}Bh=m(1-q/2)$.
+For odd $m$, the two modes pair and this value is doubled.
+Thus the quadratic coefficient along the normalized direction is
+\[
+ -\Re(h^{\mathsf T}Bh)-Nb=A_m.
+\]
+To see its positivity, for even $m=2v\ge10$ one has
+$q-m-3=v^2-4v-2>0$; for odd $m=2v+1\ge11$ it is
+$(v-4)(v+1)>0$.
+
+Put $u_{ij}=(h_i-h_j)/(z_i^*-z_j^*)$.
+Each ring divided difference is a sum of $k$ unit-modulus terms,
+or two such sums with total $m+2$ terms. Center-to-ring ratios
+are bounded by $b$. Hence $|u_{ij}|\le H$.
+The chosen step gives $Ht_m\le1/2$, so every factor
+$1+t_mu_{ij}$ is nonzero.
+The logarithmic Taylor bound and $\log(1+bt^2)\le bt^2$ give
+\[
+ \log\Delta_n(y)-\log C_n
+ \ge A_mt_m^2-\frac{2NH^3t_m^3}{3(1-Ht_m)}
+ \ge A_mt_m^2-\frac43NH^3t_m^3
+ \ge\frac23 A_mt_m^2>0.
+\]
+This also verifies distinctness and proves the assertion.
+\end{proof}
+
+The gain bound is deliberately conservative. Its role is to certify
+one explicit strictly improving configuration for every point count
+in this range, rather than to approximate the unrestricted maximum.
+
+\section{Finite-point numerical candidates}
+The optional program \texttt{explore\_candidates.py} uses NumPy,
+analytic gradients, BFGS updates and an Armijo line search to minimize
+\[
+ \frac{n-1}{2}\sum_i|z_i|^2-\log\Delta_n(z).
+\]
+Its stationary scale is $\sum_i|z_i|^2=n$.
+For each $n=6,\ldots,12$, it uses 50 Gaussian random starts and
+one center-plus-polygon start, with seed 20261004.
+The table shows the largest observed logarithmic product.
+These floating-point searches do not certify global optimality.
+
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$n$ & Best observed $\log\Delta_n$ & Log gain over $C_n$\\
+\midrule
+6 & 10.7820129141 & $<10^{-12}$\\
+7 & 13.9877210917 & $<10^{-12}$\\
+8 & 17.3602500369 & $<10^{-12}$\\
+9 & 20.8757216171 & $<10^{-12}$\\
+10 & 24.7089672032 & 0.192722803\\
+11 & 28.7906758481 & 0.522765029\\
+12 & 33.1914966077 & 1.071897730\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Each best coordinate set is also rounded to Gaussian integers on
+a grid of spacing $10^{-6}$, then centered and normalized using
+\eqref{general_eq_lattice}, without any lattice-selection assumption.
+The exact product formula \eqref{general_eq_lattice_product} applies
+to any distinct Gaussian integers. The corresponding rationalized
+ten-point candidate strictly exceeds $(121/100)C_{10}$.
+Its integer coordinates, normalization denominator and exact rational
+product are saved in \texttt{numerical\_candidates.json}.
+This last comparison is an exact attainable lower bound; it does
+not convert the numerical search into a global-optimality proof.
+Gradient residuals and convergence flags are also recorded, including
+searches that did not reach the requested gradient tolerance.
+
+
+\section{Certified approximation of the global maximum}
+\label{sec:grid-global}
+A grid maximum becomes useful for the unrestricted problem only when
+its discretization error is bounded uniformly. At an actual maximum,
+stationarity cancels the first-order rounding error.
+
+\begin{lemma}\label{lem:global-separation}
+Every maximizer satisfies
+\begin{equation}\label{eq:global-separation}
+ \sum_{j\ne i}\frac1{z_i-z_j}=\lambda\overline z_i,
+ \qquad \lambda=\frac{n-1}{2},\qquad
+ |z_i-z_j|^2\ge\frac{2n}{(n-1)^2}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The multiplier follows by multiplying the stationary equations by
+$z_i$ and summing, since each pair contributes one.
+Homogeneity shows that a constrained global maximizer also maximizes
+$\log\Delta_n(z)-\lambda\sum_i|z_i|^2$ without the constraint:
+for each nonzero shape, the optimal scale has quadratic moment $n$.
+Let $B$ have off-diagonal entries $-(z_i-z_j)^{-2}$ and diagonal
+entries $\sum_{j\ne i}(z_i-z_j)^{-2}$.
+The quadratic variation is
+$-\operatorname{Re}(h^TBh)-\lambda\|h\|^2$.
+Varying the phase of $h$ gives $|h^TBh|\le\lambda\|h\|^2$;
+Takagi factorization of the complex symmetric matrix implies
+$\|B\|\le\lambda$.
+Since $B\mathbf1=0$ and $B^T=B$, projecting both coordinate vectors
+onto $\mathbf1^\perp$ gives
+\[
+ |B_{ij}|\le\lambda\left(1-\frac1n\right)
+             =\frac{(n-1)^2}{2n}.
+\]
+This proves the distance bound.
+\end{proof}
+
+For a positive integer $q$, put $R=\lceil q\sqrt n\rceil$ and consider
+all $n$-element subsets of
+\[
+ \mathcal G_{n,q}=\{a+ib:\ a,b\in\mathbb Z,\ |a|,|b|\le R\}.
+\]
+For each such subset $v=(v_1,\ldots,v_n)$, define
+\[
+ D(v)=n\sum_i|v_i|^2-\left|\sum_iv_i\right|^2,\qquad
+ z(v)_i=\frac{n(v_i-\mu_v)}{\sqrt{D(v)}},\qquad
+ \mu_v=\frac1n\sum_i v_i.
+\]
+As in the lattice construction, these points have moment $n$ and their product is
+rational. Let
+\begin{equation}\label{eq:grid-maximum}
+ B_n(q)=\max_{\substack{v\subset\mathcal G_{n,q}\\|v|=n}}
+ \left(\frac{n^2}{D(v)}\right)^N
+ \prod_{i<j}|v_i-v_j|^2.
+\end{equation}
+The maximum in this finite set can be found by integer comparisons.
+
+\begin{theorem}\label{thm:grid-global}
+For every integer $q\ge2(n-1)$, with
+$K_n=n(n-1)(2n-1)/4$, one has
+\begin{equation}\label{eq:grid-global}
+ B_n(q)\le M_n\le B_n(q)\exp(K_n/q^2).
+\end{equation}
+If also $q^2>K_n$, the entirely rational enclosure
+\begin{equation}\label{eq:grid-rational}
+ B_n(q)\le M_n\le\frac{B_n(q)}{1-K_n/q^2}
+\end{equation}
+holds. In particular, for $0<\varepsilon<1$, choosing
+$q\ge\max\{2(n-1),\sqrt{K_n/\varepsilon}\}$ constructs a configuration
+with product at least $e^{-\varepsilon}M_n$.
+\end{theorem}
+\begin{proof}
+Fix a centered global maximizer $z^*$. Round the real and imaginary
+parts of each $qz_i^*$ to nearest integers, writing $v_i/q=z_i^*+e_i$.
+Because $|z_i^*|\le\sqrt n$, this lies in the stated grid.
+Let $c=e-n^{-1}(\sum_i e_i)\mathbf1$ and $\rho^2=\|c\|^2$.
+Then
+\[
+ \rho^2\le\frac{n}{2q^2},\qquad
+ v_{ij}:=\frac{c_i-c_j}{z_i^*-z_j^*},\qquad
+ |v_{ij}|\le b:=\frac{n-1}{\sqrt n\,q}\le\frac12.
+\]
+Thus the rounded points are distinct. Since $c$ is centered,
+$\sum_{i<j}|c_i-c_j|^2=n\rho^2$, so
+\[
+ \sum_{i<j}|v_{ij}|^2\le\frac{(n-1)^2}{2}\rho^2.
+\]
+The convergent logarithm series gives
+\[
+ 2\operatorname{Re}\log(1+v)\ge
+ 2\operatorname{Re}v-\frac{|v|^2}{1-b}\quad (|v|\le b<1).
+\]
+Put $a=\operatorname{Re}\sum_i\overline z_i^*c_i$.
+Stationarity yields $2\operatorname{Re}\sum_{i<j}v_{ij}=(n-1)a$.
+The moment before normalization is $n+2a+\rho^2$.
+Using $\log(1+x)\le x$ for $x>-1$ in the normalization term, the
+linear contributions cancel exactly, and hence
+\begin{align*}
+ \log\Delta_n(z(v))-\log M_n
+ &\ge-\left(\frac{n-1}{2}+
+       \frac{(n-1)^2}{2(1-b)}\right)\rho^2\\
+ &\ge-\left(\frac{n-1}{2}+(n-1)^2\right)\frac{n}{2q^2}
+   =-\frac{K_n}{q^2}.
+\end{align*}
+The finite grid maximum is at least this rounded value; its own
+configuration is feasible, giving both sides of
+\eqref{eq:grid-global}. For $0\le x<1$, $e^x\le(1-x)^{-1}$,
+which proves \eqref{eq:grid-rational}.
+\end{proof}
+
+The guaranteed error concerns a \emph{complete} grid maximum.
+Using only a searched subset provides a lower bound and cannot be
+substituted for $B_n(q)$ in the upper bound. With the above choice of
+$q$, the integer coordinates have height $O(n^2/\sqrt\varepsilon)$,
+but the number of subsets is exponential in $n$. High-accuracy
+six-point grid enumeration has not been carried out.
+The standard-library checker completely enumerates $1176$ subsets
+for $n=2,q=2$, giving $B_2(2)=4$, and $1\,873\,200$ subsets for
+$n=3,q=4$, giving
+\begin{equation}\label{eq:grid-three}
+ B_3(4)=\frac{49280427}{1825346}<27.
+\end{equation}
+An attaining integer triple is $(-7-7i,-7+7i,5)$, with $D=582$.
+The corresponding grid enclosure has logarithmic gap at most $15/32$.
+
+% Insert after the original global-grid theorem.  This strengthens its error
+% bound without changing B_n(q) or the requirement of COMPLETE enumeration.
+\subsection{A sharper grid certificate from the full stability matrix}
+
+The entrywise separation estimate can be supplemented by the entire
+second-variation bound.  This controls the quadratic rounding term directly,
+and reserves absolute-value estimates for terms of order three and higher.
+
+\begin{theorem}\label{thm:grid-sharper}
+For $n\ge2$ and an integer $q\ge n$, put
+\[
+ b=\frac{n-1}{\sqrt n\,q},\qquad
+ E_n(q)=\frac{n(n-1)}{2q^2}
+       +\frac{n^{1/4}(n-1)^{5/2}}{3(1-b)q^3},\qquad
+ \overline E_n(q)=\frac{n(n-1)}{2q^2}+\frac{35n^3}{72q^3}.
+\]
+Then
+\[
+ B_n(q)\le M_n\le B_n(q)e^{E_n(q)},\qquad
+ E_n(q)<\overline E_n(q).
+\]
+If a rational number $\eta$ satisfies $E_n(q)\le\eta<1$, then
+\[
+ M_n\le\frac{B_n(q)}{1-\eta}.
+\]
+For $0<\varepsilon\le1$, the choice
+\[
+ q\ge\frac n{\sqrt\varepsilon}
+\]
+guarantees $E_n(q)<71\varepsilon/72<\varepsilon$.  Consequently the
+integer coordinates needed for relative logarithmic accuracy $\varepsilon$
+have height $O(n^{3/2}/\sqrt\varepsilon)$.
+\end{theorem}
+
+\begin{proof}
+At a centered global maximizer $z^*$, use the matrix $B$ in
+Lemma~\ref{lem:global-separation} and put $\lambda=(n-1)/2$.
+The relations $\|B\|\le\lambda$ and $B\mathbf1=B^*\mathbf1=0$ imply
+\[
+ \sum_{j\ne i}\frac1{|z_i^*-z_j^*|^4}
+ \le\sum_j|B_{ij}|^2
+ \le\lambda^2\left(1-\frac1n\right).
+\]
+H\"older's inequality therefore gives, with $a_{ij}=|z_i^*-z_j^*|^{-3}$,
+\[
+ \sum_{j\ne i}a_{ij}
+ \le(n-1)^{1/4}
+      \left[\lambda^2\left(1-\frac1n\right)\right]^{3/4}
+ =\frac{\lambda^{3/2}(n-1)}{n^{3/4}}=:s.
+\]
+For any $c\in\mathbb C^n$,
+\[
+ \sum_{i<j}a_{ij}|c_i-c_j|^2
+ \le2\sum_i|c_i|^2\sum_{j\ne i}a_{ij}
+ \le2s\|c\|^2.
+\]
+
+Round $qz^*$ and center the rounding errors exactly as in
+Theorem~\ref{thm:grid-global}; write $\rho^2=\|c\|^2\le n/(2q^2)$
+and $v_{ij}=(c_i-c_j)/(z_i^*-z_j^*)$.  Coordinate rounding gives
+$|c_i-c_j|\le\sqrt2/q$ and $|v_{ij}|\le b<1$.  Hence
+\[
+ \sum_{i<j}|v_{ij}|^3
+ \le\frac{\sqrt2}{q}\sum_{i<j}a_{ij}|c_i-c_j|^2
+ \le\frac{(n-1)^{5/2}}{n^{3/4}q}\rho^2.
+\]
+For $|v|\le b$, the absolutely convergent logarithm series yields
+\[
+ 2\operatorname{Re}\log(1+v)
+ \ge2\operatorname{Re}v-\operatorname{Re}(v^2)
+      -\frac{2|v|^3}{3(1-b)}.
+\]
+The sum of the quadratic terms is
+\[
+ \sum_{i<j}v_{ij}^2=c^{\mathsf T}Bc,
+ \qquad|c^{\mathsf T}Bc|\le\lambda\rho^2.
+\]
+Put $a=\operatorname{Re}\sum_i\overline z_i^*c_i$.  Stationarity
+gives $2\operatorname{Re}\sum_{i<j}v_{ij}=(n-1)a$, while the
+normalization term satisfies
+\[
+ -N\log\left(1+\frac{2a+\rho^2}{n}\right)
+ \ge-(n-1)a-\lambda\rho^2.
+\]
+Thus the linear terms cancel, and
+\[
+ \log\Delta_n(z(v))-\log M_n
+ \ge-\left[(n-1)
+     +\frac{2(n-1)^{5/2}}{3(1-b)n^{3/4}q}\right]\rho^2
+ \ge-E_n(q).
+\]
+The complete grid maximum is at least this rounded value, proving
+the exponential enclosure.  The rational enclosure follows from
+$e^x\le(1-x)^{-1}$ for $0\le x<1$.
+
+The assumed lower bound on $q$ gives
+\[
+ b\le\frac{n-1}{n^{3/2}}\le\frac2{3\sqrt3}<\frac25.
+\]
+The middle inequality follows by maximizing $(t-1)/t^{3/2}$ on
+$t\ge2$, whose derivative is $(3-t)/(2t^{5/2})$.
+Also $n^{-1/4}\le2^{-1/4}<7/8$.  Therefore
+\[
+ \frac{n^{1/4}(n-1)^{5/2}}{3(1-b)}
+ <\frac{35n^3}{72},
+\]
+which proves the stated entirely rational upper bound on $E_n(q)$.
+If $q\ge n/\sqrt\varepsilon$, then
+\[
+ \overline E_n(q)
+ \le\frac\varepsilon2+\frac{35}{72}\varepsilon^{3/2}
+ \le\frac{71}{72}\varepsilon.
+\]
+Finally $\lceil q\sqrt n\rceil=O(n^{3/2}/\sqrt\varepsilon)$ for
+the displayed choice of $q$.
+\end{proof}
+
+The Taylor argument itself only requires $b<1$, so the exponential
+enclosure with $E_n(q)$ remains valid whenever $q>(n-1)/\sqrt n$.
+
+For a concrete comparison, when $n=6,q=10$ the previous bound was
+$K_6/q^2=33/40=0.825$.  The new exponent satisfies
+\[
+ E_6(10)=\frac3{20}
+ +\frac{25\sqrt5\,6^{1/4}}{3000(1-1/(2\sqrt6))}
+ <\frac{7113}{38000}<\frac3{16}.
+\]
+Indeed $\sqrt5<9/4$, $6^{1/4}<157/100$, and
+$1/(2\sqrt6)<5/24$ give the first rational inequality by integer
+comparisons.  Consequently a \emph{complete} computation of $B_6(10)$
+would certify
+\[
+ B_6(10)\le M_6\le\frac{16}{13}B_6(10),
+\]
+whereas the earlier rational enclosure had factor $40/7$.
+The new exponent is approximately $0.1866434402$; this decimal is
+only a display value.  No complete six-point enumeration is asserted.
+
+
+\subsection{Radial moment constraints and a finite spectral formulation}
+
+The stability matrix gives necessary conditions in every dimension without
+imposing reflection or polygon symmetry.  Set $N=n(n-1)/2$ and use the
+force-$1$ normalization
+\[
+ \sum_{j\ne i}\frac1{w_i-w_j}=\overline w_i,
+ \qquad \sum_iw_i=0,\qquad \sum_i|w_i|^2=N.
+\]
+Write $t_i=|w_i|^2$, $u_k=\sum_i t_i^k$, $s_k=\sum_iw_i^k$,
+and $s_0=n$.  The complex symmetric inverse-square Laplacian is
+\[
+ B_{ij}=-(w_i-w_j)^{-2}\quad(i\ne j),\qquad
+ B_{ii}=\sum_{j\ne i}(w_i-w_j)^{-2}.
+\]
+It satisfies $B\mathbf1=0$ and $Bw=\overline w$.
+At a local maximum on the moment sphere its operator norm satisfies
+$\|B\|\le1$, by the second-variation argument in
+Lemma~\ref{lem:global-separation}.  The argument applies to a local
+constrained maximum because, for each nearby shape, the best scale for
+$\log\Delta_n(w)-\sum_i|w_i|^2$ has moment $N$.
+
+\begin{proposition}\label{prop:general-radial-stability}
+Every local maximum, and hence every global maximum, satisfies
+\begin{align}
+ 3u_2+\frac{|s_2|^2}{n}&\le n(n-1)^2,
+ \label{eq:general-fourth-cut}\\
+ 8u_3-6(2n-3)u_2+(2n-3)^2N+\frac{|s_3|^2}{n}&\le0.
+ \label{eq:general-sixth-cut}
+\end{align}
+In the original normalization $z_i=\sqrt{2/(n-1)}\,w_i$,
+\[
+ \sum_i|z_i|^4\le\frac{4n}{3},\qquad
+ \max_i|z_i|^2\le1+\sqrt{\frac{n-1}{3}}.
+\]
+\end{proposition}
+
+\begin{proof}
+Divided differences, the force equations, and $s_1=0$ give
+\[
+ B(w_i^2)_i=(2t_i-(n-1))_i,
+ \qquad
+ B(w_i^3)_i=(3w_it_i-(2n-3)w_i)_i.
+\]
+Since $B$ annihilates constants and is a contraction,
+\begin{align*}
+ \sum_i(2t_i-(n-1))^2
+ &\le\sum_i\left|w_i^2-\frac{s_2}{n}\right|^2
+ =u_2-\frac{|s_2|^2}{n},\\
+ \sum_it_i(3t_i-(2n-3))^2
+ &\le\sum_i\left|w_i^3-\frac{s_3}{n}\right|^2
+ =u_3-\frac{|s_3|^2}{n}.
+\end{align*}
+The first left-hand side is $4u_2-n(n-1)^2$ and the second is
+$9u_3-6(2n-3)u_2+(2n-3)^2N$.  This proves both cuts.
+Rescaling gives the stated fourth-moment bound.  If $x=|z_i|^2$,
+Cauchy's inequality for the other $n-1$ radii gives
+\[
+ x^2+\frac{(n-x)^2}{n-1}\le\frac{4n}{3}.
+\]
+Completing the square yields $(x-1)^2\le(n-1)/3$, proving the
+radius bound.
+\end{proof}
+
+The same argument supplies higher-order conditions, including the
+off-diagonal conditions that scalar radial cuts omit.  Let
+$v_k=(w_i^k)_i$ and $\widetilde v_k=v_k-(s_k/n)\mathbf1$.
+For $k\ge2$, define the vector $A_k$ by
+\begin{equation}\label{eq:power-stability-action}
+ (A_k)_i=
+ k w_i^{k-1}\overline w_i
+ -\sum_{\ell=0}^{k-2}(k-1-\ell)s_\ell w_i^{k-2-\ell}
+ +\frac{k(k-1)}2w_i^{k-2},
+ \qquad A_1=\overline w.
+\end{equation}
+
+\begin{proposition}\label{prop:finite-power-stability}
+At every force-$1$ stationary configuration with distinct points,
+$Bv_k=A_k$.  For each integer $K\ge1$, form the Hermitian matrix
+\[
+ \mathcal G^{(K)}_{jk}
+ =\langle\widetilde v_j,\widetilde v_k\rangle
+  -\langle A_j,A_k\rangle,
+ \qquad 1\le j,k\le K,
+ \qquad \langle a,b\rangle=\sum_i\overline a_i b_i.
+\]
+All these matrices are positive semidefinite at a local maximum.
+Moreover, $\mathcal G^{(n-1)}\succeq0$ is equivalent to
+$\|B\|\le1$.  Thus this one finite matrix expresses the entire
+second-variation condition in polynomial moments.
+\end{proposition}
+
+\begin{proof}
+For $k\ge2$ the elementary identity
+\[
+ \frac{x^k-y^k}{(x-y)^2}
+ =\frac{kx^{k-1}}{x-y}
+  -\sum_{\ell=0}^{k-2}(k-1-\ell)x^{k-2-\ell}y^\ell
+\]
+holds for $x\ne y$.  Sum it over $j\ne i$ with
+$x=w_i$, $y=w_j$.  Stationarity gives the first term of
+\eqref{eq:power-stability-action}; replacing
+$\sum_{j\ne i}w_j^\ell$ by $s_\ell-w_i^\ell$ gives the last term
+because $\sum_{\ell=0}^{k-2}(k-1-\ell)=k(k-1)/2$.
+The formula for $k=1$ is precisely the force equation.
+
+For any $\alpha\in\mathbb C^K$, the quadratic form of the displayed
+matrix equals
+\[
+ \alpha^*\mathcal G^{(K)}\alpha
+ =\left\|\sum_{k=1}^K\alpha_k\widetilde v_k\right\|^2
+  -\left\|B\sum_{k=1}^K\alpha_k\widetilde v_k\right\|^2.
+\]
+This proves necessity.  For the converse, distinctness implies that
+$\widetilde v_1,\ldots,\widetilde v_{n-1}$ form a basis of
+$\mathbf1^\perp$: a linear dependence would give a polynomial of
+degree at most $n-1$ taking the same constant value at $n$ distinct
+points, so all its positive-degree coefficients vanish.
+Consequently $\mathcal G^{(n-1)}\succeq0$ states that $B$ is a
+contraction on $\mathbf1^\perp$.  Since $B\mathbf1=0$, it is then
+a contraction on all of $\mathbb C^n$.
+\end{proof}
+
+To express the matrix algebraically, use mixed moments
+$m_{ab}=\sum_i\overline w_i^{\,a}w_i^b$.
+Then
+\[
+ \langle\widetilde v_j,\widetilde v_k\rangle
+ =m_{jk}-\frac{\overline s_js_k}{n},
+\]
+and \eqref{eq:power-stability-action} expresses every
+$\langle A_j,A_k\rangle$ as a polynomial in these moments.
+For $\mathcal G^{(n-1)}$ only moments with
+$0\le a,b\le n-1$ are needed.
+The diagonal cases $k=2,3$ recover
+\eqref{eq:general-fourth-cut}--\eqref{eq:general-sixth-cut}.
+These constraints can therefore strengthen the coefficient and
+moment optimization formulations without introducing inverse
+interpoint distances.  They are necessary for a local maximum;
+no sufficiency for local or global maximality is claimed.
+At a force-$1$ stationary configuration the first row and column
+of $\mathcal G^{(n-1)}$ vanish automatically: centering and symmetry
+of $B$ give
+\[
+ \langle w,\widetilde v_k\rangle
+ =\overline w^{\mathsf T}v_k
+ =(Bw)^{\mathsf T}v_k
+ =w^{\mathsf T}Bv_k
+ =\langle A_1,A_k\rangle.
+\]
+For $n\ge3$ it is therefore enough to impose positive
+semidefiniteness of the $(n-2)\times(n-2)$ block indexed by
+$k=2,\ldots,n-1$.
+
+\begin{corollary}\label{cor:radius-capped-grid}
+For an integer $q\ge n$, let $R_n^{\mathrm{cap}}(q)$ be the smallest
+integer $R\ge q$ satisfying
+\[
+ 3(R^2-q^2)^2\ge q^4(n-1).
+\]
+Equivalently,
+\[
+ R_n^{\mathrm{cap}}(q)
+ =\left\lceil q\sqrt{1+\sqrt{(n-1)/3}}\right\rceil.
+\]
+Define $B_n^{\mathrm{cap}}(q)$ by the same centering and normalization
+as $B_n(q)$, but enumerate only the Gaussian integer coordinates
+$a_i$ with
+$|\operatorname{Re}a_i|,|\operatorname{Im}a_i|
+ \le R_n^{\mathrm{cap}}(q)$.
+Discard the zero-moment tuples as usual.  Then
+\[
+ B_n^{\mathrm{cap}}(q)\le M_n
+ \le B_n^{\mathrm{cap}}(q)e^{E_n(q)},
+\]
+with exactly the exponent in Theorem~\ref{thm:grid-sharper}.
+For $0<\varepsilon\le1$ and
+$q=\lceil n/\sqrt\varepsilon\rceil$, the coordinate height is
+$O(n^{5/4}/\sqrt\varepsilon)$ and the logarithmic error is less
+than $\varepsilon$.
+\end{corollary}
+
+\begin{proof}
+The radial bound in Proposition~\ref{prop:general-radial-stability}
+applies to a global maximizer $z^*$.  Each real and imaginary
+coordinate of $qz_i^*$ therefore lies between
+$-q\sqrt{1+\sqrt{(n-1)/3}}$ and its positive counterpart.
+Rounding to a nearest integer places every coordinate in the
+displayed box.  The same rounded tuple used in the proof of
+Theorem~\ref{thm:grid-sharper} is thus present in this smaller
+complete enumeration, and every error estimate in that proof is
+unchanged.  Conversely, each enumerated tuple of positive centered
+moment gives an admissible normalized configuration, so its value
+is at most $M_n$.  The integer inequality defining $R$ is equivalent
+to the radical bound because $R\ge q$ permits both squarings.
+Finally the radial bound is $O(n^{1/4})$, which gives the claimed
+height after multiplication by $q$.
+\end{proof}
+
+\subsection{Higher radial moments and shell populations at local maxima}
+
+The finite power stability matrix yields additional scalar inequalities
+whose mixed terms can be eliminated exactly.  The following results
+apply to every local maximum, so they retain information about local
+searches as well as the global optimization problem.  Use the force-$1$
+normalization and notation of Proposition~\ref{prop:general-radial-stability}.
+
+\begin{proposition}\label{prop:eighth-radial-cut}
+At every local maximum,
+\begin{equation}\label{eq:eighth-force-cut}
+ 15u_4-24(n-2)u_3+9(n-2)^2u_2-n|s_2|^2
+       +\frac{|s_4|^2}{n}\le0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The power action formula gives
+\[
+ Bv_4=\bigl(w_i^2(4t_i-3(n-2))-s_2\bigr)_i.
+\]
+Pairwise summation of the force equations, after multiplication by
+$w_i^3$, gives the exact identity
+\[
+ \sum_i t_iw_i^2
+ =\sum_{i<j}(w_i^2+w_iw_j+w_j^2)
+ =\left(n-\frac32\right)s_2.
+\]
+Put $d=3(n-2)$ and $X_i=w_i^2(4t_i-d)$.  This identity implies
+$\sum_iX_i=ns_2$.  Therefore
+\[
+ \|Bv_4\|^2
+ =\sum_i|X_i-s_2|^2
+ =16u_4-8du_3+d^2u_2-n|s_2|^2.
+\]
+Since $B\mathbf1=0$ and $\|B\|\le1$, this is at most
+$\|v_4-(s_4/n)\mathbf1\|^2=u_4-|s_4|^2/n$.
+Rearranging proves the proposition.
+\end{proof}
+
+\begin{theorem}\label{thm:combined-higher-radial}
+In the original normalization $\sum_i|z_i|^2=n$, write
+$T_p=\sum_i|z_i|^{2p}$ and $S_k=\sum_i z_i^k$.
+Every local maximum satisfies, for $n\ge2$,
+\begin{equation}\label{eq:combined-sixth-radial}
+ T_3+\frac{2n-3}{2n(n-1)}|S_2|^2+\frac{|S_3|^2}{8n}
+ \le L_{n,3}:=\frac{n(2n-3)(2n-1)}{2(n-1)^2}
+ =2n-\frac{n}{2(n-1)^2}<2n.
+\end{equation}
+For $n\ge3$ it also satisfies
+\begin{equation}\label{eq:combined-eighth-radial}
+ \begin{split}
+ T_4+\frac{4(8n^2-30n+24)}{15n(n-1)^2}|S_2|^2
+       +\frac{2(n-2)}{5n(n-1)}|S_3|^2
+       +\frac{|S_4|^2}{15n}
+ &\le L_{n,4}:=
+       \frac{8n(n-2)(2n^2-2n-1)}{5(n-1)^3}\\
+ &=\frac{16n}{5}-\frac{24n}{5(n-1)^2}
+                    +\frac{8n}{5(n-1)^3}<\frac{16n}{5}.
+ \end{split}
+\end{equation}
+All the additional holomorphic-moment terms have nonnegative
+coefficients in the stated ranges.
+\end{theorem}
+
+\begin{proof}
+Let $c=2n-3$, $d=3(n-2)$ and
+$D=6dc-d^2=9(n-2)(3n-4)$.  The existing second- and third-power
+cuts, with their left-hand sides denoted by $C_2,C_3$, are
+\[
+ C_2=3u_2+\frac{|s_2|^2}{n}-n(n-1)^2\le0,
+ \qquad
+ C_3=8u_3-6cu_2+c^2N+\frac{|s_3|^2}{n}\le0.
+\]
+The nonnegative combination $C_3+2cC_2$ cancels $u_2$ and gives
+\[
+ 8u_3+\frac{2c}{n}|s_2|^2+\frac{|s_3|^2}{n}
+ \le\frac{n(n-1)c(2n-1)}2.
+\]
+Rescaling $w_i=\sqrt{(n-1)/2}\,z_i$ proves
+\eqref{eq:combined-sixth-radial}.
+
+For $n\ge3$, both $d$ and $D$ are positive.  Let $C_4$ be the
+left-hand side of \eqref{eq:eighth-force-cut}.  The nonnegative
+combination $C_4+dC_3+(D/3)C_2$ cancels $u_3$ and $u_2$, yielding
+\[
+ 15u_4+\frac{8n^2-30n+24}{n}|s_2|^2
+       +\frac{3(n-2)}{n}|s_3|^2+\frac{|s_4|^2}{n}
+ \le\frac32n(n-1)(n-2)(2n^2-2n-1).
+\]
+The remaining coefficient $8n^2-30n+24$ is positive at $n=3$
+and strictly increases for $n\ge3$.  Rescaling gives
+\eqref{eq:combined-eighth-radial}.  Expansion in $n-1$ gives the
+displayed simplified bounds and their strict inequalities.
+\end{proof}
+
+\begin{corollary}\label{cor:local-radius-and-shells}
+Every local maximum satisfies
+\[
+ \max_i|z_i|\le L_{n,3}^{1/6}\quad(n\ge2),\qquad
+ \max_i|z_i|\le L_{n,4}^{1/8}\quad(n\ge3).
+\]
+The latter bound is $O(n^{1/8})$.  A sharper individual bound is
+$|z_i|^2\le\xi_{n,p}$, for $p=3$, or for $p=4$ when $n\ge3$,
+where $\xi_{n,p}\in(1,n)$ is the unique solution of
+\[
+ x^p+\frac{(n-x)^p}{(n-1)^{p-1}}=L_{n,p}.
+\]
+More generally, if $k$ of the radii satisfy $|z_i|^2\ge a>1$,
+then $ka\le n$ and, for $k<n$,
+\begin{equation}\label{eq:outer-shell-count}
+ k a^p+\frac{(n-ka)^p}{(n-k)^{p-1}}\le L_{n,p}.
+\end{equation}
+For $0\le a<1$ the same inequality holds if $k<n$ radii satisfy
+$|z_i|^2\le a$.  In particular,
+for every $a>0$,
+$\#\{i:|z_i|^2\ge a\}\le\lfloor L_{n,p}/a^p\rfloor$.
+These are necessary shell-population bounds, without any assumption
+that the points lie on exact rings.
+\end{corollary}
+
+\begin{proof}
+Drop the nonnegative holomorphic-moment terms to obtain
+$T_p\le L_{n,p}$.  Jensen's inequality on the other $n-1$ radii
+gives the individual bound.  The function
+$x^p+(n-x)^p/(n-1)^{p-1}$ is strictly increasing for $1<x<n$;
+its values at $1$ and $n$ bracket $L_{n,p}$ in the stated ranges.
+This proves uniqueness and the sharper bound.
+
+For a group of $k$ points let $S$ be the sum of their squared
+radii.  Jensen on this group and its complement gives
+\[
+ T_p\ge\frac{S^p}{k^{p-1}}
+          +\frac{(n-S)^p}{(n-k)^{p-1}}.
+\]
+This expression increases for $S>k$ and decreases for $S<k$.
+For an outer group $S\ge ka>k$; for an inner group
+$S\le ka<k$.  Substituting $S=ka$ in either case proves
+\eqref{eq:outer-shell-count}.  The final counting bound follows
+by retaining only the group's contribution to $T_p$.
+\end{proof}
+
+For example, at $n=6$ the new constants are
+$L_{6,3}=297/25$ and $L_{6,4}=11328/625$.
+Their application to local maxima complements stronger statements
+that can use global optimality.  In particular, these local
+necessary conditions should not be confused with sufficient
+conditions for a global maximum.
+
+\paragraph{Two elementary structural exclusions.}
+There is no collinear local maximum when $n\ge3$.
+Indeed, at the force-$1$ scale a real-axis configuration has
+$s_2=N$ and
+$u_2=(n-3/2)N=n(n-1)(2n-3)/4$ by the same pairwise sum as above.
+The necessary bound $u_2\le n(n-1)^2/3$ would imply $2n\le5$.
+Also, a stationary configuration whose radii are all equal must
+be a regular polygon.  Its radius squared is $(n-1)/2$, so its
+monic root polynomial satisfies
+$tP''(t)-(n-1)P'(t)=0$ at all $n$ distinct roots.  This polynomial
+has degree at most $n-2$ and is therefore identically zero.
+Comparing coefficients gives $P(t)=t^n+c_0$.
+
+The same scalar power tests also give concise proofs of the familiar
+large-polygon instability thresholds.  If
+$s_1=\cdots=s_{k-2}=0$, set
+$d_k=(k-1)(n-k/2)$.  Then
+\[
+ Bv_k=(w_i^{k-2}(kt_i-d_k))_i,
+\]
+so contraction implies
+\[
+ (k^2-1)u_k-2kd_ku_{k-1}+d_k^2u_{k-2}
+       +\frac{|s_k|^2}{n}\le0.
+\]
+For the regular $n$-gon with $n\ge8$, take $k=4$;
+$s_2=s_4=0$ and $t_i=(n-1)/2$.  The left-hand side of
+\eqref{eq:eighth-force-cut} becomes
+\[
+ \frac{3n(n-1)^2(n-3)(n-7)}{16}>0,
+\]
+excluding a local maximum.  For the origin plus a regular
+$(n-1)$-gon with $n\ge11$, take $k=5$;
+$s_2=s_3=s_5=0$ and the nonzero squared radii are $n/2$.
+The last displayed cut has value
+\[
+ (n-1)\left(\frac n2\right)^3
+       \left\{\left(10-\frac{3n}{2}\right)^2-\frac{n^2}{4}\right\}
+ =\frac{n^3(n-1)(n-5)(n-10)}4>0.
+\]
+These elementary tests recover instability in the stated ranges;
+they do not decide the degenerate boundary cases.
+
+\subsection{Six-point radial constraints from the stability operator}
+
+The following necessary conditions apply to the unrestricted global
+maximum and do not assume reflection or polygon symmetry.  We use the
+force-$1$ normalization
+\[
+ \sum_{j\ne i}\frac1{w_i-w_j}=\overline w_i,
+ \qquad\sum_iw_i=0,\qquad\sum_i|w_i|^2=15.
+\]
+Write $t_i=|w_i|^2$, $u_k=\sum_i t_i^k$, and
+$s_k=\sum_iw_i^k$.
+
+\begin{proposition}\label{prop:six-radial-stability}
+Every six-point global maximizer satisfies
+\begin{align}
+ 3u_2+\frac{|s_2|^2}{6}&\le150,\label{eq:six-fourth-cut}\\
+ 8u_3-54u_2+1215+\frac{|s_3|^2}{6}&\le0.
+ \label{eq:six-sixth-cut}
+\end{align}
+In particular $u_2\le50$.  In the original normalization
+$z_i=\sqrt{2/5}\,w_i$, these imply
+\[
+ \sum_i|z_i|^4\le8,\qquad
+ \max_i|z_i|^2\le1+\frac{\sqrt{15}}3.
+\]
+The same conclusions hold for a local maximum of the discriminant
+on the moment sphere.
+\end{proposition}
+
+\begin{proof}
+Let $B$ be the symmetric inverse-square Laplacian in
+Lemma~\ref{lem:global-separation}, now at the force-$1$ scale.
+A local constrained maximum is also a local maximum of
+$\log\Delta_6(w)-\sum_i|w_i|^2$: for each nearby shape, its best
+scale has moment $15$.  Consequently the same second-variation
+argument gives $\|B\|\le1$ and $B\mathbf1=0$.
+Polynomial divided differences and stationarity give
+\[
+ B(w_i^2)_i=(2t_i-5)_i,
+ \qquad
+ B(w_i^3)_i=(3w_it_i-9w_i)_i.
+\]
+For the first identity, use
+$(w_i^2-w_j^2)/(w_i-w_j)^2=2w_i/(w_i-w_j)-1$.
+For the second, use
+\[
+ \frac{w_i^3-w_j^3}{(w_i-w_j)^2}
+ =\frac{3w_i^2}{w_i-w_j}-2w_i-w_j
+\]
+and $\sum_jw_j=0$.
+Since $B$ annihilates constants,
+\[
+ \sum_i(2t_i-5)^2
+ \le\sum_i\left|w_i^2-\frac{s_2}{6}\right|^2
+ =u_2-\frac{|s_2|^2}{6},
+\]
+where the left-hand side is $4u_2-150$.
+Similarly,
+\[
+ \sum_it_i(3t_i-9)^2
+ \le\sum_i\left|w_i^3-\frac{s_3}{6}\right|^2
+ =u_3-\frac{|s_3|^2}{6}.
+\]
+Expanding proves both inequalities.
+Rescaling gives $\sum_i|z_i|^4\le(2/5)^2\cdot50=8$.
+For $x=|z_i|^2$, Cauchy's inequality on the other five radii gives
+$x^2+(6-x)^2/5\le8$, whose nonnegative solutions satisfy
+$x\le1+\sqrt{15}/3$.
+\end{proof}
+
+\begin{proposition}\label{prop:six-excluded-subclasses}
+No six-point local maximum belongs to any of the following three
+subclasses: a collinear configuration, two concentric equilateral
+triangles on the same three rays with different radii, or three
+centrally symmetric pairs with four points on one line and two on
+its perpendicular line.  In the last subclass the two lines pass
+through the center of rotation.
+\end{proposition}
+
+\begin{proof}
+All local maxima satisfy the force equations and the fourth-moment
+bound $u_2\le50$.  Each listed subclass violates that bound.
+
+For a collinear configuration, rotate its centered line to the real
+axis.  Multiplying the force equation by $w_i^3$ and summing gives
+\[
+ u_2=\sum_{i<j}\frac{w_i^3-w_j^3}{w_i-w_j}
+ =\sum_{i<j}(w_i^2+w_iw_j+w_j^2)
+ =\frac92\sum_iw_i^2=\frac{135}{2}>50.
+\]
+
+For two aligned triangles, let their radii be $r<s$ and put
+$a=r^2$, $b=s^2$.  Their root polynomial is
+$(t^3-r^3)(t^3-s^3)$.  At a root on each ring the force equations give
+\[
+ a=1+\frac{3r^3}{r^3-s^3}<1,
+ \qquad
+ b=1+\frac{3s^3}{s^3-r^3}>4,
+ \qquad a+b=5.
+\]
+Therefore $u_2=3(a^2+b^2)>3(1^2+4^2)=51>50$.
+
+For the perpendicular-pair configuration rotate so its points are
+\[
+ \{\pm\sqrt a,\ \pm\sqrt b,\ \pm i\sqrt c\},
+ \qquad a,b,c>0,\quad a\ne b.
+\]
+The moment gives $a+b+c=15/2$.  The force equations are
+\[
+ a=\frac12+\frac{2a}{a-b}+\frac{2a}{a+c},\qquad
+ b=\frac12+\frac{2b}{b-a}+\frac{2b}{b+c},\qquad
+ c=\frac12+\frac{2c}{c+a}+\frac{2c}{c+b}.
+\]
+Put $s=a+b$, $p=ab$, and $D=(a+c)(b+c)=p+cs+c^2>0$.
+Adding and subtracting the first two equations yields
+\[
+ s=3+\frac{2(2p+cs)}D,
+ \qquad (s^2-4p)(D-2c)=2sD.
+\]
+Together with $c=15/2-s$, these give
+\[
+ p=\frac{c(11s-45)}{2(7-s)},\qquad
+ (a-b)^2=\frac{s(15-s)}4,\qquad
+ p=\frac{5s(s-3)}{16}.
+\]
+The exceptional denominator $s=7$ is impossible in the first
+summed equation.  Positivity of $p,c$ implies $45/11<s<7$.
+Equating the two expressions for $p$ gives
+\[
+ f(s):=5s^3-138s^2+1125s-2700=0.
+\]
+On $[50/11,7]$, $f''(s)=30s-276<0$, while
+\[
+ f(50/11)=\frac{42550}{1331}>0,\qquad f(7)=128>0.
+\]
+Concavity therefore gives $f>0$ throughout that interval.
+Every allowed root consequently has $s<50/11<5$.
+Finally,
+\[
+ u_2-50
+ =2(a^2+b^2+c^2)-50
+ =\frac{11}{4}\left(s-\frac{50}{11}\right)(s-5)>0.
+\]
+This excludes the last subclass as well.
+\end{proof}
+
+\begin{proposition}\label{prop:six-large-radius-exclusion}
+For any centered six-point configuration of moment $6$, if some
+$|z_i|^2\ge(9-\sqrt{21})/2$, then
+$\Delta_6\le C_6=6^{15}/5^{10}$.
+Consequently a hypothetical global maximizer with value strictly above
+$C_6$ has
+\[
+ 0<|z_i|^2<\frac{9-\sqrt{21}}2\qquad\text{for every }i.
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $i$ and write $x=|z_i|^2$.  Centering the other five points
+gives quadratic moment $S=6-6x/5$.  Wang's five-point theorem gives
+\[
+ \Delta_5((z_j)_{j\ne i})\le5^5(S/5)^{10}.
+\]
+Also $\sum_{j\ne i}|z_i-z_j|^2=6(x+1)$, so arithmetic--geometric
+mean gives
+\[
+ \Delta_6\le C_6\{(1-x/5)^2(1+x)\}^5.
+\]
+The centered moment constraint implies $0\le x\le5$, and
+\[
+ (1-x/5)^2(1+x)-1=\frac{x}{25}(x^2-9x+15).
+\]
+This expression is nonpositive when
+$(9-\sqrt{21})/2\le x\le5$.
+If $x=0$, the same bound gives $\Delta_6\le C_6$ directly.
+\end{proof}
+
+These constraints exclude specified families and a radial region.
+Their role is to strengthen stationary filtering without prescribing
+symmetry; they do not by themselves supply a complete classification.
+The exhaustive comparison in Section~\ref{sec:six-global-exact}
+establishes the six-point global value. The moment constraints and
+finite stability matrix remain available for larger point counts.
+
+\section{An exact polynomial test for stationary configurations}
+\label{sec:trace-stationary}
+Encoding an unordered configuration by its root polynomial removes
+label permutations. A separate positivity condition is needed to
+ensure that the force values are paired with the correct conjugate
+roots, rather than merely permuted conjugate roots.
+
+\begin{theorem}\label{thm:trace-stationary}
+Let $P(t)=t^n+c_2t^{n-2}+\cdots+c_n$ be squarefree, and put
+$\mathcal A=\C[t]/(P)$. Let $R$ be the unique polynomial of degree
+less than $n$ satisfying
+\begin{equation}\label{eq:force-modulo}
+ P''-2RP'\equiv0\pmod P.
+\end{equation}
+For $0\le j,k<n$, define
+\begin{equation}\label{eq:trace-matrix}
+ H_{jk}=\operatorname{Tr}_{\mathcal A}(t^jR^k).
+\end{equation}
+The roots $w_i$ of $P$ satisfy
+$\sum_{\ell\ne i}(w_i-w_\ell)^{-1}=\overline w_i$ if and only if
+\begin{equation}\label{eq:trace-conditions}
+ \overline P(R)\equiv0\pmod P,\qquad H=H^*,\qquad H\succ0.
+\end{equation}
+Here $\overline P$ means coefficientwise conjugation.
+In this case $\sum_i|w_i|^2=N$ and the normalized product is
+\begin{equation}\label{eq:disc-normalization}
+ \Delta_n\!\left(\sqrt{\frac2{n-1}}\,w\right)
+   =\left(\frac2{n-1}\right)^N|\operatorname{disc}P|.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Squarefreeness makes $P'$ invertible modulo $P$, proving existence
+and uniqueness of $R$. At a root,
+\[
+ R(w_i)=\frac{P''(w_i)}{2P'(w_i)}
+       =\sum_{\ell\ne i}\frac1{w_i-w_\ell}.
+\]
+If this equals $\overline w_i$, both congruence and positivity hold:
+the trace is the sum over the roots, so $H=VV^*$ with
+$V_{ji}=w_i^j$, an invertible Vandermonde matrix.
+
+Conversely, the congruence says each $R(w_i)$ is a conjugate root.
+Positive definiteness makes $H$ nonsingular. Since
+$H_{jk}=\sum_i w_i^jR(w_i)^k$, this forces the $R(w_i)$ to be distinct.
+Thus $R(w_i)=\overline w_{\sigma(i)}$ for a permutation $\sigma$, and
+$H=V\Pi_\sigma V^*$. Consequently $\Pi_\sigma$ is Hermitian positive
+definite. A Hermitian permutation is an involution; every
+nontrivial transposition has eigenvalue $-1$. It follows that
+$\sigma$ is the identity, proving the actual conjugate pairing.
+Finally $\sum_i w_iR(w_i)=N$ by pairwise summation.
+The discriminant is $\prod_{i<j}(w_i-w_j)^2$, whose absolute value,
+not squared absolute value, equals $\Delta_n(w)$.
+\end{proof}
+
+This is an exact equivalence, not merely a necessary system.
+Let $T$ be the companion matrix representing multiplication by $t$.
+The entries $H_{jk}=\operatorname{tr}(T^jR(T)^k)$ are polynomial in
+coefficient variables. Taking $R$ as an auxiliary unknown makes both
+remainders polynomial. Positive definiteness already enforces
+squarefreeness: for distinct roots $\xi_1,\ldots,\xi_r$ with
+multiplicities $m_i$, quotient-algebra traces give
+$H_{jk}=\sum_{i=1}^r m_i\xi_i^jR(\xi_i)^k$, of rank at most $r$.
+Thus $H\succ0$ forces $r=n$.
+Hermitian symmetry and positive leading principal minors give real
+polynomial conditions, without a separate discriminant denominator.
+
+\begin{corollary}\label{cor:trace-global}
+Allow $P$ and the auxiliary polynomial $R$ to vary subject to
+\eqref{eq:force-modulo} and \eqref{eq:trace-conditions}. Then
+\begin{equation}\label{eq:trace-global}
+ M_n=\left(\frac2{n-1}\right)^N\max\det H.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Every global maximizer gives a stationary configuration after scaling
+by $\sqrt{(n-1)/2}$, and every permitted pair gives a genuine
+stationary configuration of moment $N$. For these configurations,
+$H=VV^*$, hence $\det H=|\det V|^2=\Delta_n(w)$.
+\end{proof}
+This is an exact real-polynomial reduction of the global problem;
+maximizing its objective has not been carried out for six points.
+
+% A rigorous compact coefficient formulation with a fixed positive margin.
+\subsection{A compact coefficient formulation with explicit positivity margin}
+
+The strict trace inequality can be replaced by an explicit closed inequality
+without losing any global maximizer.  This gives a compact, polynomial
+optimization problem for each $n$, with the same structure for every $n$.
+It does not require a classification of the stationary configurations.
+
+\begin{theorem}\label{thm:compact-trace}
+Put
+\[
+ \mu_n=n^{-(2n-1)},\qquad
+ b_{n,k}=\binom nk(n-1)^k\quad(2\le k\le n),\qquad
+ C_n^{\rm aux}=(n-1)n^n.
+\]
+Let $\mathcal K_n$ be the set of coefficient pairs
+\[
+ P(t)=t^n+\sum_{k=2}^n c_kt^{n-k},\qquad
+ R(t)=\sum_{\ell=0}^{n-1}r_\ell t^\ell
+\]
+subject to
+\[
+ P''-2RP'\equiv0\pmod P,\quad
+ \overline P(R)\equiv0\pmod P,\quad
+ H=H^*,\quad H-\mu_n I\succeq0,
+\]
+and the coefficient bounds
+\[
+ |c_k|^2\le b_{n,k}^2,\qquad
+ |r_\ell|^2\le(C_n^{\rm aux})^2.
+\]
+Here $H_{jk}=\operatorname{Tr}_{\mathbb C[t]/(P)}(t^jR^k)$ as before.
+Then $\mathcal K_n$ is a nonempty compact real semialgebraic set,
+and
+\[
+ M_n=\left(\frac2{n-1}\right)^N
+               \max_{(P,R)\in\mathcal K_n}\det H.
+\]
+All defining equations and inequalities become real polynomials with
+rational coefficients after separating real and imaginary parts.
+\end{theorem}
+
+\begin{proof}
+Consider any global maximizer and rescale it to roots $w_i$ with force
+constant $1$.  Then $\sum_i|w_i|^2=N$ and
+Lemma~\ref{lem:global-separation} gives
+\[
+ |w_i-w_j|^2\ge\frac n{n-1}>1.
+\]
+Since $\sum_iw_i=0$, Cauchy's inequality gives
+\[
+ |w_i|^2\le(n-1)\sum_{j\ne i}|w_j|^2,
+ \qquad
+ |w_i|^2\le\frac{n-1}{n}\sum_j|w_j|^2
+       =\frac{(n-1)^2}{2}.
+\]
+In particular $|w_i|\le n-1$.
+The elementary symmetric functions therefore satisfy
+$|c_k|\le\binom nk(n-1)^k$.
+
+Let
+\[
+ L_i(t)=\frac{\prod_{j\ne i}(t-w_j)}
+                   {\prod_{j\ne i}(w_i-w_j)}
+\]
+be the Lagrange interpolation polynomials.  For a polynomial $f$, denote
+the sum of the absolute values of its coefficients by $\|f\|_1$.
+The root bounds and separation imply
+\[
+ \|L_i\|_1
+ \le\frac{\prod_{j\ne i}(1+|w_j|)}
+             {\prod_{j\ne i}|w_i-w_j|}
+ \le n^{n-1}.
+\]
+As $R(w_i)=\overline w_i$, interpolation gives
+\[
+ R=\sum_i\overline w_iL_i,\qquad
+ \|R\|_1\le(n-1)n^n,
+\]
+and hence the claimed bounds on all $r_\ell$.
+
+With $V_{ji}=w_i^j$, the columns of $(V^{\mathsf T})^{-1}$ are the
+coefficient vectors of the $L_i$.  It follows that
+\[
+ \|V^{-1}\|^2\le\|V^{-1}\|_F^2
+ \le n^{2n-1}.
+\]
+Since $H=VV^*$, this proves $H\succeq\mu_n I$.
+Thus every global maximizer supplies a member of $\mathcal K_n$.
+
+Conversely $H\succeq\mu_n I$ implies $H\succ0$.
+Theorem~\ref{thm:trace-stationary} then implies that every member of
+$\mathcal K_n$ has distinct genuinely conjugate-paired roots, satisfies
+the force equations, and has quadratic moment $N$.
+Its normalized determinant is therefore at most $M_n$.
+Together with the included global maximizer, this proves equality.
+
+Remainders modulo a monic polynomial and quotient-algebra traces are
+polynomials in the coefficient variables.  The Hermitian and positive
+semidefinite conditions are closed real polynomial conditions, the latter
+being equivalent to nonnegativity of all principal minors of
+$H-\mu_n I$.  The displayed coefficient bounds make the set bounded.
+Consequently $\mathcal K_n$ is closed and bounded, hence compact.
+\end{proof}
+
+For polynomial optimization one may append the redundant rational ball
+constraint
+\[
+ \mathcal R_n-\sum_{k=2}^n|c_k|^2-\sum_{\ell=0}^{n-1}|r_\ell|^2\ge0,
+ \qquad\mathcal R_n=\sum_{k=2}^nb_{n,k}^2+n(C_n^{\rm aux})^2.
+\]
+This supplies an explicit Archimedean quadratic module for a sum-of-squares
+hierarchy after encoding the matrix inequality by polynomial principal
+minors.  One may use the principal minors of
+$(H+H^*)/2-\mu_n I$: these are real polynomials for every real coefficient
+vector and equal the desired minors on the equations $H=H^*$.
+Let $x$ collect the real and imaginary coefficient variables,
+let $e_a(x)=0$ denote the equations, and let $g_b(x)\ge0$ include
+the coefficient bounds, the principal minors, and the displayed ball.
+For any rational $U>M_n$, Putinar's positivity theorem, in the
+Archimedean setting used by Lasserre~\cite{Lasserre}, gives a finite
+identity with real coefficients
+\[
+ U-\left(\frac2{n-1}\right)^N\operatorname{Re}\det H
+ =\sigma_0+\sum_b\sigma_b g_b+\sum_a\tau_a e_a,
+\]
+where the $\sigma_b$ are sums of squares and the $\tau_a$ are arbitrary
+polynomials.  Taking the degree truncations of these certificates gives
+global upper bounds whose infimum is $M_n$, equivalently the standard
+moment and sum-of-squares hierarchy converges to $M_n$.
+This theorem establishes existence of real-coefficient certificates;
+turning numerical semidefinite output into an exact certificate requires
+an additional arithmetic verification.
+Finite convergence at the exact optimum requires an additional theorem;
+it is not a consequence of compactness alone.
+
+\begin{proposition}[A genuine spurious six-root pairing]
+Let $p$ be the unique root in $(11/25,9/20)$ of
+$8p^3-60p^2+126p-45=0$, and put
+\[
+ s=2p^2-10p+\frac{15}{2},\qquad C=\frac{15}{2}-2p,
+ \qquad P(t)=(t^4-st^2+p^2)(t^2-C).
+\]
+The polynomial
+\[
+ R(t)=\left(p^2-6p+\frac{41}{4}\right)t
+   +\left(-\frac{32p^2}{45}+4p-\frac{26}{5}\right)t^3
+   +\left(\frac{29}{75}-\frac{4p^2}{225}\right)t^5
+\]
+satisfies both force and conjugate-root congruences, and its trace
+matrix is Hermitian, but is not positive definite.
+\end{proposition}
+\begin{proof}
+The cubic changes sign on the given rational interval and its
+ derivative is positive there. Exact bounds give
+$17/5<s<347/100$ and $C>33/5$.
+If $A<B$ are the roots of $a^2-sa+p^2$, then $0<A<B<C$.
+Thus the six roots are $\pm\sqrt A,\pm\sqrt B,\pm\sqrt C$.
+Reduction by the cubic verifies
+\begin{align*}
+ P''-2RP'&\equiv0\pmod P,&P(R)&\equiv0\pmod P,\\
+ tR&\equiv p\pmod{t^4-st^2+p^2},&
+ tR&\equiv C\pmod{t^2-C}.
+\end{align*}
+Since $AB=p^2$ and $p>0$, the force map swaps the positive roots
+$\sqrt A,\sqrt B$ and their negative counterparts, while fixing
+$\pm\sqrt C$. Its permutation is an involution, so $H$ is Hermitian.
+Its principal minor with indices $0,2,4$ equals
+\[
+ -8(s^2-4p^2)(p^2-Cs+C^2)^2
+       =-48600+19440p+2592p^2<0.
+\]
+Consequently $H$ is indefinite, with inertia $(4,2,0)$.
+All displayed identities are independently verified in
+$\Q[p]/(8p^3-60p^2+126p-45)$ by the ancillary checker.
+\end{proof}
+
+\begin{proposition}[Classical collinear benchmark]\label{prop:collinear}
+Among all collinear configurations satisfying the original moment
+constraint, the exact maximum is
+\begin{equation}\label{eq:collinear}
+ R_n^{\rm line}=\frac{\prod_{k=1}^n k^k}{(n-1)^N}.
+\end{equation}
+In particular, $R_6^{\rm line}=(2/729)C_6$, so every collinear
+six-point configuration has product strictly below the central pentagon.
+\end{proposition}
+\begin{proof}
+Center and rotate the line to the real axis. In each ordered chamber,
+$\log\Delta_n(x)-\sum_i x_i^2$ is strictly concave, tends to $-\infty$
+at collisions and infinity, and has a unique maximizer. Its root
+polynomial $P_n$ satisfies
+\[
+ P_n''-2tP_n'+2nP_n=0,\qquad
+ P_n'=nP_{n-1},\qquad
+ P_n=tP_{n-1}-\frac{n-1}{2}P_{n-2}.
+\]
+These are the monic physicists' Hermite polynomials, with $P_0=1$,
+$P_1=t$. Pairwise summation gives moment $N$ at this scale.
+The recurrence for the absolute resultant is
+\[
+ |\operatorname{Res}(P_n,P_{n-1})|
+ =\left(\frac{n-1}{2}\right)^{n-1}
+     |\operatorname{Res}(P_{n-1},P_{n-2})|.
+\]
+Since $P_n'=nP_{n-1}$, it follows that
+$|\operatorname{disc}P_n|=2^{-N}\prod_{k=1}^n k^k$.
+Rescaling the moment from $N$ to $n$ gives \eqref{eq:collinear}.
+\end{proof}
+
+\section{A finite terminating exact-value algorithm}
+\label{sec:exact-algorithm}
+A second reduction gives low-degree critical equations directly.
+For any configuration choose a farthest pair, apply a similarity
+sending it to $w_1=-1,w_2=1$, and write
+$w_i=x_i+iy_i$ for $3\le i\le n$.
+All remaining points satisfy $|w_i-1|,|w_i+1|\le2$, hence
+$|x_i|\le1$, $|y_i|\le\sqrt3$. With
+\[
+ \mu=\frac1n\sum_iw_i,\qquad Q=\sum_i|w_i-\mu|^2\ge2,
+\]
+the normalized product is the rational function
+\begin{equation}\label{eq:farthest-chart}
+ F(w)=\frac{n^N\prod_{i<j}|w_i-w_j|^2}{Q^N}.
+\end{equation}
+Every distinct real configuration in this chart, even outside the
+farthest-pair lens, normalizes to a feasible configuration. Therefore
+its unrestricted real maximum is exactly $M_n$, in $2n-4$ variables.
+No reflection or polygon symmetry is assumed.
+
+For complexification let $Z_i,W_i$ be independent variables,
+$Z_1=W_1=-1$, $Z_2=W_2=1$, and put
+\[
+ \mu_Z=\frac1n\sum_iZ_i,\quad \mu_W=\frac1n\sum_iW_i,\quad
+ Q=\sum_iZ_iW_i-n\mu_Z\mu_W,\quad
+ V(Z)=\prod_{i<j}(Z_i-Z_j).
+\]
+Define, for $i\ge3$,
+\begin{equation}\label{eq:critical-low-degree}
+ G_i=Q\sum_{j\ne i}\prod_{k\ne i,j}(Z_i-Z_k)
+       -N(W_i-\mu_W)\prod_{j\ne i}(Z_i-Z_j),
+\end{equation}
+and define $J_i$ by swapping $Z$ and $W$.
+There are $2n-4$ equations, each of total degree at most $n$.
+On the set $QV(Z)V(W)\ne0$, they are exactly the critical equations
+of $F=n^NV(Z)V(W)/Q^N$.
+
+\begin{theorem}\label{thm:exact-algorithm}
+There is a nonzero polynomial $p_n\in\Q[T]$, computable from
+\eqref{eq:critical-low-degree} by saturated elimination, such that
+\begin{equation}\label{eq:degree-bound}
+ p_n(M_n)=0,\qquad \deg p_n\le n^{2n-4}.
+\end{equation}
+Combining real-root isolation for $p_n$ with the rational enclosures
+\eqref{eq:grid-rational} gives a finite terminating algorithm to
+identify the exact value $M_n$ for every fixed $n$.
+This is an algorithmic characterization; $p_n$ has not been computed
+here for $n\ge4$.
+\end{theorem}
+\begin{proof}
+The real maximum in the chart is a critical point, since it is also
+a maximum over the entire real chart and has no collisions.
+Write $h=QV(Z)V(W)$ and form the graph ideal
+\[
+ \mathfrak J=\bigl(G_i,J_i,\ TQ^N-n^NV(Z)V(W),\ sh-1\bigr)
+ \subset\Q[Z_3,\ldots,Z_n,W_3,\ldots,W_n,T,s].
+\]
+The equation $sh-1=0$ enforces nonvanishing throughout elimination.
+Equivalently, saturate the entire graph ideal by $h$, not just the
+critical ideal before adjoining the value equation.
+On each irreducible component meeting that nonvanishing set, all
+partial derivatives of $F$ vanish. In characteristic zero, a rational
+function with zero differential on an irreducible variety is constant.
+Thus there are finitely many complex critical values, even if some
+critical components have positive dimension. Elimination to $\Q[T]$
+gives a nonzero polynomial vanishing on them and on $M_n$.
+
+Repeated affine B\'ezout bounds give at most $n^{2n-4}$ irreducible
+components: intersect successively with the $2n-4$ hypersurfaces of
+degree at most $n$; the sum of the degrees of retained components
+increases by at most a factor $n$ at each step. Saturation removes
+components. There are no more distinct critical values than components.
+Their set is invariant under the rational coefficient field, so its
+squarefree product polynomial is rational and has the stated degree.
+
+Now isolate the distinct real roots of $p_n$ exactly. For increasing
+$q$ with $q\ge2(n-1)$ and $q^2>K_n$, completely compute $B_n(q)$.
+The rational interval in \eqref{eq:grid-rational} contains $M_n$ and
+has length at most $M_n(K_n/q^2)/(1-K_n/q^2)$, which tends to zero.
+Eventually it contains exactly one distinct real root of $p_n$.
+That root is $M_n$, irrespective of whether other roots arise from
+nonphysical complex components. All enumerations and algebraic
+operations at each finite stage terminate. Once the value is isolated,
+real-algebraic sampling in its maximizing fiber supplies algebraic
+coordinates attaining it \cite{Basu}.
+\end{proof}
+
+For $n=2$ there are no free variables and $p_2(T)=T-4$.
+For $n=3$ write $Z_3=u,W_3=v$; then
+\[
+ Q=2+\frac23uv,\qquad
+ F=\frac{108(1-u^2)(1-v^2)}{Q^3}.
+\]
+The two critical equations reduce to
+\[
+ 6u-u^2v+3v=0,\qquad6v-v^2u+3u=0.
+\]
+Multiplying respectively by $v$ and $u$ and subtracting gives
+$v^2=u^2$. The case $v=u$ gives $u=0,\pm3$ and value $27/2$;
+the case $v=-u$ gives $u=0,\pm i\sqrt3$ and values $27/2,27$.
+Consequently
+\[
+ p_3(T)=(2T-27)(T-27),\qquad M_3=27.
+\]
+The fully enumerated lower bound \eqref{eq:grid-three} exceeds $27/2$,
+so the grid enclosure isolates the larger critical value.
+It is attained by normalizing the triangle $(-1,1,i\sqrt3)$.
+For six points the chart has eight real variables and the degree
+bound is $6^8=1\,679\,616$; this bound is not a computed six-point
+polynomial, nor a claim that such elimination is inexpensive.
+
+
+\paragraph{Precise saturation in the critical-value construction.}
+Write $h=QV(Z)V(W)$ and let $I$ be generated by the $G_i,J_i$.
+The graph ideal to eliminate is
+\[
+ \mathfrak J=
+ \bigl(I,\ TQ^N-n^NV(Z)V(W),\ sh-1\bigr)
+ \subset\mathbb Q[Z_3,\ldots,Z_n,W_3,\ldots,W_n,T,s].
+\]
+Equivalently, saturate the \emph{whole graph ideal}
+$\bigl(I,TQ^N-n^NV(Z)V(W)\bigr)$ by $h$ and then eliminate.
+Saturating only $I$ before adjoining the value equation is insufficient:
+its closure can contain boundary points with $Q=V(Z)=V(W)=0$, where
+the value equation imposes no condition on $T$.  The auxiliary equation
+$sh-1=0$ excludes these points throughout elimination.  The supplied
+SageMath generator already uses this precise simultaneous construction.
+
+\paragraph{An alternative exact selection of the physical maximum.}
+After computing and isolating the real roots of the critical-value
+polynomial, complete grid enumeration is optional.  For each isolated
+algebraic root $t$, substitute
+$Z_i=x_i+iy_i$ and $W_i=x_i-iy_i$, with
+$(x_1,y_1)=(-1,0)$ and $(x_2,y_2)=(1,0)$, and test the real algebraic
+feasibility of the critical equations, the value equation $F=t$,
+and
+\[
+ \frac4{(n-1)^2}\le(x_i-x_j)^2+(y_i-y_j)^2\le4\qquad(i<j).
+\]
+This is a compact semialgebraic feasibility problem; its coordinates
+satisfy $|x_i|\le1$, $|y_i|\le\sqrt3$, and $Q\ge2$.
+Every feasible value is the value of an admissible normalized
+configuration and is at most $M_n$.  A global maximizer, placed in
+its farthest-pair chart, supplies a feasible value $M_n$: its original
+diameter squared is at most $2n$, so Lemma~\ref{lem:global-separation}
+gives the displayed lower bound on the chart distances after scaling
+the diameter to $2$.
+Consequently the largest feasible root is exactly $M_n$.
+Real algebraic quantifier elimination or cylindrical algebraic
+decomposition terminates for each of the finitely many roots and
+can return algebraic coordinates attaining that root.
+This alternative avoids replacing a searched grid subset by an
+uncertified global enclosure; it does not imply low computational cost.
+
+\section{An integer-coefficient moment framework for every \texorpdfstring{$n$}{n}}
+\label{sec:moment-framework}
+The previous Gaussian average is the first member of a convergent
+family. Higher moments provide a uniform global certificate without
+enumerating point configurations. The underlying ingredients are
+classical: Gaussian monomial orthogonality, the Bombieri norm, and
+the passage from $L^p$ to $L^\infty$. Vandermonde-power expansions
+also occur in two-dimensional plasma computations
+\cite{TF,Beauzamy}. The following formulation makes their error
+and their connection to the exact-value algorithm explicit.
+
+Write $V(z)=\prod_{i<j}(z_i-z_j)$, and for an integer $k\ge1$ expand
+\[
+ V(z)^k=\sum_{|\alpha|=kN}c_{\alpha}^{(n,k)}z^\alpha,
+ \qquad c_{\alpha}^{(n,k)}\in\mathbb Z.
+\]
+Define the positive integer and the rational number
+\begin{equation}\label{eq:coefficient-moment}
+ C_{n,k}=\sum_{|\alpha|=kN}
+       \bigl(c_{\alpha}^{(n,k)}\bigr)^2\prod_{i=1}^n\alpha_i!,
+ \qquad
+ A_{n,k}=\frac{n^{kN}(n-2)!\,C_{n,k}}{(kN+n-2)!},
+ \qquad A_{n,0}=1.
+\end{equation}
+Coefficients with value zero contribute nothing. Computing the entire
+sum is essential: a partial sum cannot be used for a global upper bound.
+
+\begin{theorem}[Uniform coefficient enclosures]\label{thm:moment-framework}
+For every $n\ge2$ and $k\ge1$, put
+$D_{n,k}=\binom{kN+n-2}{n-2}$. Then
+\begin{equation}\label{eq:moment-enclosure}
+ A_{n,k}^{1/k}\le M_n\le
+ \left(\frac{n^{kN}C_{n,k}}{(kN)!}\right)^{1/k}
+ =(D_{n,k}A_{n,k})^{1/k}.
+\end{equation}
+The ratio of the two endpoints is exactly $D_{n,k}^{1/k}$;
+for fixed $n$ its logarithm is
+$O_n(\log(k+1)/k)$ and tends to zero. In particular,
+\begin{equation}\label{eq:moment-exact-limit}
+ \boxed{\displaystyle
+ M_n=n^N\lim_{k\to\infty}
+          \left(\frac{C_{n,k}}{(kN)!}\right)^{1/k}.}
+\end{equation}
+The entirely rational moment-ratio lower bounds
+\begin{equation}\label{eq:moment-ratio}
+ R_{n,k}:=\frac{A_{n,k+1}}{A_{n,k}}
+ =\frac{n^NC_{n,k+1}}{C_{n,k}}
+       \frac{(kN+n-2)!}{((k+1)N+n-2)!},\qquad k\ge0,
+\end{equation}
+are nondecreasing and converge to $M_n$. For $k\ge1$ they satisfy
+$R_{n,k}\ge A_{n,k}^{1/k}$.
+\end{theorem}
+
+\begin{proof}
+For independent standard complex Gaussians $Z_i$, orthogonality of
+monomials gives $\mathbb E|V(Z)|^{2k}=C_{n,k}$.
+Project $Z$ orthogonally onto
+$\mathcal H=\{z:\sum_i z_i=0\}$; translation invariance preserves
+$V$. This projection is a standard Gaussian in complex dimension
+$d=n-1$. Its squared radius has the $\Gamma(d,1)$ law and is
+independent of its uniform spherical direction $U$. Thus
+\[
+ \mathbb E\Delta_n(\sqrt n\,U)^k
+ =\frac{n^{kN}(d-1)!\,C_{n,k}}{(kN+d-1)!}=A_{n,k}.
+\]
+The first inequality in \eqref{eq:moment-enclosure} is the fact
+that an average does not exceed the maximum.
+
+For completeness, any homogeneous holomorphic polynomial
+$p(u)=\sum_{|\alpha|=s}b_\alpha u^\alpha$ in orthonormal coordinates
+of $\mathcal H$ satisfies the elementary Cauchy--Schwarz inequality
+\[
+ |p(u)|^2\le
+ \left(\sum_{|\alpha|=s}|b_\alpha|^2\frac{\alpha!}{s!}\right)
+ \left(\sum_{|\alpha|=s}\frac{s!}{\alpha!}|u^\alpha|^2\right)
+ =\|p\|_{B,s}^2\|u\|^{2s}.
+\]
+Gaussian integration shows that for the restriction $p=V^k$,
+$\|p\|_{B,kN}^2=C_{n,k}/(kN)!$. Applying the inequality at
+$\|u\|=\sqrt n$ proves the upper bound. The factorial identity
+in \eqref{eq:moment-enclosure} follows directly from
+\eqref{eq:coefficient-moment}.
+Since $D_{n,k}$ is a degree-$(n-2)$ polynomial in $k$ for fixed $n$,
+the endpoint ratio tends to one. Squeezing gives
+\eqref{eq:moment-exact-limit}.
+
+Let $X=\Delta_n(\sqrt n\,U)$. Then $0\le X\le M_n$ and
+$A_{n,k}=\mathbb E X^k>0$. Cauchy--Schwarz gives
+$A_{n,k+1}^2\le A_{n,k}A_{n,k+2}$, so $R_{n,k}$ increases;
+$\mathbb E X^{k+1}\le M_n\mathbb E X^k$ gives $R_{n,k}\le M_n$.
+Since $A_{n,k}=\prod_{j=0}^{k-1}R_{n,j}$ and all ratios are
+nondecreasing, $A_{n,k}^{1/k}\le R_{n,k}$. The root bounds already
+converge to $M_n$, proving convergence of the ratios.
+\end{proof}
+
+At $k=1$, $C_{n,1}=n!P_n$ and $A_{n,1}=L_n$, exactly recovering
+the earlier Gaussian lower bound. The $k=1$ coefficient upper bound
+can be substantially worse than the earlier Hadamard--Jensen upper
+bound. They should be intersected, rather than replacing a better
+finite-order bound. Convergence does not mean that a small moment
+order is sufficient in six or more points.
+
+% Fragment; classical partition compression with elementary proofs.
+\subsection{Partition compression and why a Jack norm does not evaluate the Gaussian norm}
+\label{subsec:uniform-partition-compression}
+Write $\rho=(n-1,n-2,\ldots,0)$, $N=n(n-1)/2$, and expand
+\[
+ V_n(z)^k=\sum_{|\alpha|=kN}c_\alpha z^\alpha.
+\]
+For a decreasing partition $\lambda$ of $kN$ with at most $n$ parts,
+let $a_\lambda=c_\lambda$, and let $m_j(\lambda)$ be the multiplicity
+of the part $j$, including the zero parts used to reach length $n$.
+Then the complete Gaussian coefficient sum can be written
+\begin{equation}\label{eq:uniform-partition-norm}
+ C_{n,k}=n!\sum_{\substack{\lambda\vdash kN,\ \lambda\preceq k\rho\\
+                    \ell(\lambda)\le n}}
+ \frac{a_\lambda^2}{\prod_{j\ge0}m_j(\lambda)!}
+ \prod_{i=1}^n\lambda_i!.
+\end{equation}
+When $k$ is odd, only strict partitions occur and every nonzero term
+has multiplicity denominator $1$.
+\begin{proof}
+Permuting variables changes $V_n^k$ by the $k$th power of the
+permutation sign. Thus all coefficients in an exponent orbit have equal
+squares. The orbit of $\lambda$ has $n!/\prod_jm_j!$ elements,
+proving the formula. If $k$ is odd and two exponents coincide, the
+transposition exchanging them fixes the monomial and negates its
+coefficient, so that coefficient is zero.
+
+For any subset of $r$ variables, the total exponent contributed by
+the factors of $V_n^k$ is at most
+\[
+ k\left[r(n-r)+\binom r2\right]
+ =\frac{kr(2n-r-1)}2.
+\]
+The $r$ largest exponents therefore have sum at most the first $r$
+parts of $k\rho$. This proves the support restriction
+$\lambda\preceq k\rho$. Cancellation may remove additional
+partitions, so dominance is not an assertion that every allowed
+coefficient is nonzero.
+\end{proof}
+
+This is the classical partition expansion used in T\'ellez--Forrester,
+\href{https://arxiv.org/pdf/1204.6003}{\emph{Expanded Vandermonde Powers
+and Sum Rules for the Two-Dimensional One-Component Plasma}},
+equations~(2.4), (2.9), with the Gaussian radial integral
+$G_j=j!$. Their negative-parameter Jack structure supplies coefficient
+recurrences and can improve computation. It does not turn the Gaussian
+norm into the usual Jack hook-product norm.
+
+Here is a direct check of the mismatch. The standard algebraic Jack
+scalar product makes distinct power-sum partitions orthogonal. In
+contrast, for $n\ge2$ independent standard complex Gaussian variables,
+\[
+ \mathbb E\left[\left(\sum_iZ_i^2\right)
+ \overline{\left(\sum_iZ_i\right)^2}\right]=2n\ne0.
+\]
+Thus the Gaussian scalar product used to define $C_{n,k}$ is different.
+For this identity, expand the second factor: every term with unequal
+holomorphic and antiholomorphic exponents vanishes, and each surviving
+$Z_i^2\overline{Z_i}^2$ contributes $2$. Importing a Jack norm formula
+without changing the scalar product is therefore invalid.
+
+A second elementary obstruction applies to an ordinary differential
+shift argument. Gaussian orthogonality implies
+\[
+ C_{n,k}=\left.V_n(\partial)^kV_n(z)^k\right|_{z=0},
+\]
+but one cannot recursively replace
+$V_n(\partial)V_n(z)^k$ by a scalar multiple of $V_n(z)^{k-1}$.
+For $n=3,k=3$, at $z=(0,0,1)$ one has
+\[
+ \left.(\partial_1-\partial_2)(\partial_1-\partial_3)
+ (\partial_2-\partial_3)V_3(z)^3\right|_{(0,0,1)}=-12,
+ \qquad V_3(0,0,1)^2=0.
+\]
+Only the third derivative of $(z_1-z_2)^3$ can survive there, which
+gives the stated value. This does not exclude other exact identities;
+it disproves this particular ordinary-differential shift.
+
+One may also refute a specifically normalized Selberg extrapolation.
+Suppose a product has the form
+\[
+ C_{n,k}=a_k^{N}\prod_{j=1}^n\frac{(jk)!}{k!}.
+\]
+The exact two-point value $C_{2,k}=2^kk!$ forces
+$a_k=2^k(k!)^2/(2k)!$. At $n=3,k=2$ the product predicts $1280$,
+whereas the exact unitary three-point expansion gives
+\[
+ C_{3,2}=6!+4(3!)^2+6!=1584.
+\]
+Consequently this entire one-factor-per-pair product family fails.
+Neither this counterexample nor the scalar-product mismatch proves
+that no finite closed formula of any kind can exist.
+
+\subsection{From certified approximation to an exact algebraic value}
+\begin{corollary}[Exact selection without a geometric grid]
+\label{cor:moment-exact-selection}
+Let $p_n$ be the nonzero critical-value polynomial constructed
+using the saturated graph ideal in
+Theorem~\ref{thm:exact-algorithm}. Complete integer-coefficient
+moments and rational outward root enclosures give a finite
+terminating algorithm to identify the algebraic number $M_n$.
+No complete geometric grid enumeration is needed in this version.
+\end{corollary}
+\begin{proof}
+Isolate all distinct real roots of $p_n$. For each increasing $k$,
+compute the entire integer $C_{n,k}$ by finite polynomial
+multiplication. The two endpoints of
+\eqref{eq:moment-enclosure} are positive real $k$th roots of rational
+numbers and can be enclosed outward by rational bisection, to
+additional absolute error at most $1/k$. Their interval width
+tends to zero, and the interval always contains $M_n$.
+Eventually it contains exactly one of the finitely many distinct
+real roots of $p_n$, which must be $M_n$. One can strengthen the
+lower endpoint to the rational $R_{n,k}$ when $C_{n,k+1}$ has also
+been computed. Every finite coefficient expansion, bisection,
+and root-isolation operation terminates. This argument requires
+neither isolated stationary shapes nor a guessed symmetry.
+\end{proof}
+
+The exact limit is a uniform formula in finite integer sums and a
+limit, rather than a finite closed product for each $n$. The
+corollary is a terminating algorithm, not an executed general-$n$
+elimination. Its cost still grows rapidly; partition-based
+Vandermonde expansions \cite{TF} offer a route to improve that cost.
+
+\subsection{Complete arithmetic examples and the scope of the computation}
+The standard-library program \texttt{verify\_moment\_hierarchy.py}
+completely expands 25 cases: $n=2$, $k=1,\ldots,4$;
+$n=3$, $k=1,\ldots,6$; $n=4$, $k=1,2,3,4,6,8,12,16$;
+$n=5$, $k=1,\ldots,4$; and $n=6$, $k=1,2,3$.
+All arithmetic in the sums and checks is exact integer or rational
+arithmetic. Root endpoints are outward-certified rational numbers.
+For example, the six-point third power has $177840$ nonzero
+monomials and gives
+\[
+ 6628.71382019\le M_6\le395175.36051878.
+\]
+This interval is weaker than the already available central-pentagon
+lower bound and Hadamard--Jensen upper bound. Its purpose is to
+verify the complete coefficient method, not to report a six-point
+improvement from these low orders.
+
+For three points, unitary centered coordinates give
+$V_3=u^3+v^3$ up to phase, hence independently
+\begin{equation}\label{eq:three-coefficient-moment}
+ C_{3,k}=\sum_{j=0}^k\binom kj^2(3j)!\,(3k-3j)!.
+\end{equation}
+The direct three-variable expansion agrees with this independent
+formula for every checked order $1\le k\le6$. Formula
+\eqref{eq:three-coefficient-moment} permits much higher orders;
+the computation includes $k=8,16,32,64,128,256$. Using the rational
+moment-ratio lower bound gives, with outward-rounded endpoints,
+\[
+ \begin{array}{c|cc}
+ k&\hbox{lower bound}&\hbox{upper bound}\\\hline
+ 16&25.41406404&28.22380137\\
+ 64&26.58521966&27.29554016\\
+ 256&26.89498543&27.07329696
+ \end{array}
+\]
+These intervals contain the independently known value $M_3=27$.
+At order $256$, the coefficient upper bound is within $0.272\%$
+of that value. The examples validate the normalization and
+convergence without using the known maximum to calculate an upper
+bound.
+
+\section{A convergent multiplication-operator spectral hierarchy}
+\label{sec:spectral-hierarchy}
+The norm of multiplication by a fixed homogeneous polynomial in
+Bombieri's norm is a classical finite-dimensional eigenvalue problem;
+see Beauzamy \cite{Beauzamy}. We apply this construction to the centered
+Vandermonde, prove an explicit error factor, and distinguish convergence
+from finite attainment of a sharp bound. No claim of priority is made
+for the multiplication-operator framework.
+
+Put $d=n-1$ and $\mathcal H=\{z\in\C^n:\sum_i z_i=0\}$. Choose an
+isometry $B:\C^d\longrightarrow\mathcal H$, so $B^*B=I_d$, and set
+\[
+ f(u)=\prod_{i<j}\big((Bu)_i-(Bu)_j\big)
+      =\sum_{|\gamma|=N}a_\gamma u^\gamma.
+\]
+Centering and homogeneity give
+\begin{equation}\label{eq:spectral-normalization}
+ S:=\max_{\|u\|=1}|f(u)|^2=\frac{M_n}{n^N}.
+\end{equation}
+For $s\ge0$, use the normalized monomial column
+\[
+ h_s(u)=\left(\sqrt{\binom{s}{\beta}}\,u^\beta\right)_{|\beta|=s},
+ \qquad D_s=\binom{d+s-1}{s},\qquad
+ \binom{s}{\beta}=\frac{s!}{\beta_1!\cdots\beta_d!}.
+\]
+Thus $\|h_s(u)\|^2=\|u\|^{2s}$. The degree-$s$ Bombieri norm is
+\[
+ \left\|\sum_{|\beta|=s}b_\beta u^\beta\right\|_{B,s}^2
+ =\sum_{|\beta|=s}\frac{|b_\beta|^2}{\binom{s}{\beta}}.
+\]
+For an integer $r\ge0$, define the $D_{N+r}\times D_r$ matrix
+\begin{equation}\label{eq:spectral-matrix}
+ (A_r)_{\beta\alpha}
+ =\overline{a_{\beta-\alpha}}
+   \sqrt{\frac{\binom r\alpha}{\binom{N+r}\beta}},
+ \qquad |\beta|=N+r,\quad |\alpha|=r,
+\end{equation}
+where $a_\gamma=0$ when a component of $\gamma$ is negative. Put
+$K_r=A_rA_r^*$ and
+$\Lambda_r=\lambda_{\max}(A_r^*A_r)=\lambda_{\max}(K_r)$.
+The conjugation in \eqref{eq:spectral-matrix} makes the convention
+$p(u)=c^*h_s(u)$ consistent with the usual Hermitian Gram matrix.
+
+\begin{theorem}[Certified spectral bounds]\label{thm:spectral-hierarchy}
+For every $r\ge0$,
+\begin{equation}\label{eq:spectral-bounds}
+ M_n\le n^N\Lambda_r
+ \le\frac{D_{N+r}}{D_r}M_n,
+ \qquad
+ \frac{D_{N+r}}{D_r}
+ =\prod_{j=1}^{n-2}\left(1+\frac{N}{r+j}\right).
+\end{equation}
+Put $T_r=(D_r/D_{N+r})\Lambda_r$. The sequence $\Lambda_r$ is
+nonincreasing, $T_r$ is nondecreasing, and both tend to $M_n/n^N$.
+Thus $[n^NT_r,n^N\Lambda_r]$ is a nested interval with the explicit
+endpoint ratio $D_{N+r}/D_r$.
+For $n\ge3$, $r\ge0$, and $\varepsilon>0$, the condition
+\[
+ r+1\ge\frac{N(n-2)}{\log(1+\varepsilon)}
+\]
+ensures $M_n\le n^N\Lambda_r\le(1+\varepsilon)M_n$.
+Moreover, a proposed $U$ is certified by the exact matrix inequality
+$UI_{D_{N+r}}-K_r\succeq0$, and then $M_n\le n^NU$.
+Equivalently one may test the smaller matrix
+$UI_{D_r}-A_r^*A_r\succeq0$ when $U\ge0$.
+\end{theorem}
+\begin{proof}
+The column indexed by $\alpha$ is the conjugated normalized coefficient
+vector of $f(u)\sqrt{\binom r\alpha}u^\alpha$. Consequently
+\begin{equation}\label{eq:spectral-gram-identity}
+ h_{N+r}(u)^*K_rh_{N+r}(u)
+ =|f(u)|^2\sum_{|\alpha|=r}\binom r\alpha|u^\alpha|^2
+ =|f(u)|^2\|u\|^{2r}.
+\end{equation}
+For a unit vector $u$, $h_{N+r}(u)$ is also a unit vector, so
+\eqref{eq:spectral-gram-identity} proves $S\le\Lambda_r$.
+
+Let $\sigma$ be probability surface measure on the unit sphere of
+$\C^d$. Unitary invariance, or integration of monomials, gives
+\begin{equation}\label{eq:bombieri-sphere}
+ \int|p(u)|^2\,d\sigma(u)=\frac{\|p\|_{B,s}^2}{D_s}
+ \quad\text{for every homogeneous degree-$s$ polynomial }p.
+\end{equation}
+Since the conjugate matrix $\overline{A_r}$ represents multiplication
+by $f$ between the degree-$r$ and degree-$(N+r)$ Bombieri spaces,
+\[
+ \Lambda_r=\sup_{p\ne0}
+   \frac{\|fp\|_{B,N+r}^2}{\|p\|_{B,r}^2}
+ =\frac{D_{N+r}}{D_r}\sup_{p\ne0}
+   \frac{\int|f|^2|p|^2\,d\sigma}{\int|p|^2\,d\sigma}
+ \le\frac{D_{N+r}}{D_r}S.
+\]
+This proves \eqref{eq:spectral-bounds}; the product formula follows
+by cancelling the factorials in $D_{N+r}/D_r$.
+
+For any $U\ge\Lambda_r$, the Hermitian polynomial
+\[
+ U\|u\|^{2(N+r)}-|f(u)|^2\|u\|^{2r}
+ =h_{N+r}(u)^*(UI-K_r)h_{N+r}(u)
+\]
+is a sum of squared absolute values of homogeneous holomorphic
+polynomials. Multiplying this representation by
+$\|u\|^2=\sum_j|u_j|^2$ preserves that property. The normalized
+monomials form a basis, and the products
+$u^\beta\overline{u^\gamma}$ are linearly independent as functions,
+so the Hermitian coefficient matrix is unique. At level $r+1$ it is
+$UI-K_{r+1}$, and it is positive semidefinite. Taking
+$U=\Lambda_r$ gives $\Lambda_{r+1}\le\Lambda_r$.
+For completeness, write
+\[
+ T_r=\sup_{p\ne0,\ \deg p=r}
+ \frac{\int|f|^2|p|^2\,d\sigma}{\int|p|^2\,d\sigma}.
+\]
+For a maximizing $p$, the degree-$(r+1)$ polynomials $u_jp$ satisfy
+\[
+ \sum_j\int|u_jp|^2\,d\sigma=\int|p|^2\,d\sigma,
+ \qquad
+ \sum_j\int|f|^2|u_jp|^2\,d\sigma
+       =\int|f|^2|p|^2\,d\sigma.
+\]
+The ratio on the right is a weighted average of the ratios on the
+left, so at least one is at least $T_r$. Hence $T_{r+1}\ge T_r$.
+The error factor tends to one, proving convergence. Finally,
+\[
+ \log\frac{D_{N+r}}{D_r}
+ \le\sum_{j=1}^{n-2}\frac{N}{r+j}
+ \le\frac{N(n-2)}{r+1},
+\]
+which proves the stated error criterion. The matrix certificate is
+the same Gram identity. The two positive-semidefinite tests are
+equivalent because the nonzero eigenvalues of $A_rA_r^*$ and
+$A_r^*A_r$ coincide.
+\end{proof}
+
+At $r=0$ the matrix has a single column and
+\begin{equation}\label{eq:spectral-level-zero}
+ \Lambda_0=\|f\|_{B,N}^2=\frac{n!P_n}{N!}
+             =\frac{C_{n,1}}{N!}.
+\end{equation}
+Indeed, a standard complex Gaussian $U$ in $\C^d$ satisfies
+$\mathbb E|f(U)|^2=N!\|f\|_{B,N}^2$. If $Z$ is a standard Gaussian
+in $\C^n$, orthogonal projection onto $\mathcal H$ preserves the
+Vandermonde, hence this expectation equals
+$\mathbb E|V(Z)|^2=n!P_n$.
+
+\begin{proposition}[The first spectral level]\label{prop:spectral-level-one}
+For every $n\ge2$,
+\begin{equation}\label{eq:spectral-level-one}
+ \Lambda_1=\frac{n+2}{2(N+1)}\Lambda_0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The Gaussian weighted covariance matrix
+$\mathbb E(|f(U)|^2UU^*)$ commutes with the standard representation
+of $S_n$ on $\mathcal H$. That representation is irreducible over
+$\C$ (and one-dimensional when $n=2$), so the matrix is scalar.
+Radial integration gives
+\[
+ \mathbb E(|f(U)|^2\|U\|^2)=(N+d)\mathbb E|f(U)|^2.
+\]
+The scalar is therefore $(N+d)n!P_n/d$. Gaussian integration and
+the degree-$(N+1)$ Bombieri normalization show that $A_1^*A_1$ is
+this scalar divided by $(N+1)!$, times the identity. Since
+$(N+d)/d=(n+2)/2$, \eqref{eq:spectral-level-one} follows.
+\end{proof}
+
+One can choose $B$ with real algebraic entries, for example the
+Helmert basis with column $k$ equal to
+$(1,\ldots,1,-k,0,\ldots,0)/\sqrt{k(k+1)}$, $1\le k<n$.
+Then every matrix entry in \eqref{eq:spectral-matrix} is algebraic.
+Exact algebraic linear algebra or certified root isolation can
+certify its largest eigenvalue. Numerical eigenvalues alone do not
+give rigorous upper bounds. The matrix dimension $D_r$ still grows
+rapidly with $n$ and $r$; the convergence theorem is not a claim of
+uniformly inexpensive computation. The symmetric group acts on the
+degree-$r$ space, and $A_r^*A_r$ commutes with this action, so
+representation-theoretic block decomposition is available.
+
+The spectral lower bounds also contain the scalar moment-ratio
+lower bounds. If
+$A_{n,k}=n^{kN}\int|f|^{2k}\,d\sigma$, using $p=f^k$ in the
+variational expression for $T_{kN}$ gives
+\[
+ n^NT_{kN}\ge\frac{A_{n,k+1}}{A_{n,k}}.
+\]
+The spectral optimization allows all degree-$kN$ multipliers,
+whereas this moment ratio uses one specified multiplier.
+
+\subsection{A closed formula for the second spectral level}
+The first two multiplier degrees can be evaluated for every point
+count without constructing the full matrix.
+
+\begin{proposition}[Second spectral level]\label{prop:spectral-level-two}
+Let $C=n!P_n=C_{n,1}$. On the degree-two centered polynomial space,
+the eigenvalues of $A_2^*A_2$ are
+\begin{equation}\label{eq:spectral-level-two-eigenvalues}
+ \frac{C}{(N+2)!}\left\{
+ 2(n+1),\quad \frac{n^2+6n+6}{3},\quad
+ \frac{(3n+5)(n+2)}6\right\},
+\end{equation}
+with respective multiplicities $1$, $n-1$, and $n(n-3)/2$ when
+$n\ge3$. For $n=3$ the third multiplicity is zero; for $n=2$
+only the first eigenvalue occurs. Consequently
+\[
+ \Lambda_2=
+ \begin{cases}
+ 2,&n=2,\\[2pt]
+ 11/10,&n=3,\\[2pt]
+ \displaystyle\frac{n!P_n}{(N+2)!}
+       \frac{(3n+5)(n+2)}6,&n\ge4.
+ \end{cases}
+\]
+\end{proposition}
+\begin{proof}
+Let $Z$ be a standard complex Gaussian in $\C^n$. All moments in
+this proof use the normalized weighted expectation
+\[
+ \mathcal E[g]=\frac{\mathbb E(|V(Z)|^2g(Z))}{C},
+ \qquad \mathcal E[1]=1.
+\]
+Write $t=\sum_iZ_i$ and $w_i=Z_i-t/n$. Translation invariance of
+$V$ implies that $t$ is independent of $w$ under this weighted
+measure and has the centered complex Gaussian distribution of
+variance $n$. Complex Gaussian integration by parts gives
+\begin{equation}\label{eq:weighted-translation-ibp}
+ \mathcal E[g\overline t]=
+ \mathcal E\left[\sum_i\frac{\partial g}{\partial Z_i}\right]
+\end{equation}
+for every polynomial $g$; the derivative of the Vandermonde weight
+vanishes after summing the translation derivatives.
+
+For pairwise distinct indices as needed, the moments are
+\begin{align*}
+ m&=\mathcal E[|Z_1|^2]=\frac{n+1}{2},&
+ \rho&=\mathcal E[Z_1\overline Z_2]=-\frac12,\\
+ a&=\mathcal E[|Z_1|^4]=\frac{(n+1)(n+2)}3,&
+ b&=\mathcal E[Z_1^2\overline Z_2^{\,2}]=-\frac{n-2}{3},\\
+ c&=\mathcal E[|Z_1Z_2|^2]=\frac{(n+1)(3n+2)}{12},&
+ d_0&=\mathcal E[Z_1^2\overline Z_1\overline Z_2]
+      =-\frac{n+1}{3},\\
+ e&=\mathcal E[Z_1^2\overline Z_2\overline Z_3]=\frac23,&
+ g_0&=\mathcal E[Z_1Z_2\overline Z_1\overline Z_3]
+       =-\frac{3n+1}{12},\\
+ h&=\mathcal E[Z_1Z_2\overline Z_3\overline Z_4]=\frac12.
+\end{align*}
+Here $e,g_0$ require $n\ge3$, and $h$ requires $n\ge4$.
+We give the derivation to fix the labeling and normalization.
+Expanding $V$ as an alternating sum over permutations of exponents
+$0,\ldots,n-1$ and integrating monomials gives
+\[
+ m=\frac1n\sum_{k=0}^{n-1}(k+1),\qquad
+ a=\frac1n\sum_{k=0}^{n-1}(k+1)(k+2).
+\]
+For $b$, the only surviving permutation pairs exchange two
+exponents differing by two; their signs are opposite. Thus
+\[
+ b=-\frac1{n(n-1)}\sum_{k=0}^{n-3}(k+1)(k+2).
+\]
+Applying \eqref{eq:weighted-translation-ibp} first to $Z_1$ and
+then to $Z_1^2\overline Z_1$, $Z_1^2\overline Z_2$,
+$Z_1Z_2\overline Z_1$, and $Z_1Z_2\overline Z_3$ gives, in order,
+\begin{align*}
+ m+(n-1)\rho&=1,\\
+ a+(n-1)d_0&=2m,\\
+ d_0+b+(n-2)e&=2\rho,\\
+ d_0+c+(n-2)g_0&=m+\rho,\\
+ 2g_0+e+(n-3)h&=2\rho.
+\end{align*}
+Finally, homogeneity gives
+$\mathcal E[(\sum_i|Z_i|^2)^2]=(N+n)(N+n+1)$, so
+$na+n(n-1)c=(N+n)(N+n+1)$. These identities yield every moment
+displayed above, with the last identity used only when $n\ge4$.
+
+Consider the following mutually orthogonal spaces of centered
+quadratic polynomials, using the degree-two Bombieri inner product:
+\[
+ \begin{split}
+ \mathcal Q_0&=\operatorname{span}\{q\},\qquad q=\sum_iw_i^2,\\
+ \mathcal Q_1&=\operatorname{span}\{w_i^2-w_j^2:i,j\},\\
+ \mathcal Q_2&=\left\{p=\sum_{i<j}a_{ij}Z_iZ_j:
+                 \sum_{j\ne i}a_{ij}=0\ \text{for every }i\right\}.
+ \end{split}
+\]
+The notation in $\mathcal Q_2$ extends $a_{ij}=a_{ji}$, $a_{ii}=0$.
+Its row-sum conditions make $p$ translation invariant.
+For $n\ge3$, these spaces have dimensions $1$, $n-1$, and
+$n(n-3)/2$, respectively. Indeed, $\mathcal Q_1$ is the standard
+representation of $S_n$: the map
+$(v_i)\mapsto\sum_iv_iw_i^2$ is injective on $\sum_iv_i=0$,
+as its Bombieri norm squared is
+$(1-2/n)\sum_i|v_i|^2>0$ there. The unoriented incidence matrix
+of the complete graph has row rank $n$ for $n\ge3$, giving the
+dimension of $\mathcal Q_2$. Their orthogonality follows by
+expanding the quadratic coefficients and using the row sums;
+their dimensions total $n(n-1)/2$, the whole centered quadratic
+space. When $n=2$ that space consists of $\mathcal Q_0$ alone.
+
+The same spaces are orthogonal for the weighted form
+$(p_1,p_2)\mapsto\mathcal E[p_1\overline p_2]$.
+The first and second spaces are orthogonal by permutation symmetry.
+For $p\in\mathcal Q_2$, the moment table and its row sums give
+$\mathcal E[Z_i^2\overline p]=0$ for every $i$. Independence of $t$
+and $w$ gives the same result with $w_i^2$ in place of $Z_i^2$.
+This proves the remaining orthogonality.
+
+On $\mathcal Q_0$, the identities
+\[
+ \mathcal E\left[\left|\sum_iZ_i^2\right|^2\right]=2n^2,
+ \quad \sum_iZ_i^2=q+t^2/n,
+ \quad\mathcal E[|t^2/n|^2]=2
+\]
+give $\mathcal E[|q|^2]=2(n^2-1)$, whereas
+$\|q\|_{B,2}^2=n-1$. Its weighted/Bombieri ratio is $2(n+1)$.
+On $\mathcal Q_1$, invariance and irreducibility make that ratio
+constant. Using $p=w_1^2-w_2^2$ gives
+\[
+ \begin{split}
+ \mathcal E[|p|^2]
+ &=2(a-b)-\frac4n\mathcal E[|w_1-w_2|^2]\\
+ &=\frac{2n(n+4)}3-\frac{4(n+2)}n
+   =\frac{2(n-2)(n^2+6n+6)}{3n},\\
+ \|p\|_{B,2}^2&=\frac{2(n-2)}n.
+ \end{split}
+\]
+The subtraction follows from
+$Z_1^2-Z_2^2=p+(2t/n)(w_1-w_2)$ and the independence of $t$;
+also $\mathcal E[|w_1-w_2|^2]=2(m-\rho)=n+2$.
+This yields the second ratio $(n^2+6n+6)/3$.
+
+For $p\in\mathcal Q_2$, put $D=\sum_{i<j}|a_{ij}|^2$.
+The row sums imply that the sum of the ordered coefficient products
+for distinct edges sharing a vertex is $-2D$; the sum for disjoint
+edges is $D$, since $\sum_{i<j}a_{ij}=0$. The moment table therefore
+gives
+\[
+ \mathcal E[|p|^2]=(c-2g_0+h)D,
+ \qquad \|p\|_{B,2}^2=D/2,
+\]
+so the third ratio is
+$2(c-2g_0+h)=(3n+5)(n+2)/6$.
+Finally, Gaussian integration converts the output norm by
+\[
+ \|fp\|_{B,N+2}^2=\frac{C}{(N+2)!}\mathcal E[|p|^2].
+\]
+The three ratios thus give \eqref{eq:spectral-level-two-eigenvalues}.
+The second exceeds the first by $n^2/3$; the third exceeds the
+second by $(n-2)(n+1)/6$. Taking the largest present block proves
+the stated formula for $\Lambda_2$.
+\end{proof}
+
+\subsection{Why this hierarchy cannot prove a sharp finite bound}
+The upper bounds converge, but the sharp value itself has an
+obstruction to a finite certificate of this particular Hermitian
+sum-of-squares form. The following statement holds for every nonzero
+homogeneous holomorphic polynomial, not just the Vandermonde.
+
+\begin{proposition}[Finite sharpness obstruction]\label{prop:spectral-no-finite-sharpness}
+Let $f$ be nonzero and homogeneous of degree $N\ge1$ on $\C^d$, and
+construct $\Lambda_r$ as above. Put
+$S=\max_{\|u\|=1}|f(u)|^2$. For a finite $r\ge0$, equality
+$\Lambda_r=S$ is possible if and only if
+$f(u)=a\ell(u)^N$ for a unit-norm linear functional $\ell$ and
+a nonzero scalar $a$. In particular, for the centered Vandermonde
+with $n\ge3$,
+\begin{equation}\label{eq:spectral-strictness}
+ n^N\Lambda_r>M_n\qquad\text{for every finite }r.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Suppose $\Lambda_r=S$. The polynomial
+$S\|u\|^{2(N+r)}-|f(u)|^2\|u\|^{2r}$ is a Hermitian sum of squares.
+Choose a unitary coordinate change sending a maximizing point to
+$e_1$. Such a change preserves a sum-of-squares representation.
+Write $f(u)=\sum_{|\gamma|=N}a_\gamma u^\gamma$ in the new
+coordinates, with $a_0:=a_{(N,0,\ldots,0)}=f(e_1)$; thus
+$|a_0|^2=S>0$. In its unique normalized Hermitian coefficient
+matrix, the diagonal entry indexed by $u_1^{N+r}$ is zero.
+A positive-semidefinite matrix with a zero diagonal entry has the
+entire corresponding row and column zero.
+
+For any $\gamma\ne(N,0,\ldots,0)$ with $|\gamma|=N$, let
+$\beta=\gamma+(r,0,\ldots,0)$. The entry in that row and column
+$\beta$ equals
+\[
+ -\frac{\overline{a_0}a_\gamma}{\sqrt{\binom{N+r}\beta}}.
+\]
+Indeed, in \eqref{eq:spectral-matrix} the row indexed by
+$(N+r,0,\ldots,0)$ can have only the column
+$\alpha=(r,0,\ldots,0)$ nonzero, and the norm-power term is diagonal.
+Every $a_\gamma$ other than $a_0$ must consequently vanish. Hence
+$f=a_0u_1^N$ in these coordinates, proving necessity for every
+$r\ge0$, including $r=0$.
+
+Conversely, after a unitary change let $f=a u_1^N$. Expanding
+$|a|^2\big(\|u\|^{2(N+r)}-|u_1|^{2N}\|u\|^{2r}\big)$ in
+monomial absolute squares gives nonnegative coefficients: the
+coefficients are $|a|^2\binom{N+r}\beta$ minus
+$|a|^2\binom r{\beta-(N,0,\ldots,0)}$, when the latter exists.
+The first multinomial coefficient is at least the second, by
+injecting length-$r$ words with the specified multiplicities into
+length-$(N+r)$ words by appending $N$ copies of the first letter.
+Thus its Hermitian coefficient matrix is positive semidefinite,
+and $\Lambda_r\le |a|^2=S$; evaluation at $e_1$ gives equality.
+For $n\ge3$, the linear factors $z_1-z_2$ and $z_1-z_3$ restricted
+to $\mathcal H$ are nonproportional, so the centered Vandermonde
+cannot be a power of one linear form.
+\end{proof}
+
+Thus this spectral hierarchy gives arbitrarily sharp strict upper
+bounds. It does not supply a finite sharp Hermitian certificate for
+$M_6$ or any other $n\ge3$. This does not exclude other real
+sum-of-squares certificates, certificates using additional
+relations, or exact-value identification by combining convergent
+bounds with a critical-value polynomial.
+
+\subsection{An exact three-point spectral calculation}
+For $n=3$, a unitary Fourier basis of the centered plane gives
+$f(u,v)=u^3+v^3$ up to a constant phase and a unitary change of $v$.
+For example, take $\omega=e^{2\pi i/3}$ and
+$(Bu)_j=(\omega^ju+\omega^{-j}v)/\sqrt3$, $j=0,1,2$;
+the Vandermonde is a constant of modulus one times $u^3-v^3$.
+Changing the phase of $v$ gives the stated plus sign.
+At $r=1$, in the degree-four basis
+$(u^4,2u^3v,\sqrt6u^2v^2,2uv^3,v^4)$,
+\[
+ A_1=\begin{pmatrix}
+ 1&0\\0&1/2\\0&0\\1/2&0\\0&1
+ \end{pmatrix},\qquad
+ A_1^*A_1=\frac54I_2.
+\]
+At $r=2$ the three columns have disjoint monomial supports, giving
+\[
+ A_2^*A_2=\operatorname{diag}\left(\frac{11}{10},
+                           \frac45,\frac{11}{10}\right).
+\]
+Consequently $\Lambda_0=2$, $\Lambda_1=5/4$, and
+$\Lambda_2=11/10$, giving the exact certified upper bounds
+$54$, $135/4$, and $297/10$ for $M_3$. The unit triangle gives
+$M_3\ge27$, and the previously proved exact value is $M_3=27$.
+The strict finite gaps illustrate
+Proposition~\ref{prop:spectral-no-finite-sharpness}.
+
+A finite sharp certificate becomes possible when squares of mixed
+polynomials in $u,v,\overline u,\overline v$ are permitted:
+\begin{equation}\label{eq:three-real-sos}
+\begin{split}
+ (|u|^2+|v|^2)^3-|u^3+v^3|^2
+ ={}&|u^2\overline v-\overline u v^2|^2\\
+ &+2|u^2\overline v|^2+2|\overline u v^2|^2.
+\end{split}
+\end{equation}
+Expansion proves the identity and hence $S\le1$; equality at
+$(u,v)=(1,0)$ gives $M_3=27$. These are real polynomial squares
+after splitting each term into its real and imaginary parts.
+They are not squares of holomorphic polynomials, so the identity
+does not contradict the finite sharpness obstruction.
+
+% Add to the main bibliography:
+% \bibitem{Beauzamy}
+% B.~Beauzamy, \emph{Extremal products in Bombieri's norm},
+% January 1995.
+% \url{https://www.scmsa.eu/BB_Publications/BB_Extremal_products_Bombieri_norm.pdf}.
+
+\subsection{Exact six-point spectral certificates at low levels}
+For a directly reproducible calculation, retain all six ambient
+variables and expand
+\[
+ V_6(z)=\sum_{\sigma\in S_6}\operatorname{sgn}(\sigma)
+             \prod_{i=1}^6z_i^{\sigma(i)-1}
+        =\sum_{|\gamma|=15}c_\gamma z^\gamma .
+\]
+This differs from the centered implementation only in the choice of
+ambient space; evaluation on the unit sphere still gives a valid
+upper bound for $M_6/6^{15}$. For $|\alpha|=|\eta|=r$, put
+\[
+ D_{\alpha\alpha}=\alpha!,\qquad
+ H_{\alpha\eta}=\sum_{|\delta|=15+r}
+            c_{\delta-\alpha}c_{\delta-\eta}\,\delta!,
+\]
+where coefficients with negative indices vanish and multi-index
+factorials denote products of ordinary factorials. The multiplication
+Gram matrix is
+\[
+ \widetilde G_r=\frac{r!}{(15+r)!}D^{-1/2}HD^{-1/2}.
+\]
+Consequently an integer $U_r$ satisfies $M_6<U_r$ whenever
+\[
+ U_r(15+r)!\,D-r!\,6^{15}H\succ0.
+\]
+The ancillary program \texttt{verify\_six\_spectral.py} regenerates
+$H$ from the $720$ signed permutation monomials and verifies this
+last inequality by fraction-free Bareiss elimination. Every division
+is checked to be exact, and every leading principal determinant is
+checked to be positive; thus Sylvester's criterion supplies an
+integer-arithmetic certificate independent of floating-point
+eigenvalue calculations.
+
+\begin{center}
+\begin{tabular}{rrrl}
+\toprule
+$r$ & Matrix size & Certified $U_r$ &
+ $6^{15}\lambda_{\max}(\widetilde G_r)$, numerical\\
+\midrule
+1 & 6   & $2\,236\,740$ & $2\,236\,739.38$\\
+2 & 21  & $1\,008\,726$ & $1\,008\,725.60$\\
+3 & 56  & $614\,007$    & $614\,006.89$\\
+4 & 126 & $405\,332$    & $405\,331.53$\\
+5 & 252 & ---           & $290\,511.27$ (estimate)\\
+6 & 462 & ---           & $235\,776.01$ (estimate)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The default exact verifier runs levels $1$ through $4$ in about
+three seconds in the present environment and needs no third-party
+Python package or cached matrix. An optional NumPy calculation
+reproduces the floating-point estimates; the values displayed for
+levels $5$ and $6$ are not used as certified inequalities here.
+The JSON record includes SHA-256 hashes of the regenerated integer
+Gram matrices and the Bareiss pivots. These hashes identify the
+computed data; positivity and exact division, rather than the hashes,
+constitute the proof. These low levels demonstrate working
+six-point spectral certificates. All their upper bounds exceed
+$89\,309$ and the exact value in Theorem~\ref{thm:six-global};
+they do not supply the sharp six-point proof.
+
+
+\section{From the six-point proof to a uniform certification method}
+\label{sec:six-to-uniform}
+
+The six-point proof separates three questions: covering every stationary
+shape, enforcing actual conjugation, and comparing values.  The first
+question uses the published algebraic computation; the last two now
+have independent rational certificates.  The same separation gives a
+uniform strategy for larger point counts, without prescribing polygon
+or reflection symmetry.
+
+\subsection{A coefficient system with only \texorpdfstring{$n-2$}{n-2} nontrivial equations}
+Let $P(t)=\prod_{i=1}^n(t-w_i)$ be monic and centered, with distinct
+roots, and put
+\[
+ r_i=\frac{P''(w_i)}{2P'(w_i)},\qquad
+ D(Y)=\prod_i(Y-r_i),\qquad
+ K(Y)=\sum_i w_i\prod_{j\ne i}(Y-r_j).
+\]
+Both $D$ and $K$ have coefficients rational in the coefficients of $P$,
+with denominators supported on its discriminant.  They can be computed
+by resultants and a first derivative, without choosing or ordering roots:
+\[
+ D(Y)=\frac{\operatorname{Res}_t(P,YP'-P''/2)}
+                  {\operatorname{Res}_t(P,P')},\qquad
+ K(Y)=\left.\frac{\partial}{\partial T}
+ \frac{\operatorname{Res}_t(P,(Y+Tt)P'-P''/2)}
+      {\operatorname{Res}_t(P,P')}\right|_{T=0}.
+\]
+The formula for $K$ follows by differentiating
+$\prod_i(Y+Tw_i-r_i)$.
+
+Every physical force-$1$ stationary configuration has $r_i=\overline
+w_i$ and consequently satisfies the dual force equations.  If the
+$r_i$ are distinct, those dual equations are equivalent to
+\begin{equation}\label{eq:uniform-dual-coefficients}
+                 D''(Y)=2K(Y).
+\end{equation}
+Indeed, at $Y=r_i$, $K(r_i)=w_iD'(r_i)$; hence the polynomial
+$D''-2K$ vanishes at all $n$ distinct roots if and only if the dual
+forces hold.  Its degree is at most $n-2$.
+The leading coefficient is automatically zero, because
+$\sum_i w_ir_i=n(n-1)/2$.  Thus \eqref{eq:uniform-dual-coefficients}
+has only $n-2$ nontrivial scalar coefficient equations.  Clearing
+denominators must be followed by discriminant saturation.
+
+There are $n-1$ centered coefficients.  On each chart normalize the
+first nonzero elementary coefficient to one, leaving $n-2$ complex
+unknowns.  Treat every zero-coefficient chart as well.  The dual
+coefficient equations provide a compact permutation quotient of the
+necessary stationary equations.  Actual conjugation must still be
+checked; the six-point spurious branches show why it cannot be omitted.
+The positive trace formulation in Section~\ref{sec:trace-stationary}
+provides an exact alternative to rootwise conjugate tests.
+
+\subsection{Finite branch certificates and finite value certificates}
+When a saturated chart decomposition is zero-dimensional, isolate
+every complex parameter root by disjoint rational disks.  Propagate
+coefficient errors and isolate the roots of $P$ uniformly over each
+parameter disk, as in Section~\ref{sec:six-disk-certificate}.  For
+$Q=\sum_i|w_i|^2$ and $N=n(n-1)/2$, physical stationarity requires
+\[
+ QP''(w_i)-2N\overline{w_i}P'(w_i)=0,
+\]
+and the value on the original moment-$n$ sphere is
+\[
+                 (n/Q)^N|\operatorname{Disc}P|.
+\]
+A single rigorously nonzero force residual excludes a branch.  For
+each remaining branch, an outward product bound proves strict
+inferiority when there is a value gap.  Algebraic value comparison or
+an exact identity handles branches attaining the same value.
+The degree counts and the disk inequalities, rather than numerical
+root seeds, certify coverage.
+
+Zero-dimensionality of every shape chart is not assumed for arbitrary
+$n$.  If a positive-dimensional component occurs, point disks alone
+cannot exhaust it.  The exact critical-value construction of
+Theorem~\ref{thm:exact-algorithm} remains available: it eliminates to
+a nonzero polynomial in the objective value, since the value is
+constant on each relevant irreducible critical component.
+This proves finiteness of critical values without requiring a finite
+classification of shapes.
+
+Combine that polynomial with either the coefficient-moment enclosure
+or the spectral enclosure.  Increase the order until a rational
+outward interval contains only one distinct real root of the
+critical-value polynomial.  The interval is known to contain $M_n$;
+convergence and the positive separation between distinct roots make
+this procedure terminate for each fixed $n$.  The output is an exact
+algebraic specification of $M_n$, including an isolating interval.
+It does not require knowing its extremal geometry in advance.
+
+This gives a unified exact-value framework, together with a practical
+branch route demonstrated at $n=6$.  The coefficient equations, trace
+positivity, radial stability cuts, moment bounds and spectral bounds
+can be combined before expensive elimination.  Their cost still grows
+with $n$; the framework is not a finite closed formula for all $M_n$.
+The ten-point example and the instability of sufficiently large
+central polygons prevent the six-point geometry from serving as a
+universal extremal ansatz. The fixed-ring gap in
+Section~\ref{sec:fixed-ring-obstruction} proves a stronger limitation:
+every fixed number of regular rings loses a positive amount at the
+leading $n^2$ scale. The polar construction requires a growing number
+of rings and provides explicit all-$n$ lower values. Section~
+\ref{sec:uniform-linear-constant} identifies the remaining global
+linear coefficient with a universal microscopic energy constant.
+Even resolving that constant would leave finite-$n$ boundary corrections
+and extremal shapes to determine.
+
+% Fragment for the existing research manuscript; not a standalone document.
+\section{The linear asymptotic constant and the crystallization question}
+\label{sec:uniform-linear-constant}
+The general-$n$ problem is exactly a quadratic weighted Fekete problem,
+including its finite-$n$ normalization. This observation permits a sharper
+asymptotic statement than an unspecified $O(n)$ remainder. The result
+below is a specialization of the classical renormalized-energy theory,
+not a new proof of that theory and not a finite closed formula for $M_n$.
+
+Set $N=n(n-1)/2$ and define the unconstrained quadratic energy
+\[
+ H_n(x)=-\sum_{i\ne j}\log|x_i-x_j|+n\sum_i|x_i|^2,
+ \qquad e_n=\min_{x\in\mathbb C^n}H_n(x).
+\]
+\begin{proposition}[Exact constrained--unconstrained equivalence]
+\label{prop:uniform-gaussian-equivalence}
+For every $n\ge2$,
+\begin{equation}\label{eq:uniform-gaussian-equivalence}
+ e_n=-\log M_n+N\left[1-\log\frac{n-1}{2n}\right].
+\end{equation}
+Every minimizer of $H_n$ is centered and satisfies
+$\sum_i|x_i|^2=(n-1)/2$. Multiplication by
+$\sqrt{2n/(n-1)}$ maps its shape to a maximizer defining $M_n$, and
+this correspondence is reversible.
+\end{proposition}
+\begin{proof}
+Centering preserves pair distances and decreases the quadratic term,
+so a minimizer is centered. In the constrained problem, centering and
+then rescaling to squared radius $n$ strictly increases the positive
+Vandermonde product unless the centroid was already zero. Thus its
+maximizers are centered as well. For a centered shape $z$ with
+$\sum_i|z_i|^2=n$, scaling it by $t>0$ gives
+\[
+ H_n(tz)=-\log\Delta_n(z)-N\log t^2+n^2t^2.
+\]
+The strictly convex function of $t^2$ on the right is minimized at
+$t^2=N/n^2=(n-1)/(2n)$, independently of the shape. At this scale,
+its last two terms are $N-N\log((n-1)/(2n))$.
+Minimizing the remaining shape term proves the identity and the
+correspondence. Existence also follows from compactness of the
+centered sphere and positivity of its Vandermonde maximum.
+\end{proof}
+
+We specify the convention for the universal constant. Let
+$\mathcal A_1$ be the class of curl-free planar electric fields satisfying
+\[
+ \operatorname{div}E=2\pi\left(\sum_{p\in\Lambda}\delta_p-1\right),
+\]
+with $\Lambda$ discrete and
+$\sup_{R\ge1}\#(\Lambda\cap B_R)/R^2<\infty$.
+For smooth nonnegative cutoffs $\chi_R$ supported in
+$K_R=[-R,R]^2$, define
+\[
+ W(E)=\limsup_{R\to\infty}\frac1{|K_R|}
+ \lim_{\eta\downarrow0}\left[
+ \frac12\int_{\mathbb R^2\setminus\bigcup_{p\in\Lambda}B(p,\eta)}
+ \chi_R|E|^2+\pi\log\eta\sum_{p\in\Lambda}\chi_R(p)\right],
+ \qquad W_*:=\min_{\mathcal A_1}W.
+\]
+Here $\chi_R=1$ except within a bounded-width boundary layer and has
+uniformly bounded gradient. This is the Sandier--Serfaty normalization.
+The minimum $W_*$ is finite and attained, but its identification with
+the triangular-lattice value is an additional crystallization question.
+
+\begin{theorem}[Existence of the linear asymptotic coefficient]
+\label{thm:uniform-linear-coefficient}
+Put $c=\tfrac12\log2-\tfrac14$. Then
+\begin{equation}\label{eq:uniform-linear-coefficient}
+ \boxed{\displaystyle
+ \log M_n=cn^2+\frac n2\log n+\gamma n+o(n),\qquad
+ \gamma=-\frac{W_*}{\pi}-\frac12\log(2\pi).}
+\end{equation}
+In particular, the limit defining $\gamma$ exists. Moreover,
+\begin{equation}\label{eq:uniform-linear-coefficient-bounds}
+ \log\frac{\sqrt3\,\Gamma(1/3)^3}{4\pi^{3/2}}
+ \le\gamma\le\frac12\log\pi.
+\end{equation}
+The lower endpoint is approximately $0.4021788952$ and the upper
+endpoint is approximately $0.5723649429$. Equality at the lower endpoint
+holds if and only if the triangular lattice of density one attains $W_*$.
+\end{theorem}
+\begin{proof}
+The external input is Sandier--Serfaty's ground-state convergence
+theorem, Theorem~2(C) and equations~(1.23), (1.40) in
+\href{https://arxiv.org/pdf/1201.3503}{\emph{2D Coulomb Gases and the
+Renormalized Energy}}. In the above convention it states, for a regular
+confining potential $V$ with equilibrium density $m_0$, that
+\[
+ \min H_n=n^2I_V(\mu_0)-\frac n2\log n
+ +n\left[\frac{W_*}{\pi}-\frac12\int m_0\log m_0\right]+o(n).
+\]
+For $V(x)=|x|^2$, all regularity and growth assumptions hold. Its
+equilibrium measure is the uniform probability measure on the unit disk,
+with density $m_0=1/\pi$. For example, its logarithmic potential is
+$(1-|x|^2)/2$ inside the disk and $-\log|x|$ outside, so the equilibrium
+inequality is verified directly. Its self-energy is $1/4$ and its
+quadratic moment is $1/2$, giving $I_V(\mu_0)=3/4$. Also
+$\int m_0\log m_0=-\log\pi$. Therefore
+\[
+ e_n=\frac34n^2-\frac n2\log n
+ +n\left(\frac{W_*}{\pi}+\frac12\log\pi\right)+o(n).
+\]
+On the other hand, elementary expansion gives
+\[
+ N\left[1-\log\frac{n-1}{2n}\right]
+ =\frac{1+\log2}{2}n^2-\frac{\log2}{2}n-\frac14+O(n^{-1}).
+\]
+Substitution into \eqref{eq:uniform-gaussian-equivalence} proves
+\eqref{eq:uniform-linear-coefficient}.
+
+For the upper bound, the elementary Hadamard bound already proved in
+the manuscript is
+$M_n\le e^N(n/N)^N\prod_{j=0}^{n-1}j!$. Euler--Maclaurin gives
+\[
+ \log\prod_{j=0}^{n-1}j!
+ =\frac{n^2}{2}\log n-\frac{3n^2}{4}
+ +\frac n2\log(2\pi)+O(\log n).
+\]
+It follows that $\log M_n\le cn^2+(n/2)\log n+
+(n/2)\log\pi+O(\log n)$; division by $n$ and the limit prove the
+upper endpoint.
+
+B\'etermin--Sandier compute, in Section~7.3 of
+\href{https://arxiv.org/pdf/1404.4485}{\emph{Renormalized Energy and
+Asymptotic Expansion of Optimal Logarithmic Energy on the Sphere}},
+the density-one triangular-lattice value
+\[
+ W_\triangle=\pi\left[\log\pi-\frac12\log3
+ -3\log\Gamma(1/3)+\frac32\log2\right].
+\]
+Since $W_*\le W_\triangle$, substituting this value in the expression
+for $\gamma$ proves the lower endpoint. The affine dependence of
+$\gamma$ on $W_*$ also proves the stated equality equivalence.
+\end{proof}
+
+This result yields, for every $\varepsilon>0$, an asymptotic lower bound
+\[
+ M_n\ge\exp\left(cn^2+\frac n2\log n+
+ (\gamma_\triangle-\varepsilon)n\right)
+\]
+for all sufficiently large $n$, where
+$\gamma_\triangle=\log(\sqrt3\,\Gamma(1/3)^3/(4\pi^{3/2}))$.
+No explicit threshold or finite-$n$ equality formula follows from this
+statement. Even identifying the linear coefficient with
+$\gamma_\triangle$ would leave finite boundary corrections and each
+finite-$n$ shape unresolved.
+
+\subsection{The explicit polar value is still strictly suboptimal}
+The growing number of rings avoids the fixed-$K$ obstruction, but does
+not remove the microscopic energy deficit. This can be proved without
+making any floating-point comparison of special functions.
+\begin{corollary}\label{cor:polar-linear-deficit}
+For the explicit values $D_n$ of Theorem~\ref{thm:polar-all-n},
+\[
+ \lim_{n\to\infty}\frac1n\log\frac{M_n}{D_n}
+   =\gamma-\gamma_{\rm pol}>\frac1{200}.
+\]
+Consequently $D_n/M_n<e^{-n/200}$ for all sufficiently large $n$.
+This construction matches the leading two terms and still cannot
+be the requested finite-$n$ maximum formula.
+\end{corollary}
+\begin{proof}
+Subtract \eqref{eq:polar-three-term} from
+\eqref{eq:uniform-linear-coefficient}. The triangular trial bound gives
+\[
+ \gamma-\gamma_{\rm pol}\ge
+ \frac12\log\frac{\Gamma(1/3)^6e}{32\pi^3}.
+\]
+Here is an entirely rational certificate that the right-hand side
+exceeds $1/200$. Substitution $t=u^3$ gives
+$\Gamma(1/3)=3\int_0^\infty e^{-u^3}\,du$. An odd Taylor truncation
+is below the exponential for every nonnegative argument, whence
+\[
+ \Gamma(1/3)>3\sum_{j=0}^{41}
+ \frac{(-1)^j2^{3j+1}}{(3j+1)j!}>\frac{26788}{10000}.
+\]
+Also $e>\sum_{j=0}^{10}1/j!$ and $\pi<355/113$. The latter can
+be verified from Machin's identity and outward alternating-series
+bounds on the two arctangents. Integer arithmetic verifies
+\[
+ \frac{(26788/10000)^6\sum_{j=0}^{10}1/j!}
+      {32(355/113)^3}>\frac{100}{99}>e^{1/100},
+\]
+where the last strict inequality follows by comparing the exponential
+series with the geometric series. Taking half the logarithm proves
+the stated strict gap. All these rational comparisons are checked
+independently by \texttt{verify\_polar\_nonoptimal.py}.
+\end{proof}
+
+\subsection{A simultaneous moment limit for the linear coefficient}
+Let $C_{n,k}$ be the complete integer-coefficient moment in
+\eqref{eq:coefficient-moment}, and put
+$U_{n,k}=\bigl(n^{kN}C_{n,k}/(kN)!\bigr)^{1/k}$.
+The existing moment enclosure implies the uniform estimate
+\begin{equation}\label{eq:uniform-moment-log-gap}
+ 0\le\log U_{n,k}-\log M_n
+ \le\frac{n-2}{k}
+ \log\frac{e(kN+n-2)}{n-2}\qquad(n\ge3).
+\end{equation}
+Indeed, its exact endpoint ratio is
+$\binom{kN+n-2}{n-2}^{1/k}$, and
+$\binom{s}{r}\le(es/r)^r$.
+If $k_n$ is any integer sequence with $k_n/\log n\to\infty$, then
+\begin{equation}\label{eq:uniform-moment-linear-limit}
+ \boxed{\displaystyle
+ \gamma=\lim_{n\to\infty}\left[
+ \frac1{k_n n}\log\frac{n^{k_nN}C_{n,k_n}}{(k_nN)!}
+ -cn-\frac12\log n\right].}
+\end{equation}
+To prove this, note that $N/(n-2)\le n$ for $n\ge3$, so
+\eqref{eq:uniform-moment-log-gap} divided by $n$ is at most
+$k_n^{-1}\log(e k_n(n+1))$, which tends to zero under the stated
+condition. Equation~\eqref{eq:uniform-linear-coefficient} finishes the
+argument. For example, $k_n=\lceil(\log n)^2\rceil$ is sufficient.
+This supplies a rigorous connection between the coefficient hierarchy
+and the microscopic energy constant. It remains a limit of finite sums,
+with rapidly growing coefficient calculations, rather than a finite
+closed product.
+
+\section{Reproducibility and interpretation}
+The standard-library program \texttt{verify\_constructions.py} computes
+the normalized integer-lattice products exactly, evaluates the
+rational bounds, and checks the ten-point comparison.
+It uses explicit exceptions, which remain active under Python
+\texttt{-O}. Run it with
+\begin{verbatim}
+python verify_constructions.py --max-n 30
+python verify_hermite.py
+python verify_saved_candidates.py
+python verify_polygon_perturbations.py
+python verify_global_grid.py
+python verify_stationary_polynomial.py
+python verify_critical_value.py
+python -O verify_moment_hierarchy.py
+python -O verify_framework.py
+python -S -O certify_fs6_disks.py --verify
+python -S -O verify_fs6_components_exact.py
+python -S -O verify_general_radial_caps.py
+python -S -O verify_all_n_deletion.py
+python -S -O all_n_structure_radial_verify.py
+python -S -O all_n_uniform_checks.py
+python -S -O all_n_rings_verify.py
+python -S -O verify_polar_nonoptimal.py
+\end{verbatim}
+The optional numerical search is reproduced separately with
+\texttt{python explore\_candidates.py}; it requires NumPy.
+The JSON file separates exact fractions from floating-point display
+values. Finite arithmetic checks support the formulas; the Gaussian,
+interpolation and limiting arguments are proved analytically in this note.
+The new perturbation checker uses exact cyclotomic field arithmetic
+for the ten-point constants and independent root-of-unity power sums,
+and verifies the rational six-point neighborhood constants.
+The global-grid checker completely enumerates the two stated grids.
+The stationary-polynomial checker verifies force remainders and trace
+matrices, including an exact spurious six-root pairing. The critical-value
+checker verifies the complete three-point elimination identities and
+the Hermite resultant recurrence. An optional SageMath eliminant
+generator is included as \texttt{critical\_value\_eliminant.sage.py};
+it has not been run in this environment and is not a six-point
+completeness certificate.
+The new coefficient checker completely expands the 25 stated powers,
+verifies the Gaussian normalization and an independent three-point
+formula, and records rational outward enclosures. The framework checker
+verifies the exact three-point spectral matrices, the mixed-variable
+sharp identity, the first spectral-level formula, and the rational
+six-point improvement in the grid constant. The six-point root-disk verifier supplies a genuine maximum
+certificate when combined with the explicitly cited exhaustive
+Faug\`ere--Svartz decomposition. Its verification uses only standard
+library integer and rational arithmetic, including with Python
+\texttt{-S -O}. The separate exact component checker verifies the
+coefficient equations and discriminant nonvanishing; it does not
+recompute the external decomposition. The general radial checker
+checks the polynomial divided-difference formulas and integer grid
+caps. The general limiting and finite-value arguments are proved
+analytically in this note.
+
+The October 5 extension adds exact subset-deletion identities,
+stronger local radial moments, complete partition-orbit checks and the
+rational polar construction. The polar checker covers finite comparisons
+through 120 points; the uniform remainder and larger-$n$ comparison
+are proved analytically. The fixed-disk proof is self-contained. The
+global linear asymptotic uses the cited external renormalized-energy
+theorem, not the finite arithmetic checks.
+
+% Fragment: independently checked small-n examples and a bordered trace test.
+% This file does not modify the main manuscript.
+\section{Exact examples and uniform finite certificates}
+\label{sec:examples-bordered-trace}
+
+The following examples separate a short global inequality from an exact
+stationary classification. They do not assert that the regular polygon
+remains optimal for arbitrary $n$.
+
+\subsection{Two, three, and four points}
+For two points,
+\[
+ |z_1-z_2|^2\le2(|z_1|^2+|z_2|^2)=4,
+\]
+with equality precisely for $z_2=-z_1$ and $|z_1|=1$.
+Thus $M_2=4$. For three points, center first and use orthonormal
+Fourier coordinates $u,v$ on the centered complex plane. The Vandermonde is
+$u^3+v^3$ up to a constant of modulus one, and
+\[
+ (|u|^2+|v|^2)^3-|u^3+v^3|^2
+ =|u^2\overline v-\overline u v^2|^2
+   +2|u^2\overline v|^2+2|\overline u v^2|^2.
+\]
+Consequently $M_3=27$, with equality for a regular triangle.
+
+Here is an independent short proof of the four-point case. Its
+Hadamard change of variables is also used in Appendix C of
+J.~Wang, \emph{The Five-Point Case of Mordell's Discriminant
+Inequality}, arXiv:2610.00358. The four-point value is classical;
+no novelty claim is made for it.
+
+\begin{lemma}\label{lem:l1-three-variational}
+For $A,B,C\in\C$ with $|A|+|B|+|C|=1$,
+\[
+ |(A-B)(B-C)(C-A)|^2\le\frac1{16}.
+\]
+Equality holds precisely when, after permutation,
+$(A,B,C)=(0,\eta/2,-\eta/2)$ with $|\eta|=1$.
+\end{lemma}
+\begin{proof}
+The compact constraint set has a positive maximum. A collision
+cannot attain that maximum. If $A=0$, writing $x=|B|$, $y=|C|$
+gives
+\[
+ |(A-B)(B-C)(C-A)|^2
+ =x^2y^2|B-C|^2\le x^2y^2(x+y)^2\le\frac1{16}.
+\]
+The two equalities require $x=y=1/2$ and $C=-B$.
+
+At an interior maximum all three moduli are positive. Differentiating
+the logarithm of the product under the modulus constraint gives
+\[
+ \sum_{j\ne i}\frac1{A_i-A_j}
+   =\kappa\frac{\overline A_i}{|A_i|},\qquad \kappa=3.
+\]
+The value of $\kappa$ follows by multiplying by $A_i$ and summing.
+Summing the force equations instead shows that the three unit
+directions add to zero. They therefore have mutual angles $120^\circ$.
+After rotation and relabeling, write
+\[
+ A=x,\quad B=y\omega,\quad C=z\omega^2,
+ \qquad x,y,z>0,\quad x+y+z=1,
+ \quad \omega=e^{2\pi i/3}.
+\]
+The force at $A$ is real. Its imaginary part vanishes exactly when
+\[
+ \frac{y}{x^2+xy+y^2}-\frac{z}{x^2+xz+z^2}=0,
+ \quad\text{or}\quad (y-z)(x^2-yz)=0.
+\]
+The cyclic equations hold as well. If two of $x,y,z$ agree and the
+third differs, the equation at either of the equal radii forces the
+third to agree also. If all three differ, then $x^2=yz$ and
+$y^2=zx$, which again force $x=y$. Thus $x=y=z=1/3$.
+The interior stationary product is $1/27<1/16$, so the global
+maximum and its equality cases are the boundary ones already found.
+\end{proof}
+
+\begin{proposition}\label{prop:four-variational-exact}
+$M_4=256$, with equality precisely for a regular square on the
+unit circle, up to rotation and permutation.
+\end{proposition}
+\begin{proof}
+Center a maximizing configuration. Centering lowers its quadratic
+moment, and a positive rescaling would increase the product unless
+the original center were zero. Every centered quadruple has the
+unique representation
+\[
+ (z_1,z_2,z_3,z_4)
+ =(a+b+c,a-b-c,-a+b-c,-a-b+c),
+\]
+where $\sum_i|z_i|^2=4(|a|^2+|b|^2+|c|^2)$. Moreover,
+\[
+ V_4=64(a^2-b^2)(a^2-c^2)(b^2-c^2).
+\]
+Apply Lemma~\ref{lem:l1-three-variational} to
+$A=a^2,B=b^2,C=c^2$. Their moduli sum to one, giving
+$\Delta_4\le4096/16=256$. Equality means that one of $a,b,c$ is
+zero and the other two have squared values opposite each other,
+of modulus $1/2$. The resulting four points form a centered
+unit square. Such a square attains $256$.
+\end{proof}
+
+\subsection{All physical four-point stationary values in a cubic selector}
+\label{sec:four-critical-values}
+The same Hadamard variables give a complete list of real physical
+stationary values, not merely an upper bound. A centered
+collision-free stationary quadruple has
+$|a|^2+|b|^2+|c|^2=1$.
+If $abc\ne0$, the map $(a,b,c)\mapsto(a^2,b^2,c^2)$ is locally
+invertible over $\C$. The preceding interior force calculation
+therefore applies to every stationary point, regardless of stability,
+and gives $|A|=|B|=|C|=1/3$ with directions separated by
+$120^\circ$. The discriminant is $4096/27$.
+
+If, say, $c=0$, then $a,b\ne0$: otherwise some point roots collide.
+The first variation in $c$ is automatically zero, since both the
+Vandermonde expression and the constraint are even in $c$.
+Put $x=|a|^2$, $y=|b|^2$, $x+y=1$, and let $\theta$ be the
+argument difference of $A=a^2$ and $B=b^2$. The product divided
+by $4096$ is
+\[
+                 x^2y^2(x^2+y^2-2xy\cos\theta).
+\]
+Its phase derivative forces $\sin\theta=0$.
+For opposite directions it is $x^2y^2$, whose stationary point
+is $x=y=1/2$, giving the square value $256$.
+For the same direction it is $p^2(1-4p)$, where $p=xy$.
+The collision value $x=y$ is excluded; hence differentiation
+forces $p=1/6$, giving the collinear value $1024/27$.
+Each configuration satisfies the force equations: the square and
+central triangle by geometric sums, and the collinear case by the
+Hermite polynomial identity. Thus the complete physical
+stationary-value set is
+\[
+                      \left\{256,\frac{4096}{27},\frac{1024}{27}\right\}.
+\]
+In particular, a sufficient exact value-selector polynomial is
+\begin{equation}\label{eq:four-physical-selector}
+          p_4^{\rm phys}(T)=(T-256)(27T-4096)(27T-1024).
+\end{equation}
+This degree-three real selector is not asserted to equal the
+eliminant of the full complexified stationary system. It is
+obtained by classifying the actual conjugate-paired configurations.
+
+\subsection{A fully executed five-point classification}
+Theorem 1.1 of Wang's arXiv:2610.00358 proves $M_5=3125$,
+with equality precisely for a regular unit pentagon. Its
+accompanying \texttt{n5\_complete\_verification.py} was run in full
+on 5 October 2026 with Python assertions enabled. The run rebuilt
+the resultant equations and saturated Gr\"obner bases, applied
+FGLM and Sturm counting, and verified the exact discriminant bounds;
+it exited successfully. The complete output is saved separately.
+This is an executed exact classification, rather than a numerical
+search for the pentagon.
+
+There are five physical stationary shapes modulo rotations and
+permutations. Their objective values are
+\[
+ 3125,\qquad \frac{9765625}{4096},\qquad
+ \frac{84375}{1024},\qquad D(H_-),\qquad D(H_+),
+\]
+where $H_-,H_+$ are the two real roots of
+\[
+ 10H^4-65H^3+140H^2-97H+6=0
+\]
+and
+\[
+ D(H)=\frac{1084589409375}{385875968}
+ -\frac{1391385515625}{192937984}H
+ +\frac{2547927984375}{385875968}H^2
+ -\frac{321987234375}{192937984}H^3.
+\]
+An independent standard-library checker uses rational Sturm and
+interval arithmetic to verify
+$2347<D(H_-)<2348$ and $801<D(H_+)<802$.
+It also verifies both classical rational values are below $3125$.
+Completeness here comes from the fully rebuilt classification, not
+from this smaller interval checker alone.
+
+
+\subsection{An elementary sharp bound when one point is at the origin}
+The following result removes all origin-containing branches in the seven-point
+comparison by a single inequality.
+\begin{theorem}[The origin-constrained maximum for $2\le n\le7$]
+Let $2\le n\le7$, and let $z_1,\ldots,z_n\in\mathbb C$ satisfy
+$z_1=0$ and $\sum_i|z_i|^2=n$. Then
+\[
+ \prod_{i<j}|z_i-z_j|^2\le
+ (n-1)^{n-1}\left(\frac n{n-1}\right)^{n(n-1)/2}.
+\]
+Equality holds precisely when the other $n-1$ points form a regular polygon
+on the circle of radius $\sqrt{n/(n-1)}$, up to rotation and permutation.
+For $n=2$, a regular one-gon means a single point on that circle.
+\end{theorem}
+\begin{proof}
+Put $m=n-1$, $u_i=\sqrt{m/n}\,z_{i+1}$ and $t_i=|u_i|^2$.
+Thus $\sum_i t_i=m$. If any $t_i=0$, or if two points coincide, the claimed
+upper bound is immediate. Otherwise, the Vandermonde determinant and
+Hadamard's inequality give
+\[
+ \prod_i|u_i|^2\prod_{i<j}|u_i-u_j|^2
+ =\left|\det(u_i^j)_{1\le i,j\le m}\right|^2
+ \le\prod_{i=1}^m S_m(t_i),\qquad
+ S_m(t)=\sum_{j=1}^m t^j.
+\]
+For $1\le m\le6$, $\log S_m$ is strictly concave on $(0,\infty)$.
+Indeed, write $R_m=S_m'^2-S_mS_m''$, so
+$(\log S_m)''=-R_m/S_m^2$. Direct exact expansion shows that
+$R_m(1+x)$ has nonnegative coefficients and positive constant term.
+On $[0,1]$, all Bernstein coefficients of $R_m$ are positive when
+$m\le5$. For $m=6$, this holds on each of $[0,1/2]$ and $[1/2,1]$.
+These finite integer and rational coefficient checks are reproduced by
+\texttt{origin\_polygon\_verify.py}, using only the Python standard library.
+For example,
+\[
+ R_6(t)=1+2t+2t^2-5t^4-14t^5+8t^7+11t^8+10t^9+6t^{10}.
+\]
+Jensen's inequality now gives $\prod_iS_m(t_i)\le S_m(1)^m=m^m$.
+Restoring scale multiplies the squared distance product by
+$(n/m)^{n(n-1)/2}$, proving the bound.
+Strict concavity forces $t_i=1$ at equality. For $m\ge2$, equality in
+Hadamard additionally requires distinct rows to be orthogonal. With
+$q=u_i\overline{u_j}$, this means
+$\sum_{\ell=1}^m q^\ell=0$. Since $|q|=1$ and $q\ne1$, it follows that
+$q^m=1$. Thus the $m$ distinct points are precisely a rotated set of
+$m$th roots of unity. The case $m=1$ is immediate.
+\end{proof}
+In particular, the origin-constrained seven-point maximum is exactly
+$7^{21}/6^{15}$. This theorem alone does not establish the unrestricted
+seven-point maximum: one must still compare every stationary configuration
+having no point at the origin. Translation of an arbitrary point to the
+origin changes the moment constraint and cannot be used to bypass that step.
+
+The short argument has a precise limit. For $S_7$,
+$(\log S_7)''(1)=0$ and $(\log S_7)'''(1)=-4$, so the second derivative is
+positive just to the left of $1$. For $S_8$, it is already $3/4$ at $1$.
+This proves failure of the log-concavity mechanism beyond $m=6$; it makes
+no assertion about whether the center-plus-polygon configuration is
+optimal for eight points.
+
+\subsection{The exact unrestricted seven-point maximum}
+\label{sec:seven-global-exact}
+
+The six-point rational-disk method extends to the next point count.
+The external coverage input is the published physical classification
+of Faug\`ere--Svartz~\cite[Sections 5.3--5.7 and Section 7,
+Figure 4]{FS}. It is important to distinguish this input from an
+independent recomputation of the entire complexified decomposition.
+Figure 4 displays an $e_2=1$ component of degree $526$ and labels
+its degree-$356$ branch physically empty. The archived author
+file~\cite{FSdataSeven} omits that branch and supplies seven
+triangular charts with parameter degrees
+\[
+                         1,1,2,6,18,82,64.
+\]
+The degree-$18$ branch is also labeled physically empty in the
+paper; it is nevertheless included in our independent force check.
+We use the following precise external statement: every physical
+collision-free stationary seven-point shape occurs in one of the
+supplied charts, up to complex scaling and permutation. Our
+verifier does not reconstruct the missing degree-$356$ branch or
+independently prove its physical emptiness. The author numerical
+solution catalogue is not used as a substitute for this coverage
+statement.
+
+\begin{theorem}\label{thm:seven-global}
+For $\sum_{i=1}^7|z_i|^2=7$,
+\[
+ \Delta_7(z)\le \frac{7^{21}}{6^{15}}
+              =\frac{558545864083284007}{470184984576}.
+\]
+Equality holds precisely at the origin together with a regular
+hexagon of radius $\sqrt{7/6}$, up to rotation and permutation.
+The proof invokes the published physical coverage just specified.
+\end{theorem}
+\begin{proof}
+A maximizer is centered and collision-free. In a supplied coefficient
+chart its root polynomial has the convention
+\[
+ P(t)=t^7+e_2t^5-e_3t^4+e_4t^3-e_5t^2+e_6t-e_7.
+\]
+If $w_i$ are its roots and $Q=\sum|w_i|^2$, physical stationarity
+requires, at every root,
+\begin{equation}\label{eq:seven-force-residual}
+                  QP''(w_i)-42\overline w_iP'(w_i)=0.
+\end{equation}
+Indeed the chart force constant is positive and its product with
+$Q$ is $N_7=21$. The original normalized objective is
+\begin{equation}\label{eq:seven-chart-value}
+             (7/Q)^{21}\prod_{i<j}|w_i-w_j|^2.
+\end{equation}
+
+The exact standard-library checker \texttt{certify\_fs7\_disks.py}
+covers every root of each supplied parameter polynomial with
+disjoint rational disks and then every root of its seven-point
+polynomial. All inequalities are strict integer or rational
+comparisons, including when Python assertions are disabled.
+There are $174$ parameter disks and $1218$ point-root disks.
+The results are:
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule
+Chart&Parameters&Force excluded&Not excluded&Certified objective\\
+\midrule
+1&1&0&1&$823543=7^7$\\
+2&1&0&1&$7^{21}/6^{15}$, exact\\
+3&2&1&1&$<40253$\\
+4&6&4&2&$<159666$\\
+5&18&18&0&---\\
+6&82&78&4&$<268962$\\
+7&64&54&10&$<822629$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus $155$ candidates are excluded by
+\eqref{eq:seven-force-residual}, $18$ have strict objective bounds
+below the target, and one is evaluated exactly. No sufficiency
+claim is needed for the candidates bounded strictly below the target.
+
+Chart two is $P=t(t^6+1)$: it has the origin and a rotated unit
+hexagon. Its moment is six and its discriminant product is $6^6$,
+so \eqref{eq:seven-chart-value} gives $7^{21}/6^{15}$.
+The root polynomial or a geometric sum verifies its physical force
+equations directly. Every other covered physical shape has a
+strictly smaller value. External coverage now proves the upper
+bound and the stated equality classification.
+\end{proof}
+
+For reproducibility the archived data have SHA-256
+\begin{center}\footnotesize\ttfamily
+d8cd0bc601071a7b4c0f7e9124c613eca9e3902cc58b29d8871686d541e73530.
+\end{center}
+The certificate contains $300$-digit rational parameter centers,
+radius $10^{-250}$, and $45$-digit rational point centers, radius
+$10^{-10}$. Their generation uses numerical arithmetic only to
+propose the centers. Verification reparses the exact author data,
+checks its hash, and uses the integer-arithmetic parameter evaluator
+to avoid expensive repeated rational gcd computations.
+For a parameter polynomial $f$, a center $b$ and radius $r$, it
+checks
+\[
+ |f(b)|_{\rm up}+\frac{r^2}{2}
+            \sum_{k\ge2}|a_k|k(k-1)B^{k-2}
+       <|f'(b)|_{\rm low}r,
+ \qquad B\ge |b|+r.
+\]
+The parameter-root count follows from Rouch\'e's theorem and the
+degree of $f$. Derivative majorants propagate each parameter disk
+through the rational polynomial coordinate formulae. The
+seven-point polynomial checks and the force and objective estimates
+are the same as the six-point rational-disk argument, with the
+constants $42$, $7$ and $21$ in place of $30$, $6$ and $15$.
+
+\begin{corollary}\label{cor:seven-seed-all-n}
+The seven-point result strengthens the propagated bound to
+\[
+ M_n<\left(\frac n{n-1}\,6^{2/7}\right)^{n(n-1)/2}
+                    \qquad(n>7).
+\]
+\end{corollary}
+\begin{proof}
+The normalized value in Theorem~\ref{thm:subset-monotonic} is
+$d_7=(6/7)M_7^{1/21}=6^{2/7}$. Strict deletion monotonicity gives
+$d_n<d_7$ for $n>7$.
+\end{proof}
+The agreement of $M_6$ and $M_7$ with the central-polygon values
+does not justify extrapolation to all larger $n$.
+The certified ten-point improvement and the fixed-ring obstruction
+remain explicit limits of that template.
+
+\subsection{Conjugate pairing from one extra trace row}
+The following formulation is a supplement to the existing exact
+trace test. It replaces the composition congruence
+$\overline P(R)\equiv0$ by Hermitian symmetry of one bordered
+trace matrix. It does not provide a formula for its largest determinant.
+
+\begin{theorem}[Bordered trace test]\label{thm:bordered-trace}
+Let $P(t)$ be monic of degree $n$, let $\lambda>0$ be real,
+and let $R(t)$ have degree less than $n$. In
+$\mathcal A=\C[t]/(P)$ define
+\[
+ K_{jk}=\operatorname{Tr}_{\mathcal A}(t^jR^k),
+ \qquad 0\le j,k\le n,
+ \qquad H=(K_{jk})_{0\le j,k<n}.
+\]
+Then the following conditions are equivalent to $P$ having distinct
+roots $w_i$ satisfying
+\[
+ R(w_i)=\overline w_i,
+ \qquad \sum_{\ell\ne i}\frac1{w_i-w_\ell}
+   =\lambda\overline w_i:
+\]
+\[
+ P''-2\lambda RP'\equiv0\pmod P,
+ \qquad K=K^*,\qquad H\succ0.
+\]
+When they hold, $K\succeq0$ has rank $n$,
+$\sum_iw_i=0$, $\sum_i|w_i|^2=N/\lambda$, and
+\[
+ \det H=|\operatorname{disc}P|,\qquad
+ \Delta_n\!\left(\sqrt{\frac{n\lambda}{N}}\,w\right)
+ =\left(\frac{n\lambda}{N}\right)^N\det H.
+\]
+All matrix entries and remainder equations are polynomial in
+the coefficients of $P,R$ and their conjugates; no discriminant
+denominator is needed when $R$ is retained as an auxiliary polynomial.
+\end{theorem}
+\begin{proof}
+For distinct roots with the stated conjugate pairing,
+$K=\widetilde V\widetilde V^*$, where
+$\widetilde V_{ji}=w_i^j$ for $0\le j\le n$. Its leading block
+is positive definite, and the force congruence follows by evaluation.
+
+Conversely, for distinct values $\xi_i$ occurring as roots of $P$
+with multiplicities $m_i$, quotient-algebra traces are
+\[
+ K_{jk}=\sum_i m_i\xi_i^jR(\xi_i)^k.
+\]
+Thus $\operatorname{rank}H$ is at most the number of distinct roots.
+Positive definiteness forces $n$ distinct roots $w_i$. The factorization
+$H=V W^{\mathsf T}$, with $V_{ji}=w_i^j$ and
+$W_{ki}=R(w_i)^k$, then also forces the $R(w_i)$ to be distinct.
+
+Write $P(t)=t^n+\sum_{a=0}^{n-1}c_at^a$. The last row of $K$
+satisfies $K_{n,k}=-\sum_a c_aK_{a,k}$. Hermitian symmetry yields
+\[
+ K_{j,n}=-\sum_a\overline c_aK_{j,a},\qquad0\le j<n.
+\]
+Equivalently,
+\[
+ \sum_i w_i^j\overline P(R(w_i))=0,\qquad0\le j<n.
+\]
+Invertibility of $V$ proves $\overline P(R(w_i))=0$ for every $i$.
+Since the force values are distinct, they are a permutation of the
+conjugate roots. Consequently $H=V\Pi V^*$ for a permutation matrix
+$\Pi$. Hermitian positive definiteness passes to $\Pi$. A Hermitian
+permutation is an involution, and each nontrivial transposition has
+eigenvalue $-1$. Therefore $\Pi=I$, proving the actual conjugate pairing.
+The force congruence gives the claimed force equations. Summing them
+gives centering; multiplying by $w_i$ and summing gives
+$\lambda\sum_i|w_i|^2=N$. The Gram determinant and scaling identities
+follow immediately.
+\end{proof}
+
+The extra row is essential. For $n=2$, $\lambda=1$,
+$P=t^2-4$, $R=t/8$, the force congruence holds and
+$H=\operatorname{diag}(2,1)\succ0$, but the roots are not
+physical stationary roots at that scale. The border detects this:
+$K_{20}=8$ whereas $K_{02}=1/8$.
+
+\subsection{An explicit exact-output specification for every point count}
+The existing critical-value elimination and moment selection already
+give termination without assuming that stationary components are
+zero-dimensional. To make the output unambiguous, after saturation
+and elimination take the squarefree primitive integer generator
+$p_n(T)$, factor it over $\Q$, and isolate all its real roots.
+Successive rational moment enclosures identify exactly one such root.
+Output the primitive irreducible factor $m_n\in\mathbb Z[T]$ containing
+that root, with positive leading coefficient, together with a rational
+open interval containing exactly one real root of $m_n$.
+This pair is an exact representation of $M_n$, even if $M_n$ is not
+expressible by radicals. Algebraic sampling of the corresponding
+real maximizing fiber can also output attaining algebraic coordinates.
+
+For the executed or independently proved examples above, the
+minimal polynomials are $T-4$, $T-27$, $T-256$, and $T-3125$.
+The previously certified six-point value has primitive minimal
+polynomial $9765625T-470184984576$. This specification adds a
+reproducible output format to the existing algorithm; it is not a
+new general finite product or a computed elimination for every $n$.
+
+\subsection{A stronger separation bound from simultaneous pair replacement}
+\label{sec:pair-separation}
+
+The compact disk bound can be complemented by a strictly positive
+separation constant independent of the point count at force-one scale.
+This estimate uses global optimality and is not an assertion about all
+stationary solutions.
+
+\begin{lemma}\label{lem:weighted-zero-separation}
+Let $p$ be a nonzero polynomial and $\alpha>0$. Suppose $a$ maximizes
+$|p(z)|^2e^{-\alpha|z|^2}$ over $\C$. For every zero $a+\delta$ of $p$,
+\[
+                         |\delta|^2>\frac{2}{e\alpha}.
+\]
+\end{lemma}
+\begin{proof}
+The maximum is positive, so $p(a)\ne0$. The entire function
+\[
+ g(u)=\frac{p(a+u)}{p(a)}e^{-\alpha\overline a u}
+\]
+satisfies $g(0)=1$, $g'(0)=0$ and
+$|g(u)|\le e^{\alpha|u|^2/2}$. The derivative vanishes by the
+stationary equation $p'(a)/p(a)=\alpha\overline a$.
+Choose $R^2=2/\alpha$ and $b=e^{-1}$.
+On $|u|\le R$, $f(u)=bg(u)$ has modulus at most one, $f(0)=b$,
+and $f'(0)=0$. The disk map
+\[
+ h(u)=\frac{f(u)-b}{1-bf(u)}
+\]
+has a double zero at zero. Applying Schwarz's lemma twice gives
+$|h(u)|\le |u/R|^2$.
+If $|\delta|\ge R$, the claimed strict inequality is immediate.
+Otherwise $f(\delta)=0$ implies
+$b=|h(\delta)|\le |\delta/R|^2$.
+Equality would force $h(u)=\xi(u/R)^2$ for $|\xi|=1$.
+Then $f=(b+h)/(1+bh)$ on the disk, and hence by analytic continuation
+where defined. The latter rational function has nonremovable poles
+at the two zeros of $1+b\xi(u/R)^2$, since $0<b<1$.
+This contradicts the fact that $f$ is entire. Thus the inequality
+is strict.
+\end{proof}
+
+\begin{theorem}\label{thm:pair-separation}
+Every global maximizer with quadratic moment $n$ satisfies
+\begin{equation}\label{eq:pair-separation-new}
+             |z_i-z_j|^2>\frac{8}{e(n-1)}\quad(i\ne j).
+\end{equation}
+For $n\ge4$ this improves the separation bound
+$2n/(n-1)^2$ in Lemma~\ref{lem:global-separation}.
+\end{theorem}
+\begin{proof}
+As in Theorem~\ref{thm:global-fixed-disk}, the configuration globally
+maximizes $\Delta_n\exp(-\lambda\sum|z_i|^2)$ on the full space,
+where $\lambda=(n-1)/2$.
+Fix a pair, its midpoint $m$, and all other points. Write the pair
+as $m+w,m-w$, and put
+\[
+ p(w)=w\prod_{k\ne i,j}\bigl(w^2-(m-z_k)^2\bigr).
+\]
+Up to a positive factor independent of $w$, the weighted objective
+is $|p(w)|^2e^{-(n-1)|w|^2}$.
+The original $w_*=(z_i-z_j)/2$ is a global maximizer of this
+one-variable problem. Since $p(0)=0$, the preceding lemma gives
+$|w_*|^2>2/(e(n-1))$. Multiplication by four proves
+\eqref{eq:pair-separation-new}.
+Finally $e<3$ and $4(n-1)/n\ge3$ for $n\ge4$, so the new
+bound is strictly stronger there.
+\end{proof}
+
+\subsection{Rational improvements to the compact physical trace model}
+Put $w_i=\sqrt{(n-1)/2}\,z_i$ and
+\[
+\begin{gathered}
+ a_n=\lceil\sqrt{n-1}\rceil,\qquad
+ \eta_n=\max\left\{\frac n{n-1},\frac{16}{11}\right\},\\
+ \widehat\mu_n=\frac{\eta_n^{n-1}}{n(1+a_n)^{2n-2}},
+ \qquad
+ \widehat B_n=\frac{n^2a_n^2(1+a_n)^{2n-2}}{\eta_n^{n-1}}.
+\end{gathered}
+\]
+The elementary rational estimate
+\[
+ e<\sum_{j=0}^5\frac1{j!}+\frac{1/6!}{1-1/7}<\frac{11}{4}
+\]
+shows $4/e>16/11$. Combining the new pair bound with
+Lemma~\ref{lem:global-separation} gives
+$|w_i-w_j|^2\ge\eta_n$ at every global maximum.
+Thus the Lagrange polynomials have coefficient $\ell^1$ norm at most
+$(1+a_n)^{n-1}\eta_n^{-(n-1)/2}$.
+The same inverse-Vandermonde argument as before gives the stronger
+rational inequalities
+\begin{equation}\label{eq:new-pair-compact-bounds}
+ H\succeq\widehat\mu_n I,\qquad |r_\ell|^2\le\widehat B_n,
+ \qquad |c_k|^2\le\binom nk^2(n-1)^k.
+\end{equation}
+Replacing the corresponding inequalities in the compact trace model
+preserves its exact maximum: every global maximizer remains feasible,
+and every feasible conjugate-paired stationary configuration is still
+a configuration in the original problem.
+For $n=6$ the numbers simplify to
+\[
+                  \widehat\mu_6=\frac1{966306},\qquad
+                  \widehat B_6=52180524.
+\]
+The previous disk-only margin was $1/6291456$ and its squared
+auxiliary bound was $18432^2=339738624$.
+
+A further $n$-by-$n$ polynomial localizing inequality can be added
+without enumerating pairs. In the quotient algebra put
+\[
+ D(t)=P'(t)\,\overline{P'}(R(t)),\qquad
+ K_{jk}=\operatorname{Tr}\bigl(t^jR(t)^k
+                  [D(t)-\eta_n^{n-1}]\bigr),\quad 0\le j,k<n.
+\]
+Here the bar conjugates coefficients. On physical roots,
+\[
+ K=V\operatorname{diag}\left(|P'(w_i)|^2-\eta_n^{n-1}\right)V^*.
+\]
+Since $|P'(w_i)|^2=\prod_{j\ne i}|w_i-w_j|^2$, one has
+$K\succeq0$ for every global maximizer. Adding this closed rational
+polynomial constraint again preserves the maximum of the compact
+model. It controls products of separations, rather than imposing
+each individual separation equivalently.
+The standard-library checker \texttt{verify\_examples\_separation.py}
+checks the rational constants and matrix-factor identities independently.
+
+\subsection{Exact finite certificates after critical-value augmentation}
+\label{sec:finite-value-sos}
+
+The critical-value method can be made into a finite exact
+sum-of-squares certificate, even when the stationary configurations
+themselves are not isolated. The additional equation is essential:
+this statement does not assert finite convergence of the unaugmented
+moment hierarchy.
+
+\begin{theorem}\label{thm:finite-value-sos}
+Let $K=\{x:e_a(x)=0,\ g_b(x)\ge0\}$ be nonempty and compact,
+with an Archimedean quadratic module modulo the equality ideal.
+Let $F$ be a polynomial taking only finitely many values on $K$.
+Suppose a square-free polynomial
+\[
+                  p(t)=\prod_{j=1}^s(t-\lambda_j),
+                 \qquad \lambda_j\in\R\text{ distinct},
+\]
+satisfies $p(F)=0$ on $K$. It may have real roots that are not
+attained on $K$. Put $M=\max_K F$. After adding the redundant
+equation $p(F)=0$, there is a finite polynomial identity
+\begin{equation}\label{eq:finite-value-exact-sos}
+ M-F=\sigma_0+\sum_b\sigma_b g_b+\sum_a\tau_a e_a
+                              +\tau_p p(F),
+\end{equation}
+where all $\sigma_b$ are sums of squares.
+If all input coefficients and $M,\lambda_j$ are real algebraic,
+the certificate can be chosen with real algebraic coefficients.
+\end{theorem}
+\begin{proof}
+Let $E_j(t)$ be the Lagrange polynomial with
+$E_j(\lambda_k)=\delta_{jk}$. Modulo $p$,
+\[
+ E_j^2=E_j,\qquad (t-\lambda_j)E_j=0,\qquad
+              M-t=\sum_j(M-\lambda_j)E_j^2.
+\]
+When $\lambda_j\le M$, the corresponding term is a square with
+a nonnegative constant multiplier. When $\lambda_j>M$, the set
+$K\cap\{F=\lambda_j\}$ is empty. Its quadratic module remains
+Archimedean. The empty-set form of Putinar's theorem gives
+\[
+ -1=q_j+\sum_a u_{ja}e_a+v_j(F-\lambda_j),
+\]
+where $q_j$ belongs to the quadratic module generated by the $g_b$.
+Multiplying by $E_j(F)^2$ preserves membership in that module, and
+the last term is a multiple of $p(F)$ because
+$(t-\lambda_j)E_j(t)^2\equiv0\pmod p$.
+Consequently $-E_j(F)^2$ has such a certificate modulo the augmented
+ideal. Multiplication by $\lambda_j-M>0$ handles each formerly
+negative term. Adding the finitely many identities proves
+\eqref{eq:finite-value-exact-sos}.
+
+For the coefficient assertion, take the finite degrees and numbers
+of squares in one real certificate. The coefficient identity is
+then a finite polynomial system over the real algebraic numbers,
+with the square factors as variables. The real algebraic numbers
+form a real closed field; transfer for real closed fields supplies
+a solution in that field~\cite{Basu}. This proves existence of algebraic
+coefficients, without claiming that a numerical SDP output is
+automatically an exact certificate.
+\end{proof}
+
+For the compact physical trace model, $F$ is the normalized
+determinant and every feasible configuration is stationary.
+Section~\ref{sec:exact-algorithm} establishes finiteness of its
+critical values without assuming zero-dimensional shape charts.
+Isolate the real roots of the rational critical-value polynomial
+and form their square-free product over the real algebraic numbers.
+The theorem therefore supplies a finite exact certificate for
+each $n$ after critical-value augmentation. In principle one can
+increase the certificate degree and use exact real algebraic
+feasibility until it succeeds. No uniform small degree is obtained,
+and construction of the critical polynomial may still be costly.
+The result is a uniform terminating certification mechanism, not
+a short expression for the numerical value of every $M_n$.
+
+\subsection{A fully explicit three-point demonstration}
+For $n=3$, every collision-free centered stationary configuration
+has value $27$ or $27/2$. Here is a short derivation. Write
+$P(t)=t^3+at+b$. The force constant is one, so at each root
+\[
+ 3z_i=\overline z_i(3z_i^2+a),\qquad
+             3(1-|z_i|^2)z_i^2=a|z_i|^2.
+\]
+If $a=0$, none of the roots is zero, and all have modulus one;
+centering forces an equilateral triangle. If $a\ne0$, any nonzero
+root satisfies $z_i^2/a\in\R$. After a rotation the roots lie on
+the two coordinate axes. A centered triple cannot occupy both
+axes with nonzero points, so it is collinear. For real roots the
+stationary polynomial identity is
+\[
+                 P''-2tP'+6P=0,
+\]
+which gives $P=t^3-3t/2$ and value $27/2$.
+The equilateral value is $27$. Thus on the stationary set,
+\[
+                p_3(F)=(F-27)(2F-27)=0.
+\]
+Set $E=2(27-F)/27$. Direct rational polynomial expansion gives
+\begin{equation}\label{eq:three-point-value-sos}
+ 27-F=(3E)^2+\left(\frac32 E\right)^2
+          +\left(\frac32 E\right)^2-\frac1{27}p_3(F).
+\end{equation}
+After imposing the valid critical-value equation this is an exact
+upper-bound certificate, attained only at the equilateral value.
+It exhibits the univariate certificate construction explicitly;
+the elementary direct triangle proof remains shorter if one needs
+only $M_3$. The verifier \texttt{verify\_examples\_value\_sos.py}
+uses rational arithmetic for the identity.
+
+\subsection{An explicit six-square certificate for the four-point value}
+Section~\ref{sec:four-critical-values} supplies the complete physical
+value set $256,4096/27,1024/27$. Put $p_4=p_4^{\rm phys}$ and
+let $E_\triangle,E_{\rm line}$ be the Lagrange selectors for the
+last two values:
+\[
+ E_\triangle(T)=-\frac{27(T-256)(27T-1024)}{2816\cdot3072},
+ \qquad
+ E_{\rm line}(T)=\frac{27(T-256)(27T-4096)}{5888\cdot3072}.
+\]
+The positive gaps have rational square decompositions
+\[
+ \frac{2816}{27}=\left(\frac{80}{9}\right)^2
+                      +2\left(\frac{32}{9}\right)^2,
+ \qquad
+ \frac{5888}{27}=\left(\frac{128}{9}\right)^2
+                   +\left(\frac{32}{9}\right)^2
+                   +\left(\frac{16}{9}\right)^2.
+\]
+Define the sum of six squares
+\[
+\begin{split}
+ S(T)={}&\left(\frac{80}{9}E_\triangle\right)^2
+       +2\left(\frac{32}{9}E_\triangle\right)^2
+       +\left(\frac{128}{9}E_{\rm line}\right)^2\\
+       &+\left(\frac{32}{9}E_{\rm line}\right)^2
+       +\left(\frac{16}{9}E_{\rm line}\right)^2.
+\end{split}
+\]
+An exact polynomial identity, verified by rational expansion, is
+\begin{equation}\label{eq:four-value-six-squares}
+ 256-T=S(T)+
+       \frac{11008-51T}{33957085184}\,p_4(T).
+\end{equation}
+On every physical stationary configuration the last term vanishes.
+Thus this finite certificate proves the global upper bound once
+stationary-value coverage is established, and the unit square
+provides the attaining lower bound. It is a complete executed
+example of Theorem~\ref{thm:finite-value-sos}, with no numerical SDP
+or assumption of isolated complexified stationary shapes.
+
+\section*{Acknowledgement of assistance}
+AI assistance through OpenAI's Codex was used for mathematical
+exploration, verification support and manuscript preparation.
+The author is responsible for checking the final claims and sources.
+
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{2pt}
+\bibitem{Chalk}
+J.~H.~H. Chalk, \emph{A note on a discriminant inequality},
+Canadian Mathematical Bulletin \textbf{3} (1960), no.~1, 7--9.
+\href{https://doi.org/10.4153/CMB-1960-002-x}{doi:10.4153/CMB-1960-002-x}.
+\bibitem{Wang}
+J.~Wang, \emph{The Five-Point Case of Mordell's Discriminant Inequality},
+arXiv:2610.00358v1 (2026). \url{https://arxiv.org/abs/2610.00358}.
+\bibitem{AOC}
+Y.~Ameur and J.~Ortega-Cerd\`a,
+\emph{Beurling--Landau densities of weighted Fekete sets and correlation
+kernel estimates}, Journal of Functional Analysis \textbf{263}
+(2012), no.~7, 1825--1861. \url{https://arxiv.org/abs/1110.0284}.
+\bibitem{SS}
+E.~Sandier and S.~Serfaty, \emph{2D Coulomb Gases and the Renormalized
+Energy}, arXiv:1201.3503v2 (2013).
+\url{https://arxiv.org/abs/1201.3503}.
+\bibitem{Basu}
+S.~Basu, \emph{Algorithms in Real Algebraic Geometry: A Survey},
+arXiv:1409.1534 (2014). \url{https://arxiv.org/abs/1409.1534}.
+\bibitem{CS}
+H.~E. Cabral and D.~S. Schmidt,
+\emph{Stability of relative equilibria in the problem of $N+1$ vortices},
+SIAM Journal on Mathematical Analysis \textbf{31} (1999), no.~2, 231--250.
+\href{https://doi.org/10.1137/S0036141098302124}{doi:10.1137/S0036141098302124}.
+\bibitem{FS}
+J.-C. Faug\`ere and J.~Svartz,
+\emph{Solving polynomial systems globally invariant under an action of
+the symmetric group and application to the equilibria of $N$ vortices
+in the plane}, Proceedings of ISSAC 2012, 170--178.
+\href{https://doi.org/10.1145/2442829.2442856}{doi:10.1145/2442829.2442856}.
+\bibitem{Beauzamy}
+B.~Beauzamy, \emph{Extremal products in Bombieri's norm},
+January 1995.
+\url{https://www.scmsa.eu/BB_Publications/BB_Extremal_products_Bombieri_norm.pdf}.
+\bibitem{TF}
+G.~T\'ellez and P.~J. Forrester,
+\emph{Expanded Vandermonde powers and sum rules for the
+two-dimensional one-component plasma}, Journal of Statistical Physics
+\textbf{148} (2012), 824--855.
+\url{https://arxiv.org/abs/1204.6003}.
+\bibitem{Lasserre}
+J.~B. Lasserre, \emph{Global optimization with polynomials and the
+problem of moments}, SIAM Journal on Optimization \textbf{11}
+(2001), no.~3, 796--817.
+\href{https://doi.org/10.1137/S1052623400366802}{doi:10.1137/S1052623400366802}.
+\bibitem{FSdata}
+J.-C. Faug\`ere and J.~Svartz, \emph{Six-vortex lexicographic bases
+and solution appendix}, supplementary author data for \cite{FS}.
+\href{https://web.archive.org/web/20240423101624id_/https://www-polsys.lip6.fr/~jcf/vortices/vortices_N6.txt}{Archived six-point bases};
+\href{https://web.archive.org/web/20220305130108id_/https://www-polsys.lip6.fr/~jcf/vortices/SOLUTIONS\%20N7.pdf}{archived author appendix}, Section~4.
+The unchanged bases and rational certificates are included in the source bundle.
+\bibitem{FSdataSeven}
+J.-C. Faug\`ere and J.~Svartz, \emph{Seven-vortex lexicographic bases},
+supplementary author data for \cite{FS}.
+\href{https://web.archive.org/web/20240423101625id_/https://www-polsys.lip6.fr/~jcf/vortices/vortices_N7.txt}{Archived seven-point bases}.
+The file omits the degree-$356$ branch declared physically empty in
+\cite[Section 7, Figure 4]{FS}; this external coverage input is retained.
+\end{thebibliography}
+\end{document}
