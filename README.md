@@ -16,15 +16,28 @@
 p_k=\sum_i z_i^k.
 ```
 
-## 一般 n 新进展：严格递推与有效全局网格
+## 完整原稿恢复与方法联合（2026-10-28）
 
-[完整证明、代码及有限证书](global-n/README.md) · [离线包](global-n/mordell-global-n-2026-10-27.zip)。联合已有严格子集矩、力方程与二阶稳定性，证明标准化最大值在 n≥4 时逐点严格下降，并由随机子集的平面四阶方差给普通跨点数递推加入显式折扣。
+[原稿、逐项核对、补充证明和可重放代码](source-review/README.md) · [完整离线包](source-review/mordell-source-review-2026-10-28.zip)。新取得的完整源码表明：明确网格及误差证明、相邻严格单调性、十点四阶约化及有限增广证书均为用户原有成果，现更正此前材料不全时的说明。
+
+在恢复旧多环与保存整数构型后，新增相位/中心化构造在 n≤100 的完整恢复包络上严格提高43项。进一步联合多环有效下界与库仑缺额，对任意全局最优构型的不同半径数 K（不要求规则角度）证明
+
+```math
+K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
+\liminf_{n\to\infty}\frac{K_n}{\sqrt n}\ge\frac{11}{50}.
+```
+
+另加强删除方差损失、联合网格误差并量化纯全纯谱层的有限正缺口。15个原稿入口及6个补充入口已重放；一般 n 简洁锐值公式和八点完整锐界仍未解决。
+
+## 一般 n 方法整理：子集方差与有效网格
+
+[完整证明、代码及有限证书](global-n/README.md) · [更正归属后的离线包](global-n/mordell-global-n-corrected-2026-10-28.zip)。整理原稿已有的标准化最大值严格下降证明，并由随机子集的平面四阶方差给普通跨点数递推加入显式折扣。
 
 ```math
  d_n=\frac{n-1}{n}M_n^{2/[n(n-1)]},\qquad d_2=d_3=2,\quad d_n\lt d_{n-1}\ (n\ge4).
 ```
 
-另补齐旧稿缺网格定义的待补项：明确有限整数网格 Gₙ(q)，当 q≥(n+1)ceil√((n−1)/2) 时，以完整二阶抵消得到对数误差≤7n(n−1)/(12q²)的有效全局包围，并将已有子集余量转为安全删格条件。该证书要求穷尽规定网格；已执行小网格共230336个集合，大型1%计划未执行。一般 n 简洁锐值公式、八点完整锐界仍未得到。
+完整原稿已有明确网格及误差证明；本专题另给有限整数网格 Gₙ(q)的替代误差控制，当 q≥(n+1)ceil√((n−1)/2) 时，以完整二阶抵消得到对数误差≤7n(n−1)/(12q²)的有效全局包围，并将已有子集余量转为安全删格条件。该证书要求穷尽规定网格；已执行小网格共230336个集合，大型1%计划未执行。一般 n 简洁锐值公式、八点完整锐界仍未得到。
 
 ## 有限 n 更新：严格子集有效余量与有理下界
 
@@ -71,7 +84,7 @@ M_n\le n^{n/2}\left(\frac{2n}{n-1}\right)^{n(n-1)/2}e^{-n(n-1)/4}.
 |七点|$M_7=7^{21}/6^{15}$，等号原点加正六边形|[覆盖依赖与精确复核](earlier-results/six_seven_verification.md)|
 |一般 n|有限上下界、唯一最优上界参数、渐近律、高斯整数构造、多环与稳定性等定理|[一般n证明](earlier-results/general_n_proof.md)|
 
-此处 Mₙ 采用 ∑|zᵢ|² = n 的归一化。六七点全局证明明确使用Faugère–Svartz已发表完整物理分类覆盖，附保留80/174参数根的独立有理算术复核；另有不调用分类的六七点含原点类证明。一般n的历史待补项目逐条区分，没有宣称简单闭式全局解。
+此处 Mₙ 采用 ∑|zᵢ|² = n 的归一化。六七点全局证明明确使用Faugère–Svartz已发表完整物理分类覆盖，附保留80/174参数根的独立有理算术复核；另有不调用分类的六七点含原点类证明。一般n的历史待补项目现按完整源码逐条恢复，见source-review专题；没有宣称简单闭式全局解。
 
 ## 2026-10-27 的八点研究进展
 
@@ -113,6 +126,7 @@ python -B -S verify_all.py --all --offline
 未指定许可证，不作全球优先权声明。来源与 AI 协作说明在完整归档的 `docs/PROVENANCE.md`，引用建议在 `CITATION.md`。
 
 **English:** Jiang Fengcan's ongoing research archive on the eight-point Mordell discriminant problem, developed with assistance from OpenAI Codex. Partial theorems, exact certificates and reproducible verification code are preserved. The unconditional sharp inequality remains open; AI-assisted cross-review is not external peer review.
+
 
 
 
