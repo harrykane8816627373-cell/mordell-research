@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "research_initiator_and_source_material": "蒋丰灿（Fengcan Jiang）",
+  "collaboration": "OpenAI Codex derivation, exact code and independent AI cross-review",
+  "parent_commit": "c276ac27f01d7f0fdb9d90565a31162b6afbb855",
+  "existing_inputs": [
+    "Classical disk Coulomb smearing decomposition, reproduced in repository asymptotics/README.md",
+    "Prior explicit polar-family lower bounds and equal-radius instability from the user's source material",
+    "Previously attributed Sandier-Serfaty linear asymptotic input and triangular test constant, used only for the asymptotic layer guarantee",
+    "Existing exact +/- phase solver, complete finite lower envelope, stored ascent and contraction witnesses"
+  ],
+  "new_supplement": [
+    "Radius-variable weighted gap quantization and variable-smear layer theorem",
+    "Radial-weighted angular mixed-moment Gram projection and interval dual certificates",
+    "Exact integer-population gap energies and bounded complete integer minimization",
+    "Angular-average optimal radii, relative-entropy loss, exact population DP and fixed-family continuous-phase upper bounds",
+    "New lower witness plus general layer theorem imply at least four radii for every global 100-point optimizer"
+  ],
+  "limits": [
+    "No complete general-n optimal configuration, unknown sharp finite-n value or full eight-point cover",
+    "No exact gamma, new linear asymptotic coefficient or global crystallization theorem",
+    "Population DP is complete for its explicit angular-average surrogate only",
+    "One-ppm phase gap applies only to the 99 selected fixed-radius and fixed-population families",
+    "Independent AI cross-review is not external peer review or complete formal verification",
+    "No global priority claim; old archives and pinned source proofs retain their original bytes"
+  ]
+}

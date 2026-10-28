@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "arithmetic": "Fraction and outward atanh logarithm intervals",
+  "radical_support_comparisons": 2112,
+  "integer_minimization_cases": 464,
+  "all_candidate_counts_cross_checked": 4796,
+  "maximum_retained_candidates": 2,
+  "zero_mass_integral_cases": 6,
+  "invalid_inputs_rejected": 5,
+  "example_n": 100,
+  "example_bands": [
+    [
+      "1/25",
+      "1/20",
+      10
+    ],
+    [
+      "109/100",
+      "11/10",
+      90
+    ]
+  ],
+  "example_gap": [
+    "1/5",
+    "4/5"
+  ],
+  "example_cumulative_count": 10,
+  "example_exact_delta_formula": "75 + 100 log(2)",
+  "example_delta_interval": [
+    "72157359027997/500000000000",
+    "28862943611199/200000000000"
+  ],
+  "example_simple_strict_delta_lower": "425/3",
+  "existing_global_optimum_gap_upper": "1657/12",
+  "previous_single_cell_delta_lower": "225/2",
+  "free_constant_delta_interval": [
+    "50393615799983/1000000000000",
+    "3149600987499/62500000000"
+  ],
+  "nonempty_example": "centered regular 10-gon at squared radius 1/20 and regular 90-gon at 197/180",
+  "scope": "Conditional class certificates; integer counts on each gap are minimized independently. No full population-sequence or configuration enumeration is asserted."
+}

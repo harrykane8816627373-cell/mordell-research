@@ -100,8 +100,8 @@
     },
     {
       "path": "PROOF_STATUS.md",
-      "bytes": 8773,
-      "sha256": "7d034541ce613d28ac0d130f155cb471e942b01785da0e0e17db9c830888bc0b",
+      "bytes": 8969,
+      "sha256": "fa37979cae71a6906c505d1f5b1b5c823f7794b343c6a5e4b6c3de0958f479d7",
       "git_blob_sha": "bf6dee403cf03f02965c69e562d5fa01cfe06020"
     },
     {
@@ -142,8 +142,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6311,
-      "sha256": "ca961014a1d3057f826bef7c6a269282191e6b7e96e4efbe511612111e5060b0",
+      "bytes": 6611,
+      "sha256": "13be95102f5f4a6cf49691a55fe179aaa7bd98a8f8455735c98e3159a4fe3685",
       "git_blob_sha": "6ca8745223d1049a3ca45d68f79731aec3ff523f"
     },
     {

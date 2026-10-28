@@ -1,0 +1,5623 @@
+{
+  "passed": true,
+  "n_min": 2,
+  "n_max": 100,
+  "independent_direct_coordinate_examples": 3,
+  "independent_ordered_even_compositions_checked": 3070,
+  "independent_small_family_sign_values_checked": 128,
+  "prior_ascent_witnesses_recomputed": 65,
+  "strict_explicit_complete_previous_envelope_improvements": [
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "strict_existence_complete_previous_envelope_improvements": [
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "surrogate_above_actual_sign_candidate_at": [],
+  "continuous_phase_exact_at_selected_radii": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    40,
+    41,
+    43,
+    44,
+    45,
+    47,
+    52,
+    53,
+    54,
+    56,
+    57,
+    60,
+    61,
+    69,
+    73,
+    75,
+    84,
+    92,
+    93
+  ],
+  "all_selected_continuous_phase_relative_gaps_at_most": "1/1000000",
+  "scope": "DP is complete only for the angular-log-average surrogate over even populations with parity-fixed center. The actual candidate optimizes all +/- signs at the DP-selected radii. Prior envelope includes all published one-step ascent and contraction gains. No general optimal configuration, complete actual population optimum or new linear asymptotic coefficient is claimed.",
+  "rows": [
+    {
+      "n": 2,
+      "center": 0,
+      "populations": [
+        2
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 1,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "surrogate": {
+        "numerator_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": 0,
+      "actual_exact": "4",
+      "surrogate_exact": "4"
+    },
+    {
+      "n": 3,
+      "center": 1,
+      "populations": [
+        2
+      ],
+      "rings": [
+        [
+          2,
+          3
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 1,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+        "denominator_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+      },
+      "surrogate": {
+        "numerator_sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+        "denominator_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+        "denominator_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "77adfc95029e73b173f60e556f915b0cd8850848111358b1c370fb7c154e61fd",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -5000,
+      "actual_exact": "27/2",
+      "surrogate_exact": "27/2"
+    },
+    {
+      "n": 4,
+      "center": 0,
+      "populations": [
+        4
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 3,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "surrogate": {
+        "numerator_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": 0,
+      "actual_exact": "256",
+      "surrogate_exact": "256"
+    },
+    {
+      "n": 5,
+      "center": 1,
+      "populations": [
+        4
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 3,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "015876ed161db856ea9465defd857dc0d07db1d803eb79b79cb923d0fa966142",
+        "denominator_sha256": "707bf0b938f307b5c222e670598b865d5e1f8a8003df82c7abbf7c9f8fa4d720"
+      },
+      "surrogate": {
+        "numerator_sha256": "015876ed161db856ea9465defd857dc0d07db1d803eb79b79cb923d0fa966142",
+        "denominator_sha256": "707bf0b938f307b5c222e670598b865d5e1f8a8003df82c7abbf7c9f8fa4d720"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "015876ed161db856ea9465defd857dc0d07db1d803eb79b79cb923d0fa966142",
+        "denominator_sha256": "707bf0b938f307b5c222e670598b865d5e1f8a8003df82c7abbf7c9f8fa4d720"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "3d1c7db8b3179365d8023608e7341d396470d6518800d1e9e0c9b137ae0c6774",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -2371,
+      "actual_exact": "9765625/4096",
+      "surrogate_exact": "9765625/4096"
+    },
+    {
+      "n": 6,
+      "center": 0,
+      "populations": [
+        6
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 6,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "8fb9affd1d3d0f04553bab437d99c0f2e1f31c94b87485c909cf148a931763bb",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "surrogate": {
+        "numerator_sha256": "8fb9affd1d3d0f04553bab437d99c0f2e1f31c94b87485c909cf148a931763bb",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "8fb9affd1d3d0f04553bab437d99c0f2e1f31c94b87485c909cf148a931763bb",
+        "denominator_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "5f5dd31bc4edc75c54fa8092df34f7cd8e4099235791d9b75c0b32626d08cd1c",
+        "denominator_sha256": "015876ed161db856ea9465defd857dc0d07db1d803eb79b79cb923d0fa966142"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -310,
+      "actual_exact": "46656",
+      "surrogate_exact": "46656"
+    },
+    {
+      "n": 7,
+      "center": 1,
+      "populations": [
+        6
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 6,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "313768a3b0a7626179effbce53628668b3ff37548df75119dff807e8135c3d1c",
+        "denominator_sha256": "5f5dd31bc4edc75c54fa8092df34f7cd8e4099235791d9b75c0b32626d08cd1c"
+      },
+      "surrogate": {
+        "numerator_sha256": "313768a3b0a7626179effbce53628668b3ff37548df75119dff807e8135c3d1c",
+        "denominator_sha256": "5f5dd31bc4edc75c54fa8092df34f7cd8e4099235791d9b75c0b32626d08cd1c"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "313768a3b0a7626179effbce53628668b3ff37548df75119dff807e8135c3d1c",
+        "denominator_sha256": "5f5dd31bc4edc75c54fa8092df34f7cd8e4099235791d9b75c0b32626d08cd1c"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "313768a3b0a7626179effbce53628668b3ff37548df75119dff807e8135c3d1c",
+        "denominator_sha256": "5f5dd31bc4edc75c54fa8092df34f7cd8e4099235791d9b75c0b32626d08cd1c"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": 0,
+      "actual_exact": "558545864083284007/470184984576",
+      "surrogate_exact": "558545864083284007/470184984576"
+    },
+    {
+      "n": 8,
+      "center": 0,
+      "populations": [
+        2,
+        6
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 10,
+      "phase_states": 2,
+      "actual": {
+        "numerator_sha256": "ac2af1cae08f58897c31ec20360b675c5bafb859cb64e2202153231cd2bb70e2",
+        "denominator_sha256": "57b64bd8e5fcdbedf3aa0e7c203a497ea14ece950654d8c43a26d8b742ca190d"
+      },
+      "surrogate": {
+        "numerator_sha256": "1c076770bee00d3597ece350e40da43981efef930b24db30af9dba111ddf65c4",
+        "denominator_sha256": "57b64bd8e5fcdbedf3aa0e7c203a497ea14ece950654d8c43a26d8b742ca190d"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "ac2af1cae08f58897c31ec20360b675c5bafb859cb64e2202153231cd2bb70e2",
+        "denominator_sha256": "57b64bd8e5fcdbedf3aa0e7c203a497ea14ece950654d8c43a26d8b742ca190d"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "40e749384e73d603c41c1370fc839844583ac0308271ffadd3bea47eee46a3a4",
+        "denominator_sha256": "313768a3b0a7626179effbce53628668b3ff37548df75119dff807e8135c3d1c"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -3150,
+      "actual_exact": "10911804482486496294262172160000/459986536544739960976801",
+      "surrogate_exact": "10852136518455348099659374899456/459986536544739960976801"
+    },
+    {
+      "n": 9,
+      "center": 1,
+      "populations": [
+        8
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 10,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "25c93a5bfeac17b1fc014c5900c0620ed1da268c14ab678ac5624ae66ed7968c",
+        "denominator_sha256": "40e749384e73d603c41c1370fc839844583ac0308271ffadd3bea47eee46a3a4"
+      },
+      "surrogate": {
+        "numerator_sha256": "25c93a5bfeac17b1fc014c5900c0620ed1da268c14ab678ac5624ae66ed7968c",
+        "denominator_sha256": "40e749384e73d603c41c1370fc839844583ac0308271ffadd3bea47eee46a3a4"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "25c93a5bfeac17b1fc014c5900c0620ed1da268c14ab678ac5624ae66ed7968c",
+        "denominator_sha256": "40e749384e73d603c41c1370fc839844583ac0308271ffadd3bea47eee46a3a4"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "25c93a5bfeac17b1fc014c5900c0620ed1da268c14ab678ac5624ae66ed7968c",
+        "denominator_sha256": "40e749384e73d603c41c1370fc839844583ac0308271ffadd3bea47eee46a3a4"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": 0,
+      "actual_exact": "22528399544939174411840147874772641/19342813113834066795298816",
+      "surrogate_exact": "22528399544939174411840147874772641/19342813113834066795298816"
+    },
+    {
+      "n": 10,
+      "center": 0,
+      "populations": [
+        2,
+        8
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 15,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "f65cb134dbdd7803672c07e07b49d7dabe834ed0828f2c2ec435ba4e83b3a00a",
+        "denominator_sha256": "d2582af42ceb0c5c6cb06c546dc90cebae485c057135e84b39a6b02b21edfff5"
+      },
+      "surrogate": {
+        "numerator_sha256": "852a7c0f32bd068cbe887aeaba47412d224848ea2182920caea394b92c19838b",
+        "denominator_sha256": "d2582af42ceb0c5c6cb06c546dc90cebae485c057135e84b39a6b02b21edfff5"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f65cb134dbdd7803672c07e07b49d7dabe834ed0828f2c2ec435ba4e83b3a00a",
+        "denominator_sha256": "d2582af42ceb0c5c6cb06c546dc90cebae485c057135e84b39a6b02b21edfff5"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "f5d18d61aeb7578d2be7ca7faa3aeb8214ee6fb6f6e5e958daabd9594197cc2b",
+        "denominator_sha256": "e075f29719adbee03279dbe8a26aaf46745b67cb016a827c7f6d1def0f1862b5"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -532,
+      "actual_exact": "444812191292886255007375016079130665757813265781489664/8727963568087712425891397479476727340041449",
+      "surrogate_exact": "444690686956163595658452459315456922118608428596199424/8727963568087712425891397479476727340041449"
+    },
+    {
+      "n": 11,
+      "center": 1,
+      "populations": [
+        10
+      ],
+      "rings": [
+        [
+          10,
+          11
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "population_dp_transitions": 15,
+      "phase_states": 1,
+      "actual": {
+        "numerator_sha256": "14bcf6ebd4f622156046ce20e2e551178b2948625a693109f6905f4e56d22fa1",
+        "denominator_sha256": "76b8f3fb0f21994e004e9cf7ee623270b44ef316e83333410827804e7eed3a84"
+      },
+      "surrogate": {
+        "numerator_sha256": "14bcf6ebd4f622156046ce20e2e551178b2948625a693109f6905f4e56d22fa1",
+        "denominator_sha256": "76b8f3fb0f21994e004e9cf7ee623270b44ef316e83333410827804e7eed3a84"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "14bcf6ebd4f622156046ce20e2e551178b2948625a693109f6905f4e56d22fa1",
+        "denominator_sha256": "76b8f3fb0f21994e004e9cf7ee623270b44ef316e83333410827804e7eed3a84"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "da28d2e0db8d1b583eb686a988cbffda655c0c9bba1bc5107749f413cd613b30",
+        "denominator_sha256": "ba96c91df2809c68c7074edf59bf33debe7343645480a982a1ad79679b08f0c0"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -4072,
+      "actual_exact": "1890591424712781041871514584574319778449301246603238034051/1000000000000000000000000000000000000000000000",
+      "surrogate_exact": "1890591424712781041871514584574319778449301246603238034051/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "n": 12,
+      "center": 0,
+      "populations": [
+        4,
+        8
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          8,
+          15
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 21,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "58012b5bb42cca66173f4cac566807b5389b67adbd03500c94bee3e06d330ca0",
+        "denominator_sha256": "a9c020ae138cf9e4fa55cde54552a57969c58259cce7dd554307ed920a4fe774"
+      },
+      "surrogate": {
+        "numerator_sha256": "661fafcaa138d4c8cd5749d5bec1a337318153e69a1d83e08906ca238988a571",
+        "denominator_sha256": "a9c020ae138cf9e4fa55cde54552a57969c58259cce7dd554307ed920a4fe774"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "58012b5bb42cca66173f4cac566807b5389b67adbd03500c94bee3e06d330ca0",
+        "denominator_sha256": "a9c020ae138cf9e4fa55cde54552a57969c58259cce7dd554307ed920a4fe774"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "5399371d41b49641aa3f5923e3317c88d4188dafca76002abd173cd585b09eb3",
+        "denominator_sha256": "69abc065a2e01166ca5956acc1d021c17e92ebfd3ed7acf7916e84dfc9394ab0"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -1684,
+      "actual_exact": "116605076936905985292119072715863944635770174538449264640000000000000000000000000000/539407797827634189900210968137750826278309533633974732577186113975161",
+      "surrogate_exact": "115123221213492052115204340977702289819717407226562500000000000000000000000000000000/539407797827634189900210968137750826278309533633974732577186113975161"
+    },
+    {
+      "n": 13,
+      "center": 1,
+      "populations": [
+        4,
+        8
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          8,
+          17
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 21,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "cd01c49b6ec56c4ac53b47c18ded8bf16fcf1a9e6f9e9044634215da9c761838",
+        "denominator_sha256": "7e86be240c6be718cee0f7f31a515e6d71f5834818665e593194e4e87dbd1bea"
+      },
+      "surrogate": {
+        "numerator_sha256": "db42b8234fa27ccfd43fb0ba9d65e67f35ea283f3c56658601d2cb83f949bf46",
+        "denominator_sha256": "cba958df5e3881a1058d0b8857d2be7448c5742cb73647420b7f43f5dc729b75"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "cd01c49b6ec56c4ac53b47c18ded8bf16fcf1a9e6f9e9044634215da9c761838",
+        "denominator_sha256": "7e86be240c6be718cee0f7f31a515e6d71f5834818665e593194e4e87dbd1bea"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "a11914c53ae28a682e1b03de827934742f9d0a6b7bf8c33083cde1e6cbc25574",
+        "denominator_sha256": "4057fd88b78d696aac5dc68ad0fd9b2cc78e3cb0dd3b2e1438eccc505a9ae8a2"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 3279,
+      "actual_exact": "18962214527788603349816088970245680280294293417031176317557749184076948158020025009765625/1364386347789899668392446389316263234874194021660371986499251813329403904",
+      "surrogate_exact": "4573268470526572948078975401526220351005538057819842733187314897836958294026069865634765625/349282905034214315108466275664963388127793669545055228543808464212327399424"
+    },
+    {
+      "n": 14,
+      "center": 0,
+      "populations": [
+        4,
+        10
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ]
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "population_dp_transitions": 28,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "53a7c2ec2abb696876d397184b0386aeb391b56fc6f1ddc5db5821c4b117c611",
+        "denominator_sha256": "3d8d1f260194db1e33d84b45c7d1342727943843dc08ac90822037123e1dcd75"
+      },
+      "surrogate": {
+        "numerator_sha256": "edbb3c6f91ea1a25f8aa15c850c2689fabd4f700c02ad3952f61dcdd6268a815",
+        "denominator_sha256": "3d8d1f260194db1e33d84b45c7d1342727943843dc08ac90822037123e1dcd75"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "53a7c2ec2abb696876d397184b0386aeb391b56fc6f1ddc5db5821c4b117c611",
+        "denominator_sha256": "3d8d1f260194db1e33d84b45c7d1342727943843dc08ac90822037123e1dcd75"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e1bd511adc04560d6af66c7fe27f185f3fee240d37114515663d762b416d6a33",
+        "denominator_sha256": "e69b9bbba768466ccc06d0ea93866de79db308521c5d891a8754cc714119bc36"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 9755,
+      "actual_exact": "722979297846434289265344408964060196642546335047141595637733383844741759108763615898998935078465786482006138880000000000/233800297756495754333906440859465656572562698747866779643043984685250327454376054887271637253929816437",
+      "surrogate_exact": "722979213141413261306535050566510354473347938164843330546879606338382791361171209637343858770614422391743879680000000000/233800297756495754333906440859465656572562698747866779643043984685250327454376054887271637253929816437"
+    },
+    {
+      "n": 15,
+      "center": 1,
+      "populations": [
+        4,
+        10
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ]
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "population_dp_transitions": 28,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "cc67e50812caf4c2a8f479425f761a3413d2d7b96802dd8bb38610b8c3c20294",
+        "denominator_sha256": "45a039aa7547f2d634cd7694eea3de0e594f09d9cf11d2dac314b6ac25ba460e"
+      },
+      "surrogate": {
+        "numerator_sha256": "4ffa2a0b030e325df26b1142608c9dd0b669d8e396109f3a9b86885ddb5cc5a2",
+        "denominator_sha256": "7ea4470af0a06fefc00c234a59dcd4dbe8ef10adc04c6b2aead65949ef243797"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "cc67e50812caf4c2a8f479425f761a3413d2d7b96802dd8bb38610b8c3c20294",
+        "denominator_sha256": "45a039aa7547f2d634cd7694eea3de0e594f09d9cf11d2dac314b6ac25ba460e"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "baa7d05a862edd5be1ac608a2dd90ae1cebafedd890f8548c00b15bbed2a874a",
+        "denominator_sha256": "8827b9ae6380d2f640bfb6d61dbfd40fc37f71388e04ceff5de5de628875ae3a"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1096,
+      "actual_exact": "180665389448960417094833142687792296769784898668510009884733807434171091266239356117812181093711173867883493794296561712169647216796875/525755520594030928978436944984546688520262559411905367434819872038176881214867179932729957161334731165783876960256",
+      "surrogate_exact": "2890627814253256109319391274488303660191709203560494971208067578073057212347320174257545898929250231276629646833492196645641326904296875/8412088329504494863654991119752747016324200950590485878957117952610830099437874878923679314581355698652542031364096"
+    },
+    {
+      "n": 16,
+      "center": 0,
+      "populations": [
+        4,
+        12
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          12,
+          19
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 36,
+      "phase_states": 2,
+      "actual": {
+        "numerator_sha256": "b2625e42b7d7ca5a0cfbd2100c0736d3d15656f4f9419a046bfc1e7e413e4260",
+        "denominator_sha256": "0696d7aca6a9b340773311ea65458e1b6a65ad6934ed74facd7f5815d7039c82"
+      },
+      "surrogate": {
+        "numerator_sha256": "568b90b056d5a057b991de9ba8504f44a4aeeb0a8b5893aacf9784345483bb69",
+        "denominator_sha256": "9f5636f8695734474c11e4bebe2a962a6cfb06b263f202238422fffdd1e69a7b"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "b2625e42b7d7ca5a0cfbd2100c0736d3d15656f4f9419a046bfc1e7e413e4260",
+        "denominator_sha256": "0696d7aca6a9b340773311ea65458e1b6a65ad6934ed74facd7f5815d7039c82"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "aba2782c2aa290cd4e39a0132d3c8a6facb7c07d62909b223d4192c8dd62e4ee",
+        "denominator_sha256": "ff154ac31923d8f83ae7abd366cf11f2a8f94830bcd3f8f4be1d19e61a1fc1fc"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 295,
+      "actual_exact": "659423122787708400991950013896951768794048107695448853142684741697863621185825638882227275933267457927591025968124793422976282532801301008725296807936/8933228998576506681092571699471130466536843300027875661282875803000018185462722752573395956776636239737854339182376861572265625",
+      "surrogate_exact": "257555228006909229577511535821423490047135432373574681443711937728071975733413144620028813365680213838160864566705507754245966230297412384116827181669154816/3489542577568947922301785820105910338490954414073388930188623360546882103696376075223982795615873531147599351243115961551666259765625"
+    },
+    {
+      "n": 17,
+      "center": 1,
+      "populations": [
+        6,
+        10
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 36,
+      "phase_states": 2,
+      "actual": {
+        "numerator_sha256": "37485c4975fffda0174895835a39c5768f55997e0f0dcf379b3ac2ed793a3e44",
+        "denominator_sha256": "d672b1ce051c773a37d33a288b1acc18b05b296949bcd22927008d393b2ca9be"
+      },
+      "surrogate": {
+        "numerator_sha256": "c7b6a0cb69b94037cb53bc633a3abd20f8cf060cc9415a3eef615fb4ef032332",
+        "denominator_sha256": "4703e93d5df2d4b5bd2dfb901648e7acc08e62cd262b2a6f7b6271a5aa64a8b1"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "37485c4975fffda0174895835a39c5768f55997e0f0dcf379b3ac2ed793a3e44",
+        "denominator_sha256": "d672b1ce051c773a37d33a288b1acc18b05b296949bcd22927008d393b2ca9be"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "4e46a8c753c732a13e995d2924946aa61d06cb4d1423f8318346e4137a434d17",
+        "denominator_sha256": "9fc605133a27a116e9e26d8001a9d2dbd5e1d22e41f31165d5626b776fcdd237"
+      },
+      "explicit_candidate_improves_complete_previous": false,
+      "existence_lower_improves_complete_previous": false,
+      "explicit_gain_basis_points_floor": -608,
+      "actual_exact": "986433021838546355926672706711226687548520320331211815178690976070698237974962089233346552385923471755104396367008991231096629333641081142017708698688254437681532389857334136962890625/54918381281044877719855206392651145738155482401146443275155707673484345467181248416980477125291636439818370491131846864296975903997733150500592226328920457216",
+      "surrogate_exact": "15782927225327951555002554225513388337123896917311059170782130963385579337194329711701942120177732913993567740796396953189443087387999355993100903597760009060649840534179839653525390625/878694100496718043517683302282418331810487718418343092402491322775749527474899974671687634004666183037093927858109549828751614463963730408009475621262727315456"
+    },
+    {
+      "n": 18,
+      "center": 0,
+      "populations": [
+        6,
+        12
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 45,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "4483602057ff030637b89cb8abb3ef0194eeab4ccd26e4b13c250dd3dec558f1",
+        "denominator_sha256": "335e960b7272d198d4042a2a3d84d354b2a3a1be18690c72ba0e0acd2f775e9a"
+      },
+      "surrogate": {
+        "numerator_sha256": "c2f6068bb3b82042df6d1c51f4aea439bb96ac142f0f397f46aa2a3d2a6d08b1",
+        "denominator_sha256": "335e960b7272d198d4042a2a3d84d354b2a3a1be18690c72ba0e0acd2f775e9a"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "4483602057ff030637b89cb8abb3ef0194eeab4ccd26e4b13c250dd3dec558f1",
+        "denominator_sha256": "335e960b7272d198d4042a2a3d84d354b2a3a1be18690c72ba0e0acd2f775e9a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "ef8846ef7ecaf6eea2345f1c166c4e1d44409670beb6217384e4a59f197a7d30",
+        "denominator_sha256": "6b4c2690818309d37e863a8658443b404dda27a66c1cd1fabe905b8d811e7cad"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 2,
+      "actual_exact": "1053474268047551125301667090146569499051003539929661961257358553758929978421337077987619762978854929056291959617592904503693041480926779064927668085042386972773045241432385078690624155875224056431116288000000000000000/181419919907036280649478169945191105218710869552871882165610659782995592806901500862618491409403869967078426442775378678240690146066798142011530550527679359269105359869000383712515854120337",
+      "surrogate_exact": "1052140868579321029435787386805190665563739274874126955068354385479381439831224625364564873528282996796487953662771629375692762107018574590769436628960893280672742466354478673319645522089230275695116288000000000000000/181419919907036280649478169945191105218710869552871882165610659782995592806901500862618491409403869967078426442775378678240690146066798142011530550527679359269105359869000383712515854120337"
+    },
+    {
+      "n": 19,
+      "center": 1,
+      "populations": [
+        6,
+        12
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 45,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "53748c58a263f280dfb208441867bfae3516047df2f69bdeb8941b1a55fc6665",
+        "denominator_sha256": "62ed2fad2bd7e1db1c11a63250d636620ae1b39fd1ff3d07dc163eeec9989e77"
+      },
+      "surrogate": {
+        "numerator_sha256": "a930548b2004555b64896c239f2d8e76c44d05c2bb333c35ec4b6933dbf38c91",
+        "denominator_sha256": "0286ef77a6eb53d3f05fcb309094eb2271809eaa4df0e6b3e9efdcb25ad53183"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "53748c58a263f280dfb208441867bfae3516047df2f69bdeb8941b1a55fc6665",
+        "denominator_sha256": "62ed2fad2bd7e1db1c11a63250d636620ae1b39fd1ff3d07dc163eeec9989e77"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "923658b8834981cbf53a65246ea870ecdc9719fd7846e53aefec09557856fa05",
+        "denominator_sha256": "1cb78b1306c44b635c1787fc6ab520f405a31704ab0a85eba70575228cda6266"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1851,
+      "actual_exact": "67330366089211722078250541724479195302141241382955298561437644473177230553875233227798657608195801235659250347614200387112139858453804292832649072284984628664891193169710852217449393274095736927620237111113965511322021484375/26312127796561823222318391130177749602704141902150222389921627556795702261909963283567109039013222323130098751786678901162711023903580596977994842126581057364741093222497016126926498816088604672",
+      "surrogate_exact": "274195385144032166936212993667689258031722794456868520643916720311460616661413555695298552060563717093431660804122903987259585480335518055225179795519920240584682821925004667547030290353747561393760179271339438855648040771484375/107774475454717227918616130069208062372676165231207310909118986472635196464783209609490878623798158635540884487318236779162464353909066125221866873350476010965979517839347778055890939150698924736512"
+    },
+    {
+      "n": 20,
+      "center": 0,
+      "populations": [
+        2,
+        6,
+        12
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          12,
+          27
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 55,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "8d56d6f4ea93343ada630d23082e05113c291258cf30bfb1e7736f60ca5394bf",
+        "denominator_sha256": "fb492f5b5d6e43656264964532e0d8d7811e65e000f2db0d24792ead35f63a25"
+      },
+      "surrogate": {
+        "numerator_sha256": "e8adb1a53a3447c5f7bcbdb23e4537852bd548960fd8b8dfdb51ee745dd9b020",
+        "denominator_sha256": "fb492f5b5d6e43656264964532e0d8d7811e65e000f2db0d24792ead35f63a25"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "8d56d6f4ea93343ada630d23082e05113c291258cf30bfb1e7736f60ca5394bf",
+        "denominator_sha256": "fb492f5b5d6e43656264964532e0d8d7811e65e000f2db0d24792ead35f63a25"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "2ceecfaacf06f36343871a21a5032b6a83a508bf1949ad4f16a29df89f85f07e",
+        "denominator_sha256": "4daf043d297032ee7ebe6860dd5c713244b1765e90e907d20155876bf29fae8c"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 7525,
+      "actual_exact": "751874417361160820115836562961110785536918160436194777272090585991929592965312185988134723097402293538386076439880479168095677236096857633410373770282010769415817031856316700308365406332546682681530699589618990121960046291655024795691593230976923472389734400000000000000000000/918722137055474067914771375568354603076480972563420675457093873142474260788297211891748682530903605588225449743703955736261157818661970123573117082304042634012005734451735901394924148104942052027560433389302150300821753664969412760153150538201",
+      "surrogate_exact": "735563202250022354486890773985407161506669621629903693173949871491710180245307128532163372304241939636782732797526794353899426439538826015560477726939055656098555821095100726134869502356259047805195092798885851638446950023459434508887105545247384260808452279009400114531794944/918722137055474067914771375568354603076480972563420675457093873142474260788297211891748682530903605588225449743703955736261157818661970123573117082304042634012005734451735901394924148104942052027560433389302150300821753664969412760153150538201"
+    },
+    {
+      "n": 21,
+      "center": 1,
+      "populations": [
+        6,
+        14
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          14,
+          27
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 55,
+      "phase_states": 2,
+      "actual": {
+        "numerator_sha256": "70df184024ee4c3b649d525c44f4047b262716c6dd8e267719a2639ecf88dcb0",
+        "denominator_sha256": "baa5612c13806130dab026d8ff6eee7d0830e680f7a0d44b75102e565be32d97"
+      },
+      "surrogate": {
+        "numerator_sha256": "1839036dfda32d6130d7a972a898895210cb137db74334dea0dfdc2eaa1853d9",
+        "denominator_sha256": "f147a2492e32df193855b76c7c13cbe88bd57b19528c9efe1d4e71eadc5dbd51"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "70df184024ee4c3b649d525c44f4047b262716c6dd8e267719a2639ecf88dcb0",
+        "denominator_sha256": "baa5612c13806130dab026d8ff6eee7d0830e680f7a0d44b75102e565be32d97"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "7ea53895bfe4730da82975ab62a1f351d1ce73864a799c7d221f8be388f5bb0d",
+        "denominator_sha256": "71b3891600add257a3efbfa9161f81abddd86b0db71764ce01332e35aa38b101"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1836,
+      "actual_exact": "58182231259993642783284279500375017900624491419643017344540948945725289899070739517498883877957854895681763993050829700701253217841840363039264868449962055844634585014896782154637484379512339438362836238674136311552168158200794449221902642544627035736331197415428636594801973149467642150913523664371109/98079714615416886934934209737619787751599303819750539264000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "surrogate_exact": "930915700158081137207354471440713881526423575297266550894017800732390448334196717223832043802217298305065836020898505890865056646423375641731018491718982622012041962162903096659585028040393636014003205391482423630340183426015694406378771197601701553607636617674677686015021253908856798301536279474966389/1569275433846670190958947355801916604025588861116008628224000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "n": 22,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        12
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          31
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 66,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "521253c0b2b95f0b7c54bd4af94d61eb0bbc3185174f57738bf3146aa3cb2e71",
+        "denominator_sha256": "2136d889125bafe56cc933b7b095b70135893f2339b860bdc9b561c9e40ae8f0"
+      },
+      "surrogate": {
+        "numerator_sha256": "70521e7e9ce3c69d8b629eec0d0a71b5497e5e9567fd59bbcc81ef03f2a035bc",
+        "denominator_sha256": "2136d889125bafe56cc933b7b095b70135893f2339b860bdc9b561c9e40ae8f0"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "521253c0b2b95f0b7c54bd4af94d61eb0bbc3185174f57738bf3146aa3cb2e71",
+        "denominator_sha256": "2136d889125bafe56cc933b7b095b70135893f2339b860bdc9b561c9e40ae8f0"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "c124c63878dc9f8a4be55bf62636793426a90e69aa4ab64556e2ae3cd359f4c1",
+        "denominator_sha256": "26a63bcd2c8226b231932858f272a06ff1e2a678ab217e96b24432b674833d58"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 12028,
+      "actual_exact": "184580354740930955893222157897630821947886706554275088129238481514952995344117505537348242542707703149207944117643535093443416259702106114376798987697884441467979292876940666644500805372384954859884229467048234346831481271136380458994265738565166152933587998886767966380641461548478945882436982597514865999261108508718130141208800860831744/509567858810971896622315221494689318507882240296189573504205881828708030178225184703372404775355466669794384943865186172728253868555300063766834178577734493804469211459372325094663605016169047874638610638832431543580005190345042283760115521398822038534723254572874596062100968379219669012454454767981",
+      "surrogate_exact": "184524052228024527552201543602326136095921099069976206748463283937926291048154870709247953477063927613247706784222473725734369647109023515523996731262283122772213296933713410902535492055677073599910435508356211023680347011534058231532242861831306862043867578667359000407577742475347217858086834127634877779074054223457013861215406395490304/509567858810971896622315221494689318507882240296189573504205881828708030178225184703372404775355466669794384943865186172728253868555300063766834178577734493804469211459372325094663605016169047874638610638832431543580005190345042283760115521398822038534723254572874596062100968379219669012454454767981"
+    },
+    {
+      "n": 23,
+      "center": 1,
+      "populations": [
+        8,
+        14
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ]
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "population_dp_transitions": 66,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "f47be799aef515942da5e4a049e83b32ac29cd747f9611ce87882e5e46125749",
+        "denominator_sha256": "da63ad1ce45e45678d74c57a3ec05dffdaf4774783b7eace2e4821803c3974ae"
+      },
+      "surrogate": {
+        "numerator_sha256": "1e22160742245ed008164852cff37af10cf3a4c53ecdbf00ced14e46fe85c2d4",
+        "denominator_sha256": "b2192d0acdfec1a20275538e2e3595a836ba308fb868ce68220bec60d8c9c5a3"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f47be799aef515942da5e4a049e83b32ac29cd747f9611ce87882e5e46125749",
+        "denominator_sha256": "da63ad1ce45e45678d74c57a3ec05dffdaf4774783b7eace2e4821803c3974ae"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "2e3eb089531dd17e7516dbf30684d727f2d27c353d7f824094a24b88a7b200e0",
+        "denominator_sha256": "059fbe0a0ddbac3bb1ea31944a740a7832de0a008c9f885b170c18c4b317d5dc"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 21407,
+      "actual_exact": "403153541673587885104780190718092718538479998984226364438646741224049136535082169166437886148686629701852792249551327114788828046450983705515362146386384938450359502501249588692205088110255668525609203004226504821981935726621968013274825860787667699682324862426859863611186585604973551889909405608067603919929203783348766516157684662389022475648680925984071411505392239/976513901307526405609558829066181730500433308479425244658918523323246572861565768037941300843568916926763800765708423595242145180707558741082188499487222493315453096207964598822334984877328039083133620696514380585655890057820096986730766352605209724606843709562655820715792551120005839386277271631436241795832106272111762341888",
+      "surrogate_exact": "6450456666777382594188716357362073179206541717114084823710751096183666227324537010309080463561703077048314495538008979899118392286625496490209816541007597204166008391015083780479614412248829826803080778376489763971413127506556359590181794278319521153090060115771433878908985533721452193368641440206107169537979401707598185167175885127085893997463240929295687011827876399/15624222420920422489752941265058907688006932935670803914542696373171945165785052288607060813497102670828220812251334777523874322891320939857315015991795559893047249539327433581157359758037248625330137931144230089370494240925121551787692261641683355593709499353002493131452680817920093430180436346102979868733313700353788197470208"
+    },
+    {
+      "n": 24,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 78,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "f2ee08b1619aeaff48ff90ff9b76309ac3d458ae13ca1eb9f52ed07f4d7b4cba",
+        "denominator_sha256": "faa50b538a20f451934c242e0fc2c156cb9737af870b73ccef3fe3fd18ebf866"
+      },
+      "surrogate": {
+        "numerator_sha256": "f756866e40ab4e5835c0a732bda488d995e7fe7734fb745040869fe5fa2d3f09",
+        "denominator_sha256": "faa50b538a20f451934c242e0fc2c156cb9737af870b73ccef3fe3fd18ebf866"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f2ee08b1619aeaff48ff90ff9b76309ac3d458ae13ca1eb9f52ed07f4d7b4cba",
+        "denominator_sha256": "faa50b538a20f451934c242e0fc2c156cb9737af870b73ccef3fe3fd18ebf866"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "22ed6d59cabf449450d7bcb687ebd5274be40c481f0aa52c639be360dd2a49fd",
+        "denominator_sha256": "4c2c76bf009c330734ff971371bfe0e69a823994de4176502c42c33d531ccf03"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 17040,
+      "actual_exact": "2955896975200412369984975740909741105910271627310344874823650692570531199320619205814017948389722205129494917488175886868529111127126454127767433573718396642243228909716816456960128325562463340841482948559547331523157644353627248848539403802454218375487116064283366155943042309127061130505942438367422152920949785440891003682945245518741125184103746953821179654025836879572581886060522884518504853338521371782576957554688/6868829571552892757779164308687382249532093270065260674875898074787002145548389669027939157895501892491838588611258793524688522966164212758056177312163742421404588154629413965177382858981163852414827349759163872307964073655622248240110093184791072157229873472108246318455160210341443199216738413260550614629590992174365190078508959447823954476903344715451115305559011626502561",
+      "surrogate_exact": "2955089545835789495416287949401889707813172838905352964543299826382475113623486971008097975882305465563769687971649557868599718849013022885915174769703223399795365261886092851841219914524971584032466943429790993585628870111653704786844133200467142541536485317904169432134800627296775426081154197140972939983369735138885930477992646628178138904613526693381675575820338743043066973142282903666355023280485139530330645987328/6868829571552892757779164308687382249532093270065260674875898074787002145548389669027939157895501892491838588611258793524688522966164212758056177312163742421404588154629413965177382858981163852414827349759163872307964073655622248240110093184791072157229873472108246318455160210341443199216738413260550614629590992174365190078508959447823954476903344715451115305559011626502561"
+    },
+    {
+      "n": 25,
+      "center": 1,
+      "populations": [
+        8,
+        16
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          33
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 78,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "07046814ebfe834a697aa82d104e251fa065229fb772ed31d208fa96ee9f0aaa",
+        "denominator_sha256": "d1f396e911a1713934a07c9abb60d8c8f916295a480f7be935e5819de2318572"
+      },
+      "surrogate": {
+        "numerator_sha256": "4d2e2508c65edaf43b763c77aaabc86ad95635b89146e00b49091fc867e58961",
+        "denominator_sha256": "e17f79c761e4cffb33277c8e51af836537a93b15d7c3894d0a0261c094b3419c"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "07046814ebfe834a697aa82d104e251fa065229fb772ed31d208fa96ee9f0aaa",
+        "denominator_sha256": "d1f396e911a1713934a07c9abb60d8c8f916295a480f7be935e5819de2318572"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "4bd5a12ab6b59d126f2d5da97776f679d3191d1fd5a1c882e0d53718d03e8113",
+        "denominator_sha256": "dbd3fd980d00a3e317af9f6424b27b96af525b98493af39aa76c2d1737ad22ce"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 15126,
+      "actual_exact": "193984397748560210407916344322869147509392955434698952938785457774611668571308391686279844242353167988762058826371809491739222633198800850357181163808477798914269037543482540550682280384742955855565358034050921674573402568764502882254713825664355965053078094901921976267308836007349386801/416750902054990892129990736920078612321547395144744260024766113235252327363602004470089512554472143171433119412089577527868050103382460317522709753270676877880947348719625909903942392869488376545560313508492912623855671752342278830697742336",
+      "surrogate_exact": "12706737308770594593016587834667331497365043120094790458174413138570212761896380484155910543182286675810131095808889245944909730832085401268338379278737434817007375536134656987725603409893964743491165561408716116931540786149621337762698699244057773629324662834495396569535063268749117584346161/27312187117075883106631072934794271937104930088205959824983071996985496526101020964951786294769886374883040913790702552866360531575272919369168306390347079868805765445689403631464768659094790245289840706092591521717005303961503585448607241732096"
+    },
+    {
+      "n": 26,
+      "center": 0,
+      "populations": [
+        4,
+        8,
+        14
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          14,
+          37
+        ]
+      ],
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 91,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "150e06789effbac9a6d1a4bb33cfac6630ffbc0e6e9fa106c1197934c4da2c4d",
+        "denominator_sha256": "3d956600ec1032bafed8044b5915ea321a92e8cfa9bd3b458a5c4ca42be3ef3f"
+      },
+      "surrogate": {
+        "numerator_sha256": "9361b9cb41b370c7f9d659d63d0372d92a1770451450ae42c4b1c3715c4d88a8",
+        "denominator_sha256": "576698f6499cb454790b45db54ff5957608ce67e3ac8741dfd4c63ae99c117dd"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "150e06789effbac9a6d1a4bb33cfac6630ffbc0e6e9fa106c1197934c4da2c4d",
+        "denominator_sha256": "3d956600ec1032bafed8044b5915ea321a92e8cfa9bd3b458a5c4ca42be3ef3f"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "fc4adbd341338497137fa9b4ed7614607a7a9765fa3286a8dbd633a817491d18",
+        "denominator_sha256": "9e23f1320d9f643331de555a3f9f029368e8612be0b38880fb67ad64e9132d97"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 29444,
+      "actual_exact": "507687383936947541742475983703713821646799733651906898077438042979141833526509640277519204832066283908113627461683131809938630428243825356175230906105886754106234793319511056903705581026735590300879950583154220369655689428866771165322246701027661134692132938459516028126922713430392292074153290380144793339727636174437846652834797270758291428812223848588883991385957350661226589425631749808272518751832469869243673976080844759699894021370351955164751993928867682632388002620145057923072/574569669986458806452929981878401979549170721652483456571173662461949313368859538430138015197614450193437188226893547167267948862312580724121643008041736308150914746863794593376207705759407756756594326803894667719528341740887435499522024689019305271048952887028522038965718457018444010002532273948517603912996742963639651285836618413522541670407685066046341474783210412995211147852940437226487192801105408079820335842669010162353515625",
+      "surrogate_exact": "21527901892984063609127182863076940130904158675275125361405258702035392892760637071955659736387889611372969252740501514065746862388352425029647719721680537167287244285560452431909258254910452752808070489891602376305140289240806750848167504485461329265955099364643368547961966790207811376387392148411708269610102592359340876810498323461071622955467637846143658614606415014049846002403176979075885407130591209565089992736325597466978893054693729452502881719667392512/24677579418653533365665280355456091509053490734181355231542271766106151453289073023750979560401050407978335972647040127568492820326329411394624550453263224465639570702641163450124303207398471595982956659618638032841611283222232414877565196710424864517956682648322847765729984380377986917679729937933958964866026403833504194015126240853107206331982183457366366546422974137010852846429997953237034380435943603515625"
+    },
+    {
+      "n": 27,
+      "center": 1,
+      "populations": [
+        10,
+        16
+      ],
+      "rings": [
+        [
+          10,
+          11
+        ],
+        [
+          16,
+          37
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "population_dp_transitions": 91,
+      "phase_states": 3,
+      "actual": {
+        "numerator_sha256": "0df9955136483b3791b062abc629681f4ad5321c749b38092004577d461d4730",
+        "denominator_sha256": "2f918466b18be01eae89ea92f66f30236e9b625d383ea32dcc80504da06db682"
+      },
+      "surrogate": {
+        "numerator_sha256": "d9e95490b3eb571112fe04cccd7b51798b2ad06b21a4d7bbf39e09caeebf770c",
+        "denominator_sha256": "d5ce9c76f3539dafaa9e1c7b6b6396ad330700142c9838857cf8448b8c805338"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "0df9955136483b3791b062abc629681f4ad5321c749b38092004577d461d4730",
+        "denominator_sha256": "2f918466b18be01eae89ea92f66f30236e9b625d383ea32dcc80504da06db682"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "9e149d5a77676f17cf9b198d25d9ff9a8819347ac4e2557b0403e9bcedfd790b",
+        "denominator_sha256": "2c69645030b019d305bdcd57ead8f8349152aeac1d3f5b0f6edcd54651f90b32"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 26185,
+      "actual_exact": "177782114886041583771227704991960324720809780086301512487699280480858715303824400630872590753041130889823519458848769553293011375370953938702276625301555675792585266551300971815961668074914158243088750712359873420742873707106713378815025062303479169854978139554792128899845926120022951997223187037276592212144269790180636233109076991554746377433491830040241165702239500095534134885936958699728384235459237713283589540790556684788564593796780096023753307811106307060000944444692550162918644214380146678706902379664818721591796875/149728845514178473078127741080812550877987226699361063435775391307204881930452971371823567255398492224623059414044815166267356528549730994916696424298275100736501812851724114146807081278980268292464674935045144640606325444056635222556208741667838450718570091580279427858330396049405004025314699244568471538628022363145037156707431934343775950538590655844225932820473104738617223737211708367584283484242353517799526624118851807595827497097262365885542287522654552904018427904",
+      "surrogate_exact": "2844513838176665340330011501388636868387108713329928593259454217845347132682330366105995702992757142818600946000840715741495508371348463036037979633046900080070127943980852736249006034304695193127250540575136903478808437769273480991616508130899768564483716922043759390995896804347176395964155695674121520710321544351178458585568373856333756075894648574223270234329223222642420774660964158606357853989398736639640280518432705491553082276627090931481808289146871033012421097993150353262090108193546523438975958856669131284091796875/2395661528226855569250043857293000814047795627189777014972406260915278110887247541949177076086375875593968950624717042660277704456795695918667142788772401611784029005627585826348913300463684292679434798960722314249701207104906163560899339866685415211497121465284470845733286336790480064405035187913095544618048357810320594507318910949500415208617450493507614925127569675817875579795387333881348535747877656284792425985901628921533239953556197854168676600362472846464294846464"
+    },
+    {
+      "n": 28,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        14
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          41
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 105,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "d3bd625ad89a7b6bda201b87b55e14b6076b3aeaf0554e896fd02eddd9740d62",
+        "denominator_sha256": "87a52948f375abf8e8c34d9754fffe437d723a54ccda9dc3f4e30b1f5b4da6ad"
+      },
+      "surrogate": {
+        "numerator_sha256": "a3cd72a1126ade5a51d1135cb87fe02a7ec81aec600ed02b815008406be71b1b",
+        "denominator_sha256": "87a52948f375abf8e8c34d9754fffe437d723a54ccda9dc3f4e30b1f5b4da6ad"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "d3bd625ad89a7b6bda201b87b55e14b6076b3aeaf0554e896fd02eddd9740d62",
+        "denominator_sha256": "87a52948f375abf8e8c34d9754fffe437d723a54ccda9dc3f4e30b1f5b4da6ad"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "cea725c11be4efb787cabcf1feda07b034eb8ee9a681480d061702f1ebb0ea6b",
+        "denominator_sha256": "8802129d651190b842bfa92c7c5438b262ce56111b19547736169263f466bbfa"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 51296,
+      "actual_exact": "81500019266571858204095904195072337169884019918537177539026173023120781989765716286392478858857270030498877759422161904122987886598978930389785637800998936031144974044227797787884023473831710959624573893674951233444953294820419419567953302291285695720119640944408907652985704107485030034230334356216646072591099667572427319653728673691200981808818398313427721233115124937310497529041967821449668630149448657159362226416177725937849278622487146835682450189124170423904495068939258043051963128687390784591380813920401320507785527732061969683594590399638393744581600718942064753193779200000000000000/15587458986520816816612418392283620549593571703009183976905680313127663708726848633842183264978072809105407001485248617252389703124252734965370178596479246314013585274999981905430750790451387183579153875170890090990036254949237917850897032509486155762051155259632469611317799693960101514000027152297162743969688150460809694883208699948102985283726265425550237271973684762169324999949926592665970766501862485551695391240110801283434387401061515477999769696603456539061599662634586204783323711885278829854193156153054158966319104566095516961",
+      "surrogate_exact": "81500009717929618530520131320198363883670217362140072632513319397387114812988476490312539050770303574394170459679940558862781814975172890943370299250838910685519302955810182814196307466130275052995399553460719505060483437706464507414563004264038492327932580312042708212239122160459636525620298822193839527025352926369722336038002695438635030080068054032034388924335018474079670372139118944985541697720555676559263609853914264809292380545776206154403886285840747720875733167659162363560947573150700224749164482061944931125771474404664836185839911326082914368833281783970719448159297208320000000000/15587458986520816816612418392283620549593571703009183976905680313127663708726848633842183264978072809105407001485248617252389703124252734965370178596479246314013585274999981905430750790451387183579153875170890090990036254949237917850897032509486155762051155259632469611317799693960101514000027152297162743969688150460809694883208699948102985283726265425550237271973684762169324999949926592665970766501862485551695391240110801283434387401061515477999769696603456539061599662634586204783323711885278829854193156153054158966319104566095516961"
+    },
+    {
+      "n": 29,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        14
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          14,
+          43
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 105,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "b5bef91104a255b9762e761764334dc561a6d7f0bc3f8b8746e294006d35f402",
+        "denominator_sha256": "10374b9a17dbe1be25df3f1f0bebfc5a315bf09b34361ae77e948c17a8b12284"
+      },
+      "surrogate": {
+        "numerator_sha256": "a737745ef45ff58b18810ddb99e8fe659c4932e4ec84c535a946ae4dcb49126d",
+        "denominator_sha256": "934d2d5f3528e4baab1eb25752f84d75f8e93762751f22d4ba0104f0c3a1fbc3"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "b5bef91104a255b9762e761764334dc561a6d7f0bc3f8b8746e294006d35f402",
+        "denominator_sha256": "10374b9a17dbe1be25df3f1f0bebfc5a315bf09b34361ae77e948c17a8b12284"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "7b2db23a1e2cf8912f02c0ae89cf9b17f5f813da97511daa84701992a004c86a",
+        "denominator_sha256": "5a435f70610c66ad306c5d632d914c38c94cc1be243f99c68eab332b7990d0fd"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 18410,
+      "actual_exact": "333150236357868520079631216927287639538438687590877048786958879926858246677593154414769950891338813340352727903996479488718583035331539068175914984011379344488300502693273168879681617648747488642781055724883632029246668835893282250705918577198287727210524990404104400171074910453206004340703692600864870205259914160508557918301581761829188748896513145966088017434522432725202136524860580552528363137246670341410351828725505696575593930490526193573632987622778806787521826922199425573434962377007436994246922957136796827795322705773055189600773546434957496430316689557654023078526343329220361706891591013216977787017822265625/29475986946745869030499467846688123288840620204613462941935837177985974226462140598252430683644157518096868012588581383961187894879587401391252358243555547761298744643191619816696018462286833776587956028758174694827499823287138521083065011366970154699924093266194730676116944176713445299871599212340121439664824245835633776727673773112557612518394896118437944303082844663720599849936315752907494073651995600405720892607540337132146448894247848174557401319035982935941468669104610929810809059789662686670935909565917549123210383446455677646880248417524555559469056",
+      "surrogate_exact": "1364574674064555748422474734542579320317953734670009960391322202425799945720897068357713382080539668530209860710442434038938011090292755046199948772321110083218358500405682082319502206076273528909862201267774063773298037924378084128916566330670292618615275615666513526865532434674607864770073018721566095230046333938518815356504023925404867359824125780057183087314020181466646766263666805479211377603682793633378503658546276473597329242112758916130851001912942221195593098840642333683729066231973998479137546436455910479976035940224404656384356786795405315759309328656255137984544359411453255430560087768107053151798248291015625/120733642533871079548925820300034552991091180358096744210169189081030550431588927890441956080206469194124771379562829348705025617426789996098569659365603523630279658058512874769186891621526871148904267893793483550013439276184119382356234286559109753650889086018333616849375003347818271948274070373745137416867120110942755949476551774669035980875345494501121819865427331742599576985339149323909095725678573979261832776120485220893271854670839186122987115802771386105616255668652486368505073908898458364604153485581998281208669730596682455641621497518180579571585253376"
+    },
+    {
+      "n": 30,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 120,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "1518ff5cb8577563cde2ea668fc9ab2c240f20a8252811b5e83d9184aa7f771c",
+        "denominator_sha256": "60e4bedfcdec56e224d1ace699c47ba0f70efb9de4a9f93bcdbe17431b9b32f2"
+      },
+      "surrogate": {
+        "numerator_sha256": "7afd2640b4d02c084cf4e6758cfa8d568e3ee2ac7842f061b72fda321b87a08b",
+        "denominator_sha256": "60e4bedfcdec56e224d1ace699c47ba0f70efb9de4a9f93bcdbe17431b9b32f2"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "1518ff5cb8577563cde2ea668fc9ab2c240f20a8252811b5e83d9184aa7f771c",
+        "denominator_sha256": "60e4bedfcdec56e224d1ace699c47ba0f70efb9de4a9f93bcdbe17431b9b32f2"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "ff363b74bea210c521029e61cedd0c08093ef6eb0f06d900ccfd39feee9977c8",
+        "denominator_sha256": "744dc1338c19bed204056f461beffc8fd3c78a8c5d8d704859926d4e1cc7ea04"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 14146,
+      "actual_exact": "109192876147996236075874618946775152773871042312694818442405629203582213183666596360642604023425973470656181819297539064680244125984700938363991878840687075775237323868981876376879472465636290945583439801186701584915668090462498418163015781360231485854764352395558793247883487524280694605201567701364123371687259453998115260811990493887991838730130936290602665378860880024145665609870489451108974395672572353484822088410092157485898489796145316182701601304447576727912185808942471691367770856752577829175742372175665191038712533048056746353580461067230732251164709305778415886282629107745570460877635049182378464676981567516931963503795856382225062311380871386450318199685605744741349987450880000000000/1390365830469697364977307368643894780767359199583677075232127005690036599710101057981466933395050172427658296953150136831550349269275263905297116315536493464361588001661208876145496878925752331847302989050822640852778523132260897564095309619710392138712837561363635398278932498527890724232548594734445218871719384411462712710872443653257857864266670489866542247777151041275428427243519461811345000293072982475678845604444501891628119647191374238347729013663628798102845074818312633630409716598852289149830649019052605843551204421687825510526302352093496118676474303735971789438874094584007424416106838287689075127188063794296566283372549",
+      "surrogate_exact": "109192862864492556201496869565324108246928433856134345677774186539980672230229915619668207387074625033518690707472920189708473214339309142706565732112198730428864933793019656548298790978066314917146374662133516000523191884356285779238199523207008426122170133046246407357392604548063254242255209955357008065244962308807155702568215041412497049974913413963008147219719705299490060606257899560594249544883882106829462323189395577208884895109711824043522234612320865721277810644945416692156174419993740745704855350736992350469953461767964370051591478063683113636315924136636099127661231455411288517820451050477126291184064983225137955775747585035569649167150395815360091266211103860996912845946880000000000/1390365830469697364977307368643894780767359199583677075232127005690036599710101057981466933395050172427658296953150136831550349269275263905297116315536493464361588001661208876145496878925752331847302989050822640852778523132260897564095309619710392138712837561363635398278932498527890724232548594734445218871719384411462712710872443653257857864266670489866542247777151041275428427243519461811345000293072982475678845604444501891628119647191374238347729013663628798102845074818312633630409716598852289149830649019052605843551204421687825510526302352093496118676474303735971789438874094584007424416106838287689075127188063794296566283372549"
+    },
+    {
+      "n": 31,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        16
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 120,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "54276e980268bd458eaadf0ffee9b735f03239ec4d41272e754a5d5a58686e87",
+        "denominator_sha256": "19fff1d9bf890102cf429d71957a00f078daa2b91672984e18e1c3757c3bdb6d"
+      },
+      "surrogate": {
+        "numerator_sha256": "234008e640ea6e3b24141a56970f46d1af4ff4da22833e948f19f305115a305b",
+        "denominator_sha256": "c74eb12b8d1ab32032585d92fd5ffbe79e7d8e68039ea73e96dbb43fecfc5978"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "54276e980268bd458eaadf0ffee9b735f03239ec4d41272e754a5d5a58686e87",
+        "denominator_sha256": "19fff1d9bf890102cf429d71957a00f078daa2b91672984e18e1c3757c3bdb6d"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "42b8cab547ac63fefdc935e2e2b8e21fea1ccc5d13096ba696e637af8879b664",
+        "denominator_sha256": "e4fa08aebdadb8125946c8f00320af6915b9e679f1e279d3712ea68b35165d3d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 8292
+    },
+    {
+      "n": 32,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        18
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          18,
+          45
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 136,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "9e4ad3e6756155ac200f1a0bf1e03a83be7aa7128ab6cdd7c457b025a317e6ea",
+        "denominator_sha256": "a0dda1a2d506d707a39c4d19806440c751392a0db34a641d0f38f083d1b046f3"
+      },
+      "surrogate": {
+        "numerator_sha256": "c4d14550a61bfb2f7a312756a52a794dafcd458acbe6d1ec338c87d5077d0696",
+        "denominator_sha256": "43b09b1443a992ab3607e45ed3f428330148b448726776e6c5dbd14d6d73af11"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "9e4ad3e6756155ac200f1a0bf1e03a83be7aa7128ab6cdd7c457b025a317e6ea",
+        "denominator_sha256": "a0dda1a2d506d707a39c4d19806440c751392a0db34a641d0f38f083d1b046f3"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "224b7d0360e77790b29b8fdeb456e370c23b38f8db93361eb39e9864fc0b1052",
+        "denominator_sha256": "62259eefb6149ed6c211e0c755056ec9ce5d9c6483fc3b7e6a082866918fd172"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 6280
+    },
+    {
+      "n": 33,
+      "center": 1,
+      "populations": [
+        6,
+        10,
+        16
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          49
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 136,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "1c7d749ae56030fe61f48ee00c214902cf4733dd17d33ffa75513b9ff011b444",
+        "denominator_sha256": "466ec7a08ada95b30a30631852a8e7417ce269b08d34e7f7a825caef143cc8c4"
+      },
+      "surrogate": {
+        "numerator_sha256": "6330d3c23b1bb0084c442a98040c49bd97a4ac62d157b7783877c5da30dabc01",
+        "denominator_sha256": "c2e42a016a547c87258ffafa9925dfcc229fba917db671f9cf97bdea9b1f509b"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "1c7d749ae56030fe61f48ee00c214902cf4733dd17d33ffa75513b9ff011b444",
+        "denominator_sha256": "466ec7a08ada95b30a30631852a8e7417ce269b08d34e7f7a825caef143cc8c4"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "3dc533953427e628d0f9abe38b18e60fa4716f71e14b6640806959009ca97dfe",
+        "denominator_sha256": "90484f8edccaba244757a9146ce64dfe86d8a88a9acd35440ca964f47264316d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1823
+    },
+    {
+      "n": 34,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        16
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          16,
+          51
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 153,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "5af47a3a22513d4d14d6277ad535166bcc715b449e823b9a3d6104927d010ef1",
+        "denominator_sha256": "432a764b6337cf9bc98f919f1cc3afe760d397220697ec7dbea52af9e12329da"
+      },
+      "surrogate": {
+        "numerator_sha256": "5d637fae572d24e2ea1ac118f8a373a475fd006ccdc19a328356e9f409793c4e",
+        "denominator_sha256": "6bc42eb835cb64e5d204bd75f795056482b516eea024b84d8d0cab70d6cfc3a9"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "5af47a3a22513d4d14d6277ad535166bcc715b449e823b9a3d6104927d010ef1",
+        "denominator_sha256": "432a764b6337cf9bc98f919f1cc3afe760d397220697ec7dbea52af9e12329da"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e46a3f791e9cd88dfbad4ae77055d7f006a466aead5ad51aeadc2161b5b9f518",
+        "denominator_sha256": "888d66f18f9f3fbff6f33ba45d91c91378ed3d98a1e5a78532b43a7324105bd2"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 322
+    },
+    {
+      "n": 35,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        16
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          16,
+          53
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 153,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "f1bd8d363315f27da19a576357c6ef871040c0b6efd238637a96373bd3dae55f",
+        "denominator_sha256": "26811c40e4ad9bb2257d9a0d09db6c15942e611f2a2b486fad6bc5b5265b2fc6"
+      },
+      "surrogate": {
+        "numerator_sha256": "bbbb1d942c51b78147240be03c3455b844b3052f73d7422d3efc008d89af8dd8",
+        "denominator_sha256": "035b888bfeee79e7fd4786ee748aec7db8a9a2ee203d13b855b49609ae8d0fbb"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f1bd8d363315f27da19a576357c6ef871040c0b6efd238637a96373bd3dae55f",
+        "denominator_sha256": "26811c40e4ad9bb2257d9a0d09db6c15942e611f2a2b486fad6bc5b5265b2fc6"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "5a4b26b02dca5a913ef2f1cf62057750087797fc951015a5b9ee979c1e68863b",
+        "denominator_sha256": "8e9674d85bfbb416b0889db72d2eda24de5e2f8de2ab2702eae01b5803cff6de"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 454
+    },
+    {
+      "n": 36,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 171,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "7de38edf4e0be6d5080b7c9e9c3459c43ff8ecce7093854b940f2ef8c0cdd8dd",
+        "denominator_sha256": "7a6f7420fb5e8d0c0c36df350373dee28f16b793e062967f03e4a81a1615c0d2"
+      },
+      "surrogate": {
+        "numerator_sha256": "16e25600c0f3189e1e3eba07223b51418953514b42b04706bf899fed1289c530",
+        "denominator_sha256": "1e00fc810c4cd7c1546ce53b4b5cbc17355158befb02229c362a9bf9b2839aa0"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "7de38edf4e0be6d5080b7c9e9c3459c43ff8ecce7093854b940f2ef8c0cdd8dd",
+        "denominator_sha256": "7a6f7420fb5e8d0c0c36df350373dee28f16b793e062967f03e4a81a1615c0d2"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "a9b3ceb9c510a2df04fb95808fb967c26e4a8897aaa99254cd111edcd9d65e45",
+        "denominator_sha256": "3b7e9ff2b6c734bc4ec3036ba1958bea5e4ca1bc2906a9dd37cb2b76c085fe13"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 356
+    },
+    {
+      "n": 37,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 171,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "a302fb5507ec67de973b07758931cc63b7e2d4beb063f2a9827d1f4548cab688",
+        "denominator_sha256": "eca21a84a45251a48d31f46eadf683bdc54ac1c501c0fb7d75d47ab9ae5fccf5"
+      },
+      "surrogate": {
+        "numerator_sha256": "7b2f254c798f92fc48b213a901fee2a842c3489e58954c9e621c834d0ec3821a",
+        "denominator_sha256": "ff2d8ebe83cdaeda39cb705f0d4f13b72a3531fbbc9767e3c2ad071c69299756"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "a302fb5507ec67de973b07758931cc63b7e2d4beb063f2a9827d1f4548cab688",
+        "denominator_sha256": "eca21a84a45251a48d31f46eadf683bdc54ac1c501c0fb7d75d47ab9ae5fccf5"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e6a322de90f6385d1e5df5abd6b508117d4ea5215615395c58224c374ac94745",
+        "denominator_sha256": "1e80eb97ac2dd11c8db5afc83e2a60b4fbc567ff90c693c1bfbd86415843486d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 14647
+    },
+    {
+      "n": 38,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        20
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          20,
+          55
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 190,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "c8be2aaae3da280809a7faa1fc137d9bec32aa93f9045cc1cde859869cd4f678",
+        "denominator_sha256": "d3611888c87af20a803c8ce704a85064f86abf5d069d184785f60b072c7bc5bb"
+      },
+      "surrogate": {
+        "numerator_sha256": "82f3076fc4646e0ba7d1c1a286c345e30f6de8d06a8e185e198b4772a20f6d3f",
+        "denominator_sha256": "de35fa73736cdc944d804596b559f271080ca7fbacbfc682f9bbc3c1433638bd"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "861ca582df5663ee84e232b89ac3ccf956975d55c30c56ca93b313a0da1467dc",
+        "denominator_sha256": "de35fa73736cdc944d804596b559f271080ca7fbacbfc682f9bbc3c1433638bd"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "3ea2e332bedc354578a811c802ae09c60fd1adb70818f9a488e025557e800b46",
+        "denominator_sha256": "7eb862ab65b5d2e553fe54c381ffa8f7658ff683a55bf5022b7370867b2df38f"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 56441
+    },
+    {
+      "n": 39,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        20
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          20,
+          57
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 190,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "f5b39c1bed16470b3e3df45c6044bf404fed84a584d24f0988a283ad2530905c",
+        "denominator_sha256": "6a25f7486ddcfbea40f456e2b437c03d644bf5546d49ccf26d5b6a4eef04df85"
+      },
+      "surrogate": {
+        "numerator_sha256": "3fbf56a18b047025d60cde5a621f4456a72442a48798a26133ea584cc854ef8a",
+        "denominator_sha256": "8d83b715c3d4257110228532a87fd27a910b005ce62654c4750303b7d3b7a2ec"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3baacbd28342faf1b49ee87a6af573e985a45599801f4004359dc4357fcb49ec",
+        "denominator_sha256": "433bbd09624aeb75b7556262027151f095eb55196b0b0f0aeaa5f9b35dc2ddb9"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "03730d59f8be3ed464b2f21b670d3f106be6d0d113605655964a9e21732adb71",
+        "denominator_sha256": "519ab8ea0577a226aa2530cf68d5557922c1cd766453ef70debc8bb972638a9c"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 91483
+    },
+    {
+      "n": 40,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        12,
+        18
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          18,
+          61
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 210,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "852ffdc0b76ea8b8a610ab951bcb57a50bab24eeb7557b8c6fc9351f26d7d690",
+        "denominator_sha256": "9cbf258c6f83072e5bdb567a9e99dd2c00d4302c875f14a171951cc9b55d3aaa"
+      },
+      "surrogate": {
+        "numerator_sha256": "c0fb1213de09c86a760785cb8fbbae840a4b03db99809c6385da1c000fcf569c",
+        "denominator_sha256": "5e42bde43addf40f6483ac3d3b93ebf699cf0160eaa7abda858ff0154b68242c"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "852ffdc0b76ea8b8a610ab951bcb57a50bab24eeb7557b8c6fc9351f26d7d690",
+        "denominator_sha256": "9cbf258c6f83072e5bdb567a9e99dd2c00d4302c875f14a171951cc9b55d3aaa"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "d1a5d87f8f5e131489a415a6ac629339bf22b559830a97ea9588af3c867b503e",
+        "denominator_sha256": "b2fe5f21d0007b092f571902aa00f153787d37664cda357f9c9df98685758040"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 83685
+    },
+    {
+      "n": 41,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        18
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          18,
+          63
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 210,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "6a626b2a044bf49278e9b469e9f4ebd4a82ce863d1f4c8ccc9fa89202845a6aa",
+        "denominator_sha256": "45d205ed7481de415094a44686226319338dc79822eee304e20e0c5a9ddcf79c"
+      },
+      "surrogate": {
+        "numerator_sha256": "11040d6780eddee4a29bd18e16b95ade2e7513dc1b9f17bdfce79394245a411b",
+        "denominator_sha256": "181c4b326f3f41725fb60752174bd5f55500b5206393cd9d6d64ada75c8d6c4b"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "6a626b2a044bf49278e9b469e9f4ebd4a82ce863d1f4c8ccc9fa89202845a6aa",
+        "denominator_sha256": "45d205ed7481de415094a44686226319338dc79822eee304e20e0c5a9ddcf79c"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "9a570d3891e1b1abfe126c116bd16febc9e0c34e5cccc48a35b5e16926811e46",
+        "denominator_sha256": "e43a2f2ea6d41d8e90f4f4e89743f08b4f63b388b7c1f8e358e27ebca324594c"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 126423
+    },
+    {
+      "n": 42,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        18
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          18,
+          65
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 231,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "a1fdeaafa537159fd5fc643c861854a61b7bef5d8f27cb2a553c3143be424aa0",
+        "denominator_sha256": "fee52f4598199590d694c58d4f345c3aced6d61cfbc083dccb2a41cd1ac5f5e3"
+      },
+      "surrogate": {
+        "numerator_sha256": "13e64b023df474c10a69f8d7a58210c8b1b8d8aa28543021858b24182af93549",
+        "denominator_sha256": "87a80ac7c697b9e7edb3448d29b9f0693c54acd25aeb686e50d748f47c2721e0"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "61651fbf155dc559933a77d47c54e78fe3fc878335d978fd82cacdbd0f9e7eca",
+        "denominator_sha256": "fee52f4598199590d694c58d4f345c3aced6d61cfbc083dccb2a41cd1ac5f5e3"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "387da58dd79e75960eef74afa60f8f871a563440fc19a5590177697f8f9072c0",
+        "denominator_sha256": "5d8d9b66f3d9cb1c274954b05100fb60a27608723b6a3876ed0cdf47d8d5f634"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 169779
+    },
+    {
+      "n": 43,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        20
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 231,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "bf1b9a1c734fa5780d452920d49ad8d0e441a1dca0985cd51bcda5a8839f4ebe",
+        "denominator_sha256": "2e31d2e4866c2e86300460d405913ef27e710c1e938856cfb2412538e529ccfe"
+      },
+      "surrogate": {
+        "numerator_sha256": "941d87697a296797fca9a74172551c55705e49c6a313e921378ec62f1639f1a2",
+        "denominator_sha256": "9bad32917b27a46d301a2fed61d98afb5e5d3f72872af1d86505ad4eb73594f7"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "bf1b9a1c734fa5780d452920d49ad8d0e441a1dca0985cd51bcda5a8839f4ebe",
+        "denominator_sha256": "2e31d2e4866c2e86300460d405913ef27e710c1e938856cfb2412538e529ccfe"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "445f569059266805fd7a2ecf47dc06b1c2694a8b16c68ce28dbc3ca7a6a5de72",
+        "denominator_sha256": "0cbae261b9798c353b10cd81cedb2710082d29ba436625e30a0d96f617a8b5be"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 215968
+    },
+    {
+      "n": 44,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        20
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 253,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "70dee31595a8aaf758ad62360e4390db762de0b015708c75eba373f19c369c8c",
+        "denominator_sha256": "755ef0b9b7c79321c9b04dfb9ba9b7fa2d3c43e073f33742e099219241c4bad2"
+      },
+      "surrogate": {
+        "numerator_sha256": "d9f813c9b594956fe143d86937fdae19b2a49c2096b0eea21549077345232c3b",
+        "denominator_sha256": "755ef0b9b7c79321c9b04dfb9ba9b7fa2d3c43e073f33742e099219241c4bad2"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "70dee31595a8aaf758ad62360e4390db762de0b015708c75eba373f19c369c8c",
+        "denominator_sha256": "755ef0b9b7c79321c9b04dfb9ba9b7fa2d3c43e073f33742e099219241c4bad2"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "a4aa40d49730555b131c2a6cbbda4f95aa966a34d8a130f32f7131ab6faac251",
+        "denominator_sha256": "075e0f8d40f3c9204a21eb8910daa2faa2a71cdd5a2f7cb065d05fbdf150219d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 300382
+    },
+    {
+      "n": 45,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        22
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          22,
+          67
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 253,
+      "phase_states": 4,
+      "actual": {
+        "numerator_sha256": "62ff5fc0bba020a2ce23b123690187b033a6823d7bb52302d7ab47bb866d597b",
+        "denominator_sha256": "3f802bd8f7e571b6aa773cd2da2cfd65d914fbf82a8ac7ba753b56a6f59213b7"
+      },
+      "surrogate": {
+        "numerator_sha256": "bedceec6c9a2f0ef6a61bcf966aff8f49a73523f778fdadbcd9257a3ec633de0",
+        "denominator_sha256": "cc0d508dd1e00183c04325bbf76b0de972460145e95740da3e94026869fef06e"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "62ff5fc0bba020a2ce23b123690187b033a6823d7bb52302d7ab47bb866d597b",
+        "denominator_sha256": "3f802bd8f7e571b6aa773cd2da2cfd65d914fbf82a8ac7ba753b56a6f59213b7"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "c3f91762b7a534570fb219e7d29859aae36779c21f7066beb0983c921661de69",
+        "denominator_sha256": "43503f9e3fb1346f8bdddcb7c7b0beaa717a3167939a108c8a2c4b9a485554d6"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 151519
+    },
+    {
+      "n": 46,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        22
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          22,
+          69
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 276,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "7adc2a4104c80fe9ccfae966e289ee8d7e12273cb319fe0f23d64cb4b454a549",
+        "denominator_sha256": "4b32da96f1478465871be667c33328066aa22509f968cec358e5aa0775e25687"
+      },
+      "surrogate": {
+        "numerator_sha256": "9ee96909c084034d438f40368771b0cf634a01d100c35cd3b9e6cc65734a1100",
+        "denominator_sha256": "aa9c27f72b577345f8fec1f891aeddc9f68b6d9ad42b13d418e2e4adea442b34"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "ce3d8bd47f172b7cd566919094c7a9c790ceb322a76c505b3bd106a832631c0e",
+        "denominator_sha256": "805462d2023a1d221fe538eaf8cbf5d03016d0d3ce191e70a604034911211827"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "a0803a0fd128b6b7bdfbf895114f6726bc489a8fae8ea7d3a826762840eb7a70",
+        "denominator_sha256": "c01d2e8a34ca2d871c258a3dd74d440363e941880070720d9e60824ee75f63fc"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 253381
+    },
+    {
+      "n": 47,
+      "center": 1,
+      "populations": [
+        8,
+        16,
+        22
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          33
+        ],
+        [
+          22,
+          71
+        ]
+      ],
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 276,
+      "phase_states": 5,
+      "actual": {
+        "numerator_sha256": "f12adf140f60f8bf7eb9a8128efd9bdbdf05f1d60987bf801a6650b5a1d12e61",
+        "denominator_sha256": "1c81da1f55bebebf07c7982da3ee788ea8d5123a8c864082d019b184c8445403"
+      },
+      "surrogate": {
+        "numerator_sha256": "662f353cf5025ae4125111a6c6070beeeb23c5f00023234a2066d69f5bbab750",
+        "denominator_sha256": "c8f9fc2fdba14197659fe6172b175a51aff86890a437a9a6509c87699f90dcf6"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f12adf140f60f8bf7eb9a8128efd9bdbdf05f1d60987bf801a6650b5a1d12e61",
+        "denominator_sha256": "1c81da1f55bebebf07c7982da3ee788ea8d5123a8c864082d019b184c8445403"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "10c1dcbdf66fe34e88840bf1143b7c0dbf3fd2f746d6167ba575ae954e949f69",
+        "denominator_sha256": "199d4c1e2a0345a1265131d674c11eae55d477c459f0a1a68c7f7a214ae69bed"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 161957
+    },
+    {
+      "n": 48,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        14,
+        20
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          41
+        ],
+        [
+          20,
+          75
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 300,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "f6f0251f6acbd9d0b5472209116c7e762b11212bea6dd8ad5b52439afb95a2b6",
+        "denominator_sha256": "5815ecfad97b1cf4309eb1305a183a9ec9f2469cc705a011b26d113ea05a3f92"
+      },
+      "surrogate": {
+        "numerator_sha256": "6ac5f77b7d3b1b23fc222b6d41bbf92095163d35b65d4407568805e95b5733bf",
+        "denominator_sha256": "5815ecfad97b1cf4309eb1305a183a9ec9f2469cc705a011b26d113ea05a3f92"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "737c381239dd7d1d28fc3acb3831b5046e179fd411fa559469711d042ce4586e",
+        "denominator_sha256": "5815ecfad97b1cf4309eb1305a183a9ec9f2469cc705a011b26d113ea05a3f92"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "151be6e6f0cf0dbd51202e72a75d2e607eacdeec0e7b97e9181641e5f1b772d4",
+        "denominator_sha256": "557e92b5f769d11a28b8d322d8c4b9555015ab4d53ddbe08017534afad7ffb3d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 219555
+    },
+    {
+      "n": 49,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        14,
+        20
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          14,
+          43
+        ],
+        [
+          20,
+          77
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 300,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "6585ec0294413ba6471e4831d88e4856e684aebd783a028a5e813eba0385a04d",
+        "denominator_sha256": "41e77f0d95194406844e7d90609a5ed701725490646f4b711adbce85546e9610"
+      },
+      "surrogate": {
+        "numerator_sha256": "edb8895bb1082c06f8cd6da8472540388ddf626d499de80bc0fc6aa0fa0348cf",
+        "denominator_sha256": "123afdc646ed431682da5456da4c3fcc589a18a380031c1197d23e74486c6dbd"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "91841cb4c6a8d7ff3eebc9cf8376b0016496b7cf0eb1252a0d59acd73b5bb18b",
+        "denominator_sha256": "9c75ef0555f42153fd92b18b79fdb266541c65ef98c6bf07ffdd111c31f9e1cd"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "04775612cd1b971872682a2e4414ff15b5884442730daf503b0c576f4b3d4341",
+        "denominator_sha256": "c4f975832eb82036cd764d5c9fd879d2a2658799de7a4514b882652918db1ef4"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 92012
+    },
+    {
+      "n": 50,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        20
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          20,
+          79
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 325,
+      "phase_states": 7,
+      "actual": {
+        "numerator_sha256": "be438815e99d148c9a6fe57ec0a42caec91446d358e61764fbab2efff7ca896d",
+        "denominator_sha256": "46d5a82504d742512e1eab0800cf253e98f030ceee11f9c754413a02fbbce992"
+      },
+      "surrogate": {
+        "numerator_sha256": "621a4ca79dcfdb8542acdf61d9d9fb8568f4c127c8446d3babf15f1fb8de3f4b",
+        "denominator_sha256": "46d5a82504d742512e1eab0800cf253e98f030ceee11f9c754413a02fbbce992"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "9767930fc24d95e449af9e53e0eadd4e66ee3155f8ecf3dc6349db7ddf34e59c",
+        "denominator_sha256": "46d5a82504d742512e1eab0800cf253e98f030ceee11f9c754413a02fbbce992"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "d7e23f07715a55c4a609716b1e65bec8c395b30293dba122b872c480b4e6488f",
+        "denominator_sha256": "dc65a4f3bcb77cb71d3041d05dec650667cb63fc3c0ffab57b951932806fbf96"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 105738
+    },
+    {
+      "n": 51,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        16,
+        20
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          20,
+          81
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 325,
+      "phase_states": 7,
+      "actual": {
+        "numerator_sha256": "fcad340ae9276d41b5ee20abe1938e8ab170b270e51513088e6b045e67f8dfde",
+        "denominator_sha256": "4a2dd14930ba618f83f2b1026543712870c26a203f27f1caa89578ab93a0e856"
+      },
+      "surrogate": {
+        "numerator_sha256": "3dfe4e798fb8676fbb9f6d6bf9a49e0144e20cc37af3fe01381196e45bf9abab",
+        "denominator_sha256": "45db7afd01ae7e9c7c769e4e7b93a7a36169e3559a07f8ce9e16cf240186715a"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "d296a4f19d09aa94ed767148f0af20588291d1f8cc7f578e325fe608c34d9054",
+        "denominator_sha256": "23460aa9b9b09121dc670d720f9ecc68753eeb71f824b77070c464d3b6801dc0"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "35099cb0a67a00a01b187b99116ebbdd49e3d9492f85663a37586f0b4ba6774c",
+        "denominator_sha256": "f55f31886d202dfabbfca63297eef5812dafd2916950e6efcd1ae62011494562"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 44026
+    },
+    {
+      "n": 52,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        22
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 351,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "4057ae02fe031baf9f8b3a6affe2ff0fde965e64b6c348353eb86f4bef283cc5",
+        "denominator_sha256": "fdace1b670dab353cf913e8d009bdf84cfe1e9e648506e76e37203d9118ac293"
+      },
+      "surrogate": {
+        "numerator_sha256": "32d3dfc07ec4f92dbb2cfce0626df77678c969c3e328dd6b38e619ab2b09ce2d",
+        "denominator_sha256": "c68d4eef0b6f97a11740a0a786f3887eaaa694ea6e105b8a239df019fa7a50ef"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "4057ae02fe031baf9f8b3a6affe2ff0fde965e64b6c348353eb86f4bef283cc5",
+        "denominator_sha256": "fdace1b670dab353cf913e8d009bdf84cfe1e9e648506e76e37203d9118ac293"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "9b0831c4a01d4384acdf993c675022e2025106fc3e29801e39e03d79360643d6",
+        "denominator_sha256": "b39c76a76aa83b5d3ac6d68cd29675deadbfe3e65f03c050e0afd01d32403b9d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 51811
+    },
+    {
+      "n": 53,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        16,
+        22
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          22,
+          83
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 351,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "474ddc1431899bac23334ce1bc282c0e8a34e0c0db349baff73015bf0ddcdf09",
+        "denominator_sha256": "bbcc3aa8c2bbbf9154fb6e0c60a99f751d0334f9ff603860523dc61c52cdb393"
+      },
+      "surrogate": {
+        "numerator_sha256": "c955df1916da3996ff5ca51eefef19884b5b3164604d9b0fe4c6950d21cebac8",
+        "denominator_sha256": "1048edb9b6585c99f11a1e9b57a432184648f0bf07f09f3a30e337631c5455b1"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "474ddc1431899bac23334ce1bc282c0e8a34e0c0db349baff73015bf0ddcdf09",
+        "denominator_sha256": "bbcc3aa8c2bbbf9154fb6e0c60a99f751d0334f9ff603860523dc61c52cdb393"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "142fe9d7920e8e602b243185bff9bf6277f6c797e1932fd72866044933bab17f",
+        "denominator_sha256": "6b9fab9604ef47f7f5781a5d16927679fece467d2a62e5e563f0710ba12e3ebe"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 21211
+    },
+    {
+      "n": 54,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        24
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          24,
+          83
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 378,
+      "phase_states": 7,
+      "actual": {
+        "numerator_sha256": "a00ba4ff65033dae03f5cf79b05ed04063d5617f7e5fcc590c43047a3fed0fb4",
+        "denominator_sha256": "23a21577f92a436879d90eb87754d79823215173960bf5f2432ae6ca461be170"
+      },
+      "surrogate": {
+        "numerator_sha256": "d696691ed2bccaea72ef439c67607e56f1959de14c1de2cf791be56035d56bee",
+        "denominator_sha256": "23a21577f92a436879d90eb87754d79823215173960bf5f2432ae6ca461be170"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "a00ba4ff65033dae03f5cf79b05ed04063d5617f7e5fcc590c43047a3fed0fb4",
+        "denominator_sha256": "23a21577f92a436879d90eb87754d79823215173960bf5f2432ae6ca461be170"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "bd0ba67a26ad9e23c211b712df0aa028b3b6c0c9a264cfd1e60a607028874b07",
+        "denominator_sha256": "897a47644eb322dc10609b2b29f00120105bb378c937fb511e5da8a2f0faca4e"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 9234
+    },
+    {
+      "n": 55,
+      "center": 1,
+      "populations": [
+        6,
+        10,
+        16,
+        22
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          49
+        ],
+        [
+          22,
+          87
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 378,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "9902288ca75a6f6bbfca98a375c80866eae98310f2f26bb01575bfd4bb4adb37",
+        "denominator_sha256": "80d12d80357438257bd07680cc1499e2a50c47cf7a9688223c88073f61b2b311"
+      },
+      "surrogate": {
+        "numerator_sha256": "93748a5b65c9335338ae4f0faa1c523bad2bcebd79c59d66c0583f009fd57d19",
+        "denominator_sha256": "899d9639169d04877cb22482524b695c04abfbb58a8cef4cf4c7107a0e119c82"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3066cb80cdef12bf65ae03adb1d258fd9eca9b49ce7ac6f9cc92e70f83c5866a",
+        "denominator_sha256": "0e4c8e75134ffb67b8cff41b9fef8263514bbb88b32c4428526f4fad105ae7bc"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "04e4d12ced021826ce8b8207cb0464129c107339ed8c6ff4d12d58499fa1f2e3",
+        "denominator_sha256": "42a3a0eda360a578644de9c1970d12b1ad045c17e0c44829d248c24bd301617d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 7514
+    },
+    {
+      "n": 56,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        18,
+        24
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          18,
+          45
+        ],
+        [
+          24,
+          87
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 406,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "20908cd3958226df875c1c084476dc6cd4d9cdbf1718b82a60f60e135ee5b3d3",
+        "denominator_sha256": "f666540351a019d232fb8dc85f486c0242abc6e0c360ba96f0f2ea209d1458b1"
+      },
+      "surrogate": {
+        "numerator_sha256": "f2a0782b2c83f9b8705a5a013b2d83b3562607f912f5ee1c6ea5ea255207d9f3",
+        "denominator_sha256": "dc0753064942e8249be81e11c6659b2513a6758f2e1c72efe6620b4048585256"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "20908cd3958226df875c1c084476dc6cd4d9cdbf1718b82a60f60e135ee5b3d3",
+        "denominator_sha256": "f666540351a019d232fb8dc85f486c0242abc6e0c360ba96f0f2ea209d1458b1"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "6b59fd10aa13dca668e9165341918e8a48d3fdb6a090c08482e9c46f51a69839",
+        "denominator_sha256": "c6bd291d970c00d5a90d399c43f18e17f6623e7b52e2d9fe4f5d339e93044abe"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 4908
+    },
+    {
+      "n": 57,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        16,
+        22
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          16,
+          53
+        ],
+        [
+          22,
+          91
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 406,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "814c1ab13641b24a801ea84c196d3e8b9d3bea3d76450cc6b622f88c581fe977",
+        "denominator_sha256": "a819313e71b47fe07223cd248588c6a5747d916ff5f1a7f75510fbc7f86f2801"
+      },
+      "surrogate": {
+        "numerator_sha256": "8deebb923b18c38f01f99658e3745245b2315176b883825278ff47df2894154b",
+        "denominator_sha256": "c17a517d70444f7fda2552c1cafd15d54466dda8cf1a9a82c811bca170e6dd80"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "814c1ab13641b24a801ea84c196d3e8b9d3bea3d76450cc6b622f88c581fe977",
+        "denominator_sha256": "a819313e71b47fe07223cd248588c6a5747d916ff5f1a7f75510fbc7f86f2801"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "25a0dff0196001013ae140838f09af0fe5bbc560221f6764eeaf544b8442ae5d",
+        "denominator_sha256": "f949890447f59ce9b9b79629a9dce5577276e7184aa7ad0abcf41e0a6c7eec63"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 2609
+    },
+    {
+      "n": 58,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        22
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          22,
+          93
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 435,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "6d7652db3d95983c5e9319f4b609b8ffa27f83737258474d3e8b95bc91e26a25",
+        "denominator_sha256": "11a1ecf9acc5d543fee927f803f493aaf6330a29971ea3195596e1843cbc7e9b"
+      },
+      "surrogate": {
+        "numerator_sha256": "153b04a7ab7654ceb57b8622876f17357463eac566ef13d6342aaf1008c19292",
+        "denominator_sha256": "d7e1e4dd19ab9c61a60b2380405795c0b1784344509909cbd11cb5cd51b8d315"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "0a0ec2a799b0ebe1bc9f385ef1e5e5d60f2d30bde25049f431cb80c71bbb00d4",
+        "denominator_sha256": "543e80359e47d4540a6ce6fc70720f61ce1985eb81d4e5384e0f4f91edc2a7ff"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "7a759a0713761a1324d2da877245ef3151b7ab94af804773980306aaeaace91d",
+        "denominator_sha256": "2f1ad40f9dc2fa7744c53eafc9f9e9698093ae812efe73bf1278cd36a009ecc1"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 760
+    },
+    {
+      "n": 59,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        22
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          22,
+          95
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 435,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "90bcc9cb1365e447269000c3aad1097b169ac0f90dd671df4b69912eb66b8d40",
+        "denominator_sha256": "80d8c6100b1bad9b9156adbae6a467518e744ad285cf05fd89be9751dfca2b67"
+      },
+      "surrogate": {
+        "numerator_sha256": "e348da55e90c214b20e17b0e66cc11c5f90422d42731a625403f73d350c8dc86",
+        "denominator_sha256": "f3706426e0563dabe29915ec6ae6def4e96f7fa90890280edbe33d58fb018660"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "543dcdf7c04a81c9ddba8b5ca7bd9aa6c3b07de4bb7a1007ac12c019e994a142",
+        "denominator_sha256": "25da6585928fdad3dd1b2d9b0dda0689794289ababcd3256b64b2939e43ebe19"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "fe8dcf8c82359ceedb7678851cff3c407974999026dc147a89d7bc386883c212",
+        "denominator_sha256": "5576dbc33ea190db0545c8e3a69b844ebd24f13b2428c2f197a9a30db4602d1d"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1296
+    },
+    {
+      "n": 60,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        24
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 465,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "da1aef367621a58dd24779701139a114a45541c19310fb8a4de891ec2d0dcfc1",
+        "denominator_sha256": "9d5eb753bd06938eab30698e93706c0f930c3c1815a0655c75b23247cc708b11"
+      },
+      "surrogate": {
+        "numerator_sha256": "a81bde5c5cb72d3149efeba166da83d284cc5a84cbb7a8ae0724abfc2ea249ba",
+        "denominator_sha256": "9d5eb753bd06938eab30698e93706c0f930c3c1815a0655c75b23247cc708b11"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "da1aef367621a58dd24779701139a114a45541c19310fb8a4de891ec2d0dcfc1",
+        "denominator_sha256": "9d5eb753bd06938eab30698e93706c0f930c3c1815a0655c75b23247cc708b11"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "600eed9d8e45a5e9dc96d4aedc15062de63684a30b7c55c7137f2f0b275be846",
+        "denominator_sha256": "8504fb702d0b811fc95f7df369dc883e762b353ab756a597ec3ab047d002e026"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 791
+    },
+    {
+      "n": 61,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        24
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 465,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "a2ed6fd3dfb2608cf0e2378bfb6a1f8dc398c78404a084539945678a90dd2b7b",
+        "denominator_sha256": "0013cee5e4db9dcda4028b34eca56aa42b95ea4070f4710181cc600b747cbf42"
+      },
+      "surrogate": {
+        "numerator_sha256": "aaf5fb8f032f57d8311af51e65b01824b5839d46d1e80b6dc3ce485885b1d9a3",
+        "denominator_sha256": "eca5cdc0a8f4a826188c4b713685a195f9f310d030a423fc71f47a6a49f4e08c"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "a2ed6fd3dfb2608cf0e2378bfb6a1f8dc398c78404a084539945678a90dd2b7b",
+        "denominator_sha256": "0013cee5e4db9dcda4028b34eca56aa42b95ea4070f4710181cc600b747cbf42"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "58d297ad37c7b7539419985b8660376a31387624d866ce528c4da02662f04270",
+        "denominator_sha256": "e882456ea0c28b2e9f666dbaa3948341db7fed1331d06ed133bc732ff4d98887"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 59147
+    },
+    {
+      "n": 62,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        26
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          26,
+          97
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 496,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "a437e9ac148b56bc035953fec525cef8b3b940369b6510ca31f6e90b00bc172f",
+        "denominator_sha256": "6ffbe67c836e08ae5dd0fba0c4e575b00fd24d3b3c9eab30dbb99a493a1c5007"
+      },
+      "surrogate": {
+        "numerator_sha256": "2133c252d16f6b8da49c515c7af80191e1146cd9c551fe115418be515ba0d62d",
+        "denominator_sha256": "5501a946c44984032c94269b701cbad84915dd8866ee0e546528e26a570f3335"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "aff244a880618dc40a718f6aaecf10358cb1bf36837cb1862e98b5abee4aaf9e",
+        "denominator_sha256": "6ffbe67c836e08ae5dd0fba0c4e575b00fd24d3b3c9eab30dbb99a493a1c5007"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "645ed6d9987351f561e46bbe82539b499bef3dab244f593debf738e8335edaca",
+        "denominator_sha256": "f30533a5329a2fe70a5a25eb5cb4beac12994299983bfd5008d04719ee20f560"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 291533
+    },
+    {
+      "n": 63,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        26
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          26,
+          99
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 496,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "3c9eaf97c66a0d34e51e4d0ac292a318badf5ee34d3535c8b97740ac8ce471cb",
+        "denominator_sha256": "ae682e3ad63cb3dc2e6cc174d5556a5cd77ffaba6ecdd7a0607823de7afd5f19"
+      },
+      "surrogate": {
+        "numerator_sha256": "d5fbc911d5e44f73c9f4026600bf27ceb4231bae38cad45e77ce5b9d6bc8cdb7",
+        "denominator_sha256": "dd7d14e075908969eb0249c0f43bbc0a064b71be88996479d72a62036ddd43bd"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "20131cffbfdbf99cbd8eb8534204a73978c31a150f620c1f49d4bada9853c126",
+        "denominator_sha256": "a5d8862f8c238058fcedab78856158522b9762538f3c0482fd32e32d4e5c6376"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "67bbd14f1e885411648e8f52d006e693df11f577c0db50715610a1befb514ebf",
+        "denominator_sha256": "56dc1b49715b9a4119b89315a5a2db9efe81fa53df76540b5c45fb5ec6784c49"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 318418
+    },
+    {
+      "n": 64,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        12,
+        18,
+        24
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          18,
+          61
+        ],
+        [
+          24,
+          103
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 528,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "4ff18f40a9ecf094b85aabaec26a0076d650cb485b20458c9682366a6ba97f8c",
+        "denominator_sha256": "30156c4f3be0095c3efa7fb157b4d39a9201bad0d18bc4457ea3bf78368513c7"
+      },
+      "surrogate": {
+        "numerator_sha256": "6dffeae0a67fde096784aaba1d75eddfd949b6403ebbcb5b0b4991ad4ba99d8d",
+        "denominator_sha256": "62d6d4186ac6afaf61c9d663ea8f43ab15d3f73e0897cb51c4cab9fbac8017f2"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "34ffecc228a558b7ddd728d01dc33b7d869418452abdf925ce7ead729a847136",
+        "denominator_sha256": "02b4c44ff72240c0719e201faba54d56c68be9bd21fb60c0903870898270b0ab"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "33581b6239c845db8b06d00743d68b31306013ab611bd7ef3ff2e59a0f3fc190",
+        "denominator_sha256": "2da3e2653ac5c96044e9faf1a6afecc471780e94f2a55ceb3b1731e3b510d8d7"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 149942
+    },
+    {
+      "n": 65,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        20,
+        26
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          20,
+          57
+        ],
+        [
+          26,
+          103
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 528,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "25d9c4936cb2795e1b39f94549d353c629d852e1d62f198387275c551bd853cf",
+        "denominator_sha256": "1101f92f8b3846d1007e8ac984ad1e7648877c4be7b81d9ef52eada2ea2daac4"
+      },
+      "surrogate": {
+        "numerator_sha256": "8cd96a4665a4907eb8d055d83b2fe8faf37f94b7cd742f00829dfb2fdaad3be8",
+        "denominator_sha256": "1dd456d5ae9e7b508429b882ae8171a0258c94d405ddcf762ddf879ad3b6de99"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "9791041d3c449662842baab7f80316ceb9c52941064fd9457a8f0d778c0f0c58",
+        "denominator_sha256": "f0bdb8606e5b507bc983e9cde93b29fbd497dbe5c4fb1b88a5812cc0f88dc64c"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "e1a1b133f666ecd21ba418d057186159f4d8f0f3c29759bc0a676b35af69571c",
+        "denominator_sha256": "b7d2642900ecc39be9a14883517e9e22511aaa16dcff9592005ed88312d1e9db"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 131391
+    },
+    {
+      "n": 66,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        18,
+        24
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          18,
+          65
+        ],
+        [
+          24,
+          107
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 561,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "4c4b5436110d1df9fd95109ec85a426ff5149c57afc9bf2fc3f41512390f7e95",
+        "denominator_sha256": "684ccb28ea1d31b856c6ce3bf6c17efda93e5be04ce84eaf5e3c7350707a8af4"
+      },
+      "surrogate": {
+        "numerator_sha256": "f6657077267a3de15f6220cb946d67da2a493e34f4aca225ab4700dd7c735f2b",
+        "denominator_sha256": "0737ec46d1f6f41591709c57105c2121b5f3785836ba3893a04c508ac88c412c"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f7ee5b76d030b98f2cde793a36ad06b89b773f59751dd69b42584a0339208e22",
+        "denominator_sha256": "95f8c043b3ac03701e0890e8fdfe742fca6f27ffc3003752d987993e21da7f8a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "f47b3fdeffd541d5f03b8b5d66c3bb07c43788c44b39f86b69eab1aca565ae47",
+        "denominator_sha256": "355b9003d468ae809b439b41327148e7c60e4dc2e04e37b0b4efaaf846f66a8f"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 133690
+    },
+    {
+      "n": 67,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        20,
+        24
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          24,
+          109
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 561,
+      "phase_states": 7,
+      "actual": {
+        "numerator_sha256": "0b0c8e08a2be21962c49e819262199dd1132f6d637d8c0fc8f1edbd7e6421007",
+        "denominator_sha256": "9d6e4e65a82f40a8252bfc5f9af79e68b2e62c6f422b633dddd8aa1538209a36"
+      },
+      "surrogate": {
+        "numerator_sha256": "06a0d4df49b08f7974e7d5e233329f422f43de51ffde260aae9aeb52ae210f06",
+        "denominator_sha256": "2814415c51d7dccde8fcdc23302dd4d04d256c8ba58abb9ee4bb75a2c9482508"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3cd77c9d9ebf910c8be7fe52bc1dc115eac3535f6c00bd50d4f32fe9680c2b99",
+        "denominator_sha256": "c505fc8680ca5b0b0cfbd97cf97d28b1c2c5f8f61f82ebdc34840fd311f9def9"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "7f86a35e10938306396758f1ed307cf883840b91d43d650757a95de6202ca448",
+        "denominator_sha256": "b0dc94c865c68d56a6629746ff8eac2f83cf1cb7db59871dd8a2e0f918904157"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 188075
+    },
+    {
+      "n": 68,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        20,
+        24
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          24,
+          111
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 595,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "21226ffe11fa16a1982a228fa281b9a32d6c3e59262c31a5a52d00156ca41c4a",
+        "denominator_sha256": "1c4719cfdfe9bb657388df95b1442eefcba84cd2f030167f47be3efed79e26f0"
+      },
+      "surrogate": {
+        "numerator_sha256": "798eabc448ec73e5cb69e8df6ce194cbc72417462e179fbbde61e30b5b2ea47e",
+        "denominator_sha256": "bc13020ec6d37233d6029452733f698ee489c4b43722419d8d89ca8e2c09b823"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "fd2ffbee7afa150359ff4d2de89724b00bf1c8063e13622e772d267525345289",
+        "denominator_sha256": "1c4719cfdfe9bb657388df95b1442eefcba84cd2f030167f47be3efed79e26f0"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "6a34f6224368dbcb909be775527e2367a2d665635c995a7868037d3887399062",
+        "denominator_sha256": "20ea427d89d611d02621330ea8eaf77593fba7897392acc956720f1d95334f8b"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 135241
+    },
+    {
+      "n": 69,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        20,
+        26
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          26,
+          111
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 595,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "e3f771a4f463a3e5ee2919e4c8a4f11f34964082fc762febb8df5e15730e934c",
+        "denominator_sha256": "8be618720fc85c21ba23fd4eaf0f8ce6d16ca8cb48f5992258c79a0b4964f0cb"
+      },
+      "surrogate": {
+        "numerator_sha256": "41e6cbbd291ed1a3cfb3b4bb3cb793f60a20084c4ec35d20edfc565cdbefda54",
+        "denominator_sha256": "9c5f8c4015eca252caee4490733dbf02c90a9b9b92a083dfa04735e4195c7aff"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "e3f771a4f463a3e5ee2919e4c8a4f11f34964082fc762febb8df5e15730e934c",
+        "denominator_sha256": "8be618720fc85c21ba23fd4eaf0f8ce6d16ca8cb48f5992258c79a0b4964f0cb"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e7b6a791a3da13e43f12d7ac13fc30c30e51426348fd012398750f0ae5eda01c",
+        "denominator_sha256": "89d14e90dd6975b557498109b0c69d7f953dfed0581838b19b9a5906bb483834"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 49922
+    },
+    {
+      "n": 70,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        20,
+        26
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          26,
+          113
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 630,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "f8a059a6863dd0190f079f59eaa2b6b3df8d33a6e05510f74cd73ec54c42284a",
+        "denominator_sha256": "6ea4c41a9b21f1991b041ec65ce45caf52e65616d7847f88a329940c0c329784"
+      },
+      "surrogate": {
+        "numerator_sha256": "da975b559af8f2a7ff7c9d2aee92974abcb5974f965a5c83ae2d2149b0101a34",
+        "denominator_sha256": "6947bc2f4c6164f31dff594af6fea27051e65cdbaff4b91e7b297faf74994cad"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "8b12a7327b6ccdd7302d0275cc90124875efc6b3d99d9502bc47aa31d7af9e13",
+        "denominator_sha256": "6ea4c41a9b21f1991b041ec65ce45caf52e65616d7847f88a329940c0c329784"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "45b8cfe115c47f75a8a7e6bcd8ecb9faed82e02232ab3fb37f08b4908d52abc2",
+        "denominator_sha256": "8ac2f49e0dd70677f67d2d7e711336673188ced32f27241958f801701a55b1ba"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 251752
+    },
+    {
+      "n": 71,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        20,
+        28
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          28,
+          113
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 630,
+      "phase_states": 7,
+      "actual": {
+        "numerator_sha256": "243e1a174d971569be34fcd80e5bc57097a60d62f6203a34f9a8ff21c9b5f69b",
+        "denominator_sha256": "bc029e31a75989691f27da06d0be3693f3a60bdde950102f0c550f2219dd4903"
+      },
+      "surrogate": {
+        "numerator_sha256": "6bab19328f8553eec17722b91dc7414cb41823bc33f5a7026e1b685dacdebcc3",
+        "denominator_sha256": "36fb8b1895cf8f495237cfbf65f2c8c7dc5d878fb2e05e0104de43789b32c7e9"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "71d5d82b08a96301e43769202a0026246b632510020198aa00d76c7c90c009b8",
+        "denominator_sha256": "36647a7e6d3a42f37d376495f999e9643e72f8467f399472a8d1c1fbde648d11"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "c030319b24f0656904f1d0aff06491a26b3b8eed10b3026cc3da21ecdd635f21",
+        "denominator_sha256": "112130ecf3afffc94a3eea2135c6428bb017a88ccea993961cc3b9b9649fc0b3"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 953500
+    },
+    {
+      "n": 72,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        20,
+        28
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          28,
+          115
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 666,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "d981e57448cecc1b0158e5d2105c378e0c842c2fa8ff5496009a2051d5d637e2",
+        "denominator_sha256": "b11b7b0a80244e3d9360d13850bfb693893bcf64517894e8ebe4955bd3e609cc"
+      },
+      "surrogate": {
+        "numerator_sha256": "4ef4c714ccbeed751340a275ae81fee26c04b7ae579399b1f76e9204c120f241",
+        "denominator_sha256": "46d97eda26e61ecf6b51e91c7ec16c546740cfac606f65488b106f86a3033ee6"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "baa9b961ea7d0e0a5266ac4a72ea63c84400df6370399a7dceddc0bc20d225f5",
+        "denominator_sha256": "46d97eda26e61ecf6b51e91c7ec16c546740cfac606f65488b106f86a3033ee6"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "e06676e2699e7886d8aca32eb2745929d919828195c43b7a14998ef7a0780fda",
+        "denominator_sha256": "015bc186cd9bbb5659d3292fbaebecf4cd77160a9e42fbc884259d14d38526ba"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1157462
+    },
+    {
+      "n": 73,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          22,
+          67
+        ],
+        [
+          28,
+          117
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 666,
+      "phase_states": 6,
+      "actual": {
+        "numerator_sha256": "3a64d5b76f311901bb9f727037d6d35962a8ddd1021a1bcba02b6ac16dcc3b9a",
+        "denominator_sha256": "ec98f53fd19e44616547b9c8fc7865af8cdc35f56e07d4c3f4107105faac5fee"
+      },
+      "surrogate": {
+        "numerator_sha256": "9d406159f9fcb3996c116bf7c174865ea6837aeb0fa53ff2bf11dd5297df4bb0",
+        "denominator_sha256": "bb5190013b29c8f35099552384ccea611cbdea4dfe59e402b3393cb420c8b61b"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3a64d5b76f311901bb9f727037d6d35962a8ddd1021a1bcba02b6ac16dcc3b9a",
+        "denominator_sha256": "ec98f53fd19e44616547b9c8fc7865af8cdc35f56e07d4c3f4107105faac5fee"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e21d6299f5c9007bb510e0f557d57ce58e0e469eaae4778efd44debc5a0bda8d",
+        "denominator_sha256": "0a1a5642606733e5dbdb96e6eff5c1e4ae673ebebec7a749977d4d1c356d25ab"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 984337
+    },
+    {
+      "n": 74,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        14,
+        20,
+        26
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          41
+        ],
+        [
+          20,
+          75
+        ],
+        [
+          26,
+          121
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 703,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "899ede10753c5f31230715deafe3bbc7c85a82795cb6bb0a17c9c954982e08fa",
+        "denominator_sha256": "d91cf4584bc3627a00a1b2e104bfbdb85e81a5a406298025c21ee398ced3f6dc"
+      },
+      "surrogate": {
+        "numerator_sha256": "9756217195e2583fb02b330d793fa7fb3f34544f8c492c99c2c4d5c50ae733b6",
+        "denominator_sha256": "d91cf4584bc3627a00a1b2e104bfbdb85e81a5a406298025c21ee398ced3f6dc"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "e4f6e1f51121cee00810953bf8bb83e0ab133dafc3e21f3803135452b41172da",
+        "denominator_sha256": "d91cf4584bc3627a00a1b2e104bfbdb85e81a5a406298025c21ee398ced3f6dc"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "2e1fdf9dbb23096d0e88cc7d705e691bb067d83003c5a4875678997430946d18",
+        "denominator_sha256": "78e0f70faced4ac7d9fe3a59dc0bf0d42078bfaa6f15f05cff2e2a60a7c03d2c"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 910545
+    },
+    {
+      "n": 75,
+      "center": 1,
+      "populations": [
+        8,
+        16,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          33
+        ],
+        [
+          22,
+          71
+        ],
+        [
+          28,
+          121
+        ]
+      ],
+      "signs": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 703,
+      "phase_states": 7,
+      "actual": {
+        "numerator_sha256": "3b7e9ec7a047d17c0334ff3af04723f74720485029e5f81191e4614887cfaccb",
+        "denominator_sha256": "a96202921b54974af621fc64d8df9b43eb11c74b5019e454775a8f2310819901"
+      },
+      "surrogate": {
+        "numerator_sha256": "d8c17cd7ea0ae13c346b2bc92ecaca2f32321d70fe92f6371a50ce9e179ff028",
+        "denominator_sha256": "f36cbe60cae2cb6b9251a706e7b651530d356b17734dbf01369839714279fc4f"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3b7e9ec7a047d17c0334ff3af04723f74720485029e5f81191e4614887cfaccb",
+        "denominator_sha256": "a96202921b54974af621fc64d8df9b43eb11c74b5019e454775a8f2310819901"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "19974f4845f1c57dfe208fb55810d6cd274eecb30239953ceda8f7dedc020795",
+        "denominator_sha256": "d202f936db19cd006c58379f66ba963bc96d42feca89be1fd2d7a10f542d3f55"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 479362
+    },
+    {
+      "n": 76,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        20,
+        26
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          20,
+          79
+        ],
+        [
+          26,
+          125
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 741,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "8efb234f83cf7bb8ee92c974f4acc95e757c8dff6f42d5671cbbfd2ce595b3de",
+        "denominator_sha256": "abc59e0d908c42c55454ce110f6a4a9adbe784d002aff3728ad1a8e89074d591"
+      },
+      "surrogate": {
+        "numerator_sha256": "433a58d35d026b2b49c3e0fff5b657bf9616180b03286e8e44cf5a522b4f193d",
+        "denominator_sha256": "da346279174bdb008ec42293a432fc3b363095b290cbb6fedbaf22a66ef47952"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "4e3544ed24da637e9775ec05f7463003f2021e3f784022870eb3a0978dd39a86",
+        "denominator_sha256": "f1699a5f0c915cb7bee91c81c1d9d10909393a3ca0272ba7386299aa7cef3eae"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "5b5f72bec240e7d8dfbf52904c5d4eb2ee29da876a6ab922c90ba58c904d63a8",
+        "denominator_sha256": "dd5028cd72f5f59cc370d6a7cc4448274630557702f86e2e50ad93ed00842410"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 426479
+    },
+    {
+      "n": 77,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        16,
+        20,
+        26
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          20,
+          81
+        ],
+        [
+          26,
+          127
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 741,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "bf9fea7e11bb06ead7f799041f0a8647f104230fa0111253782d4a565bc531a8",
+        "denominator_sha256": "b075dcdadcf46bb6066a31889c7226e54576c3e6dc7f39459120b270516b2c40"
+      },
+      "surrogate": {
+        "numerator_sha256": "e081334a4b8e987c08f7294bb194c5404a9e0e9450d55fea158fbf15c6a9b944",
+        "denominator_sha256": "9ed0575f14cd1d20627529a2a019b8407de17034a1992b297b3cfeaea23e1dff"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "6d55c6ef714bafe23704143b1c3d96936b38694f366ade4cfdb21c1292a5a67d",
+        "denominator_sha256": "f74b34e853e66042ee027a46403cd5baeaca630b537303d9b0341205758241ae"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "f0e37966307c113d54069801f12824c1cc94ed3825560275da049e3a94167320",
+        "denominator_sha256": "2576f8956f675f1ab62e1fb54ec10f8c5bf59a31ba6c4bbf357a38c8a9eced65"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 186030
+    },
+    {
+      "n": 78,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        22,
+        26
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          26,
+          129
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 780,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "0513aa5bb528cbf1b34a8a7bb55bfda37ff5df0159155eb57423abfe74659530",
+        "denominator_sha256": "0966c397cdc6fe5fbc6a16e4c53ee7dd649ba04908f2cce63c5d5fabcb626d04"
+      },
+      "surrogate": {
+        "numerator_sha256": "3c99b44c9634b7c144344a0dd23da9478cb4aa0cc4b485826738779bacb89532",
+        "denominator_sha256": "874b37841605507a473181934308c51e448520c2118c7b795bd4bde14d8785cf"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "4acef7518e2e306de25b6f9706fad088df9af3f4551b758b8fce72a640ccd5a7",
+        "denominator_sha256": "3c889fe00afb3fdb5efbef55a146ec5b8e92920b0e7667a46b29331165d3f81e"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "79ac045dafdb6ae9b7a7cc337e89d4d28a047e2075af391fd2026eedd70f3de9",
+        "denominator_sha256": "e3e858f5bffe3f15785f4075f2d182d6b0e849af1c14d6e54d088865358fdafa"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 199872
+    },
+    {
+      "n": 79,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        16,
+        22,
+        26
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          22,
+          83
+        ],
+        [
+          26,
+          131
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 780,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "9ecfef6a54c800df27d9ac1e632edd7962f74ec29bae6cde476312c9db5bfa9e",
+        "denominator_sha256": "b8c3cdcc482c5175a9fc26de2f3aa60ae3a2ef02eb7305723c0e0b31b9b35cdc"
+      },
+      "surrogate": {
+        "numerator_sha256": "3e79d3edd3434f754e7019ab211585ae2b94c15af66bb94884dd5a95da6a2a84",
+        "denominator_sha256": "7f3c108dc8b50d1e1e6a3492a08e2347eed7e5e0481c8dc8951c402e8beb7597"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "b8b6672c44ee454e084882a3c1519d9c933da29d977e90ad674c75bf1053233a",
+        "denominator_sha256": "8abdb39c1dad5cdd557e2225098de3a7128cc748696ce51417bc5b3248061e68"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "34955e23cd8529f0275afe9e7f7830d4d19106bf6767aff4600484c3ce7173de",
+        "denominator_sha256": "0e09cda745fe188111d646addcd2a5ea57527b123075645e7a12c4c4b55ea008"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 88949
+    },
+    {
+      "n": 80,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          28,
+          131
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 820,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "aff19918dcad8bc9be66a95e99024c5ea94f47291d7a144541d3de9235fd5c1d",
+        "denominator_sha256": "d467cca2e1a44d3f2dc9d0470a0fac294d508d8cd5b0114f638c92abf97a430f"
+      },
+      "surrogate": {
+        "numerator_sha256": "8b55865df4ca4d5617562c996a6bfb5edf389d7efeed38efbce3206ec889c254",
+        "denominator_sha256": "d467cca2e1a44d3f2dc9d0470a0fac294d508d8cd5b0114f638c92abf97a430f"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "467f5e0acd9d30606aeec0d093d6ecd23b1b50b8f99d1d46ad45cbdedd540dc8",
+        "denominator_sha256": "d467cca2e1a44d3f2dc9d0470a0fac294d508d8cd5b0114f638c92abf97a430f"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "af4cedcf33487dfbdc2be19e3627117d692837e85a94485c6404fd9882ee04d1",
+        "denominator_sha256": "053fdd6693f218c3fbf124f78c4ed5103dfdf284ca05a256fdba35d015f75604"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 98222
+    },
+    {
+      "n": 81,
+      "center": 1,
+      "populations": [
+        4,
+        10,
+        16,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          22,
+          83
+        ],
+        [
+          28,
+          133
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 820,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "1d84e287c661bb80a7398949efa41479a24d749cb97527c09136945b6c9ea1f8",
+        "denominator_sha256": "9a9f3525f5343cecd9c37981c849da8fa07bf888946119465581f8a2b9bcfab5"
+      },
+      "surrogate": {
+        "numerator_sha256": "6cf09418f59cde0945126a055a3f8d3f24e5d809f93784040133211335075b3d",
+        "denominator_sha256": "7a3f516e03a98a750e5475b83e30d88ad70fa0113f55b0c4ac77f3cd7bdba541"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "c9f3982db418cf693b431e037a797f4d63069b6ff94a562a41da0e88ae329d04",
+        "denominator_sha256": "046ea8675f547570b16d8c961c7882fdac2bbbf0aed364bb1ed1e62d11dba7ac"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "ee41c8fa70962767c3ae0f00193a1f4be02e44d77e2036399afe0d7e5be0a385",
+        "denominator_sha256": "ffa9a0dfa2792dd76d01c1daab80e0cf40d08b293e984553dd4fbf3c62b96a51"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 43617
+    },
+    {
+      "n": 82,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        22,
+        30
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          30,
+          133
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 861,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "c9c5c946f3ab7ce13f2e3606763eae0ead3e4aca508b5ba94c7dbe97c71fb1b4",
+        "denominator_sha256": "d8b49c820ce1d85892985c4a6c635b4accf52541798d2b334b5e9c64caec6035"
+      },
+      "surrogate": {
+        "numerator_sha256": "9e694a2e86d84f8d5eacf55dd379d817f7fc1353d24148808797bc6352a4b84c",
+        "denominator_sha256": "97f3df1f476e87718a50167930f0b32a734ae573f6aa8d8a4cd1a29a85694acf"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "fc4213894bd16bc978af2c58ed23785fa36b4924c34da06568d05c904c1cf37f",
+        "denominator_sha256": "d8b49c820ce1d85892985c4a6c635b4accf52541798d2b334b5e9c64caec6035"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "0d7ad330bae974ee947240a692759d1a58431f13961eff7939507f2270dd8472",
+        "denominator_sha256": "61972cd5b1600b3648fdf1fdd90d938ade09a777c209f910f833ea2518e4b272"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 37431
+    },
+    {
+      "n": 83,
+      "center": 1,
+      "populations": [
+        6,
+        10,
+        16,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          49
+        ],
+        [
+          22,
+          87
+        ],
+        [
+          28,
+          137
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 861,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "8acb38709f5f658189b8a1d81a1b930c5ed76f951910f9196288283fbc3b8f2d",
+        "denominator_sha256": "0b10cdfde34a1167978050493c3e6e477700cd9ebc3e3856939b268309032af2"
+      },
+      "surrogate": {
+        "numerator_sha256": "28b2e5e945042b5d57f82ceaf892b3413c259b41889d2cee24192b885840c2bf",
+        "denominator_sha256": "e61b83ef85c4ee5ee1634666af6d98c6613e8a9b81d83eee61d66f525853211b"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "4e7ab73ca32da708d0ac33099c7bb4baecb015ceb41fc70f586b94243a7247c5",
+        "denominator_sha256": "a2bf9cf779ce9b22a9d343bafe820b7a4877bb3e9ed61381d54b9f2419abc88c"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "f98817d4b78aaac75e8acc6ed611de5d50b711a2b677bd290d327fb990ef4096",
+        "denominator_sha256": "3cb679198f525e6574b80d38fe2012da55c3c670d7fe3937f08ca8e61f667095"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 18441
+    },
+    {
+      "n": 84,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        16,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          24,
+          83
+        ],
+        [
+          30,
+          137
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 903,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "5f2c84038920402420fbde2bba4191c95b9ebe77d6f8188dee44a1089936d162",
+        "denominator_sha256": "da065388a530ee992da1432c78ba90d32b60f79d5eba23cf55e453cc02b24c1a"
+      },
+      "surrogate": {
+        "numerator_sha256": "25585079e88217c3fbf54ffe3d9487e0a2a7a43922c7a7ac670456c708616ac8",
+        "denominator_sha256": "9891abbe82454f3feba029bcf087b973207b1d0eb1af0b30b9ab5f3e46464dc6"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "5f2c84038920402420fbde2bba4191c95b9ebe77d6f8188dee44a1089936d162",
+        "denominator_sha256": "da065388a530ee992da1432c78ba90d32b60f79d5eba23cf55e453cc02b24c1a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "710bfdf1ef2214739ccc6f3b89e4873e4a659c16900b215d3cd95b500554e5ab",
+        "denominator_sha256": "2f58d990a45bca74a89a15e76df1ab346dfb4011f7f0f1daa5d83d0132b921ef"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 6504
+    },
+    {
+      "n": 85,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        16,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          16,
+          53
+        ],
+        [
+          22,
+          91
+        ],
+        [
+          28,
+          141
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 903,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "2e6c736ca3a9fe0ae783ed2e376c5b2b8d50377a6e9ce4ea630c46c9b1dcb40c",
+        "denominator_sha256": "15dd6b6497439f79be6ef45abb8e3e4430f529c7117d0e87d1a8802a704fed34"
+      },
+      "surrogate": {
+        "numerator_sha256": "aac42a8c8dd6146cccd52d3eb318d52e0257c93ba86595c63c3314b0b70a3297",
+        "denominator_sha256": "18648b16bb4e4d4d2c9a1685c5b1dc1ed72038cbce448be012dabe198cce99a0"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "2754fc57c6bba6359227a3574634770eef91b73c5dba9fa2b83c219ce110478d",
+        "denominator_sha256": "699fa54119bf3dac54fb8af92cd58169a1ee7b4215693c084391f7224f360b87"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "9d22a066c31bd84ad188a986de8bda239df597f0e9f2c3b08ea0697c9c04d7a6",
+        "denominator_sha256": "7ef3396d23107f80b6357688c2531334bba55474c4156975b369f4e1e9f26be6"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 5392
+    },
+    {
+      "n": 86,
+      "center": 0,
+      "populations": [
+        4,
+        10,
+        18,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          18,
+          45
+        ],
+        [
+          24,
+          87
+        ],
+        [
+          30,
+          141
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 946,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "5b9e2c022104c5b0cd34645e4764371216bfa0131f0f9176e2538dbadb58321f",
+        "denominator_sha256": "d91db0ac42a3501b8c5ac25c68d0cdd642d8df7951f5786980718de62f4e67c7"
+      },
+      "surrogate": {
+        "numerator_sha256": "d1dbd832452174449867063220ff5fd2a8524e51e296fea7a336c2d8be6576da",
+        "denominator_sha256": "03ae2f61267d5f6d77abe144a5554154fe1691b5e14d86d58436d299fbc86396"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3a06b61d47f90b18ccdf7843d0508193062eef29767f6aed51d43aeab2a70ca2",
+        "denominator_sha256": "d91db0ac42a3501b8c5ac25c68d0cdd642d8df7951f5786980718de62f4e67c7"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "da763ebf67363fad497c4d891a48d8d61dfb466514bc2a057658b0f0378c5740",
+        "denominator_sha256": "5dc5fed01608e6ce85296595a53ece9d0e1386bf1c0ac4c27cef2c3e15918552"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 4231
+    },
+    {
+      "n": 87,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        22,
+        28
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          22,
+          95
+        ],
+        [
+          28,
+          145
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 946,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "c9f7904d5746ec61819f7adecba4b5b742a4637c7836246e611ebaa375babe26",
+        "denominator_sha256": "1acd55d9f34060bb65182a1278f056fcd85f889ed043d92f6465f9f8ca407821"
+      },
+      "surrogate": {
+        "numerator_sha256": "beebd73e83399e652dd680cfdb9c63525415e2d37c80e9e3009a749a9a02daaa",
+        "denominator_sha256": "9780289605017ff44a7efbabc7df6e298d02e83c1f09aab0e0285cb113c84fcd"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "d0a0a53ac98a4a2628df4ea863d40330037d0c5eed3b402cb6ba7d81d2979a0f",
+        "denominator_sha256": "152441ea18e8eb2174bb2c2d2a7853aaf908444c94f2c54820dab2898e931ee7"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "8ee4920abc4e995c7e12a228627e24c1fb3de412ae134e9a7eda37e087fec49f",
+        "denominator_sha256": "63ba430e3b0326d5d6f5cb3af2348c48736928064daceed20f6893ee94d71ab4"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 3217
+    },
+    {
+      "n": 88,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        24,
+        28
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ],
+        [
+          28,
+          147
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 990,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "7514a7455d31070a9f999656e5bbc6d60ec773af51a1a6488acf7e8e2838d4f1",
+        "denominator_sha256": "9d3d6a4303e01536e74fe053dc9e58ba6c99a5d1497574bf1081aef2bc6a3d1d"
+      },
+      "surrogate": {
+        "numerator_sha256": "f2d4e9d5f470b5064a4e0b1335b688487184c42ae9e104f6a75bb2ee127af24d",
+        "denominator_sha256": "a4d7dd3b757ff9961d8c798b5d8bf2d79d7c8ca0df1588f5d528cfb6081419d3"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "0a07cfb0043481755840f3dd1e840d908d08edb6102de391a21352163b673023",
+        "denominator_sha256": "02a0213dac3191cdfab96f3c6065d610431bfe2a83b469422b547ac706f7067a"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "4917b16f4e8eaec7549d04e195f3b8ff7d6469b294d975423a9e2aae10ecf486",
+        "denominator_sha256": "6990b6fae16509853cc2aca23483c13ec6da065fb6c8abd029aa99f54697ec8c"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1194
+    },
+    {
+      "n": 89,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        24,
+        28
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ],
+        [
+          28,
+          149
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 990,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "1e9a5ffda41e5337820a74abb1cfa0ab81912a1a652e2a17e811099e9dec03ca",
+        "denominator_sha256": "258c5285fa1db83c841530aed06123dd1f98807e1d3dc9e9b4f7f384736c7ecd"
+      },
+      "surrogate": {
+        "numerator_sha256": "53387a3e2f8f42679cd7515d0e0889b27397ed1ac93590aec97f5ab0ea0f2102",
+        "denominator_sha256": "521f0ad59b2c53af0d372465617bbd183203bbaf0da5439585715f9f04b23113"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "f69659110e90d0b3726e40d10e7b7e70f0d275572010de897987971739cd31c2",
+        "denominator_sha256": "95f5b8ef8c2ea3552bdc7d88bc2022680d11073854d1b25aa2b8cef38239feaf"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "44a12d94c6e3e5a8922595177ca6ce088cf084d053d44f7335782328fa5ad93b",
+        "denominator_sha256": "474871a52d557152e4b888fa40fe1640bcd7c94399b874e4d62ed2f8eb342a8f"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 2012
+    },
+    {
+      "n": 90,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ],
+        [
+          30,
+          149
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 1035,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "7f9dc7ea13094240e8c20b15fb2ea9259a274d2c0d38f30c52edf8344f9baacb",
+        "denominator_sha256": "06f4e7cb5ce45396b45c5cd0494d768301bf5090da8eb8fe64ca24fbbfbbc48e"
+      },
+      "surrogate": {
+        "numerator_sha256": "3b6329706c8b3fa45545622adea4c5a652d27fa54f4aec533e8e4e46dc5ae408",
+        "denominator_sha256": "06f4e7cb5ce45396b45c5cd0494d768301bf5090da8eb8fe64ca24fbbfbbc48e"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "3b9d6bd4be2d6bcf9d851bf4d866930959cae5a2f3c1feb3d9fda31e07a90cad",
+        "denominator_sha256": "06f4e7cb5ce45396b45c5cd0494d768301bf5090da8eb8fe64ca24fbbfbbc48e"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "3e141dadea82f2dc52dbc33acdc2eed01b3fa8cd0b4b5dfc14e6e9922b86b67f",
+        "denominator_sha256": "68952fdaa6c8eb20a787859d719622f42bc5c7d4d4a144503014993b6e0436ae"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1218
+    },
+    {
+      "n": 91,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ],
+        [
+          30,
+          151
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 1035,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "f99dd6937685327f4faf380d35c065b68ef63491dfa7afcef4233ef0a8561cff",
+        "denominator_sha256": "c5c2cb0251cb63093e8ae4dc730d571fc414cbc17621a274b41e43bde9aab703"
+      },
+      "surrogate": {
+        "numerator_sha256": "96e0718a3379e498eaac5e827ebb7b25077f8fce30a19516f2493acd050e25f9",
+        "denominator_sha256": "41ac399726de23912cb67460f839630d5632a25464fbe8607896978b715e40ac"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "30f2ec4d873c35114693b147b25cd5a1bd981d101efa0d507eb8be383f04cbb2",
+        "denominator_sha256": "a89e2ed03afffd6fa8044ff7a5b34fd4ef43e0705a5d1ecd7dcf30f26e55ddf1"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "b29158266e36467d7bfb76d5e787287f84830be9098696cf0dbb2d96536a1571",
+        "denominator_sha256": "ed100dffdd95729e4121221c2725b661e973f0ab07f0cad8a154761961d5f55c"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 77789
+    },
+    {
+      "n": 92,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        24,
+        32
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ],
+        [
+          32,
+          151
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 1081,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "cb42c5e59bd53b84f6a5475f7d41a7ac360670a4f249736923b96bb9dd31ad0f",
+        "denominator_sha256": "0fbb8a4dd85c9c06b5ebf74234944ec965d443b9849da224a0f3db093a8e119b"
+      },
+      "surrogate": {
+        "numerator_sha256": "b87ea50779245db08f36ddc1f34b78b7038979ad9863128453872726cf374d64",
+        "denominator_sha256": "355c8add6c2be3287cbddb9d9bbebf621153761ea22c0079f1479096673f86ac"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "cb42c5e59bd53b84f6a5475f7d41a7ac360670a4f249736923b96bb9dd31ad0f",
+        "denominator_sha256": "0fbb8a4dd85c9c06b5ebf74234944ec965d443b9849da224a0f3db093a8e119b"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "e04fbe3f09630c3549e2a0063d1a76df4524291db153d7013295574144b2941c",
+        "denominator_sha256": "0c74f3dd85e3e58164a44e42d7ec8eaea1ccc3c396f2a44d4a2b634d14eaf125"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 733650
+    },
+    {
+      "n": 93,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        24,
+        32
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ],
+        [
+          32,
+          153
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 1081,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "b776333ed937e598afac39b23656a81294e663a5308645f9cbb5eee9e7406c3c",
+        "denominator_sha256": "498d07f092e01f8f49ba83d1f41dc28fbc60be01d28f3ebfaf3e038260b76059"
+      },
+      "surrogate": {
+        "numerator_sha256": "1322b8b10387cbe1799990d32f54004da7e1806b117bcb17028a82d699f62f22",
+        "denominator_sha256": "40081db31120be46635eb8c8d7b5bb8a2024c40d99b1304aa3edfc2ac15cbaf1"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "b776333ed937e598afac39b23656a81294e663a5308645f9cbb5eee9e7406c3c",
+        "denominator_sha256": "498d07f092e01f8f49ba83d1f41dc28fbc60be01d28f3ebfaf3e038260b76059"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 0,
+      "previous_complete": {
+        "numerator_sha256": "2ca25e97aea14b7575d3584a976e17a04f4634237b306d061bfc43e99745cf66",
+        "denominator_sha256": "ac4123728f4f7f9b0ec9340272d8e333794143d501cae30a5eb6fc2d3418c255"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 643790
+    },
+    {
+      "n": 94,
+      "center": 0,
+      "populations": [
+        6,
+        12,
+        18,
+        26,
+        32
+      ],
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          26,
+          97
+        ],
+        [
+          32,
+          155
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 1128,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "2929ab5c0f59bddb8c09ee0cc4f6d30176cca4178fceb568042c19e7295c2757",
+        "denominator_sha256": "9ec0ee9d6567cc25044e399b91bbfa8c8413b14194b88bce4db8971149b9a390"
+      },
+      "surrogate": {
+        "numerator_sha256": "9537a8be0c54785b196c3a78c83fffc3674f1ad8ddeaf10b4e334ba8837112e6",
+        "denominator_sha256": "43d67a0563bc2d66cd0e7fe26f3f6815d051b6eec3d9229b2e7f97c9a55709df"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "c39fc2f7ad2fe14dbe8e1a8275a4b51713fbf4512ccc5d1cc5f44062b4204d7b",
+        "denominator_sha256": "985c2dd9d63e7200fc226473cc405617adb2040ad23816667aec63e4e1a379a7"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "afade2e19139a1ecc802f82c792e00ee9e072882c5c449050254a1daea8b1309",
+        "denominator_sha256": "591617b35a4ff44d1d9d5b1ae0cfa87885154112fa9618ed1314ee4a6bdd3fa1"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 623790
+    },
+    {
+      "n": 95,
+      "center": 1,
+      "populations": [
+        6,
+        12,
+        18,
+        26,
+        32
+      ],
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          26,
+          99
+        ],
+        [
+          32,
+          157
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "population_dp_transitions": 1128,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "40c732232571cb1605a6775008252678369a4d94d222686320884bcd3594b983",
+        "denominator_sha256": "55a6e40c1c7f3e7f3b253e39658a6a8bec1fe78707a6b27cda1f458366f15924"
+      },
+      "surrogate": {
+        "numerator_sha256": "356d1ac548d2ef644190df3531df9ebe31dbcb150afe3478ff5868e78bb2f1e5",
+        "denominator_sha256": "3808b00242e9e7c37d79c0dfe7af5f8a15f610d94732857cfb3e70e19fb25c2c"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "9ab8abcbd9a5b159f1e830157e98a92bdfe7ef0c4102ef8edccf6fa0649d25e6",
+        "denominator_sha256": "5bcce823c338c3787cd5f04ecba45ac3d29ffbd7547ae9bf98bc593b7d9d573c"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "d8c1b786863e322a30c0e79c908d40d489bb4abd945bcd0439559e9138d0612a",
+        "denominator_sha256": "80ccfcb6a449eb9d6b9b4227dc3fc2d7fb97ad97b4611e43dfd1386c2a1606df"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 1204022
+    },
+    {
+      "n": 96,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        18,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          18,
+          65
+        ],
+        [
+          24,
+          107
+        ],
+        [
+          30,
+          161
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 1176,
+      "phase_states": 12,
+      "actual": {
+        "numerator_sha256": "05636958d57dee4135555aa5d4ce1aebe5e08f20be821769df9242755f43f000",
+        "denominator_sha256": "6fcace89eb79fa8dba848deb0e569ebb48eaa777f6529161cb9d5cb5efdd52b7"
+      },
+      "surrogate": {
+        "numerator_sha256": "e387250551d7437a42d261d7d02088482e5dcb6b5d4c6d50daf196d6081cc1ad",
+        "denominator_sha256": "4fbdabb3aa64192dc8e7f9f06fa74c9b17bdc2c2b84a7542f99ef1a87bc9b0b8"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "427daff2affb594295f598a11deb335f2e3e8456f59e2185e7db9dcc7a1f36f6",
+        "denominator_sha256": "d548eab8f9abfbc0c4a1768fa14b334e6c2bfb01422057fa8e667407c309da76"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "5b5b849d92b4184d60d94897e0f0533d8063bdd9f5a3f3dd9d9fb6606a9a6384",
+        "denominator_sha256": "205afb4e86990084754061b43986fd643f41b791dc0729d1a7e181d710a4910f"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 703647
+    },
+    {
+      "n": 97,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        20,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          24,
+          109
+        ],
+        [
+          30,
+          163
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 1176,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "71a0fb2a566dd0d0e028393471b5ec73f0436091373d83ffa874047712e07180",
+        "denominator_sha256": "9fd941a2f4dcb21e38c514c75bc64e062e804fd67703e93febb3658eb7d2ee32"
+      },
+      "surrogate": {
+        "numerator_sha256": "59faaf85eae5fe6f1f89a4c63626887ad6b8b8c2cc21489ad2cba6ad94c18878",
+        "denominator_sha256": "32f416c67369d0d1321061299fb5f8c9962792ce07db7f59582ebd4c19a1e6d5"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "deb0526792e843c962b585af71dd8d3357f7cdbd8315a7b704200ec199dde576",
+        "denominator_sha256": "9e66f3163949b55aac6cf7d67ef2eb048f39004af61ad31a50bad11e41ecfec8"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "2441f33a7fcbd231c8dc4204c9e9b058f8b9875c8cfd1c21081430e3b339078f",
+        "denominator_sha256": "e164b9b68619721561aa36505a91018111069a759b0d2019806fa0beeffec038"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 279856
+    },
+    {
+      "n": 98,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        20,
+        24,
+        30
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          24,
+          111
+        ],
+        [
+          30,
+          165
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 1225,
+      "phase_states": 10,
+      "actual": {
+        "numerator_sha256": "13a2f5a334dd766985ec888562156efd189f5853d343eef13bbc2ab1bf0bd5dc",
+        "denominator_sha256": "00cccecb8fa4a94474d571856032830af2a0f70c217837be1fe7727c94ab82d0"
+      },
+      "surrogate": {
+        "numerator_sha256": "0d3529cef6d9778bd655ab9c68a86b7289c07b659ace1912f5f3c2a249eca62d",
+        "denominator_sha256": "79db7dc9d8e09d41b13c9571a356f2e7994906c4fc6f03232e82ececed870413"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "27bde5aebdf42110b9108d2b88b203ee02810bdb1f57e13206ab4bfbf7aabb06",
+        "denominator_sha256": "00cccecb8fa4a94474d571856032830af2a0f70c217837be1fe7727c94ab82d0"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "d7e7d5771b82683a9e0327385f0a08153b322b5789b5ebcaafb6b061edc66968",
+        "denominator_sha256": "ad6cbeb313c3097fac4c5784b64e67e5a6c3a08e648f0e4e0816fe2b6bacf058"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 418140
+    },
+    {
+      "n": 99,
+      "center": 1,
+      "populations": [
+        8,
+        14,
+        20,
+        26,
+        30
+      ],
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          26,
+          111
+        ],
+        [
+          30,
+          167
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "population_dp_transitions": 1225,
+      "phase_states": 8,
+      "actual": {
+        "numerator_sha256": "4375b298b25045ecb2da0620bd7f230c43639989a663a6b8deff13b334edd994",
+        "denominator_sha256": "3a620b70a143da2b1e29731f535beb70d217c423378ec3bc39ca49e8e0e08c97"
+      },
+      "surrogate": {
+        "numerator_sha256": "6a6354cc1e7bb7c9940a059bc6577c737349dd607e93f5eca38196074cd667d9",
+        "denominator_sha256": "9a5044900eaaa1018d7fd305c6db4fbe1367ab8240df1752faae381b2d207c72"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "8ac2a8e3e801d336a554d33f3668cc07edb4b29233351df27cd688eed436eeed",
+        "denominator_sha256": "12d83f75fdfeaf4ef68027373b213990659e21f6129deeada3913cdbd1f6a583"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "43fd9b55db0930f5b1986853ba2ba9d0b2bcbb3fd69ec03cff93210905ccfdb9",
+        "denominator_sha256": "9e2815de5dc331fe5f1050900f8fb560f3e761f3c401ee71ca8a5d6e3a486409"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 401189
+    },
+    {
+      "n": 100,
+      "center": 0,
+      "populations": [
+        2,
+        8,
+        14,
+        20,
+        26,
+        30
+      ],
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          26,
+          113
+        ],
+        [
+          30,
+          169
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "population_dp_transitions": 1275,
+      "phase_states": 12,
+      "actual": {
+        "numerator_sha256": "8cded42a104c0d4ddee4da6e71260ced89f5e9ad98ff2d30c32fc1694807aacc",
+        "denominator_sha256": "400b7b009f3aa9130e6db518fba473d122da2664925fe785e20e9286cc25eb1c"
+      },
+      "surrogate": {
+        "numerator_sha256": "86e78bff00d9d3b34175883bf126a66b8e95641b9d328e283361c060059d9572",
+        "denominator_sha256": "66d2b06bf41ac24617db1195bff3e71f7accf20ffbbc3edc21716299e03cf8a8"
+      },
+      "continuous_phase_upper_at_selected_radii": {
+        "numerator_sha256": "8a361dfcadbf15b19f7da7c97daa503cba5f7ba869491a617019a4eb2ebd4efd",
+        "denominator_sha256": "f6e108356a30da9baf40d72f7d640d68df5b04943151884f7235dd7a4b8b3573"
+      },
+      "continuous_phase_relative_gap_ppm_ceiling": 1,
+      "previous_complete": {
+        "numerator_sha256": "3f574450beb9d2f8449b20a217d82997092f7c2894bb73ceaad75dc6b006677c",
+        "denominator_sha256": "a8a5ec00c4d80329581ac56b1232e88c323b5a4733152a823f7b08114a985b14"
+      },
+      "explicit_candidate_improves_complete_previous": true,
+      "existence_lower_improves_complete_previous": true,
+      "explicit_gain_basis_points_floor": 571114
+    }
+  ]
+}

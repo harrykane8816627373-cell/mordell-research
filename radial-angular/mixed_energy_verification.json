@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "independent_cartesian_disk_means": 60,
+  "gram_systems_checked": 40,
+  "nested_actual_shape_checks": 16,
+  "invalid_inputs_rejected": 7,
+  "hidden_mode_example": {
+    "points": [
+      [
+        3,
+        0
+      ],
+      [
+        -3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        -4,
+        0
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        -5
+      ]
+    ],
+    "vanished_power_sums": [
+      1,
+      2,
+      3
+    ],
+    "old_same_mode_sum": "0",
+    "new_mixed_sum": "64/625"
+  },
+  "dual_exact_and_interval_checks": 2,
+  "scope": "Finite algebraic implementation checks; universal analytic theorem is MIXED_ENERGY.md. No optimality or full-domain cover."
+}

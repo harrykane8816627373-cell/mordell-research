@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "independent_log1p_interval_checks": 5,
+  "independent_factored_vs_direct_log_checks": 1,
+  "computed_point_counts": [
+    30,
+    100
+  ],
+  "scope": "Actual new attainable candidates give proven upper bounds on log(U_n/M_n), which are fed into the same universal layer theorem. These are necessary layer counts for global maximizers, not their actual layer counts or a global-optimality claim.",
+  "rows": [
+    {
+      "n": 30,
+      "candidate_center": 0,
+      "candidate_rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ]
+      ],
+      "candidate_signs": [
+        -1,
+        1,
+        -1
+      ],
+      "log_candidate_interval": [
+        "37356602445791/250000000000",
+        "29885281956633/200000000000"
+      ],
+      "log_U_over_candidate_interval": [
+        "44718683033/125000000000",
+        "178874732133/500000000000"
+      ],
+      "new_global_optimizer_gap_upper_decimal": "0.357749464266",
+      "old_effective_polar_gap_upper": "119011592319751/1500000000000",
+      "old_necessary_layers": 1,
+      "new_necessary_layers": 2,
+      "simple_h1_three_layer_delta_lower": null,
+      "last_excluded_layer_certificate": {
+        "n": 30,
+        "layers_upper": 1,
+        "smearing_multiplier": "99/100",
+        "radial_band_width_upper": "0",
+        "remaining_length_fraction_lower": "7981288900559/12500000000000",
+        "radial_delta_lower": "328682925839502502493009915737686287732162356358804241/62500000000000000000000000000000000000000000000000000",
+        "smearing_penalty_upper": "8644075714847084712815732834535269473137828589117236131646792030525239392618715159138241927280207043245388381291251699183817017/2871713820199185565431933415820615849243265013192826634210138384169346240582769477637749733900516456311254444391695232621922878000",
+        "delta_lower": "471671522932312694985186794638272658851042822306088491720467113738446151183352485180731251837379974914820540876156352125024498466897645679091855471933405850224006125504023100662799/89741056881224548919747919244394245288852031662275832319066824505292070018211546176179679184391139259726701387240476019435089937500000000000000000000000000000000000000000000000000",
+        "scope": "All normalized configurations whose center radii fit the stated band count and total radial width."
+      }
+    },
+    {
+      "n": 100,
+      "candidate_center": 0,
+      "candidate_rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          26,
+          113
+        ],
+        [
+          30,
+          169
+        ]
+      ],
+      "candidate_signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "log_candidate_interval": [
+        "1234957362960871/1000000000000",
+        "154369670370109/125000000000"
+      ],
+      "log_U_over_candidate_interval": [
+        "1128852585093/1000000000000",
+        "225770517019/200000000000"
+      ],
+      "new_global_optimizer_gap_upper_decimal": "1.128852585095",
+      "old_effective_polar_gap_upper": "1657/12",
+      "old_necessary_layers": 2,
+      "new_necessary_layers": 4,
+      "simple_h1_three_layer_delta_lower": "9/4",
+      "last_excluded_layer_certificate": {
+        "n": 100,
+        "layers_upper": 3,
+        "smearing_multiplier": "99/100",
+        "radial_band_width_upper": "0",
+        "remaining_length_fraction_lower": "203/500",
+        "radial_delta_lower": "15283635129/6400000000",
+        "smearing_penalty_upper": "8644075714847084712815732834535269473137828589117236131646792030525239392618715159138241927280207043245388381291251699183817017/861514146059755669629580024746184754772979503957847990263041515250803872174830843291324920170154936893376333317508569786576863400",
+        "delta_lower": "65558728911371486716727734967932264510722389318584048839918658919386068870738552645707513912655536628998070848342115385369488766050371893/27568452673912181428146560791877912152735344126651135688417328488025723909594586985322397445444957980588042666160274233170459628800000000",
+        "scope": "All normalized configurations whose center radii fit the stated band count and total radial width."
+      }
+    }
+  ]
+}

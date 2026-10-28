@@ -2,7 +2,7 @@
 
 研究资料与项目发起：蒋丰灿（Fengcan Jiang）；推导与代码包含 OpenAI Codex 协作。更新于2026-10-28。此页汇总当前判断，定理的全部假设和证明以所链接正文为准。
 
-**最新补充见[联合上下界与构型约束](../joint-bounds/README.md)。** 对全部n≥2已证Mₙ≤Uₙexp(−cₙ)<Uₙ，其中cₙ>0且趋零；并得到径向与非零复矩可加证书。全n内环收缩对原多环家族统一提高超过10%，13≤n≤100相对完整已存包络提高45项。下方此前专题的“未刷新Uₙ”仅描述其当时结果，现已由本补充推进。
+**最新补充见[径向层数、混合矩与人口优化](../radial-angular/README.md)。** 任意全局最优者满足K>3√n/22，渐近下端为101/250；任意百点全局最优者至少有4个不同半径。新可达构造相对此前完整包络提高87项，混合矩与整数人口证书进一步加强区域上界。[上一轮严格圆盘修正](../joint-bounds/README.md)Mₙ≤Uₙexp(−cₙ)<Uₙ仍成立；下方旧专题的执行范围与历史报告不追溯改写。
 
 ```math
 M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
@@ -31,7 +31,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |严格真子集内部矩约束|对全局最优构型及2≤m<n严格成立；已加强为显式正有理余量|[完整证明](../finite-n/SUBSET_PROOF.md)；单点两边为零，全体点为等式，不推广到所有驻点|
 |标准化最大值相邻严格下降|原稿已有完整证明；后续加入随机子集四阶方差折扣|[来源核对](../source-review/SOURCE_REVIEW.md)、[全局方法专题](../global-n/README.md)|
 |完整有效网格|原稿已有定义与误差证明；后续联合稳定矩阵、点距与较小整数箱改善|[原审核第9节](../earlier-results/general_n_proof.md)、[混合网格](../source-review/HYBRID_GRID.md)；上界要求完整覆盖，抽样只给下界|
-|不同半径层数|任意全局最优者有 $`K\gt\sqrt n/12`$；渐近下端为11/50|[联合专题](../source-review/README.md)；不要求规则角度|
+|不同半径层数|最新 $`K>3\sqrt n/22`$；$`\liminf K_n/\sqrt n\ge101/250`$；百点至少4层|[新层数证明](../radial-angular/RADIAL_LAYERS.md)、[百点联合推论](../radial-angular/README.md)；不要求规则角度，精确层数不等于统一层间距|
 |确定的线性渐近项|$`\log M_n=(\frac12\log2-\frac14)n^2+\frac n2\log n+\gamma n+o(n)`$|[渐近专题](../asymptotics/README.md)说明 Sandier–Serfaty 外部输入与尺度校正；精确γ、真实有限 n 边界修正未解决|
 |全 n 圆盘上界及最新严格修正|$`M_n\le U_ne^{-c_n}<U_n`$，$`c_n=(\log2)^2/\sum_{k=2}^n(1+\sqrt{2/(n-1)})^{2k}/k>0`$|[最新证明](../joint-bounds/ANGULAR_PROOF.md)；经典Uₙ来源保留，cₙ小且趋零，不声称强于所有历史上界或改善γ|
 
