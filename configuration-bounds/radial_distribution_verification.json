@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "arithmetic": "integer/Fraction and outward logarithm intervals",
+  "outward_root_checks": 2121,
+  "support_radical_checks": 1344,
+  "CDF_energy_distributions": 32,
+  "cell_comparisons": 36,
+  "original_scale_checks": 10098,
+  "wide_band_delta_lower": "1225/6",
+  "global_gap_upper_n100": "1657/12",
+  "wide_band_globally_excluded": true,
+  "examples": [
+    {
+      "n": 100,
+      "gap_upper": "1657/12",
+      "cdf_error_upper": "645944133347/1000000000000",
+      "disk_s_1": [
+        0,
+        100
+      ],
+      "annulus_half_to_three_halves": [
+        0,
+        100
+      ],
+      "minimum_radius_upper": "20779475362210731318863/25000000000000000000000"
+    },
+    {
+      "n": 1000,
+      "gap_upper": "636863449582417/1500000000000",
+      "cdf_error_upper": "200819786793/1000000000000",
+      "disk_s_1": [
+        300,
+        700
+      ],
+      "annulus_half_to_three_halves": [
+        100,
+        900
+      ],
+      "minimum_radius_upper": "82994462657845917554711/250000000000000000000000"
+    },
+    {
+      "n": 10000,
+      "gap_upper": "16705/12",
+      "cdf_error_upper": "3988280303/62500000000",
+      "disk_s_1": [
+        4362,
+        5638
+      ],
+      "annulus_half_to_three_halves": [
+        3724,
+        6276
+      ],
+      "minimum_radius_upper": "68156906097552121624417/500000000000000000000000"
+    },
+    {
+      "n": 1000000,
+      "gap_upper": "274105/12",
+      "cdf_error_upper": "1431359031/200000000000",
+      "disk_s_1": [
+        492844,
+        507156
+      ],
+      "annulus_half_to_three_halves": [
+        485688,
+        514312
+      ],
+      "minimum_radius_upper": "26001701123870063188123/1000000000000000000000000"
+    }
+  ],
+  "scope": "Finite arithmetic checks; radial_audit.md proves the all-n analytic claims. CDF constraints are necessary, not sufficient, and regional certificates do not cover the global domain."
+}

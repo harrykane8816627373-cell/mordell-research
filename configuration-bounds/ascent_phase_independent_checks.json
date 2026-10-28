@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "independent_nonstationary_steps": 14,
+  "stationary_controls": 3,
+  "arithmetic": "Fraction; positive atanh lower series",
+  "scope": "Independent spot and identity audit of the per-step certificate; no global-optimality inference."
+}

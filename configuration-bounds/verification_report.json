@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "date": "2026-10-28",
+  "manifest_inputs": 34,
+  "status_snapshot_files": 6,
+  "runs": [
+    {
+      "entry": "verify_rational_ascent.py",
+      "passed": true,
+      "seconds": 55.906
+    },
+    {
+      "entry": "verify_phase_graph.py",
+      "passed": true,
+      "seconds": 6.391
+    },
+    {
+      "entry": "verify_radial_distribution.py",
+      "passed": true,
+      "seconds": 0.328
+    },
+    {
+      "entry": "ascent_phase_independent_check.py",
+      "passed": true,
+      "seconds": 3.593
+    },
+    {
+      "entry": "compare_ascent_bounds.py",
+      "passed": true,
+      "seconds": 3.5
+    },
+    {
+      "entry": "verify_hermite.py",
+      "passed": true,
+      "seconds": 1.219
+    }
+  ],
+  "complete_baseline_values_reproduced": 29,
+  "phase_improved_n": [
+    30,
+    50,
+    54,
+    56,
+    58,
+    74,
+    78,
+    80,
+    82,
+    84,
+    86,
+    88,
+    90
+  ],
+  "ascent_further_improved_n": [
+    10,
+    11,
+    12,
+    13,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "combined_distinct_improved_n": [
+    10,
+    11,
+    12,
+    13,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    30,
+    50,
+    54,
+    56,
+    58,
+    74,
+    78,
+    80,
+    82,
+    84,
+    86,
+    88,
+    90
+  ],
+  "known_limits": "No unknown finite-n global sharpness, no global convergence from stationarity, no new unconditional upper bound. Regional upper bounds require their explicit radial hypotheses.",
+  "elapsed_seconds": 71.187,
+  "final_documentation_inputs_rehashed": 34,
+  "current_status_snapshot_rechecked": 6
+}

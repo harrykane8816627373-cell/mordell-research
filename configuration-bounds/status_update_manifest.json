@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-28",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7219,
+      "sha256": "db691691506f8ffff41c8a67c67fbcb53a24fe170557aeafffeac451023fef97",
+      "git_blob_sha": "b8fe176d773bdd11081b7e96c617ecacef7b0ec3"
+    },
+    {
+      "path": "earlier-results/README.md",
+      "bytes": 6364,
+      "sha256": "653977d89fd9c1fcf9bb13f4ea0f07304fd20ac74f45981ae3b74e14e16fab42",
+      "git_blob_sha": "b7e33592d350dba1a354587e9def8c1f63680876"
+    },
+    {
+      "path": "earlier-results/general_n_proof.md",
+      "bytes": 18708,
+      "sha256": "38618ca9d803d5c27b49a14693abadd3b2b120dd4ca1c39af6f32e367c049a56",
+      "git_blob_sha": "b3c6f71bc141023307dbba01d98bf2173b132267"
+    },
+    {
+      "path": "earlier-results/SOURCE_MAP.json",
+      "bytes": 4900,
+      "sha256": "f20425e8ab2e6d5881748687a3e2023cf0e2206ed58b5b60e56c7544bbeb7140",
+      "git_blob_sha": "305d95c9ffb039e640866198bd554523e549b3fe"
+    },
+    {
+      "path": "finite-n/README.md",
+      "bytes": 7251,
+      "sha256": "71731a45eb7319c37979b01fde755079f34a922b19916abcb9b05b66379c8dd0",
+      "git_blob_sha": "0d99a38e47c11a1b0016026f0586ded0da554a27"
+    },
+    {
+      "path": "finite-n/source_manifest.json",
+      "bytes": 1845,
+      "sha256": "9e6cfdb839009e724a34340d9393c5fdd783e9ae9f45884f037314671c5b8ae0",
+      "git_blob_sha": "0fa367c93300623fce30546093456afbf2b7c78b"
+    }
+  ],
+  "historical_archives": "Not replaced or rewritten. These native documentation updates are a separate current-state snapshot."
+}

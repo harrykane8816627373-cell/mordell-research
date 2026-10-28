@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-28",
+  "author": "Fengcan Jiang / 蒋丰灿",
+  "source_review_commit": "aeb1a8b9520dec6284260a2fc82a889531fc24ef",
+  "sources": [
+    {
+      "path": "ascent_audit.md",
+      "source": "reviewed current research working file",
+      "bytes": 4405,
+      "sha256": "3054cde770411d8d06dd3218c6bb2eeb3de43009891f97e9a8773a062eba9cc6",
+      "git_blob_sha": "00a54f21e21f9bcc0e48be1c2a764575d2cea572"
+    },
+    {
+      "path": "phase_graph.md",
+      "source": "reviewed current research working file",
+      "bytes": 5931,
+      "sha256": "c6b6d027d1c9061de90ebd6803cdeb7476688f28005a61de71d08b6e4e13cc22",
+      "git_blob_sha": "ed492095960245e7d634ca0f4fc927450b9c85d7"
+    },
+    {
+      "path": "radial_audit.md",
+      "source": "reviewed current research working file",
+      "bytes": 8742,
+      "sha256": "a6fae69e1a1ebf06d25df83614ac68e8b0a42698349378eb205afab7ca599607",
+      "git_blob_sha": "ed4adfb364822284d1cf0055dc7679867081394f"
+    },
+    {
+      "path": "ascent_independent_audit.md",
+      "source": "reviewed current research working file",
+      "bytes": 1629,
+      "sha256": "088c24488731e756f6fdda8feb5927eb122d693af3702c46eb7ab79f6b52e3f8",
+      "git_blob_sha": "be717797ca59db9098e4f618f2974db0c530e625"
+    },
+    {
+      "path": "rational_ascent.py",
+      "source": "reviewed current research working file",
+      "bytes": 4758,
+      "sha256": "7c597b55e9c630721296179ae82f2c0d0dc207eb22cbcd52e21987f36859f09e",
+      "git_blob_sha": "c1181cb474f4ef12ac7f606f4dbcbc9e0ea50907"
+    },
+    {
+      "path": "phase_graph.py",
+      "source": "reviewed current research working file",
+      "bytes": 6292,
+      "sha256": "96bfd31ceee32939bff7ace5fcc6c3871357501496e779daec1c80599577bd13",
+      "git_blob_sha": "1392f1a2ab9e4836d21ac2b169223948e3af8283"
+    },
+    {
+      "path": "radial_distribution.py",
+      "source": "reviewed current research working file",
+      "bytes": 6664,
+      "sha256": "a4c3621af2eea72a3823277ee66e12798b970d4d64005d6bd928db194498adb2",
+      "git_blob_sha": "2937967123e606c1f76f3e5c7082dac1827d5e24"
+    },
+    {
+      "path": "verify_rational_ascent.py",
+      "source": "reviewed current research working file",
+      "bytes": 5767,
+      "sha256": "fca6a7adbfbe96a31f17d599740221077f641bdea7d579cf06d6463bb80f65fc",
+      "git_blob_sha": "785b79d1e888a319bb883721f37aa07cc3cc1d5a"
+    },
+    {
+      "path": "verify_phase_graph.py",
+      "source": "reviewed current research working file",
+      "bytes": 5887,
+      "sha256": "e76e6ed93eb76051048ceeda3ed78810cf9fffc7af79f0c27732f23e12cbfec8",
+      "git_blob_sha": "8cdf4f4e69115bca7e5baabddd3c10ff569a8abc"
+    },
+    {
+      "path": "verify_radial_distribution.py",
+      "source": "reviewed current research working file",
+      "bytes": 6899,
+      "sha256": "bbef5d6a6402a1499d55b43c95003d4ca707f23c221970dbefbda1abb1d6366e",
+      "git_blob_sha": "ca73174154fdec57b733d11d227c8a8c39e1e27c"
+    },
+    {
+      "path": "ascent_phase_independent_check.py",
+      "source": "reviewed current research working file",
+      "bytes": 2320,
+      "sha256": "a5188d5008b49c838859a36315f207d648206f63da82808215db09c24637d977",
+      "git_blob_sha": "07ffe20f74856104378645d2d77922c942fafb85"
+    },
+    {
+      "path": "compare_ascent_bounds.py",
+      "source": "reviewed current research working file",
+      "bytes": 4614,
+      "sha256": "2f985c48489b8ec64c0d935dd2ad1e79aef869d3d0f7be1aef41e954ea5685c2",
+      "git_blob_sha": "4e3730c24c432ba69f9734b5889476485c9d2a6d"
+    },
+    {
+      "path": "ascent_envelope_comparison.json",
+      "source": "reviewed current research working file",
+      "bytes": 293976,
+      "sha256": "ad759b6f6cab9271f503acb671e4054a46cc8f9da5725557da24f15975db2825",
+      "git_blob_sha": "9e565891d5d826191349d2949aea2a59a15effda"
+    },
+    {
+      "path": "phase_graph_comparison.json",
+      "source": "reviewed current research working file",
+      "bytes": 134520,
+      "sha256": "1867281d6867d61c9244c84d47118d31e0cdeaae4e6bba1b1cebc99c320ec79d",
+      "git_blob_sha": "1afcc98ba94c7de927ece40d8e4a788a01b1e866"
+    },
+    {
+      "path": "radial_distribution_verification.json",
+      "source": "reviewed current research working file",
+      "bytes": 1977,
+      "sha256": "a44e5c36d6cccc4d1862bf6225fe6cb3f11cab76b28775b88e4071f4da4cb6a7",
+      "git_blob_sha": "2373ce1de651b5b37b9f85f5920e4b96ffb97c3e"
+    },
+    {
+      "path": "rational_ascent_checks.json",
+      "source": "reviewed current research working file",
+      "bytes": 28276,
+      "sha256": "472076bc1285caee38aaef899e938f1e0482b465de4ee424dd872c711a7ba1a6",
+      "git_blob_sha": "24287452b3d9ce4dad0dcfe6698bc20b44bcd0bd"
+    },
+    {
+      "path": "ascent_phase_independent_checks.json",
+      "source": "reviewed current research working file",
+      "bytes": 265,
+      "sha256": "0104bc9b6050198a9bc184829e447d3a4598071b9fd761f8bd159ea34ce14e50",
+      "git_blob_sha": "c32a9ab10b396def54ce83881018b8f2175cf9b5"
+    },
+    {
+      "path": "old_envelope_n2_30.json",
+      "source": "reviewed current research working file",
+      "bytes": 21595,
+      "sha256": "baaed9b7c614921c292dd1e320bf97e618ba6943817f1e0161074fc9008acb3a",
+      "git_blob_sha": "fcc8555091a3332195feae9d8cb50920cdc59377"
+    },
+    {
+      "path": "saved_rational_bounds.json",
+      "source": "reviewed current research working file",
+      "bytes": 11761,
+      "sha256": "1b7455e72a57c6278945681894840fe2272b2dc90e1c2b4a767b60813ac3c68f",
+      "git_blob_sha": "98d4137c42dc8c5086425e760d31340c200744b7"
+    },
+    {
+      "path": "baseline_finite_lower_bounds.py",
+      "source": "source-review/baseline_finite_lower_bounds.py",
+      "unchanged": true,
+      "bytes": 9401,
+      "sha256": "1bd1ffd0ca07ab0169d2f80d6a3eac8d1018c3611cb10fee6d328faab7785c59",
+      "git_blob_sha": "aa03a88ce1c2111a5b09dc1a42b4f89bd976044d"
+    },
+    {
+      "path": "triangular_lattice.py",
+      "source": "source-review/triangular_lattice.py",
+      "unchanged": true,
+      "bytes": 11150,
+      "sha256": "a4ad1ceacdfec8468b84b3df9e23685412c2a6f63b0d153912274d93b815cb60",
+      "git_blob_sha": "540ec30039a6e9c018e35b53b2847b637e3902eb"
+    },
+    {
+      "path": "polar_refinement.py",
+      "source": "source-review/polar_refinement.py",
+      "unchanged": true,
+      "bytes": 4449,
+      "sha256": "8cd05fc38780ea34f8a4d4e5042f56b679da466e1e3e329713d9090f43bc8128",
+      "git_blob_sha": "05371420ebb8391c8ab3762cb8f0d1d198560f5b"
+    },
+    {
+      "path": "compare_envelopes.py",
+      "source": "source-review/compare_envelopes.py",
+      "unchanged": true,
+      "bytes": 5218,
+      "sha256": "58f5cf4cbb7402bb9766d3d6c08d995b29a12dc54de58a8f13ec6abb63e7309f",
+      "git_blob_sha": "6cb08701d842e3178e9f3c42434b942e652ab8c2"
+    },
+    {
+      "path": "moment_values.json",
+      "source": "source-review/moment_values.json",
+      "unchanged": true,
+      "bytes": 2733,
+      "sha256": "ad335ae23125cb01344fe8d1e7c58b2c0e146cf63198fbde48f1d6fbeee334b4",
+      "git_blob_sha": "212743048d2cf506077953ae62efd8354d1a199f"
+    },
+    {
+      "path": "verify_hermite.py",
+      "source": "original source ZIP anc/verify_hermite.py",
+      "unchanged": true,
+      "bytes": 4879,
+      "sha256": "a85333e18c9ee74b90188d15d15b133fd59dcf78fdb60d94c24e205edd351faa",
+      "git_blob_sha": "0993ad4eec8fadac10d324dfbd70b087c00c2346"
+    }
+  ],
+  "scope": "Copied old methods retain authorship and historical status. New derivations include Codex collaboration; no global sharpness or priority assertion.",
+  "radial_doc_clarification": "Intersect covering bands with [0,2] in the theorem that explicitly assumes squared radii in [0,2]. The general cell API is not restricted to this support."
+}
