@@ -23,13 +23,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 |问题或结论|当前状态|证明与限制|
 |---|---|---|
-|五点全局锐值|$M_5=5^5=3125$，单位正五边形|[作者二阶条件与矩方法](earlier-results/five_point_method.md)、[PDF](earlier-results/five_point_proof.pdf)|
-|六、七点全局锐值|$M_6=6^{15}/5^{10}$；$M_7=7^{21}/6^{15}$|[主稿](earlier-results/six_seven_proof.tex)、[覆盖审计](earlier-results/six_seven_coverage_audit.md)；全局证明引用 Faugère–Svartz 物理驻点完整分类，七点356次枝未在本地独立重建|
-|八点完整锐界|目标为 $M_8=8^{28}/7^{21}$；尚未证明|原点加正七边形达到候选值；低矩和若干几何分支已证，一般 $p_2p_3\ne0$ 分支仍开放，$p_k=\sum_i z_i^k$|
+|五点全局锐值|$`M_5=5^5=3125`$，单位正五边形|[作者二阶条件与矩方法](earlier-results/five_point_method.md)、[PDF](earlier-results/five_point_proof.pdf)|
+|六、七点全局锐值|$`M_6=6^{15}/5^{10}`$；$`M_7=7^{21}/6^{15}`$|[主稿](earlier-results/six_seven_proof.tex)、[覆盖审计](earlier-results/six_seven_coverage_audit.md)；全局证明引用 Faugère–Svartz 物理驻点完整分类，七点356次枝未在本地独立重建|
+|八点完整锐界|目标为 $`M_8=8^{28}/7^{21}`$；尚未证明|原点加正七边形达到候选值；低矩和若干几何分支已证，一般 $`p_2p_3\ne0`$ 分支仍开放，$`p_k=\sum_i z_i^k`$|
 |一般 n 的有限上下界|已证，且可用指定构型继续提高下界|[有限下界](finite-n/README.md)、[圆盘上界](asymptotics/README.md)、[本轮精确改善](configuration-bounds/README.md)；有限家族最优不等于全局最优|
 |严格真子集约束及有效网格|已证；有显式正有理余量与有限全局误差界|[子集证明](finite-n/SUBSET_PROOF.md)、[混合网格](source-review/HYBRID_GRID.md)；网格上界要求完整穷尽规定网格|
 |十点中心正九边形及旧缺件条目|四阶严格局部最大、完整网格、保存整数下界和特定 Hermite 障碍现均已核验|[已更新原审核](earlier-results/general_n_proof.md)；十点该局部最大仍全局次优，旧证明确认归用户原有成果|
-|确定的线性渐近项|已证 $\log M_n=cn^2+\frac n2\log n+\gamma n+o(n)$，$c=\frac12\log2-\frac14$|[外部定理、尺度与常数](asymptotics/README.md)；精确 $\gamma$ 及真实有限 n 边界修正仍未知|
+|确定的线性渐近项|已证 $`\log M_n=cn^2+\frac n2\log n+\gamma n+o(n)`$，$`c=\frac12\log2-\frac14`$|[外部定理、尺度与常数](asymptotics/README.md)；精确 $`\gamma`$ 及真实有限 n 边界修正仍未知|
 
 ## 本轮构型与上下界的联合进展
 
@@ -58,7 +58,7 @@ K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
 
 ## 八点研究入口
 
-完整八点研究见 [research-2026-10-27 发布版本](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)及其完整研究附件。已证内容包括 $p_2=0$、$p_3=0$ 真实驻点分类与值界，两直线、抛物线、四轴反射等类别，七点共圆的稳定驻点归约，以及六点共圆、两例外等距时的排除。连续核连接三个远端径向带，但尚未覆盖全部过渡区域。各自的驻点、稳定性和几何假设必须保留，不能拼接为完整八点定理。
+完整八点研究见 [research-2026-10-27 发布版本](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)及其完整研究附件。已证内容包括 $`p_2=0`$、$`p_3=0`$ 真实驻点分类与值界，两直线、抛物线、四轴反射等类别，七点共圆的稳定驻点归约，以及六点共圆、两例外等距时的排除。连续核连接三个远端径向带，但尚未覆盖全部过渡区域。各自的驻点、稳定性和几何假设必须保留，不能拼接为完整八点定理。
 
 ## 下载与复核
 
