@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "date": "2026-10-29",
+  "manifest_inputs": 65,
+  "runs": [
+    {
+      "entry": "verify_stationarity.py",
+      "passed": true,
+      "seconds": 1.937
+    },
+    {
+      "entry": "verify_pair_stability.py",
+      "passed": true,
+      "seconds": 0.109
+    },
+    {
+      "entry": "verify_witnesses.py",
+      "passed": true,
+      "seconds": 9.532
+    }
+  ],
+  "strict_complete_envelope_improvements": 91,
+  "improved_range": [
+    10,
+    100
+  ],
+  "selected_nonstationary_ring_candidates": 91,
+  "entire_population_families_excluded": 23,
+  "new_global_necessary_layers": {
+    "39..42": 3,
+    "80..85": 4
+  },
+  "n27_gain_basis_points_floor": 10412,
+  "n100_gain_basis_points_floor": 3512,
+  "n100_global_deficit_upper": "413923829261/500000000000",
+  "scope": "General necessary constraints and constructive lower bounds. No general sharp optimizer, full eight-point proof, exact gamma, or crystallization theorem.",
+  "elapsed_seconds": 11.641
+}

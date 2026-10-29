@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-29",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "f0ef6c7048fa3ddcf0181972c7c8fe3994c6030d",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "reused_author_results": [
+    "Stationary force equations, two-unequal-ring obstruction, stability contraction and scalar separation from source-review/revised_main.tex.",
+    "Certified residual ascent from configuration-bounds/ascent_audit.md.",
+    "General radial layer theorem and population lower envelope from radial-angular/."
+  ],
+  "new_increment": [
+    "One regular component with arbitrary other nonzero points: population obstruction and balanced sparse-polynomial condition.",
+    "Exact polynomial remainder and scale-invariant residual/gap certificates for algebraic even-ring candidates.",
+    "Saturated stability projection gives an explicit radial-difference/pair-distance scalar condition.",
+    "91 saved integer witnesses improve the complete previously published lower envelope for n=10..100.",
+    "Updated rigorous deficit budgets certify >=3 radii for n=39..42 and >=4 for n=80..85."
+  ],
+  "discovery": {
+    "date": "2026-10-28",
+    "method": "Bounded L-BFGS with Armijo backtracking, regular/perturbed/continuation seeds.",
+    "numpy_version": "2.3.5",
+    "random_seed": 20261028,
+    "max_updates_per_seed": 1200,
+    "coordinate_grid_scale": 100000000,
+    "scope": "Floating discovery only; saved integer coordinates are the exact acceptance inputs."
+  },
+  "acceptance": "Python standard library, integer/Fraction arithmetic, outward logarithm and square-root bounds; explicit checks remain active under -O.",
+  "external_context": [
+    {
+      "title": "On polygonal relative equilibria in the N-vortex problem",
+      "authors": "Martin Celli, Ernesto A. Lacomba, Ernesto Perez-Chavela",
+      "url": "https://arxiv.org/abs/0811.1785",
+      "role": "Primary-source background on regular vortex rings; not a general global-optimality input."
+    }
+  ],
+  "limitations": [
+    "No general sharp optimum, exact layer count, full eight-point classification, exact gamma or crystallization.",
+    "No external peer review, full formal verification or global priority claim.",
+    "The tiny improvements for n=10,11,12 are distinguished from substantial larger gains.",
+    "This turn did not execute multi-agent review; independent checks refer to distinct calculations, not independent human review."
+  ]
+}

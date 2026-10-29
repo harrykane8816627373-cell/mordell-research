@@ -1,0 +1,3584 @@
+{
+  "passed": true,
+  "candidate_range": [
+    2,
+    100
+  ],
+  "independent_remainders": 30,
+  "independent_direct_force_examples": 4,
+  "scale_invariance_checks": 29,
+  "invalid_inputs_rejected": 6,
+  "stationary_selected_candidates": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    11
+  ],
+  "nonstationary_selected_count": 91,
+  "entire_continuous_phase_families_excluded_by_population": [
+    8,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    30,
+    31,
+    32,
+    38,
+    39
+  ],
+  "scope": "A nonzero remainder excludes exact stationarity of the specified candidate. The count obstruction excludes every radius and phase for the stated population pattern; passing either test proves no optimality.",
+  "rows": [
+    {
+      "n": 2,
+      "rings": [
+        [
+          2,
+          1
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 0,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4"
+      ]
+    },
+    {
+      "n": 3,
+      "rings": [
+        [
+          2,
+          3
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 1,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "8e147ba0f2afe0a8b672d20efb51c71770c7aa8db0c9598d918aba5b731384e4"
+      ]
+    },
+    {
+      "n": 4,
+      "rings": [
+        [
+          4,
+          3
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 0,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "73ca7a9ed16e954dab2040896df29f2c5ee175ef8d98eaec144f0cd2f4a3fcd9"
+      ]
+    },
+    {
+      "n": 5,
+      "rings": [
+        [
+          4,
+          5
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 1,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "73ca7a9ed16e954dab2040896df29f2c5ee175ef8d98eaec144f0cd2f4a3fcd9"
+      ]
+    },
+    {
+      "n": 6,
+      "rings": [
+        [
+          6,
+          5
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 0,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "8462963cd509903a127298960d56f1ef3c100e3b521fb2509add9cf6e7692f83"
+      ]
+    },
+    {
+      "n": 7,
+      "rings": [
+        [
+          6,
+          7
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 1,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "8462963cd509903a127298960d56f1ef3c100e3b521fb2509add9cf6e7692f83"
+      ]
+    },
+    {
+      "n": 8,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "599872/399675",
+      "log_global_gap_lower": "21424/32373675",
+      "ring_remainders_sha256": [
+        "bf2d5e717ceb36fbc60af7dba645a9f88e6f86363e5c0b12627c4dad46f4f755",
+        "c911c040dabb3bbc87421a404bf0a598daa0160e8883d7ebc5c9c1608fe224d9"
+      ]
+    },
+    {
+      "n": 9,
+      "rings": [
+        [
+          8,
+          9
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 1,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "154e21f8ad3b2849c1793e43ab934a89a9ba085af6c15bf53df2ef2320f8b83e"
+      ]
+    },
+    {
+      "n": 10,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "1071972500/589567451",
+      "log_global_gap_lower": "214394500/777103497459",
+      "ring_remainders_sha256": [
+        "de85743c6348d7f98c1514a1b663be85d50580f00502f167990c6b1a35a645be",
+        "a02f5bb65981525abc2435b2254b09618d700b7f641733555109b7fffd75f20d"
+      ]
+    },
+    {
+      "n": 11,
+      "rings": [
+        [
+          10,
+          11
+        ]
+      ],
+      "signs": [
+        1
+      ],
+      "center": 1,
+      "stationary": true,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "0",
+      "log_global_gap_lower": "0",
+      "ring_remainders_sha256": [
+        "08531b1a77b523e191f265d72593411a4c7934eeb1aa8e4297e176f3ef0aebb1"
+      ]
+    },
+    {
+      "n": 12,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          8,
+          15
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "140319872/82783805",
+      "log_global_gap_lower": "6378176/47931823095",
+      "ring_remainders_sha256": [
+        "73cf39ddc503dffcd46f80c9544583ffb5aea723158066e402edfed966710724",
+        "7199cb73bc40da2abcf0e0d4919df7c883490691bbb432a2fbae22f217eb009a"
+      ]
+    },
+    {
+      "n": 13,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          8,
+          17
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "5849674206480000/741745955382857",
+      "log_global_gap_lower": "168740602110000/346395361163794219",
+      "ring_remainders_sha256": [
+        "8797c77a81b3266f472c6f5301194c381526e2d72561b8e4232ca177a8b3b059",
+        "c513becb8636c44410191423ac2063af9ba8fc7fb21c24c85b3df55b38ebd8b5"
+      ]
+    },
+    {
+      "n": 14,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ]
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "2974347590725602/1902827072505425",
+      "log_global_gap_lower": "10895046119874/183454915990375975",
+      "ring_remainders_sha256": [
+        "fe0e4286b6bd69492e9c1c991b75e686ac04e4371038cb8e49fa1e42fee022dc",
+        "df54061d17dc5d10f870a7b039624efd91c535eef3ef1279706f3042ffa1ced6"
+      ]
+    },
+    {
+      "n": 15,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ]
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "337349044152203125/45313595211133986",
+      "log_global_gap_lower": "9638544118634375/40381568111311613208",
+      "ring_remainders_sha256": [
+        "5d0123443e2c5bb43623c6dd3a9c25f45a1bce146759653bcbfefec360565c2b",
+        "a54905401fa6d1c58eb57eb6c046227c5ae62b28b8a97f0e8c4626c37ef17f76"
+      ]
+    },
+    {
+      "n": 16,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          12,
+          19
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "3017338710930432/2102714336867495",
+      "log_global_gap_lower": "125722446288768/5110149184466135875",
+      "ring_remainders_sha256": [
+        "527773587656f644b28a607c87db8b903f88c23faff9f2916f2a88d3932d29c8",
+        "ff71e920c93bdfff74958245cd561ee369095c3aa266c6ca8ee00da5a5b77f13"
+      ]
+    },
+    {
+      "n": 17,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "621533603103241472/185055056700953175",
+      "log_global_gap_lower": "1999418759982854/30163974242255367525",
+      "ring_remainders_sha256": [
+        "4ecbf8b3d25adbd6ab45faa779be8834d043547a88adeb88581434f346155da5",
+        "89fe67dcda860c94ee0dd564a01d77055b1520c85a2f43d9dcae08201df41c1c"
+      ]
+    },
+    {
+      "n": 18,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "708110538649173138093750/1190196506117689123472783",
+      "log_global_gap_lower": "23140867276116769218750/3476563994369769929663999143",
+      "ring_remainders_sha256": [
+        "928b1c64f6ddf3631610b1dadcedf38af9cfb8fe5da88dd5681caa9638cf8a13",
+        "68c966032b5604b1201278df98b27320d8182ec32c890f70c8f7f8720f079475"
+      ]
+    },
+    {
+      "n": 19,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "8130993583244297249526777/2971184732410345476615200",
+      "log_global_gap_lower": "47549670077452030698987/1547511856028604338040260768",
+      "ring_remainders_sha256": [
+        "884141176e279a307ec65155ed8346841aa3e3d6d8d8cdd308b73bb0fc097f3c",
+        "8d00ca0273e6410d91a52d686c06149e2560b7fc50212d825df39aa631bf0236"
+      ]
+    },
+    {
+      "n": 20,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          12,
+          27
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "146796912847663512027119/8108487477190981802250",
+      "log_global_gap_lower": "7726153307771763790901/43326351419790479430022500",
+      "ring_remainders_sha256": [
+        "bd2e12af91060deb42b634ad6d5a93d3a1fe6c0a3db42a35505e83ce9da99143",
+        "3304e5b2bee93bc31a9039c52446538cb9f5065891f2c0b492b6b68f6b468ae9",
+        "b69006c1eaa8f33bb438dbd1e9b71c990f9bb363b40800ee82624ea6651c1e9d"
+      ]
+    },
+    {
+      "n": 21,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          14,
+          27
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "21833839931734132064602000/9491430625210193873579809",
+      "log_global_gap_lower": "77977999756193328802150/5704349805751326518021465209",
+      "ring_remainders_sha256": [
+        "121f1c65036c2402c96413ce6ec9016a27854d8a6ba799b0123571b66c60ba31",
+        "c021f591fcb07cc683d9ece0d157c13ea0c3dc57e06bb2f5be7637592391e57d"
+      ]
+    },
+    {
+      "n": 22,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          31
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "1497804035701716528420293825759505142676152747511884315/117419384250161651061215673124416743272597700115280704",
+      "log_global_gap_lower": "42794401020049043669151252164557289790747221357482409/546352394916002162387836527047911106447397098636401115712",
+      "ring_remainders_sha256": [
+        "713fa613974de8c38be57a6999cd5223c2bfc9c6397fcfc278c0827c6dd1999e",
+        "80b409ff24f069769a0a2fac8b0175e251b3657e988026ff1afa790fd2e43313",
+        "d8fa996dda5a1420c68cfe477d2d6df105c43ed3ab28815daabfdc9f92981176"
+      ]
+    },
+    {
+      "n": 23,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ]
+      ],
+      "signs": [
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "57937507114644261675628520290443/79319306625871911033889273987975",
+      "log_global_gap_lower": "2061018039651376897552002698079/672072485041012702190143818500112175",
+      "ring_remainders_sha256": [
+        "6e8c08e1633f715d2417cc9fb3f004f5a00f5cf0e92c9209087039aa489dfee5",
+        "03b0ae35ada59330d61d147b6231550ef363ea39079c12eda3b82290d87d31d8"
+      ]
+    },
+    {
+      "n": 24,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "544734358849477810346891646782975673868/36723122512708193349677633026488384507",
+      "log_global_gap_lower": "65131282036350607758867479506660134919/1037685272841595419481840876429482281014299",
+      "ring_remainders_sha256": [
+        "b5b8d7b8f70c8cccc4e0db9a5e266567a207dcd22abe871f92e3e83318d42621",
+        "5b32f07e7c656f4212f6352091a22ee65dd2cd79cf1eb6659d4805074fc59ac3",
+        "5548d737a94773d11abc6b48704d1340f1e0dce4af796dca42a0db2cdaacfab6"
+      ]
+    },
+    {
+      "n": 25,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          33
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "3860007059969396635392000/6847245145717881851506571",
+      "log_global_gap_lower": "38600070599693966353920/24919614992593087651032959713",
+      "ring_remainders_sha256": [
+        "33cc2c5a603c337a2f4958abeb7e65286d846a0aa2e31c339c7cd49f85c86abc",
+        "ecc5a59533134c3868f922961c885fb9823d3088968a93e1a72bbd91e66b28f9"
+      ]
+    },
+    {
+      "n": 26,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          14,
+          37
+        ]
+      ],
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "3500137333287882348181796858207423831902719957299248395849316673/180164208701876878905140274721776322931453155396604012748024078",
+      "log_global_gap_lower": "3500137333287882348181796858207423831902719957299248395849316673/52834655570231243712923261731116921502339733263015765105130961074150",
+      "ring_remainders_sha256": [
+        "5d49cfc3fc98b9e28db90cc9ca767feb59d6720010bf956caaecd3e367a465cf",
+        "3d05799ceda7c82a9091b7d79b03bcc1de6434677a3fbda5c78f802443ff1e85",
+        "739571d4ca84895f3b9314fad72699d38202a25206728696772645f9ebd0b75c"
+      ]
+    },
+    {
+      "n": 27,
+      "rings": [
+        [
+          10,
+          11
+        ],
+        [
+          16,
+          37
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "78301519731619405717644825389666877495/478632341133545311563529324711607171834",
+      "log_global_gap_lower": "22085044026867011869079309725290657755/78555054356201990715052686888967815470083416",
+      "ring_remainders_sha256": [
+        "36130b575eb04c6380b58b37dce70db96116813a7fabe6b4943f632ffc6b4bd7",
+        "b5bba77d99136c0ee9e6c33c31776dad3eb88f1a580644702ae7203d605a9fce"
+      ]
+    },
+    {
+      "n": 28,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          41
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "65327189874274587683017539450991082666364015619302716407275355761622963708488/6113071986169021862735047453240918974755388441757961196618082245438600810625",
+      "log_global_gap_lower": "57607751211882352454160087699286669017957685731307510059325710548168398332/2351375159856425527083792664514257010348557942391488721452096458995471217686875",
+      "ring_remainders_sha256": [
+        "3c651fee204f7e7dd94ddd16e90d1adbf2c3efae1eab519d0f34d0fda831b86e",
+        "92fff7c87891841e789db41c8fa3f945519d16d75d886e38bf1dc9c32cde8414",
+        "015399e7388bd26b3535f5b733e9a34559dc1c5a0d61a719d6fa3f6f3ff0b4b0"
+      ]
+    },
+    {
+      "n": 29,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          14,
+          43
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "2645455088754663007480848546759846843377637859271416919150258228921735954199318055/71152930533246921289967273547857540170039906809714730281018707618471560848924936",
+      "log_global_gap_lower": "13031798466771738953107628309161807110234669257494664626355951866609536720193685/157614975804384022276428558372748850035612610410909135161448177170854265947871195072",
+      "ring_remainders_sha256": [
+        "b02a764dc001c183888782d976b1a9bd30df0015e3566468ebc91541453f6ea4",
+        "7b6f012d54c7bfbf6b0ce1e208b525064a78f2340db635000ff0196c1ff6fe3d",
+        "dec66a1a33df6f104fbf60a993fe1ec29ef521910140b550abfeb36894f63ca0"
+      ]
+    },
+    {
+      "n": 30,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "167726740359438529704382678104699482156161009249725221838671289930404602831377860236222/17812353017015651355258600861281693207550073622589415901669370419126874343165118371125",
+      "log_global_gap_lower": "5783680702049604472564919934644809729522793422404317994436941032082917339013029663318/358171208706918555024827277714021154033537986218693616565090995024324564335953576139566875",
+      "ring_remainders_sha256": [
+        "5de32e1d4e7c6e3783c021e665e58ba6de4bb60126dfe3fc8c747e8eabf4faba",
+        "f197c6acee19e23ae7da0a62cae58487bfe434c8b67319b215f0e7f0ad5a8bcc",
+        "bfbf258947c608bfddbd0c0fe5394c577734c41c5e779696c0c42cbedc4b84d8"
+      ]
+    },
+    {
+      "n": 31,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "66995774496274200171784924228448715958513154795742905773088028594639161697/1881133978778822084002232970026023429117879166220408917291614275459142336",
+      "log_global_gap_lower": "6483462048026535500495315247914391866952885947975119913524647928513467261/115781915259857720448253437072131716038776344801699948450381567040234751638464",
+      "ring_remainders_sha256": [
+        "a4cae86fbea75a0874e25476f75e1639286052ce81072ec08084f56f117620fd",
+        "e148ba4ac9dad9763a8a79605b33cd8cc7bdcb5bdde5506289a41456160beb59",
+        "5e091172e98a3c55b6940f28adee07969e53884f743884a4e0ef3fb26366577e"
+      ]
+    },
+    {
+      "n": 32,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          18,
+          45
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "26338323086164291654255885582690468680276306131726083542384187058501534571747107/2408145807704236707106769156011535932754000725265388518057633252043524369878750",
+      "log_global_gap_lower": "26338323086164291654255885582690468680276306131726083542384187058501534571747107/2202786839289804054282166624048171385323724356217077034480936072735659150893473812000",
+      "ring_remainders_sha256": [
+        "c526de6b0368aefaa27944408a3ca6ce49aa73d6237bedb39c1b25ba5228c3eb",
+        "ecf55e466e81c4aa9059b11db215b2095fb58d8d46a51ef10bd794b07bfdcf38",
+        "bf2c1624e26c9db061c30d143b63ae1f4eb68f64660bd607f135443e98ad7bea"
+      ]
+    },
+    {
+      "n": 33,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          49
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "150267976407357608574502286707686534483364292698269018068431901876906279453/4893040589872294378991186001218671107223365772441974629171222174826508125",
+      "log_global_gap_lower": "150267976407357608574502286707686534483364292698269018068431901876906279453/3677305739115501929231160435139551066226511122078648874083607310774879576450000",
+      "ring_remainders_sha256": [
+        "c11f5c5ae69c78960077d4011708ef64e3e89db6754d8d2519868a2ecfb9c707",
+        "e82e11c36652febd221d9a554086d3248af2b7a9bb8afcfc173499fb93143c7e",
+        "91d9431d112cb4c667bdb94580c31f8fa02e8c95416cd875da66db6eec07bd08"
+      ]
+    },
+    {
+      "n": 34,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          16,
+          51
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "9947127269629554008447789728344779462576759969543556166214469345445582377132491172260853185445590538/1621423067467682103020376656035847387982092038425167642078999710331448770563945778319227738213087225",
+      "log_global_gap_lower": "301428099079683454801448173586205438259901817258895641400438465013502496276742156735177369255926986/57383135211521750235152942083102260569119026495089737953761047148456170859520379462184461192004084745085",
+      "ring_remainders_sha256": [
+        "83f6c5d49df91a718959b18ba848d1b2d08e7d02bae5d57ff91b5dd9242a6d5a",
+        "a7ca94be024ad30218a23461da04b56e5e84f7bca332c6793a003a7761d5ac73",
+        "892e38ded757698bce596750ef877d590208f0d6003c60202df36e39b1d700ee"
+      ]
+    },
+    {
+      "n": 35,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          16,
+          53
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1822754604277668786298095856432313991794644156592912626349604479803316715562178130293812212655392363757/110522609379990008884602773437467588623789437082953605354845687141535493300311822044912722347111028032",
+      "log_global_gap_lower": "260393514896809826614013693776044855970663450941844660907086354257616673651739732899116030379341766251/16581154472233001082912531084956074983284010298370114643360724213408862382379281102288031170125331980500800",
+      "ring_remainders_sha256": [
+        "11b4842a362cc15f0d8d70292b964843bec599d568bb3e2768740293fe6d7c73",
+        "afae83b2e04d6d37b03f303c1fdb66c1594d316ab48928905eb971f2f52b1c33",
+        "301150c0c90b799af1aff240c3e6190d63ebecad8c466fff3d05b1c3ac627eeb"
+      ]
+    },
+    {
+      "n": 36,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "4179641897233781394809897443850314373800337832568473987693803112372121267456549576204835397256563075/695767753353608561686582399608380753798060353619940450341340218136208893842128657312216645091785717",
+      "log_global_gap_lower": "464404655248197932756655271538923819311148648063163776410422568041346807495172175133870599695173675/113664794794365616288490220294422730224973927729475191610463386076039902151413190230467584442064665443422",
+      "ring_remainders_sha256": [
+        "f84770a3e1eca4741bc3a51b6a03b71c4008bfababe698c4e28fc622fa762a93",
+        "9e770e570911e844e5ee87f085af553e8a30113b5c91efa48b4a29ad315753d6",
+        "ce9eab7dcd628643191c399a0f3b2fdee71652d1d616854d2ee0f6b4b6505cbe"
+      ]
+    },
+    {
+      "n": 37,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "331357388053155633909442143013484023046948489008415913799062520806934574028880915719/18387360829218331951807763809506763099535126123901621592524826244735398950952678400",
+      "log_global_gap_lower": "995067231390857759487814243283735804945791258283531272669857419840644366453095843/74180631266792677093140383566615211829630001188732418398584520832579058225981598269440",
+      "ring_remainders_sha256": [
+        "9cb21e3d7eec5b2b67f1250e349edd6e7f553964056d91f7a23c5b72e70dc6e1",
+        "cfd9d37f7354447a00b30d4b6dc0c95bc9c4c5d8572b2d82d9be70f3c2909fcf",
+        "ba39dbee5f4d4b03c7cd09f8bd880e5dcf3deb6f56f494182c2544ace24e7bd6"
+      ]
+    },
+    {
+      "n": 38,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          20,
+          55
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "3484730746162750169060416586061777294170209342573833375908303324042323064363680330004026166746688/721332341550340113531153825867836319984446330240145747280291406307427598838702715139545973395881",
+      "log_global_gap_lower": "183406881376986851003179820319040910219484702240728072416226490739069634966509491052843482460352/70098224468185674558277901070587580678619421845256170821179205793293814367982865935870458231188611357",
+      "ring_remainders_sha256": [
+        "ded5271437099fc1da05af3905e0ba6db1e9cbafb08b979643d5f58c141534fc",
+        "b441fe6a4d3ee7f5177b66d01bb4a75ddb77db54b1eca36586ace98a2fce56aa",
+        "4847d7ba8d363d5d1c1a1972eb29e832c7e34bd0ac9ff9979b6c9b7125fed3eb"
+      ]
+    },
+    {
+      "n": 39,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          20,
+          57
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": true,
+      "scale_invariant_residual_lower": "121609110306267909870898101535560492692110337281531186433736115478803730278212172173139638690734688317349939479847/7764781737661796507701085690481990127912131134252103264431573015464666554905351594960809636996544010526018643200",
+      "log_global_gap_lower": "40536370102089303290299367178520164230703445760510395477912038492934576759404057391046546230244896105783313159949/5119685544382092541963187746762228744868479926975721531093164373027581498977178858082624951724760303708298814337990400",
+      "ring_remainders_sha256": [
+        "d2f6ee6fc45c7c24b7833deff2d2b754ce0ce82bfa681d2b94c9a6efe321c46f",
+        "5412687fc2b3d20f2c430f0d5acb6ff1b0cd76c0dfd4d051c56b79dca1363f40",
+        "87e8c649f8cea931a48547e9a71aca141536f35cf9d63e7c07dc8dbc64e76674"
+      ]
+    },
+    {
+      "n": 40,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          18,
+          61
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "2089942013176653062464790669368200596921309500810598077669768013610430294009628407703663472849724683326640323942621603920642959173277856549256966234916059108676233167280618595695375/33206733298831017451468201170031485760460901232272478023212084302510880324650130911173278317276019108029665480915015101348351581456215639526914385837808405269780145089724350669056",
+      "log_global_gap_lower": "417988402635330612492958133873640119384261900162119615533953602722086058801925681540732694569944936665328064788524320784128591834655571309851393246983211821735246633456123719139075/12061035714232031392739102511440501414776509642519813436889782891560960030469078402864107057587814141692422815504314043150790058819756513095646679669815393318985175469027012165244558336",
+      "ring_remainders_sha256": [
+        "78cd5ddd4b528e40e16ce327703e60befaff7559c39842aefeacb8a8302de6f3",
+        "7ff73698c683b4d7120c77efbd83175853d3d7812d4147e90b567f2882df9fae",
+        "58c5157e0f0f80777b009bcc4aea00ece963a95e037859d079f2f9298d527146",
+        "f73616b5aacd8b65e1ec337acf8356b48439f53c333429f670152cb7fd56fa31"
+      ]
+    },
+    {
+      "n": 41,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          18,
+          63
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "14348591326682414365211179704268219009963484879700854532468107118198617712671285512815754182626907744113/1924979619660431646648051579068664150404904780592992755500523560558381087823576116445646391874956410280",
+      "log_global_gap_lower": "3149690779027847055778063837522291977796862534568480263224706440580184375952233405252238723015662675537/1035831533339278269061316554696848179332879262437089401734831727936464863357866308259402323467914044371668000",
+      "ring_remainders_sha256": [
+        "8f6a3d5763518ee9301a7b1aa0b2fb1f70a16128a1c990c07a722ed9ff76c0d6",
+        "afd9008a998781fd67e45d0f96b468348bae5f1fc4d34ea97348781f79f4dd3a",
+        "c53a1d97552b54abfff5e8c09c1a4f53d6ffe6132166750558cb9e29c1423ee2"
+      ]
+    },
+    {
+      "n": 42,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          18,
+          65
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1494527412081386488212601553167999507325270326606663887619399228415712066375759506204577968113135995446310962435023060792632680948364653709416854138877752559/27323037142450354517908869158504387246061562559947376873834604362503737081849027339688017636901499380842389857948164026850244655066887807198673626697950560",
+      "log_global_gap_lower": "1494527412081386488212601553167999507325270326606663887619399228415712066375759506204577968113135995446310962435023060792632680948364653709416854138877752559/61642269592585899570927345098686132003979373782716159342666769466029393561511437947743970686543878203555581334175089203020351096151535741526365956393930905558880",
+      "ring_remainders_sha256": [
+        "f8711eba4939739ff6f663597fa7af35295cfd94fc81f27663b6d6f9a617d181",
+        "a85b8c3039a1aba0d72a90cf1f0c7238b4c1cbff90f34feb87cebcf7f96a8bb7",
+        "51ad6d629af3c3cc91714c25be3f44393d961ca142ff2edd8e3acad23a61b6f5",
+        "6cc7a9c3295ffb3ecf106c7e270291617754ec7571b94f8f21896e5b55e22918"
+      ]
+    },
+    {
+      "n": 43,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "42827897138801510251499262381250441865233818658525038567521450039823954888921764421956537058543349235529642122307934289094178063360372114873247/8555356822110882975357862216104706972235677355820812020050716999635036085195540849070550985257878345217360262831598563585985124364939726990400",
+      "log_global_gap_lower": "142285372554157841367107183990865255366225311157890493579805481859880248800404532963310754347320097128005455555840313252804578283589276129147/84392891478909119963255072187062197809790133330268430036453622723399874289730546782181605102245464623339114085991832097400019261777220446942302400",
+      "ring_remainders_sha256": [
+        "edfd468e62f767ba6eaff3cfe10dc51b3de17b8b3b2067c19c4b5f718e362db9",
+        "c6be17ccd44ea34eb6dd7417fa7c046698a97f21b51872fb44d5fdc15ff6acf0",
+        "16bdc14f83f75569c3580d6d3fe81a68054b0974886cdacdb2875651863ecc19"
+      ]
+    },
+    {
+      "n": 44,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "5145487424713370058619523427010598682402276695942711934677662849768067534068001265535008010110418853429125215223990154772192314322471660882647133554694227179507900724270629457329/94739021913503776619983829731426054266963923328833399930290057282556175793815449063042292699003335456955429824081943308226555526520431606144032291486317118948923542312568535000",
+      "log_global_gap_lower": "467771584064851823510865766091872607491116063267519266788878440888006139460727387775909819100947168493556837747635468615653846756588332807513375777699475198137081884024602677939/23550935902915493850342792810794980746984011701223362888503815955846408853457218885634779197191904346910867187845986320328221795631319235769705700811852681535692255336390240302010000",
+      "ring_remainders_sha256": [
+        "6c0f23638b20487ebf0fdd29935c94574418a4e9a1a90576ae14bd201f286005",
+        "220a67b445a098cffbbcb904bec74fa99d26ad791ab2a307dcf215e6f07625e5",
+        "8d11ede76760b47ceba11f4c45094900029fe563db72fdebb2eec359f8456d88",
+        "6b6fec50eb588f24c1d3742dd0d72a546abba844ddb2c752bcb78c376fbd060e"
+      ]
+    },
+    {
+      "n": 45,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          22,
+          67
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "15013625508686541954414971205566109114681933654741968321786517217977933615554562346753239245336784811720462424638455344351070695410801393310323263/2739494167622038965324914326217799476723680102200947354649148233726666873975289513265412798183852849979493642367439626314691402772488646524335465",
+      "log_global_gap_lower": "151652782916025676307221931369354637522039733886282508300873911292706400157116791381345850962997826381014771966045003478293643387987892861720437/100213149929973249864091627170354165574501522926661878962040155059781527981545023490335306497384606374205082954495598939211991834076833933424242953400",
+      "ring_remainders_sha256": [
+        "af83f9ceebc53f1dc3c5b19b5f2ef10e8cd6ac961a9b8e7e4934aef655a799e4",
+        "2839b768dd441b89e0da82c5424ee9bb2c3c0e7dddc796280ccf9668c49c78c0",
+        "769303355b4a7ce6a4a55b16aba9f7665b3641d7804951a45fcfd42166ca28cd"
+      ]
+    },
+    {
+      "n": 46,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          22,
+          69
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "709971567639619495858336667666122768007243520111609948231276929914490424406168761751795859764635223263372033990626420891491871075012023222183961435923586262820552997997515845979/11774252676341452589427245957240736608454080485832893751818586160527329218737005713795791324191430950193709020472014899593571341583823652854614602999471043152519205318480099840",
+      "log_global_gap_lower": "709971567639619495858336667666122768007243520111609948231276929914490424406168761751795859764635223263372033990626420891491871075012023222183961435923586262820552997997515845979/45231674725116415731228972388187082736621984242363498814642485129627774743469612724975067056230696352490397730319780637906173826544877349214966093517692972598638966171340189542848000",
+      "ring_remainders_sha256": [
+        "a44769512175480bd3ce6624ced3133feed6a0556a57ab87d868cc553e93073e",
+        "a5df6b1c1d5b246fe2b3a8695b71b5e171b46d1cdc83c01ee7acf78e6d784d86",
+        "7816f591dbebd29883747bafee1b564bd0154fa649df6560b92359e4e39d1963",
+        "ac8c2d9bc0ad680967a6f0a570a9b7a8f87032c984945ea25f58f8d56e713255"
+      ]
+    },
+    {
+      "n": 47,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          33
+        ],
+        [
+          22,
+          71
+        ]
+      ],
+      "signs": [
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "2471359365345325852592102884656331012441307305817274042625082959641223252733921517504519437185553096339148157171265424854856513453588787094196567/862065282891174582219381883578765745202824491750667917002028706790126248431218955126868493315603329017028684320215089153067978683133963189624300",
+      "log_global_gap_lower": "157746342468850586335666141573808362496253657818123875061175508062205739536207756436458687479928921042924350457740346267331266816186518325161483/254889741866566949948399379438614796459807526976483144357528834560468558298312322562482997794465588774389746553077981587914760485897789437788763699100",
+      "ring_remainders_sha256": [
+        "6b588e28bb5a0f27a1dd148ab6ecc1e44b6a8696bcff6f5695aa2ff4e4410cd9",
+        "638736572c051c9714afcbb8f39887d118055f2931f84a44b704c2012a585665",
+        "8cd4c988e9d259f7e0607a84a7bbed5b7a11bd5986eb67a612943b805186eda5"
+      ]
+    },
+    {
+      "n": 48,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          41
+        ],
+        [
+          20,
+          75
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "812360229227648049633417190690676957232719978911361555912987430745055236648591615907093113960585532357587874478823049049416400853939708866045508882934348466958403314627113397736328975861020029950730866143346832011/14047821044609191428801584440692390331859088259263831087151803238323390333337826704301238681684543193121279320819162243349118905748550922982343365765751971181940938805265627490121577336727715459652031716280371250",
+      "log_global_gap_lower": "5761420065444312408747639650288489058388084956818167063212676813794717990415543375227610737309117250763034570771794674109336176269075949404578077183931549411052505777497258139973964367808652694686034511654942071/380890967118704838848593360338528684117988276816001955646317857497637073334553205280811514881232153015561765001241256929433498349418474602105260096623685328748184033479053957222745845369525073712362875951494658970000",
+      "ring_remainders_sha256": [
+        "ab79bb00a1e09b5e4557dd328b54bb86946f33fda955a153643909abb4e5b858",
+        "f4e4b016a8f6605e811ef9b4ff5135282acb5d0054ba461f8c6af8ddcc235b0d",
+        "f95ceb8f1c1543182621f3bb1ea21d29ff9ad6e3969894358c1117d622e3b540",
+        "5cc9fc59b23354a783064b7cf1f4079d9c77a6bbb24eaf749e3a79fd24760fb9"
+      ]
+    },
+    {
+      "n": 49,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          14,
+          43
+        ],
+        [
+          20,
+          77
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "3613894738828809735279463455486864072897609323381661020198305214736454992620110039815877250874385829108295732404582697650304996772567779843225417728687234034788491353616178101677879144580665974971269237401410823087579362201021063/25253982381133029510553927390395897057779747548999582676822705895439600292204437679142835004054869140705005586445179614158743231581146958327370034815872227860822925495279812442666967058244652593077445662421668623569628452833792",
+      "log_global_gap_lower": "73752953853649178271009458275242123936685904558809408575475616627274591686124694690119943895395629165475423110297606074496020342297301629453579953646678245607928394971758736768936309073074815815740188518396139246685293106143287/1915389622854002051282147388920755254236623783366902242838495856150453086246471481271308275768594394969883817388439197582165362438389542693652976467980082589063475880132944494704204677951884530903674291395090531579302868406676471808",
+      "ring_remainders_sha256": [
+        "8a5ac542f0eca579fe85d324e26e7e507a166a5c3cff90628dc9d3ff192f6d35",
+        "4adeaafd9ed1a30e8683c988c92f600f6ef5fe72b6110c750c7e57b33fc908da",
+        "97e6f434ff63407d163ef7bb3d1f02872eaebd6e1145ed74d52313c85799204c",
+        "971467cd9158560d772e16eff118b2a4f02b9f6102e2498abbb34501e5f0d56c"
+      ]
+    },
+    {
+      "n": 50,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          20,
+          79
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "54345049661210124631588696047454006039222768089057850516709183763042546773017578191168464639040845090726165532294289544300588450741274952528933150185040151252405650131250461259334402280651459055896701818840457539379634099557048094743276021/1445552998477347969798543862632523184646549435019433151698744088982363511196009763969990584126923290271020360897850261661277944247116391063945444324018185332223879221931229487248873898373257322253432190436587956792201883823057812500000000",
+      "log_global_gap_lower": "1109082646147145400644667266274571551820872818144037765647126199245766260673828126350376829368180512055636031271312031516338539811046427602631288779286533699028686737372458393047640862870437939916259220792662398762849675501164246831495429/134506185194947791354923462446102853511853320481869267382164011763374653152524994566889071543851851247002855592543400829683666297175144520376174852295838625072736222276476605132425305417064663735701190729094678121450212844589326445312500000000",
+      "ring_remainders_sha256": [
+        "439a292741e0ba38d689dc8a093f6eee053edcb0875d4e93b152d038b1d38902",
+        "649dcfe0084db5a9b8e3e8245c6fe00a7d46ea877656826738f3da50c1d54020",
+        "b7cf156b48b342415a539e8371d9275d24ac28875b9d8a43862791a2bd038cd5",
+        "3fd1725134d551c2a721009e7525b278dd4201b72103bd48b97d15dcf8d4445f"
+      ]
+    },
+    {
+      "n": 51,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          20,
+          81
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1227235122455103350433492921280457013801383137072489731938006981452887867933703433591564940548248936124109681858271277829683295893657929148501380879793994925092518029314694908707063960921947/10828422553175389292130536954975461840958425872747785683253300549129355135301029109697626225884542362219691219781307903743266598532722411138643278161150696264478416396393994842038185473280",
+      "log_global_gap_lower": "175319303207871907204784703040065287685911876724641390276858140207555409704814776227366420078321276589158525979753039689954756556236847021214482982827713560727502575616384986958151994417421/7297977806050851244270757338860037139641545493326461378013810704593965833763158083917360659328275593153394192939909181346330673080106259823055716965879929007889195906595678733714265672499155200",
+      "ring_remainders_sha256": [
+        "268912506562cd888dac0552953e693db9306b17c418512b874452967b87eda7",
+        "7e4f2df1370c071a1a9b5408ec20ff829b433624b727997d6ba5338307976525",
+        "53fa50ebbb631f8a8cc18f1c790f701831763d3a9d4a51700c91ddf6e37f39e5",
+        "09e8c111623f1bbd826a3eb5e86c39db5aa6ad28b55453e53467cf5325f439db"
+      ]
+    },
+    {
+      "n": 52,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "2596635300565183428925583340968140917196524268696519744823097693157968435789489290351172640811763024934900179353345072801497526836773291965422971811829468581006515336322196905736494351268569865635500384081270350497765152931676418806201/64618145519551589252926700096963536097209267421071658333357906013972339303562112139456271425393841377025955040459669433265449200050834485972051785649108982130673969776176190731514630274483973635223773524046013236486296315711866585625",
+      "log_global_gap_lower": "1797670592698973143102326928362559096520670647559129054108298402955516609392723354858504135946605171108777047244623511939498287810073817514523595869728093633004510617453828627048342243185932983901500265902417934959991259721929828404293/239668917125835243044402640415304745263002830228979517663952251265510119718042885798950442237690508980193857331581715460212995301152545277918626646478497378419276856146403412010490202070161973159623760079931743247505127989296365538971743750",
+      "ring_remainders_sha256": [
+        "990e9a7ac4ab0bb5603ebb100bb2f1fb393d4f67b6093a5d68d5ae91be5100f8",
+        "ab84fd35fa391c1580444a067e71f5610a12f01f3da19d53925db4dda74d55c0",
+        "d9b23a9cede69d521f3e9c5fb3347b11ebd9eb20c239006648bb13e6bb8c8144",
+        "da070520285c1b5d68ab2f5f5757eb2f084ee039a131cc9461d86bf5883a7bf7"
+      ]
+    },
+    {
+      "n": 53,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          22,
+          83
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "4260547361795620614665795950166928337628860067109946583092464882938341749851434361052159987254992485772418579306874587688009539594682058969473058086560596779493379219721439152915852280788542037097648391083642886703265822682039654843891058446302958497/34637163627838596853048182187675528648952705489580158552820096216780352313181268531601738421739073957568791192557950111050108656394812468440622353067773292264960745094762862815697648837500801299126313694904884853704114590462912528980850600826798080",
+      "log_global_gap_lower": "6183668159355037176583158127963611520506328109012984881121139162464937227650848129248417978599408542485368039632619140330928214215793989796042174291089400260512887111351871049224749318996432564728081844823864857334202935677851458409130708920613873/283750982961049239742758954089359634357632510619362546108900090385813251484743668077727860595553649433797038055814732895275362412815835771583018376317036667901282757382089638486225567965851142632929424565884422011650487844550778272353680493115378237440",
+      "ring_remainders_sha256": [
+        "ca596bd1fb88378c0c33f4dafd75429683a4d7d7c207b49dd871ff304d5139c6",
+        "05c2d1402aa50eca0237a271f6417e030732dfa174269a51581a6e48b3f1eb2b",
+        "67ab6903ed807555e3efe5e1f5f6c978d6e68cb4eedc57a3945d79b2775c8535",
+        "78db9039da08f64015aa1f93fba60cced374783b0be785512362f1c7cf6a03a8"
+      ]
+    },
+    {
+      "n": 54,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          24,
+          83
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1217914087026917680163992902090329303000541750532911980003321506467427010813142112199854311722614965842734303558149639073934491487671586840101455675834118351797610642658570274903431679449691686119799389777252158606303148600748960678144422470838157334029301887864990082164949219/33173959064008031804633888028868792441460318657351298474098207422548325679115013358526227437535336007988351696128520806583609022278372514064633272344014490458804446178052904215712163089715263901873236118362174760217248348944802172430886731028975390082331662702689784448265625",
+      "log_global_gap_lower": "7659837025326526290339578000568108823902778305238440125807053499795138432787057309433045985676823684545498764516664396691411896148877904654726136326000744350928368821752014307568752700941457145407543331932403513247189613841188431938015235665648788264335231999150881019905341/1510767276008914111828854874508730816626558477921746965423731982734508830276509566730917977653896126215458250291775441107851467734417367874459857920090488243842134053407676454766249857301713263412100160949194846014147630613909947830537077464361404631211735568814833379634501390625",
+      "ring_remainders_sha256": [
+        "a236699a7da2edb773b3cfe1aebaed7abd2a23a75b30dcbb4100379211278b1d",
+        "00de38c208deed02599951e5e5f67134d492b5fdec294e0cc63dee9986fbfc3a",
+        "69d30832dac6157a951ac42632d5edb573417ff94f2e6dddbb7884899bc4e1ab",
+        "cffe2e80b4ece35fc1d685f9302c60f8f0ab2df777095ac89230626b2893db6b"
+      ]
+    },
+    {
+      "n": 55,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          49
+        ],
+        [
+          22,
+          87
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "35781712104876723991737515930398350999755243668853277276850829502295590721789342537597334482208934431899435891911265450267565279042599483306683349219308887973970987144384000254586762122835845723084992787011328318949175362084777332873575397236159/289292651256981121111830815835035178306740261720375227939814867055381514063629696890374193356934763249243321518282303823950333266605805089437538645452527865991681559847895788682105160093368747692381755079777828798366676219649159343042887296000",
+      "log_global_gap_lower": "35781712104876723991737515930398350999755243668853277276850829502295590721789342537597334482208934431899435891911265450267565279042599483306683349219308887973970987144384000254586762122835845723084992787011328318949175362084777332873575397236159/1807834069407343336040856165698731641521291686068626125810111820712173077725775166069817067439847569694481055490075122576175230496112908065088182535832357297469087138735215426829707853937627323544857524562240418145816282042877777502519247899586560000",
+      "ring_remainders_sha256": [
+        "d2de6316c397b37674e18e23314ae43d5f1521c426c594e0941ca772c7a470a8",
+        "d6bc7a3a697f88ca695d580695750ce3d95f2c44ada874506f5d3aad98eef14a",
+        "5a56dfe8d0c6f20dab6cf85ecc92d633711f48a559269ae924a2c9fe397183af",
+        "664065b32be2f1671e09a01904db8525ac8494274db62ebd180c866bb22a9f61"
+      ]
+    },
+    {
+      "n": 56,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          18,
+          45
+        ],
+        [
+          24,
+          87
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "15371392672864514380688934501243063016083175646738990087514669054608887760129921989288807346944855449063998186254102156910703444960015163336903842839987072596112298476407334462662307794645483938053814460792682771184977768307910044508086063/427132149832117886057705231604741829568497347732664115273334174108699832114894561915391139516631440523338970365627096984252236495269496453574099519030978023842803151471159297344693970579589807120783196448307735891939949223037602314299480",
+      "log_global_gap_lower": "2195913238980644911526990643034723288011882235248427155359238436372698251447131712755543906706407921294856883750586022415814777851430737619557691834283867513730328353772476351808901113520783419721973494398954681597853966901130006358298009/530530592134877655443010283250691312703120911682396513642241817640237452673939777885621365006259513119466774955856642113812080897098355077069503234199921059942573567166691655408708108201614589269353909511728279365717204371153652932135840920480",
+      "ring_remainders_sha256": [
+        "1c64ea340e1467f65da3581325e626053e11f4a1c71694468db25198da20ec11",
+        "8de8a4944206f6c52a93b701bc24f3fb5f9bc75ce800913b3c2a249c057a5492",
+        "efe588e04affb356cafe757e31ccc001a26c780fb5cf590810583fe28207a7e5",
+        "9ed447f586ac68f528334a6709e89265e8babe8b85521eda3050af8668af65fb"
+      ]
+    },
+    {
+      "n": 57,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          16,
+          53
+        ],
+        [
+          22,
+          91
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "252982301719783688702911009717972773096973590206363869671591604191721316399096998610641824317440478861829825965617621802825324994936442314485058711425631289392094895270350083719323370166374760979466009549861062849915719677534329676033527448253105979362902007360545543/3125887312766122556875179903010005147871336436366406164068876589027964390209262334944420389902861586154307159410644103183622492899829903695893189277476317883346738412996686413259269856970202037120603777364906568626340711659808154839536748603815589378001209415878400",
+      "log_global_gap_lower": "13314857985251773089626895248314356478788083695071782614294294957459016652584052558454832858812656782201569787664085358043438157628233806025529405864506909968004994487913162301017019482440776893656105765782161202627143140922859456633343549908058209440152737229502397/1228733287599538263669068616822077973940914455269673488846932778999942887515203074777450997901002136984756967314900592437492007721443554027688930356485794561592301309465513005250650103558212206165559779442080663311610631015000835321115817332903587472096424520870105742336",
+      "ring_remainders_sha256": [
+        "d5adc98a29459f8f56a9c5c954981c6055700ff9d27494e968867ed552db817c",
+        "fed739b7b61ef5350b4d2b349376ed24b74cdb27d30c2fd1b485426292f37e15",
+        "53e64149c1d43df2450f5b5bf5c57c232e9331947938fceaa0f9f65d350bc691",
+        "77091da84f18f36b9b1fb87c67064697389c3c0f5470042af355e1e3784c44c3"
+      ]
+    },
+    {
+      "n": 58,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          22,
+          93
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "218914066546444194936375190877656898561162321438440557213024808030513439120537740086206003043450143924525359415863219175855305585761493859387791674576194443749109960631865388749767840429502872203782097201830813465492368757530874139979517977574954624786717004084723967067539937/7803995383915783420521895238939041998707081685630738980485360092146624369153433104181890695036298331394200012321476164338848278215057236704548866955360706551723091864978278906321387883287817680377441191326697215178844772491972599954098507685707908284586667871572780421428896",
+      "log_global_gap_lower": "364856777577406991560625318129428164268603869064067595355041346717522398534229566810343338405750239874208932359772031959758842642935823098979652790960324072915183267719775647916279734049171453672970162003051355775820614595884790233299196629291591041311195006807873278445899895/130208344105414964604009753861402535050329876427944008294510531111610854819806644413080239507153176524894221585781747472521910256659211649742394776391677932856092546564637402222837188518104962355909622489724608823429659804262011686864741358088237565091828458290321545531649908276576",
+      "ring_remainders_sha256": [
+        "103a8a55c4c7d18d08e51ca7bd904684cedcca6f0268486d54f2f4f5cd2a8709",
+        "620b01dc56fb6f0817e170ce6243f1363bc35e7e806673196a6bdf3f561f223b",
+        "085dfec01300f58a0f42dd065ad0207d35fc649fc6f8be18fd5e9587961b5e9c",
+        "a30d5b46eb9186c303bfc3acde5cc508288bf85627d99af95b0d138dd7fdf133"
+      ]
+    },
+    {
+      "n": 59,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          22,
+          95
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "698781616915129737030497382204090482218456475107319897082764156866006682752063829950348167108988725225335148888415597822543520917511464952191550534972356468419120613311776167071811959097725193443393574560007432468330390517/11107500622204776810685957081293284072870820064899605245093014781694105751085832075236957474964928863645759836919381062440657004042452250635279268033138062659437696436028110672888797369562565851794779988866356371931136000",
+      "log_global_gap_lower": "408405386858638069567795080189415828298338091821928636518272447028642129019324272326328560554639816028834102214152891772380783703980984776266248120965725580607317716722253750480310905375643011948213661344247476603349147/56954416281303678855316561313418305474449767116776855869093666484986271409058582155091378168358352334725865566702839449186624102764294798457434873702426615981163298147325521082280128708628301295631939515275170156118750003200",
+      "ring_remainders_sha256": [
+        "5d1eef19554dc4bb7b827295addef62fee0845cc85b8cb0493a587c9b84fe483",
+        "7e8eacd7ead01d5071b8698b81e4ce9b3aabf6619728fc38c9de83448364d8ab",
+        "53a40b6e22b5cb991bdfa76f64af0c5666e4413a6ff817716c919d52ff2ea17a",
+        "7f190531851a3fed0f1374a69be262ebbba51e5cd2ccf520d4515dd4232e67f5"
+      ]
+    },
+    {
+      "n": 60,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "11317362443054933182649934114167250645718678614487382467253197650886359937102556397096855261700285500323071872004485089977783708475441157399317823135669906036078022339826113240513620838515945787218493854584321376629570641488852351419876992695810146663463441910277141587239783/535064900332218728655669983612617063080250147129540184121732497495272272951545381664804802254587326487964772250861622042594525374132879279727902967097753608815511543977332847229771814586686811479108440453145660566093489343671606490303418622820374166966369983516124185234350",
+      "log_global_gap_lower": "63939900808219961483897932848402546021009483697668827498605636445685649362161335576818391309041161018774417355957542881230416432064639307340778661783445796814000126213706854466178648805174834956036688443979216817116218313496340968473881314665594048946121140736029048515479/34677556190531095804173971637933711858231012035465499332929483162668596009989656185695999234119804629684996889578341724580551189497551906119165391297605411387333303165170941828961511303363172251961018025768370261288519044363356816636564560944988449761090438631680008445038223500",
+      "ring_remainders_sha256": [
+        "045e5a87b831192e378a5b7635e9410e2ed0350e228880e4afcce6d680930930",
+        "0c49784b70e5b088e56b43813dba7800d0cfca9bcf5783da094e6d2cd9051690",
+        "502e7998d8adfe0df47d32de564fe3ddaeda978affde77a024c7055b4e78daa7",
+        "96650334c7a6ad722595532e652855a2600fade76fe31d80f1c1bd4676881c62"
+      ]
+    },
+    {
+      "n": 61,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "13265863116730949939932160571993336908331496175023873178661284630744423811335950322130297377108642353133389949533117639349763592877315111656334432401052901245427755320806457005779203268744176973660580845898466435567425977853660079835311953007875667038142126330505874068056881371887233/243931804837629326461289490114533895031221036742276635594523341752496413395340741023325572601649233628925290861544064155544747721440394992275924737445747074815498890018598641980991566361759527947560885984051436091163339692415742550383342192625333585204207836234001589302927147381760",
+      "log_global_gap_lower": "4421954372243649979977386857331112302777165391674624392887094876914807937111983440710099125702880784377796649844372546449921197625771703885444810800350967081809251773602152335259734422914725657886860281966155478522475325951220026611770651002625222346047375443501958022685627123962411/822105029237486177551969506673395700319654387953548025390887131335640974449268940357490877922593401554070465879627107297373763026901601381854212116929525288970517094731659955809772562412968268722502209507730784594448787468994573913812727732376458290648420653190113846411304660295957964800",
+      "ring_remainders_sha256": [
+        "8a58d0391490880cadfbeb6d9730db3ef1b67360da85a00499fbb6437bbb5543",
+        "35060f5281a4e9ea9b324baf2284188725ba61e25fdb75bccd8d97cc9d9c6b1a",
+        "bd5040f00c564cf9cbdbdcb39e3fe9bac25bb20c3c2489288ed770f35835664e",
+        "ad882fdfcae45d0f2c7ee1b6cce2435e0cc16fb06ea8098087a025ebb7db9ee3"
+      ]
+    },
+    {
+      "n": 62,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          26,
+          97
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1145380173382026150492157774087213048513398444764522263596610012173430749461892968385693813938665164386580263321194456579498069754306391978944122046622837806580126485749141428891532290014742803739911785880253386085333856438423052704372048459653891251462663869620496539139475748144503031793784107299945041/47156925914150199212204880779647467180035643749124973127577316911576971703719641544711994520273691099560523898571913625583122622142721153421798508545983577621339305330377661429380700395375352796721963035703257865685037346525773198644825183234117231295295364703292287726763081550807607909448600608560000",
+      "log_global_gap_lower": "36947747528452456467488960454426227371399949831113621406342258457207443531028805431796574643182747238276782687780466341274131282396980386417552324084607671180004080185456175125533299677894929152900380189685593099526898594787840409818453176117867459724602060310338598036757282198209775219154326041933711/19906456881377234723886313174250300545136242374234372981285093457981192534628920468480672613231077825977902986456738756977379835354875594480481332369234848785166727905584049050039619695440667501856395044580094790008929322171086997044977073214021021904591881952003120661131498493821827303552938561812771632000",
+      "ring_remainders_sha256": [
+        "41e5589129ec66f039e7790f8ec5448c3d3742f7cb90459f6a555a33790153b6",
+        "f455645d8d5b4104e25b22627cd4418b2c472e4b4024d03f85ec0b8efd1f2208",
+        "24cfb289b24661ba0e35628dc57ff9757b4b806aaf1d37ba5eee5d52cd58c3c2",
+        "cb5d507dd6db8bc2941505413f23cd6b4adafad2646a0245d75baaf50b01bc99"
+      ]
+    },
+    {
+      "n": 63,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          26,
+          99
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "21909125377669968950836781819070527052612386310948092746810908896491788741384673755825170585329882519998977349075953863114235687570204318701681444116230762612077963228469676200252855172499148061570906898724287005174821894146317673358981893893/356867756966655925238413870891553196649895751519517755544461071790159252042609184605248654421849472482715928547776688773791702654179303463852024337707302388603766440621572106123466099961257811033406402165516310333576461856252892589541785600",
+      "log_global_gap_lower": "2434347264185552105648531313230058561401376256772010305201212099610198749042741528425018953925542502222108594341772651457137298618911590966853493790692306956897551469829964022250317241388794229063434099858254111686091321571813074817664654877/524763655011992144436171570560693948671587342005770291738877803563522557314051930058465993639201013664816093920675140065460006630711635072948180638799673040917806441364840063593287853706485283624666778925419646598314483117093151196045863600128000",
+      "ring_remainders_sha256": [
+        "3625e59732f382d7dea1474113a4355055738feeaf2dcb3ea486efaba690cf4f",
+        "6fb96be056a127c4dea5f23c4c7cdfee19d4dcf525ab46439eb4203740c55612",
+        "970c1fecab0dc8bb99bc593590dd48f75bbc70131838667c29b4be5c65acf21f",
+        "a57046d81c65a8c7bc367d6736a4f36974353fe0dfe02306cd860df69375996c"
+      ]
+    },
+    {
+      "n": 64,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          18,
+          61
+        ],
+        [
+          24,
+          103
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "2576013593260330086818279449356809559313129240815597540959270710145552103180110618210645583639171146563254403801027766865765333301305827069936303479953816792005084937637705265796924412113523237369850373076113488628214403916686609567108108735241146204563640111205853420131831366713311323460902699456675102873881817580058805647500269272406113527876009460715785031344640819611654878265283791540481254401022006584619587/15316644989205445236398746721999342671184985512961282635083640264558284653655293362492739722498861528732270158577967688201685319696144452388126062730125624677473038520701404862975624825190355482455348140516522086495670599332696037130104129804084003103202035440553728240923050864987997460573183394662359762252877573105426721758436803536796224541729038981888324495022722569959898455406934919321966225510285055130400",
+      "log_global_gap_lower": "2576013593260330086818279449356809559313129240815597540959270710145552103180110618210645583639171146563254403801027766865765333301305827069936303479953816792005084937637705265796924412113523237369850373076113488628214403916686609567108108735241146204563640111205853420131831366713311323460902699456675102873881817580058805647500269272406113527876009460715785031344640819611654878265283791540481254401022006584619587/183998510934601620629365541926906552978310462432985050622705815885158163503034302207920382450065079933964477269269914262368057198422575611645450004734857577327309065084317509896343815756379317937267038218721448179847268098301074356896921978079716455384877906828754732146880996503226766491741086470126029981650996584475661195227101676130507852195819459034727395949210260266092137412547423647645690099089242862672979532800",
+      "ring_remainders_sha256": [
+        "638291a8c069e451e9d186a09adb4017a28019c860d6bece593796e683d92a04",
+        "11ba2a5a8c9f83fe09927f78d01f320d11df8ba3e49bad6d65995d33c6164ea4",
+        "581b499d4e55c51b9cd416f7a3861a833c074e503eff6b431f445e08b7e01ac8",
+        "cd2583bdcae84c6a0d6983e15b7ee12bd179a4afc91ca0ae45fa404e9aa224f3",
+        "0b2a3c7290ca7c35198daed341e0e614389f165ed2bb76d1690d3d2c12f35d21"
+      ]
+    },
+    {
+      "n": 65,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          20,
+          57
+        ],
+        [
+          26,
+          103
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "18736062444195518279688692758366388162353541278905852879443820059236003260379688813178191422317536653093657969630900432707772116381221882262659462552597894717130077754977030897270924137711308236866905962647444533212372910535384668295338645040615875541731374844872634216802983225538583230669661311036281520985102418097569412827/396995377237257612071105433444281235329040859235479097852361583105315050843902361140464635811511674560241159083610543807749247980671613842485479051086128935088059498207274758614841167402355533575544452750749229266288013543181796304310150027800549490508860124793249037624887530322874953246856713176830696868578393413570625536",
+      "log_global_gap_lower": "56208187332586554839066078275099164487060623836717558638331460177708009781139066439534574266952609959280973908892701298123316349143665646787978387657793684151390233264931092691812772413133924710600717887942333599637118731606154004886015935121847626625194124534617902650408949676615749692008983933108844562955307254292708238481/18364558173054065197398663430053868610022195693705788926026143959065464886002602528114586075704119601456620673394626250753888730329200140595442319394251941031680564597824237492952831235894592956749956927772450079359774600454412748736715729253600996074041105690773828519507998332280925735147085624827003234501443725587840981810544640",
+      "ring_remainders_sha256": [
+        "cd28fc564857a3261d7e6eef40a74a0209b2bf14d71a2af1e915a3ffd8444e78",
+        "bb55a5b1b688e2f87346c799d71723371494ef00f81f105c29e6cdc7d541d96e",
+        "a5c560345ec5152c9b1004fd09a2fadddc6aaf46efea7e999718cee9b05a8923",
+        "27ace62a82affaa4c251545dd98964697bcbd369bacba18545839259de8db9be"
+      ]
+    },
+    {
+      "n": 66,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          18,
+          65
+        ],
+        [
+          24,
+          107
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "3269043855151946594675821436911169568503373533924477903758463183047358986197719646808473301494940264559308272520343412817575530615629764896948521003782122227508656115574483266730710768347945172392772296579720512199361160118480899579179812063015816250202460715486339058092680240116795578196487488289866913180438277706251054287936197885715742011369689970718994201374151542474677723181072784430390336694923/18279093168970825446293448438288753000840848162547062209809767345441636233724251114277231515076330180806885686058452531440825423881482955553537767666622160168177837801157564361279002307772524001452742123593853024685395187619493587297064937083337731192689411947018718516437093894874239433399516010416334755043926265314749731963384513632489202920577456927345707914600951754685011325996704778529073604480",
+      "log_global_gap_lower": "3269043855151946594675821436911169568503373533924477903758463183047358986197719646808473301494940264559308272520343412817575530615629764896948521003782122227508656115574483266730710768347945172392772296579720512199361160118480899579179812063015816250202460715486339058092680240116795578196487488289866913180438277706251054287936197885715742011369689970718994201374151542474677723181072784430390336694923/253640788208105018746895121996936928083432613307743847958631380734184871587338877082966435889356732970527249814175517618535550785906576898675667831830887427604436518218051368864929242417663081906778256970698922539799667050384031114802009552293079774718414243623891473227673697070744420749048851158117113142663296077138793854472583328086988342171947395211133679751542379552767990584586905490393317981132502400",
+      "ring_remainders_sha256": [
+        "3732d624f09f5b761bc5dfc34904fbdbcffcf9d358ecdacccbbe38028d0a4e81",
+        "b006315bc4626b677becc8756c4e1e92b41570e983c9bf41e0c4de6e735a1751",
+        "41d7352b6948cb0cd6ceee835a0c6230be599fb82d9c625152c41961c03b2c93",
+        "7c088c030d041589c23d290baecc05cb3584d82e7a03031e174ef1532aaedbb0",
+        "34f91a81fcc322acabae8aac96e415dd176fffc47974fd9b118b3c77aeaf5124"
+      ]
+    },
+    {
+      "n": 67,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          24,
+          109
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1975261722962395677972851504463565809170451351917381690544666748437463063685241792735290668376732525710163379852929726737332394954576439573644872105350486655482856265653327759824864195626797020310041704445451655835949148238511308177088618505753829276753157864550192006933715675570228946991115137254525513566053025654989929067185130434679192102790366058979/59363135235321826809914524836098151122540469613375881802995470042714358704233291508056677509074572748893324811827184460223222826228775587585199859833486454780330531223728052160732326451792321860283530966008726148725947508570801013793666272550305419261399617621049605735235199146730549937966994569672644643056635966252168999378648528145033456370966236800",
+      "log_global_gap_lower": "2680138023015462249623950480954634747856786094867546391512437921896150696994900668568915425205878596621659945526363265586611119341352021131132797971981664390071718135214827353900765530022791072333842204132227484173608070879933932397677908420290134703871313249050464052827293996703160036622951339558379258569949831282211572682747802489388320356567660867/1421410697786290928412196687517146163195149851245876572518191199859433509600396676299411771836451261423751400402660713777071588425497212261002553843806277502078494349798019056953961735337199285396582293293768275147143662461055449741280143118702029727268039577524285442926383353435698531231327706974431694214895777121264018577455486574080729423831872562684800",
+      "ring_remainders_sha256": [
+        "2f972beeea72326b2c08fcad657d185fcd410c518f3bd74ef692af7446db3370",
+        "72e47615ce4d583cc76f83e0aeb092ed28a875161b8082ae959c49c748f53624",
+        "3bf4b228cc643d416b87a1920cc8a87b8e74a6d2018775989d1770203abdeb9c",
+        "87a975f373aebf343f93b9e7be1976c987a50ceb674e17c1f60f50ca5c815cb6"
+      ]
+    },
+    {
+      "n": 68,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          24,
+          111
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "6786999363287141496910722675549866679616854842117259564003706007495982699797561321584339095838504162526692787162724573248097396413867492463369490820373163241347782434131652433611009066661093719577588379112200759647190453584738030222264680454251302767148977360733757503342321630069827160791441480803146515819089753884421455408267470129962790511909294252667477982602941943406774598008416526995655352081881361/45062245447340802315409289399102930283113279792057084740608996274558919877457922371991260940746027116283138876448490904657023554234573621186354084077051966704530586067160427999954491496930677787526461359588699897361414664690521359033658429765407844024142225220064466316213132123224576781382191902303908953257566067114166311045773863682982171078071933397428560715176136836011531920151322468815271274240000",
+      "log_global_gap_lower": "6786999363287141496910722675549866679616854842117259564003706007495982699797561321584339095838504162526692787162724573248097396413867492463369490820373163241347782434131652433611009066661093719577588379112200759647190453584738030222264680454251302767148977360733757503342321630069827160791441480803146515819089753884421455408267470129962790511909294252667477982602941943406774598008416526995655352081881361/708553249820042200029613186578187785214178671630170969496997503123618959964923321510661204098455759361127889150333144268936670209910819001552446882829307724122100982588530376299068429849775351988376000189886847364723406095004665605839443043302841559678641404008816820491244711503464211912086256844414583304129671416242963146593800648139842334206731555965292202401022324120751334505565136038310130053054302720000",
+      "ring_remainders_sha256": [
+        "498ce4265c08e771580b4ee398994d2db5ee0ac51aa9ee6064cf2340be1319ca",
+        "0513495116190c145ab00d0350f1ebb79761fb320fe285c0f11c6b2e61408869",
+        "74eddfddacd2baa93d55d1dcdd111bb552f308d1ee79392a17d8e6cd777a32a9",
+        "ee83339a870b88acb1194be8d877437e579d7317c73c460e3188ebd785a17a75",
+        "331c7686d27f2c5c225a82184ed5ccbf1c63e4adbd3ceb5f6d7ce510d5d4f3b8"
+      ]
+    },
+    {
+      "n": 69,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          26,
+          111
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "233004472648418214409216789641944138080762549195159482111515182532377458193099850143839291509582338129633068963778841482514703556114945314610365682211923270766327977288825694260733702261882888422086830549193374940079279856901234060255927027745723648083763133731857243471533947373818694887972521480741950907937907933248634818567536843003645820325918962443316132664873/7982443524904018123776450919736038683947773649645446121159655811044791769532812014447447220412545368282656429779169849528501371004866406625243759077052295491403167595189038623877564311032411015368112759170909883377951885712936967546704537247849410979583686464495769962309988112393866051233799320241073794740708273760569973504744029241584539599778542953430698240000",
+      "log_global_gap_lower": "595919367387258860381628618010087309669469435281737805911803535888433396913298849472734760894072476034867184050585272333797195795690397224067431412306709132394700709178582338262746041590493320772600589639880754322453401168545355652828457871472438997656683206475338218597273522695188477974354274886808058588076490877873746339047408805635922814132785070187509290703/405428306629875080506605942213393404757707423665492208493698918642964973974571522213785844324753179255076120068484036657552584633337164792496130523523486088008366882159651271706741491357336155470546447038290512976766176275360068581697123446818271583653055435531740156385724296228484456742164667475044138034880573224299348954305949245180078766272752196604745163609600000",
+      "ring_remainders_sha256": [
+        "f029890a2885763ce0ece21a23a3c863f07bed1669efd9d24e772ba995a8fb88",
+        "ba799f8fa5c9a0d17a25078e6bec9e965ad6f736b6d4c64f5522c7491bd2308c",
+        "f200069ba43d3bd89f562d719a998f64cfdbc93713cc1ef09eac16c1ec3d55be",
+        "6ca2a5e0d5a2ad66fe1186b9407912e4a6a958677df3a7ae363a491605025877"
+      ]
+    },
+    {
+      "n": 70,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          26,
+          113
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "51035057219399655983011700060396191736638363921527140697729705240748018553060553216346979686969704447754020097394571807328659670207557272133641436202930385905600023942409209666924518006480008710967970104287194371953325273040889184192338326106045050461953951301011497617698306310634915367557943963403596463122719834985472490109447394610613523363289668115491133431292157683742845208422005173717805344550318043739052772506210633316114781058670795067278239971184841108789/352686609122738471954464997840574933579808006816992483856056715738146876952915058336262443598671361633381225876776355334672137688469792937302750806273891299810490413439806143427812714932498392255531362258854887389754520923235467292968171366306087814399054069065333889441427388671525454250943433319567404624819574022282958478111082978501585738842432018777400779923080160116523296963654761359912609816732482503481690255786918676462966815978072188902593564648899104000",
+      "log_global_gap_lower": "316987933039749416043550932052150259233778657897684103712606864849366574863730144200912917310370835079217516132885539175954407889487933367289698361508884384506832446847262171844251664636521793235825901268864561316480281199011734063306449230472329505974869262739201848557132337333136120295390956294432276168464098353947034100058679469631139896666395454133485300815479240271694690735540404805700654313977130706453743928610003933640464478625284441411666086777545596949/38774287778942999744180086626973816920123919745564840181222517793580244168381146797767822194715009437938172375276448085946214403280614949289688914183608628551762703113215331699129962664476454550238548158914997723415587748326851691120935590062273969959320854119841687156099942723957094386044683239809585692902968211466863171243161199142531039317332807464737269753420440971316740178959212504890792342585680468803904575019829815635764133039156694927555361587419292958560000",
+      "ring_remainders_sha256": [
+        "04ad922f215b81bd4c89949cd4ad1ce0a6a2cd1c2fc989bb5c765c4ea9089b3a",
+        "3ded903ba174a2b658a019592204648571e29854b75cb47b78f92d395269ead9",
+        "9d649761bc2f2ec610a12800101ac1bbbaaed529c9ad3fdcfa02193c476c04d4",
+        "3d35cff7855bd5d80ef32dc2f9e1c9c55fc5eb6174994492cb04b58a8f20d829",
+        "182285a2714f804bdc6b1811775ac6daec3880dad26f790e1c2b351d30689fa6"
+      ]
+    },
+    {
+      "n": 71,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          28,
+          113
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "3280613481283910440130357260528442198302463096814819375103782672742249812472983580420451262923480733306216792302202288853873296179285772362867138911686005964427567000403698148940400947419567222286209197615498423276114063153152491428065379642770239125953925441786955443741992520236342511339309780071432424307268039514543707327404792678914770423718009986243860126192482112213400822012241/118018429402289932911148167575782738153276744377940638337082550949751243372533388089887487814243961518328924541841445943612246261913063020417730607281632308235210086899327604344388751416777363369472010785666286017956722775027753748585819391360005200616961209113051755867435907361809009482959955121353285051687183721840933184482758024082182774119397335813045320260606294430979629600000",
+      "log_global_gap_lower": "19802495862880747123523283262747136005849877847976776912095267642307342932432496461290450279216181488769920275466009791874486697259270255711471663450820961555900806843483087418151313565912880617421785901099588068065074827886232342624137100459377700961492507696903151571883254649313938700237282374676654472679686355218573686080914241522624368754837082411934769373395264258833405364259/15866594346226195730462944895834190955223447642077635985767939953936140077742342917117957007559981926460004496946067061735803074528695380903327065727288116906322036099557102007400197721723910026997432916709618269397465071079356260216125202006758032512945293221840533145077862445567206249904941299773271231157244458203831458877169460020982122457235310155598834598036344567124953036140000000",
+      "ring_remainders_sha256": [
+        "2235b1af8764f466995b858d15f3cc13c55cfeb71ff873e16df3979bcfc43d9a",
+        "daacc66fe734b2fda0e08ca122c153fc9bc7d2f4d56623239d31b6076ad87cc4",
+        "d6be5212a9a86ae1f845b50c1e9637191688149de7d2a5c1c5e629aa62acd8e7",
+        "cab4abce8c6d4f6529b65d70bf09f56fd6f405ef10957603a0bd5a6020af1d85"
+      ]
+    },
+    {
+      "n": 72,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          28,
+          115
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "518016463493236566668777183347602152399757697224769503172990555103196403238802892446887559447524835869190844761274004340342859870985753806879696896646021008317503555624283997971068806882496984720623736783017166691541329858348616173072578019086989632498068751131720787639927378018735470709072723034275954856760435730924761691677444469530302185164209148819098547426517235823970660190261236991252680002750643055488395006401897873889880766313156050038662625607382892233481/3036852059218479042752360838059139874882326925855137258397634479679503350329863953771799214427943874365022174628419837073774846477666048554868803035267868018797989273471675396867282909760210055823357257588871222780779965141983189423104483919469582345599176708668438687809837521665622818127674631810296228641599005498580309297850020841115117919507453993507039758451399988862351352668098543217755320830787071961210153394455120276011929713614853164503254803600421270000",
+      "log_global_gap_lower": "7296006528073754460123622300670452850700812636968584551732261339481639482236660456998416330246828674213955560017943723103420561563179631082812632347127056455176106417243436591141814181443619503107376574408692488613258167018994593986937718578689994823916461283545363206196160253785006629705249620201069786714935714520067066079964006613102847678369142941114064048260806138365783946341707563257080000038741451485752042343688702449153250229762761268150177825456097073711/966047568631692985623146488922535244878693316128588790153434722481257124010909822751960291661341294079143124018281647810786888607633178017041468820736667885191899042690245659061523065030086415612129050154247448092081803053291757182714018166373013094445830681660586720558581424221142899732850800594963307892978188600934836907750240937555884337771982115652588222341929276644848626672217091684740120260820013356042961815513603026178008365915229595292722666699507908575512000",
+      "ring_remainders_sha256": [
+        "653cb127a14dcb97981a42fcd81f95c8b962f488a23f483dc7f6061975da4a51",
+        "40a8df48676a0bbbcdbe5edbae020d58e73e5a194469c636c5b6c91ee463e0e0",
+        "7809ccbddf1fe0c67609f2b2608facfc782233ce99bc97ca4e85c8a86e131eca",
+        "8baa2e2325e35482797120a72ba4d8a3e08d08e416ceb90a05836cbb286f580e",
+        "0f1bef6c7ebde8dd195f1ec858d007611babc1664f98e82ab14e8b1fa477c936"
+      ]
+    },
+    {
+      "n": 73,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          22,
+          67
+        ],
+        [
+          28,
+          117
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "328189619704129735233694089548025965949486314445033537562348667002527288131703732540594188493757030554156661275075307073585200972899668307736102016250191030937747128291964969689500566781734190879805592361259030607202160868284333929188544457186729264404328403019080167941855108118102235515573303155079906510857414304846767937196710223524782695901934593107/18620854427503642207974108299342511803081221941025587220566501231036214395249142245635193090432050164187243746860299231898005716462116933515897306985607759607655646949719492729007829612067112128889244550991818202207653842678376083082227708517436864778579946698491864068372763559888013230336149288504367603036446797402675565451310301344782605814545136400",
+      "log_global_gap_lower": "499527579458340540690554169783905579831790432945256525970089295285429662300918923197251428453207048027635709703310969670601523550836633649522225291096181173421228505771636179131659918998073349893159196896893501685239209845181634595416353816113743172609327858476529935984558764258907512200263779535890268661883431209812432172293318452853550526486962851/716904007151691867015493197829659799493958571966615915489554808827803569811981245062462136082713957115248537223897452386236318472192484753313300999382136691626659282528197468245471828591724835894303311585994015221902267429914057012163264224351678543937404281023082945251101747668438353428433110959614481335864577010259570623640548172538389713866305037676800",
+      "ring_remainders_sha256": [
+        "626f7c5f72f28132c98eed109263802a62ae8a641a250cb95e6666b4076efe18",
+        "bff7a4af71fdbaa0df74f68939a19d76a2371fdb8aa9a844a0c1d259c24014cb",
+        "a6ee21a1b1dbd761441df534ea5609ffb08de05f5ef1ccabf509398df8b68d6b",
+        "4cf6b1cda3dc9e97efe7d5591a0d35a7af709b439e95fd9326685ac58ecc51f7"
+      ]
+    },
+    {
+      "n": 74,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          41
+        ],
+        [
+          20,
+          75
+        ],
+        [
+          26,
+          121
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "5509730766776097940752872009229016721325590968753442208268309182840046999619639870283159366321908758875805596217300377018773266613586495104054145824236919914806286732504262210844454337671069212333523457923273218088554766246627997320080527955970661379451726828560645168856843717635437627020969731752192858440395073189346568315650388884576112085795964087624858332759140724058249633440680216307642609470212072656834747186162802459915247520099524481461675316339697399929094850817690933637189322478008020921710363/27097262258370154878980064344999086655137959319399607768565975978650491040911553661354732110190909502553645946698863476790975871136574286642390407526710405195791038794072470890910980758313212179084551160974127252705958998377860389666669065838197439069013661119587560018014229486014331641017431665331373711810539498244701006539803808839011964871052367301627146705561654326894809038781337252392471799027606102907106720148390408432546160344720108787941082825974591157435652865450480811197384663282111224494720",
+      "log_global_gap_lower": "2039885511579451292392770088570535624333798951778394005282602437186244724035409059712387769834101724870716622072306692713355522626281560571660179868284679716699846994633195931449261139456152984943918347990845323246410502127592742436164579028497097882062838514831782735600460465618451546472036183543944042369639049681357485492651014026129623134319127762911832037304383829714272355957304782046517071258871555963285726466554166034770547027063874298949157836482672121410253554541907046885297786922624221000263/218239756272309793856783145289661173385971998596131535108749866651111134226381599567747403313588750374184561299068722979517061373435667153189186319254976973423065979915765911586521103087410004230807028900417328297573046363582441821881842852198145809706596672912386467940379662266860249723128452430716217323527272734186454571318254005577117717308816292578640237969728530910320974656636726622695297723968396752454842988385715855962289566818708419701089955134350770441330428434051969483924253878976283677890798720",
+      "ring_remainders_sha256": [
+        "76166d02030e57e33b68e645e9dcd17c8c353808f768e5a9808b0236074b060c",
+        "8bba93ff44e819155228ea4dad48828060a283dcd23c1b184cc896db48839457",
+        "233175098132288342d69e8d0b6e5de86be9ff71963b46d483c46d5ead49c26e",
+        "186d8802fe88cbe461ca2d3ce744b551c2aa95622a1a37331a851d3e97c7c20e",
+        "e6d97a3abe0f6e03df0ed8d07d43d2572231fa319d558721706459484dd13d69"
+      ]
+    },
+    {
+      "n": 75,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          33
+        ],
+        [
+          22,
+          71
+        ],
+        [
+          28,
+          121
+        ]
+      ],
+      "signs": [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "322204273142665895703909549064978640277247411020362501481339451842247460286134828764585715976549587528100790342745408149106302273714273383575434345647895017743467155581424638217762424505580206258288665437562074233595666339262581590988092362941250393880986940509475623218458306639861017217540688005731463769868109567066306741051586839406113/29650599900453520450025284245080450873544513474239683375808892146351118234995965414350394493314653496462276118252369016433632080366271860361670649734545044717870857636941772586879221971731518068066887069375755447801708870532804053343818685066798855383610336113619543825378385570079768585542400381962285009434632933112683590316897452366336",
+      "log_global_gap_lower": "8708223598450429613619177001756179466952632730280067607603768968709390818544184561205019350717556419678399738993119139165035196586872253610146874206699865344418031231930395627507092554204870439413207173988164168475558549709799502459137631430844605240026674067823665492390765044320568032906505081235985507293732691001792074082475319983949/24261805531727232564054439005929659021261026862888490738278642877561891253409778218238217228662624187026824222006261759303749679069340810685439475081539672920248178380911493658572470282155485555909830800564912184405437840419402367585306983274215437046198591231806330050187400663528475734451334174361425815458589088198542752437644410154111475200",
+      "ring_remainders_sha256": [
+        "afcbfece9bc690fc710b99bc9e1d925fdc9222fbcb3810c26ab75d4514745c6b",
+        "d32bee1d4e39eca901bcb018534e06d1e2b6bccdb1be02d6d7f132a39c1dfa48",
+        "029bd094ec851bd6bec15b3c7b674565778bf3527e1492a0715c2f70304a7927",
+        "21ccfd030148e66cc08654e3f2b79a19b792d8f31dd242d583ee7bd7fb0c906a"
+      ]
+    },
+    {
+      "n": 76,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          20,
+          79
+        ],
+        [
+          26,
+          125
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "630854162728707090781679444217494151090809224254420956668921512977055443753081534106864188127989830341099037897380153035397480287433641602048439779340545770439246470304980197565269346584185681052576469666416960387179884377040884783324952186814645662357194744735747343575752560098508409986770923211644363423816510906658370747247991985463318723092400222872543801413645505856332827692459685917257914341051558948256748355691264667574613719261020277320839167956049713969648664467274218191730368349399763336761028150271092803971487239845357146323/4455199947230981967179379787415376302675378973091554743755863992915381526221058297243809927345622891569172192406913758020064691505693647528080803973198096695364394381486227292789836550165253518169858369248002871061842772629565238101797485566969623361322458401699846909341495611831491559718665447416119194517568034369625540428982408816398061417852151131158096225727180530167829695448471977142049907530456601433612321036751146422037951031723925347091263463023322539293256171853243730139400275105695387820002904978829112474023685937500000000",
+      "log_global_gap_lower": "33202850669931952146404181274604955320568906539706366140469553314581865460688501795098115164631043702163107257756850159757762120391244294844654725228449777391539287910788431450803649820220299002767182614021945283535783388265309725438155378253402403281957618143986702293460661057816232104566890695349703338095605837192545828802525893971753617004863169624870726390191868729280675141708404521960942860055345207802986755562698140398663879961106330385307324629265774419455192866698643062722650965757882280882159376330057515998499328412913534017/5745762582177644128395303359532476256046068606993346847615404218239884736911426046159711291194772798976850966528544876987176942683123772139526173701810983959138665652079518489774832912041669938751245912045016502738351299792646542382213638359910367014108519052269460353413661574988553197914797604306527368770371599823341219797829532847502597997476274086908370748807856042791015627494772892743915738941962274696104105954188916593903667774717060238245592120199872695469157649514001789785978805262213923528266792991888283786397237872890625000000000",
+      "ring_remainders_sha256": [
+        "ee9e35adfe577de75735f20609a287e9efdfc184d181c0206455c159dd9d9cbc",
+        "283c362733dc539655d804d8ddeaea91b16fdc185cf4cce03f37fc27dd33b555",
+        "bcc8346505ef17aabbdc59b7edaa55bfc40f1f8e8772876c9eaafcc4d5828dcf",
+        "9209d1d42e19416254235ea01e2bf9913125c6bcf140ec76991d75fbb9befe80",
+        "ddb003d57ae6723168e7a956fbe681062e440cb7930fd6d0fa5b1ecf8d84874a"
+      ]
+    },
+    {
+      "n": 77,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          20,
+          81
+        ],
+        [
+          26,
+          127
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "296206355349303275897709579342441755686850534968524092138655571382242832154350704983907040556342380806879319797240737912582887035863832729598248508948425354713608732499284532776094239955217598631504827110908552122253737301890422930441701733755295478363426250876655798385007630372705002208576864760315796610190571408841300409498328078001330971797163597843349196064720701565603410836535741762240986863959056310289555439137497285428196129853942129243550709089918982682052230872977749789539/909128952409930434612442229462948362449895702302141477543677402117043925455113389085126523168123854010041312130179209402249201474525319030194354616408360620538400185313628464060562019168921631316253574343367309748452070933971889519618531150429539684830050280959860861457060684289855812776327407855034189647299433060808902387675477979495527798482103786762115438358712144323694799266369472750429677398431045498164446467361325814693541439962823507474320622623892254807606104242972800000",
+      "log_global_gap_lower": "42315193621329039413958511334634536526692933566932013162665081626034690307764386426272434365191768686697045685320105416083269576551976104228321215564060764959086961785612076110870605707888228375929261015844078874607676757412917561491671676250756496909060892982379399769286804338957857458368123537187970944312938772691614344214046868285904424542451942549049885152102957366514772976647963108891569551994150901469936491305356755061170875693420304177650101298559854668864604410425392827077/3204809219236484047198399806728641715471220204628768155985971182941841774738465161363540957323763096916396435150909524035504960428258716325824784186571206939808140996616970177313088688393538220146011354347928338672048340384278782369698364788217981984263643668443580656347446276910003346583362967562409154271822865267382142506234373238114455540702986029272088903700757780175296822374434426095844885222125949391029834228947062940996482534734768006097446198966020201318841633367079817765120000",
+      "ring_remainders_sha256": [
+        "43735ade8d6102e551762c09283b01e456c754c7a0110699cef9ec81e55d5274",
+        "3f26f6bc09da233b47e82fe2cbac63b18c35d8191887c0697b437b02f7647b73",
+        "cb267d58b2f7a06625db3663e75d9012c297ec682d42b3e29e48d71b2ba433e5",
+        "55556a1d802186a3da11c56b9226b09d517090e267e5b1d981039786cc8d2410",
+        "c6834449b7320721f50b9f969e415924884523607141d5209b5b6a43497b0bae"
+      ]
+    },
+    {
+      "n": 78,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          26,
+          129
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "43109281376055005610312428904441335765432033965320349437392887304781336609897893216096564652744198102944276452344084080532010985734698673847165185418606589203021406435727306578011938436989664826927814850677519043398408177357017279334935258097194575795911682479067967654714788773055893579452218322018281314458361932814222726305314623476314660352627620509270059320373577888270934030573258607839238669238219923598488156883790162411/366464532142924106507290626773220528374218811674903316127947110351855593819933513781306624844924706006033069602800170677446522357257759657642622876609502628018831483179340346734468647621614487264549940601156263281554142773015394406305891481895309872530807294088284635727784313079189284772730110930771638661638562738441196605772554131633840259725838932808429908518043955217160680961993292781028232993512343503090705406691000000",
+      "log_global_gap_lower": "3316098567388846585408648377264718135802464151178488418260991331137025893069068708930504973288015238688021265564929544656308537364207590295935783493738968400232415879671331275231687572076128063609831911590578387953723705950539790718071942930553428907377821729159074434978060674850453352265555255539867793419873994831863286638870355652024204642509816962251543024644121376020841079274866046756864513018324609507576012067983858647/769451530333432267675942016228371503307092893819346954913398976299894369212617968101914570099602683087137404977331411031558494210177089739032005620140035970450399743358139051325072331446278443687363702532524761688853440671694124711468238618695442819141155727784231198726592490440372372314718459267088863451693794037000006933937410628949861762803054516725435955768843701084522290656460440442768374734213116346938602332055169545000000",
+      "ring_remainders_sha256": [
+        "7a4ae95e52b4d6d006401ccc8703ba81b499689a0739b02d769e3cf2c32914e5",
+        "604d55b352c71ba3dbf98cd649e3877dd6e5ff6358c6fa40dceb438de088c174",
+        "99a102044ab8a0dd43ee5a13eb2c60e2395833ca4cadd552e3fd0bf220f7c14d",
+        "f48440150bfba1b567f52c53d5d46a9653b6fe5fc332fc7ed7d487f5f29b144f",
+        "df3a955342fd6a5a565d96ce1a1022730a4cbd8eabcef4d23311db40c9117cc0"
+      ]
+    },
+    {
+      "n": 79,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          22,
+          83
+        ],
+        [
+          26,
+          131
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "60131423749541654539000513352419695678396352915791650096426111254276592751632957558933992203227580402245360786480231236660276099467439753263974725557387944372042396739542516453594904345673734610487454919953357299055906319314845855132548790068617640111634865127393405253902467726200455035184921742062792319907241752703714818019829351553709427234283536807177215880285036974580317045466942379833611284011779707674989544923215476090596353796470964279560075287919455835390036265027940725944434299777217103522356213708780264252210604744430757676077388911278837164069931/195299933376730395270546571916694687512109826658796431844167838745943393278963428233981736673115238351965067471747206719097482555360845849246152307307533103215263624939102156571760752669917325845479744011246358771168028814871294250136040879189451226567998189155786923075287684195120648863815807681543704845625093356563810915146293928765929302169028715566645040947205044920194291427298135550528474100238282239144567915986175577715369641323744088543764643233458571361060559017471768592248963467113339816526742616488955334442047759784393575819499854400323584000000",
+      "log_global_gap_lower": "761157262652426006822791308258477160486029783744198102486406471573121427235860222264987243078830131673991908689623180210889570879334680421062971209587189169266359452399272360172087396780680184942879176201941231633619067333099314621930997342640729621666264115536625382960790730711398165002340781545098636960851161426629301493921890525996321863725108060850344504813734645247852114499581549111817864354579489970569487910420449064437928529069252712399494623897714630827721978038328363619549801263002748145852610300111142585471020313220642502228827707737706799545189/69306807378841439219067931701993184824583603410587301716830736301539874848548442895574298874048910335924924232381417448951377174537312287230775675590682538664863058855262451763583520936001477021601164429580241618880831848386597282305301424731804315471888286150122318292913618056965400890236681065168095892466769184004849079772905504404083432356704710929122836444579592179308210601855611690882045166759687807534933758969897160634055404172102185974912438365713219584234939910229716717454151450909702908907518130424768659296489720642573218424971946667855438675968000000",
+      "ring_remainders_sha256": [
+        "ce6aedd62f4d25b3f1f2965ce251cdbeebcaca6dd69865cfabbb08c3ee84a276",
+        "d8368e3cc98f25eb4d1da316b0b0a9ad2f40c7905f241ba98793ba82f82038bf",
+        "2f2b297a50501471ee2b2cc030b8bde60498e65d2915aafb8061c3c84e9c5c93",
+        "88951e188955ec9ba43024127408f95a1f1c729bbc1d38822a65dac94f78011e",
+        "1c45f9c45c976171747e46a91ce6419d0e19e1be6b35359781f210ec3b8ad567"
+      ]
+    },
+    {
+      "n": 80,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          28,
+          131
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "3545199720345198300136235524820343807745476487266270365349303142367360579102648622830515711239692368680940662551236569040820817522477459648768078055162353520063129692119221987170830613545030184037152169442889592246884773133285780236233556171754509001202406967658390992652499198059021263004392064939125077001812043149480058993060333519475275911834841220520809673913535029624412703732346078839845551443535863966327778408863915901945728191164240618749618645480639975081428020665147497306813386446898523417759945285794938083046539618621635163816915591963685849899/28253498138877878865832541480226357425631167184741150169770234929993639089203547793425476666464718048070485949886889649760353360441357372445450535438406341203079652371795346257001097305429061628521545768029617534293481868919696010628465206446345802508387633648965069992897693016217706096505612148801221834811660147969906852744722050038127781834844556678780289730954619338669154384632716184220223542331997701438328177919529183532405946035985267749212265403957964092076580046616410311542143870839905550353022953954422960950774594341001886549006888984888026600",
+      "log_global_gap_lower": "44875945827154408862483993985067643136018689712231270447459533447688108596236058516841971028350536312416970412040969228364820474968069109478076937407118398988140882178724328951529501437278863089077875562568222686669427508016275699192829824958917835458258316046308746742436698709607864088663190695431963000022937255056709607507092829360446530529554952158491261695108038349676110173827165554934753815740960303371237701378024251923363647989420767325944539816210632595967443299558829079833080841099981309085568927668290355481601767324324495744517918885616276581/10822866953790718855399011937627435849628853068531450340040312243346519096249653745598124173391343266431729712732076201283513240191711910171408704022619647522394112784623141232104379726313656828668935369133424157225873619083265696460989033254455159073786273718861007091071736096894233602123750264014578818213162386898575637826164549055383964663526527186194478063042512840781665013529058341162131682682535391872710622098798432411020691263044468377003667947936729358899824135102818883831840394634704595416771981510655325686881283240675248163118217235145209434664000",
+      "ring_remainders_sha256": [
+        "64ad71f8ce698a11c0bd73f86f0f64b84ca390f6b2df927086bde341ab739cb1",
+        "55c02cc264085e4a95438c241260cab6c86fb740761864773797aa0920ead0fb",
+        "56be787fb6927da5534b0fd7e5c52502c4c253076856a2165194b50dfdf801f4",
+        "34bb55479b5a35f31cef337be5b3871d46d5471c717483daf1a60b17659d7975",
+        "97bd351feb16d5ea6595f9b69ac247988f73cdc73a2b314e71fbbed571ffa85f"
+      ]
+    },
+    {
+      "n": 81,
+      "rings": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          16,
+          45
+        ],
+        [
+          22,
+          83
+        ],
+        [
+          28,
+          133
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "8140845123752750013405663759915057508962085298238104509976559726794266995767919112311957958759104228073826400700387415284681526825145378738483108714653103545448853631282173394381834615471379890269305825199219125788194021968485063111931370759641086679317196862335773155551601243668295486383954170365507982196857360447966345841722996525243051156696823696044982081060428589762007870236196440454965329725049644772326340413861952529997707597470896237205663587171060320011762964328074860585812557569101928250308086693610526527/24881622488620342137469081569465671718176646743628986150308176801955159354636611625594732819322722120518992717832530250710870373589912165693660743938532163318655733525355479151165614312622908357658570408815813394773441003079264419001483891802627662107251831928602379234418262233957383373012052922999851454804885351411201287934511608085087558522748944920631250812403824595675082224548175781395912074520554559982874527548274754671564491149200789439596050426682855879953837548531276628740087689484161172763762751415910400",
+      "log_global_gap_lower": "8140845123752750013405663759915057508962085298238104509976559726794266995767919112311957958759104228073826400700387415284681526825145378738483108714653103545448853631282173394381834615471379890269305825199219125788194021968485063111931370759641086679317196862335773155551601243668295486383954170365507982196857360447966345841722996525243051156696823696044982081060428589762007870236196440454965329725049644772326340413861952529997707597470896237205663587171060320011762964328074860585812557569101928250308086693610526527/779548408952224668612954395601201635555790953426535877502002741774143285437252590052604466552320351852555854696013894979285984360869173031112285910798253895523746564687267106438952822075866938505327219801138397377062609703141610793054181284477749832745902406956742475153177030109729141416514149974954716562509285995066922318517610845706440907455656268795912091071267191580331078697757006389201401589369415029473390850845919882052515516831381660528129995991991675879491738133893631062423026031567104974437463076590881210368000",
+      "ring_remainders_sha256": [
+        "ddadb764704847abc1c6a5139ca97e7dee5dd87cef962ec8368bf40a1b7964a0",
+        "b948e818f5ee60dae5e58b03ae26ee4ab9d02e0c29602e032ac0df5ba1fa2d5f",
+        "d1f4b746077e5d74e3886bdf4d23271def7c98e53af9c6793ba6495e0e84cbf4",
+        "6a49fe812bc8aaed0fa0167fab4f4f2163ae60edd0eab62f6a96b2d806e1603d",
+        "b94cd57a0d06ff1ef22792c549a2b580ff69b179c8a024dac562dbe880631b4d"
+      ]
+    },
+    {
+      "n": 82,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          22,
+          81
+        ],
+        [
+          30,
+          133
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "558918682593602062872565955274083335177909509552309892372006568482916052444554282075139269306748702587194867722187202982991955699684253003564357904946118646740238027451903832864221549690235184825766859628170871515705954846367492496707099618290913978422202669595469833480873483186304427067665690698982674128561975367447476612069617818314172839241043714653787238720333481027500013149793969030536567903818855824879310091348601682948387302052716109795432733781469583485279573013017630598167187568086800418969043748503762061262503602253908572403/5876784432701337865755202185832678470141652637944946400666402976298531766480028704558798761693399064223071407588842956083066669626455474366427363679412454668953666293569602257975879007125856474177469565841317857968598573421282259341110689985758106672496935788158999744441803289880342586031690963715505146786455540923774895768372382394165953131458302565187219064097262456449715700123280140290229771005994046078800134967062962735428569609942305848398324663923850843315080543378511949391574056554267442413010496400595421030373237208833920000",
+      "log_global_gap_lower": "62102075843733562541396217252675926130878834394701099152445174275879561382728253563904363256305411398577207524687466998110217299964917000396039767216235405193359780827989314762691283298915020536196317736463430168411772760707499166300788846476768219824689185510607759275652609242922714118629521188775852680951330596383052956896624202034908093249004857183754137635592609003055557016643774336726285322646539536097701121260955742549820811339190678866159192642385509276142174779224181177574131952009644490996560416500418006806944844694878730267/24669644210736058876907694855946193807296279381285127791467456370282584788359556488560895374057599683300399563783146354834466886881783859553869607865657589547167886311996128036600411235488827545249208911634687863743241814813610319529594523246998122236090020713600733026033936234353281937484248705792034140162482615039417908193238852962526939054474118157794474636051525188070970785111333335833704696174849608519962259405637931067660101061760148839861318881910727481218034359867442149996055355258379786552652513817878885905535143375111601540480000",
+      "ring_remainders_sha256": [
+        "3bd678a0b00ebb953f0b6dd7d289192eeae4f3ea5fa6a9498c5c974f85e4d26e",
+        "31dc95dbacda39544249edca85f2b6aa26a4fedfee6e78a0f5ff70aa3e839dd0",
+        "28abf04064b16b46772147323e8c4acbb6f576183e7ddcf85b5b3abf07252a9b",
+        "5a4b4c72386679d759c5351fabc8ca1c18a4f8e934b67c40d259d7f853a6b652",
+        "19f7b87a203179d07a1e1ccc74895b8541db9c4b09342a869d0dc0c6bb329a7f"
+      ]
+    },
+    {
+      "n": 83,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          49
+        ],
+        [
+          22,
+          87
+        ],
+        [
+          28,
+          137
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "13974611341829096154174913621122150076998656865028703701758691790981663690944836101510924485511067639512536650970703701616606561365346102880230189210374160940552433838840310467868259591174018255864399660390521856207855266918577645366275591414104414677616557621809731333513449364187231162851474232307156914479141016072998683877188576726072967191549003835214285177987431188287978187197405216181203549408892617143710528178631779163486065582097419964993544755502469061162613182522442314548694618142011598410188439613991400596778273157914470744617956383597024105613684568344388543/47966691014637228778899564895299035431835731741767806285088972676814120248030144266252894973054457875062835133262440906313998900432464394707743715587127242858803002601143241052146293685801280720248081410797514562417862977639946154261429359840368962369199428800216512074006350013471658461650483492769221077617489753794242509097166131297018462971538744372779644985821049793832682910966162433787150039926009890281411857342328039229839379392902617070595739504143706892868480062730798196027731556938206201214895817912665172496443909768116990778764637557217973214652860989440000",
+      "log_global_gap_lower": "4106556374325329460527450373529870724948180095512401910596148043191790682029043814725514100943599071264336365257332853839731578420613018771739697093850767246709501568862859379332430088502503160700675774431537424686410598565553231080304317194858775985194404237969359780638686266290693847443865481136396389796985311805171520387066875323559496676917133069413542514836153743252417921597826980952454760331734533395154430848848598049804897320628098726122111300470898930697212219371860803569995479912433616929235509730823214985829642420780038420399046836202475493862381595164381/472797869919976902450212944108604428945093191716643445394633080381671011055877330251144894646775561166315520949562541704446745614342275195546260338673434111962870492376163583906849373822817658834228645427694587681112381208820497282756957958909469195423955429654490319642399773266728989964248478463132799474556083439550532800563067865306562693766200446458821531208744635340478629065645236448904565387338139866044549089998469196665910445138446926586920768666752431078092196902120277363139592464158918454034833791888486921904528637347296278283350146198201196259679891064094720000",
+      "ring_remainders_sha256": [
+        "651a73a31e53c7b25bc2100aaa6043c086ffa225c67c93c34e84048a53bfce2f",
+        "1420cd6a62f9ef54ed946f054e4857dab091e9f6221b8220c681167bc2f9f048",
+        "73641e6d3c6f7db6f8b5c10b61d2bf4c1c9a68151528c3990c43cf12d7e2b84c",
+        "a0e06f443c86a0950240bfe8f9c45c85e87b877fdd13dbb1c1c9961ecf1eb497",
+        "7bc4b42b9aaf27ca5f3456d13d12801da18dd27be73c3bf8f0596407637eb7a2"
+      ]
+    },
+    {
+      "n": 84,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          16,
+          43
+        ],
+        [
+          24,
+          83
+        ],
+        [
+          30,
+          137
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "382701150140906041692035340072373202931285176343677805536797941542442263856313725564836474591918904248283796783016255733185176947841938428553688166541430851166837800049260708907394933279461706778990975915048256494462479671512781027740954311462669449099226966121911550296636207628712284441477214528474377404872679253134112179103070151679404270937374926766013731649198730714577139204096127822816297790333061563374103621373945800682882415747636158199807452406393306943652223790013143461431464503840053946038973637285311131079084839142886956509149049444691251344506720513099633902616445427277818367507/4020716325885227076940663591572044982874148960712803214291408392256049181579156245433735585949301480864913909482490579269466039359084064461070124003511552500055511178667251043626482342651836534112663893430409580378862666352899574399694625750654665902772832002467623557821621265697837939796624483863757999400816392081783008849304853525254011556397943271873780772917135318755989578877079710273770601284084215258342998065763386633270774020183955365245966010706085278861373432943597460974682278836139366948470854634695392405202247474953161003710704535086894951206269639421147522935594742781796875000",
+      "log_global_gap_lower": "382701150140906041692035340072373202931285176343677805536797941542442263856313725564836474591918904248283796783016255733185176947841938428553688166541430851166837800049260708907394933279461706778990975915048256494462479671512781027740954311462669449099226966121911550296636207628712284441477214528474377404872679253134112179103070151679404270937374926766013731649198730714577139204096127822816297790333061563374103621373945800682882415747636158199807452406393306943652223790013143461431464503840053946038973637285311131079084839142886956509149049444691251344506720513099633902616445427277818367507/171596830960770425219185028436576669314929949447220179607288014069763919523992825015807672807136243778810466323913982895423064514857838183696766978423442648607504115742106028141572604427622701022417205247340476962676086796712993440756112784651320445310406006674081667567210213339552559018441864334997656192319937723318557481914172317795304099401962236199158521864411988715413586789502732486933569357686769569449017423132313257564004282748090359086200890203000170390084217250144184625435699890885273390876688168028236394067500022927111647166380093811027607847302685562132993263514303225926771063906250000",
+      "ring_remainders_sha256": [
+        "fc8b96f9b54c91c8ac0cc24c3f8cbe0998f26708b48c5807266e1470df2e59b9",
+        "bed3b2f53fe90d3dd1e72bdec7d6b6283c42bde3d2eb87cb9f320c9bae9fec62",
+        "df342addc25137c8d2f8ed3a37aa143e45067d05b031828e4472f8866db8e953",
+        "c9796cdc74c07839ae1542bd2d2434cee7e45631a100b82b93eb68063d00aeef",
+        "f2d1ba02640473e0bf992708b59f30c6a62ef467a7c310e68e484e4fbb630446"
+      ]
+    },
+    {
+      "n": 85,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          16,
+          53
+        ],
+        [
+          22,
+          91
+        ],
+        [
+          28,
+          141
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "10088007948169142357595372788995844736953621846833806965479040101943627475417640889035163061607696776930570906083184994901116622992739934867495442024339805538660175662874830801330673546881622649636166219819503041142946511815382353407447321677285264386950925665527210058820295117304390513187609385880287425155243599443717938732438207340545104102255491687727644620896239670653228543560122843739667795308649143478304603978575392111246708300966469737750733994894961461576067469081644735294282551078684060808785832530061240941539987097896384336041553402429080253226999218800616197014696200287682749123/53658193115814287546067514540288482428820517485756089063888712384914497503117921535112516286594884981213130364516967243348118617929820220607202555027111876832982291586546898337163865317653304016149565375639885962288729798005253371208799397953073552742116445909435041578834359323524292497669221990869809698223953771202550178097192766824166560018568307318400724978750244967420232761522912554081966069995317066868811437399286059409573654895114806924150421229525336404811874096827869153032056696969617416920333326339123039088923283977579332015465358947627243272485478341316315197243774080012544000",
+      "log_global_gap_lower": "10088007948169142357595372788995844736953621846833806965479040101943627475417640889035163061607696776930570906083184994901116622992739934867495442024339805538660175662874830801330673546881622649636166219819503041142946511815382353407447321677285264386950925665527210058820295117304390513187609385880287425155243599443717938732438207340545104102255491687727644620896239670653228543560122843739667795308649143478304603978575392111246708300966469737750733994894961461576067469081644735294282551078684060808785832530061240941539987097896384336041553402429080253226999218800616197014696200287682749123/1993179192751070153043091984986374925028602619448272820953850526943176187076192845655059263104410608279395758550792587676322711963828412441642055028653843710056435255930133103597538366509751982988289333008712857972282813767233440938916381116455177229125746182284987639231144286277734840474546269689551320578772253192024248533071607937535467413465735558403215569951909787023046853124615881297045599341135548468348839331918270069919111548685700350783452924428763717292681153419653503378155823257128863126310163690194113541541280968138565230146673903664719434513254705644784646869537645410033957542400000",
+      "ring_remainders_sha256": [
+        "3693d16d45019c150a06678ff0c8b4c33cdb3ad186b1f634a95c0005d8612c2f",
+        "578e57e5933c42587bec4db17f0c4caec17c2278331b48d6fb143255b875351d",
+        "641fdecdfd9e2418add474be96aaaa6ac685662db768249b5789fa09bbdd5a4f",
+        "1358dc472d1834c84fec8228eab10f576dc922645ea911c5b216ed2d1d91d223",
+        "6196fd5c467c98b849acc687ff6e575254d37ebf77a2c3cebde2dcc45e2eb880"
+      ]
+    },
+    {
+      "n": 86,
+      "rings": [
+        [
+          4,
+          3
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          18,
+          45
+        ],
+        [
+          24,
+          87
+        ],
+        [
+          30,
+          141
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1997978119357421795970722758308347648928146693164473800061296061400860963269218191487533512539089808853649692361454984881608597250253501215166954211526741692079636112817736381570394903602396263614926515340609993252741528485351674613050328967555804507677534361111833875020438101308410568836350628919536414313289809056642555841989578112376242465856794808949925412307141716933693861250331866116008135854608279470853252841103481041506977287084941687341439244909535893065036223972517665471398069417928821/22079505060108615719688078745921754624632468846612715442144352739264227244941951642799606904358453466493364566273905186761295316449575943050152296003605671599026785557042691903267997103377543630209648412170776937474633266069804583355016568547174728561359198079489487251502908623516189273082420471958448163534277103440982559199123737492426639950028326617995791480665508552781274665673715077523704894017633411077189992100278385705630690933777784671461501962229296318622596147462900139924303427051520",
+      "log_global_gap_lower": "46464607426916785952807506007170875556468527748011018606076652590717696820214376546221709593932321136131388194452441508874618540703569795701557074686668411443712467739947357710939416362846424735230849193967674261691663453147713363094193696919902430411105450258414741279545072123451408577589549509756660797983483931549826880046269258427354475950158018812788963076910272486830089796519345723628096182665308824903564019560546070732720402025231202031196261509524090536396191255174829429567396963207647/24986779729888297477346567138633509821321699917052751522557826097501365838965193241461959544276044109786945358808889104417715354652440956199394999275288441195485439491695174274247004085970574932630243447546539649162730652113013962259121665177486866595219047768210106506370051110700436463237002022762632908571325972482367055716549957379266932912168406468767151332299178060451643444726970162926483688527617255213956829930098341586648200901101106912506852310101914452784589249987782590048556232201674792960",
+      "ring_remainders_sha256": [
+        "68d33921744e2ac3a211f82fc52398758e6274d5f3a32b54369379a05df0ba7f",
+        "0f7c7ed7dd68d50e619d4f9f8b1abe6020a46145ea45da978a637e4747201d98",
+        "af698ce5f79e5a76fd740fd7cd496b53ab450c12f60d1c97761266bfee6a741a",
+        "1f2d270143496008455cd6bb66a981aee6da7c5d43ebb8753eb41e5b77b314a1",
+        "5be6f13002d7109c351500b14265f8f7df6be843b3164196fafbf2a9cabcd53d"
+      ]
+    },
+    {
+      "n": 87,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          22,
+          95
+        ],
+        [
+          28,
+          145
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "418505985716558707421579914174743405966658023886800706279616450790189062834759771155858637471974041788494916322095580080440462747012990534471877778032683074989093625580802223302910033521206960908656490250487809236676663132704381232436037242786763132287239162871485240013784178181531282064283523063888672944945537278243136070823298701670176973489633079892680098682599364961889725960683673158945183667761085732600433621370504929977021665599089021185752212412832429/1997620823662265871592550747466305023806913412362581681978733711526831634297577699378210843253547450314530121514938392210033717945753259369583688070775104126732669940292326063061328406490087263975971069597642600118434323359206373824315316253825763400395482645979300393973040534632238806747579888487180807951069970704594964801223428422644970980722126228938454468628789275409495081160451451421423079332885124566289500127117058462777529579659765877782018097152000",
+      "log_global_gap_lower": "335610253180881080530537220669401287864200500310185009045402125733912640605260441985451994765015270078985498253484827650714083999208492810322275684067909442653643645213153346674346458316926191586733352245780119676565086714277771637879741173044717828618475671909771643956522997739800546964140756266149697630269075604044214972592861829727487548909088275776006494532958592591731937418350980881271197808950349424699625999495192405755430365356125919154572744517107/66808866671104164303913251027517097864567242762344151789918292881113144849804762594957475051410168975035577645063021030176122579425323807067492045734581660618984155156578071178709553334670439929997243936220562240382761532459485429389235832861949665874841153353799936041574870849084514414060261262540944871473682515510809550804436607096776077472939310791794894184341656626273424656893300621654747230244500917294891414505876092405523577995867681238187874772372684800",
+      "ring_remainders_sha256": [
+        "47f3fff315cf2b9b2d314798a8d1943737b6bb0af09d1eb928bc61cd06b8cd68",
+        "415aa4e184d4cf1083dc5b6dd354d059c8cdf345c1e095a7a63520e0bf409fdb",
+        "942b8c878c2506d423278c39a9ebd31a33272b191bc34022ea32e52380ff8a89",
+        "5526c19a8d5451d5d42051354f977f731848e2ed415676731ebce6ed08fe4f7e",
+        "7f5a5b6e3e103023f4908ae49ef6fd6ae6effd790f3173ef4ff52fc7a959f6ae"
+      ]
+    },
+    {
+      "n": 88,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ],
+        [
+          28,
+          147
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "201125682141513114806366991369829156120082007536722504687416042851884047178630003205466463116980152188187888963682293542165289923789346735984437631374409768608361122758647121273642040199227244121704381558511457610085143703745395628895348911116218615679335831374658756470687511226725320115532487920446361917657540302136541126623992057867051319580227065177779845097703516625641539536917020577156076518426555363934828226199852818938118528494771129018818001860176312484615904518837505956892271660026672807882886207903382325271750828104909381450829612219975764107322631321562886585850935320973478159623956694593/2632081053687131587021478346879377079838416244672171273837017175174773382882717049063013569329163584413064716774392871382101500860325451332850150440184262890573244798539667489988968904404262670951630671990547958755142353843985168397058840883265350142354943415652600268591880503517605997588835723906501871786910990849933443139164226007820289819760255313701234945349888176570175592221691088908143300153846560179254393859833127435447229057151715443491257175922524226545727671883942433494630606138063684342764425075934817656747582792310091233089627766707160602718044889963026135143117387298226730294723360000",
+      "log_global_gap_lower": "6094717640651912569889908829388762306669151743537045596588364934905577187231212218347468579302428854187511786778251319459554240114828688969225382768921508139647306750262033977989152733309916488536496410863983563941974051628648352390768148821703594414525328223474507771839015491718949094410075391528677633868410312185955791715878547208092464229703850459932722578718288382595198167785364259913820500558380465573782673521207661179942985711962761485418727329096251893473209227843560786572493080606868872966148066906163100765810631154694223680328170067271992851737049433986754138965179858211317519988604748321/4256241411334684802930030244335475514730164855541564231018963271743079605799151656052393724062839119134460552714293414654329475706000627373742929391285772739471621068309910038297530021256451088329590939667185851938058511162486957160686839826983893550316940335534123878650045781035791210800194979974564417597732004978964093349634948633729102880868941690390722824679315294446733167719902901641286711005339610912457683749042108516772089650290735860541391500920239977855559335425197980122614550779556903207100538059451399231436747822397891521671859363240334587145170367507258923778161860280109870815922299636352000",
+      "ring_remainders_sha256": [
+        "75932fb77dfee73778d0163726306f0f73f94c76806d39ac117044c8d149f468",
+        "57a5e8085acb8b90c99aa6d91bd98f3bc4620dbec17eb7821581cad17a3f1b42",
+        "a176bb50635bd715cc9c083e90e83ffab78c36ee1bb3e9ff2a3d18c53c5c95fc",
+        "bd1f80a521ad660443c6826dcde6a0eccc3c4da69c9e6754ec6ca49977fc8d4e",
+        "086c185c66632a01deeb805a1a93fe604517523ac59492b6d842fcf9488314c5"
+      ]
+    },
+    {
+      "n": 89,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ],
+        [
+          28,
+          149
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "14898831595235301059846463630839527280551246455366647605895094477950285922174370583799790117214870890006807632847528868993185374111682935783171244222251772970468402287058970667559115851293478183500241932675769544940433665180667377467977177365203907660207226716441199864915194133424010965482629709402230090584803621075789584839228823717269023277309009186103421233891665245718459734290226409941640120815011745829140319784687063050822633112951289422315963757433743496980278278673396996552655040860757670694788047438580435554707588482101203621070286330250154463044788402984780365811171036168905946604685289319596038149926385500437/97129152097890218818099480335403888428682002781580165309720496600128547833614693114570978075762897143428416204753122781490646894691169289768929738297798620917356740182629169170430103039604697700755465112962198226849118832744839420471667978071803126701148533954001222151231058206509416582481013345851819295307568351123005519241648812552487930522723366554568050408991192292120112766696253688683383992767216954550554059951042042907307002098013424310220640204976041547324594051425449101698229022455185006526061719564395683368882106325010638291191823076168338260696469152094858106700790717190394613110934377787601451862672000000",
+      "log_global_gap_lower": "14898831595235301059846463630839527280551246455366647605895094477950285922174370583799790117214870890006807632847528868993185374111682935783171244222251772970468402287058970667559115851293478183500241932675769544940433665180667377467977177365203907660207226716441199864915194133424010965482629709402230090584803621075789584839228823717269023277309009186103421233891665245718459734290226409941640120815011745829140319784687063050822633112951289422315963757433743496980278278673396996552655040860757670694788047438580435554707588482101203621070286330250154463044788402984780365811171036168905946604685289319596038149926385500437/4473011174290392672416199212545193054556586271101515987194722121053572669353785642520216236999980161183896141357139836948613261023318194292916236317558196894754114142659533236580275934865263968998742348281309745869502394088386306112169256688418572472960576445679622323413170335070989195930855802901883342764409535622395747354954266586660171806900679565760167389235148461177059656291810653308223418709671374403629421182975792370824476765967124288384949927341855880949181007326450797547167055383129689600700945242736059841374912962465147985789737254904460070363268383954895499505683389742777612645765166709385618760373775097536000000",
+      "ring_remainders_sha256": [
+        "b7c805c4852bda0987e0ad30bf1862a1b0c2f88e1bb80dfefc358968d4d51a7b",
+        "bb7350bfb6e50d9a7cd20788d71fa5421d5a2d72d3d39f9ed01814da93726ad6",
+        "9d8c52ec53554d054f757e6a47d91fa2d24116bcf9a1c3d3e8472b8fcca54c30",
+        "2ec8b798334a10818d5f02c98f73d065289944468572eed03629f0dc001f9a0f",
+        "a818024fc0de8f7694be1aff5ccd32aaf9a9358de901cc93c4af1eb9b4596ea8"
+      ]
+    },
+    {
+      "n": 90,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ],
+        [
+          30,
+          149
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1067650637279030226849771017784561216037774220428972880335060324950254719677866345937513064075366956120978015111886896760878645738424034007106268926895614555719320045430267180791868435149501797918457923747761219001991323917106798359894535754239983231643378617837390275689583886168471393673335902984021495470805083302942964769018739753338746267799235609327931784466424454788432520214731360531130758469799068899945713394360246768316644338327967787015316832766449443705154091415235421467494343681487588877970445313381400276800782868600564079597226611683216865988413144607075085129083207891539144641651396976941437/12984068416796459127666159336600954376514200740719601910763801683643130063148418978705486936859608293601126628369196808665727621757008140750852195616444899261370169734507989202907743498795073999833613768425260429155490075045850974840790524443332640731234627937707392883025945927293780375760669245430915388534473535902895026056887258459465070030248946865606711230949060580792030833777385001520963761540579989729487871667467834559136119972912985948700875242398112875765054362560929702275808055691362697306393286292036130541793401135523544861028474262169260637863506841771760727501991035013765744073150745713600",
+      "log_global_gap_lower": "1332897175129875439263134853663621992556522122882612834375855586704437852281980456850827795350021168690359569428073529039798558974312152318484730245812252878550961355093966517842532378463797500522419380459127614234695785164927338776397672602047419764848163068461161392870891243656019218069083524324621092972290990390690343032482821165216911695130131846851350542405024288125383920367954257841611433795005079775213125336279958512255486065328299359569683936038014286772976393776823247774649617579884630309576086533559800595256907451436409587512143085746837535566058857187359656840303630326515786069477399471837/946603507926545852702501346434892578819767805002162577304234961746002397253835485642523525131749742644990136841256293335774872264194678501440879321416915380650192224494304952837989039779654869957869611787043611587581003921217765320767833184541166172510660549798557478137006587829353058294831591338140886401105793135000561874677365577987300930555299471237057282292341261642643007936540253535885863035115984151228313283916742478533818826625221240590037309547034419207651288302504579944417786300178797447122602537120894097149447909785344038093280916083449946803438966299370215838532656407678591571653055116250008000",
+      "ring_remainders_sha256": [
+        "3e1696d839be0fd0cb6e244e62b1d2b46d66b712cd107dd4bd9c850f8aabe0f0",
+        "8b65e40336508f5f78125f4627dda3ba2f28759a6cd698ccd70d99448e657726",
+        "38edeadade6b6d8dd576bab0774dbf3a6e07dec34726b7fad81732a753a21dc9",
+        "add0729a91063ca2c5f3b45d6c32beeac7675e2e6645a6d7cb39b9b24d458758",
+        "8c157797004b0d433405d4dc29ddb2b9e2df40234bfd8bbc132a48bc61280c1c"
+      ]
+    },
+    {
+      "n": 91,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ],
+        [
+          30,
+          151
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "59343443445451559677491295134384667420853922354150834609354485975949382071113008602063231551859295665349214405585402043642868607550186986471643258378998983268641425508710465223132326532146788554634093611653820757010006819458462634566985395599388520513420085848736021380416705990403548010294325257739884648497962941115319314335332165358966489133769670757768908008287883239762608796232532395578026039928088639478589312379828877900631922144856066099369073375360754357645443752075376099293358909106445488187488567719310956494858394562832798580062709917774257587692370030182685366242503151041481850837042805610135559569/360954071056679657311089823440644478109418805271726449487713156940327012401578501122714853819062108566784973541235649477988143889291919599087761226078274996476406110522144779666564144259043627322731220452834211380894805427507151787484789220166009477387514122511094295529204860586004009653349324658417160768583942241548444958272262419727273440485111047468244839543732112205158793390130756299733303628725837256606441496809769530314031657700410721618756456482044264274217036334948792549356083403512368133944796471139293507217670253045182460305287788245924278772414368246910904212290187354613334892740876459921899520",
+      "log_global_gap_lower": "6593715938383506630832366126042740824539324706016759401039387330661042452345889844673692394651032851705468267287266893738096511950020776274627028708777664807626825056523385024792480725794087617181565956850424528556667424384273626062998377288820946723713342872081780153379633998933727556699369473082209405388662549012813257148370240595440721014863296750863212000920875915529178755136948043953114004436454293275398812486647653100070213571650674011041008152817861595293938194675041788810373212122938387576387618635478995166095377173648088731118078879752695287521374447798076151804722572337942427870782533956681728841/2026687977912163830929653883667603490026062589005721111032984974468289060348779484795749408077659916581439670000695042448155723189226589990501583138372175140228940193596966776059360603557232142637651210876468759384564494874307203599113223523521896851331646454135403602859884599444928095422369869463839368150768190337886402010048467170019113793834502310266030657211833262133390643479591861646365491351183372545424897095394221882681389203050450600047799526744549664958517994406891068051518332960178704835766034281381269808800538106453215629337687428200625937028019934504221279050354968670204899146944669891022916524441600",
+      "ring_remainders_sha256": [
+        "8f431fb5849b4efa4b11271ebd2dced9140856144b40d557dbc07f9fa711e873",
+        "718866da4367c3819d9576a58d1761501f2db777029f48981b82a53d5da15dbe",
+        "6894bd8327c1c617d46de4a9dc7ed72e90ef71b6eb0128e0cd1173942a747a4e",
+        "984412643797ef61c874193cf8480298e96ad3bd58e76300d47c8d2f2a21619b",
+        "7d74a49556426881a992f5d4f9d91e77d66817eda2391cbfba02df6352608990"
+      ]
+    },
+    {
+      "n": 92,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          24,
+          95
+        ],
+        [
+          32,
+          151
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "276565331644495388184868785174356564342240362371871830366228941109776779833056710562930949509480023829770888632711691343529842008122315833778018748474530383525856861566008079424127016500831040800662372997863441561336993417918682070027253297340015880347720341923129913685150603224953005512807029196397860963415069597008516140746868555842944288484253516605486701362500794838871262172863151408829117813941523614417161105074954510535408351229483097899081801977502756783777464626773204655117276622152616368586281690285792911607300827391092286132571441335452285768344138318615372517121911512137487155565024855340894721085684427315195082867482718105076106412809162786/4204800001545286780917044904293149317985268115013348611963439508351882226640603985515143972401162942033162289392744528763859385530611217918576451810914008456911365637025651354446951458680405552509277884788177618783678000312239249621980686976110488666466600331322711579061437304713009707108613456355351150402640419724381125552108033348310598897378383488167036560755999334604242800477333231512053147330915832352632695049369119407492389884284451485465583741046471470251106040703349355028820739652651769888468236491578033321994212279669446867102291072288424759606037884108043329596073578826447702486833221033650438349227420523413410164495625061330274702535267125",
+      "log_global_gap_lower": "138282665822247694092434392587178282171120181185935915183114470554888389916528355281465474754740011914885444316355845671764921004061157916889009374237265191762928430783004039712063508250415520400331186498931720780668496708959341035013626648670007940173860170961564956842575301612476502756403514598198930481707534798504258070373434277921472144242126758302743350681250397419435631086431575704414558906970761807208580552537477255267704175614741548949540900988751378391888732313386602327558638311076308184293140845142896455803650413695546143066285720667726142884172069159307686258560955756068743577782512427670447360542842213657597541433741359052538053206404581393/134088408728958216658797529141666152469772188318951637780503268278756934125366506939513515987680967324830061603740521657894956776036396650277973421925470696757946842505753529645745375318264204900643912369282759431307753848311911898104253545101032815190098544621231412450755058132909074339345200527408892706921537952568660670851800478249302178904055049969545390921551235930550764579832334410050535133919386491637244487575336947504699607730078452099926571601230396351278514587463629430387618132466568952112204705935429717112089278464600717964246439704112678095593813659809707746173820275770588560330356258600909764769212039843494120091767291676908613667853082778053025",
+      "ring_remainders_sha256": [
+        "4d11bfe935430744e507a14d4998abcefe08a957e6367b0a5fe40edffb25bcd7",
+        "cf33fef1f717444f79d93bd37e23a285e61bf8eeb4c247a0e5a517fdfd44b215",
+        "f347b60a01651639ad6b0c0f3758ce246deeae8caa2befb289ff0f6e3e8e361c",
+        "2f22041289f78eb0c3027bc0d2a7fad76ec050ad994bc77246674dd8d61574f0",
+        "f7d3f797874a6ab9206ba684a5fd3018d48b1c206faa374fa40bd48195f9c07e"
+      ]
+    },
+    {
+      "n": 93,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          24,
+          97
+        ],
+        [
+          32,
+          153
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "68331822022209127282536800750528019610933583054292409703716502683187881757213264503927760071556297146161853144956927547075072266814764276919233082278715142650899783869274089914993508128663606238475698741684452390816961520185929617827191122272679908614248601653394881795425576332222983501673903403795937822506366513995172773159588936994628634393740507912197186817713419756126126665647364519077564484984084882091132478545532332279038736310038275633894521272044415225722607584759325363568024586028126757946667704312740441906623882029442223981710395941086944718206030939350995564845665506406697385473815449362583474274273597940567153385860935006527942918405149870503468623383/467189815940617902545224889036641768565210763130876218221960547309652533172668593967174207646618648068078024270558046690521694489672438563675665983407706976173187564505572928243812412819551169375470466451501944372235002195033434736628870288984858803416601740628224754238110261705878466418126024508224167672534050803891120975779483307621785952131306179430126768923897776839004576312298820339250785424247256286545792162081338873169240893077839706422611337651903039497096734338211953899596576988882353581048815215326458733790072395466139896791662407379242854299414491746827785260369171473054315839724738100262638397801625232433321692715788171951743194252217539786880675840",
+      "log_global_gap_lower": "990316261191436627283142039862724921897588160207136372517630473669389590684250210201851595239946335451621060071839529667754670533547308361148305540271233951462315708250349129202804465632805887514140561473687715808941471307042458229379581482212752298757226110918766402832254729452507007270636281214433881485599514695582214103762158507168530933242616056698509953879904634146755458922425572740254557753392534523059890993413512062015054149420844574404268424232527756894530544706656889327072820087364155912270546439315078868211940319267278608430585448421549923452261317961608631374574862411691266456142252889312803974989472433921263092548709202993158593020364490876861864107/419207937828806985520492796335872307247945822381969991356695552873330352060730157360623403144416035416957253753659346463962687749612347222498972823031552880533335710329175100222694927089436661000424574523098084031971402723125940294737333665659313499460105889130765252910989934419618152773620565390916401881679255736993655197417948484158521971527337794183023971705676893364700611839900974776509828611623362515809334985107541112524221551064144027199824046156685938354619438355580276619666209813585465300799020914122923914255030509633569966358545339919629996744386260598395964143517254037168134959864104842315229305966605304135210649028499864776929439135897761995053413280849920",
+      "ring_remainders_sha256": [
+        "4ba4eade1dbb6285e38902dda07599facab1928bc4e6367468ff32ec11efe78a",
+        "6ae0e30b727d0d147cafe8cf34b708fa6d88955fdac0e651ff88e111feac050b",
+        "6738e65ba4d6409844f139e4aebad3454627855b73a7c6c904c3bf7176697de6",
+        "648a153933eb2838bc296cc98124f94369c51f0d0080b072d7d69c775fceabf8",
+        "a63b9d15af5f49860439197c525b0daa79b4e84b179de7c045790b73e9c5b958"
+      ]
+    },
+    {
+      "n": 94,
+      "rings": [
+        [
+          6,
+          5
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          18,
+          53
+        ],
+        [
+          26,
+          97
+        ],
+        [
+          32,
+          155
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "307122897954415933409469092930299756892951027539162575458829268171970786150023637866315593397681970012337882101093254498986192029896056592451800768694122589289257197453245187699635335940975164868136213056977771929153560661749951866986298309402816762345877968533782055336174534362456547780701413839668666671336824337602086027191687470203964721884345215444951688204191238593554301446523679830033475032572873216147299571043983021135754738945962954576204311520418217502391304785025925840909498544451798185214277615792942618611834038210635623249227074282377978615643894370680556527697419483596904354818345522370085428194917406181435908620337359168073036677143449785497547786431/4871295681123804214584561852460291289792259277017711808491529506219928161057609933337384545000384722776191675981855359862270081579254703797984308522777934614923898128118381115500718619877028387573432155371488908829992311457578169895710045227766511949642241620382784754414196851607513136416657777519248636395681523081382341869382822914215812754955016644757436712045565653917994698510017691928507462883846550337675064920336298169928801860002923338692787688822974129214868298937096065880432897491086905667155057272907289462990801552893325624160253675582084152200076986870490540985574073148310291941055862133190356986869500467208938757013011996862968583820661792776335360000",
+      "log_global_gap_lower": "210791282055192816341433831798421247009575173328182961879773004922423326115321645755878924775347954709909321963687889155103769409674712829410981996358354556821727657826523807618143676006160030794877291048028669820970185766472170121473094241182441154664295105376652062687834272040121172121277566121941432169757600780783861377619552141526399946385961026386377273990522469865171106003104790549096413886460448329545160995912136596524196800923790634575294654440918474606994718452317039012292037436137129845720163085650612641463166807282522733870437250708564158281155727090377869957239134854905219186560292053788665359090540429774492730693436759895726174795568599715509641583/232445564534457015229017371738588703591533152825164961450513710060098800032450396233033313287601357970600648679496584948691886390749928403009936443504803817194169616538676039040793990672120114381196491530723484858204275122745840564181554512151425757305858700296453493240283996846896347335648225832996994882347293509483553759918087914126801623553290511244548510563363074534266520226681918212829362009413659381082976142829655274293760609874503494121739227262641385713397556567700987814042968742741190312481904729914226294221317274020031976138304488739220542324191953613293945340425032278047181524668138995754297540485246701593995814243892698659109017101604047030625504907264000",
+      "ring_remainders_sha256": [
+        "15acf067e70a8b8c2a4bbccc1b286c9f0894b34b224bcf9ad4bbcb039500d4de",
+        "387113ba2b6af3a52e82b9673b4b1e87d432a5d205a6be1257fa33437677e5ed",
+        "fef2fa9a9dffc4bdb8369d9d53be9d0faf425194f4c6314dcd99de9ea118da7d",
+        "2d36fecde57b88b1587d48772c23bfe6aba3ece4f34ccab0974452874eda5089",
+        "23976b7afade1e5ba85bc78bfa167653c7884f5a4cbdc16a927095bafb08e027"
+      ]
+    },
+    {
+      "n": 95,
+      "rings": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          25
+        ],
+        [
+          18,
+          55
+        ],
+        [
+          26,
+          99
+        ],
+        [
+          32,
+          157
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "3064108847294244766291384298624360328243056566326098899519357270142142076376014937487286879931574248924996911663007266728971812263832880637226750766633588641354969206415225521399054777519123069709029948510530964024746873044655018818102510095223648044501887056869550113416752917807500285044236782476895805851929552500059157144742891209353923758725186329849243015651992082891043717096806719999084857856521615722777359533425564578252389407897926802249907727158555626473552968249567880115897439177817135698935286998894530119098513372366528715078315580893747520932916385623742526012479651854404836950700473279156252440942885627598039268740520179473139198117/20583231119416356154138327136048490647889304853905624106384493898727685433477795967384287073997437810512800962370615883226775210421905109474072935579612421836458162199952860996064016261183385589011365714993177008225540154011674691731141450011030187506903690572514705513358771210622365067823376229664606040172685096213800797590840858147307673566093564786989787719009657399347769716464343243497613067740572516826569050759457598753526285920757953036872679244532505580748444147093955213201547525666501974394842685154353597286896990351361592724691974556053237205455108407522190963888841867402443264579553935759585833133195106255299742251851039993877626880",
+      "log_global_gap_lower": "30881276176537741205624253849517629288003929559837502906690050874892809280385368910846116371090893886142186119783947816977319496499995437553237129786900669397754448888843258334368973121693289616328409335492473321637986402465728073194762139817483574916592366754564334849664923023815792346470471491928401178798842074468681315008606966275683442137207924936890467123032395012339746308926383516228178858576365667978719189026685421281379064581278097671051701617499440804324721964441333618189335893169489609507746453516294256519469899609517086714115162629388272887341822475491246062835741172104863978226544523530130203772100751006027271465469968214174975121/14270952919996651833843131682030012704091411834990337356566737168901321843697311661888395589480939923128467097784998773394089850482537267819741284722743971693306231727036771702709249790715130200078714726298296694043006277217138039768232545953011186240354711326741100305662933790032431079414828874607697974372891237135099767174750791414856331761149136643250186801232130301364880679543753587974887797699236833479986186718463137436874422066270092708188537543630590701113427191009972791646107853654423389814472283586536021103654029504863759118726391544426067266897094443906990186273992651160801986409792512503888409699117132842617647295710198058009726065049600",
+      "ring_remainders_sha256": [
+        "8d8215c9176eba05d1273c2571f943c9d820594ce572222f28a958cac5347e8e",
+        "524bc52795c2bc58a15303cf5b4f8348a0584476d2b15c9c09424d47d28d1c99",
+        "25d6d8c0563c3785db912a8758a1074581a28d7fd7f5ee15b5d147d06687543f",
+        "5d4cefd3045aab4a0bd34a4fc141ecae729aaa861f9e2febfa41f95e7f68cc34",
+        "ebf49fec9ecb82aecd097e19ad94eba4eeaf80db995e799335ff624900017ab0"
+      ]
+    },
+    {
+      "n": 96,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          18,
+          65
+        ],
+        [
+          24,
+          107
+        ],
+        [
+          30,
+          161
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "705795809252668829841766504697059909538236040902845924258561032016533569352916878194631301692143627687958390513475777649325021027263833499362934634452430685307563019415249383888479067166420386514156174688426794097610893002675033370584312471612666242126569125044950049813643583505386968787100837055267219446524804401466429795337256485569622045891504824476918813878984430022021112474806480839852217788117642690227559826865241411466211754206000295516436520982491166679689795731269372505804209031001888897749508953208668697236929962527695188216783558014506051492564878404032526492215606890011559866444419754725034616066197217562113808528243431796661517590547829638105960485807317274919157040244966830702575656585538085046799014425762087447873167145401496989685871583412567872354516912054150121043626315481467757828321678006484458546419/1432265449636818020483703550396210004430931381324542437781585351444634137965558183806492978211632926862061385374965018480939750253210798089732901007172955903824662073406024828766862203181896635488858466972344337005057196467098343564124537636534834962569763872068244021107463266813820383870319351462805677539109867309251293160230662905376120551822518243992554458602606433292268905135453743282123248688215111920593197725057520529824865612489566960413445143900850577050810479567443191823839975458472380610245932328024444613496629206679965633851887401966434251363458666286505137472669655119333284105675953678179755319300309958577135570734438558240307469689936524183469184805093044117854286061780262642978900816187301563132395198187708423074668999901407632117267004315284188146910646054099202627225520725429659741434862166730390028560",
+      "log_global_gap_lower": "705795809252668829841766504697059909538236040902845924258561032016533569352916878194631301692143627687958390513475777649325021027263833499362934634452430685307563019415249383888479067166420386514156174688426794097610893002675033370584312471612666242126569125044950049813643583505386968787100837055267219446524804401466429795337256485569622045891504824476918813878984430022021112474806480839852217788117642690227559826865241411466211754206000295516436520982491166679689795731269372505804209031001888897749508953208668697236929962527695188216783558014506051492564878404032526492215606890011559866444419754725034616066197217562113808528243431796661517590547829638105960485807317274919157040244966830702575656585538085046799014425762087447873167145401496989685871583412567872354516912054150121043626315481467757828321678006484458546419/89380895169483534801301717673210314893458871382932885529807406557120402721645369568193467981665872895146239686536916060180543829905321592850379400210706528741338660512747386085606371961262353772813557027595166665156693833023632726418802872452218899378374632448182102120213058365123529350871842010487129613021261366890477701816246796344783281962153994284701991794064966415265000119858953093941894173481361744033514366275990856241748438785442287107343550949151551025913902913930107980190804550806905463033391324971075610598230084772585707298927045988826382608452444635301376165308351862432951677026240627442120906201400098681395450661229991482032333325383572375281092755260453824015178058610162331684726129077652006041498876524936930786694858217025499645703066771412787525589262251209223798291596013641243390730939453061042127396621446400",
+      "ring_remainders_sha256": [
+        "839e56b9c22c19dd84e01f8e71b34884ef3312f0df9d361a83b619d5db9516ee",
+        "81e19db93de92f5d25178e8e968aa4d4836e24c2fa30921493ac9f5f230126d3",
+        "efe66a22eb940d2cba049a55b907a5c43350fd09cd2d604d1bffbb01ccb30a7f",
+        "3ecafba65ee1828adf640b4da42bb779bd8d95b3f2efbcab1462c8d56bfe1e93",
+        "e1225b973689afed7d6c23e21a4658dd6e9b9044807c12f72b94f27f42c0ca17",
+        "a6c9a98ceb77c29e0ead2cf979f6f90acce910e4034bb5d7747e972a649187b4"
+      ]
+    },
+    {
+      "n": 97,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          24,
+          109
+        ],
+        [
+          30,
+          163
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "29372967655807869532178011129219322179302538798452837181194855386762564313968610502336077624394954094673296309215328647674304074746081997517626291447853139956148096077560415700120430294974384676293921141738191380967219791221199217284898341443142686466640402449741717115950214698216055576811892649778788372589899061136086641472096560303107954418472598273832965168302913294232601022057954344555293085345118057711313166996103338728601253307952268339130938653527189699222505871696137180043154086083825371127085251256337446611031842401925737322142012244234085278098025388934569277120736227087544873938072757617409910922291166115714296283844326589018014788728517769729170340765399722292233176984692141667487855625930153114440853017973/206226611301336368238701292335897630784246930550207171189453947550151244511776590239401489722759803017534802899846053171980146717991406663230588369750368849631079271579148739328336195544255026084623926371871326168422256422417464250718875394361668451470375776850389375602808355297182418895908286943102909808853666194781388362367420520022016896757008249756808034679128265329000563274068170789038680057991451559021543565768720482367901232812807857323316310055040143632086924273458209793596212278717881900825392402167531584870299060336115964694820532325221088031132867736591817029353878144793160835516750996840418778191245071245735292519719957336460065580749216032123637873071454637217966351075120174871404722987266031493147628800",
+      "log_global_gap_lower": "29372967655807869532178011129219322179302538798452837181194855386762564313968610502336077624394954094673296309215328647674304074746081997517626291447853139956148096077560415700120430294974384676293921141738191380967219791221199217284898341443142686466640402449741717115950214698216055576811892649778788372589899061136086641472096560303107954418472598273832965168302913294232601022057954344555293085345118057711313166996103338728601253307952268339130938653527189699222505871696137180043154086083825371127085251256337446611031842401925737322142012244234085278098025388934569277120736227087544873938072757617409910922291166115714296283844326589018014788728517769729170340765399722292233176984692141667487855625930153114440853017973/16062183445820048757342911890717335534526350021904842686273751658961270776283763178988391524140659693326906488293923817549383049583331967972412868109918113587174741998311420132019215610848533404722578350641287176306902235748954666921773056975953227873596213227835718141427049666989335237693125287690999044820680334092925168669822503308985849899591534471929396503304210025693179279212139603892307299630753811396484978668513509087187517479763552801754305714605314657020978788713437463084603643083668733653608716402038683315236688212191876708116445938700928081258993193203570450316642658049628480518115632235997920673939052605291418629269203613210554712414496330477749733932475151305154236486298768350289150614455897042243316965314457600",
+      "ring_remainders_sha256": [
+        "969b6659a7f8e85913218a05209ade9979ea3bbf2b03c464d714025a8aafc862",
+        "2981672f677fa937d059afcaf8ebd4dcea24a848230e5ae490a079abf4868ec3",
+        "1b348c7187880fdfbaf362fd08e79501c0cc5575154ed27eb00e57065897b010",
+        "5db42473d57b408af4501bab3d3e623ada9579a72b00733b0aab5dd76259759c",
+        "8cf97d290cc1a14d4b15712974130f5b5cce461e5af029ef2270a123c1b917e3"
+      ]
+    },
+    {
+      "n": 98,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          24,
+          111
+        ],
+        [
+          30,
+          165
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "1164159844057433464378628073884962251101022332296093903574855339528097899948948559078617566608813369086541663370487091606915869986041144874330565365515638072675527957434519068416441693233329140319044341700195065884491160881956844320873263276697222976099554038559317622101945819630492515641524736755697686330631827825074058907967246739592774768633456100856835787005402638449890246192411517978591776574607702163182777557310548622237959441546221232730804600572540834650876797545047881406373910677921138235840599581797587843370340552607888746534649547740209789133001345601281758266671945585643855531830911567492291543354725560323754742446339224445419789476507374088099231648435412769246777919278454376170619181/2915913702225591758018731543844056641552974677050283817606647013790386070552125719334503091057716244879465975053882494642428766976004193049377616672689788524498371814630952565993071371453813092765771842266117388098042839490753165924079238837397630596549576569666936222475759657148381534723406483370142680537079598791113998798454762833678257703952768562119641453921095955004106311722363804760607940400995802745706089289108548130306033014271701823892801376861025217937070596419082639873262656539054780320592418209097235300517993505347638342119644043791648759770723371416981460837382130174360930053226044731208872335831454657865248567791107796373470795033336429856690034134367799746513820770500326059520000",
+      "log_global_gap_lower": "1164159844057433464378628073884962251101022332296093903574855339528097899948948559078617566608813369086541663370487091606915869986041144874330565365515638072675527957434519068416441693233329140319044341700195065884491160881956844320873263276697222976099554038559317622101945819630492515641524736755697686330631827825074058907967246739592774768633456100856835787005402638449890246192411517978591776574607702163182777557310548622237959441546221232730804600572540834650876797545047881406373910677921138235840599581797587843370340552607888746534649547740209789133001345601281758266671945585643855531830911567492291543354725560323754742446339224445419789476507374088099231648435412769246777919278454376170619181/198678158572778609817907280929331256310115176062896841271747043849771397579593589531971104675313457468004188952012741529659118416634583090511199755816536340663452568970746242579291411734953634513496353162308649813901595826004273066972525756909695062455752146304243399036766399504596361184786079384539935145373530880604993101731944136586752019262729031095763388381198921279503842197174033044890797720483802077117727014362451808519056325920092895752673000401799786535921192830971880731725224441757788738976389798202922893962083168216160752675889636187425141342446449296615006602122437764367338073642054152635104655349369081394671203609722926001909113314408607004542711266298216861618628830837128202831357570560000",
+      "ring_remainders_sha256": [
+        "9d2b863e436195468ea4af250d8c2899384fe01774fdd181c3e5f802d56d229f",
+        "cf5de790838c688cef9a0f5fe1114b13f6756dc39495acb0e036f4456524a43a",
+        "98b6c2a8fa08d1892047026562bcd57043e4bd9b815070410ce09505e81d3ff0",
+        "9cb1cf29b31d881b8c6d1412823e28594513782e1026a17bbedde2c611b1f94d",
+        "5e2b800c6b4fed88a284fe9f5bd53abfe1fd1e9584ca8d9cac53ebdc2972bb4a",
+        "4c5ed7f7b95ae2b25f37af36dbf4e7e59203b29c35a67c91f65b8345a32bb93f"
+      ]
+    },
+    {
+      "n": 99,
+      "rings": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          20,
+          65
+        ],
+        [
+          26,
+          111
+        ],
+        [
+          30,
+          167
+        ]
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "center": 1,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "3208687869250315268486035128984138993766481429482151875722010221111706613456113751301821447607302725744846943181132658532066726730192347075747708718512454678594276866362749273338544118752442126971597655778290433627080742701912541216333225486661583537464815164498757440217680856901243639056867514878740149104445213566049644821671861313974046683221741083334218997071190910484571512026758302560230425397565705744734984771546663321568936992952360796493765475537251949826800343282138443336472495882567556213086083745444534910919322473096693970474769273166561754812562154914669679363289848892888204126079868686494486397871396557191955760188295213041874427653476922508640427998082979571048925123791313550675390719634793792664978306049371141797303/32618419903799239641863246259256321133953397381584567503172906334664262485025151777380138480984070992321406067060589230786869530253767500459671134846991459905762492218556394965308779183523516163810379719202585471344139392155146545999473707257901772146172989273250103555572374193307857157065060682031971065961145054120280045051706040728074829225438146056396349791647348413014486029985289489324344703374776970164128984322889270639077019467705818746528751751935365632124838816710342831282821045113811100663853208144890141087791331682771247577873606222373859471910620879319455147068976562459381323061758269296651987847464361204344901089027408574292111384395345955991072658360372422656038641229167249522401912833945742508447217352128462848000",
+      "log_global_gap_lower": "3208687869250315268486035128984138993766481429482151875722010221111706613456113751301821447607302725744846943181132658532066726730192347075747708718512454678594276866362749273338544118752442126971597655778290433627080742701912541216333225486661583537464815164498757440217680856901243639056867514878740149104445213566049644821671861313974046683221741083334218997071190910484571512026758302560230425397565705744734984771546663321568936992952360796493765475537251949826800343282138443336472495882567556213086083745444534910919322473096693970474769273166561754812562154914669679363289848892888204126079868686494486397871396557191955760188295213041874427653476922508640427998082979571048925123791313550675390719634793792664978306049371141797303/2757191815061777192934174737493643310827578192413812891491264068368276677711383421415838077114096217086863628985592752397683288790223380571917891964362515842149728331932382479194222070250824652667974348911066606466970571834179931964162063171848320079667909104057044197165321657164507032575976468246758821844033192907590562837161018112240200615277562780603658722724476428615467259920666790024013503019537925708488355573909602218837583678554378148434236234995025142524050059765093138324085413205585676539407132078986771646714059943630173885854615251449017695796804501356208445303670722430746244558157369673939174468862264562324678732061543885468551238275354269826533683639929953393654927091901878955523016509318928636130219590212427394328166400000",
+      "ring_remainders_sha256": [
+        "b3e4fb2de51ba74c945684941a56a5a10aa205116f2c78c492b18cc456d3ffe3",
+        "3e504299e72adcf385e5e9ff42acd60234cb42db7ac8d7f3e4c9f0abbead0f5d",
+        "82d200b2e02875953a3b2a1fd9a2fe4ea52c777a52154e235afb6c845e8dee66",
+        "78d192d2a08621492db04f1927c800f2d50840c61d8eed8dbfdf439443ca36f4",
+        "59934ea203c78f699475fcc7fdd88ffcea07cab63408d04ba2f2732e95645325"
+      ]
+    },
+    {
+      "n": 100,
+      "rings": [
+        [
+          2,
+          1
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          14,
+          33
+        ],
+        [
+          20,
+          67
+        ],
+        [
+          26,
+          113
+        ],
+        [
+          30,
+          169
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "center": 0,
+      "stationary": false,
+      "all_phases_excluded_by_population": false,
+      "scale_invariant_residual_lower": "440606069205411520608022693342438914483062623204220085961288049143253778681072178621948220513585186017914066485389350405652381289606802711729460440252425689658280491936043657465776276571124285478271242853981066437746159089367357146269256860543101702948974438411778812947367568111099394428777954279295017716352512055813538027780792538666814428450616057264269437447164903246154844309531629254118355302540475545948507771300779277984215521887581598060035393026517218744755271615128680377755395222271302259919965157281825637266170704557732391471428090354871070068221498777098324437178297408143827837250269204969925259135169889208591585599280011250916703298727643574123223668621433076414099193396091407731273840144796176516262898433920195150066398893229096961774543802168086065201506325695922476761262957184974240357770053449677138501517701203027729630561925040188020077594778044359365018701074773662917555629853/1290373729146564297984712149429607519696399217839064904987159147280687659235840358696045121388000942858861308390661633512453175708312376338664881530632461430089505335659758237010061254252524745500510701115318001840419161177135681487828435906174317890484434062482370180305719107220045533369881222797478043216867730531821101802362105437069351872905243488035421945695260684712131652765291495287923887710787730069244856104148087127769004262694455376260771896150303665773883976410519572014668758298214997834505739929987081337829468652537319796958872671665481146005437442922718571293795004767740322623473843679041160709376735272404976194687557197846732573745142978267374142974479711589407124983580135287237053454949313005339795819690786995210628920387073368732425466208756358898606663219278828470930054060687864808964233067326827985972119768278604038856424805675512947123548450532622880876307273937170768000000",
+      "log_global_gap_lower": "40055097200491956418911153940221719498460238473110916905571640831204888971006561692904383683053198728901278771399031855059307389964254791975405494568402335423480044721458514315070570597374935043479203895816460585249650826306123376933568805503918336631724948946525346631578869828281763129888904934481365246941137459619412547980072048969710402586419641569479039767924082113286804028139239023101668663867315958722591615572798116180383229262507418005457763002410656249523206510466243670705035929297391114538178650661984148842379154959793853770129826395897370006201954434281665857925299764376711621568206291360902296285015444473508325963570910113719700299884331234011202151692857552401281744854190127975570349104072379683296627130356381377278763535748099723797685800197098733200136938699629316069205723380452203668888186677243376227410700109366157239141993185471638188872252549487215001700097706696628868693623/8684910057699904879751558515522256763464497053688813953036753349996479538197599427173292112477852184885915027686989711772431401505808229114083747905060350249971582824031543698694721641361272653419885744843814640000286348580155248857497182147003519644054364937963891598638654219977405021620942729182843394910845015872101690475425055734094841379532521276834557441656498714419413573650861037513287677289771347555174638656084214078750219430494613510638937055515267086393304124428323977322057845948247522883022122421509869031020703882616046268131840933424359303127518157846903484144083102671318185403161608520901610287637867094270674239817585055273899368889877659228167537232407725283879999135558477308169337669532183302010940260993582180322033225088238757538138149439963948701242137407842914872301353154000948364095885654455984535706935982885799456333512512545099080715219726272294555574550814638036054845600000000",
+      "ring_remainders_sha256": [
+        "9403697c25fa012df86d02338fc186a2fde3bc82be330e0ceffceae70119c782",
+        "d10f61f4aba1bc4678afe0a50fa2154ca9537941086a24cf8bf7c89ab02320fd",
+        "1791db6adcf2dafe2cdcd04567419556568d989a79373738cb96406a23da031a",
+        "dddca974ec50050a8ca8026ea6e126e2880769d1b051a35dae7b935e739eae05",
+        "a2a6a7acb28e4e5ebe045068699e114ae398f4f86b086b732466b0c1b94bad8e",
+        "ec141339feb511148f39756917256237536783e712b8cba606571e5c0c4608d7"
+      ]
+    }
+  ]
+}
