@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "arithmetic": "integer/Fraction only; outward roots and logs",
+  "outward_root_checks": 560,
+  "Dirichlet_norm_and_flux_checks": 12,
+  "centered_disk_mean_checks": 12,
+  "radial_duality_checks": 9,
+  "affine_layer_capacity_checks": 300,
+  "pi_layer_capacity_checks": 100,
+  "clipped_CDF_checks": 60,
+  "rejected_invalid_cases": 8,
+  "effective_examples": [
+    {
+      "n": 10000,
+      "proved_gap_upper": "16705/12",
+      "a": "1/10",
+      "direct_affine_minimum_layers": 45,
+      "direct_real_layer_lower": "59674134581000/1331103238521",
+      "pi_baseline_minimum_layers": 42,
+      "CDF_affine_minimum_layers": 39,
+      "CDF_a": "71449274229/200000000000",
+      "CDF_error_upper": "3988280303/62500000000",
+      "finite_family_best_minimum_layers": 46,
+      "finite_family_best_a": "3/20",
+      "finite_family_best_h": "19/20"
+    },
+    {
+      "n": 1000000,
+      "proved_gap_upper": "274105/12",
+      "a": "15811388301/500000000000",
+      "direct_affine_minimum_layers": 485,
+      "direct_real_layer_lower": "5483061284696645698279005457288560712585603000000/11305339887836839713924034951715477078360612091",
+      "pi_baseline_minimum_layers": 442,
+      "CDF_affine_minimum_layers": 459,
+      "CDF_a": "59819708939/500000000000",
+      "CDF_error_upper": "1431359031/200000000000",
+      "finite_family_best_minimum_layers": 487,
+      "finite_family_best_a": "47434164903/1000000000000",
+      "finite_family_best_h": "19/20"
+    },
+    {
+      "n": 100000000,
+      "proved_gap_upper": "13540105/12",
+      "a": "1/100",
+      "direct_affine_minimum_layers": 4954,
+      "direct_real_layer_lower": "140596244917100000000/28384271247461901",
+      "pi_baseline_minimum_layers": 4476,
+      "CDF_affine_minimum_layers": 4835,
+      "CDF_a": "11608634249/250000000000",
+      "CDF_error_upper": "1078083113/1000000000000",
+      "finite_family_best_minimum_layers": 4958,
+      "finite_family_best_a": "3/200",
+      "finite_family_best_h": "19/20"
+    },
+    {
+      "n": 1000000000000,
+      "proved_gap_upper": "120154000105/12",
+      "a": "1/1000",
+      "direct_affine_minimum_layers": 499534,
+      "direct_real_layer_lower": "706696403168000000000000/1414713562373095049",
+      "pi_baseline_minimum_layers": 449897,
+      "CDF_affine_minimum_layers": 496783,
+      "CDF_a": "9073634113/1000000000000",
+      "CDF_error_upper": "20582709/500000000000",
+      "finite_family_best_minimum_layers": 499575,
+      "finite_family_best_a": "3/2000",
+      "finite_family_best_h": "19/20"
+    }
+  ],
+  "scope": "Finite arithmetic checks. Distributional Laplacian, disk mean comparison and all-n transport are proved analytically in RADIAL_TRANSPORT.md. Capacity inputs are separately proved; no optimum configuration is classified."
+}

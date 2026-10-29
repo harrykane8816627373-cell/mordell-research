@@ -1,0 +1,182 @@
+{
+  "passed": true,
+  "arithmetic": "integers/Fraction; no floating-point acceptance",
+  "independent_ordered_population_compositions": 65534,
+  "even_to_odd_exchange_checks": 100,
+  "independent_chebyshev_sum_checks": 37,
+  "circle_phase_identity_checks": 28,
+  "thick_pair_identity_checks": 63,
+  "convexity_numerator_checks": 372,
+  "rejected_invalid_cases": 6,
+  "eight_point_annulus_certificate": {
+    "n": 8,
+    "population": 8,
+    "even_subset_population": 8,
+    "radius_lower": "99/100",
+    "radius_upper": "101/100",
+    "squared_separation_lower": "16/49",
+    "phase_real_factor_lower": "19951/20000",
+    "odd_skip_reciprocal_sum_lower": "408120000/104142017",
+    "operator_lower": "407120106/104142017",
+    "operator_upper": "7/2",
+    "stability_slack": "-85246093/208284034",
+    "excluded": true,
+    "scope": "All local maxima with at least this many points in the stated thin annulus; no regular-angle assumption."
+  },
+  "eight_point_necessary_radial_variance_strict_lower": "39601/100000000",
+  "nonempty_witness": {
+    "integer_points": [
+      [
+        70,
+        0
+      ],
+      [
+        49,
+        49
+      ],
+      [
+        0,
+        70
+      ],
+      [
+        -49,
+        49
+      ],
+      [
+        -70,
+        0
+      ],
+      [
+        -49,
+        -49
+      ],
+      [
+        0,
+        -70
+      ],
+      [
+        49,
+        -49
+      ]
+    ],
+    "normalization_squared": "1/4851",
+    "minimum_squared_distance": "58/99",
+    "maximum_squared_radius": "100/99",
+    "minimum_old_pair_slack": "1136491/274428"
+  },
+  "integer_layer_examples": [
+    {
+      "n": 8,
+      "new_local_necessary": {
+        "n": 8,
+        "minimum_layers": 2,
+        "cost_cap": 448,
+        "last_excluded_layers": 1,
+        "last_excluded_cost": {
+          "cost": 512,
+          "population_groups": [
+            [
+              8,
+              1
+            ]
+          ],
+          "strict": false,
+          "all_minimizers_strict": false,
+          "cases": 1
+        },
+        "scope": "Necessary for all local maxima, using exact parity-dependent layer populations; not sufficient."
+      },
+      "old_global_packing_necessary": 1,
+      "elementary_layer_lower_endpoint": "2000000000000/2120828693387"
+    },
+    {
+      "n": 100,
+      "new_local_necessary": {
+        "n": 100,
+        "minimum_layers": 4,
+        "cost_cap": 79200,
+        "last_excluded_layers": 3,
+        "last_excluded_cost": {
+          "cost": 106888,
+          "population_groups": [
+            [
+              34,
+              1
+            ],
+            [
+              33,
+              2
+            ]
+          ],
+          "strict": true,
+          "all_minimizers_strict": true,
+          "cases": 49
+        },
+        "scope": "Necessary for all local maxima, using exact parity-dependent layer populations; not sufficient."
+      },
+      "old_global_packing_necessary": 4,
+      "elementary_layer_lower_endpoint": "50000000000000/14571247279471"
+    },
+    {
+      "n": 1000,
+      "new_local_necessary": {
+        "n": 1000,
+        "minimum_layers": 12,
+        "cost_cap": 7992000,
+        "last_excluded_layers": 11,
+        "last_excluded_cost": {
+          "cost": 8100000,
+          "population_groups": [
+            [
+              90,
+              1
+            ],
+            [
+              91,
+              10
+            ]
+          ],
+          "strict": true,
+          "all_minimizers_strict": true,
+          "cases": 495
+        },
+        "scope": "Necessary for all local maxima, using exact parity-dependent layer populations; not sufficient."
+      },
+      "old_global_packing_necessary": 11,
+      "elementary_layer_lower_endpoint": "100000000000000/9039798655451"
+    },
+    {
+      "n": 10000,
+      "new_local_necessary": {
+        "n": 10000,
+        "minimum_layers": 36,
+        "cost_cap": 799920000,
+        "last_excluded_layers": 35,
+        "last_excluded_cost": {
+          "cost": 810812200,
+          "population_groups": [
+            [
+              286,
+              1
+            ],
+            [
+              285,
+              22
+            ],
+            [
+              287,
+              12
+            ]
+          ],
+          "strict": true,
+          "all_minimizers_strict": true,
+          "cases": 4983
+        },
+        "scope": "Necessary for all local maxima, using exact parity-dependent layer populations; not sufficient."
+      },
+      "old_global_packing_necessary": 32,
+      "elementary_layer_lower_endpoint": "5000000000000000/141914284992713"
+    }
+  ],
+  "scope": "The universal circle/band conditions are proved analytically. Finite checks validate formulas, exact population minimization through n=16 and the stated entire-annulus certificate. These are necessary stability conditions, not energies or optimum certification."
+}

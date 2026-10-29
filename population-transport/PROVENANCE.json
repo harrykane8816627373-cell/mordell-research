@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-29",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "c33daad3e33ac2305be911b7d4bc542ca85fe53a",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author full second-variation operator contraction and local basic separation.",
+    "Author explicit polar lower construction and the effective E_n=n/100+(77/6)sqrt(n)+35/4 deficit upper.",
+    "Existing disk Coulomb decomposition and variable disk-smearing penalty.",
+    "Existing strict-subset separation is used only for the independent pi/CDF baseline; it is not needed by the main spectral-transport theorem."
+  ],
+  "new_results": [
+    "Alternating angular tests give parity-dependent same-circle capacity and a full-n local layer bound.",
+    "Thin-annulus Chebyshev capacity excludes the whole eight-point [0.99,1.01] radial band.",
+    "Truncated inverse-radius Dirichlet transport and a second-order disk-average transfer error.",
+    "Effective global K>sqrt(n)/2-(11/20)n**(1/4), n>=10000; liminf>=1/2 with no external linear asymptotic input.",
+    "Overlapping Green Gram and convergent rational disk averages across all hat interfaces."
+  ],
+  "review": {
+    "angular_capacity": "Root derived circle-capacity route; phase_optimization independently checked it and developed parity/annulus proofs; root checked the annular phase and convexity constants.",
+    "radial_transport": "Root proposed inverse-radius/CDF coupling; radial_breakthrough strengthened it to direct Dirichlet transport; root independently checked norm, Laplacian jump, disk-mean constant and scaling.",
+    "effective_corollary": "Root derivation and code; radial_breakthrough independent analytic confirmation.",
+    "overlapping_energy": "subset_constraints derivation; root and radial_breakthrough independently checked Green Gram, Lipschitz constants, boundary cells, normalization and outward rounding."
+  },
+  "acceptance": "Four Python standard-library integer/Fraction entries, outward roots/logs/quadrature, checks active under -O, fixed-byte manifests and deterministic report replay.",
+  "limitations": [
+    "The half coefficient is a liminf lower bound, not an exact layer asymptotic or optimizer classification.",
+    "The finite family certificate chooses among listed a/h values, not all parameters or configurations.",
+    "The crossing-interface example is already subject to other geometric exclusions; it demonstrates interface generality.",
+    "No complete eight-point sharp proof, exact gamma, crystallization or global priority claim.",
+    "AI independent checks are not external peer review or whole-proof formal verification."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "arithmetic": "Fraction, integer disk geometry, outward value rounding and Machin pi intervals",
+  "overlapping_gram_integral_checks": 64,
+  "classified_grid_cells_checked": 3264,
+  "rejected_invalid_cases": 7,
+  "old_interface_rejections": 4,
+  "example_points": [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      -2,
+      0
+    ]
+  ],
+  "example_actual_squared_hats": [
+    [
+      0,
+      "3/10",
+      "27/10"
+    ],
+    [
+      0,
+      "3/5",
+      "24/5"
+    ]
+  ],
+  "example_raw_smear_squared": "5/3",
+  "example_raw_gram": [
+    [
+      "81/40",
+      "88/45"
+    ],
+    [
+      "88/45",
+      "512/63"
+    ]
+  ],
+  "grid32_delta_lower_outward": [
+    "116616914529/1000000000000",
+    "11661691453/100000000000"
+  ],
+  "grid64_delta_lower_outward": [
+    "342957649851/1000000000000",
+    "85739412463/250000000000"
+  ],
+  "grid64_raw_moment_rectangles": [
+    [
+      "314658931941/1000000000000",
+      "427407269569/500000000000",
+      "0",
+      "0"
+    ],
+    [
+      "1746543349599/1000000000000",
+      "256537970291/100000000000",
+      "0",
+      "0"
+    ]
+  ],
+  "neighborhood_radius_raw": "1/1000",
+  "neighborhood_total_raw_moment": "10",
+  "neighborhood_delta_lower_outward": [
+    "336122374589/1000000000000",
+    "33612237459/100000000000"
+  ],
+  "existing_global_optimum_gap_upper": "1/8",
+  "scope": "Finite exact implementation tests and an interface-crossing nonempty neighborhood class. The example is not claimed to evade older geometric exclusions; no unknown sharp value or full-domain cover is established."
+}

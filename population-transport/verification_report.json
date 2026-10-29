@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "date": "2026-10-29",
+  "manifest_inputs": 109,
+  "runs": [
+    {
+      "entry": "verify_angular_capacity.py",
+      "passed": true,
+      "seconds": 0.453
+    },
+    {
+      "entry": "verify_radial_transport.py",
+      "passed": true,
+      "seconds": 1.265
+    },
+    {
+      "entry": "verify_effective_layers.py",
+      "passed": true,
+      "seconds": 0.25
+    },
+    {
+      "entry": "verify_overlapping_energy.py",
+      "passed": true,
+      "seconds": 2.25
+    }
+  ],
+  "all_local_maximum_layer_bound": "K > n/(1+2sqrt(2(n-1)))",
+  "global_effective_layer_bound": "K > sqrt(n)/2-(11/20)n**(1/4), all n>=10000",
+  "global_asymptotic_layer_bound": "liminf K_n/sqrt(n) >= 1/2",
+  "external_linear_asymptotics_required_for_new_layer_theorem": false,
+  "finite_family_minimum_layers": {
+    "10000": 46,
+    "1000000": 487,
+    "100000000": 4958,
+    "1000000000000": 499575
+  },
+  "eight_point_strict_radial_variance_lower": "39601/100000000",
+  "scope": "Necessary geometric/energy constraints and exact finite certificates; no complete general optimizer, eight-point sharp bound or exact gamma.",
+  "elapsed_seconds": 4.312
+}

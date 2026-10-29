@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "root_enclosures_checked": 603,
+  "invalid_inputs_rejected": 4,
+  "old_effective_deficit_rate_upper_at_10000": "3341/24000",
+  "error_coefficient_upper": "13/24",
+  "theorem": "Every global optimizer has K>sqrt(n)/2-(11/20)*n**(1/4) for all n>=10000.",
+  "rows": [
+    {
+      "n": 10000,
+      "strict_layer_lower_endpoint": "89/2",
+      "minimum_layers": 45,
+      "sqrt_interval": [
+        "100",
+        "100"
+      ],
+      "fourth_root_upper": "10",
+      "scope": "Necessary count for every global optimizer; the closed corollary requires n>=10000."
+    },
+    {
+      "n": 100000,
+      "strict_layer_lower_endpoint": "37083336563301/250000000000",
+      "minimum_layers": 149,
+      "sqrt_interval": [
+        "316227766016837/1000000000000",
+        "158113883008419/500000000000"
+      ],
+      "fourth_root_upper": "1778279410039/100000000000",
+      "scope": "Necessary count for every global optimizer; the closed corollary requires n>=10000."
+    },
+    {
+      "n": 1000000,
+      "strict_layer_lower_endpoint": "2413037364345369/5000000000000",
+      "minimum_layers": 483,
+      "sqrt_interval": [
+        "1000",
+        "1000"
+      ],
+      "fourth_root_upper": "7905694150421/250000000000",
+      "scope": "Necessary count for every global optimizer; the closed corollary requires n>=10000."
+    },
+    {
+      "n": 100000000,
+      "strict_layer_lower_endpoint": "4945",
+      "minimum_layers": 4946,
+      "sqrt_interval": [
+        "10000",
+        "10000"
+      ],
+      "fourth_root_upper": "100",
+      "scope": "Necessary count for every global optimizer; the closed corollary requires n>=10000."
+    },
+    {
+      "n": 1000000000000,
+      "strict_layer_lower_endpoint": "499450",
+      "minimum_layers": 499451,
+      "sqrt_interval": [
+        "1000000",
+        "1000000"
+      ],
+      "fourth_root_upper": "1000",
+      "scope": "Necessary count for every global optimizer; the closed corollary requires n>=10000."
+    }
+  ],
+  "scope": "Arithmetic verification of the closed finite corollary; universal bridges are proved in EFFECTIVE_LAYERS.md and the transport/capacity documents."
+}
