@@ -14,7 +14,8 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 ## 从这里阅读
 
 - **[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)**：统一查询结论、适用范围、证明和代码；历史待补条目的当前判断也在此汇总。
-- **[最新一般 n 构型：规则分量障碍、两点约束与自由移动](symmetry-breaking/README.md)**：10≤n≤100的91项下界全部严格改善；39—42点至少三层，80—85点至少四层，并有任意驻点的正规分量人口限制。
+- **[最新通用层数、局部能量与多点稳定性](collective-stability/README.md)**：全n层数加强为K>n/(π√(n−1))，渐近下端提高至13/30；新增环带角向与多点联合证书。
+- **[此前一般 n 构型：规则分量障碍、两点约束与自由移动](symmetry-breaking/README.md)**：10≤n≤100的91项下界全部严格改善；39—42点至少三层，80—85点至少四层，并有任意驻点的正规分量人口限制。
 - **[此前径向层数、混合矩能量与人口优化](radial-angular/README.md)**：全n层数下界提高至3√n/22，渐近常数提高至101/250；任意百点全局最优者至少四层；新构造提高87项已存下界。
 - **[此前联合上下界与构型约束](joint-bounds/README.md)**：严格圆盘修正、径向与角向复矩可加证书、全 n 内环收缩和最佳两矩子集递推；相对其此前包络提高45项。
 - **[最新有限 n 构型与上下界](configuration-bounds/README.md)**：全部正负相位的精确分解、带严格增益证书的有理上升、径向人口限制与构型类上界。
@@ -29,12 +30,20 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |五点全局锐值|$`M_5=5^5=3125`$，单位正五边形|[作者二阶条件与矩方法](earlier-results/five_point_method.md)、[PDF](earlier-results/five_point_proof.pdf)|
 |六、七点全局锐值|$`M_6=6^{15}/5^{10}`$；$`M_7=7^{21}/6^{15}`$|[主稿](earlier-results/six_seven_proof.tex)、[覆盖审计](earlier-results/six_seven_coverage_audit.md)；全局证明引用 Faugère–Svartz 物理驻点完整分类，七点356次枝未在本地独立重建|
 |八点完整锐界|目标为 $`M_8=8^{28}/7^{21}`$；尚未证明|原点加正七边形达到候选值；低矩和若干几何分支已证，一般 $`p_2p_3\ne0`$ 分支仍开放，$`p_k=\sum_i z_i^k`$|
-|一般 n 的有限上下界与最优层数|$`M_n\le U_ne^{-c_n}<U_n`$；最新自由构型提高91项已存下界，$`K>3\sqrt n/22`$|[严格上界修正](joint-bounds/ANGULAR_PROOF.md)、[最新自由构型与必要条件](symmetry-breaking/README.md)；不确定一般锐值或γ|
+|一般 n 的有限上下界与最优层数|$`M_n\le U_ne^{-c_n}<U_n`$；最新自由构型提高91项已存下界，$`K>\sqrt n/\pi`$|[严格上界修正](joint-bounds/ANGULAR_PROOF.md)、[最新通用层数与联合条件](collective-stability/README.md)；不确定一般锐值或γ|
 |严格真子集约束及有效网格|已证；有显式正有理余量与有限全局误差界|[子集证明](finite-n/SUBSET_PROOF.md)、[混合网格](source-review/HYBRID_GRID.md)；网格上界要求完整穷尽规定网格|
 |十点中心正九边形及旧缺件条目|四阶严格局部最大、完整网格、保存整数下界和特定 Hermite 障碍现均已核验|[已更新原审核](earlier-results/general_n_proof.md)；十点该局部最大仍全局次优，旧证明确认归用户原有成果|
 |确定的线性渐近项|已证 $`\log M_n=cn^2+\frac n2\log n+\gamma n+o(n)`$，$`c=\frac12\log2-\frac14`$|[外部定理、尺度与常数](asymptotics/README.md)；精确 $`\gamma`$ 及真实有限 n 边界修正仍未知|
 
-## 最新一般 n 构型进展
+## 最新层数与联合构型约束
+
+[本轮专题](collective-stability/README.md)联合用户既有严格子集间距、同圆角向装点和总二阶矩，证明任意全局最优者满足K>n/(π√(n−1))>√n/π，适用于全部n≥2。它不要求每层等角，且正确处理单点层。保留整数人口的立方预算，可进一步排除指定人口模式。
+
+新的分箱径向能量方法把各格共享的总层数预算保留下来，以127条有理凸切线严格推出liminf Kₙ/√n≥13/30，将此前0.404提高到约0.433333。其外部线性渐近与三角试探输入保持原适用范围；有限公式保留K+127修正，不能把渐近系数直接用于所有有限n。
+
+局部角向帽函数允许不同环带的偏差分别计入能量，并在覆盖条件下与全纯零级矩正交相加。多点块稳定性则给出两个非空厚区域的整类排除；其中一个区域通过全部旧两点及较强点距、半径条件。四条标准库接受入口、解析证明、来源与离线包见[本轮专题](collective-stability/README.md)。这些必要条件尚未完成一般最优构型的全域覆盖。
+
+## 上一轮自由构型进展
 
 [新专题](symmetry-breaking/README.md)将原稿两环障碍推广为：驻点若包含以重心为中心的正m边形，且另有M>0个非中心点，则m≤M；人口恰好平衡时，剩余点的多项式还须满足稀疏形式。完整余式检验说明上一轮99个所选规则候选中91个并非驻点；其中23个人口模式的全部半径、连续相位均被排除。
 
@@ -100,13 +109,13 @@ K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
 
 ## 下载与复核
 
-每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[一般 n 自由构型研究包](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)在解压根目录运行：
+每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[通用层数与联合稳定性研究包](collective-stability/mordell-collective-stability-2026-10-29.zip)在解压根目录运行：
 
 ```bash
-python -B -S -O symmetry-breaking/verify_all.py
+python -B -S -O collective-stability/verify_all.py
 ```
 
-其他专题离线包：[上一轮径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。
+其他专题离线包：[上一轮自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。
 
 完整八点附件为 **mordell-research-complete-2026-10-27.zip**，大小103026838字节，SHA-256：
 

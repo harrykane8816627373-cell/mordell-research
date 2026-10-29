@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "a4f6cf6485dfab7690213bc99a51b7fd8f4df43d",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "reused_inputs": [
+    "Author strict proper-subset internal-moment theorem and its stronger global separation, finite-n/SUBSET_PROOF.md and earlier-results/general_n_structural.tex.",
+    "Author second-order stability operator, source-review/revised_main.tex, and the previous saturated pair projection.",
+    "Disk Coulomb decomposition and variable smearing, radial-angular/RADIAL_LAYERS.md.",
+    "Existing external linear asymptotics and triangular trial constants, with original limitations in asymptotics/README.md."
+  ],
+  "new_results": [
+    "All-n K>n/(pi sqrt(n-1)) and exact integer cubic population budgets, without regular angular spacing.",
+    "Coupled radial-bin convex-dual certificate and asymptotic lower coefficient 13/30.",
+    "Compact annular harmonic tests, aligned population bounds, and orthogonal addition to contained global holomorphic j=0 tests.",
+    "Cross-set PSD compressions, a genuine three-point Schur condition and two exact thick-box exclusion certificates."
+  ],
+  "review": {
+    "ring_population": "Root derivation and independent phase_optimization analytic review; complete small composition enumeration.",
+    "radial_quantization": "radial_breakthrough derivation; root and subset_constraints independent geometry, scaling, tangent and rounding review.",
+    "local_energy": "subset_constraints derivation; root and radial_breakthrough independent norm/mean-value/orthogonality review.",
+    "block_stability": "phase_optimization derivation and root independent projection/scaling review; exact interval and principal-minor acceptance."
+  },
+  "acceptance": "Four standard-library Python entries, Fraction/integer arithmetic, explicit checks active under -O, pinned fixed bytes, deterministic report replay.",
+  "limits": [
+    "Finite and asymptotic layer statements have different quantifiers; no effective starting threshold claimed for 13/30.",
+    "Block conditions compress the original complete stability operator and are not stronger than it.",
+    "Local angular example also fails other known population constraints; comparison is only against the specified same-mode old projection.",
+    "No new general sharp optimum, complete eight-point proof, exact gamma or crystallization.",
+    "AI cross-review and computational checks are not external peer review or full formal verification; no global priority claim."
+  ]
+}

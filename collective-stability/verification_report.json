@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "date": "2026-10-29",
+  "manifest_inputs": 88,
+  "runs": [
+    {
+      "entry": "verify_ring_population.py",
+      "passed": true,
+      "seconds": 0.422
+    },
+    {
+      "entry": "verify_radial_quantization.py",
+      "passed": true,
+      "seconds": 1.36
+    },
+    {
+      "entry": "verify_local_energy.py",
+      "passed": true,
+      "seconds": 0.297
+    },
+    {
+      "entry": "verify_block_stability.py",
+      "passed": true,
+      "seconds": 1.437
+    }
+  ],
+  "all_n_layer_bound": "K > n/(pi sqrt(n-1)) > sqrt(n)/pi, n>=2",
+  "asymptotic_layer_bound": "liminf K_n/sqrt(n) >= 13/30",
+  "asymptotic_margin": "960516385870662088951/54067200000000000000000000",
+  "finite_population_examples": {
+    "1000": 11,
+    "10000": 32
+  },
+  "independent_integer_compositions": 65534,
+  "whole_coordinate_boxes_excluded": 2,
+  "scope": "Necessary layer, population and stability constraints and conditional local energy bounds. No general optimal configuration, full eight-point sharp bound, exact gamma or crystallization.",
+  "elapsed_seconds": 3.672
+}

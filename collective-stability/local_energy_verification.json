@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "arithmetic": "Fraction and outward rational logarithms",
+  "annular_norm_identity_checks": 40,
+  "radical_support_checks": 64,
+  "rejected_invalid_cases": 9,
+  "rational_shape_angular_delta": "1225/1089",
+  "rational_shape_global_j0_bonus": "19208/9801",
+  "rational_shape_local_plus_j0": "30233/9801",
+  "example_n": 100,
+  "example_bands": [
+    [
+      "7/20",
+      "7/20",
+      35
+    ],
+    [
+      "347/260",
+      "347/260",
+      65
+    ]
+  ],
+  "example_hat": [
+    2,
+    "0",
+    "27/50",
+    "51/50"
+  ],
+  "example_local_moment_squared_lower": "121",
+  "example_cap_norm": "210681/260000",
+  "example_local_angular_delta_lower": "31460000/210681",
+  "existing_global_optimum_gap_upper": "1657/12",
+  "explicit_inner_moment": "37989770825660488830343538959272028004563424088945206341576126930569016624868640482/3392635861919663375846118622616222640865872536472634532441235885405154708983661985",
+  "prior_same_mode_degree_one_upper": "92557824/765625",
+  "aligned_population_example": {
+    "n": 100,
+    "maximum_population": 31,
+    "allowed_population_square_upper": "24357900/25289",
+    "per_point_projected_moment_square_lower": "480249/4000000",
+    "scope": "Necessary under stated alignment, noncancellation and harmonic-disk-containment hypotheses; not a universal disk population bound."
+  },
+  "example_nonempty_construction": "35 inner points = 8 rational-unit quadruples plus regular triangle at q=7/20; outer regular 65-gon at q=347/260.",
+  "scope": "Class exclusion and same-mode degree-one comparison. No failure assertion for all prior radial-plus-angular certificates or higher global mixed degrees; no full-domain cover."
+}
