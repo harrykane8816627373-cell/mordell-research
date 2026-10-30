@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "independent_polynomial_integrals": 12,
+  "direct_full_Gram_replays": 8,
+  "physical_stationary_shape_joint_energy": "27372815353/151164969066",
+  "n100_energy_hole_center": [
+    "1",
+    "0"
+  ],
+  "n100_energy_hole_radius": "19073/100000",
+  "n100_point_hole_radius_description": "19073/100000 + sqrt(2/100), Coulomb x scale",
+  "n100_basic_hole_energy": "132335400207690241/160000000000000000",
+  "n100_second_moment_screened_energy": "18680221728516572477206801/22580012343991692390360000",
+  "n100_stationary_dipole_screened_energy": "221939714356505397601694002681/267955521698466840711467160000",
+  "n100_certified_global_gap_upper": "413923829261/500000000000",
+  "n100_hole_class_excluded": true,
+  "invalid_inputs_rejected": 5,
+  "scope": "Joint moment-conditioned energy is stronger than the listed individual projections. The example is not claimed to pass all previous geometric criteria or classify optimizers."
+}

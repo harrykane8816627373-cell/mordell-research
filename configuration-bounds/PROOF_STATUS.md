@@ -2,7 +2,9 @@
 
 研究资料与项目发起：蒋丰灿（Fengcan Jiang）；推导与代码包含 OpenAI Codex 协作。更新于2026-10-30。此页汇总当前判断，定理的全部假设和证明以所链接正文为准。
 
-**最新补充见[二维分布、微观覆盖与局部人口](../distribution-geometry/README.md)。** 所有全局最优者在n≥64的单位内盘有6/√(n−1)覆盖保证；完整二维W₁有有效n⁻¹ᐟ²阶上界，任意中心圆盘人口、含边界覆盖与薄条带谱容量另有精确证书。尚未确定微观晶格或一般最优构型。
+**最新补充见[驻点闭合、矩校正空洞与含边界覆盖](../stationary-screening/README.md)。** 八点全局最优者必有|p₂|²+(27/100)|p₃|²<64/49，从而|p₂|<8/7；一般n驻点混合矩与空洞完整Gram有新闭合接口；闭背景盘覆盖推进到O(√(log n/n))。八点完整锐界与一般构型仍开放。
+
+**此前[二维分布、微观覆盖与局部人口](../distribution-geometry/README.md)保持有效。** 所有全局最优者在n≥64的单位内盘有6/√(n−1)覆盖保证；完整二维W₁有有效n⁻¹ᐟ²阶上界，任意中心圆盘人口及薄条带谱容量另有精确证书。尚未确定微观晶格或一般最优构型。
 
 **此前[谱人口容量、径向运输与有效二分之一层数](../population-transport/README.md)保持有效。** 全局最优者在所有n≥10000满足K>√n/2−(11/20)n^(1/4)，故liminf Kₙ/√n≥1/2；新全n局部界、八点薄带和跨界角向证书也已核验。主层数证明只用已有有效初等下界，无需外部线性渐近定理。
 
@@ -23,7 +25,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |五点|$`M_5=3125`$，等号单位正五边形，允许旋转、重排|[作者方法](../earlier-results/five_point_method.md)、[PDF](../earlier-results/five_point_proof.pdf)、[TeX](../earlier-results/five_point_proof.tex)；主线为二阶条件、径向矩、投影及四次对数上界|
 |六、七点|$`M_6=6^{15}/5^{10}`$、$`M_7=7^{21}/6^{15}`$，等号原点加相应正多边形|[主稿](../earlier-results/six_seven_proof.tex)、[复核](../earlier-results/six_seven_verification.md)、[覆盖审计](../earlier-results/six_seven_coverage_audit.md)；全局证明依赖 Faugère–Svartz 完整物理驻点分类，七点356次枝的物理排空为论文输入，未在本地独立重建|
 |六、七点含原点类|不调用上述分类的锐界与方差惩罚|[独立证明](../earlier-results/six_seven_origin_proof.tex)；结论仅适用于含原点类|
-|八点|候选值 $`8^{28}/7^{21}`$ 可达；若干低矩、几何与稳定分支已证|[完整八点归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)；完整无条件上界及一般 $`p_2p_3\ne0`$ 分支未解决|
+|八点|候选值 $`8^{28}/7^{21}`$ 可达；最新必要椭圆给二阶幂和模<8/7|[最新驻点混合矩](../stationary-screening/STATIONARY_MOMENTS.md)、[完整八点归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)；完整无条件上界及一般非零矩分支未解决|
 |中心正多边形类|5≤n≤10模旋转严格局部最大；n=10使用四阶项，n≥11有显式增益扰动|[一般 n 审核第6、7节](../earlier-results/general_n_proof.md)；五点中心正方形、十点中心正九边形仍全局次优|
 |一般 n|已有有限上下界、全局网格包围、结构与渐近定理|没有得到所有有限 n 的简洁锐值公式；有限代数刻画不代表已执行巨大消元或枚举|
 
@@ -41,6 +43,8 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |完整有效网格|原稿已有定义与误差证明；后续联合稳定矩阵、点距与较小整数箱改善|[原审核第9节](../earlier-results/general_n_proof.md)、[混合网格](../source-review/HYBRID_GRID.md)；上界要求完整覆盖，抽样只给下界|
 |不同半径层数|全局liminf Kₙ/√n≥1/2；所有n≥10000有K>√n/2−(11/20)n^(1/4)；另有全n局部界|[最新谱人口与有效运输](../population-transport/README.md)；任意角度，保留适用范围及有限误差；仍不确定真实层数|
 |内盘微观覆盖|所有全局最优者：n≥64、任意原尺度圆心平方半径≤1，最近点距<6/√(n−1)；更大固定内盘有明确起点|[全局插值证明](../distribution-geometry/MICROSCOPIC_COVERING.md)；不声称背景边界的同阶覆盖|
+|整个闭背景盘覆盖|所有全局最优者、n≥64：原z尺度覆盖半径O(√(log n/n))，有明确公式|[扩张内盘证明](../stationary-screening/EDGE_COVERING.md)；包括背景边界，仍保留√log n损失|
+|驻点混合矩与空洞联合|一般k的卷积闭合、带残差接口、高阶矩消元四次罚项；空洞与守恒矩的完整Schur能量|[驻点与矩校正专题](../stationary-screening/README.md)；保留支撑、驻点和真实测量条件，不独立重复相加|
 |完整二维分布与局部人口|W₁有效O(n⁻¹ᐟ²)，百点W₁<0.111199952674；任意中心有界半径圆盘人口质量误差O(n⁻¹ᐟ³)|[二维分布专题](../distribution-geometry/README.md)；窄渐近常数另需已注明外部输入；含边界覆盖为较粗阶|
 |平移旋转薄矩形人口|局部最大稳定性的奇跳谱容量；200点局部最大者的任意长2.7宽0.01矩形不能容纳20点|[条带证明与完整非空见证](../distribution-geometry/SUBSET_GEOMETRY.md)；必要几何条件，非锐值证明|
 |确定的线性渐近项|$`\log M_n=(\frac12\log2-\frac14)n^2+\frac n2\log n+\gamma n+o(n)`$|[渐近专题](../asymptotics/README.md)说明 Sandier–Serfaty 外部输入与尺度校正；精确γ、真实有限 n 边界修正未解决|

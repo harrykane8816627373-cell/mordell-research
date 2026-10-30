@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-30",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "8265989259291052d2f4ee29ecbc10252aee24fb",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "user_input": {
+    "archive": "imported-angular/mordell-angular-energy-2026-10-30.zip",
+    "sha256": "eae50b28fc788536d9d0ab8c89b0e1780854d4b1eff57f5a5105132405331856",
+    "members": 8,
+    "preservation": "Original bytes retained; historical local-only wording is not treated as the user's current instruction."
+  },
+  "inherited_inputs": [
+    "Author stationary equations, strict-subset radius/separation and global Gaussian equivalence.",
+    "Existing Coulomb smearing, radial-weighted angular Gram and default second-moment matching.",
+    "Existing n=100 attainable integer witness gap and eight-point attainable regular component.",
+    "Existing weighted interpolation proof and its uniform complex tail estimate."
+  ],
+  "new_combinations_and_consequences": [
+    "All-k stationary mixed-moment convolution closure and near-stationary residual interface.",
+    "Eight-point global necessary ellipse |P2|^2+(27/100)|P3|^2<64/49 and |P2|<8/7; higher-mode elimination leaves positive quartic terms.",
+    "Full Gram conditioning of disjoint holes on second moments and stationary compact modes.",
+    "Effective whole closed background covering O(sqrt(log(n)/n)), n>=64."
+  ],
+  "review": "One research agent derived and checked this round. Independent expressions include direct pair symmetrization, known rational stationary configurations, old complete Gram projection, full-block solves and polynomial integrals. No separate-agent or external peer review is claimed.",
+  "classical_framework_reference": "https://arxiv.org/abs/1110.0284",
+  "acceptance": "Four standard-library exact acceptance entries, active exceptions under -O, outward logarithms and roots, original input byte checks, pinned manifest and deterministic report replay.",
+  "limitations": [
+    "No full eight-point sharp theorem, complete general optimizer or crystallization claim.",
+    "The new ellipse only concerns global eight-point optimizers; it does not imply low moments vanish.",
+    "Hole conditioning requires the stated support, disjoint empty smoothed disks and actual stationary moments when modes are used.",
+    "Whole-background covering retains sqrt(log n) loss; no boundary O(n^-1/2) constant is proved.",
+    "No global priority, external peer review, whole-proof formal verification or exact gamma claim."
+  ]
+}

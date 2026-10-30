@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "independent_rate_checks": 19,
+  "finite_tail_checks": 137,
+  "whole_background_examples": [
+    {
+      "n": 64,
+      "whole_background_covering_upper_outward": "1303442973801/1000000000000",
+      "simple_covering_upper_outward": "1638986462907/1000000000000"
+    },
+    {
+      "n": 100,
+      "whole_background_covering_upper_outward": "1034477198301/1000000000000",
+      "simple_covering_upper_outward": "133430166343/100000000000"
+    },
+    {
+      "n": 512,
+      "whole_background_covering_upper_outward": "458914172759/1000000000000",
+      "simple_covering_upper_outward": "312965547387/500000000000"
+    },
+    {
+      "n": 10000,
+      "whole_background_covering_upper_outward": "108347272667/1000000000000",
+      "simple_covering_upper_outward": "38759729321/250000000000"
+    },
+    {
+      "n": 1000000,
+      "whole_background_covering_upper_outward": "5824770557/500000000000",
+      "simple_covering_upper_outward": "8638255149/500000000000"
+    },
+    {
+      "n": 100000000,
+      "whole_background_covering_upper_outward": "7752871/6250000000",
+      "simple_covering_upper_outward": "1880628671/1000000000000"
+    },
+    {
+      "n": 1000000000000,
+      "whole_background_covering_upper_outward": "6854259/500000000000",
+      "simple_covering_upper_outward": "10708497/500000000000"
+    },
+    {
+      "n": 1000000000000000000,
+      "whole_background_covering_upper_outward": "15331/1000000000000",
+      "simple_covering_upper_outward": "24661/1000000000000"
+    }
+  ],
+  "invalid_inputs_rejected": 3,
+  "theorem": "For every global optimizer and n>=64, all |u|<=sqrt(2) have min_i|z_i-u| < 6/sqrt(n-1)+sqrt(2)-sqrt(2*(1-2*sqrt(log(8*n)/n))).",
+  "rate": "O(sqrt(log(n)/n)), original z scale",
+  "scope": "Effective whole closed background disk, via shrinking-bulk interpolation. Does not prove boundary O(n^-1/2), optimal constants or crystallization."
+}

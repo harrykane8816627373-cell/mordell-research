@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "previous_published_commit": "83d50bfb0685c088431955c9bfd1e67652331f77",
+  "baseline": [
+    {
+      "path": "baseline/radial_distribution.py",
+      "from": "configuration-bounds/radial_distribution.py",
+      "bytes": 6664,
+      "sha256": "a4c3621af2eea72a3823277ee66e12798b970d4d64005d6bd928db194498adb2"
+    },
+    {
+      "path": "baseline/saved_rational_bounds.json",
+      "from": "configuration-bounds/saved_rational_bounds.json",
+      "bytes": 11761,
+      "sha256": "1b7455e72a57c6278945681894840fe2272b2dc90e1c2b4a767b60813ac3c68f"
+    }
+  ],
+  "status": "Local research only; prior GitHub publication is not modified.",
+  "analytic_inputs": [
+    "Existing Coulomb deficit and Dirichlet identity",
+    "Existing strict subset radius bound",
+    "Existing explicit polar deficit cap"
+  ],
+  "new_derivations": [
+    "Orthogonal radial+angular lower energy",
+    "Newton-Cauchy finite-atom positive discount",
+    "Off-center disjoint hole certificates",
+    "Eight-point joint p2/p3 ellipse"
+  ]
+}

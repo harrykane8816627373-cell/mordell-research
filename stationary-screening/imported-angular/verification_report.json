@@ -1,0 +1,308 @@
+{
+  "passed": true,
+  "date": "2026-10-30",
+  "newton_and_shape_cases": 37,
+  "Dirichlet_norm_checks": 90,
+  "bubble_constant_checks": 3,
+  "positive_discounts_n2_to_100": 99,
+  "known_sharp_value_checks": 6,
+  "independent_log_diagnostics": 5,
+  "strip_n100": {
+    "delta_lower_exact": "78012500000/141158161",
+    "global_delta_upper_exact": "1657/12",
+    "excluded": true
+  },
+  "eight_point_joint_moment_bound": {
+    "p2_squared_plus_4_over_21_p3_squared_upper": "1029/400",
+    "gap_upper": "21/200",
+    "both_moduli_at_least_3_over_2_excluded": true,
+    "scope": "Global maximizers only; retain the stronger old separate p2<=20/13 bound."
+  },
+  "universal_discount_examples": [
+    {
+      "n": 2,
+      "discount_positive": true,
+      "c_decimal_lower": "0.026166445798058023",
+      "R2_upper": "1457106781187639897128969/500000000000000000000000"
+    },
+    {
+      "n": 3,
+      "discount_positive": true,
+      "c_decimal_lower": "0.010069996451862126",
+      "R2_upper": "139282032302838891693049/45000000000000000000000"
+    },
+    {
+      "n": 5,
+      "discount_positive": true,
+      "c_decimal_lower": "0.001694878678580045",
+      "R2_upper": "6222167011200150481/2000000000000000000"
+    },
+    {
+      "n": 8,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000117792859264708",
+      "R2_upper": "377335858385003381918209/125000000000000000000000"
+    },
+    {
+      "n": 10,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000019896839543764",
+      "R2_upper": "1479209978830702500044289/500000000000000000000000"
+    },
+    {
+      "n": 16,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000000101840255338",
+      "R2_upper": "361/128"
+    },
+    {
+      "n": 26,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000000000019230064",
+      "R2_upper": "226487743920229088282835249/84500000000000000000000000"
+    },
+    {
+      "n": 30,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000000000000662014",
+      "R2_upper": "742924427096844022948129/281250000000000000000000"
+    },
+    {
+      "n": 50,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000000000000000000",
+      "R2_upper": "314396464556668825378161/125000000000000000000000"
+    },
+    {
+      "n": 100,
+      "discount_positive": true,
+      "c_decimal_lower": "0.000000000000000000",
+      "R2_upper": "11881/5000"
+    }
+  ],
+  "shape_checks": [
+    {
+      "n": 2,
+      "angular_lower": "0.05887450",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.19314719"
+    },
+    {
+      "n": 2,
+      "angular_lower": "0.05887450",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.19314719"
+    },
+    {
+      "n": 3,
+      "angular_lower": "0.18369259",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.84106562"
+    },
+    {
+      "n": 3,
+      "angular_lower": "0.13921707",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "2.95776158"
+    },
+    {
+      "n": 4,
+      "angular_lower": "0.39164738",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "2.02661225"
+    },
+    {
+      "n": 4,
+      "angular_lower": "0.27296655",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "1.86995261"
+    },
+    {
+      "n": 5,
+      "angular_lower": "0.66133211",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "3.79205295"
+    },
+    {
+      "n": 5,
+      "angular_lower": "0.22299422",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "1.71993843"
+    },
+    {
+      "n": 6,
+      "angular_lower": "1.01424714",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "6.16302620"
+    },
+    {
+      "n": 6,
+      "angular_lower": "0.22786016",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "5.30670324"
+    },
+    {
+      "n": 7,
+      "angular_lower": "1.43967497",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "9.15671531"
+    },
+    {
+      "n": 7,
+      "angular_lower": "0.25997003",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "3.17067959"
+    },
+    {
+      "n": 8,
+      "angular_lower": "1.95018983",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "12.78542277"
+    },
+    {
+      "n": 8,
+      "angular_lower": "1.10774698",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "7.05649891"
+    },
+    {
+      "n": 9,
+      "angular_lower": "2.54089528",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "17.05838245"
+    },
+    {
+      "n": 9,
+      "angular_lower": "2.04408520",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "14.79255157"
+    },
+    {
+      "n": 10,
+      "angular_lower": "3.21921420",
+      "radial_lower": "0.00013020",
+      "deficit_upper": "21.98277546"
+    },
+    {
+      "n": 10,
+      "angular_lower": "1.18397252",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "5.62294767"
+    },
+    {
+      "n": 11,
+      "angular_lower": "3.98305375",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "27.56434344"
+    },
+    {
+      "n": 11,
+      "angular_lower": "0.57708157",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "3.07663727"
+    },
+    {
+      "n": 12,
+      "angular_lower": "4.83708000",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "33.80778022"
+    },
+    {
+      "n": 12,
+      "angular_lower": "0.37925066",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "14.21374238"
+    },
+    {
+      "n": 13,
+      "angular_lower": "5.78056387",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "40.71699363"
+    },
+    {
+      "n": 13,
+      "angular_lower": "0.20109191",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "15.16356353"
+    },
+    {
+      "n": 14,
+      "angular_lower": "6.81663809",
+      "radial_lower": "0.00099206",
+      "deficit_upper": "48.29528701"
+    },
+    {
+      "n": 14,
+      "angular_lower": "1.23806396",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "28.89480137"
+    },
+    {
+      "n": 15,
+      "angular_lower": "7.94524885",
+      "radial_lower": "0.00029296",
+      "deficit_upper": "56.54548894"
+    },
+    {
+      "n": 15,
+      "angular_lower": "2.14485498",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "30.32884774"
+    },
+    {
+      "n": 16,
+      "angular_lower": "9.16862947",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "65.47004840"
+    },
+    {
+      "n": 16,
+      "angular_lower": "0.81803772",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "17.24935754"
+    },
+    {
+      "n": 6,
+      "angular_lower": "0.05244305",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.22529656"
+    },
+    {
+      "n": 7,
+      "angular_lower": "0.03519427",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.11621950"
+    },
+    {
+      "n": 8,
+      "angular_lower": "0.02397834",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.10451618"
+    },
+    {
+      "n": 9,
+      "angular_lower": "0.01657201",
+      "radial_lower": "0.00028935",
+      "deficit_upper": "0.20527677"
+    },
+    {
+      "n": 10,
+      "angular_lower": "0.03305216",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.23680460"
+    },
+    {
+      "n": 11,
+      "angular_lower": "0.03997158",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.26290298"
+    },
+    {
+      "n": 12,
+      "angular_lower": "0.03579306",
+      "radial_lower": "0.00000000",
+      "deficit_upper": "0.20840809"
+    }
+  ],
+  "scope": "Analytic all-n proof in README.md; finite arithmetic checks do not prove a complete global classification. No GitHub upload in this run."
+}

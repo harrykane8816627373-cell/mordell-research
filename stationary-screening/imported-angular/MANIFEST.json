@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9944,
+      "sha256": "59428aae401a4974fb4d79a6044ac8877c1d71217a4ca1f4de0522b6fb838699"
+    },
+    {
+      "path": "angular_certificate.py",
+      "bytes": 4097,
+      "sha256": "85519c75e714d0412f8a837cbab7b2dcf14d8ac9bd870344e28bdfb384b3950c"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 6261,
+      "sha256": "0b261639859688b377f7acfba6c8ddb493ac42cfd9d97af394efdb3cb32899c4"
+    },
+    {
+      "path": "verification_report.json",
+      "bytes": 7954,
+      "sha256": "0b34946216a8bfefbf4771ff0cd4966cf8e540b35ae335341628f0a672651213"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 1069,
+      "sha256": "d93675935fcf97a7804dbb01cff2ad9d000ee8ad81ab54376ae3f00a2f2ef63c"
+    },
+    {
+      "path": "baseline/radial_distribution.py",
+      "bytes": 6664,
+      "sha256": "a4c3621af2eea72a3823277ee66e12798b970d4d64005d6bd928db194498adb2"
+    },
+    {
+      "path": "baseline/saved_rational_bounds.json",
+      "bytes": 11761,
+      "sha256": "1b7455e72a57c6278945681894840fe2272b2dc90e1c2b4a767b60813ac3c68f"
+    }
+  ]
+}

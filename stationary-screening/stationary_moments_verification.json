@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "pair_symmetrization_with_residual_checks": 56,
+  "robust_residual_checks": 14,
+  "known_stationary_disk_moment_checks": 144,
+  "independent_old_Gram_checks": 72,
+  "coefficient_derivative_checks": 8,
+  "eliminated_higher_moment_checks": 21,
+  "invalid_inputs_rejected": 5,
+  "eight_point_certificate": {
+    "n": 8,
+    "support_squared": "151/50",
+    "gap_upper": "19658999525821596291980914924192362529425215587135742678542409404054700579371744850232235184352984207904/188095275888570010155288480134283303461632307976184935634961010016522087505072487133314573118978324913175",
+    "simple_gap_strict_upper": "523/5000",
+    "p2_coefficient": "1335525625/16636339232",
+    "p3_coefficient": "41411890625/1884065418024",
+    "p2_fourth_power_coefficient": "10048828125/518521421182976",
+    "p2_squared_p3_squared_coefficient": "718072509765625/36603643038068064256",
+    "ellipse": "|p2(z)|^2+(27/100)|p3(z)|^2 < 64/49",
+    "p2_modulus_strict_upper": "8/7",
+    "scope": "Every global eight-point optimizer; not the full sharp product bound or the p2*p3!=0 classification."
+  },
+  "scope": "Exact identities, implementation and eight-point necessary moment region; no stationary configuration enumeration or full sharp proof."
+}
