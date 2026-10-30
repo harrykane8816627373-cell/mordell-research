@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-31",
+  "paper_title": "Local smoothing for the Euclidean wave equation",
+  "paper_author": "OpenAI",
+  "paper_date": "2026-10-25",
+  "paper_last_path_commit": "42907c9e999cc00d6abe7a50bfc1023250edd1b9",
+  "paper_url": "https://github.com/openai/math/blob/main/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+  "files": [
+    {
+      "file": "paper.pdf",
+      "bytes": 810093,
+      "sha256": "9ca156c552f2d940528f7131716326ef0d67a5829e723e1d294d74560c8636ff"
+    },
+    {
+      "file": "scope.md",
+      "bytes": 2432,
+      "sha256": "3c550c200f483746fb2cd47fff2f2ba0194a4ae9c11562e41c463814137a72a9"
+    },
+    {
+      "file": "Comparator.lean",
+      "bytes": 6684,
+      "sha256": "0e00b8b1eae7c30378e20f26cc875f502210b4a31a374970be5b0afd633e508d"
+    },
+    {
+      "file": "Main.lean",
+      "bytes": 976,
+      "sha256": "0cdccd4e905a6bc4c7b443511adf792ca2e0d3b2c19ae2b961b42af9663883ab"
+    },
+    {
+      "file": "planar.tex",
+      "bytes": 7671,
+      "sha256": "dd6f168b87a1f018a35f42af74212f4442ba1308c9ce40f5e6ef1ad74daa8347"
+    },
+    {
+      "file": "current.tex",
+      "bytes": 18709,
+      "sha256": "58b36aa67cbad422645cb0e67bd101f73423052a107327ce1d55a63c576f86ff"
+    },
+    {
+      "file": "energy.tex",
+      "bytes": 16734,
+      "sha256": "b70261c25d0e3020645bba5d79760070c019683a9b11042e48888149a2e1887f"
+    },
+    {
+      "file": "propagation.tex",
+      "bytes": 7448,
+      "sha256": "35cdc446258cd470b8499a948f91353b69dc4e74bd02283d31c953048dc01397"
+    }
+  ],
+  "scope": "Read theorem 1.1/1.2, current/energy construction and planar Appendix D. No full proof audit or local Lean compilation is claimed. The new static Gaussian bridge does not take local smoothing as an input."
+}

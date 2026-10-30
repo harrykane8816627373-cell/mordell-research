@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "q_points": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "7/9",
+      "0"
+    ],
+    [
+      "-7/9",
+      "0"
+    ],
+    [
+      "0",
+      "7/9"
+    ],
+    [
+      "0",
+      "-7/9"
+    ],
+    [
+      "-4/9",
+      "-4/9"
+    ],
+    [
+      "-4/9",
+      "4/9"
+    ],
+    [
+      "4/9",
+      "-4/9"
+    ],
+    [
+      "4/9",
+      "4/9"
+    ]
+  ],
+  "original_z_scale": "3/2",
+  "q_power_sums_1_2_3": [
+    [
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0"
+    ]
+  ],
+  "centers": [
+    [
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "1/2"
+    ],
+    [
+      "-1/2",
+      "0"
+    ],
+    [
+      "0",
+      "-1/2"
+    ],
+    [
+      "3/10",
+      "2/5"
+    ],
+    [
+      "-2/5",
+      "3/10"
+    ],
+    [
+      "-3/10",
+      "-2/5"
+    ],
+    [
+      "2/5",
+      "-3/10"
+    ]
+  ],
+  "weights": [
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "gaussian_time": "1/16",
+  "actual_smear_squared": "1/9",
+  "measurement_interval": [
+    "27274240111075159016603427863/250000000000000000000000000000",
+    "27274240111075159016603438163/250000000000000000000000000000"
+  ],
+  "Dirichlet_norm_interval": [
+    "121730216107361432903887359947/500000000000000000000000000000",
+    "24346043221472286580777471991/100000000000000000000000000000"
+  ],
+  "angular_energy_lower": "12221849224033307880402722919/250000000000000000000000000000",
+  "simple_strict_angular_energy_lower": "611/12500",
+  "passes_listed_radius_and_separation": true,
+  "independent_actual_total_gap_interval": [
+    "62181852517504188738895201717/200000000000000000000000000000",
+    "155454631293760471847238004293/500000000000000000000000000000"
+  ],
+  "orthogonal_modes": "All radial tests and all angular k=2,3 tests; quarter-turn invariance leaves only nonzero multiples of 4.",
+  "source_scope": "The example is normalized and has vanishing low angular moments, but is not asserted stationary or optimal. No local-smoothing theorem is used in this static certificate."
+}

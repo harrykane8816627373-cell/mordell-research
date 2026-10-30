@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "date": "2026-10-31",
+  "manifest_inputs": 272,
+  "prior_entries_replayed": 20,
+  "new_entries": 4,
+  "runs": [
+    {
+      "entry": "stationary-screening/verify_imported.py",
+      "passed": true,
+      "seconds": 1.625
+    },
+    {
+      "entry": "stationary-screening/verify_stationary_moments.py",
+      "passed": true,
+      "seconds": 1.281
+    },
+    {
+      "entry": "stationary-screening/verify_screened_holes.py",
+      "passed": true,
+      "seconds": 0.344
+    },
+    {
+      "entry": "stationary-screening/verify_edge_covering.py",
+      "passed": true,
+      "seconds": 1.156
+    },
+    {
+      "entry": "local-defect/verify_geometry.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "local-defect/verify_defect_ledger.py",
+      "passed": true,
+      "seconds": 1.329
+    },
+    {
+      "entry": "local-defect/verify_radial_hierarchy.py",
+      "passed": true,
+      "seconds": 0.343
+    },
+    {
+      "entry": "local-defect/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 1.172
+    },
+    {
+      "entry": "overlap-budget/verify_overlap_cost.py",
+      "passed": true,
+      "seconds": 0.313
+    },
+    {
+      "entry": "overlap-budget/verify_parameters.py",
+      "passed": true,
+      "seconds": 1.343
+    },
+    {
+      "entry": "overlap-budget/verify_graph_budget.py",
+      "passed": true,
+      "seconds": 0.5
+    },
+    {
+      "entry": "overlap-budget/verify_joint_region.py",
+      "passed": true,
+      "seconds": 1.157
+    },
+    {
+      "entry": "layer-circumference/verify_pair_integral.py",
+      "passed": true,
+      "seconds": 2.672
+    },
+    {
+      "entry": "layer-circumference/verify_ring_geometry.py",
+      "passed": true,
+      "seconds": 1.218
+    },
+    {
+      "entry": "layer-circumference/verify_circumference.py",
+      "passed": true,
+      "seconds": 0.344
+    },
+    {
+      "entry": "layer-circumference/verify_layers.py",
+      "passed": true,
+      "seconds": 3.375
+    },
+    {
+      "entry": "joint-variational/verify_affine_pair.py",
+      "passed": true,
+      "seconds": 4.484
+    },
+    {
+      "entry": "joint-variational/verify_projection.py",
+      "passed": true,
+      "seconds": 2.079
+    },
+    {
+      "entry": "joint-variational/verify_ledger.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "joint-variational/verify_joint_class.py",
+      "passed": true,
+      "seconds": 2.969
+    },
+    {
+      "entry": "gaussian-angular/verify_kernels.py",
+      "passed": true,
+      "seconds": 0.796
+    },
+    {
+      "entry": "gaussian-angular/verify_compatibility.py",
+      "passed": true,
+      "seconds": 1.438
+    },
+    {
+      "entry": "gaussian-angular/verify_multiscale.py",
+      "passed": true,
+      "seconds": 0.578
+    },
+    {
+      "entry": "gaussian-angular/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 2.016
+    }
+  ],
+  "standard_norm_upper": "487/2000",
+  "all_scale_normalized_contrast_bound": "sup_(gamma>0,theta)|M|/n<=sqrt(487E/2000)/n",
+  "center_full_old_k4_projection_improvement_factor_lower": "38806506080058301414132097531984003736119923626283937195872505656462822433271203513631417697057709642498095191/36638651362941337600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "whole_family_projection_gain": "greater than 5 percent over the specified complete old k4 holomorphic/first mixed projection",
+  "n100_four_layer_contrast_bound": "857/2000",
+  "n100_four_layer_low_mode_energy_at_least_7_10_contrast_bound": "57/500",
+  "n100_four_layer_centered_hole_contrast_bound": "351/1000",
+  "scope": "Smooth angular contrasts and conditional geometry; no unconditional sharp M_n, n100 five-layer theorem or full optimizer classification.",
+  "elapsed_seconds": 33.5
+}

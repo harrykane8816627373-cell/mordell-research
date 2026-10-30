@@ -9,12 +9,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 \Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 ```
 
-**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未由本项目解决。** 最新构建矩—层—点距共同变分框架：完整Gram保留相关性，周长与点对支撑线共享同一缺额，整盒对偶给出可复核排除。百点全局最优者若至多4层，则二阶幂和模<2.7；另加指定中心空洞时<2.25，具体前提见证明。
+**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未由本项目解决。** 最新将多尺度高斯角向探针接入完整旧矩Gram：实际九点算例投影提高超过5.9%，整个一参数族提高超过5%；新全尺度平滑角向平衡界及百点四层密度限制已精确核验。它们是分布必要条件和构型类上界，非完整分类。
 
 ## 从这里阅读
 
 - **[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)**：统一查询结论、适用范围、证明和代码；历史待补条目的当前判断也在此汇总。
-- **[最新共同变分框架](joint-variational/README.md)**：矩投影、中心空洞、层周长及点对资源统一；完整Gram和整盒对偶产生百点四层条件类的新必要式。
+- **[最新高斯角向探针与旧矩安全联合](gaussian-angular/README.md)**：完整交叉Gram、两尺度与整族投影增益、任意相似尺度/旋转的平滑角向界，以及百点四层密度对比限制。
+- **[此前共同变分框架](joint-variational/README.md)**：矩投影、中心空洞、层周长及点对资源统一；完整Gram和整盒对偶产生百点四层条件类的新必要式。
 - **[此前层周长、凸重叠损失与层分布](layer-circumference/README.md)**：有效有限层数系数0.5007；保留外部能量输入的渐近系数超过0.53；八点/百点8/5短边上限收紧至12/101对。
 - **[此前重叠积分、顶点覆盖与短边预算](overlap-budget/README.md)**：线性缺额系数提高37倍；保留近相切7/2次幂的准确领先项，并接入径向—角向共同预算。
 - **[此前线性正缺额与径向—角向矩联合](local-defect/README.md)**：所有n≥2有log(Uₙ/Mₙ)≥2⁻²⁴(n−11√n)₊；近邻或微观空洞的计数给有效有限证明；匹配径向矩进一步收紧八点联合区域。
@@ -44,8 +45,15 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |确定的线性渐近项|沿用已注明外部展开，最新γ上端为3/4−log(2)/2−37·2⁻²⁴|[外部定理与尺度](asymptotics/README.md)、[最新参数接口](overlap-budget/PARAMETER_THEOREM.md)；本地尚未认证精确γ，[近期文献范围](local-defect/LITERATURE_SCOPE.md)另列|
 |短边图与矩联合|力为1尺度距离≤8/5的短边：八点全局至多12对，百点至多101对；八点指定矩条件下至多2对|[新积分与层数专题](layer-circumference/LAYER_THEOREM.md)；全局必要统计与整类排除，非构型分类|
 |矩—层—点距共同变分|移位Gram主对偶适用于一般n；百点K≤4时二阶幂和模<27/10，再有全部点半径平方≥8/99时<9/4|[主框架](joint-variational/FRAMEWORK.md)、[百点条件证书](joint-variational/N100_CERTIFICATES.md)；未证明百点至少五层或完整分类|
+|多尺度局部角向密度|标准高斯对比在所有相似尺度和旋转下受√(487E/2000)/n控制；百点四层未归一化对比<0.4285，另加矩或空洞前提进一步收紧|[全尺度分布证明](gaussian-angular/DISTRIBUTION.md)；真实平滑平均，非硬圆盘人口误差或晶格分类|
 
-## 最新矩—层—点距共同变分框架
+## 最新多尺度角向密度与旧矩完整交叉
+
+[新专题](gaussian-angular/README.md)把此前局部平滑论文评估中提出的静态高斯接口正式实现，不使用外部波方程定理作为新证明输入。四转高斯轨道差与径向及k=2、3模式正交；k=4等重叠模式则保留准确交叉Gram。两个尺度使实际九点算例相对指定旧完整第四模式投影严格提高超过5.9%，整个真实一参数归一化族仍提高超过5%。
+
+标准轮廓的二维Dirichlet范数不随相似缩放和旋转变化，给sup|M|/n≤√(487E/2000)/n。联合已有精确共同预算，百点全局最优者若只有四层，所有尺度/方向的Gaussian加权对比|M|<0.4285；另有指定低阶角向能量或中心空洞时分别<0.114、0.351。这里M是实际平滑圆盘测量，未据此宣布百点至少五层或硬人口误差阶的改善。证明、24个累计入口和离线包见[专题](gaussian-angular/README.md)。
+
+## 此前矩—层—点距共同变分框架
 
 [新专题](joint-variational/README.md)将完整Gram投影与层周长测试联合，保留已测矩能量J、运输偏移p及残余范数h，再用点对全局支撑线P(d)≥α−βd消去未知剩余能量，得到
 
@@ -203,10 +211,10 @@ K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
 
 ## 下载与复核
 
-每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[共同变分研究包](joint-variational/mordell-joint-variational-2026-10-31.zip)在解压根目录运行：
+每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[高斯角向与完整Gram研究包](gaussian-angular/mordell-gaussian-angular-2026-10-31.zip)在解压根目录运行：
 
 ```bash
-python -B -S -O joint-variational/verify_all.py
+python -B -S -O gaussian-angular/verify_all.py
 ```
 
 其他专题离线包：[此前线性缺额](local-defect/mordell-local-defect-2026-10-30.zip)、[此前驻点闭合](stationary-screening/mordell-stationary-screening-2026-10-30.zip)、[此前二维分布](distribution-geometry/mordell-distribution-geometry-2026-10-30.zip)、[此前谱容量与运输](population-transport/mordell-population-transport-2026-10-29.zip)、[此前层数与联合稳定性](collective-stability/mordell-collective-stability-2026-10-29.zip)、[此前自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-31",
+  "files": [
+    {
+      "file": "TRANSFER_ASSESSMENT.md",
+      "bytes": 7118,
+      "sha256": "aec187f4cfcc424203d605ea8e4d73e88968cf3f07a0c56e4bc455901d83daa5"
+    },
+    {
+      "file": "verify_gaussian_bridge.py",
+      "bytes": 6330,
+      "sha256": "e8ab379b88819da6bcf8e1b97194c3f3db4cdda99066979caa9690ea461c2494"
+    },
+    {
+      "file": "gaussian_bridge_verification.json",
+      "bytes": 2160,
+      "sha256": "f70f953f0377304e6c6bd4c2c182c171ae6d110624189b4fb5fc0ffea20e5b93"
+    },
+    {
+      "file": "SOURCES.json",
+      "bytes": 1825,
+      "sha256": "c3ddb795fc78dcd7d5387f82107f9bdd124e377a089c57af67ffdf22699d8240"
+    }
+  ]
+}

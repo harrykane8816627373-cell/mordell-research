@@ -100,9 +100,9 @@
     },
     {
       "path": "PROOF_STATUS.md",
-      "bytes": 14740,
-      "sha256": "b366f06bc487e1a13f8fbd4c6f1253cec4c593f1d91462a3188aea8b7a28139e",
-      "git_blob_sha": "2549f23520c61c17579efc54862d8e38050b0a19"
+      "bytes": 15310,
+      "sha256": "df689400a4e418f217cbe2c9413bc771c2fc34f26ca8bc24f6f0f978c35bdf2b",
+      "git_blob_sha": "a1e5ce1d319262b5acc55b1ead602b4733a19f66"
     },
     {
       "path": "PROVENANCE.json",
@@ -142,9 +142,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 9102,
-      "sha256": "f93c76a18be4b3feebf85e460291de974549ad8ab116d8a0dd8ead18c01c102e",
-      "git_blob_sha": "5886738e31088fbde0c03dbfdfbd28678ba46ca0"
+      "bytes": 9423,
+      "sha256": "04a539e21618fbc19395f0c1e80d0513637e1229018b5bd09a80e463842e70fd",
+      "git_blob_sha": "6060d36476872360c09f123a9ece6749911fe9a4"
     },
     {
       "path": "saved_rational_bounds.json",

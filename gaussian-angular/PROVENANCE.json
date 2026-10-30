@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "66d1b6681038b05b08aabb144c8ff9fadb8ebe72",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inspiration": {
+    "paper": "OpenAI, Local smoothing for the Euclidean wave equation, 2026-10-25",
+    "url": "https://github.com/openai/math/blob/42907c9e999cc00d6abe7a50bfc1023250edd1b9/preprints/Local-smoothing-for-the-Euclidean-wave-equation-October-25-2026/paper.pdf",
+    "scope": "The earlier review studied positive auxiliary energy and the planar appendix. This update does not use the wave theorem, a claim of complete external proof verification, or a locally compiled Lean artifact."
+  },
+  "inherited_inputs": [
+    "Exact default disk-smearing energy decomposition, radial/angular orthogonality, and old holomorphic/first-mixed angular Gram.",
+    "Author global radius/subset conditions and previous all-n elementary attainable-gap bound.",
+    "Certified n100 integer-witness gap upper, stationary k=2,3 coefficients, and the prior shifted-Gram layer/centered-hole certificates.",
+    "Unmodified exact original Gaussian-transfer review, imported with its report, source manifest and ZIP."
+  ],
+  "new_derivations": [
+    "Certified rotation-filtered Gaussian disk means and complete cross Gram, retaining negative off-diagonal entries.",
+    "Exact cross terms against old holomorphic and first mixed tests, checked by an independent Gaussian-Laplacian formula.",
+    "Fixed rational interval-matrix duals: two scales improve the specified complete old k=4 projection by more than 5.9 percent at a real normalized nine-point input.",
+    "A full normalized one-parameter family retains more than five percent projection improvement; not an independent coordinate box.",
+    "All self-similar scales and rotations share one certified norm, giving a uniform smoothed angular-contrast bound.",
+    "Conditional n100 local-density contrast bounds 0.4285, 0.114 and 0.351, with exact layer/moment/centered-hole hypotheses."
+  ],
+  "review": "One research agent derived and checked the update. Independent checks include original-review replay, exponentials versus atanh logarithms, Laplace integral recurrences, boundary-jump versus Gaussian-Laplacian cross terms, actual point measurements and independent product-gap reports. No independent-agent or external peer review is claimed.",
+  "acceptance": "Four new and twenty prior exact standard-library entries, original imported-review replay, active exceptions under -O, pinned bytes and fresh extracted-package replay.",
+  "limitations": [
+    "The smoothing/heat/Gaussian identities and Hilbert duality are standard; no invention or global priority claim is made.",
+    "The real nine-point input and its family are not asserted stationary or optimal; comparison is against the specified old k=4 tests, not all old criteria.",
+    "The all-scale statistic is a smooth Gaussian-weighted contrast, not hard disk population discrepancy or a microscopic lattice classification.",
+    "Automatic interval arithmetic has explicit parameter budgets; mathematical scale invariance is proved independently of finite-scale tests.",
+    "Higher old modes or mixed tests not included in a Gram may overlap with Gaussian probes and cannot simply be added.",
+    "No full n100 five-layer theorem, general finite-n optimal configuration, full eight-point sharp result or new unconditional M_n bound is claimed."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "rotation_selection_checks": 24,
+  "independent_cross_checks": 8,
+  "synthetic_true_energy": "1",
+  "synthetic_naive_separate_sum": "3/2",
+  "scope": "Gaussian probes are orthogonal to radial and k=2,3 sectors. Existing k=4 or other multiples of four must share the full Gram; they cannot be independently added."
+}

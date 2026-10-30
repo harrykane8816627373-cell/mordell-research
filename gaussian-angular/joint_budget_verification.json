@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "n": 100,
+  "probe": {
+    "centers": [
+      [
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2"
+      ],
+      [
+        "-1/2",
+        "0"
+      ],
+      [
+        "0",
+        "-1/2"
+      ],
+      [
+        "3/10",
+        "2/5"
+      ],
+      [
+        "-2/5",
+        "3/10"
+      ],
+      [
+        "-3/10",
+        "-2/5"
+      ],
+      [
+        "2/5",
+        "-3/10"
+      ]
+    ],
+    "weights": [
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "t": "1/16",
+    "center_squared_radius": "1/4"
+  },
+  "Dirichlet_norm_interval": [
+    "2434604322147228658077747199014780408561/10000000000000000000000000000000000000000",
+    "2434604322147228658077747199014780408583/10000000000000000000000000000000000000000"
+  ],
+  "accepted_norm_upper": "487/2000",
+  "q_coordinates": "q=sqrt(99/200)*z",
+  "actual_smear_squared": "1/100",
+  "legacy_p2_coefficient": "2076139079561250/19925626416901921",
+  "legacy_p3_coefficient": "7852572235926000000/236736367459211723401",
+  "radial_layer_shared_lower": "28186832628702734609496615047600627317312993/374809600000000000000000000000000000000000000",
+  "centered_hole_layer_shared_lower": "3026403157982683928820817312036539461046556921/9369600000000000000000000000000000000000000000",
+  "conditional_contrast_bounds": [
+    {
+      "name": "four_layers",
+      "old_modes_energy_lower": "0",
+      "excluded_contrast_modulus_lower": "857/2000",
+      "Gaussian_energy_lower": "734449/974000",
+      "joint_gap_lower": "151366255445378231754824851528181505503531427591/182532275200000000000000000000000000000000000000",
+      "global_gap_upper": "413923829261/500000000000",
+      "strict_margin": "257338816364902500424851528181505503531427591/182532275200000000000000000000000000000000000000",
+      "displayed_previous_angular_cap": "151/200"
+    },
+    {
+      "name": "four_layers_and_low_modes",
+      "old_modes_energy_lower": "7/10",
+      "excluded_contrast_modulus_lower": "57/500",
+      "Gaussian_energy_lower": "3249/60875",
+      "joint_gap_lower": "151241631253378231754824851528181505503531427591/182532275200000000000000000000000000000000000000",
+      "global_gap_upper": "413923829261/500000000000",
+      "strict_margin": "132714624364902500424851528181505503531427591/182532275200000000000000000000000000000000000000",
+      "displayed_previous_angular_cap": "151/200"
+    },
+    {
+      "name": "four_layers_and_centered_hole",
+      "old_modes_energy_lower": "0",
+      "excluded_contrast_modulus_lower": "351/1000",
+      "Gaussian_energy_lower": "123201/243500",
+      "joint_gap_lower": "3782546517137567073335738030961794717529673220527/4562995200000000000000000000000000000000000000000",
+      "global_gap_upper": "413923829261/500000000000",
+      "strict_margin": "5081624970441978935738030961794717529673220527/4562995200000000000000000000000000000000000000000",
+      "displayed_previous_angular_cap": "51/100"
+    }
+  ],
+  "universal_normalized_contrast_bound": "sup_(gamma>0,theta) |M_(gamma,theta)|/n <= sqrt((487/2000)*E)/n",
+  "scope": "Necessary bounds for global n100 optimizers, valid at every self-similar scale and rotation by exact norm invariance. K<=4 is required; the second case also requires C2|P2|^2+C3|P3|^2>=7/10; the third requires every original |z_i|^2>=8/99. Does not prove n100 needs five layers."
+}
