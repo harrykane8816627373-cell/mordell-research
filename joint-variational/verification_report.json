@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "date": "2026-10-31",
+  "manifest_inputs": 244,
+  "prior_entries_replayed": 16,
+  "new_entries": 4,
+  "runs": [
+    {
+      "entry": "stationary-screening/verify_imported.py",
+      "passed": true,
+      "seconds": 1.531
+    },
+    {
+      "entry": "stationary-screening/verify_stationary_moments.py",
+      "passed": true,
+      "seconds": 1.235
+    },
+    {
+      "entry": "stationary-screening/verify_screened_holes.py",
+      "passed": true,
+      "seconds": 0.312
+    },
+    {
+      "entry": "stationary-screening/verify_edge_covering.py",
+      "passed": true,
+      "seconds": 1.172
+    },
+    {
+      "entry": "local-defect/verify_geometry.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "local-defect/verify_defect_ledger.py",
+      "passed": true,
+      "seconds": 1.313
+    },
+    {
+      "entry": "local-defect/verify_radial_hierarchy.py",
+      "passed": true,
+      "seconds": 0.297
+    },
+    {
+      "entry": "local-defect/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 1.172
+    },
+    {
+      "entry": "overlap-budget/verify_overlap_cost.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "overlap-budget/verify_parameters.py",
+      "passed": true,
+      "seconds": 1.25
+    },
+    {
+      "entry": "overlap-budget/verify_graph_budget.py",
+      "passed": true,
+      "seconds": 0.469
+    },
+    {
+      "entry": "overlap-budget/verify_joint_region.py",
+      "passed": true,
+      "seconds": 1.172
+    },
+    {
+      "entry": "layer-circumference/verify_pair_integral.py",
+      "passed": true,
+      "seconds": 2.625
+    },
+    {
+      "entry": "layer-circumference/verify_ring_geometry.py",
+      "passed": true,
+      "seconds": 1.187
+    },
+    {
+      "entry": "layer-circumference/verify_circumference.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "layer-circumference/verify_layers.py",
+      "passed": true,
+      "seconds": 3.375
+    },
+    {
+      "entry": "joint-variational/verify_affine_pair.py",
+      "passed": true,
+      "seconds": 4.266
+    },
+    {
+      "entry": "joint-variational/verify_projection.py",
+      "passed": true,
+      "seconds": 2.062
+    },
+    {
+      "entry": "joint-variational/verify_ledger.py",
+      "passed": true,
+      "seconds": 0.282
+    },
+    {
+      "entry": "joint-variational/verify_joint_class.py",
+      "passed": true,
+      "seconds": 2.89
+    }
+  ],
+  "framework": "One shifted-Gram dual couples measured moments, residual radial transport, cycle circumference and disjoint pair credits.",
+  "n100_conditional_p2_bound": "K<=4 implies |sum(z_i^2)|<27/10",
+  "n100_centered_hole_conditional_p2_bound": "K<=4 and every |z_i|^2>=8/99 imply |sum(z_i^2)|<9/4",
+  "scope": "Conditional necessary geometry, not full optimizer classification. Generic cross/orthogonality inputs remain proved caller hypotheses.",
+  "elapsed_seconds": 27.797
+}

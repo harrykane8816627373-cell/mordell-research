@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-31",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "a7f17cace1d91dfe4ceee512018d4aa6f5f96eee",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author stationary equations, global radius/subset bounds and second-order stability.",
+    "Existing disk-smearing Dirichlet-plus-pair decomposition and exact pair convexity.",
+    "Layer capacity, circumference transport, matched radial Gram, stationary angular coefficients and screened-hole methodology.",
+    "Certified n100 integer-witness gap upper 413923829261/500000000000."
+  ],
+  "new_derivations": [
+    "Shifted-Gram variational certificate coupling moment projection, residual transport and layer-edge pair cost under one energy budget.",
+    "Global affine pair supports certified by a convex derivative bracket, with exact convolution-tail intervals.",
+    "Exact cross terms between the circumference test and radial polynomial or centered-hole tests.",
+    "Fixed rational duals valid for entire measurement boxes, with outward pi and square-root bounds.",
+    "Fractional unordered-edge resource ledger rejecting overlaps and duplicate credits.",
+    "For global n100 optimizers, K<=4 implies |P2|<27/10; an additional original squared central gap >=8/99 implies |P2|<9/4.",
+    "A certified comparison against a strengthened separate-energy relaxation, and a full conditional radial-measurement-box exclusion."
+  ],
+  "literature_context": [
+    {"title": "2D Coulomb Gases and the Renormalized Energy", "authors": "Sandier and Serfaty", "url": "https://arxiv.org/abs/1201.3503", "use": "Classical energy-splitting context already cited by the project; no new asymptotic theorem is required for the finite certificates here."}
+  ],
+  "review": "One research agent derived and checked the update. Independent expressions include closed convolution tails versus area-density integration, radial gradient cross terms versus weak Laplacians, shifted-Schur algebra versus actual rational Hilbert vectors, and lower versus upper lens quadrature. No independent-agent or external peer review is claimed.",
+  "acceptance": "Four new standard-library entries plus sixteen prior entries, exact integer/Fraction arithmetic, active checks under -O, pinned input bytes and extracted-package replay.",
+  "limitations": [
+    "The n100 results are conditional necessary constraints; n100 has not been proved to need five layers.",
+    "A compared energy relaxation or conditional measurement box is not a physical stationary or optimal configuration.",
+    "Only radial-polynomial and centered-hole cross terms are automatically constructed; arbitrary off-center holes need additional proved cross terms.",
+    "Orthogonal energy and disjoint-pair inputs remain caller hypotheses, never inferred from labels or moments.",
+    "No full branch-and-bound coverage, general finite-n classification, full eight-point sharp proof, exact energy constant or best coefficient is claimed.",
+    "Hilbert projection, Schur complements and convex duality are standard tools; no framework-invention or global-priority claim."
+  ]
+}

@@ -1,6 +1,6 @@
 # Mordell 距离乘积研究：有限点数构型与一般 n
 
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[harrykane8816627373-cell](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。当前整理：**2026-10-30**。
+研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[harrykane8816627373-cell](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。当前整理：**2026-10-31**。
 
 统一归一化为
 
@@ -9,12 +9,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 \Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 ```
 
-**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未由本项目解决。** 最新补充把径向层周长与凸点对损失联合：初等有效预算给所有n≥10¹⁶的K>0.5007√n；沿用已注明外部渐近能量输入时，层数渐近系数提高到超过0.53。短边上限及层自身的径向分布也进一步收紧，具体假设见正文。
+**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未由本项目解决。** 最新构建矩—层—点距共同变分框架：完整Gram保留相关性，周长与点对支撑线共享同一缺额，整盒对偶给出可复核排除。百点全局最优者若至多4层，则二阶幂和模<2.7；另加指定中心空洞时<2.25，具体前提见证明。
 
 ## 从这里阅读
 
 - **[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)**：统一查询结论、适用范围、证明和代码；历史待补条目的当前判断也在此汇总。
-- **[最新层周长、凸重叠损失与层分布](layer-circumference/README.md)**：有效有限层数系数0.5007；保留外部能量输入的渐近系数超过0.53；八点/百点8/5短边上限收紧至12/101对。
+- **[最新共同变分框架](joint-variational/README.md)**：矩投影、中心空洞、层周长及点对资源统一；完整Gram和整盒对偶产生百点四层条件类的新必要式。
+- **[此前层周长、凸重叠损失与层分布](layer-circumference/README.md)**：有效有限层数系数0.5007；保留外部能量输入的渐近系数超过0.53；八点/百点8/5短边上限收紧至12/101对。
 - **[此前重叠积分、顶点覆盖与短边预算](overlap-budget/README.md)**：线性缺额系数提高37倍；保留近相切7/2次幂的准确领先项，并接入径向—角向共同预算。
 - **[此前线性正缺额与径向—角向矩联合](local-defect/README.md)**：所有n≥2有log(Uₙ/Mₙ)≥2⁻²⁴(n−11√n)₊；近邻或微观空洞的计数给有效有限证明；匹配径向矩进一步收紧八点联合区域。
 - **[此前驻点闭合、矩校正空洞与含边界覆盖](stationary-screening/README.md)**：八点必要矩区域收紧到|p₂|²+(27/100)|p₃|²<64/49；守恒矩与空洞用完整Gram联合；整个闭背景盘覆盖推进到O(√(log n/n))，并原字节复核用户新角向包。
@@ -42,8 +43,20 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |十点中心正九边形及旧缺件条目|四阶严格局部最大、完整网格、保存整数下界和特定 Hermite 障碍现均已核验|[已更新原审核](earlier-results/general_n_proof.md)；十点该局部最大仍全局次优，旧证明确认归用户原有成果|
 |确定的线性渐近项|沿用已注明外部展开，最新γ上端为3/4−log(2)/2−37·2⁻²⁴|[外部定理与尺度](asymptotics/README.md)、[最新参数接口](overlap-budget/PARAMETER_THEOREM.md)；本地尚未认证精确γ，[近期文献范围](local-defect/LITERATURE_SCOPE.md)另列|
 |短边图与矩联合|力为1尺度距离≤8/5的短边：八点全局至多12对，百点至多101对；八点指定矩条件下至多2对|[新积分与层数专题](layer-circumference/LAYER_THEOREM.md)；全局必要统计与整类排除，非构型分类|
+|矩—层—点距共同变分|移位Gram主对偶适用于一般n；百点K≤4时二阶幂和模<27/10，再有全部点半径平方≥8/99时<9/4|[主框架](joint-variational/FRAMEWORK.md)、[百点条件证书](joint-variational/N100_CERTIFICATES.md)；未证明百点至少五层或完整分类|
 
-## 最新层周长与层半径分布
+## 最新矩—层—点距共同变分框架
+
+[新专题](joint-variational/README.md)将完整Gram投影与层周长测试联合，保留已测矩能量J、运输偏移p及残余范数h，再用点对全局支撑线P(d)≥α−βd消去未知剩余能量，得到
+
+~~~math
+\delta\ge A+C+J+\alpha(n-2K)
+-2\pi\beta(V_0-p/4)-\pi^2\beta^2h/16.
+~~~
+
+各项的正交、边代价不重叠和尺度前提在正文明确。实现包含径向矩与中心空洞适配器、整个矩区间的固定对偶、无序边资源账本及20个累计入口。百点若K≤4，二阶幂和模<27/10；再有全部|z_i|²≥8/99时<9/4。所比较的分开能量松弛允许相应数据，新共同预算将它排除；没有把松弛数据认作真实驻点。一般n完整最优构型及全部剩余盒覆盖仍待完成。
+
+## 此前层周长与层半径分布
 
 [新专题](layer-circumference/README.md)证明精确重叠点对损失P在全部正距离凸且非增，从每层取循环相邻边，连接总周长ΣR_j与共同能量预算。新的径向测试给ΣR_j/n≤K/√n−1/4加明确有限误差，由此得到
 
@@ -190,10 +203,10 @@ K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
 
 ## 下载与复核
 
-每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[层周长与层分布研究包](layer-circumference/mordell-layer-circumference-2026-10-30.zip)在解压根目录运行：
+每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[共同变分研究包](joint-variational/mordell-joint-variational-2026-10-31.zip)在解压根目录运行：
 
 ```bash
-python -B -S -O layer-circumference/verify_all.py
+python -B -S -O joint-variational/verify_all.py
 ```
 
 其他专题离线包：[此前线性缺额](local-defect/mordell-local-defect-2026-10-30.zip)、[此前驻点闭合](stationary-screening/mordell-stationary-screening-2026-10-30.zip)、[此前二维分布](distribution-geometry/mordell-distribution-geometry-2026-10-30.zip)、[此前谱容量与运输](population-transport/mordell-population-transport-2026-10-29.zip)、[此前层数与联合稳定性](collective-stability/mordell-collective-stability-2026-10-29.zip)、[此前自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。

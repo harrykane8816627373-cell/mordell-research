@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "fractional_credit": {
+    "disjoint_pair_lower": "2",
+    "edge_credit_totals": [
+      [
+        [
+          0,
+          1
+        ],
+        "1"
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        "1"
+      ],
+      [
+        [
+          2,
+          3
+        ],
+        "1/2"
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        "1/2"
+      ]
+    ],
+    "scope": "Each claimed per-pair lower and any geometric edge classification must be proved separately; this ledger only validates resource allocation."
+  },
+  "naive_sum": 4,
+  "true_distinct_pair_budget": 3,
+  "invalid_credits_rejected": 5,
+  "scope": "Validation of pair allocation only. Claimed distance/cost bounds and membership outside the reserved cycle edges remain geometric hypotheses."
+}
