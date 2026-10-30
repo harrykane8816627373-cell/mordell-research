@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "independent_expanded_Gram_checks": 420,
+  "independent_Cartesian_disk_moment_checks": 18,
+  "nested_projection_checks": 24,
+  "radial_examples": [
+    {
+      "n": 2,
+      "degree": 6,
+      "radial_energy_lower": "1577108967/42949672960"
+    },
+    {
+      "n": 5,
+      "degree": 6,
+      "radial_energy_lower": "106231118567/1024000000000"
+    },
+    {
+      "n": 8,
+      "degree": 6,
+      "radial_energy_lower": "24308861927/2748779069440"
+    },
+    {
+      "n": 10,
+      "degree": 6,
+      "radial_energy_lower": "31808728686987/81920000000000"
+    }
+  ],
+  "eight_original_fourth_moment_coefficient": "8441015625/266181427712",
+  "invalid_inputs_rejected": 4,
+  "scope": "Radial moment projection, not an extra copy of full radial energy. General formula and orthogonality are proved in RADIAL_HIERARCHY.md."
+}

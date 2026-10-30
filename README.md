@@ -9,12 +9,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 \Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 ```
 
-**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未解决。** 最新补充联合全局插值、能量预算与稳定性，将径向约束推进到二维运输、内盘微观覆盖和任意位置人口限制。具体假设见各证明。
+**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未由本项目解决。** 最新补充将圆盘缺额推进到显式线性阶，并联合匹配径向矩与驻点角向能量。近期文献及本地认证范围另有说明，具体假设见各证明。
 
 ## 从这里阅读
 
 - **[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)**：统一查询结论、适用范围、证明和代码；历史待补条目的当前判断也在此汇总。
-- **[最新驻点闭合、矩校正空洞与含边界覆盖](stationary-screening/README.md)**：八点必要矩区域收紧到|p₂|²+(27/100)|p₃|²<64/49；守恒矩与空洞用完整Gram联合；整个闭背景盘覆盖推进到O(√(log n/n))，并原字节复核用户新角向包。
+- **[最新线性正缺额与径向—角向矩联合](local-defect/README.md)**：所有n≥2有log(Uₙ/Mₙ)≥2⁻²⁴(n−11√n)₊；近邻或微观空洞的计数给有效有限证明；匹配径向矩进一步收紧八点联合区域。
+- **[此前驻点闭合、矩校正空洞与含边界覆盖](stationary-screening/README.md)**：八点必要矩区域收紧到|p₂|²+(27/100)|p₃|²<64/49；守恒矩与空洞用完整Gram联合；整个闭背景盘覆盖推进到O(√(log n/n))，并原字节复核用户新角向包。
 - **[此前二维分布、微观覆盖与局部人口](distribution-geometry/README.md)**：单位内盘在n≥64有6/√(n−1)覆盖保证；全二维W₁有效达到n⁻¹ᐟ²阶；任意中心圆盘人口、含边界覆盖与薄条带谱容量均有精确证书。
 - **[此前谱人口容量、径向运输与有效二分之一层数](population-transport/README.md)**：全局渐近下端提高到1/2；所有n≥10000有带明确四次根误差的有限式；一万点至少46层；八点薄环带与跨界角向证书。
 - **[此前通用层数、局部能量与多点稳定性](collective-stability/README.md)**：全n层数加强为K>n/(π√(n−1))，渐近下端提高至13/30；新增环带角向与多点联合证书。
@@ -33,13 +34,25 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |五点全局锐值|$`M_5=5^5=3125`$，单位正五边形|[作者二阶条件与矩方法](earlier-results/five_point_method.md)、[PDF](earlier-results/five_point_proof.pdf)|
 |六、七点全局锐值|$`M_6=6^{15}/5^{10}`$；$`M_7=7^{21}/6^{15}`$|[主稿](earlier-results/six_seven_proof.tex)、[覆盖审计](earlier-results/six_seven_coverage_audit.md)；全局证明引用 Faugère–Svartz 物理驻点完整分类，七点356次枝未在本地独立重建|
 |八点完整锐界|目标为 $`M_8=8^{28}/7^{21}`$；尚未证明|原点加正七边形达到候选值；最新必要椭圆和二阶幂和模<8/7见[驻点闭合](stationary-screening/STATIONARY_MOMENTS.md)；一般非零矩分支仍开放，p_k=Σz_i^k|
-|一般 n 的有限上下界与最优层数|严格圆盘修正保持；91项已存下界改善；最新liminf Kₙ/√n≥1/2，并有有效有限式|[严格上界修正](joint-bounds/ANGULAR_PROOF.md)、[最新谱容量与运输](population-transport/README.md)；不确定一般锐值或γ|
+|一般 n 的有限上下界与最优层数|新增显式线性缺额2⁻²⁴(n−11√n)₊；91项已存下界改善；liminf Kₙ/√n≥1/2|[最新线性缺额](local-defect/LINEAR_GAP.md)、[谱容量与运输](population-transport/README.md)；不确定一般有限锐值|
 |一般 n 最优点的二维分布|固定内盘微观覆盖、有效W₁=O(n⁻¹ᐟ²)、任意中心圆盘人口误差O(n⁻¹ᐟ³)；最新闭背景盘覆盖O(√(log n/n))|[二维分布](distribution-geometry/README.md)、[扩张内盘证明](stationary-screening/EDGE_COVERING.md)；未确定局部晶格|
 |严格真子集约束及有效网格|已证；有显式正有理余量与有限全局误差界|[子集证明](finite-n/SUBSET_PROOF.md)、[混合网格](source-review/HYBRID_GRID.md)；网格上界要求完整穷尽规定网格|
 |十点中心正九边形及旧缺件条目|四阶严格局部最大、完整网格、保存整数下界和特定 Hermite 障碍现均已核验|[已更新原审核](earlier-results/general_n_proof.md)；十点该局部最大仍全局次优，旧证明确认归用户原有成果|
-|确定的线性渐近项|已证 $`\log M_n=cn^2+\frac n2\log n+\gamma n+o(n)`$，$`c=\frac12\log2-\frac14`$|[外部定理、尺度与常数](asymptotics/README.md)；精确 $`\gamma`$ 及真实有限 n 边界修正仍未知|
+|确定的线性渐近项|沿用已注明外部展开，最新γ上端为3/4−log(2)/2−2⁻²⁴|[外部定理与尺度](asymptotics/README.md)、[最新有限证明接口](local-defect/LINEAR_GAP.md)；本地尚未认证精确γ，[近期文献范围](local-defect/LITERATURE_SCOPE.md)另列|
 
-## 最新驻点闭合与矩校正能量
+## 最新线性正缺额与共同能量预算
+
+[新专题](local-defect/README.md)保留旧精确分解的重叠点对代价，并证明近邻较少时必须产生线性数量的不交小空洞。局部圆弧、匹配和边界装点计数联合得到
+
+~~~math
+\log(U_n/M_n)\ge\frac{(n-11\sqrt n)_+}{2^{24}}\qquad(n\ge2).
+~~~
+
+全部n≥484因此有缺额≥n/2²⁵。有限证明不调用结晶或外部能量渐近项；常数保守，但将此前趋零的Newton修正推进到线性阶。小n继续保留旧更强证书。若沿用已有外部线性展开，项目此前γ圆盘上端另可减去2⁻²⁴；不将此表述为文献最优常数或精确γ。
+
+匹配二阶矩的径向Gram另与上一轮驻点角向能量正交相加，排除八点原尺度四阶矩≥52/5且二阶幂和模≥9/10的整类。程序保留与旧条件的真实比较范围，没有把已被旧高阶条件排除的例子说成全部方法遗漏。证明、八套累计重放及离线包见[新专题](local-defect/README.md)。
+
+## 此前驻点闭合与矩校正能量
 
 [新专题](stationary-screening/README.md)联合用户新提供的角向包与仓库现有混合矩方法。驻点恒等式使默认平滑的一级混合矩满足A_(k,1)=2p_k+n⁻¹Σp_ℓp_(k−ℓ)。代入完整Gram后，八点全局最优者在原尺度必有
 
@@ -152,13 +165,13 @@ K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
 
 ## 下载与复核
 
-每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[驻点闭合与矩校正研究包](stationary-screening/mordell-stationary-screening-2026-10-30.zip)在解压根目录运行：
+每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[线性正缺额与联合矩研究包](local-defect/mordell-local-defect-2026-10-30.zip)在解压根目录运行：
 
 ```bash
-python -B -S -O stationary-screening/verify_all.py
+python -B -S -O local-defect/verify_all.py
 ```
 
-其他专题离线包：[此前谱容量与运输](population-transport/mordell-population-transport-2026-10-29.zip)、[此前层数与联合稳定性](collective-stability/mordell-collective-stability-2026-10-29.zip)、[此前自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。
+其他专题离线包：[此前驻点闭合](stationary-screening/mordell-stationary-screening-2026-10-30.zip)、[此前二维分布](distribution-geometry/mordell-distribution-geometry-2026-10-30.zip)、[此前谱容量与运输](population-transport/mordell-population-transport-2026-10-29.zip)、[此前层数与联合稳定性](collective-stability/mordell-collective-stability-2026-10-29.zip)、[此前自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。
 
 完整八点附件为 **mordell-research-complete-2026-10-27.zip**，大小103026838字节，SHA-256：
 

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "constants": {
+    "close_pair_distance": "15/8",
+    "query_circle_radius": "11/10",
+    "smoothed_hole_radius": "9/200",
+    "near_radius": "429/200",
+    "greedy_radius": "229/100",
+    "maximum_unmatched_near_neighbors": 6,
+    "endpoint_neighborhood_cap": 16,
+    "greedy_neighborhood_cap": 17,
+    "pair_energy_lower": "1/524288",
+    "one_hole_energy_lower": "6561/6400000000",
+    "per_point_lower": "1/16777216",
+    "cap_cosine_lower": "6056/6875",
+    "seventh_neighbor_cosine_comparison": "388163132549/622857924045",
+    "seven_neighbor_corner_distance_squared_upper": "3496779/1000000"
+  },
+  "rational_annulus_checks": 441,
+  "inflated_cap_checks": 21,
+  "independent_log_gap_checks": 19,
+  "invalid_inputs_rejected": 2,
+  "scope": "Finite exact constant acceptance. The general local alternative uses angular pigeonhole, connected cap lengths and packing, proved in LOCAL_ALTERNATIVE.md."
+}

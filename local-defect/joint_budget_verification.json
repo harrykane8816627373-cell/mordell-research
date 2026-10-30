@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "class_original_fourth_moment_lower": "52/5",
+  "class_original_p2_modulus_lower": "9/10",
+  "radial_class_energy_lower": "833765625/16636339232",
+  "angular_class_energy_lower": "4327103025/66545356928",
+  "combined_class_energy_lower": "7662165525/66545356928",
+  "eight_global_gap_strict_upper": "523/5000",
+  "integer_input": [
+    [
+      588,
+      0
+    ],
+    [
+      -588,
+      0
+    ],
+    [
+      0,
+      739
+    ],
+    [
+      0,
+      -739
+    ],
+    [
+      976,
+      776
+    ],
+    [
+      976,
+      -776
+    ],
+    [
+      -976,
+      776
+    ],
+    [
+      -976,
+      -776
+    ]
+  ],
+  "normalization_squared": "4/4001369",
+  "original_fourth_moment": "168073427941920/16010953874161",
+  "original_p2": "4003384/4001369",
+  "original_p3": 0,
+  "minimum_squared_distance": "3010880/4001369",
+  "maximum_squared_radius": "6219008/4001369",
+  "minimum_previous_pair_slack": "2926986370613899072624/448460141447484084863",
+  "previous_fourth_scalar_slack": "6126854715960/16010953874161",
+  "previous_sixth_scalar_slack": "469155080356892389908/64065734492497726409",
+  "previous_eighth_scalar_slack": "-124558889550646282591602561672/256350643960511135023453921",
+  "scope": "The whole joint moment class is excluded from global optimizers. The displayed nonstationary input passes only the listed prior tests; its prior eighth-order scalar cut fails, so this is not a comparison against all earlier conditions."
+}

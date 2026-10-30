@@ -1,0 +1,465 @@
+{
+  "passed": true,
+  "independent_integer_ledgers": 17322,
+  "effective_examples": [
+    {
+      "n": 122,
+      "linear_gap_lower": "125257202733/4194304000000000000"
+    },
+    {
+      "n": 144,
+      "linear_gap_lower": "3/4194304"
+    },
+    {
+      "n": 400,
+      "linear_gap_lower": "45/4194304"
+    },
+    {
+      "n": 10000,
+      "linear_gap_lower": "2225/4194304"
+    },
+    {
+      "n": 1000000,
+      "linear_gap_lower": "123625/2097152"
+    },
+    {
+      "n": 100000000,
+      "linear_gap_lower": "6243125/1048576"
+    },
+    {
+      "n": 1000000000000,
+      "linear_gap_lower": "15624828125/262144"
+    }
+  ],
+  "conditional_geometric_plans": [
+    {
+      "n": 19,
+      "force_scale_squared": "57/64",
+      "imaginary_unit_squared": "3",
+      "minimum_squared_distance": "57/16",
+      "maximum_squared_radius": "57/4",
+      "matching": [],
+      "boundary_population": 12,
+      "blocked_population": 0,
+      "quiet_population": 7,
+      "selected_quiet_centers": [
+        4,
+        10,
+        13
+      ],
+      "conditional_energy_lower": "19683/6400000000",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    },
+    {
+      "n": 37,
+      "force_scale_squared": "111/124",
+      "imaginary_unit_squared": "3",
+      "minimum_squared_distance": "111/31",
+      "maximum_squared_radius": "999/31",
+      "matching": [],
+      "boundary_population": 18,
+      "blocked_population": 0,
+      "quiet_population": 19,
+      "selected_quiet_centers": [
+        5,
+        7,
+        16,
+        18,
+        20,
+        29,
+        31
+      ],
+      "conditional_energy_lower": "45927/6400000000",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    },
+    {
+      "n": 61,
+      "force_scale_squared": "61/68",
+      "imaginary_unit_squared": "3",
+      "minimum_squared_distance": "61/17",
+      "maximum_squared_radius": "976/17",
+      "matching": [],
+      "boundary_population": 18,
+      "blocked_population": 0,
+      "quiet_population": 43,
+      "selected_quiet_centers": [
+        2,
+        6,
+        9,
+        11,
+        14,
+        17,
+        20,
+        23,
+        27,
+        30,
+        33,
+        37,
+        40,
+        43,
+        46,
+        49,
+        51,
+        54,
+        58
+      ],
+      "conditional_energy_lower": "124659/6400000000",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    },
+    {
+      "n": 91,
+      "force_scale_squared": "273/304",
+      "imaginary_unit_squared": "3",
+      "minimum_squared_distance": "273/76",
+      "maximum_squared_radius": "6825/76",
+      "matching": [],
+      "boundary_population": 18,
+      "blocked_population": 0,
+      "quiet_population": 73,
+      "selected_quiet_centers": [
+        2,
+        7,
+        10,
+        13,
+        16,
+        19,
+        23,
+        26,
+        29,
+        31,
+        34,
+        37,
+        43,
+        46,
+        49,
+        52,
+        55,
+        58,
+        63,
+        66,
+        69,
+        70,
+        73,
+        76,
+        79,
+        82,
+        87
+      ],
+      "conditional_energy_lower": "177147/6400000000",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    },
+    {
+      "n": 10,
+      "force_scale_squared": "1/2222222220328908",
+      "imaginary_unit_squared": "1",
+      "minimum_squared_distance": "178680712888048/79365079297461",
+      "maximum_squared_radius": "6443751583043881/1111111110164454",
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "boundary_population": 8,
+      "blocked_population": 10,
+      "quiet_population": 0,
+      "selected_quiet_centers": [],
+      "conditional_energy_lower": "5/524288",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    },
+    {
+      "n": 30,
+      "force_scale_squared": "13050/9000000011506304069",
+      "imaginary_unit_squared": "1",
+      "minimum_squared_distance": "25903512162504223650/9000000011506304069",
+      "maximum_squared_radius": "401317511003999128529/18000000023012608138",
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          28
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          26,
+          27
+        ]
+      ],
+      "boundary_population": 16,
+      "blocked_population": 30,
+      "quiet_population": 0,
+      "selected_quiet_centers": [],
+      "conditional_energy_lower": "7/262144",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    },
+    {
+      "n": 100,
+      "force_scale_squared": "495000/99999999955761445291",
+      "imaginary_unit_squared": "1",
+      "minimum_squared_distance": "276449645657126700000/99999999955761445291",
+      "maximum_squared_radius": "17179453787273235494091/199999999911522890582",
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          21
+        ],
+        [
+          9,
+          23
+        ],
+        [
+          10,
+          24
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          29
+        ],
+        [
+          15,
+          32
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          20,
+          39
+        ],
+        [
+          22,
+          42
+        ],
+        [
+          25,
+          46
+        ],
+        [
+          26,
+          48
+        ],
+        [
+          27,
+          28
+        ],
+        [
+          30,
+          31
+        ],
+        [
+          33,
+          56
+        ],
+        [
+          34,
+          35
+        ],
+        [
+          36,
+          37
+        ],
+        [
+          40,
+          41
+        ],
+        [
+          43,
+          69
+        ],
+        [
+          44,
+          45
+        ],
+        [
+          47,
+          73
+        ],
+        [
+          49,
+          50
+        ],
+        [
+          51,
+          52
+        ],
+        [
+          53,
+          54
+        ],
+        [
+          55,
+          82
+        ],
+        [
+          57,
+          58
+        ],
+        [
+          59,
+          87
+        ],
+        [
+          60,
+          61
+        ],
+        [
+          62,
+          63
+        ],
+        [
+          64,
+          65
+        ],
+        [
+          66,
+          67
+        ],
+        [
+          68,
+          98
+        ],
+        [
+          75,
+          76
+        ],
+        [
+          77,
+          78
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          84,
+          85
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          91,
+          92
+        ],
+        [
+          93,
+          94
+        ],
+        [
+          95,
+          96
+        ]
+      ],
+      "boundary_population": 31,
+      "blocked_population": 100,
+      "quiet_population": 0,
+      "selected_quiet_centers": [],
+      "conditional_energy_lower": "11/131072",
+      "universal_linear_lower": "0",
+      "scope": "Geometric necessary-input plan only. Empty-ball locations are existential from the proved local alternative; no global optimizer is inferred."
+    }
+  ],
+  "gamma_upper_outward_if_existing_expansion_used": [
+    "40342635011538256990075893927/100000000000000000000000000000",
+    "403426350115382569900758939271/1000000000000000000000000000000"
+  ],
+  "n144_old_Newton_discount_strict_upper": "1/10000000000",
+  "n144_new_linear_discount_lower": "3/4194304",
+  "invalid_inputs_rejected": 5,
+  "universal_correction": "2^-24*(n-11sqrt(n))_+",
+  "scope": "Finite all-n theorem is analytic and uses inherited global separation/radius. Plans certify only their geometric and energy hypotheses, not optimum status. Gamma corollary retains the previously cited expansion input."
+}

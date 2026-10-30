@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "date": "2026-10-30",
+  "manifest_inputs": 181,
+  "prior_stationary_screening_entries_replayed": 4,
+  "runs": [
+    {
+      "entry": "verify_geometry.py",
+      "passed": true,
+      "seconds": 1.156
+    },
+    {
+      "entry": "verify_defect_ledger.py",
+      "passed": true,
+      "seconds": 0.516
+    },
+    {
+      "entry": "verify_radial_hierarchy.py",
+      "passed": true,
+      "seconds": 1.187
+    },
+    {
+      "entry": "verify_joint_budget.py",
+      "passed": true,
+      "seconds": 0.359
+    }
+  ],
+  "global_deficit_lower": "log(Un/Mn) >= 2^-24*(n-11sqrt(n))_+, every n>=2",
+  "all_n_at_least_484": "log(Un/Mn) >= n/2^25",
+  "asymptotic_gap_liminf_lower": "1/16777216",
+  "conditional_gamma_upper": "3/4-log(2)/2-2^-24; inherited external expansion required only for this interpretation",
+  "eight_joint_excluded_class": "sum |z_i|^4>=52/5 and |sum z_i^2|>=9/10",
+  "scope": "Finite global bound and necessary moment/distribution constraints; no full optimal configuration or sharp unknown value.",
+  "elapsed_seconds": 8.969
+}

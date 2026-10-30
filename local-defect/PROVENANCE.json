@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-30",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "ab06264d6d6f77b96e26e7d9805753caa3427d90",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author strict-subset global separation and radius, global normalization and existence.",
+    "Existing exact disk-smearing deficit, including positive ordered overlap terms and the explicit overlap lower bound.",
+    "Existing local Gauss/hole energy and holomorphic orthogonality.",
+    "Previous stationary mixed-moment closure and eight-point attainable lower bound.",
+    "Previously stored actual integer inputs; no new numerical optimizer output is used as proof."
+  ],
+  "new_combinations": [
+    "Six-neighbor local circle-covering obstruction with exact rational constants.",
+    "Maximal close-pair matching, endpoint packing, boundary packing and disjoint-hole ledger.",
+    "Finite all-n deficit >=2^-24*(n-11sqrt(n))_+; optional conditional gamma endpoint from the inherited expansion.",
+    "Radial polynomial Gram hierarchy conditioned on exact second-moment matching and eight-point joint budget."
+  ],
+  "primary_references": [
+    "https://arxiv.org/abs/2103.07975v2",
+    "https://arxiv.org/abs/1201.3503v2"
+  ],
+  "recent_literature": "A September 2026 triangular-minimality preprint and its verification README were located; its full analytic argument and C++ certificate were not replayed and are not inputs. See LITERATURE_SCOPE.md.",
+  "review": "One research agent derived and checked this round. Independent expressions include positive polynomial integrals, Cartesian disk moments, expanded Gram integrals, integer population ledgers, actual configurations and old pair/radial checks. No independent-agent or external peer review is claimed.",
+  "acceptance": "Python standard-library integer/Fraction arithmetic, outward roots/logs, checks active under -O, prior-suite replay and fixed-byte deterministic offline replay.",
+  "limitations": [
+    "The linear coefficient is conservative, not an exact energy constant or a claim of the best literature bound.",
+    "The finite theorem uses geometric constraints specific to global optimizers; it is not asserted for all stationary configurations.",
+    "Conditional input plans do not infer optimizer status or compute every existential hole location.",
+    "The eight-point example fails the prior eighth scalar cut; only listed earlier tests pass.",
+    "No full eight-point sharp result, complete general finite-n optimizer, local certification of exact gamma, global priority or crystallization claim."
+  ]
+}
