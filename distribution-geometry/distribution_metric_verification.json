@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "arithmetic": "Fraction, outward square roots, logarithm and Machin pi intervals",
+  "root_interval_checks": 549,
+  "harmonic_kelvin_checks": 24,
+  "quantization_layer_cake_checks": 199,
+  "rectangle_population_checks": 9,
+  "invalid_inputs_rejected": 8,
+  "finite_global_examples": [
+    {
+      "n": 6,
+      "h": "1",
+      "W1_upper_outward": "707106781187/500000000000",
+      "W1_lower_outward": "384900179459/1000000000000"
+    },
+    {
+      "n": 10,
+      "h": "1",
+      "W1_upper_outward": "707106781187/500000000000",
+      "W1_lower_outward": "298142396999/1000000000000"
+    },
+    {
+      "n": 30,
+      "h": "97/100",
+      "W1_upper_outward": "132824393843/200000000000",
+      "W1_lower_outward": "43033148291/250000000000"
+    },
+    {
+      "n": 100,
+      "h": "97/100",
+      "W1_upper_outward": "138582510341/500000000000",
+      "W1_lower_outward": "47140452079/500000000000"
+    },
+    {
+      "n": 1000,
+      "h": "97/100",
+      "W1_upper_outward": "59456956589/1000000000000",
+      "W1_lower_outward": "29814239699/1000000000000"
+    },
+    {
+      "n": 10000,
+      "h": "97/100",
+      "W1_upper_outward": "1453979217/100000000000",
+      "W1_lower_outward": "1885618083/200000000000"
+    },
+    {
+      "n": 1000000,
+      "h": "97/100",
+      "W1_upper_outward": "283296709/250000000000",
+      "W1_lower_outward": "942809041/1000000000000"
+    }
+  ],
+  "asymptotic_h": "97/100",
+  "asymptotic_upper_outward": "196047883679/200000000000",
+  "asymptotic_lower_outward": "471404520791/500000000000",
+  "asymptotic_headline": "limsup sqrt(n) W1 < 981/1000; external linear-energy and triangular trial input retained",
+  "cross_strip_width": "1/20",
+  "cross_background_mean_simple_strict_lower": "56/165",
+  "cross_strip_W1_simple_strict_lower": "191/660",
+  "cross_strip_excluded": true,
+  "prior_witness_gap_source": "symmetry-breaking/witness_verification.json, rows[n=100].global_optimizer_gap_upper",
+  "prior_witness_gap_upper": "413923829261/500000000000",
+  "prior_witness_W1_upper_outward": "111199952673/1000000000000",
+  "wider_cross_strip_width": "1/5",
+  "wider_cross_strip_W1_simple_strict_lower": "23/165",
+  "wider_cross_strip_excluded_with_stored_witness": true,
+  "wider_cross_strip_excluded_with_old_effective_gap_by_this_statistic": false,
+  "fourfold_shell_example_n": 100,
+  "fourfold_shell_squared_radii": [
+    "1/25",
+    "3/25",
+    "1/5",
+    "7/25",
+    "9/25",
+    "11/25",
+    "13/25",
+    "3/5",
+    "17/25",
+    "19/25",
+    "21/25",
+    "23/25",
+    "1",
+    "27/25",
+    "29/25",
+    "31/25",
+    "33/25",
+    "7/5",
+    "37/25",
+    "39/25",
+    "41/25",
+    "43/25",
+    "9/5",
+    "47/25",
+    "49/25"
+  ],
+  "fourfold_shell_radial_CDF_error": "1/50",
+  "scope": "Implementation and explicit nonradial class checks. Universal transport and quantization arguments are proved in DISTRIBUTION_METRIC.md; no optimal lattice, unknown sharp value or full-domain classification is established."
+}

@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "independent_interpolation_identities": 14,
+  "independent_poisson_tail_checks": 15,
+  "tail_monotonicity_checks": 60,
+  "invalid_inputs_rejected": 6,
+  "fixed_bulk_certificates": [
+    {
+      "n": 64,
+      "bulk_squared": "1",
+      "starting_count": 64,
+      "covering_radius_strict_upper": "6000000000000/7937253933193",
+      "exact_covering_radius_squared_strict_upper": "4/7",
+      "parameters": {
+        "bulk_squared": "1",
+        "tail_ratio": "5/6",
+        "threshold": 64,
+        "chernoff_base_upper": "3125971051140289799042661011175443/3791994567781428251049590784000000",
+        "poisson_error_upper": "190166069073/1000000000000",
+        "gaussian_sum_upper": "50823674634122544159679438163019790005768675009556328805661882610366414058468337990680955374796800000000/112608898537116638534879995498621957752119755323413806265179969728762203747336242255093720498749954000721",
+        "combined_error_upper": "72238066211566315497561000906776662299972768212556498142047936888582256371075981275119369113250639762656682377801633/112608898537116638534879995498621957752119755323413806265179969728762203747336242255093720498749954000721000000000000",
+        "scaled_hole_radius": 3,
+        "scope": "All global optimizers for every n above threshold and every center in the stated bulk disk."
+      },
+      "scope": "For every |u|^2<=bulk_squared some point satisfies |z_i-u|<6/sqrt(n-1), in original moment-n scale."
+    },
+    {
+      "n": 512,
+      "bulk_squared": "3/2",
+      "starting_count": 512,
+      "covering_radius_strict_upper": "3000000000000/11302654555457",
+      "exact_covering_radius_squared_strict_upper": "36/511",
+      "parameters": {
+        "bulk_squared": "3/2",
+        "tail_ratio": "27/28",
+        "threshold": 512,
+        "chernoff_base_upper": "10130280252601873803185845370976292155793/10519293591278837909216014985330688000000",
+        "poisson_error_upper": "23214270847/500000000000",
+        "gaussian_sum_upper": "50823674634122544159679438163019790005768675009556328805661882610366414058468337990680955374796800000000/112608898537116638534879995498621957752119755323413806265179969728762203747336242255093720498749954000721",
+        "combined_error_upper": "28025970787484239809218620553657045945403436793235262582130014627665953953081430877829429380425297357101528527280687/56304449268558319267439997749310978876059877661706903132589984864381101873668121127546860249374977000360500000000000",
+        "scaled_hole_radius": 3,
+        "scope": "All global optimizers for every n above threshold and every center in the stated bulk disk."
+      },
+      "scope": "For every |u|^2<=bulk_squared some point satisfies |z_i-u|<6/sqrt(n-1), in original moment-n scale."
+    },
+    {
+      "n": 4096,
+      "bulk_squared": "7/4",
+      "starting_count": 4096,
+      "covering_radius_strict_upper": "23437500000/249969480559",
+      "exact_covering_radius_squared_strict_upper": "4/455",
+      "parameters": {
+        "bulk_squared": "7/4",
+        "tail_ratio": "127/128",
+        "threshold": 4096,
+        "chernoff_base_upper": "17181557202058976278037666403467552228170406822801/17328766871310964504049814328958640677978112000000",
+        "poisson_error_upper": "86596161/200000000000",
+        "gaussian_sum_upper": "50823674634122544159679438163019790005768675009556328805661882610366414058468337990680955374796800000000/112608898537116638534879995498621957752119755323413806265179969728762203747336242255093720498749954000721",
+        "combined_error_upper": "10174486425132261648842232904809835943485372762334532710169338855425889829820086730691648173849758751315389029832081/22521779707423327706975999099724391550423951064682761253035993945752440749467248451018744099749990800144200000000000",
+        "scaled_hole_radius": 3,
+        "scope": "All global optimizers for every n above threshold and every center in the stated bulk disk."
+      },
+      "scope": "For every |u|^2<=bulk_squared some point satisfies |z_i-u|<6/sqrt(n-1), in original moment-n scale."
+    }
+  ],
+  "population_examples": [
+    {
+      "n": 1000000,
+      "center": [
+        "0",
+        "0"
+      ],
+      "radius": "1/10",
+      "bulk_squared": "1",
+      "lower": 246,
+      "upper": 10200,
+      "covering_lower_real": "220899765000003280031500003969/900000000000000000000000000",
+      "packing_upper_real": "65286335359999840008000001/6400000000000000000000",
+      "scope": "Necessary count in the closed disk, under global optimality; constants are coarse and do not determine the point arrangement."
+    },
+    {
+      "n": 1000000,
+      "center": [
+        "1/2",
+        "1/4"
+      ],
+      "radius": "1/5",
+      "bulk_squared": "1",
+      "lower": 1046,
+      "upper": 40400,
+      "covering_lower_real": "235224757500001390031500003969/225000000000000000000000000",
+      "packing_upper_real": "64641535679999920008000001/1600000000000000000000",
+      "scope": "Necessary count in the closed disk, under global optimality; constants are coarse and do not determine the point arrangement."
+    },
+    {
+      "n": 10000,
+      "center": [
+        "0",
+        "0"
+      ],
+      "radius": "1/2",
+      "bulk_squared": "1",
+      "lower": 54,
+      "upper": 2600,
+      "covering_lower_real": "7743120003000018085626750049/144000000000000000000000000",
+      "packing_upper_real": "2600744999875006518906625009/1000000000000000000000000",
+      "scope": "Necessary count in the closed disk, under global optimality; constants are coarse and do not determine the point arrangement."
+    }
+  ],
+  "theorem": "For every global optimizer, n>=64 and every |u|<=1, min_i|z_i-u|<6/sqrt(n-1).",
+  "scope": "Finite explicit microscopic bulk covering and coarse local population bounds; no boundary covering, optimal constants, exact optimizer or crystallization claimed."
+}

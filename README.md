@@ -1,6 +1,6 @@
 # Mordell 距离乘积研究：有限点数构型与一般 n
 
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[harrykane8816627373-cell](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。当前整理：**2026-10-29**。
+研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[harrykane8816627373-cell](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。当前整理：**2026-10-30**。
 
 统一归一化为
 
@@ -9,12 +9,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 \Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 ```
 
-**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未解决。** 最新补充已给全部有限 n 的圆盘上界一个显式正修正，并联合径向与非零复矩约束。具体假设见各证明。
+**八点完整无条件锐界、一般非零矩分支，以及一般 n 的简洁全局锐值公式仍未解决。** 最新补充联合全局插值、能量预算与稳定性，将径向约束推进到二维运输、内盘微观覆盖和任意位置人口限制。具体假设见各证明。
 
 ## 从这里阅读
 
 - **[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)**：统一查询结论、适用范围、证明和代码；历史待补条目的当前判断也在此汇总。
-- **[最新谱人口容量、径向运输与有效二分之一层数](population-transport/README.md)**：全局渐近下端提高到1/2；所有n≥10000有带明确四次根误差的有限式；一万点至少46层；八点薄环带与跨界角向证书。
+- **[最新二维分布、微观覆盖与局部人口](distribution-geometry/README.md)**：单位内盘在n≥64有6/√(n−1)覆盖保证；全二维W₁有效达到n⁻¹ᐟ²阶；任意中心圆盘人口、含边界覆盖与薄条带谱容量均有精确证书。
+- **[此前谱人口容量、径向运输与有效二分之一层数](population-transport/README.md)**：全局渐近下端提高到1/2；所有n≥10000有带明确四次根误差的有限式；一万点至少46层；八点薄环带与跨界角向证书。
 - **[此前通用层数、局部能量与多点稳定性](collective-stability/README.md)**：全n层数加强为K>n/(π√(n−1))，渐近下端提高至13/30；新增环带角向与多点联合证书。
 - **[此前一般 n 构型：规则分量障碍、两点约束与自由移动](symmetry-breaking/README.md)**：10≤n≤100的91项下界全部严格改善；39—42点至少三层，80—85点至少四层，并有任意驻点的正规分量人口限制。
 - **[此前径向层数、混合矩能量与人口优化](radial-angular/README.md)**：全n层数下界提高至3√n/22，渐近常数提高至101/250；任意百点全局最优者至少四层；新构造提高87项已存下界。
@@ -32,11 +33,26 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |六、七点全局锐值|$`M_6=6^{15}/5^{10}`$；$`M_7=7^{21}/6^{15}`$|[主稿](earlier-results/six_seven_proof.tex)、[覆盖审计](earlier-results/six_seven_coverage_audit.md)；全局证明引用 Faugère–Svartz 物理驻点完整分类，七点356次枝未在本地独立重建|
 |八点完整锐界|目标为 $`M_8=8^{28}/7^{21}`$；尚未证明|原点加正七边形达到候选值；低矩和若干几何分支已证，一般 $`p_2p_3\ne0`$ 分支仍开放，$`p_k=\sum_i z_i^k`$|
 |一般 n 的有限上下界与最优层数|严格圆盘修正保持；91项已存下界改善；最新liminf Kₙ/√n≥1/2，并有有效有限式|[严格上界修正](joint-bounds/ANGULAR_PROOF.md)、[最新谱容量与运输](population-transport/README.md)；不确定一般锐值或γ|
+|一般 n 最优点的二维分布|固定内盘微观覆盖、有效W₁=O(n⁻¹ᐟ²)、任意中心圆盘人口误差O(n⁻¹ᐟ³)|[最新二维分布](distribution-geometry/README.md)；覆盖与全背景估计各保留范围，未确定局部晶格|
 |严格真子集约束及有效网格|已证；有显式正有理余量与有限全局误差界|[子集证明](finite-n/SUBSET_PROOF.md)、[混合网格](source-review/HYBRID_GRID.md)；网格上界要求完整穷尽规定网格|
 |十点中心正九边形及旧缺件条目|四阶严格局部最大、完整网格、保存整数下界和特定 Hermite 障碍现均已核验|[已更新原审核](earlier-results/general_n_proof.md)；十点该局部最大仍全局次优，旧证明确认归用户原有成果|
 |确定的线性渐近项|已证 $`\log M_n=cn^2+\frac n2\log n+\gamma n+o(n)`$，$`c=\frac12\log2-\frac14`$|[外部定理、尺度与常数](asymptotics/README.md)；精确 $`\gamma`$ 及真实有限 n 边界修正仍未知|
 
-## 最新谱容量与有效径向运输
+## 最新二维分布与微观几何
+
+[新专题](distribution-geometry/README.md)把用户既有全局最优性、严格子集间距、稳定性矩阵与可达下界直接联合。对任意全局最优者，n≥64时所有|u|≤1均满足
+
+~~~math
+\min_i|z_i-u|<\frac6{\sqrt{n-1}}.
+~~~
+
+更大固定内盘也有明确起点。加权插值和分离点Gaussian积分使空洞控制达到与点距同阶的微观尺度；没有把这条内盘结论推广至背景边界。
+
+另一条运输路线控制完整二维分布：到均匀半径√2圆盘的W₁距离有有效O(n⁻¹ᐟ²)上界及同阶普适下界。已有百点整数见证还给任意百点全局最优者W₁<0.111199952674，并排除一类径向CDF误差很小但角向集中的构型。
+
+任意圆心的局部Gauss能量另给圆盘人口区间、不交多空洞的可加代价及包含背景边界的O(n⁻¹ᐟ⁴)覆盖；薄矩形谱容量排除任意200点局部最大者在长2.7、宽0.01矩形中容纳20点。四套证明和标准库重放见[专题](distribution-geometry/README.md)。这些结论尚未分类一般n的全局最优者。
+
+## 此前谱容量与有效径向运输
 
 [本轮专题](population-transport/README.md)用角序交错点集提取原稳定性算子的同层容量，再用截断逆半径的Dirichlet运输连接总体径向分布。严格得到：任意全局最优者在全部n≥10000满足
 
@@ -123,13 +139,13 @@ K\gt\frac{\sqrt n}{12}\quad(n\ge2),\qquad
 
 ## 下载与复核
 
-每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[谱容量与径向运输研究包](population-transport/mordell-population-transport-2026-10-29.zip)在解压根目录运行：
+每个专题首页均提供证明、Python标准库接受入口、字节清单和离线包。最新[二维分布与微观覆盖研究包](distribution-geometry/mordell-distribution-geometry-2026-10-30.zip)在解压根目录运行：
 
 ```bash
-python -B -S -O population-transport/verify_all.py
+python -B -S -O distribution-geometry/verify_all.py
 ```
 
-其他专题离线包：[上一轮层数与联合稳定性](collective-stability/mordell-collective-stability-2026-10-29.zip)、[此前自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。
+其他专题离线包：[此前谱容量与运输](population-transport/mordell-population-transport-2026-10-29.zip)、[此前层数与联合稳定性](collective-stability/mordell-collective-stability-2026-10-29.zip)、[此前自由构型](symmetry-breaking/mordell-symmetry-breaking-2026-10-29.zip)、[此前径向—角向](radial-angular/mordell-radial-angular-2026-10-28.zip)、[更早联合上下界](joint-bounds/mordell-joint-bounds-2026-10-28.zip)、[此前构型与上下界](configuration-bounds/mordell-configuration-bounds-2026-10-28.zip)、[完整原稿与联合方法](source-review/mordell-source-review-2026-10-28.zip)、[有限 n 与子集余量](finite-n/mordell-finite-n-2026-10-27.zip)、[全局网格更正包](global-n/mordell-global-n-corrected-2026-10-28.zip)、[五六七点历史专题](earlier-results/mordell-earlier-proofs-2026-10-27.zip)、[渐近专题 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/general-n-linear-2026-10-27)。历史ZIP保持原字节；当前网页状态及清单另行同步。
 
 完整八点附件为 **mordell-research-complete-2026-10-27.zip**，大小103026838字节，SHA-256：
 

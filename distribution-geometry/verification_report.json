@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "date": "2026-10-30",
+  "manifest_inputs": 130,
+  "runs": [
+    {
+      "entry": "verify_microscopic_covering.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "verify_distribution_metric.py",
+      "passed": true,
+      "seconds": 1.188
+    },
+    {
+      "entry": "verify_local_population.py",
+      "passed": true,
+      "seconds": 0.375
+    },
+    {
+      "entry": "verify_subset_geometry.py",
+      "passed": true,
+      "seconds": 1.453
+    }
+  ],
+  "bulk_covering": "For every global optimizer: min_i|z_i-u| < 6/sqrt(n-1), all |u|<=1 and n>=64.",
+  "effective_planar_distribution_rate": "W1(eta_z,mu0)=O(n^-1/2), effective with the elementary prior gap.",
+  "n100_W1_upper_outward": "111199952673/1000000000000",
+  "asymptotic_W1_upper_outward_external_inputs_retained": "196047883679/200000000000",
+  "all_center_bounded_radius_disk_discrepancy_rate": "O(n^-1/3)",
+  "full_background_covering_rate": "O(n^-1/4), Coulomb x scale",
+  "thin_strip_example": "n=200: any length 27/10 width 1/100 rectangle has fewer than 20 local-maximum points.",
+  "scope": "Necessary distribution and geometry results; no complete optimizer, unknown sharp value or crystallization.",
+  "elapsed_seconds": 3.422
+}

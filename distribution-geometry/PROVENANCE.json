@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-30",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "26c8fcd763340bd06101ca757000f769d5a50a7d",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author global Gaussian equivalence, strict-subset moment/separation and full second-variation norm bound.",
+    "Existing variable disk-smearing Coulomb decomposition and effective polar lower construction.",
+    "Previously certified n=100 integer witness and its saved deficit upper bound.",
+    "External linear-energy and triangular trial inputs are used only for the stated narrow asymptotic W1 constant."
+  ],
+  "classical_frameworks": [
+    {"name": "Weighted Fekete interpolation and Gaussian sampling", "primary_reference": "https://arxiv.org/abs/1110.0284"},
+    {"name": "Coulomb transport inequalities", "primary_reference": "https://arxiv.org/abs/1610.00980"},
+    {"name": "Gauss flux, Dirichlet projection, Kantorovich duality and ball quantization lower bounds", "note": "Used with self-contained arguments for the constants needed here; no framework priority claimed."}
+  ],
+  "new_results_in_this_update": [
+    "Explicit microscopic covering 6/sqrt(n-1) on the unit bulk for every n>=64, and larger fixed-bulk certificates.",
+    "Normalized finite full-plane W1 bound, effective O(n^-1/2), n=100 bound and angular concentration exclusions.",
+    "Arbitrary-center local populations, additive disjoint-hole energy and covering of the entire closed background disk.",
+    "Translation/rotation-invariant thin-strip spectral capacity, odd-skip span improvement and full n=200 exclusion witness."
+  ],
+  "review": {
+    "microscopic_covering": "Root derivation; phase_optimization independently checked interpolation, Poisson tail, packing constant and effective thresholds.",
+    "local_population": "radial_breakthrough derivation; root and phase_optimization independently confirmed local flux, sparse integral, CDF triangles and boundary half-ball geometry.",
+    "distribution_metric": "subset_constraints derivation; root and radial_breakthrough independently confirmed disk norm, scale corrections, quantization and finite certificates.",
+    "subset_geometry": "phase_optimization derivation; root and subset_constraints independently confirmed alternating blocks, ordered-span convexity and the full witness; subset_constraints replayed the acceptance entry."
+  },
+  "acceptance": "Four standard-library Fraction/integer entries, active exceptions under -O, outward transcendental bounds, pinned byte manifest and deterministic report replay.",
+  "limitations": [
+    "No complete general optimizer, new unknown sharp value, exact gamma, crystallization, uniqueness or global priority claim.",
+    "Microscopic covering is for fixed interior disks; the separate whole-background estimate is of coarser order.",
+    "The W1 narrow asymptotic constant retains external inputs and has no claimed effective starting threshold.",
+    "New geometric criteria are necessary conditions, not full-domain classifications.",
+    "AI independent checks are not external peer review or whole-proof formal verification."
+  ]
+}

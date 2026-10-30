@@ -1,0 +1,259 @@
+{
+  "passed": true,
+  "arithmetic": "integers/Fraction; no floating-point acceptance",
+  "independent_skip_span_checks": 276,
+  "convexity_checks": 96,
+  "complex_phase_real_checks": 12,
+  "direct_unequal_gap_examples": 4,
+  "old_full_pair_slacks_checked": 19900,
+  "rejected_invalid_cases": 6,
+  "entire_strip_local_certificate": {
+    "n": 200,
+    "population": 20,
+    "length": "27/10",
+    "width": "1/100",
+    "separation_squared_lower": "400/39601",
+    "phase_real_factor_lower": "1960399/2000000",
+    "odd_skip_reciprocal_lower": "623887412791469113559987236981000000/599062115604958207307769996418321",
+    "cross_operator_lower": "1223068260148983258753885419390315419/1198124231209916414615539992836642",
+    "cross_operator_upper_squared": "990025",
+    "squared_stability_slack": "-74713424763795967049561089025093048697156025785670156983219548060881461/1435501673412353246715106930259337702063200635664909284673697836164",
+    "excluded": true,
+    "scope": "All local maxima with at least the stated population in a translated/rotated rectangle; no regular spacing."
+  },
+  "entire_strip_global_certificate": {
+    "n": 200,
+    "population": 20,
+    "length": "27/10",
+    "width": "1/100",
+    "separation_squared_lower": "4/199",
+    "phase_real_factor_lower": "19801/20000",
+    "odd_skip_reciprocal_lower": "623887412791469113559987236981000000/599062115604958207307769996418321",
+    "cross_operator_lower": "617679733034193995880065363973039050/599062115604958207307769996418321",
+    "cross_operator_upper_squared": "990025",
+    "squared_stability_slack": "-26232616546176909722192042779574884169116847354969245809885867762836475/358875418353088311678776732564834425515800158916227321168424459041",
+    "excluded": true,
+    "scope": "All global maxima with at least the stated population in a translated/rotated rectangle; no regular spacing."
+  },
+  "universal_scaled_strip_certificate": {
+    "population": 20,
+    "scaled_length_squared": "145071/100",
+    "scaled_width_squared": "199/10000",
+    "squared_stability_slack": "-26232616546176909722192042779574884169116847354969245809885867762836475/14211825442200650230791237386300008084851202093241518145590777002482641",
+    "excluded_from_global_maxima": true,
+    "scope": "For every n>=population, physical lengths are these scaled lengths divided by sqrt(n-1)."
+  },
+  "nonempty_full_witness": {
+    "Q": "532001/2660",
+    "normalization_squared": "532000/532001",
+    "selected_grid_indices": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      116,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "grid_swaps": [
+      [
+        0,
+        140
+      ],
+      [
+        2,
+        139
+      ],
+      [
+        1,
+        138
+      ],
+      [
+        3,
+        137
+      ],
+      [
+        7,
+        136
+      ],
+      [
+        6,
+        135
+      ],
+      [
+        5,
+        134
+      ],
+      [
+        4,
+        133
+      ],
+      [
+        9,
+        132
+      ],
+      [
+        8,
+        131
+      ],
+      [
+        10,
+        130
+      ],
+      [
+        14,
+        129
+      ],
+      [
+        13,
+        128
+      ],
+      [
+        12,
+        127
+      ],
+      [
+        11,
+        126
+      ],
+      [
+        18,
+        125
+      ],
+      [
+        17,
+        124
+      ],
+      [
+        16,
+        123
+      ],
+      [
+        15,
+        122
+      ],
+      [
+        19,
+        121
+      ],
+      [
+        29,
+        116
+      ]
+    ],
+    "grid_pair_norm_sum": 4571,
+    "point_count": 200,
+    "selected_strip_population": 20,
+    "minimum_squared_distance": "204120/10108019",
+    "maximum_squared_radius": "7372000/3724007",
+    "minimum_old_pair_slack": "1197295695183103623731884/205518643698051199200941",
+    "selected_subset_internal_moment": "7144200/532001",
+    "complement_internal_moment": "99256000/532001"
+  },
+  "finite_line_improvements": [
+    {
+      "population": 16,
+      "new_local_span_squared_lower": "10207024/2193975",
+      "old_global_pair_span_squared_lower": "900/199"
+    },
+    {
+      "population": 20,
+      "new_local_span_squared_lower": "6053644/789831",
+      "old_global_pair_span_squared_lower": "1444/199"
+    },
+    {
+      "population": 40,
+      "new_local_span_squared_lower": "57849122877686968/1685044190981151",
+      "old_global_pair_span_squared_lower": "6084/199"
+    },
+    {
+      "population": 100,
+      "new_local_span_squared_lower": "692372962883391681509325261779744066613724/2986267642219009037660170263314327988111",
+      "old_global_pair_span_squared_lower": "39204/199"
+    }
+  ],
+  "scope": "Universal strip capacity follows from the original norm bound plus ordered-gap convexity. The full normalized witness passes the listed prior conditions, not every earlier global theorem. The new criterion is necessary geometry, not an energy or optimum certificate."
+}
