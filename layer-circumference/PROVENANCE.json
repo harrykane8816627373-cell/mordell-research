@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-30",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "1154906739d7e15e08f4e0de0a5881141a01f28a",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author global strict-subset radius/separation and full second-order stability.",
+    "Same-layer capacity m-1<=4R at force-one scale, without regular-angle assumptions.",
+    "Exact default disk-smearing decomposition with unordered loss P(d)=2(g-T^2g)(d).",
+    "Effective elementary gap bound n/100+(77/6)sqrt(n)+35/4 for n>=6.",
+    "Previous radial energy duality, stationary angular coefficients, n8 attainable product and n100 integer witness."
+  ],
+  "new_derivations": [
+    "Newton tail representation makes the exact pair loss convex and decreasing on all positive distances.",
+    "Regular angles minimize the same-layer overlap loss at fixed radius and population; adjacent edges yield a global convex perimeter budget.",
+    "Test f_a(q)=(1-q)min(1/a,1/q), its exact norm/background, negative interface jump, and layer-circumference transport.",
+    "Universal explicit K>(5007/10000)sqrt(n) for every n>=10^16 using only the effective elementary gap input.",
+    "General asymptotic energy-to-layer interface; inherited external energy input yields liminf K/sqrt(n)>=1/4+22/(25pi)>0.53.",
+    "Layer-measure lower density in every fixed radial window and a positive radius-weighted mass of additional layers.",
+    "Exact rational lower quadrature improves n8/n100 short-edge caps to 12/101 and weakens the n8 joint fourth-moment threshold to 101/10."
+  ],
+  "external_input_for_0_53_only": {
+    "statement": "Previously cited linear energy expansion plus triangular trial input gives limsup(delta_n/n)<1/800.",
+    "local_entry": "../radial-angular/RADIAL_LAYERS.md, section 5.2; ../asymptotics/README.md",
+    "limitation": "No new effective finite-n threshold or reproof of the external expansion is claimed. The 0.5007 finite theorem is independent of this external input."
+  },
+  "literature_context": [
+    {"title": "A density theorem for weighted Fekete sets", "author": "Yacin Ameur", "url": "https://arxiv.org/abs/1510.08605v2", "use": "Primary-source context for established Fekete density research; not a new theorem input or priority comparison."},
+    {"title": "2D Coulomb Gases and the Renormalized Energy", "authors": "Sandier and Serfaty", "url": "https://arxiv.org/abs/1201.3503v2", "use": "Inherited external expansion, with its earlier project normalization and scope retained."}
+  ],
+  "review": "One research agent derived and checked this update. Independent expressions include Newton tails versus the lens integral, atan versus cosine series, atanh versus the positive log series, cyclic edge ledgers, direct radial integrals and an all-n rational tail bound. No independent-agent or external peer review is claimed.",
+  "acceptance": "Four new and twelve earlier entries, exact integer/Fraction arithmetic, checks active under -O, fixed-byte inputs and extracted-package replay.",
+  "limitations": [
+    "Neither finite-n optimal configurations nor the full eight-point sharp value are classified.",
+    "The >0.53 conclusion retains the specified external asymptotic energy input; it is not a finite inequality with a certified starting n.",
+    "The finite 0.5007 coefficient is claimed only for n>=10^16; earlier finite bounds remain relevant below this threshold.",
+    "Same-ring regularity is proved for the overlap-loss subfunctional, not for the full optimizer.",
+    "Fixed radial windows are not shrinking microscopic windows; layer-measure statements do not identify a lattice.",
+    "No exact energy constant, best coefficient, formal proof of the full manuscript or global priority claim."
+  ]
+}

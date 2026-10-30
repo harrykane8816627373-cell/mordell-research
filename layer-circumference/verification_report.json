@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "date": "2026-10-30",
+  "manifest_inputs": 223,
+  "prior_entries_replayed": 12,
+  "new_entries": 4,
+  "runs": [
+    {
+      "entry": "stationary-screening/verify_imported.py",
+      "passed": true,
+      "seconds": 1.578
+    },
+    {
+      "entry": "stationary-screening/verify_stationary_moments.py",
+      "passed": true,
+      "seconds": 1.297
+    },
+    {
+      "entry": "stationary-screening/verify_screened_holes.py",
+      "passed": true,
+      "seconds": 0.297
+    },
+    {
+      "entry": "stationary-screening/verify_edge_covering.py",
+      "passed": true,
+      "seconds": 1.234
+    },
+    {
+      "entry": "local-defect/verify_geometry.py",
+      "passed": true,
+      "seconds": 0.266
+    },
+    {
+      "entry": "local-defect/verify_defect_ledger.py",
+      "passed": true,
+      "seconds": 1.312
+    },
+    {
+      "entry": "local-defect/verify_radial_hierarchy.py",
+      "passed": true,
+      "seconds": 0.313
+    },
+    {
+      "entry": "local-defect/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 1.156
+    },
+    {
+      "entry": "overlap-budget/verify_overlap_cost.py",
+      "passed": true,
+      "seconds": 0.375
+    },
+    {
+      "entry": "overlap-budget/verify_parameters.py",
+      "passed": true,
+      "seconds": 1.328
+    },
+    {
+      "entry": "overlap-budget/verify_graph_budget.py",
+      "passed": true,
+      "seconds": 0.531
+    },
+    {
+      "entry": "overlap-budget/verify_joint_region.py",
+      "passed": true,
+      "seconds": 1.219
+    },
+    {
+      "entry": "layer-circumference/verify_pair_integral.py",
+      "passed": true,
+      "seconds": 2.563
+    },
+    {
+      "entry": "layer-circumference/verify_ring_geometry.py",
+      "passed": true,
+      "seconds": 1.187
+    },
+    {
+      "entry": "layer-circumference/verify_circumference.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "layer-circumference/verify_layers.py",
+      "passed": true,
+      "seconds": 3.407
+    }
+  ],
+  "finite_layer_bound": "K>(5007/10000)*sqrt(n), every n>=10^16; elementary effective gap only",
+  "asymptotic_layer_bound_with_inherited_external_energy_input": "liminf K/sqrt(n)>=1/4+22/(25pi)>53/100",
+  "force_cutoff": "8/5",
+  "n8_global_short_edge_cap": 12,
+  "n100_global_short_edge_cap": 101,
+  "scope": "Necessary radial-layer and point-distribution constraints; no full optimizer classification. The two layer bounds have different energy inputs.",
+  "elapsed_seconds": 18.657
+}

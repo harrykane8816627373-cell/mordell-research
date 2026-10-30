@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "independent_convex_tail_checks": 9,
+  "cyclic_count_ledgers": 4002,
+  "rational_polygon_perimeter_uppers": [
+    "57695234103/10000000000",
+    "1767766953/312500000",
+    "6933752453/1250000000"
+  ],
+  "same_ring_minimum_loss": "regular angles minimize sum P(chord) for fixed population and radius",
+  "adjacent_edge_count": "L>=n-2K; one- and two-point layers discarded",
+  "scope": "Finite checks of the implementation ledger and independent radial-law examples. General convexity, cyclic Jensen, and rigidity follow from PAIR_CONVEXITY.md."
+}

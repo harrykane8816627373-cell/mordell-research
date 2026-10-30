@@ -2,7 +2,9 @@
 
 研究资料与项目发起：蒋丰灿（Fengcan Jiang）；推导与代码包含 OpenAI Codex 协作。更新于2026-10-30。此页汇总当前判断，定理的全部假设和证明以所链接正文为准。
 
-**最新补充见[重叠积分、顶点覆盖与短边预算](../overlap-budget/README.md)。** 所有n≥2的线性缺额系数提高为37·2⁻²⁴；新的短边人口约束可与径向—角向Dirichlet预算相加。百点力为1尺度8/5短边至多136对，八点一般17对、指定矩条件下2对。常数和分类范围保留正文限制。
+**最新补充见[层周长、凸重叠损失与层分布](../layer-circumference/README.md)。** 初等有效预算给所有n≥10¹⁶的K>0.5007√n；沿用已注明外部渐近能量输入时，liminf Kₙ/√n≥1/4+22/(25π)>0.53，未给后者有效有限起点。固定环带还有层密度约束。八点/百点力为1尺度8/5短边上限收紧至12/101对。
+
+**此前[重叠积分、顶点覆盖与短边预算](../overlap-budget/README.md)保持有效。** 所有n≥2的线性缺额系数为37·2⁻²⁴；保留点对代价可以与一个径向—角向Dirichlet下端相加。
 
 **此前[线性正缺额与径向—角向矩联合](../local-defect/README.md)保持有效。** 所有n≥2有log(Uₙ/Mₙ)≥2⁻²⁴(n−11√n)₊；有限证明联合近邻重叠代价、不交空洞及人口计数。新径向Gram与驻点角向能量共用预算。常数保守，未完成八点锐界或一般有限构型分类。
 
@@ -45,7 +47,8 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |严格真子集内部矩约束|对全局最优构型及2≤m<n严格成立；已加强为显式正有理余量|[完整证明](../finite-n/SUBSET_PROOF.md)；单点两边为零，全体点为等式，不推广到所有驻点|
 |标准化最大值相邻严格下降|原稿已有完整证明；后续加入随机子集四阶方差折扣|[来源核对](../source-review/SOURCE_REVIEW.md)、[全局方法专题](../global-n/README.md)|
 |完整有效网格|原稿已有定义与误差证明；后续联合稳定矩阵、点距与较小整数箱改善|[原审核第9节](../earlier-results/general_n_proof.md)、[混合网格](../source-review/HYBRID_GRID.md)；上界要求完整覆盖，抽样只给下界|
-|不同半径层数|全局liminf Kₙ/√n≥1/2；所有n≥10000有K>√n/2−(11/20)n^(1/4)；另有全n局部界|[最新谱人口与有效运输](../population-transport/README.md)；任意角度，保留适用范围及有限误差；仍不确定真实层数|
+|不同半径层数|新有效K>0.5007√n适用于所有n≥10¹⁶；保留外部渐近能量输入时liminf Kₙ/√n>0.53；此前各有限界保持|[最新层周长证明](../layer-circumference/LAYER_THEOREM.md)；任意角度，区分有效有限式与外部输入的渐近式；仍不确定真实层数|
+|层半径自身的分布|q=R/√n尺度，每个固定窗口(a,b)有liminf K_n((a,b))/√n≥(b−a)/2；有限弱极限的额外层有正半径加权质量|[层分布证明](../layer-circumference/LAYER_THEOREM.md)；固定窗口，不扩大到缩小的微观窗口或晶格分类|
 |内盘微观覆盖|所有全局最优者：n≥64、任意原尺度圆心平方半径≤1，最近点距<6/√(n−1)；更大固定内盘有明确起点|[全局插值证明](../distribution-geometry/MICROSCOPIC_COVERING.md)；不声称背景边界的同阶覆盖|
 |整个闭背景盘覆盖|所有全局最优者、n≥64：原z尺度覆盖半径O(√(log n/n))，有明确公式|[扩张内盘证明](../stationary-screening/EDGE_COVERING.md)；包括背景边界，仍保留√log n损失|
 |驻点混合矩与空洞联合|一般k的卷积闭合、带残差接口、高阶矩消元四次罚项；空洞与守恒矩的完整Schur能量|[驻点与矩校正专题](../stationary-screening/README.md)；保留支撑、驻点和真实测量条件，不独立重复相加|
@@ -53,7 +56,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |平移旋转薄矩形人口|局部最大稳定性的奇跳谱容量；200点局部最大者的任意长2.7宽0.01矩形不能容纳20点|[条带证明与完整非空见证](../distribution-geometry/SUBSET_GEOMETRY.md)；必要几何条件，非锐值证明|
 |确定的线性渐近项|沿用已注明展开，最新γ上端为3/4−log(2)/2−37·2⁻²⁴|[渐近专题](../asymptotics/README.md)、[最新参数接口](../overlap-budget/PARAMETER_THEOREM.md)；[近期文献与本地认证边界](../local-defect/LITERATURE_SCOPE.md)另列，未在本地认证精确γ|
 |全 n 圆盘上界及最新严格修正|旧Newton保持；线性缺额提高为37·2⁻²⁴(n−11√n)₊|[新参数证明](../overlap-budget/PARAMETER_THEOREM.md)、[旧Newton证明](../joint-bounds/ANGULAR_PROOF.md)；两证书取较强者，允许相加的项另见正文，不声称最优常数|
-|短边图人口与共同预算|力为1尺度8/5截止：八点全局≤17对、百点≤136对；八点指定矩条件下≤2对|[新联合证明](../overlap-budget/JOINT_BUDGET.md)；点对代价可与一个完整Dirichlet下端相加，禁止重复计数|
+|短边图人口与共同预算|力为1尺度8/5截止：八点全局≤12对、百点≤101对；八点指定矩条件下≤2对，四阶矩门槛降至101/10|[精确积分与新联合门槛](../layer-circumference/LAYER_THEOREM.md)；点对代价可与一个完整Dirichlet下端相加，禁止重复计数|
 |径向矩与角向共同预算|匹配二阶矩的径向Gram；八点四阶矩≥52/5且二阶幂和模≥9/10的整类排除|[联合证明](../local-defect/RADIAL_HIERARCHY.md)；同一径向能量不能再次重复相加，非空输入的旧高阶失败明确保留|
 
 ## 3. 本轮有限构型与上下界

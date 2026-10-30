@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "radial_integrals": [
+    {
+      "a": "1",
+      "background": "1/3",
+      "norm_squared": "1",
+      "derivative_jump": "0"
+    },
+    {
+      "a": "1/2",
+      "background": "7/12",
+      "norm_squared": "5/2",
+      "derivative_jump": "-2"
+    },
+    {
+      "a": "1/10",
+      "background": "271/300",
+      "norm_squared": "101/2",
+      "derivative_jump": "-90"
+    },
+    {
+      "a": "1/10000",
+      "background": "299970001/300000000",
+      "norm_squared": "100000001/2",
+      "derivative_jump": "-99990000"
+    }
+  ],
+  "capacity_ledgers": 450,
+  "finite_radial_test": {
+    "a": "1/10000",
+    "background_average": "299970001/300000000",
+    "dirichlet_norm_squared": "100000001/2",
+    "energy_error_upper": "2828427138888325685979/400000000000000000000000000",
+    "smearing_error_upper": "1/80000",
+    "point_average_lower": "1199856518718583335022942063/1200000000000000000000000000"
+  },
+  "invalid_inputs_rejected": 7,
+  "scope": "Ledgers do not assert stationarity or normalization of their synthetic single-layer inputs. Universal radial transport is established by the weak Laplacian proof."
+}

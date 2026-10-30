@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "finite_all_n_threshold": 10000000000000000,
+  "finite_layer_coefficient": "5007/10000",
+  "tail_t_upper": "1/10000",
+  "tail_normalized_gap_upper": "10001/1000000",
+  "tail_adjacent_distance_upper": "89013593712500/56499999434209",
+  "tail_pair_energy_per_n_lower": "501499994977979/50000000000000000",
+  "finite_examples": [
+    {
+      "n": 10000000000000000,
+      "excluded_maximum_layers": 50070000,
+      "guaranteed_minimum_layers": 50070001,
+      "generic_certificate": {
+        "n": 10000000000000000,
+        "maximum_layers": 50070000,
+        "proven_gap_upper": "1200015400000105/12",
+        "radial_test": {
+          "a": "1/10000",
+          "background_average": "299970001/300000000",
+          "dirichlet_norm_squared": "100000001/2",
+          "energy_error_upper": "17677783049402267019089/2500000000000000000000000000",
+          "smearing_error_upper": "1/80000",
+          "point_average_lower": "7499103241650851793198942733/7500000000000000000000000000"
+        },
+        "sum_force_radii_over_n_upper": "7522272283349148206801057267/30000000000000000000000000000",
+        "adjacent_edge_count_lower": 9999999899860000,
+        "average_adjacent_distance_upper": "534081332117789522682875065957/338999996605254000000000000000",
+        "cutoff_force": "3151/2000",
+        "accepted_cost_per_pair": "1003/100000",
+        "cutoff_reached": true,
+        "pair_energy_lower": "501499994977979/5",
+        "entire_at_most_K_class_excluded": true,
+        "scope": "Necessary for global optimizers using same-layer capacity, force radii<=sqrt(n), and the stated proved energy input; not a candidate optimizer test."
+      }
+    },
+    {
+      "n": 20000000000000000,
+      "excluded_maximum_layers": 70809673,
+      "guaranteed_minimum_layers": 70809674,
+      "generic_certificate": {
+        "n": 20000000000000000,
+        "maximum_layers": 70809673,
+        "proven_gap_upper": "2400021778889083/12",
+        "radial_test": {
+          "a": "1/11893",
+          "background_average": "424294669/424330347",
+          "dirichlet_norm_squared": "70721725",
+          "energy_error_upper": "59465270018271402613827/10000000000000000000000000000",
+          "smearing_error_upper": "1682186938957/160000000000000000",
+          "point_average_lower": "4242876844395868292472633760582092031/4243303470000000000000000000000000000"
+        },
+        "sum_force_radii_over_n_upper": "7523244938118841777631452985979432045431172044109954859/30004686582694078276064296680000000000000000000000000000",
+        "adjacent_edge_count_lower": 19999999858380654,
+        "average_adjacent_distance_upper": "534150390606437766211833162004539675225613215131806794989/339052955983620173231024242290096270379062226800000000000",
+        "cutoff_force": "3151/2000",
+        "accepted_cost_per_pair": "1003/100000",
+        "cutoff_reached": true,
+        "pair_energy_lower": "10029999928977897981/50000",
+        "entire_at_most_K_class_excluded": true,
+        "scope": "Necessary for global optimizers using same-layer capacity, force radii<=sqrt(n), and the stated proved energy input; not a candidate optimizer test."
+      }
+    },
+    {
+      "n": 1000000000000000000,
+      "excluded_maximum_layers": 500700000,
+      "guaranteed_minimum_layers": 500700001,
+      "generic_certificate": {
+        "n": 1000000000000000000,
+        "maximum_layers": 500700000,
+        "proven_gap_upper": "120000154000000105/12",
+        "radial_test": {
+          "a": "1/31623",
+          "background_average": "2999947519/3000042387",
+          "dirichlet_norm_squared": "500007065",
+          "energy_error_upper": "139755325630263026762649/62500000000000000000000000000",
+          "smearing_error_upper": "31623446801367/8000000000000000000",
+          "point_average_lower": "187495559480592838187730198223549096837/187502649187500000000000000000000000000"
+        },
+        "sum_force_radii_over_n_upper": "188037715160847182647938551776450903163/750010596750000000000000000000000000000",
+        "adjacent_edge_count_lower": 999999998998600000,
+        "average_adjacent_distance_upper": "13350677776420149968003637176128014124573/8475119734788015089084415000000000000000",
+        "cutoff_force": "3151/2000",
+        "accepted_cost_per_pair": "1003/100000",
+        "cutoff_reached": true,
+        "pair_energy_lower": "10029999989955958",
+        "entire_at_most_K_class_excluded": true,
+        "scope": "Necessary for global optimizers using same-layer capacity, force radii<=sqrt(n), and the stated proved energy input; not a candidate optimizer test."
+      }
+    },
+    {
+      "n": 100000000000000000000,
+      "excluded_maximum_layers": 5007000000,
+      "guaranteed_minimum_layers": 5007000001,
+      "generic_certificate": {
+        "n": 100000000000000000000,
+        "maximum_layers": 5007000000,
+        "proven_gap_upper": "12000001540000000105/12",
+        "radial_test": {
+          "a": "1/100000",
+          "background_average": "29999700001/30000000000",
+          "dirichlet_norm_squared": "10000000001/2",
+          "energy_error_upper": "70710682659458653925142577/100000000000000000000000000000000",
+          "smearing_error_upper": "1/800000",
+          "point_average_lower": "299996412877952021624038224572269/300000000000000000000000000000000"
+        },
+        "sum_force_radii_over_n_upper": "300845089222047978375961775427731/1200000000000000000000000000000000",
+        "adjacent_edge_count_lower": 99999999989986000000,
+        "average_adjacent_distance_upper": "21360001334765406464693286055368901/13559999998642101600000000000000000",
+        "cutoff_force": "3151/2000",
+        "accepted_cost_per_pair": "1003/100000",
+        "cutoff_reached": true,
+        "pair_energy_lower": "1002999999899559580",
+        "entire_at_most_K_class_excluded": true,
+        "scope": "Necessary for global optimizers using same-layer capacity, force radii<=sqrt(n), and the stated proved energy input; not a candidate optimizer test."
+      }
+    },
+    {
+      "n": 1000000000000000000000000,
+      "excluded_maximum_layers": 500700000000,
+      "guaranteed_minimum_layers": 500700000001,
+      "generic_certificate": {
+        "n": 1000000000000000000000000,
+        "maximum_layers": 500700000000,
+        "proven_gap_upper": "120000000154000000000105/12",
+        "radial_test": {
+          "a": "1/1000000",
+          "background_average": "2999997000001/3000000000000",
+          "dirichlet_norm_squared": "1000000000001/2",
+          "energy_error_upper": "70710678164062792890777106693/1000000000000000000000000000000000000",
+          "smearing_error_upper": "1/8000000",
+          "point_average_lower": "2999996412868965507811621327668679921/3000000000000000000000000000000000000"
+        },
+        "sum_force_radii_over_n_upper": "3008405089231034492188378672331320079/12000000000000000000000000000000000000",
+        "adjacent_edge_count_lower": 999999999998998600000000,
+        "average_adjacent_distance_upper": "213596761335403448945374885735523725609/135599999999864210160000000000000000000",
+        "cutoff_force": "3151/2000",
+        "accepted_cost_per_pair": "1003/100000",
+        "cutoff_reached": true,
+        "pair_energy_lower": "10029999999989955958000",
+        "entire_at_most_K_class_excluded": true,
+        "scope": "Necessary for global optimizers using same-layer capacity, force radii<=sqrt(n), and the stated proved energy input; not a candidate optimizer test."
+      }
+    }
+  ],
+  "force_short_edge_cutoff": "8/5",
+  "n8_global_short_edge_cap": 12,
+  "n100_global_short_edge_cap": 101,
+  "n8_conditional_fourth_moment_lower": "101/10",
+  "n8_conditional_p2_modulus_lower": "4/5",
+  "n8_conditional_short_edge_cap": 2,
+  "n8_joint_three_edge_lower": "2789695860673/26618142771200",
+  "elementary_asymptotic_bound": "1/4+3151/(4000*pi)",
+  "elementary_asymptotic_rational_lower": "711063/1420000",
+  "external_input_asymptotic_bound": "1/4+22/(25*pi)",
+  "external_input_asymptotic_rational_lower": "18819/35500",
+  "external_input": "The previously cited linear energy theorem plus triangular trial bound limsup(delta_n/n)<=1/800; no effective threshold is inferred for this input.",
+  "scope": "Finite n>=10^16 conclusion uses only the explicit elementary gap bound, author stability/radius, and exact smearing. The >0.53 asymptotic conclusion retains its external energy input."
+}
