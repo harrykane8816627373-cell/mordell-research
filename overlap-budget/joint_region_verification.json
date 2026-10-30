@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "original_fourth_moment_class_lower": "51/5",
+  "original_p2_modulus_class_lower": "4/5",
+  "force_short_edge_cutoff": "8/5",
+  "minimum_excluded_edge_count": 3,
+  "Dirichlet_class_lower": "23109048025/266181427712",
+  "simple_pair_cost": "3/500",
+  "combined_class_lower": "3487539215477/33272678464000",
+  "eight_global_gap_upper": "523/5000",
+  "conditional_maximum_short_edges": 2,
+  "integer_input": [
+    [
+      616,
+      0
+    ],
+    [
+      -616,
+      0
+    ],
+    [
+      0,
+      760
+    ],
+    [
+      0,
+      -760
+    ],
+    [
+      953,
+      780
+    ],
+    [
+      953,
+      -780
+    ],
+    [
+      -953,
+      780
+    ],
+    [
+      -953,
+      -780
+    ]
+  ],
+  "normalization_squared": "2/1995137",
+  "input_fourth_moment": "40622514669584/3980571648769",
+  "input_p2": "1605896/1995137",
+  "input_short_edge_count": 4,
+  "input_previous_displayed_budget": "704503389393629820803851365940264375/8023385088009876687491515574787120014",
+  "minimum_previous_pair_slack": "1327588483399391744019/222370001773081017884",
+  "previous_fourth_scalar_slack": "5188386006504/3980571648769",
+  "previous_sixth_scalar_slack": "214752408267661318236/7941785777610036353",
+  "previous_eighth_scalar_slack": "-5669679987264359178541135182/15844950650983555099215361",
+  "four_parameter_box_radius": "1/100",
+  "box_fourth_moment_interval": [
+    "4062061733104415014480/398076486137768765209",
+    "4062441207516628185680/398037844324346954809"
+  ],
+  "box_p2_interval": [
+    "16055086400/19951854203",
+    "16062833600/19950885803"
+  ],
+  "box_short_edge_squared_interval": [
+    "14438798410/19951854203",
+    "14439961610/19950885803"
+  ],
+  "box_previous_displayed_budget_upper": "7051823173035819943966156033918426574707476818359375/80226062427338592014019340941898236602888397831278894",
+  "scope": "An entire reflection-preserving four-parameter box passes the displayed prior low-order budget and is excluded by retained pair loss. Its sample fails the earlier eighth scalar cut, so no claim is made against all prior conditions."
+}

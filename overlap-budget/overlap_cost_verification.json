@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "normalized_inner_integral": "8/3",
+  "normalized_outer_integral": "16/35",
+  "parabolic_domain_checks": 765,
+  "monotonicity_checks": 5,
+  "pi_upper": "355/113",
+  "near_contact_leading_constant_times_pi": "64/105",
+  "near_contact_power": "7/2",
+  "pair_cost_examples": [
+    {
+      "cutoff": "8/5",
+      "new_pair_cost_lower": "6083119669/1000000000000",
+      "old_pair_cost_lower": "1/5000",
+      "improvement_ratio_lower": "6083119669/200000000"
+    },
+    {
+      "cutoff": "7/4",
+      "new_pair_cost_lower": "656343867/500000000000",
+      "old_pair_cost_lower": "1/32768",
+      "improvement_ratio_lower": "10501501872/244140625"
+    },
+    {
+      "cutoff": "19/10",
+      "new_pair_cost_lower": "58205231/1000000000000",
+      "old_pair_cost_lower": "1/1280000",
+      "improvement_ratio_lower": "58205231/781250"
+    },
+    {
+      "cutoff": "1913/1000",
+      "new_pair_cost_lower": "36007547/1000000000000",
+      "old_pair_cost_lower": "57289761/128000000000000",
+      "improvement_ratio_lower": "4608966016/57289761"
+    }
+  ],
+  "invalid_inputs_rejected": 3,
+  "scope": "Finite integration/domain checks; PARABOLIC_PAIR.md proves the general overlap lower bound for sqrt(2)<=distance<2."
+}

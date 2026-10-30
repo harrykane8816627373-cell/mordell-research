@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "conditional_vertex_plans": [
+    {
+      "n": 173,
+      "certificate": "strong37",
+      "imaginary_unit_squared": "1",
+      "force_scale_squared": "7439/3042",
+      "short_edge_count": 300,
+      "cover_size": 166,
+      "blocked_population": 172,
+      "boundary_population": 12,
+      "quiet_population": 1,
+      "selected_quiet_centers": [
+        172
+      ],
+      "conditional_energy_lower": "424496948933911/40000000000000000",
+      "universal_gap_lower": "523875399873919/8388608000000000000",
+      "scope": "Input geometric checks and conditional energy plan only. No optimizer or stationary status is inferred; actual hole locations follow from the local geometric lemma."
+    },
+    {
+      "n": 10,
+      "certificate": "strong37",
+      "imaginary_unit_squared": "1",
+      "force_scale_squared": "1/2222222220328908",
+      "short_edge_count": 11,
+      "cover_size": 8,
+      "blocked_population": 10,
+      "boundary_population": 8,
+      "quiet_population": 0,
+      "selected_quiet_centers": [],
+      "conditional_energy_lower": "407/1048576",
+      "universal_gap_lower": "0",
+      "scope": "Input geometric checks and conditional energy plan only. No optimizer or stationary status is inferred; actual hole locations follow from the local geometric lemma."
+    },
+    {
+      "n": 30,
+      "certificate": "strong37",
+      "imaginary_unit_squared": "1",
+      "force_scale_squared": "13050/9000000011506304069",
+      "short_edge_count": 46,
+      "cover_size": 29,
+      "blocked_population": 30,
+      "boundary_population": 16,
+      "quiet_population": 0,
+      "selected_quiet_centers": [],
+      "conditional_energy_lower": "851/524288",
+      "universal_gap_lower": "0",
+      "scope": "Input geometric checks and conditional energy plan only. No optimizer or stationary status is inferred; actual hole locations follow from the local geometric lemma."
+    },
+    {
+      "n": 100,
+      "certificate": "strong37",
+      "imaginary_unit_squared": "1",
+      "force_scale_squared": "495000/99999999955761445291",
+      "short_edge_count": 158,
+      "cover_size": 92,
+      "blocked_population": 100,
+      "boundary_population": 31,
+      "quiet_population": 0,
+      "selected_quiet_centers": [],
+      "conditional_energy_lower": "2923/524288",
+      "universal_gap_lower": "0",
+      "scope": "Input geometric checks and conditional energy plan only. No optimizer or stationary status is inferred; actual hole locations follow from the local geometric lemma."
+    }
+  ],
+  "short_edge_capacity_examples": [
+    {
+      "n": 8,
+      "cutoff_force": "8/5",
+      "per_unordered_pair_cost_lower": "6083119669/1000000000000",
+      "remaining_gap": "523/5000",
+      "maximum_short_edges": 17,
+      "entire_class_excluded": false,
+      "scope": "Counts unordered pairs at force-one distance <=cutoff, assuming global geometry and the stated proved total-gap/Dirichlet inputs.",
+      "local_Frobenius_edge_cap": 22
+    },
+    {
+      "n": 100,
+      "cutoff_force": "8/5",
+      "per_unordered_pair_cost_lower": "6083119669/1000000000000",
+      "remaining_gap": "413923829261/500000000000",
+      "maximum_short_edges": 136,
+      "entire_class_excluded": false,
+      "scope": "Counts unordered pairs at force-one distance <=cutoff, assuming global geometry and the stated proved total-gap/Dirichlet inputs.",
+      "local_Frobenius_edge_cap": 324
+    }
+  ],
+  "invalid_inputs_rejected": 4,
+  "scope": "Finite graph plans test geometric hypotheses only. Global edge caps use independently certified gap bounds; passing the cap is not an optimality certificate."
+}

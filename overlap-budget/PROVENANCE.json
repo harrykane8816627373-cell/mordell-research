@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "57edc9458539aab2fed6c6b1715d622ac364eb46",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author strict-subset global separation/radius and full stability norm.",
+    "Existing exact disk-smearing energy decomposition, overlap loss and local hole energy.",
+    "Previous six-neighbor obstruction, boundary packing, matched radial hierarchy and stationary mixed-moment closure.",
+    "Existing eight-point attainable lower bound and n=100 integer witness deficit."
+  ],
+  "new_derivations": [
+    "Parabolic overlap integral with P(d)>=512sqrt(2(d-1))/(105pi)*(1-d/2)^(7/2).",
+    "Exact near-contact leading coefficient 64/(105pi) for the pair loss and the matching analytic lower bound.",
+    "One-endpoint vertex cover and c-separated quiet packing, replacing the earlier matching losses.",
+    "Reusable sufficient parameter certificates; fixed all-n linear coefficient 37/2^24, exactly 37 times the prior coefficient.",
+    "Energy short-edge caps and a radial/angular/short-edge joint region with a nonempty four-parameter interval box."
+  ],
+  "parameter_selection": "Exploratory arithmetic selected rational parameters. Acceptance uses only exact comparisons and outward intervals. No full parameter optimization is claimed.",
+  "review": "One research agent derived and checked this round. Independent expressions include two exact integral factorizations, parabolic containment, integer cover ledgers, actual geometric plans and rational interval propagation. No independent-agent or external peer review is claimed.",
+  "acceptance": "Four new standard-library entries plus eight earlier entries, integer/Fraction arithmetic, active exceptions under -O, fixed-byte inputs and deterministic report replay.",
+  "limitations": [
+    "The improved linear coefficient is conservative and does not identify the true global energy constant.",
+    "Near-contact sharp leading behavior refers only to pair overlap, not the global optimization problem.",
+    "Global edge capacities require independently proved total-gap and Dirichlet inputs.",
+    "The four-parameter example fails an earlier eighth-order scalar cut; it is not claimed to pass every prior condition.",
+    "No full eight-point sharp proof, general finite-n optimizer, exact gamma certification, crystallization or global priority claim."
+  ]
+}

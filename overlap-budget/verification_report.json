@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "date": "2026-10-30",
+  "manifest_inputs": 202,
+  "prior_entries_replayed": 8,
+  "new_entries": 4,
+  "runs": [
+    {
+      "entry": "stationary-screening/verify_imported.py",
+      "passed": true,
+      "seconds": 1.453
+    },
+    {
+      "entry": "stationary-screening/verify_stationary_moments.py",
+      "passed": true,
+      "seconds": 1.375
+    },
+    {
+      "entry": "stationary-screening/verify_screened_holes.py",
+      "passed": true,
+      "seconds": 0.266
+    },
+    {
+      "entry": "stationary-screening/verify_edge_covering.py",
+      "passed": true,
+      "seconds": 1.172
+    },
+    {
+      "entry": "local-defect/verify_geometry.py",
+      "passed": true,
+      "seconds": 0.234
+    },
+    {
+      "entry": "local-defect/verify_defect_ledger.py",
+      "passed": true,
+      "seconds": 1.344
+    },
+    {
+      "entry": "local-defect/verify_radial_hierarchy.py",
+      "passed": true,
+      "seconds": 0.297
+    },
+    {
+      "entry": "local-defect/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 1.172
+    },
+    {
+      "entry": "overlap-budget/verify_overlap_cost.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "overlap-budget/verify_parameters.py",
+      "passed": true,
+      "seconds": 1.281
+    },
+    {
+      "entry": "overlap-budget/verify_graph_budget.py",
+      "passed": true,
+      "seconds": 0.453
+    },
+    {
+      "entry": "overlap-budget/verify_joint_region.py",
+      "passed": true,
+      "seconds": 1.188
+    }
+  ],
+  "global_deficit_lower": "log(Un/Mn)>=37/2^24*(n-11sqrt(n))_+, every n>=2",
+  "improvement_factor_over_previous_linear_coefficient": 37,
+  "pair_near_contact_leading": "64/(105pi)*(2-d)^(7/2)",
+  "force_cutoff": "8/5",
+  "n8_global_short_edge_cap": 17,
+  "n100_global_short_edge_cap": 136,
+  "n8_conditional_edge_cap": 2,
+  "scope": "Improved finite global bound and necessary joint distribution constraints; no full optimizer classification or unknown sharp value.",
+  "elapsed_seconds": 10.844
+}

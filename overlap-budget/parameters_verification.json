@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "fixed_parameter_certificates": {
+    "simple32": {
+      "close_cutoff": "191/100",
+      "query_radius": "11001/10000",
+      "hole_radius": "1/10",
+      "near_radius": "22001/10000",
+      "greedy_radius": "12001/5000",
+      "endpoint_cap": 16,
+      "quiet_cap": 12,
+      "boundary_coefficient": "11",
+      "linear_coefficient": "1/524288",
+      "pair_cost_used": "1/32768",
+      "hole_cost": "1/40000",
+      "seventh_neighbor_cosine_lower": "3117/5000",
+      "cap_cosine_lower": "121610667/140079400",
+      "parabolic_pair_squared_lower": "88217611677/53843688964843750000",
+      "old_coefficient_ratio": "32",
+      "scope": "For every global optimizer, all n>=2: deficit>=kappa*(n-boundary*sqrt(n))_+. Generic parameters are accepted only after every exact comparison succeeds."
+    },
+    "strong37": {
+      "close_cutoff": "1913/1000",
+      "query_radius": "11017/10000",
+      "hole_radius": "127/1250",
+      "near_radius": "22033/10000",
+      "greedy_radius": "12033/5000",
+      "endpoint_cap": 16,
+      "quiet_cap": 12,
+      "boundary_coefficient": "11",
+      "linear_coefficient": "37/16777216",
+      "pair_cost_used": "37/1048576",
+      "hole_cost": "260144641/9765625000000",
+      "seventh_neighbor_cosine_lower": "3117/5000",
+      "cap_cosine_lower": "365978933/421510420",
+      "parabolic_pair_squared_lower": "48867477693342725439/37690582275390625000000000000",
+      "old_coefficient_ratio": "37",
+      "scope": "For every global optimizer, all n>=2: deficit>=kappa*(n-boundary*sqrt(n))_+. Generic parameters are accepted only after every exact comparison succeeds."
+    }
+  },
+  "integer_ledger_checks": 30888,
+  "finite_gap_examples": [
+    {
+      "n": 122,
+      "strong_gap_lower": "4634516501121/4194304000000000000",
+      "old_gap_lower": "125257202733/4194304000000000000"
+    },
+    {
+      "n": 144,
+      "strong_gap_lower": "111/4194304",
+      "old_gap_lower": "3/4194304"
+    },
+    {
+      "n": 400,
+      "strong_gap_lower": "1665/4194304",
+      "old_gap_lower": "45/4194304"
+    },
+    {
+      "n": 10000,
+      "strong_gap_lower": "82325/4194304",
+      "old_gap_lower": "2225/4194304"
+    },
+    {
+      "n": 1000000,
+      "strong_gap_lower": "4574125/2097152",
+      "old_gap_lower": "123625/2097152"
+    },
+    {
+      "n": 100000000,
+      "strong_gap_lower": "230995625/1048576",
+      "old_gap_lower": "6243125/1048576"
+    },
+    {
+      "n": 1000000000000,
+      "strong_gap_lower": "578118640625/262144",
+      "old_gap_lower": "15624828125/262144"
+    }
+  ],
+  "conditional_gamma_upper_interval": [
+    "40342420434817065583825893927/100000000000000000000000000000",
+    "403424204348170655838258939271/1000000000000000000000000000000"
+  ],
+  "invalid_inputs_rejected": 10,
+  "scope": "All-n sufficiency for the supplied parameter families; no optimization over all parameter choices or point configurations is claimed."
+}
