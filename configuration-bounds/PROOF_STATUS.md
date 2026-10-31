@@ -2,7 +2,9 @@
 
 研究资料与项目发起：蒋丰灿（Fengcan Jiang）；推导与代码包含 OpenAI Codex 协作。更新于2026-10-31。此页汇总当前判断，定理的全部假设和证明以所链接正文为准。
 
-**最新补充见[可变平滑与环带人口对偶](../annular-layer/README.md)。** 仅初等预算证明所有n≥10¹⁴的K>0.51√n及渐近系数>0.513；保留此前外部渐近输入时>0.556，后一项无有限起点。百点四层二阶幂和模<2.35、指定中心空洞下<1.7；全尺度高斯对比进一步收紧。完整构型及百点至少五层仍未证明。
+**当前八点攻关见[一般n幂和结构与八点局部排除](../power-moment/README.md)。** 候选全矩半径1/10邻域内，真实驻点只能中心正七边形；另有11个独立非零矩盒的目标值排除。没有完整覆盖剩余p₂p₃≠0域，故用户要求的全部排空尚未完成。
+
+**此前补充见[可变平滑与环带人口对偶](../annular-layer/README.md)。** 仅初等预算证明所有n≥10¹⁴的K>0.51√n及渐近系数>0.513；保留此前外部渐近输入时>0.556，后一项无有限起点。百点四层二阶幂和模<2.35、指定中心空洞下<1.7；全尺度高斯对比进一步收紧。完整构型及百点至少五层仍未证明。
 
 **此前补充见[多尺度高斯角向与旧矩完整Gram](../gaussian-angular/README.md)。** 实际九点算例相对指定旧完整第四模式投影提高超过5.9%，整一参数族超过5%。全相似尺度/旋转的平滑角向平衡有显式常数；百点四层对比<0.4285，另加所述矩或中心空洞前提后<0.114、0.351。未提高硬圆盘人口误差阶，未证明百点至少五层或完整分类。
 
@@ -37,7 +39,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |五点|$`M_5=3125`$，等号单位正五边形，允许旋转、重排|[作者方法](../earlier-results/five_point_method.md)、[PDF](../earlier-results/five_point_proof.pdf)、[TeX](../earlier-results/five_point_proof.tex)；主线为二阶条件、径向矩、投影及四次对数上界|
 |六、七点|$`M_6=6^{15}/5^{10}`$、$`M_7=7^{21}/6^{15}`$，等号原点加相应正多边形|[主稿](../earlier-results/six_seven_proof.tex)、[复核](../earlier-results/six_seven_verification.md)、[覆盖审计](../earlier-results/six_seven_coverage_audit.md)；全局证明依赖 Faugère–Svartz 完整物理驻点分类，七点356次枝的物理排空为论文输入，未在本地独立重建|
 |六、七点含原点类|不调用上述分类的锐界与方差惩罚|[独立证明](../earlier-results/six_seven_origin_proof.tex)；结论仅适用于含原点类|
-|八点|候选值 $`8^{28}/7^{21}`$ 可达；最新必要椭圆给二阶幂和模<8/7|[最新驻点混合矩](../stationary-screening/STATIONARY_MOMENTS.md)、[完整八点归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)；完整无条件上界及一般非零矩分支未解决|
+|八点|新增[全矩局部刚性及11盒](../power-moment/README.md)，全部剩余尚未覆盖；候选值 $`8^{28}/7^{21}`$ 可达；最新必要椭圆给二阶幂和模<8/7|[最新驻点混合矩](../stationary-screening/STATIONARY_MOMENTS.md)、[完整八点归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)；完整无条件上界及一般非零矩分支未解决|
 |中心正多边形类|5≤n≤10模旋转严格局部最大；n=10使用四阶项，n≥11有显式增益扰动|[一般 n 审核第6、7节](../earlier-results/general_n_proof.md)；五点中心正方形、十点中心正九边形仍全局次优|
 |一般 n|已有有限上下界、全局网格包围、结构与渐近定理|没有得到所有有限 n 的简洁锐值公式；有限代数刻画不代表已执行巨大消元或枚举|
 

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "n": 8,
+  "force_constant": 1,
+  "reference_polynomial": "X^8-128*X",
+  "reference_powers": "p1=...=p6=p8=0, p7=896",
+  "singular_squares": [
+    0,
+    1,
+    "1/2",
+    "1/2",
+    "1/4",
+    "1/4",
+    "1/16",
+    "1/16"
+  ],
+  "characteristic_coefficients_descending": [
+    "1",
+    "-21/8",
+    "673/256",
+    "-665/512",
+    "1381/4096",
+    "-23/512",
+    "45/16384",
+    "-1/16384",
+    "0"
+  ],
+  "strict_slice_hessian_gap_lower": "2/7",
+  "Euclidean_isolation_radius": "1/50",
+  "root_disk_radius": "1/150",
+  "power_coordinate_radius": "1/10",
+  "Hessian_perturbation_norm_upper": "6002500/25153757",
+  "Newton_coefficient_error_upper": [
+    "0",
+    "0",
+    "1/20",
+    "1/30",
+    "21/800",
+    "13/600",
+    "2663/144000",
+    "181/11200",
+    "165563/11520000"
+  ],
+  "Rouche_inner_boundary_lower": "218699999999999999/256289062500000000",
+  "Rouche_inner_error_upper": "184733124770281/12757500000000000",
+  "Rouche_outer_boundary_lower": "1510453980379261801/256289062500000000",
+  "Rouche_outer_error_upper": "9242019112881583/1822500000000000",
+  "scope": "Any actual force-one eight-point stationary configuration in this full power-sum neighborhood is a rotated/relabelled central regular heptagon. This excludes its punctured nonzero-p2/p3 stationary neighborhood; it does not cover every remaining power vector."
+}

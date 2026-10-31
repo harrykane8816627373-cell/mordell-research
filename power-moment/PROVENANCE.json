@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-31",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "daf4dff4803fd2d3521e7f188fba069c19ad01c6",
+  "full_eight_point_exclusion_proved": false,
+  "inherited_or_classical_tools": [
+    "Newton identities and the Vandermonde/Hankel determinant identity are classical.",
+    "Author stationary equations, strict subset theorem and complete power-stability action/matrix in source-review/revised_main.tex.",
+    "Previously certified n8 low-moment constraints and p2=0 / p3=0 classifications, with their true physical and stability hypotheses. They are not reclassified as new results.",
+    "Earlier root-free coefficient reductions already retain physical conjugate pairing, complete stability and critical-value elimination; this update does not claim to have completed that global elimination."
+  ],
+  "current_contributions": [
+    "A direct standard-library finite-power coordinate engine, recursive high moments and exact preconditioned whole-box Hankel objective certificates.",
+    "A general-n lacunary stationary classification under p2=...=p_(n-2)=0, with explicit instability for n>=11; finite-moment cyclic-symmetry characterization.",
+    "Exact cyclotomic verification of the full central-heptagon operator spectrum; explicit quantitative strict convexity on the rotation slice.",
+    "Newton error propagation and separate central/outer Rouche bounds prove a complete complex power-sum neighborhood of radius 1/10 contains no other n8 stationary shape.",
+    "Eleven nonempty independent nonzero-p2,p3 moment boxes have exact objective upper bounds below the candidate; every actual configuration in a box is excluded at that threshold.",
+    "A nonstationary normalized local witness passes all 246 inherited strict subset inequalities and the displayed old ellipse, illustrating the logical need for true stationarity."
+  ],
+  "exploration": "A 1200-start floating Newton search selected seed data. Floating computations and downloaded scientific libraries are exploratory only; no completeness, certified root existence, or exact stationarity is inferred. Some far seeds already fail older geometry tests.",
+  "acceptance": "Four targeted standard-library verifiers, active checks under -O, independent direct-root products, division-free determinant checks, exact cyclotomic action, rational bounds and a fresh extracted replay.",
+  "review": "One research agent derived and checked this update. No independent-agent or external peer review and no full formal proof are claimed.",
+  "remaining_gap": "There is no certified inclusion of the entire normalized physical stationary stable n8 target-superlevel set in the union of the local rigidity neighborhood and the eleven boxes. The complete n8 sharp bound remains unproved."
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "date": "2026-10-31",
+  "manifest_inputs": 24,
+  "targeted_exact_entries": 4,
+  "runs": [
+    {
+      "entry": "verify_algebra.py",
+      "passed": true,
+      "seconds": 0.625
+    },
+    {
+      "entry": "verify_structure.py",
+      "passed": true,
+      "seconds": 1.25
+    },
+    {
+      "entry": "verify_isolation.py",
+      "passed": true,
+      "seconds": 0.438
+    },
+    {
+      "entry": "verify_regions.py",
+      "passed": true,
+      "seconds": 2.297
+    }
+  ],
+  "general_n_powers": "finite Newton closure, exact Hankel objective and lacunary/cyclic-symmetry structure",
+  "n8_local_power_radius": "1/10, force-one coordinates, reference p7=896",
+  "nonzero_p2_p3_whole_boxes_excluded": 11,
+  "full_eight_point_exclusion_proved": false,
+  "remaining_gap": "No exhaustive inclusion of the complete physical stationary stable target-superlevel set in the certified regions.",
+  "elapsed_seconds": 4.641
+}

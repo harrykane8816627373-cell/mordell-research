@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-31",
+  "parent_commit": "daf4dff4803fd2d3521e7f188fba069c19ad01c6",
+  "scope": "Four targeted power-coordinate verifiers and their fixed proof/input bytes; included earlier source proofs are provenance, not a claim of renewed global n8 coverage. Own manifest, timing report and ZIP excluded.",
+  "files": [
+    {
+      "path": "finite-n/SUBSET_PROOF.md",
+      "bytes": 8988,
+      "sha256": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43"
+    },
+    {
+      "path": "power-moment/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "power-moment/COVERAGE_STATUS.md",
+      "bytes": 3257,
+      "sha256": "a0433f665bd24ee54c316e7fd4e5b0491dc31e5b5ad62c5ffecb8e3a293f8c52"
+    },
+    {
+      "path": "power-moment/GENERAL_POWERS.md",
+      "bytes": 4929,
+      "sha256": "77c65f4e1ad3e3e83d272632045ba095bc8ff24400b03a3874df17299973b1f0"
+    },
+    {
+      "path": "power-moment/LOCAL_RIGIDITY.md",
+      "bytes": 4033,
+      "sha256": "3e8498db03e8999d1d6cebf80d663e195de29402b53a1e2bc6601858f8e13f4b"
+    },
+    {
+      "path": "power-moment/PROVENANCE.json",
+      "bytes": 2825,
+      "sha256": "a4e7e7a786c4cb4d1eb61c948d8232aa15135ede96e4a89c317e8923d684c594"
+    },
+    {
+      "path": "power-moment/README.md",
+      "bytes": 3599,
+      "sha256": "cfb028a6ebcb7d7c424a8f41e273df9e8ebfe98232ba343e3deb8957482cadc2"
+    },
+    {
+      "path": "power-moment/acceptance.py",
+      "bytes": 781,
+      "sha256": "2070db158d8c90790dbc7916fc16d01d33f4021214801e2941bb3026fc082602"
+    },
+    {
+      "path": "power-moment/algebra_verification.json",
+      "bytes": 340,
+      "sha256": "4ecbf3365079c1b6ab0841aa66abce8df4f9350cde34a08198af4cdd4c6deb7b"
+    },
+    {
+      "path": "power-moment/build_package.py",
+      "bytes": 2404,
+      "sha256": "4e20f3da60d5d5c9028f3d9cd44908e748dcf9a3f1602a42059d68f45e542a45"
+    },
+    {
+      "path": "power-moment/complex_interval.py",
+      "bytes": 4257,
+      "sha256": "2d12da286fcab02a5a5ce0d99ac43b46ccbb04efdc8cea9acd14887c0f5c0f07"
+    },
+    {
+      "path": "power-moment/isolation_verification.json",
+      "bytes": 1411,
+      "sha256": "b9ac677911b539567288903c87865c0e846188fcef8dc3ae246d6e6cce67732b"
+    },
+    {
+      "path": "power-moment/power_coordinates.py",
+      "bytes": 2208,
+      "sha256": "49957834e0767a41ae29ccb612d175b9610680234087ad41793becb93c784602"
+    },
+    {
+      "path": "power-moment/region_inputs.json",
+      "bytes": 20434,
+      "sha256": "4416a1b9edf81c661f0bdd8f9af2e319cf0391e94c741276c7fa5797bbab4258"
+    },
+    {
+      "path": "power-moment/regions_verification.json",
+      "bytes": 32546,
+      "sha256": "6ed13fab6f91ff08d111d04e5b15deedbe8b463c0a8bea15ba0ee732634ed884"
+    },
+    {
+      "path": "power-moment/structure_verification.json",
+      "bytes": 1033,
+      "sha256": "7470094fefe3c5e3c87c707e7519908da073aa4d373eb4c934e9f1bae07158b6"
+    },
+    {
+      "path": "power-moment/verify_algebra.py",
+      "bytes": 4114,
+      "sha256": "ea1424236005d0874c60701d096ba89c1b6cdda936cdee70a062d93bb075a116"
+    },
+    {
+      "path": "power-moment/verify_all.py",
+      "bytes": 3466,
+      "sha256": "3cad5b29be77ea31ccac00d528750363f8fd73d0dc998d09ac35e0b13ee689b0"
+    },
+    {
+      "path": "power-moment/verify_isolation.py",
+      "bytes": 5819,
+      "sha256": "d17910c1e7622b8949c35938f891d32e9cd0efdb1b98b26a19a463e776220ed6"
+    },
+    {
+      "path": "power-moment/verify_regions.py",
+      "bytes": 4260,
+      "sha256": "a9b7126f1c21a77fed02d94d08b60159d284605c15f23219edbe1d7048bfa361"
+    },
+    {
+      "path": "power-moment/verify_structure.py",
+      "bytes": 2790,
+      "sha256": "751cde9e18cad5dcf08ab30c2da33b4352d7390c7cc860bfc147c3bd4e16bd7e"
+    },
+    {
+      "path": "power-moment/witnesses.py",
+      "bytes": 861,
+      "sha256": "d273fdfb1f2deeab97f74ea080fcd86e66d44552cca462ace8e44d0e6e0e0831"
+    },
+    {
+      "path": "source-review/revised_main.tex",
+      "bytes": 199525,
+      "sha256": "1325f95a5330f883efcfddb50520b69bbe0f1b578e0cd017996df03e1be996ae"
+    },
+    {
+      "path": "stationary-screening/STATIONARY_MOMENTS.md",
+      "bytes": 6473,
+      "sha256": "f38be577a4a6c20f3117cf0f00712c58f0f11a8144eaef067f4ac99c5976a2db"
+    }
+  ]
+}

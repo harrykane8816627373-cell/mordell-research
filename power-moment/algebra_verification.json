@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "independent_root_cases": 9,
+  "independent_box_corner_determinants": 84,
+  "complex_interval_corner_checks": 16,
+  "stationary_Ward_checks": 14,
+  "invalid_inputs_rejected": 4,
+  "scope": "General identities are analytic; finite checks test implementations. No enumeration of all n8 stationary solutions."
+}

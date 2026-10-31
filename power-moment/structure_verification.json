@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "lacunary_identity_checks": 61,
+  "cyclic_symmetry_Newton_checks": 66,
+  "regular_polygon_instability_examples": [
+    {
+      "n": 8,
+      "norm_ratio_lower": "8/7"
+    },
+    {
+      "n": 10,
+      "norm_ratio_lower": "4/3"
+    },
+    {
+      "n": 11,
+      "norm_ratio_lower": "7/5"
+    },
+    {
+      "n": 100,
+      "norm_ratio_lower": "64/33"
+    }
+  ],
+  "centered_polygon_instability_examples": [
+    {
+      "n": 11,
+      "norm_ratio_lower": "13/11"
+    },
+    {
+      "n": 12,
+      "norm_ratio_lower": "4/3"
+    },
+    {
+      "n": 100,
+      "norm_ratio_lower": "14/5"
+    }
+  ],
+  "general_n_structure": "For n>=4, any normalized distinct stationary configuration with p2=...=p_(n-2)=0 is a regular n-gon or origin plus regular (n-1)-gon. For n>=11 neither can be a local maximum.",
+  "scope": "General theorems are proved analytically. These exact checks validate the polynomial reduction and constants; no general p2 or p3 vanishing assertion is made."
+}
