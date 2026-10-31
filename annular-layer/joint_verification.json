@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "n": 100,
+  "maximum_layers": 4,
+  "global_gap_upper": "413923829261/500000000000",
+  "pair_line": {
+    "alpha": "25894884743/1000000000000",
+    "beta": "7/500",
+    "left": "17901/10000",
+    "right": "8951/5000"
+  },
+  "new_base_certificate": {
+    "shared_gap_lower": "96126392376692264209496615047600627317312993/374809600000000000000000000000000000000000000",
+    "guaranteed_paid_mass": 99,
+    "exceptional_singleton_cap": 1,
+    "extra_paid_mass_over_prior": 7,
+    "improvement_over_prior": "181264193201/1000000000000",
+    "force_radius_lower_hypothesis": null,
+    "scope": "Default h=1; actual global separation sqrt(2), radius/layer capacity, proved full radial Gram and certified pair line are required. A supplied all-center radius lower bound is an additional hypothesis."
+  },
+  "new_centered_hole_certificate": {
+    "shared_gap_lower": "4967400854686786328820817312036539461046556921/9369600000000000000000000000000000000000000000",
+    "guaranteed_paid_mass": 100,
+    "exceptional_singleton_cap": 0,
+    "extra_paid_mass_over_prior": 8,
+    "improvement_over_prior": "25894884743/125000000000",
+    "force_radius_lower_hypothesis": "2",
+    "scope": "Default h=1; actual global separation sqrt(2), radius/layer capacity, proved full radial Gram and certified pair line are required. A supplied all-center radius lower bound is an additional hypothesis."
+  },
+  "new_base_shared_lower": "96126392376692264209496615047600627317312993/374809600000000000000000000000000000000000000",
+  "new_centered_hole_shared_lower": "4967400854686786328820817312036539461046556921/9369600000000000000000000000000000000000000000",
+  "angular_energy_strict_upper": "143/250",
+  "centered_hole_angular_energy_strict_upper": "149/500",
+  "original_z_p2_strict_upper": "47/20",
+  "centered_hole_original_z_p2_strict_upper": "17/10",
+  "n100_original_z_c2": "2076139079561250/19925626416901921",
+  "n100_original_z_c3": "7852572235926000000/236736367459211723401",
+  "all_scale_gaussian_contrast_bounds": [
+    {
+      "hypothesis": "K<=4",
+      "strict_contrast_upper": "3/8",
+      "joint_lower_at_excluded_threshold": "152228753087449132670024851528181505503531427591/182532275200000000000000000000000000000000000000",
+      "strict_margin": "1119836458435803415624851528181505503531427591/182532275200000000000000000000000000000000000000"
+    },
+    {
+      "hypothesis": "K<=4 and low-mode energy>=11/20",
+      "strict_contrast_upper": "73/1000",
+      "joint_lower_at_excluded_threshold": "151201025164249132670024851528181505503531427591/182532275200000000000000000000000000000000000000",
+      "strict_margin": "92108535235803415624851528181505503531427591/182532275200000000000000000000000000000000000000"
+    },
+    {
+      "hypothesis": "K<=4 and all |z_i|^2>=8/99",
+      "strict_contrast_upper": "27/100",
+      "joint_lower_at_excluded_threshold": "3785211896232464942135738030961794717529673220527/4562995200000000000000000000000000000000000000000",
+      "strict_margin": "7747004065339847735738030961794717529673220527/4562995200000000000000000000000000000000000000000"
+    }
+  ],
+  "scope": "Conditional necessary inequalities for actual global optimizers, using h=1 and full prior radial Gram. Does not prove five layers or a sharp n100 value. Gaussian contrasts use actual default disk means and are orthogonal to radial and k=2,3 tests."
+}

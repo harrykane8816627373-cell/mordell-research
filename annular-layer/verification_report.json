@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "date": "2026-10-31",
+  "manifest_inputs": 294,
+  "prior_entries_replayed": 24,
+  "new_entries": 4,
+  "runs": [
+    {
+      "entry": "stationary-screening/verify_imported.py",
+      "passed": true,
+      "seconds": 1.562
+    },
+    {
+      "entry": "stationary-screening/verify_stationary_moments.py",
+      "passed": true,
+      "seconds": 1.266
+    },
+    {
+      "entry": "stationary-screening/verify_screened_holes.py",
+      "passed": true,
+      "seconds": 0.281
+    },
+    {
+      "entry": "stationary-screening/verify_edge_covering.py",
+      "passed": true,
+      "seconds": 1.25
+    },
+    {
+      "entry": "local-defect/verify_geometry.py",
+      "passed": true,
+      "seconds": 0.234
+    },
+    {
+      "entry": "local-defect/verify_defect_ledger.py",
+      "passed": true,
+      "seconds": 1.422
+    },
+    {
+      "entry": "local-defect/verify_radial_hierarchy.py",
+      "passed": true,
+      "seconds": 0.266
+    },
+    {
+      "entry": "local-defect/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 1.219
+    },
+    {
+      "entry": "overlap-budget/verify_overlap_cost.py",
+      "passed": true,
+      "seconds": 0.312
+    },
+    {
+      "entry": "overlap-budget/verify_parameters.py",
+      "passed": true,
+      "seconds": 1.328
+    },
+    {
+      "entry": "overlap-budget/verify_graph_budget.py",
+      "passed": true,
+      "seconds": 0.422
+    },
+    {
+      "entry": "overlap-budget/verify_joint_region.py",
+      "passed": true,
+      "seconds": 1.297
+    },
+    {
+      "entry": "layer-circumference/verify_pair_integral.py",
+      "passed": true,
+      "seconds": 2.563
+    },
+    {
+      "entry": "layer-circumference/verify_ring_geometry.py",
+      "passed": true,
+      "seconds": 1.234
+    },
+    {
+      "entry": "layer-circumference/verify_circumference.py",
+      "passed": true,
+      "seconds": 0.234
+    },
+    {
+      "entry": "layer-circumference/verify_layers.py",
+      "passed": true,
+      "seconds": 3.688
+    },
+    {
+      "entry": "joint-variational/verify_affine_pair.py",
+      "passed": true,
+      "seconds": 4.594
+    },
+    {
+      "entry": "joint-variational/verify_projection.py",
+      "passed": true,
+      "seconds": 2.109
+    },
+    {
+      "entry": "joint-variational/verify_ledger.py",
+      "passed": true,
+      "seconds": 0.312
+    },
+    {
+      "entry": "joint-variational/verify_joint_class.py",
+      "passed": true,
+      "seconds": 3.297
+    },
+    {
+      "entry": "gaussian-angular/verify_kernels.py",
+      "passed": true,
+      "seconds": 0.766
+    },
+    {
+      "entry": "gaussian-angular/verify_compatibility.py",
+      "passed": true,
+      "seconds": 1.594
+    },
+    {
+      "entry": "gaussian-angular/verify_multiscale.py",
+      "passed": true,
+      "seconds": 0.64
+    },
+    {
+      "entry": "gaussian-angular/verify_joint_budget.py",
+      "passed": true,
+      "seconds": 2.141
+    },
+    {
+      "entry": "annular-layer/verify_geometry.py",
+      "passed": true,
+      "seconds": 7.406
+    },
+    {
+      "entry": "annular-layer/verify_scaled.py",
+      "passed": true,
+      "seconds": 1.938
+    },
+    {
+      "entry": "annular-layer/verify_annular.py",
+      "passed": true,
+      "seconds": 27.234
+    },
+    {
+      "entry": "annular-layer/verify_joint.py",
+      "passed": true,
+      "seconds": 2.203
+    }
+  ],
+  "finite_all_n_layer_bound": "K>0.51*sqrt(n), every n>=10^14",
+  "elementary_asymptotic_layer_bound": "liminf K/sqrt(n)>0.513",
+  "external_input_asymptotic_layer_bound": "liminf K/sqrt(n)>0.556; no finite starting n",
+  "n100_four_layer_p2_strict_upper": "47/20",
+  "n100_four_layer_specified_hole_p2_strict_upper": "17/10",
+  "n100_all_scale_contrasts": [
+    "3/8",
+    "73/1000",
+    "27/100"
+  ],
+  "scope": "Necessary layer/distribution bounds and conditional n100 restrictions; no general sharp M_n, n100 five-layer theorem or microscopic classification.",
+  "elapsed_seconds": 73.25
+}

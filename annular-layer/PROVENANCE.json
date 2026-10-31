@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-31",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "2fb42ba98d881b2d5c5b42e931e4fc9dde088873",
+  "repository": "https://github.com/harrykane8816627373-cell/mordell-research",
+  "inherited_inputs": [
+    "Author global radius and strict-subset separation, second-order stability and the previously derived same-layer spectral capacity.",
+    "Exact variable disk-smearing decomposition, complete unordered pair loss, its global convexity and certified rational lens quadrature.",
+    "Effective elementary attainable-gap budget E_n=n/100+(77/6)sqrt(n)+35/4 and the n100 integer-witness budget.",
+    "Radial convergence to the uniform disk, prior shifted radial Gram including centered holes, stationary k=2,3 coefficients and the certified Gaussian norm/orthogonality.",
+    "Only the separately labeled >0.556 asymptotic result retains the previously cited external linear-energy expansion and triangular trial input e<=1/800. No new external theorem is introduced."
+  ],
+  "new_derivations": [
+    "A uniform m-1 convex artificial mass per radial layer, valid for arbitrary angles and populations one and two; aggregate n-K replaces n-2K.",
+    "Joint optimization of pair-loss distance scaling and the mandatory smearing self-penalty yields K>0.51sqrt(n) for every n>=10^14.",
+    "Spectral capacity restricts the artificial argument to d>=pi/(2h); certified affine fans can be tilted safely on that restricted domain.",
+    "A finite annular population/layer dual retaining one same-h Dirichlet budget; fixed 2048-band certificates give elementary liminf K/sqrt(n)>0.513 and externally conditioned >0.556.",
+    "Global separation pays all but at most one small singleton under a checked full-distance affine line; a proved all-center hole pays that last exception too.",
+    "n100 four-layer conditional angular ellipse, |P2|<2.35, specified-hole |P2|<1.7, and all-scale Gaussian contrast limits 0.375, 0.073 and 0.27."
+  ],
+  "review": "One research agent derived and checked the update. Checks include an independent regular 24-gon integral comparison, irregular rational circles tested with a different convex kernel, exact capacity identities, full prior replay, independent summation by parts, invalid-input rejection, fixed-tail inequalities and extracted offline replay. No independent-agent or external peer review is claimed.",
+  "acceptance": "Four new and twenty-four prior standard-library exact entries; active checks under -O, fixed input bytes and extracted package replay.",
+  "limitations": [
+    "Convex perspective, support lines, radial weak convergence and Gram duality are standard tools; no invention, optimal-constant or global priority claim.",
+    "The >0.556 result retains the stated external input and has no certified finite starting n. The >0.513 result is asymptotic; the finite all-tail statement has coefficient 0.51 and n>=10^14.",
+    "Artificial layer mass is not a claim of that many distinct physical edges. Actual pair losses are assigned disjointly before convex relaxation.",
+    "Restricted affine lines are used only at capacity-controlled artificial arguments, never at arbitrary actual pair distances.",
+    "A same-h Dirichlet measurement is required when combining angular, radial and Gaussian tests; different smearing budgets cannot simply be added.",
+    "No general finite-n optimal configuration, full n8 sharp theorem, n100 five-layer theorem or microscopic lattice classification."
+  ]
+}
