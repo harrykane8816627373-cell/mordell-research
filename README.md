@@ -14,12 +14,26 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[全局代数耦合](algebraic-gap/README.md) · [完整联合归约](docs/EIGHT_POINT_REDUCTION.md) · [能量排除](eight-point/README.md)|
+|八点最新进展与准确剩余分支|[径向—角向新排除](radial-gap/README.md) · [完整联合归约](docs/EIGHT_POINT_REDUCTION.md) · [能量排除](eight-point/README.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 最新非零矩进展：全局代数耦合
+## 最新进展：径向缺额门槛推进到 1/1200
+
+令 q=√(7/8)z、Σq=0、Σ|q|²=7，记 E=Σ|q_i|²(|q_i|²−1)²。继承已披露依赖的七点锐界与现有局部能量定理，得到
+
+```math
+E\le1/1200\quad\Longrightarrow\quad
+\log(\Delta_q/7^7)\le-E/32,\qquad
+\Delta_q/7^7\le1-E/64.
+```
+
+在此区域，只有中心正七边形能达到候选值。无需预设驻点、稳定性、旧椭圆或半径上界。相对上传统一包的1/35000，径向门槛扩大175/6，约29.17倍；**E>1/1200 的剩余物理系统仍未排空**。
+
+新证明用中心化消去径向扰动的一阶项，再以圆上七点的全局角向凹性控制候选轨道距离。原统一包按字节保留，14个标准库入口已重放。[完整证明、真实点见证与复现](radial-gap/README.md)
+
+## 非零矩代数耦合（保留）
 
 在旧椭圆、真实驻点方程和 Δ_w≥4²⁸7⁷ 的交集中，已推出力1尺度下的新必要条件
 
@@ -57,7 +71,7 @@ d\le\frac15\quad\Longrightarrow\quad
 |---|---|---|
 |五点锐值|M₅=5⁵，单位正五边形|[作者二阶条件与矩方法](earlier-results/five_point_method.md)|
 |六、七点锐值|M₆=6¹⁵/5¹⁰；M₇=7²¹/6¹⁵|[主稿](earlier-results/six_seven_proof.tex)；全局证明引用 Faugère–Svartz 完整物理驻点分类，[依赖审计](earlier-results/six_seven_coverage_audit.md)|
-|八点候选与部分排除|候选 8²⁸/7²¹ 可达；新管域、旧矩盒及若干几何类已排除|[八点当前状态](eight-point/README.md)；**完整锐界未证**|
+|八点候选与部分排除|候选 8²⁸/7²¹ 可达；E≤1/1200、矩管域及若干几何类已排除|[最新径向界](radial-gap/README.md) · [当前联合归约](docs/EIGHT_POINT_REDUCTION.md)；**完整锐界未证**|
 |有限 n 下界|10≤n≤100的91项保存整数见证改善此前包络|[自由构型](symmetry-breaking/README.md)；不是全局最优认证|
 |最优构型半径层数|n≥10¹⁴时 K>0.51√n；初等渐近系数>0.513|[最新层数证明](annular-layer/README.md)；保留外部渐近输入时系数>0.556，后者无有效有限起点|
 |一般 n 上界与分布|严格圆盘修正、线性缺额、二维运输、含边界覆盖|[证明总表](configuration-bounds/PROOF_STATUS.md)；未确定晶格、精确 γ 或所有有限 n 锐值|
@@ -72,7 +86,7 @@ d\le\frac15\quad\Longrightarrow\quad
 python -B -S -O scripts/verify_current.py
 ```
 
-[本轮全局代数离线包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01) · [保留的能量阶段包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
+[本轮径向—角向离线包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-radial-2026-11-01) · [保留的全局代数包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01) · [能量阶段包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
 
 程序认证精确算术、有限盒及所列常数；解析和几何桥梁仍需阅读证明。浮点搜索、小残差、有限目录和验证通过不能代替全域覆盖。没有外部同行评审、整篇形式化证明或全球优先权声明；仓库未指定许可证。
 

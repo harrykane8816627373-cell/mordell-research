@@ -24,7 +24,7 @@ def main():
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
              *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md')),
-             *sorted((ROOT/'algebraic-gap').glob('*.md'))]
+             *sorted((ROOT/'algebraic-gap').glob('*.md')), *sorted((ROOT/'radial-gap').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -38,7 +38,8 @@ def main():
             links += 1
     print('PASS maintained navigation: '+str(len(pages))+' pages, '+str(links)+' local links', flush=True)
     inputs = {}
-    suites = ('power-moment', 'eight-point')
+    # radial-gap includes the two inherited eight-point entries; do not run them twice.
+    suites = ('power-moment', 'radial-gap')
     manifests = {}
     for suite in suites:
         manifest_path = ROOT/suite/'source_manifest.json'

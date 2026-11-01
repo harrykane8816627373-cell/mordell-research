@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "arithmetic": "Python standard library; exact rational arithmetic",
+  "theorem": "E<=1/1200 implies log(Delta_q/7^7)<=-E/32, and Delta_q/7^7<=1-E/64",
+  "hypotheses": "Eight distinct actual centered points of squared mass 7; no stationarity, stability, moment ellipse or a priori radius cap is assumed.",
+  "inherited_dependencies": [
+    "Exact seven-point sharp bound, including its disclosed external classification input.",
+    "The certified radius-1/5 force-one objective basin from eight-point/ENERGY_BASIN.md."
+  ],
+  "constants": {
+    "epsilon": "1/1200",
+    "log_gap_coefficient": "1/32",
+    "radial_band": [
+      "1/32",
+      "31/32",
+      "33/32"
+    ],
+    "radial_error_beta": "32768/123039",
+    "pair_projection_denominator": "9925199/92279250",
+    "central_error_coefficient": "165888/29791",
+    "cross_coefficient_squared": "7340032/923521",
+    "ring_error_coefficient": "172032000/9925199",
+    "Young_small_slack": "12858/29791",
+    "Young_ring_slack": "132690524074/27498389117037",
+    "radial_to_orbit_gamma": "139425/32768",
+    "local_gap_slack": "5777/66924000",
+    "outside_basin_angular_slack": "106387/243555840",
+    "short_edge_decimation_ratio": "8371837586862272022984938169161609257821272980465537960010712247766576573490746119065889238349796649202977349197/8436975688909043361786676042008314237620197673095390200614929199218750000000000000000000000000000000000000000000",
+    "short_edge_gap_slack": "64918389138205999130858011491444346615653333315448714817742604337610438228003880934110761650203350797022650803/8436975688909043361786676042008314237620197673095390200614929199218750000000000000000000000000000000000000000000",
+    "challenger_q_distance_squared_upper": "314089/32289600",
+    "improvement_over_1_over_35000": "175/6",
+    "checks": [
+      "positive parameters",
+      "radial band endpoints",
+      "three cubic barriers",
+      "cubic derivative factorization",
+      "exactly one small and seven ring points",
+      "radial matching distance upper bound",
+      "radial projections cannot collide",
+      "Young inequality gives total energy error at most 18 E",
+      "complete-graph quadratic identity, all 28 coefficients",
+      "one gamma bounds both central and ring defects",
+      "local basin implies the proposed E log gap",
+      "outside the local basin, angular loss exceeds the proposed E gap",
+      "short-edge decimation also implies the proposed E gap",
+      "exponential gap implies a polynomial half-gap",
+      "challengers enter the q-distance 1/10 basin"
+    ]
+  },
+  "actual_nonstationary_witness": {
+    "description": "q_center=h/sqrt(m), seven ring points=(zeta^j-h/7)/sqrt(m), j=0..6, h=1/50",
+    "normalization_m": "30627/30625",
+    "E": "78743445851/153218816543376",
+    "s2": "14/30627",
+    "s3_modulus_squared": "196/3192058677987",
+    "s8": "-4503750781249279399/28155796165643860512",
+    "raw_Q1_residual": "-30619/765625",
+    "Delta_over_target": "5030900262726870915802230952518260535973924961102760778704788096014579457864067586238265850084871999570168554782867431640625/5040107738289011545457969741782275152317963965132503903310773696570931469016497893429285467489138664436850412840691683356001",
+    "ring_pair_distance_squared_lower": "10000/30627",
+    "center_pair_distance_squared_lower": "3249/3403",
+    "is_stationary": false,
+    "checks": [
+      "actual root construction is centered with mass seven",
+      "actual witness has both low moments nonzero",
+      "actual witness is in the added radial band",
+      "actual witness obeys the old ellipse",
+      "actual witness meets old s2 modulus cap",
+      "actual witness meets old s3 modulus cap",
+      "actual witness meets old s4 modulus cap",
+      "actual witness meets old s5 modulus cap",
+      "actual witness meets old s6 modulus cap",
+      "actual witness is outside the old six-moment tube at s8",
+      "all actual witness edges meet the separation cut",
+      "nonzero Ward Q1 residual confirms this is not a stationary counterexample",
+      "exact pair product independently satisfies the new logarithmic gap",
+      "exact pair product also satisfies the polynomial gap"
+    ]
+  },
+  "rejected_strengthenings": [
+    {
+      "case": "larger_1_over_1100_not_certified",
+      "reason": "Young inequality gives total energy error at most 18 E"
+    },
+    {
+      "case": "stronger_E_over_31_not_certified",
+      "reason": "local basin implies the proposed E log gap"
+    }
+  ],
+  "analytic_bridges_fully_formalized": false,
+  "full_eight_point_exclusion_proved": false,
+  "remaining_non_candidate_challengers_must_have": "E>1/1200"
+}

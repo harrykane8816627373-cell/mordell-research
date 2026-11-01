@@ -11,11 +11,19 @@ python -B -S -O scripts/verify_current.py
 此入口核对当前导航的本地链接，将两组固定输入复制到临时目录，再运行：
 
 - `power-moment/verify_all.py`：四个旧精确入口，包含代数、结构、参考谱及11个目标盒。
-- `eight-point/verify_all.py`：两个精确入口：保留首阶段管域，另验证四倍欧氏半径、五倍矩管域、距离 Laplacian 谱、36个 Parseval 内积、两类新见证及共六组错误参数拒绝。
+- `radial-gap/verify_all.py`：包含已有 `eight-point/verify_all.py` 的两个精确入口、上传统一包的14个标准库入口，以及新的径向—角向常数和实际点见证。新门槛是 E≤1/1200、对数缺口 E/32；上传原包的49条哈希也会核对。可选 SymPy 根配对测试未执行。
 
 仓库文件不因重放而更新计时。两个程序都明确保留 `full_eight_point_exclusion_proved=false`，这表示完整八点覆盖尚未证明。
 
-## 本轮全局低阶矩耦合
+仅重放本轮径向专题及必需输入：
+
+```bash
+python -B -S -O radial-gap/verify_all.py
+```
+
+[新证明页](../radial-gap/README.md)给出全角度能量比较、一般真实点假设与七点锐界依赖。原统一 ZIP 固定保存，所有脚本在临时副本运行。新包只需标准库，且不依赖32MB首三次图整数对象。
+
+## 保留的全局低阶矩耦合
 
 这项检查需要旧首三次图的32MB整数证书，默认轻量入口不会隐式下载或跳过它。用原2026-10-16证明包重放：
 

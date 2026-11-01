@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-01",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "22a6de864a47ddf1c50e1fd0480dd607a52e2968",
+  "input_original_filename": "mordell-eight-point-unified-2026-11-01 (2).zip",
+  "input_preserved_path": "radial-gap/inherited/mordell-eight-point-unified-2026-11-01.zip",
+  "input_bytes": 121296,
+  "input_sha256": "0ea75521cb33161a23c7c9af665c40dab3d2761076c56add31a69136938bb662",
+  "original_manifest_entries_checked": 49,
+  "standard_library_entries_actually_replayed": 14,
+  "optional_sympy_tests_replayed": false,
+  "all_imported_analytic_theorems_independently_reproved": false,
+  "new_contribution": "Global radial-to-angular energy comparison: E<=1/1200 implies log(Delta_q/7^7)<=-E/32, using exact M7 and the inherited objective basin. No stationarity, stability, old ellipse or a priori radius cap assumed.",
+  "review": "One research agent. Explicit analytic proof and exact arithmetic checks; no external peer review or complete formalization claimed.",
+  "full_eight_point_exclusion_proved": false,
+  "remaining_gap": "No exhaustive exclusion of the E>1/1200 physical nonzero-moment region."
+}
