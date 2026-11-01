@@ -21,10 +21,12 @@ def require(ok, label):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--first3-archive', type=Path)
+    parser.add_argument('--joint', action='store_true', help='also replay the partial joint-cover tree')
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
              *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md')),
-             *sorted((ROOT/'algebraic-gap').glob('*.md')), *sorted((ROOT/'radial-gap').glob('*.md'))]
+             *sorted((ROOT/'algebraic-gap').glob('*.md')), *sorted((ROOT/'radial-gap').glob('*.md')),
+             *sorted((ROOT/'joint-closure').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -69,6 +71,14 @@ def main():
                 capture_output=True, text=True, encoding='utf-8', timeout=180)
             require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
             print('PASS '+suite+'/verify_all.py', flush=True)
+    if args.joint:
+        proc = subprocess.run([sys.executable, '-B', '-S', '-O',
+            str(ROOT/'joint-closure/verify_all.py'), '--skip-prior'],
+            cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=900)
+        require(proc.returncode == 0, 'joint-closure: '+proc.stdout[-2000:]+proc.stderr[-3000:])
+        print('PASS joint-closure replay; the stored cover still has 21 unresolved regions.', flush=True)
+    else:
+        print('NOT RUN joint-closure cover replay: supply --joint (the stored cover remains incomplete).')
     if args.first3_archive is not None:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'algebraic-gap/verify_all.py'), '--source-archive', str(args.first3_archive.resolve())],

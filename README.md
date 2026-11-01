@@ -14,12 +14,18 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[径向—角向新排除](radial-gap/README.md) · [完整联合归约](docs/EIGHT_POINT_REDUCTION.md) · [能量排除](eight-point/README.md)|
+|八点最新进展与准确剩余分支|[完整物理系统与部分覆盖](joint-closure/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md) · [径向排除](radial-gap/README.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 最新进展：径向缺额门槛推进到 1/1200
+## 联合排空：等价多项式矩阵已建立，覆盖尚未完成
+
+在实际质量7、中心化且无碰撞的八点上，真实驻点平方和与完整实能量 Hessian 可等价合并为一个8×8整数系数 Hermitian 多项式矩阵半正定条件；也可保留12个实 Ward 等式和6×6完整稳定性矩阵，最高次数分别为8和14。该模型保留全部逐点物理条件。
+
+实际覆盖树已逐节点复核：60021个节点、29990个排除叶、21个开放坐标区域。**这些区域尚未闭合，完整八点排空仍未完成。** 另认证一个旧椭圆内的非零矩真实驻点：其旧四模式子块正定，但完整 Hessian 不稳定，且目标值低于候选。[等价证明、真实驻点盒与可续算检查点](joint-closure/README.md)
+
+## 已证径向区域：缺额门槛推进到 1/1200
 
 令 q=√(7/8)z、Σq=0、Σ|q|²=7，记 E=Σ|q_i|²(|q_i|²−1)²。继承已披露依赖的七点锐界与现有局部能量定理，得到
 
@@ -86,7 +92,7 @@ d\le\frac15\quad\Longrightarrow\quad
 python -B -S -O scripts/verify_current.py
 ```
 
-[本轮径向—角向离线包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-radial-2026-11-01) · [保留的全局代数包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01) · [能量阶段包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
+[联合系统部分覆盖包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-joint-partial-2026-11-01) · [径向—角向包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-radial-2026-11-01) · [全局代数包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01) · [能量阶段包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
 
 程序认证精确算术、有限盒及所列常数；解析和几何桥梁仍需阅读证明。浮点搜索、小残差、有限目录和验证通过不能代替全域覆盖。没有外部同行评审、整篇形式化证明或全球优先权声明；仓库未指定许可证。
 

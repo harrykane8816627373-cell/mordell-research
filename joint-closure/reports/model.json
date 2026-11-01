@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "model_checks": {
+    "candidate_principal_minors": 255,
+    "octagon_K44": "-735/8",
+    "mass_constraint_is_essential": true,
+    "wrong_mass_accepted_without_normalization": "7014007/1000000"
+  },
+  "actual_nonstationary_witness": {
+    "actual_point_center_and_mass_exact": true,
+    "inside_old_ellipse": true,
+    "both_low_moments_nonzero": true,
+    "zero_row_identities_checked": 6,
+    "direct_force_projection_identities_checked": 6,
+    "negative_minor_Ward_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "integer_interval_crosschecks": {
+    "exact_Gaussian_inverse_checks": 28,
+    "independent_Jacobian_and_Hessian_entry_checks": 338,
+    "full_Hessian_direction_crosschecked": true,
+    "floating_tolerances_used_for_acceptance": false
+  },
+  "coverage_guard_checks": {
+    "unknown_leaf_is_not_treated_as_empty": true,
+    "rejected_false_claims": 3
+  },
+  "polynomial_matrix_degree_upper": 14,
+  "full_eight_point_exclusion_proved": false
+}

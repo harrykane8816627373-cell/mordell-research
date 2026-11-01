@@ -23,6 +23,22 @@ python -B -S -O radial-gap/verify_all.py
 
 [新证明页](../radial-gap/README.md)给出全角度能量比较、一般真实点假设与七点锐界依赖。原统一 ZIP 固定保存，所有脚本在临时副本运行。新包只需标准库，且不依赖32MB首三次图整数对象。
 
+## 联合物理系统与部分覆盖
+
+基础入口默认不重复耗时较长的60021节点覆盖重放。加上新专题：
+
+~~~bash
+python -B -S -O scripts/verify_current.py --joint
+~~~
+
+单独重放新专题及其必需旧输入：
+
+~~~bash
+python -B -S -O joint-closure/verify_all.py
+~~~
+
+接受入口核对等价多项式模型、真实驻点盒和覆盖树；所有21个开放区域都显式保留。接受通过表示这些有限证书正确重放，完整排空状态仍为 false。[解析等价证明与续算命令](../joint-closure/README.md)
+
 ## 保留的全局低阶矩耦合
 
 这项检查需要旧首三次图的32MB整数证书，默认轻量入口不会隐式下载或跳过它。用原2026-10-16证明包重放：
@@ -34,7 +50,7 @@ python -B -S -O algebraic-gap/verify_all.py --source-archive PATH_TO_FIRST3_ZIP
 也可一次执行全部当前入口：
 
 ```bash
-python -B -S -O scripts/verify_current.py --first3-archive PATH_TO_FIRST3_ZIP
+python -B -S -O scripts/verify_current.py --joint --first3-archive PATH_TO_FIRST3_ZIP
 ```
 
 [本轮证明页](../algebraic-gap/README.md)列出准确源包名和哈希；完整新离线包只携带3个必要旧文件，解压后无需额外参数。该入口重新构造结果式、逐项重放14179个整数系数、验证齐次权和七个乘子范数，再用精确分数核算全局楔形下界。它没有重跑旧零矩构型的全部分类；完整八点排除状态仍为 false。

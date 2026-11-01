@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-01",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "631e0feacf197f5c96f092bafbf17bc8cbd0ef32",
+  "equivalent_matrix_model": true,
+  "maximum_polynomial_matrix_degree": 14,
+  "coverage_scope": "Hypothetical non-candidate global maxima, with inherited global-only strict subset and radius cuts. Not an exhaustive classification of arbitrary stable stationary points.",
+  "partition_nodes": 60021,
+  "excluded_leaves": 29990,
+  "open_regions": 21,
+  "stored_trace_compaction": {
+    "removed_exactly_noop_preconditioners": 8544
+  },
+  "physical_orbit_existence_certified": true,
+  "numerical_scout_is_complete": false,
+  "independent_agent_or_peer_review": false,
+  "full_formalization": false,
+  "full_eight_point_exclusion_proved": false,
+  "remaining_gap": "21 actual-coordinate regions have not been certified infeasible; each region can contain continuous configurations."
+}

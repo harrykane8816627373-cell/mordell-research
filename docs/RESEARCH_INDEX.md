@@ -8,6 +8,7 @@
 
 |专题|作用及其边界|
 |---|---|
+|[完整物理系统与部分覆盖](../joint-closure/README.md)|最新：S₁₆与完整 Hessian 等价合并为无分母 PSD 多项式矩阵；60021节点重放，21开放区域仍未排空；含一个精确非零矩驻点的高模式不稳定性证书|
 |[径向—角向全局排除](../radial-gap/README.md)|最新：E≤1/1200时 log(Δ_q/7⁷)≤−E/32；不需要驻点、稳定性或预设半径；保留七点锐界与局部能量输入，E较大时仍开放|
 |[上传统一包的原始快照](../radial-gap/inherited/mordell-eight-point-unified-2026-11-01.zip)|按原字节保留，49条哈希及14个标准库入口重放通过；含径向 Ward、Schur–Ward、投影稳定性及根配对资料，导入解析结论未全部独立复证|
 |[非零矩全局代数耦合](../algebraic-gap/README.md)|此前：旧椭圆内的真实驻点挑战者满足 \|p₂\|≥10⁻³⁶\|p₃\|；重放完整旧整数证书，排除细楔形区域；常数很弱、全域仍开放|
@@ -51,7 +52,13 @@
 
 各专题首页链接自己的离线 ZIP、固定字节清单和实际运行报告。保留的[能量阶段八点包](../eight-point/mordell-eight-point-energy-2026-11-01.zip)包含能量证明、两阶段管域及重建参考谱所需代码；它不是全部研究资料的替代品。
 
-最新[径向—角向 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-radial-2026-11-01)提供 `mordell-eight-point-radial-2026-11-01.zip`，169952字节，包含本轮1/1200证明、上传统一 ZIP 的原始字节及必需的旧能量输入。解压后一条命令可重放17个所列入口，全部只需标准库。SHA-256：
+最新[联合系统部分覆盖 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-joint-partial-2026-11-01)提供 `mordell-eight-point-joint-partial-2026-11-01.zip`，528151字节。包含等价多项式模型、真实驻点盒、60021节点的部分覆盖及必需旧输入；解压后只需标准库，可重放17个旧入口和3个新入口。**21个开放区域仍未排空。** SHA-256：
+
+```text
+5df931d78ee48c95ddfcc4ac9acbeff4aa4ceb2f191fdef3356dfffc36c938f4
+```
+
+此前[径向—角向 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-radial-2026-11-01)提供 `mordell-eight-point-radial-2026-11-01.zip`，169952字节，包含1/1200证明、上传统一 ZIP 的原始字节及必需的旧能量输入。解压后一条命令可重放17个所列入口，全部只需标准库。SHA-256：
 
 ```text
 7fc0ac0d299f3c79cc320611b60b0632ead25ff53f0ff97c17c6e91137dc9f49

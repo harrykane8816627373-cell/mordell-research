@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "certificate_sha256": "9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58",
+  "precision_bits": 40,
+  "scope": "global_maximum",
+  "tree_nodes": 60021,
+  "counts": {
+    "split": 30010,
+    "ordered_separation": 6445,
+    "ordering": 280,
+    "stationarity": 562,
+    "ellipse_covariance": 521,
+    "mass_or_radius": 1619,
+    "force_sign": 2537,
+    "strict_subset": 16763,
+    "separation": 584,
+    "polynomial_Ward_1": 428,
+    "old_ellipse": 55,
+    "mass": 133,
+    "maximum_radius": 63,
+    "unresolved": 21
+  },
+  "interval_Newton_enclosures_replayed": 0,
+  "removed_exactly_noop_preconditioners": 0,
+  "all_partitions_and_contractions_replayed": true,
+  "complete_cover": false,
+  "full_eight_point_exclusion_proved": false
+}
