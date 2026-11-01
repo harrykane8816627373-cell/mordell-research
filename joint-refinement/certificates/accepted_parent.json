@@ -1,0 +1,155 @@
+{
+  "parent_commit": "92fbc4ddbdca4e37f081c061d1a2c49c25af4fed",
+  "certificate_sha256": "20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e",
+  "cover_report_sha256": "9a4cf735fbd0b096d85ba7b9716802aa561d34fe6d2822a818e514b2fc5e45a1",
+  "prior_complete_replay_entries": 23,
+  "prior_unresolved_regions": 19,
+  "unchanged_arithmetic_inputs": [
+    {
+      "path": "eight-point/build_package.py",
+      "bytes": 2463,
+      "sha256": "5cecf6b8229d80dacdb55bfeea01803f8d966fe05863030d698fb798b7f17855"
+    },
+    {
+      "path": "eight-point/verify_all.py",
+      "bytes": 3281,
+      "sha256": "5f89565c2c564ad98d0fbad6b0de16d934529c02329ac8e1180610ec3a1df109"
+    },
+    {
+      "path": "eight-point/verify_energy_basin.py",
+      "bytes": 12820,
+      "sha256": "f70886028a9f7ba77a0d068cb475748e6bf2923a65c215a01f28f926b1653d69"
+    },
+    {
+      "path": "eight-point/verify_tube.py",
+      "bytes": 7160,
+      "sha256": "756e4a6bfba06fbbc7228d11c8ff7ef704cede40997a3474d37dbef18a8ebf75"
+    },
+    {
+      "path": "joint-closure/build_package.py",
+      "bytes": 2697,
+      "sha256": "e71577777f1b6ac105a4165460af6d082e66e6fc88638de1e1c73302d59b7eca"
+    },
+    {
+      "path": "joint-closure/check_cover.py",
+      "bytes": 7010,
+      "sha256": "d4d9bb1bff5e30b9e87f9aa2b9956b04f13ccd19e8edab3d5bcadc50091f998d"
+    },
+    {
+      "path": "joint-closure/exploration/scout_stationary.py",
+      "bytes": 3759,
+      "sha256": "3b76cbc4754e46c6ab8066bb55021b7a8cb7282a00c78ce5ad82bbe015d331fe"
+    },
+    {
+      "path": "joint-closure/interval_engine.py",
+      "bytes": 19827,
+      "sha256": "457aba342007cc0ec55ad43029aed9e9161bcc42e5f49b9eb50099b099b493ac"
+    },
+    {
+      "path": "joint-closure/propose_cover.py",
+      "bytes": 7502,
+      "sha256": "4be4ac65c52f050d322667dfaa6c6c6e71920c2f06f7554448b9a01a71c3403d"
+    },
+    {
+      "path": "joint-closure/propose_orbit.py",
+      "bytes": 2511,
+      "sha256": "347e7e469834a7db4016ee6f7ec81f4ea549294300f123b5959cfa48d7eef961"
+    },
+    {
+      "path": "joint-closure/verify_all.py",
+      "bytes": 3647,
+      "sha256": "ead1bd67e0eb3e8fc3d94cd0aff03d10d12feb09f262be680c4cefbaea06755e"
+    },
+    {
+      "path": "joint-closure/verify_model.py",
+      "bytes": 12431,
+      "sha256": "55f8198d2a8db611106a8036f77d362f1792ea977cea51a4137bd527e9fc52fd"
+    },
+    {
+      "path": "joint-closure/verify_orbit.py",
+      "bytes": 5754,
+      "sha256": "72cb9bcf1e81df99858da2f47fb31520810c88e0447aaefe2041eb2400ebedd7"
+    },
+    {
+      "path": "joint-refinement/check.py",
+      "bytes": 9556,
+      "sha256": "6248913101506d746d5cd7d45a17075776b9c79737e356e7fec45434bf05af38"
+    },
+    {
+      "path": "joint-refinement/mass_dual.py",
+      "bytes": 7666,
+      "sha256": "b40895aa3717ae1b29c923a99505276d48297ad27e9bca1f3486169ef5d90061"
+    },
+    {
+      "path": "joint-refinement/propose.py",
+      "bytes": 3562,
+      "sha256": "5afdd108bf1ed9f1a8317db88d3f2b04220c41d0f8895c750d403c2c8a6d6701"
+    },
+    {
+      "path": "joint-refinement/reference_centers.json",
+      "bytes": 5521,
+      "sha256": "77a30cc81c7746de982b1c3afcbe3bf7da693dec8cf527991de0c056c11579ec"
+    },
+    {
+      "path": "joint-refinement/refinement.py",
+      "bytes": 18999,
+      "sha256": "103e4f9d62f47480fb92cad2cb9e2cf6893bf4bb226e435e829ec360a964606f"
+    },
+    {
+      "path": "joint-refinement/summarize_frontier.py",
+      "bytes": 3505,
+      "sha256": "01f53be720550fe5d167ed3f88111335e6bfd5c17672d7cecb157d0e97c95153"
+    },
+    {
+      "path": "joint-refinement/verify.py",
+      "bytes": 20663,
+      "sha256": "ab2dbb2d9f2e154b02afc4677fdd368a42fa82c20f667898017c4b714c503707"
+    },
+    {
+      "path": "joint-refinement/verify_all.py",
+      "bytes": 4809,
+      "sha256": "630222a6d67726cbce720f660ed3b91cd79285267922835a64f32b0344e28eeb"
+    },
+    {
+      "path": "joint-refinement/verify_mass_dual.py",
+      "bytes": 9724,
+      "sha256": "1db83d2338050240e919f45b6b2bc558257ffbdd5e204334ad17ca5303973c73"
+    },
+    {
+      "path": "power-moment/acceptance.py",
+      "bytes": 781,
+      "sha256": "2070db158d8c90790dbc7916fc16d01d33f4021214801e2941bb3026fc082602"
+    },
+    {
+      "path": "power-moment/complex_interval.py",
+      "bytes": 4257,
+      "sha256": "2d12da286fcab02a5a5ce0d99ac43b46ccbb04efdc8cea9acd14887c0f5c0f07"
+    },
+    {
+      "path": "power-moment/verify_isolation.py",
+      "bytes": 5819,
+      "sha256": "d17910c1e7622b8949c35938f891d32e9cd0efdb1b98b26a19a463e776220ed6"
+    },
+    {
+      "path": "power-moment/witnesses.py",
+      "bytes": 861,
+      "sha256": "d273fdfb1f2deeab97f74ea080fcd86e66d44552cca462ace8e44d0e6e0e0831"
+    },
+    {
+      "path": "radial-gap/build_package.py",
+      "bytes": 2569,
+      "sha256": "65d76ed538dbc0992f49eedbf7cda0400840317fcd506fb6144a11f04c23ccf9"
+    },
+    {
+      "path": "radial-gap/verify_all.py",
+      "bytes": 5456,
+      "sha256": "3868a837b032dbbcda4fbf4d2a4315f64c2e8b5f159607e3f4024749be8b6d2d"
+    },
+    {
+      "path": "radial-gap/verify_gap.py",
+      "bytes": 8744,
+      "sha256": "00f7577c56f857c6da15e299c6cb68cc2d3b1e770ee66531c5bfa7353a26f26e"
+    }
+  ],
+  "reuse_scope": "Only a caller that has already accepted the fixed parent proof may skip its replay; every new node is still replayed."
+}

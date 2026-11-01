@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
-  "base_commit": "2f25467a6fb67fd816fac156ef81f73c92182ff4",
-  "purpose": "Pinned exact centered normalization ranges, grid-dual envelopes and inherited partial-cover proofs.",
+  "base_commit": "92fbc4ddbdca4e37f081c061d1a2c49c25af4fed",
+  "purpose": "Pinned joint fourth-mode stability, old-ellipse mass coupling and compositional exact cover.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -194,6 +194,16 @@
       "sha256": "6394528c4c174eb464f840a8c921d84f891a5c9a0b3f45bf0f9f15a05440c497"
     },
     {
+      "path": "joint-refinement/JOINT_PROVENANCE.json",
+      "bytes": 1199,
+      "sha256": "30d80ec65923acb56129db83050c4fbf0e6b4fca31d081fc44549c82970c6a37"
+    },
+    {
+      "path": "joint-refinement/JOINT_STABILITY.md",
+      "bytes": 9369,
+      "sha256": "c54de2d0849474a545b7ea84dea47eed128de384d8b9ca5e31ad7ca85d9b3300"
+    },
+    {
       "path": "joint-refinement/MASS_DUAL_ENVELOPE.md",
       "bytes": 7667,
       "sha256": "626dcd9adc4370794e04c5945eeb3ec0299fa075dc4169f1a7a8a9cdf5743663"
@@ -205,13 +215,23 @@
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 9853,
-      "sha256": "dea72d5d24a99efa6f28e637fc68a640c6cc9cc1b1d0be400570195afd6a53a6"
+      "bytes": 10278,
+      "sha256": "c31a7d2bcd5077ea3a8d2ccce18e17a7fe9dc0b40573d8cf69f428a9fbdf5e8d"
+    },
+    {
+      "path": "joint-refinement/certificates/accepted_parent.json",
+      "bytes": 5437,
+      "sha256": "1f43c5bb3a7eab77a6682b23a25c0e62dcab6c9b8f502424873252fe1bd08c47"
     },
     {
       "path": "joint-refinement/certificates/continuation.json.gz",
       "bytes": 1179847,
       "sha256": "20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e"
+    },
+    {
+      "path": "joint-refinement/certificates/joint_extension.json.gz",
+      "bytes": 43463,
+      "sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b"
     },
     {
       "path": "joint-refinement/certificates/prior_frontier.json",
@@ -224,6 +244,16 @@
       "sha256": "6248913101506d746d5cd7d45a17075776b9c79737e356e7fec45434bf05af38"
     },
     {
+      "path": "joint-refinement/check_joint.py",
+      "bytes": 6943,
+      "sha256": "205bb47cc1ac2f06b1ef9882e87bd5c2d75e97967b48cab95f134b3bbc4416ae"
+    },
+    {
+      "path": "joint-refinement/ellipse_dual.py",
+      "bytes": 6265,
+      "sha256": "a0a1e1730b7c080558cc7f11e5add4efbf745f22f4b350e7aaed7e6becbd2049"
+    },
+    {
       "path": "joint-refinement/mass_dual.py",
       "bytes": 7666,
       "sha256": "b40895aa3717ae1b29c923a99505276d48297ad27e9bca1f3486169ef5d90061"
@@ -232,6 +262,16 @@
       "path": "joint-refinement/propose.py",
       "bytes": 3562,
       "sha256": "5afdd108bf1ed9f1a8317db88d3f2b04220c41d0f8895c750d403c2c8a6d6701"
+    },
+    {
+      "path": "joint-refinement/propose_joint.py",
+      "bytes": 3182,
+      "sha256": "fead58d60a1f467600761dbffa75582e86a7904e5059fe8951f9c177ca42680d"
+    },
+    {
+      "path": "joint-refinement/radial_stability.py",
+      "bytes": 2518,
+      "sha256": "e5c4ae5037dbda417c1b0c85ce888d2bfbd26428698d440a6a22525d43f89b75"
     },
     {
       "path": "joint-refinement/reference_centers.json",
@@ -254,14 +294,34 @@
       "sha256": "9a4cf735fbd0b096d85ba7b9716802aa561d34fe6d2822a818e514b2fc5e45a1"
     },
     {
+      "path": "joint-refinement/reports/ellipse_dual.json",
+      "bytes": 1685,
+      "sha256": "1e47951252f2f7066b694f502208dd890845721cdca6a32e40ae33770cb987a4"
+    },
+    {
       "path": "joint-refinement/reports/frontier_progress.json",
       "bytes": 3537,
       "sha256": "fe566764fe9de62f8cf96e1e0f1ad767273cb75705a5e130647475fbb0bfd748"
     },
     {
+      "path": "joint-refinement/reports/joint_cover.json",
+      "bytes": 4837,
+      "sha256": "265e4e500ddb399b5cfd4ea3e8fd7bb589172bbdd354f94eb2419e7d339b4565"
+    },
+    {
+      "path": "joint-refinement/reports/joint_execution.json",
+      "bytes": 252,
+      "sha256": "9528c9116257cdcd0fd28f9dccddc28d668467035e9a2d16372ab1b5024ed16f"
+    },
+    {
       "path": "joint-refinement/reports/mass_dual.json",
       "bytes": 970,
       "sha256": "e1c2fa77a5fde7e3c77183841883d12263f696f555173bd45eeded308d8d4c37"
+    },
+    {
+      "path": "joint-refinement/reports/radial_stability.json",
+      "bytes": 948,
+      "sha256": "ca4a66214f42c0496fb2a28417c10476c9d31cedc5e85a89add53d3a428e9442"
     },
     {
       "path": "joint-refinement/summarize_frontier.py",
@@ -279,9 +339,24 @@
       "sha256": "630222a6d67726cbce720f660ed3b91cd79285267922835a64f32b0344e28eeb"
     },
     {
+      "path": "joint-refinement/verify_ellipse_dual.py",
+      "bytes": 7526,
+      "sha256": "44f2b9a4a44a3800f66fe4412d3193a07dff4c57aba30092e2910a1223897346"
+    },
+    {
+      "path": "joint-refinement/verify_joint.py",
+      "bytes": 4777,
+      "sha256": "7de0bbb68ebb6ec095ed53fb0413bb9aec25b04233a8c21a9fcce9dd9b7add9b"
+    },
+    {
       "path": "joint-refinement/verify_mass_dual.py",
       "bytes": 9724,
       "sha256": "1db83d2338050240e919f45b6b2bc558257ffbdd5e204334ad17ca5303973c73"
+    },
+    {
+      "path": "joint-refinement/verify_radial_stability.py",
+      "bytes": 6887,
+      "sha256": "b53b72c7416fb8c6f506920a7f443a4d1d31c44fdfe7fd8444386d8882d3d163"
     },
     {
       "path": "power-moment/LOCAL_RIGIDITY.md",

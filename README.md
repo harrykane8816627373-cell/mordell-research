@@ -14,20 +14,20 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[精确质量范围与参数包络](joint-refinement/MASS_DUAL_ENVELOPE.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
+|八点最新进展与准确剩余分支|[完整四阶稳定性与旧椭圆](joint-refinement/JOINT_STABILITY.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 当前续算：精确质量范围与参数包络
+## 当前联合排除：完整四阶稳定性、旧椭圆与质量
 
-在实际质量7、无碰撞的八点上，完整实能量 Hessian 半正定已经强迫全部逐点驻点方程：旋转向量 iq 的二次型恒为0，而 H(iq)=ig，其中 g 为真实梯度。这一结论需要完整 Hessian；低阶主块不能替代。
+在实际质量7、无碰撞的八点上，完整实能量 Hessian 半正定已经强迫真实驻点。本轮将其四阶模式与旧椭圆直接联合，证明任何剩余构型都必须满足 **minᵢ|qᵢ|²<3/4**；所有点均在平方半径≥3/4区域的整类因此排除。更强的径向—矩预算也已给出，仍使用同一组实际点。
 
-本轮精确计算中心化盒能否达到质量7，并在交换凸性允许的参数网格上求质量对偶包络的最小值。旧筛选尚未直接排除后，参数包络新增排除197个叶盒，质量范围再排除5个。全部25万个已处理旧节点保留，新增1万个处理节点；20个必需旧入口与3个当前入口已完整重放。
+目标值筛选同时把旧椭圆的实、虚质量范围并入两个参数的精确包络。本轮新增10000个处理节点，额外60次目标值排除、1次质量可行性排除。上一轮19个开放盒中的7个已连同全部后代关闭；其余12个旧区域细分后留下21个连续开放盒。
 
-与旧树合并后有320019个节点、159991个排除叶，仍有19个连续开放区域，部分区域仍较宽。**完整排空仍未完成。** [新解析证明](joint-refinement/MASS_DUAL_ENVELOPE.md) · [精确森林与复核](joint-refinement/README.md)
+合并累计330021个节点、164990个排除叶。**完整排空仍未完成。** [联合证明](joint-refinement/JOINT_STABILITY.md) · [当前覆盖报告](joint-refinement/reports/joint_cover.json)
 
-按上一阶段快照追踪，原17个开放盒中5个已完整关闭；余下12个原区域细分后留下当前19个开放盒。[旧开放域进度](joint-refinement/reports/frontier_progress.json)核对全部旧节点、边界与后代，盒数不代表未解驻点数。
+本轮3个新增接受入口已从固定输入临时副本重放通过。父证明采用上一轮已通过的固定证书，29个旧算术输入逐字节未变；本次未重复整片父森林，执行范围由[记录](joint-refinement/reports/joint_execution.json)明确列出。四阶径向定理在本批叶盒中的新增直接排除数为0，解析结论与有限计数分别记录。
 
 ## 上一阶段：等价多项式矩阵与冻结覆盖
 

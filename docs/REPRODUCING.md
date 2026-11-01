@@ -25,10 +25,10 @@ python -B -S -O radial-gap/verify_all.py
 
 ## 联合物理系统与部分覆盖
 
-当前完整续算入口包含20个必需旧入口、旋转饱和与严格对数算术、全局二次与角点上包核对、精确中心化质量范围与参数包络，以及全部版本节点的逐项重放，共3个当前入口：
+当前完整续算入口包含20个既有依赖入口、3个父入口及3个新增入口，重放完整父森林和新的联合稳定性增量。新增部分直接联合四阶 Hessian、旧椭圆和两个分量质量范围：
 
 ~~~bash
-python -B -S -O joint-refinement/verify_all.py
+python -B -S -O joint-refinement/verify_joint.py
 ~~~
 
 也可在当前基础导航、幂和与径向检查之后一并运行：
@@ -43,9 +43,13 @@ python -B -S -O scripts/verify_current.py --refinement
 
 算法4继续加入[中心化切片与质量对偶](../joint-refinement/CENTERED_MASS.md)，核对8组切片、1208个可行顶点记录，以及违反交换凸性时的内部极大反例。各版本节点均按记录版本重放。
 
-当前算法5加入[精确质量范围与参数包络](../joint-refinement/MASS_DUAL_ENVELOPE.md)，以独立面枚举、255条 Cartesian 顶点记录、264个包络查询及24组穷举参数最小化核对新算术。森林仍逐节点按原算法版本重放。
+父阶段算法5加入[精确质量范围与参数包络](../joint-refinement/MASS_DUAL_ENVELOPE.md)，以独立面枚举、255条 Cartesian 顶点记录、264个包络查询及24组穷举参数最小化核对新算术。森林仍逐节点按原算法版本重放。
 
-完整覆盖通过后，`python -B -S -O joint-refinement/summarize_frontier.py` 可快速复核上一阶段各旧盒的关闭情况；它重构旧快照哈希并核对后代计数，不重放区间算术。旧提交中的历史计数按相应快照理解。
+新增[联合证明](../joint-refinement/JOINT_STABILITY.md)给出内点条件 min|qᵢ|²<3/4、严格四阶径向预算与旧椭圆的两个参数包络。新算术独立穷举267220对整数参数，并按系数核对平方和分解、105个 Bernstein 查询与201个质量参数；六份伪造覆盖必须被拒绝。
+
+父快照92fbc4d已经完整验收且29个旧算术输入逐字节未变时，可使用 `verify_joint.py --parent-already-replayed`；本轮执行采用此方式，从临时副本重放3个新增入口和所有新增节点，[执行记录](../joint-refinement/reports/joint_execution.json)明确报告父证明没有在本次调用中重跑。首次复核应使用不带跳过参数的默认完整命令。
+
+`reports/joint_cover.json` 是最新联合覆盖；`reports/cover.json` 保持父快照的原报告。`summarize_frontier.py` 只核对2f25467到92fbc4d的历史边界，不能替代最新增量的算术重放。
 
 基础入口默认不重复耗时较长的60021节点覆盖重放。加上新专题：
 

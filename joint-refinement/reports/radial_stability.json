@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "fourth_mode_identity": {
+    "actual_mass_seven_identity_cases": 2,
+    "nonstationary_residual_retained": true,
+    "exact_SOS_coefficients_checked": true,
+    "inner_particle_threshold": "3/4",
+    "required_s2_squared_upper": "19/16",
+    "old_ellipse_implies_inner_particle": true,
+    "annular_eighth_moment_upper": "371/32",
+    "annular_Hessian_min_strict_upper": "-1/64"
+  },
+  "continuous_radial_bounds": {
+    "independent_Bernstein_queries": 105,
+    "additional_mass_parameters_checked": 201,
+    "floating_point_acceptance": false
+  },
+  "actual_annular_witness": {
+    "actual_centered_mass_seven": true,
+    "inside_nonzero_moment_ellipse": true,
+    "all_squared_radii_above_three_quarters": true,
+    "old_A_B_cross_inequalities_strict": true,
+    "fourth_mode_radial_rejection": true,
+    "witness_is_claimed_stationary": false
+  },
+  "full_eight_point_exclusion_proved": false
+}

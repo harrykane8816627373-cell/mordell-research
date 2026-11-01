@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "parent_full_proof_replayed_this_invocation": false,
+  "parent_full_proof_reused": true,
+  "unchanged_parent_arithmetic_files_checked": 29,
+  "new_exact_entries_replayed": 3,
+  "full_eight_point_exclusion_proved": false
+}

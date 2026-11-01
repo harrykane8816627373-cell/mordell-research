@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "joint_parameter_minimization": {
+    "independent_two_parameter_cases": 24,
+    "integer_parameter_pairs_checked": 267220,
+    "strict_improvement_cases": 11,
+    "floating_point_acceptance": false
+  },
+  "actual_physical_boxes": {
+    "actual_center_mass_and_old_ellipse_exact": true,
+    "both_low_moments_nonzero": true,
+    "whole_boxes_checked": [
+      {
+        "radius": "1/256",
+        "new_log_upper": "-643036990095/1099511627776",
+        "old_log_upper": "-643036990095/1099511627776",
+        "mass_split_lower": "974965719046626075078279/302231454903657293676544",
+        "mass_split_upper": "1002265633733987115069063/302231454903657293676544"
+      },
+      {
+        "radius": "1/64",
+        "new_log_upper": "-597633771055/1099511627776",
+        "old_log_upper": "-597633771055/1099511627776",
+        "mass_split_lower": "7471378897541674821776275/2417851639229258349412352",
+        "mass_split_upper": "1041693649378947637046919/302231454903657293676544"
+      },
+      {
+        "radius": "1/16",
+        "new_log_upper": "60447725589/549755813888",
+        "old_log_upper": "60981357307/549755813888",
+        "mass_split_lower": "3",
+        "mass_split_upper": "9449387542141769162397073/2417851639229258349412352"
+      }
+    ],
+    "witness_is_claimed_stationary": false,
+    "floating_point_acceptance": false
+  },
+  "scope_guards": {
+    "old_ellipse_is_a_required_hypothesis": true,
+    "outside_ellipse_mass_seven_example": true
+  },
+  "coverage_guards": {
+    "parent_open_regions": 19,
+    "false_proof_variants_rejected": 6
+  },
+  "full_eight_point_exclusion_proved": false
+}

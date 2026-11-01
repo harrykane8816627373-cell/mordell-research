@@ -1,0 +1,203 @@
+{
+  "passed": true,
+  "parent_commit": "92fbc4ddbdca4e37f081c061d1a2c49c25af4fed",
+  "parent_certificate_sha256": "20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e",
+  "extension_sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b",
+  "scope": "global_maximum",
+  "precision_bits": 40,
+  "parent_frontier_regions": 19,
+  "extension_nodes": 10021,
+  "processed_extension_nodes": 10000,
+  "extension_counts": {
+    "centered_mass_range": 6,
+    "ellipse_mass_split": 1,
+    "ellipse_split_log": 60,
+    "force_sign": 203,
+    "mass_centered_quadratic": 1376,
+    "mass_envelope_log": 331,
+    "mass_log_Taylor": 1,
+    "mass_or_radius": 91,
+    "mass_quadratic_log": 4,
+    "mass_quadratic_vertices": 619,
+    "maximum_radius": 416,
+    "old_ellipse": 108,
+    "ordered_separation": 815,
+    "polynomial_Ward_1": 41,
+    "separation": 341,
+    "split": 5001,
+    "strict_subset": 586,
+    "unresolved": 21
+  },
+  "additional_excluded_leaves": 4999,
+  "combined_tree_nodes": 330021,
+  "combined_excluded_leaves": 164990,
+  "closed_parent_regions": 7,
+  "unclosed_parent_regions": 12,
+  "unresolved_regions": 21,
+  "frontier": [
+    {
+      "parent_region_id": 0,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        0
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 1,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        1
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 2,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        2
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 3,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        3
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 104176,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        4
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 104178,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        5
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 104180,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        6
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 104278,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        7
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 134430,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        8
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 134432,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        9
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 134434,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        10
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 258446,
+      "excluded_descendant_leaves": 4361,
+      "open_descendants": [
+        1282,
+        7062,
+        7954,
+        9814,
+        9976,
+        10012,
+        10014,
+        10016,
+        10019,
+        10020
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 259680,
+      "excluded_descendant_leaves": 91,
+      "open_descendants": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 259738,
+      "excluded_descendant_leaves": 497,
+      "open_descendants": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 259740,
+      "excluded_descendant_leaves": 29,
+      "open_descendants": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 259998,
+      "excluded_descendant_leaves": 13,
+      "open_descendants": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 260012,
+      "excluded_descendant_leaves": 1,
+      "open_descendants": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 260016,
+      "excluded_descendant_leaves": 5,
+      "open_descendants": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 260018,
+      "excluded_descendant_leaves": 2,
+      "open_descendants": [],
+      "closed": true
+    }
+  ],
+  "new_ellipse_split_exclusions": 60,
+  "ellipse_center_counts": {
+    "midpoint": 60
+  },
+  "largest_ellipse_split_log_upper": "-198017857/1099511627776",
+  "real_mass_parameter_range": [
+    "-557590638493/549755813888",
+    "5777890840669/1099511627776"
+  ],
+  "imag_mass_parameter_range": [
+    "1460727580823/549755813888",
+    "3293398536287/549755813888"
+  ],
+  "new_ellipse_mass_feasibility_exclusions": 1,
+  "new_fourth_mode_exclusions": 0,
+  "complete_cover": false,
+  "full_eight_point_exclusion_proved": false
+}

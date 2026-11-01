@@ -1,16 +1,18 @@
-# 八点联合续算：精确质量范围、参数包络与严格覆盖
+# 八点联合续算：完整四阶稳定性、旧椭圆与质量耦合
 
 2026-11-01。研究发起：蒋丰灿（Fengcan Jiang）；OpenAI Codex 协作。
 
-**完整排空仍未完成。** 本专题从[上一轮覆盖](../joint-closure/README.md)的21个开放坐标盒继续；最终节点、排除叶与开放盒数量以[精确重放报告](reports/cover.json)为准。开放盒是有限计算截断留下的连续区域，有些仍然很宽，不是驻点分类，也不代表离全域排空只差相应数目的孤立解。
+**完整排空仍未完成。** 本专题沿用旧覆盖与此前的严格目标值界，现将[完整四阶稳定性、旧椭圆和质量范围直接联合](JOINT_STABILITY.md)。最新结果以[联合增量覆盖报告](reports/joint_cover.json)为准；开放盒是连续外包，有些仍很宽，不是驻点分类。
 
-本专题保留旋转饱和、局部 Taylor、[全局二次与角点上包](GLOBAL_QUADRATIC.md)和[中心化切片](CENTERED_MASS.md)。本轮新增[精确质量范围与参数包络](MASS_DUAL_ENVELOPE.md)：先精确求中心化盒的最小、最大质量，再求固定参考图在合法参数网格上的最小对偶上界。旧 `joint-closure` 证书与历史离线包保持原字节。
+新解析结论为：质量7、真实驻点、完整 Hessian PSD 和旧椭圆共同强迫 **minᵢ|qᵢ|²<3/4**。同时得到严格径向预算 Σg(tᵢ)+|s₄|²+(216/175)|s₃|²<−3/4，g 及其精确平方和分解见证明页。旧径向门槛 E>1/1200、零矩分支分类和全部必要条件继续保留。
 
-当前固定输入已在临时副本完整重放通过，含20个必需旧入口、3个当前入口。森林累计260000个处理节点：算法1为100000、算法2为100000、算法3为30000、算法4为20000、算法5为10000；另有19个开放节点。与原树合并后为320019个节点、159991个排除叶、19个开放叶。算法5新增197次包络排除、5次精确质量范围排除，均在旧算法1至4尚未直接排除后生效。这些计数不等于全域覆盖比例。
+本轮在[92fbc4d父快照](https://github.com/harrykane8816627373-cell/mordell-research/tree/92fbc4ddbdca4e37f081c061d1a2c49c25af4fed/joint-refinement)的19个开放盒上新增10000个处理节点。旧椭圆的两个分量质量参数新增60次目标值排除、1次质量可行性排除；四阶径向判据在本批的新增直接排除数为0。原19个盒中7个已连同全部后代关闭，其余12个原区域细分后留下21个开放盒。合并累计330021个节点、164990个排除叶；节点数不表示覆盖体积比例。
 
-本轮保留[2f25467快照](https://github.com/harrykane8816627373-cell/mordell-research/tree/2f25467a6fb67fd816fac156ef81f73c92182ff4/joint-refinement)全部25万个已处理旧节点，只扩展其开放叶。该快照合并310017节点、154992排除叶、17个开放盒。更早的二次与角点阶段见[fae69e9](https://github.com/harrykane8816627373-cell/mordell-research/tree/fae69e9d3e8a3d67bc7d1d46c2825f6a25f70e7a/joint-refinement)，Taylor 阶段见[b469f04](https://github.com/harrykane8816627373-cell/mordell-research/tree/b469f04f26bd3848fceaa9b1e83d86d89853f422/joint-refinement)。
+[父证书](certificates/continuation.json.gz)保持原字节，SHA-256为20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e，其[原覆盖报告](reports/cover.json)仍记录320019节点与19个开放盒。新增[增量证书](certificates/joint_extension.json.gz)单独覆盖这19个盒的全部后代；最新21个开放盒和每个旧盒的关闭状态均在联合报告中逐项列出。
 
-[旧开放域汇总](reports/frontier_progress.json)精确重构2f25467快照后确认：其17个开放盒中，5个已连同全部后代关闭；余下12个原区域细分后，留下当前19个开放盒。盒数增加来自细分，不能用来判断未解孤立驻点的增减。部分区域仍较宽；各历史阶段的旧盒关闭数按对应快照理解。
+本轮3个新增接受入口已在固定输入的临时副本重放通过。父证明复用上一轮完整通过的20个旧入口与3个父入口；29个旧算术输入逐字节未变。本次未重复父森林的算术重放，[执行记录](reports/joint_execution.json)明确输出该区别。默认 `verify_joint.py` 会从头重放完整父证明和全部新增节点。
+
+此前的[全局二次与角点界](GLOBAL_QUADRATIC.md)、[中心化切片](CENTERED_MASS.md)、[共同质量参数包络](MASS_DUAL_ENVELOPE.md)和旋转饱和定理继续作为父证明；旧研究快照按对应提交理解。
 
 ## 1. 质量恰为7时，完整 Hessian PSD 已强迫驻点
 
@@ -120,7 +122,7 @@ m_c=\sum_i|c_i|^2.
 
 log2 也用同一严格公式。全部运算在2⁻⁴⁰整数网格向外取整；负的二进制指数按区间乘法翻转端点。接受程序以独立 Fraction 高精度级数核对10组正、负、极大与极小对数，并在两组真实质量7点上核对直接距离乘积与整盒上界。
 
-## 3. 本轮实际覆盖的范围与账本
+## 3. 原续算森林与本轮增量的覆盖范围
 
 起点固定为旧覆盖证书 SHA-256：
 
@@ -130,6 +132,8 @@ log2 也用同一严格公式。全部运算在2⁻⁴⁰整数网格向外取�
 
 森林的21个根与原21个开放盒逐一对应。每个节点先做五轮既有保解传播，再按节点记录的算法版本尝试目标值上界；否则对最长坐标区间作精确二分。算法2加入全局二次上界，算法3加入角点上包，算法4继续保留中心化切片和质量对偶参数，算法5加入精确质量范围和参数包络。新版本仅在旧筛选尚未排除后尝试新方法。所有排除与分裂均由独立接受入口重新计算。
 
+本轮增量使用独立的算法6入口：先按原字节执行算法1至5，尚未排除后才尝试四阶径向预算和旧椭圆质量耦合。因此60次新目标值排除与1次质量可行性排除不与父方法的直接筛选重复。全部旧森林记录与旧算术源文件保持原样。
+
 前一阶段608次 Taylor 排除的最大对数目标值上端为 −190264859/1099511627776。当前各方法的严格上端在报告中分别记录。排除发生在既有联合约束传播后的实际坐标包围域上；原输入盒内被传播删去的点使用相应旧必要条件。目标值定理本身按其前提适用于传播后的质量7包围域。
 
 **全局专用约束仍只用于假想非候选全局最优者。** 搜索继承旧严格子集、半径、分离、旧椭圆、真实方程和 E>1/1200 等必要条件；不能据此宣称任意稳定驻点都满足这些全局专用界。Taylor 上界及第1节旋转饱和定理本身则按各节所列更弱前提成立。
@@ -138,30 +142,26 @@ log2 也用同一严格公式。全部运算在2⁻⁴⁰整数网格向外取�
 
 ## 4. 复核与续算
 
-重放新算术、上一轮完整专题以及本轮覆盖森林：
+从固定输入临时副本重放完整父证明及本轮全部新增入口：
 
 ~~~bash
-python -B -S -O joint-refinement/verify_all.py
+python -B -S -O joint-refinement/verify_joint.py
 ~~~
 
-只重放旧覆盖树与新森林：
+该默认入口重放20个既有依赖入口、3个父入口和3个新增入口。只有准确的父证明已验收通过时，才可加 `--parent-already-replayed` 复用它；该选项仍验证父证书、原报告和29个旧算术输入的字节，并重放全部新增节点，不能替代首次父证明重放。
+
+单独重放本轮增量树（以前提成立的父证明为基础）：
 
 ~~~bash
-python -B -S -O joint-refinement/check.py joint-refinement/certificates/continuation.json.gz
+python -B -S -O joint-refinement/check_joint.py joint-refinement/certificates/joint_extension.json.gz
 ~~~
 
-在完整覆盖报告已经通过后，可快速复核上一阶段17个盒的关闭情况：
+`verify_all.py` 和 `check.py` 继续核对截至92fbc4d的原父森林，不能单独当作最新增量验收。`summarize_frontier.py` 继续核对2f25467到92fbc4d的历史边界；本轮各父盒关闭情况直接列在联合报告中。
+
+接受与生成均只需标准库。继续扩展同一固定父边界：
 
 ~~~bash
-python -B -S -O joint-refinement/summarize_frontier.py
+python -B -S -O joint-refinement/propose_joint.py --nodes 100000 --resume joint-refinement/certificates/joint_extension.json.gz --output PATH_TO_NEXT.json.gz
 ~~~
 
-该汇总会用前一阶段快照的解压字节哈希校验全部旧节点和旧边界，输出 `proof_replay_performed=false`；它单独核对快照与后代计数，完整区间算术仍由上面的接受入口重放。
-
-接受与生成均只需标准库。继续生成下一批：
-
-~~~bash
-python -B -S -O joint-refinement/propose.py --nodes 100000 --algorithm 5 --resume joint-refinement/certificates/continuation.json.gz --output PATH_TO_NEXT.json.gz
-~~~
-
-本专题不会覆盖写回旧 `joint-closure` 固定字节。历史部分覆盖离线包仍是当时的21盒快照；本轮新证书与代码以当前专题为准。一般解析量词由本文证明承担；有限算术及森林覆盖由程序重放。没有外部同行评审或整篇形式化证明。
+本专题不改写旧 `joint-closure` 证书或历史离线包。解析量词由证明页承担，有限算术与新增树覆盖由程序重放；没有外部同行评审或整篇形式化证明。
