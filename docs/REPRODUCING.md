@@ -25,6 +25,20 @@ python -B -S -O radial-gap/verify_all.py
 
 ## 联合物理系统与部分覆盖
 
+当前完整续算入口包含上一阶段20个必需旧入口、旋转饱和与对数算术核对、新森林的逐节点重放：
+
+~~~bash
+python -B -S -O joint-refinement/verify_all.py
+~~~
+
+也可在当前基础导航、幂和与径向检查之后一并运行：
+
+~~~bash
+python -B -S -O scripts/verify_current.py --refinement
+~~~
+
+该命令包含旧联合覆盖，只重放一次旧覆盖树。新专题[证明与报告](../joint-refinement/README.md)明确保留未排空状态；历史离线包仍是当时的冻结快照。
+
 基础入口默认不重复耗时较长的60021节点覆盖重放。加上新专题：
 
 ~~~bash
@@ -50,7 +64,7 @@ python -B -S -O algebraic-gap/verify_all.py --source-archive PATH_TO_FIRST3_ZIP
 也可一次执行全部当前入口：
 
 ```bash
-python -B -S -O scripts/verify_current.py --joint --first3-archive PATH_TO_FIRST3_ZIP
+python -B -S -O scripts/verify_current.py --refinement --first3-archive PATH_TO_FIRST3_ZIP
 ```
 
 [本轮证明页](../algebraic-gap/README.md)列出准确源包名和哈希；完整新离线包只携带3个必要旧文件，解压后无需额外参数。该入口重新构造结果式、逐项重放14179个整数系数、验证齐次权和七个乘子范数，再用精确分数核算全局楔形下界。它没有重跑旧零矩构型的全部分类；完整八点排除状态仍为 false。

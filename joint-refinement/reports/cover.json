@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "base_certificate_sha256": "9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58",
+  "continuation_sha256": "68327112b23153212f4196fadb43b5e9ee04fd0ec4a3d7641fc388dc25ecd9ed",
+  "precision_bits": 40,
+  "scope": "global_maximum",
+  "base_open_regions_accounted_for": 21,
+  "continuation_nodes": 100019,
+  "continuation_counts": {
+    "ellipse_covariance": 1084,
+    "force_sign": 7493,
+    "mass": 243,
+    "mass_log_Taylor": 608,
+    "mass_or_radius": 2500,
+    "maximum_radius": 47,
+    "old_ellipse": 6,
+    "ordered_separation": 8718,
+    "ordering": 803,
+    "polynomial_Ward_1": 2747,
+    "separation": 891,
+    "split": 49999,
+    "stationarity": 1101,
+    "strict_subset": 23760,
+    "unresolved": 19
+  },
+  "combined_tree_nodes": 160019,
+  "combined_excluded_leaves": 79991,
+  "unresolved_regions": 19,
+  "new_Taylor_excluded_leaves": 608,
+  "Taylor_center_counts": {
+    "midpoint": 608
+  },
+  "largest_Taylor_upper_endpoint": -190264859,
+  "largest_Taylor_log_upper": "-190264859/1099511627776",
+  "complete_cover": false,
+  "full_eight_point_exclusion_proved": false
+}

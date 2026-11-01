@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-01",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "571b97262654907d122b4dc7088305075a0dd23d",
+  "base_cover_sha256": "9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58",
+  "continuation_sha256": "68327112b23153212f4196fadb43b5e9ee04fd0ec4a3d7641fc388dc25ecd9ed",
+  "new_theorems": [
+    "At exact mass seven, positive semidefiniteness of the full real energy Hessian forces true stationarity.",
+    "A mass-adjusted logarithmic Taylor bound excludes entire actual coordinate boxes without assuming stationarity."
+  ],
+  "new_processed_nodes": 100000,
+  "new_Taylor_excluded_leaves": 608,
+  "Taylor_exclusions_from_box_midpoints": 608,
+  "Taylor_exclusions_from_reference_centers": 0,
+  "fresh_temporary_copy_replay_passed": true,
+  "prior_entries_replayed": 20,
+  "new_exact_entries_replayed": 2,
+  "combined_tree_nodes": 160019,
+  "combined_excluded_leaves": 79991,
+  "unresolved_coordinate_regions": 19,
+  "coverage_scope": "Hypothetical non-candidate global maxima, inheriting the prior global-only subset/radius cuts. Some pending boxes remain wide.",
+  "reference_centers_are_assumed_stationary": false,
+  "reference_center_list_is_complete": false,
+  "acceptance_requires_floating_point": false,
+  "independent_agent_or_peer_review": false,
+  "full_formalization": false,
+  "full_eight_point_exclusion_proved": false
+}

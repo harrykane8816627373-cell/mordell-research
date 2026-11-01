@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "rotation_saturation": {
+    "two_actual_normalized_witnesses": [
+      {
+        "centered": true,
+        "residual_squared": "1118081/49725",
+        "negative_quadratic": "-11287219712442/5630298480625"
+      },
+      {
+        "centered": false,
+        "residual_squared": "5433279436096283588177/236270853375858080325",
+        "negative_quadratic": "-440341777704237199157854566053628118154643418/339102051283814092013925900070509381240650625"
+      }
+    ],
+    "centering_not_required_for_rotation_theorem": true,
+    "wrong_mass_strict_positive_Hessian_witness_mass": 70000,
+    "wrong_mass_inverse_square_operator_bound": "6077/3060000"
+  },
+  "logarithm_arithmetic": {
+    "independent_fraction_logarithm_cases": 10,
+    "floating_point_acceptance": false
+  },
+  "Taylor_arithmetic": {
+    "actual_mass_seven_points_checked": 2,
+    "arbitrary_reference_centers_checked": 2,
+    "whole_box_log_upper_bounds": [
+      "-460700950121/137438953472",
+      "-921375504137/274877906944"
+    ],
+    "wide_pole_box_rejected_as_inconclusive": true
+  },
+  "coverage_guards": {
+    "initial_21_regions_preserved": true,
+    "false_proof_variants_rejected": 4
+  },
+  "full_eight_point_exclusion_proved": false
+}
