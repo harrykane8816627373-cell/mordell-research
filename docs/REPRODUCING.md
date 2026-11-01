@@ -15,6 +15,24 @@ python -B -S -O scripts/verify_current.py
 
 仓库文件不因重放而更新计时。两个程序都明确保留 `full_eight_point_exclusion_proved=false`，这表示完整八点覆盖尚未证明。
 
+## 本轮全局低阶矩耦合
+
+这项检查需要旧首三次图的32MB整数证书，默认轻量入口不会隐式下载或跳过它。用原2026-10-16证明包重放：
+
+```bash
+python -B -S -O algebraic-gap/verify_all.py --source-archive PATH_TO_FIRST3_ZIP
+```
+
+也可一次执行全部当前入口：
+
+```bash
+python -B -S -O scripts/verify_current.py --first3-archive PATH_TO_FIRST3_ZIP
+```
+
+[本轮证明页](../algebraic-gap/README.md)列出准确源包名和哈希；完整新离线包只携带3个必要旧文件，解压后无需额外参数。该入口重新构造结果式、逐项重放14179个整数系数、验证齐次权和七个乘子范数，再用精确分数核算全局楔形下界。它没有重跑旧零矩构型的全部分类；完整八点排除状态仍为 false。
+
+## 保留的两阶段局部能量证书
+
 只验证最新专题可运行：
 
 ```bash

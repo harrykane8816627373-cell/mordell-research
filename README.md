@@ -14,12 +14,22 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[八点攻关](eight-point/README.md) · [剩余覆盖清单](eight-point/OPEN_BRANCHES.md)|
+|八点最新进展与准确剩余分支|[全局代数耦合](algebraic-gap/README.md) · [完整联合归约](docs/EIGHT_POINT_REDUCTION.md) · [能量排除](eight-point/README.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 最新八点进展：直接对数余项与五倍矩管域
+## 最新非零矩进展：全局代数耦合
+
+在旧椭圆、真实驻点方程和 Δ_w≥4²⁸7⁷ 的交集中，已推出力1尺度下的新必要条件
+
+```math
+|p_2|\ge10^{-36}|p_3|.
+```
+
+它把旧的“p₂=0 ⇒ p₃=0”整数证书量化到非零矩分支，不要求靠近候选。完整重放重新构造结果式、检查14179个整数系数，并计算七个乘子范数。常数很小，只排除靠近 p₂=0 轴的细楔形区域，**不能完成剩余非零矩分支的排空**。[证明、联合目标值筛选式与复现](algebraic-gap/README.md)
+
+## 已证目标值区域：直接对数余项与五倍矩管域
 
 取力1尺度 w=√(7/2)z、p_k=Σw_i^k。d 为到“原点加半径2正七边形”全部旋转、重排轨道的欧氏距离。对 Σ|w_i|²=28 的八点构型，已证明
 
@@ -62,7 +72,7 @@ d\le\frac15\quad\Longrightarrow\quad
 python -B -S -O scripts/verify_current.py
 ```
 
-[最新八点离线包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
+[本轮全局代数离线包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01) · [保留的能量阶段包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
 
 程序认证精确算术、有限盒及所列常数；解析和几何桥梁仍需阅读证明。浮点搜索、小残差、有限目录和验证通过不能代替全域覆盖。没有外部同行评审、整篇形式化证明或全球优先权声明；仓库未指定许可证。
 

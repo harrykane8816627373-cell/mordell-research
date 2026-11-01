@@ -8,6 +8,7 @@
 
 |专题|作用及其边界|
 |---|---|
+|[非零矩全局代数耦合](../algebraic-gap/README.md)|本轮：旧椭圆内的真实驻点挑战者满足 \|p₂\|≥10⁻³⁶\|p₃\|；重放完整旧整数证书，排除细楔形区域；常数很弱、全域仍开放|
 |[当前八点攻关](../eight-point/README.md)|2026-11-01第二阶段：直接对数余项给 d≤1/5 的排除；Parseval 根估计将六矩门槛提高五倍，p₇ 无额外限制；全域仍开放|
 |[旧椭圆与当前完整归约](EIGHT_POINT_REDUCTION.md)|三个尺度的准确换算；椭圆内的 p₂p₃≠0 分支仍是攻关对象，新门槛继续与全部旧约束取交集|
 |[有限幂和](../power-moment/README.md)|2026-10-31：Newton 闭合、Hankel 目标、稀疏结构、旧局部刚性与11盒；旧局部盒已包含于新管域|
@@ -46,7 +47,13 @@
 
 ## 下载与历史追溯
 
-各专题首页链接自己的离线 ZIP、固定字节清单和实际运行报告。最新[八点包](../eight-point/mordell-eight-point-energy-2026-11-01.zip)包含新能量证明、两阶段管域及重建参考谱所需代码；它不是全部研究资料的替代品。
+各专题首页链接自己的离线 ZIP、固定字节清单和实际运行报告。保留的[能量阶段八点包](../eight-point/mordell-eight-point-energy-2026-11-01.zip)包含能量证明、两阶段管域及重建参考谱所需代码；它不是全部研究资料的替代品。
+
+本轮[全局代数耦合 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01)提供 `mordell-eight-point-algebraic-2026-11-01.zip`，14998359字节，仅携带当前证明与3个必需旧源文件，可独立重放全部14179个整数系数和新的有理常数。大型整数对象放在 Release，不在 Git 目录重复提交。SHA-256：
+
+```text
+41c4aa95cdd4386f0eac7625e4c5cb4993c63d5f2a3c364002d05c2b1447f49b
+```
 
 完整八点历史附件 **mordell-research-complete-2026-10-27.zip** 位于[研究 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)，大小103026838字节，SHA-256：
 

@@ -1,5 +1,6 @@
-"""Check maintained navigation; replay the two current suites without dirtying Git."""
+"""Check navigation and small suites; optionally replay the large integer identity."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import os
@@ -18,8 +19,12 @@ def require(ok, label):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--first3-archive', type=Path)
+    args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
-             *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md'))]
+             *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md')),
+             *sorted((ROOT/'algebraic-gap').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -63,7 +68,15 @@ def main():
                 capture_output=True, text=True, encoding='utf-8', timeout=180)
             require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
             print('PASS '+suite+'/verify_all.py', flush=True)
-    print('PASS current certificates. Complete eight-point exclusion remains unproved.')
+    if args.first3_archive is not None:
+        proc = subprocess.run([sys.executable, '-B', '-S', '-O',
+            str(ROOT/'algebraic-gap/verify_all.py'), '--source-archive', str(args.first3_archive.resolve())],
+            cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=240)
+        require(proc.returncode == 0, 'algebraic-gap: '+proc.stdout[-2000:]+proc.stderr[-3000:])
+        print('PASS algebraic-gap/verify_all.py: full inherited identity and quantitative gap', flush=True)
+    else:
+        print('NOT RUN algebraic-gap full replay: supply --first3-archive (see docs/REPRODUCING.md).')
+    print('PASS requested replays. Complete eight-point exclusion remains unproved.')
 
 
 if __name__ == '__main__':

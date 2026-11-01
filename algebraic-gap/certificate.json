@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-01",
+  "research_initiator": "蒋丰灿 (Fengcan Jiang)",
+  "collaboration": "OpenAI Codex",
+  "parent_commit": "e96c32f6a30b3996d2229d0177f1a5bb46b830bb",
+  "inherited_archive_name": "mordell_首三次图完成与单矩条件分类证明包_20261016.zip",
+  "inherited_archive_sha256": "ed821addbfe00904b3adec19f8397641f7e848006f09fb8525e24a56f7fd51e2",
+  "inherited_sources": [
+    {
+      "path": "generate_first3.py",
+      "bytes": 5512,
+      "sha256": "8e023776d4fdcf50e78d671e3e0ebf2e19e6bfc6b6f17ea2abe99932057dc718"
+    },
+    {
+      "path": "verify_full_discriminant_squared.py",
+      "bytes": 5234,
+      "sha256": "e35e73e515b19c9672c0b29f204eec7064ebe694894bf3c6262d1e2a8e86f785"
+    },
+    {
+      "path": "full_fast1/full_discriminant_squared_certificate.json",
+      "bytes": 32001346,
+      "sha256": "6c09d0b08a970bd1f3227b2aa0437285bba6ade18e42653d7261311183c2c5e0"
+    }
+  ],
+  "coefficient_caps": [
+    "1/2",
+    "61/100",
+    "49/4",
+    "101/10",
+    "343/54",
+    "3",
+    "2401/4096"
+  ],
+  "coefficient_order": [
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7",
+    "c8"
+  ],
+  "sylvester_row_caps": [
+    18,
+    60,
+    171
+  ],
+  "generator_contents": [
+    4,
+    24,
+    16,
+    32,
+    64,
+    128,
+    4
+  ],
+  "multiplier_homogeneous_weights": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    61
+  ],
+  "normalized_multiplier_norm_ceilings": [
+    176823586823806294,
+    92887536927113605,
+    3237750745050101,
+    1394954539924851,
+    2797508295198019,
+    1828065565034479,
+    105249344800273370
+  ],
+  "force_one_gap_exponent": 36,
+  "full_eight_point_exclusion_proved": false,
+  "review": "One research agent; exact replays. No independent agent review, peer review or full formalization claimed."
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-01",
+  "scope": "Current quantitative moment gap and its deterministic full report. Inherited integer objects are separately pinned in certificate.json and bundled only in the offline release asset. This manifest and ZIP files are excluded.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7312,
+      "sha256": "a0381f1910f15bb3f69aacf90d8821592a8defd5772f7b85b337f1cc3c2dfd8c"
+    },
+    {
+      "path": "certificate.json",
+      "bytes": 1861,
+      "sha256": "cda060483fda1c82f3fa63f0ab23c59978ab51a24a27dd8f3e206ae9e4eb419f"
+    },
+    {
+      "path": "verify_all.py",
+      "bytes": 12437,
+      "sha256": "bee316faf53bb0f14f27e211a7e9fdb1f6487683a186f09039f37ffd7ce53320"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 2617,
+      "sha256": "dd2cde581af30c3a7711999a213cc19044f2847edcd9c786621e6dad84917ce0"
+    },
+    {
+      "path": "build_package.py",
+      "bytes": 2845,
+      "sha256": "0cb7a0740b08dc0812200ba1788937fcb77251608982bfd731695ef8cc2bb87a"
+    }
+  ]
+}

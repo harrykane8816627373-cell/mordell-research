@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "arithmetic": "Python standard library; exact integers and Fractions",
+  "inherited_resultants_freshly_reconstructed": true,
+  "inherited_identity_replayed": true,
+  "inherited_integer_coefficient_checks": 14179,
+  "homogeneous_identity": "c3*delta0^2 = sum((Qj_hom/D)*Gj_at_c2_zero)",
+  "homogeneous_identity_weight": 115,
+  "multiplier_term_counts": [
+    953,
+    978,
+    1021,
+    1059,
+    1113,
+    1155,
+    844
+  ],
+  "max_c3_powers": [
+    16,
+    16,
+    16,
+    16,
+    15,
+    17,
+    16
+  ],
+  "normalized_multiplier_norm_ceilings": [
+    176823586823806294,
+    92887536927113605,
+    3237750745050101,
+    1394954539924851,
+    2797508295198019,
+    1828065565034479,
+    105249344800273370
+  ],
+  "rational_constant_checks": {
+    "cauchy_coefficient_checks": [
+      {
+        "coefficient": 4,
+        "radius_squared": "7/8",
+        "bound_squared": "2401/16"
+      },
+      {
+        "coefficient": 5,
+        "radius_squared": "21/40",
+        "bound_squared": "8605184/84375"
+      },
+      {
+        "coefficient": 6,
+        "radius_squared": "7/24",
+        "bound_squared": "117649/2916"
+      },
+      {
+        "coefficient": 7,
+        "radius_squared": "1/8",
+        "bound_squared": "8"
+      }
+    ],
+    "sylvester_row_norm_squares": [
+      "2319105175580809/7644119040000",
+      "1041530053/291600",
+      "105532169/3645"
+    ],
+    "delta_lipschitz": "122252797839605760000000",
+    "R0_coefficient_lipschitz": "8118796666134110587074569664",
+    "Rt_coefficient_lipschitz": "303610503196991138601791213568",
+    "primitive_generator_lipschitz": [
+      "75902625799247784650447803392",
+      "22798933465875602342251179312",
+      "29124152282479584396455162928",
+      "12532376974706264551458939048",
+      "5505051299903059408191228618",
+      "2498813254134838748249534007",
+      "2029699166533527646768642416"
+    ],
+    "generator_difference_budget_K": "15884483087846583302295882540108599686266223599",
+    "near_case_ratio_bound": "77151930562686263144959130866935848210852/823543",
+    "far_case_ratio_bound": "149148413364319027200000/823543",
+    "force_one_p2_over_p3_lower_bound": "1/10^36",
+    "stronger_1_over_10_to_35_not_certified_by_this_majorant": true
+  },
+  "scope": "True stationary configurations in the inherited ellipse, with Delta_w >= 4^28*7^7; no orbit-distance assumption.",
+  "full_eight_point_exclusion_proved": false,
+  "all_nonzero_moment_stationary_points_excluded": false,
+  "complete_stationary_classification_replayed": false
+}
