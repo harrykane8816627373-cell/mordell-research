@@ -11,7 +11,7 @@ python -B -S -O scripts/verify_current.py
 此入口核对当前导航的本地链接，将两组固定输入复制到临时目录，再运行：
 
 - `power-moment/verify_all.py`：四个旧精确入口，包含代数、结构、参考谱及11个目标盒。
-- `eight-point/verify_all.py`：新管域、自由尺度消除、目标间隙常数、非空见证和三组错误参数拒绝；重新构造参考点实际力与完整谱。
+- `eight-point/verify_all.py`：两个精确入口：保留首阶段管域，另验证四倍欧氏半径、五倍矩管域、距离 Laplacian 谱、36个 Parseval 内积、两类新见证及共六组错误参数拒绝。
 
 仓库文件不因重放而更新计时。两个程序都明确保留 `full_eight_point_exclusion_proved=false`，这表示完整八点覆盖尚未证明。
 
@@ -21,7 +21,7 @@ python -B -S -O scripts/verify_current.py
 python -B -S -O eight-point/verify_all.py
 ```
 
-[最新离线包](../eight-point/mordell-eight-point-2026-11-01.zip)解压后也使用这条命令。固定输入由 `eight-point/source_manifest.json` 约束；包内报告应当与重新计算结果完全相同。可用 `eight-point/build_package.py` 从已固定输入确定性重建 ZIP。
+[最新离线包](../eight-point/mordell-eight-point-energy-2026-11-01.zip)解压后也使用这条命令。固定输入由 `eight-point/source_manifest.json` 约束；包内报告应当与重新计算结果完全相同。可用 `eight-point/build_package.py` 从已固定输入确定性重建最新能量 ZIP；首阶段 ZIP 保持原字节。
 
 ## 既有一般 n 的累计检查
 

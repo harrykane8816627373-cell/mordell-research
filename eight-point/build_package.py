@@ -28,8 +28,9 @@ def build(output):
         'Mordell eight-point research, 2026-11-01.\n'
         'From this extracted directory run:\n'
         'python -B -S -O eight-point/verify_all.py\n'
-        'Read eight-point/MOMENT_TUBE.md for the analytic proof.\n'
-        'The p7-free tube is certified; the complete eight-point sharp bound remains open.\n'
+        'Read eight-point/ENERGY_BASIN.md for the new analytic proof and MOMENT_TUBE.md for the prior smaller tube.\n'
+        'The fivefold p7-free tube and radius-1/5 objective basin are certified; the complete eight-point sharp bound remains open.\n'
+        'This does not classify all stationary shapes in the larger basin.\n'
         'Only the current proof and its required legacy dependencies are included.\n'
     ).encode('utf-8')
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -46,5 +47,5 @@ def build(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=HERE/'mordell-eight-point-2026-11-01.zip')
+    parser.add_argument('--output', type=Path, default=HERE/'mordell-eight-point-energy-2026-11-01.zip')
     print(json.dumps(build(parser.parse_args().output), indent=2))

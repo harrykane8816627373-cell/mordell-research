@@ -8,7 +8,7 @@
 
 |专题|作用及其边界|
 |---|---|
-|[当前八点攻关](../eight-point/README.md)|2026-11-01：不额外限制 p₇ 的旋转不变管域，直接目标值间隙与六类剩余条件；全域仍开放|
+|[当前八点攻关](../eight-point/README.md)|2026-11-01第二阶段：直接对数余项给 d≤1/5 的排除；Parseval 根估计将六矩门槛提高五倍，p₇ 无额外限制；全域仍开放|
 |[有限幂和](../power-moment/README.md)|2026-10-31：Newton 闭合、Hankel 目标、稀疏结构、旧局部刚性与11盒；旧局部盒已包含于新管域|
 |[驻点闭合与空洞](../stationary-screening/README.md)|驻点混合矩、八点必要椭圆、完整 Gram 与背景边界覆盖|
 |[完整八点 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)|历史零矩、共圆、反射等分类和大型精确对象；各分类保留驻点、稳定性或几何前提|
@@ -45,7 +45,7 @@
 
 ## 下载与历史追溯
 
-各专题首页链接自己的离线 ZIP、固定字节清单和实际运行报告。最新[八点包](../eight-point/mordell-eight-point-2026-11-01.zip)包含新证明及重建参考稳定谱所需的原始代码；它不是全部研究资料的替代品。
+各专题首页链接自己的离线 ZIP、固定字节清单和实际运行报告。最新[八点包](../eight-point/mordell-eight-point-energy-2026-11-01.zip)包含新能量证明、两阶段管域及重建参考谱所需代码；它不是全部研究资料的替代品。
 
 完整八点历史附件 **mordell-research-complete-2026-10-27.zip** 位于[研究 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)，大小103026838字节，SHA-256：
 

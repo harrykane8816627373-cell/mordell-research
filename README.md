@@ -19,24 +19,25 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 最新八点进展：消去 p₇ 限制的完整管域排除
+## 最新八点进展：直接对数余项与五倍矩管域
 
-取力1尺度 w=√(7/2)z、p_k=Σw_i^k。对中心化、Σ|w_i|²=28的八点构型，若
-
-```math
-|p_2|\le1/10,\quad |p_3|\le1/5,\quad |p_4|\le2/5,\quad
-|p_5|\le4/5,\quad |p_6|\le8/5,\quad |p_8|\le32/5,
-```
-
-则到“原点加半径2正七边形”轨道的距离 d<1/20，并且
+取力1尺度 w=√(7/2)z、p_k=Σw_i^k。d 为到“原点加半径2正七边形”全部旋转、重排轨道的欧氏距离。对 Σ|w_i|²=28 的八点构型，已证明
 
 ```math
-\log\frac{\Delta_w}{4^{28}7^7}\le-\frac{d^2}{35}.
+d\le\frac15\quad\Longrightarrow\quad
+\log\frac{\Delta_w}{4^{28}7^7}\le-\frac{d^2}{30}.
 ```
 
-这六个条件旋转不变，**无须另设 p₇ 条件**。整个区域内只有候选轨道能达到候选值；真实驻点也只能是候选。新区域严格包含此前全矩半径1/10的局部盒，另有精确非空见证。[完整证明与常数复核](eight-point/MOMENT_TUBE.md)
+目标值排除的欧氏半径从1/20扩大到1/5。进一步，中心化构型只要满足
 
-管域外的六类矩条件及旧11盒之外，仍未完成真实逐点力方程、完整稳定性和目标阈值的联合穷尽。[剩余清单](eight-point/OPEN_BRANCHES.md)明确保留这个缺口。
+```math
+|p_2|\le1/2,\quad |p_3|\le1,\quad |p_4|\le2,\quad
+|p_5|\le4,\quad |p_6|\le8,\quad |p_8|\le32,
+```
+
+就必有 d²<3/100，进入上述排除区域。六个模长门槛都是上一管域的**五倍**，仍**无须另设 p₇ 条件**。证明联合实际距离 Laplacian 的完整谱、对数展开余项和 Fourier–Parseval 根误差估计。[完整证明与精确报告](eight-point/ENERGY_BASIN.md)
+
+整个区域内只有候选轨道能达到候选值；这里不据此宣称较大区域内所有真实驻点都只能是候选。管域之外的[六类剩余条件](eight-point/OPEN_BRANCHES.md)及完整物理系统的联合穷尽仍未完成。
 
 ## 主要成果与边界
 
@@ -59,7 +60,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 python -B -S -O scripts/verify_current.py
 ```
 
-[最新八点离线包](eight-point/mordell-eight-point-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
+[最新八点离线包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
 
 程序认证精确算术、有限盒及所列常数；解析和几何桥梁仍需阅读证明。浮点搜索、小残差、有限目录和验证通过不能代替全域覆盖。没有外部同行评审、整篇形式化证明或全球优先权声明；仓库未指定许可证。
 

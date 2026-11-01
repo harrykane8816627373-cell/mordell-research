@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
-  "parent_commit": "c954da2b1e4a1dbdb9ea698cb9902eeffc85fdfc",
-  "scope": "Current tube proof and required pinned legacy dependencies. Own manifest and generated ZIP excluded. Historical code unchanged.",
+  "parent_commit": "d1558d4b4c72722ec7f239f1252cd6b9e049123d",
+  "scope": "Two-stage p7-free tube proofs, direct logarithmic objective basin, exact reports and required pinned legacy dependencies. Own manifest and ZIP files excluded. Every previously published ZIP remains unchanged.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -10,8 +10,23 @@
     },
     {
       "path": "eight-point/build_package.py",
-      "bytes": 2286,
-      "sha256": "fbc4cfa1edf0f73979e3cf589f336fb2073bfd3f6803e8489d698c048ab77d2a"
+      "bytes": 2463,
+      "sha256": "5cecf6b8229d80dacdb55bfeea01803f8d966fe05863030d698fb798b7f17855"
+    },
+    {
+      "path": "eight-point/ENERGY_BASIN.md",
+      "bytes": 8111,
+      "sha256": "ded23db8a7100c0301d2a78501a9cf29f0efd27ead567dd605058a1bd156e0c1"
+    },
+    {
+      "path": "eight-point/energy_basin_verification.json",
+      "bytes": 4953,
+      "sha256": "ce5a926b428889e468751998baeae62e3401b95150a1a4526e83471cea018996"
+    },
+    {
+      "path": "eight-point/energy_witnesses.json",
+      "bytes": 1650,
+      "sha256": "1d4610bfe3c6a16c29cc5e3c317b6f117051e2001085efe1f4ce6481bda435b0"
     },
     {
       "path": "eight-point/MOMENT_TUBE.md",
@@ -20,18 +35,18 @@
     },
     {
       "path": "eight-point/OPEN_BRANCHES.md",
-      "bytes": 1685,
-      "sha256": "6def7b6dcc741c0bc8501236fd2147ca0c4866f376814626e5dad3e882cfc0a3"
+      "bytes": 1879,
+      "sha256": "c04dd50872cde74de54ded0c2129582e8cc1edbcfdffb6fdacc1c8ac7130ce63"
     },
     {
       "path": "eight-point/PROVENANCE.json",
-      "bytes": 1980,
-      "sha256": "ff4ff06dd264a8d80d313bbc256a1ea9fea5a67b790c2740e7bc760ed69c5cb4"
+      "bytes": 2584,
+      "sha256": "9805ddf97e7620238b393f91d2b6999c1ca05e21e72700ef1610a65e3bf2b18a"
     },
     {
       "path": "eight-point/README.md",
-      "bytes": 2188,
-      "sha256": "8e2ed70299e7a3b8d043f330789a14a76b21bc76567573514f37ac29e20cff2a"
+      "bytes": 2857,
+      "sha256": "f90fc284e621755f0432e9a54898aa99e3c959051e7820aa88d7d5f8a05bccaa"
     },
     {
       "path": "eight-point/tube_verification.json",
@@ -40,8 +55,13 @@
     },
     {
       "path": "eight-point/verify_all.py",
-      "bytes": 2701,
-      "sha256": "d5fc235ec32f7b8b7449b8bfed7a66374eb8e0e3846e75f85d01e80c7aeeec27"
+      "bytes": 3281,
+      "sha256": "5f89565c2c564ad98d0fbad6b0de16d934529c02329ac8e1180610ec3a1df109"
+    },
+    {
+      "path": "eight-point/verify_energy_basin.py",
+      "bytes": 12820,
+      "sha256": "f70886028a9f7ba77a0d068cb475748e6bf2923a65c215a01f28f926b1653d69"
     },
     {
       "path": "eight-point/verify_tube.py",

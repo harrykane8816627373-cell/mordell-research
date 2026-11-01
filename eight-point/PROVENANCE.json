@@ -2,7 +2,7 @@
   "date": "2026-11-01",
   "research_initiator": "蒋丰灿 (Fengcan Jiang)",
   "collaboration": "OpenAI Codex",
-  "parent_commit": "c954da2b1e4a1dbdb9ea698cb9902eeffc85fdfc",
+  "parent_commit": "d1558d4b4c72722ec7f239f1252cd6b9e049123d",
   "full_eight_point_exclusion_proved": false,
   "inherited": [
     "Author stationary equations, inverse-square stability operator and power-coordinate framework.",
@@ -10,13 +10,17 @@
     "Classical Newton identities, Rouche theorem, Hessian integration and Cauchy-Schwarz. No global priority claim."
   ],
   "current_contributions": [
-    "A rotation-invariant six-modulus tube, with no extra p7 condition, strictly contains the prior uniform radius-1/10 local power box.",
-    "Normalization eliminates the free c7 radial scale after root matching; the equal-norm identity avoids an unnecessary factor two.",
-    "An edgewise Laplacian norm estimate enlarges the Euclidean convexity ball to 1/20 with a certified Hessian gap 1/35.",
-    "A direct quantitative objective deficit log(Delta/T)<=-distance_to_candidate_orbit_squared/35, without a stationarity assumption.",
-    "A nonempty rationally specified normalized nonzero-p2,p3 witness lies outside every rotation of the old box; direct exact product and force-residual checks are independent corroboration."
+    "An exact positive squared-distance Laplacian spectrum, with operator norm 2, reconstructed from actual cyclotomic pair differences.",
+    "Direct logarithmic remainder control certifies log(Delta/T)<=-d^2/30 on the entire normalized orbit-distance ball d<=1/5, increasing the previously certified Euclidean radius fourfold.",
+    "One small root improves the free c7 radial scale; exact Fourier-Parseval cancellation and an absorbed root-equation remainder give d^2<3/100 from the six new caps.",
+    "All six moment-modulus caps are multiplied by five (epsilon=1/8 instead of 1/40), without adding a p7 condition.",
+    "A rationally specified normalized tube witness is outside every rotation of the previous tube, passes all 246 inherited strict subset conditions and the old low-moment ellipse, and has an explicitly nonzero force residual.",
+    "A separate geometric witness is inside the larger objective basin but outside every rotation/relabeling of the old radius-1/20 basin. Exact pair products independently corroborate both witnesses."
   ],
-  "acceptance": "Python standard library, Fraction arithmetic, actual legacy force/spectrum reconstruction, three rejected unsafe parameter mutations, pinned bytes and fresh extracted deterministic replay. Checks remain active under -O.",
+  "acceptance": "Two standard-library exact entries; pinned bytes; actual force/stability and positive Laplacian spectra; 36 exact Parseval column inner products; rational inequalities; two new witnesses and the prior witness; six total rejected unsafe parameter cases; fresh extracted deterministic replay under -O.",
   "review": "Derived and checked by one Codex research agent. No independent-agent review, external peer review or complete formalization claimed.",
-  "remaining_gap": "The complement of the tube and legacy excluded regions has not been exhaustively covered. Its six overlapping moment alternatives are recorded in OPEN_BRANCHES.md."
+  "remaining_gap": "No exhaustive exclusion of the complement with d>1/5 and at least one of six modulus caps exceeded. The larger objective basin does not by itself classify all stationary shapes.",
+  "phase": "direct-log-energy-and-Parseval",
+  "previous_phase_parent_commit": "c954da2b1e4a1dbdb9ea698cb9902eeffc85fdfc",
+  "full_stationary_uniqueness_in_larger_basin_proved": false
 }

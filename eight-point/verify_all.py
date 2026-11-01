@@ -38,22 +38,30 @@ def main():
             dest = stage/name
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT/name, dest)
-        result = subprocess.run(
-            [sys.executable, '-X', 'int_max_str_digits=0', '-B', '-S', '-O',
-             str(stage/'eight-point/verify_tube.py')], cwd=stage, env=env,
-            capture_output=True, text=True, encoding='utf-8', timeout=120)
-        require(result.returncode == 0, result.stdout[-2000:]+result.stderr[-3000:])
-        actual = json.loads((stage/'eight-point/tube_verification.json').read_text(encoding='utf-8'))
-        expected = json.loads((HERE/'tube_verification.json').read_text(encoding='utf-8'))
-        require(actual == expected and actual['passed'] is True, 'deterministic exact report')
-        require(actual['full_eight_point_exclusion_proved'] is False, 'incomplete global coverage')
-        require(actual['tube_certificate']['p7_restricted'] is False, 'p7-free scope')
+        entries = [('verify_tube.py', 'tube_verification.json', 'tube_certificate'),
+                   ('verify_energy_basin.py', 'energy_basin_verification.json', 'larger_tube_certificate')]
+        for script, report, key in entries:
+            result = subprocess.run(
+                [sys.executable, '-X', 'int_max_str_digits=0', '-B', '-S', '-O',
+                 str(stage/'eight-point'/script)], cwd=stage, env=env,
+                capture_output=True, text=True, encoding='utf-8', timeout=120)
+            require(result.returncode == 0, result.stdout[-2000:]+result.stderr[-3000:])
+            actual = json.loads((stage/'eight-point'/report).read_text(encoding='utf-8'))
+            expected = json.loads((HERE/report).read_text(encoding='utf-8'))
+            require(actual == expected and actual['passed'] is True, 'deterministic exact report '+report)
+            require(actual['full_eight_point_exclusion_proved'] is False, 'incomplete global coverage')
+            require(actual[key]['p7_restricted'] is False, 'p7-free scope')
+            if key == 'larger_tube_certificate':
+                require(actual['full_stationary_uniqueness_in_larger_basin_proved'] is False,
+                        'objective exclusion is not complete stationary uniqueness')
+            print(result.stdout.strip(), flush=True)
         provenance = json.loads((HERE/'PROVENANCE.json').read_text(encoding='utf-8'))
         require(provenance['full_eight_point_exclusion_proved'] is False, 'provenance coverage boundary')
-        print(result.stdout.strip())
     print(json.dumps({'passed': True, 'fixed_inputs': len(paths),
         'legacy_actual_forces_and_complete_spectrum_recomputed': True,
-        'new_p7_free_tube_certified': True, 'unsafe_parameter_rejections': 3,
+        'exact_entries': 2, 'fivefold_p7_free_tube_certified': True,
+        'direct_objective_basin_radius': '1/5', 'log_product_gap': '1/30',
+        'unsafe_parameter_rejections': 6,
         'full_eight_point_exclusion_proved': False}, indent=2))
 
 
