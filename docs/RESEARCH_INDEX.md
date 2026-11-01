@@ -9,6 +9,7 @@
 |专题|作用及其边界|
 |---|---|
 |[当前八点攻关](../eight-point/README.md)|2026-11-01第二阶段：直接对数余项给 d≤1/5 的排除；Parseval 根估计将六矩门槛提高五倍，p₇ 无额外限制；全域仍开放|
+|[旧椭圆与当前完整归约](EIGHT_POINT_REDUCTION.md)|三个尺度的准确换算；椭圆内的 p₂p₃≠0 分支仍是攻关对象，新门槛继续与全部旧约束取交集|
 |[有限幂和](../power-moment/README.md)|2026-10-31：Newton 闭合、Hankel 目标、稀疏结构、旧局部刚性与11盒；旧局部盒已包含于新管域|
 |[驻点闭合与空洞](../stationary-screening/README.md)|驻点混合矩、八点必要椭圆、完整 Gram 与背景边界覆盖|
 |[完整八点 Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)|历史零矩、共圆、反射等分类和大型精确对象；各分类保留驻点、稳定性或几何前提|
