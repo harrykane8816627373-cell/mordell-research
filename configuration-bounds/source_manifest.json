@@ -100,9 +100,9 @@
     },
     {
       "path": "PROOF_STATUS.md",
-      "bytes": 16465,
-      "sha256": "adc3f91fa7c40835f0aaacdc9fb624a7a7a1388ddb5250a1e37806d2bec46952",
-      "git_blob_sha": "13df086a98ff686cb3351e7d33903295338a0621"
+      "bytes": 12765,
+      "sha256": "8f0e1dfd222737fc8b7042d710e609ec08c1ceb66b700672abd82832328b033d",
+      "git_blob_sha": "504620a73c52ac6d3f77812eb8b89a65f2090b86"
     },
     {
       "path": "PROVENANCE.json",
@@ -211,5 +211,6 @@
     "mordell-configuration-bounds-2026-10-28.zip",
     "source_manifest.json",
     "verification_report.json"
-  ]
+  ],
+  "current_web_status_updated": "2026-11-01; only PROOF_STATUS.md changed; historical ZIP files remain unchanged."
 }

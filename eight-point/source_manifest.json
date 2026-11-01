@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-01",
+  "parent_commit": "c954da2b1e4a1dbdb9ea698cb9902eeffc85fdfc",
+  "scope": "Current tube proof and required pinned legacy dependencies. Own manifest and generated ZIP excluded. Historical code unchanged.",
+  "files": [
+    {
+      "path": "eight-point/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "eight-point/build_package.py",
+      "bytes": 2286,
+      "sha256": "fbc4cfa1edf0f73979e3cf589f336fb2073bfd3f6803e8489d698c048ab77d2a"
+    },
+    {
+      "path": "eight-point/MOMENT_TUBE.md",
+      "bytes": 6635,
+      "sha256": "549d1a45b712bbd0397c9208cbe6483de189b765e5dbf538410c8fcb2e682bce"
+    },
+    {
+      "path": "eight-point/OPEN_BRANCHES.md",
+      "bytes": 1685,
+      "sha256": "6def7b6dcc741c0bc8501236fd2147ca0c4866f376814626e5dad3e882cfc0a3"
+    },
+    {
+      "path": "eight-point/PROVENANCE.json",
+      "bytes": 1980,
+      "sha256": "ff4ff06dd264a8d80d313bbc256a1ea9fea5a67b790c2740e7bc760ed69c5cb4"
+    },
+    {
+      "path": "eight-point/README.md",
+      "bytes": 2189,
+      "sha256": "d5281927259a3a2607d91006a740c28ea12b3fab17ec11acd87cf495307608e2"
+    },
+    {
+      "path": "eight-point/tube_verification.json",
+      "bytes": 3395,
+      "sha256": "eb465a51584a8be1923321dcd7220befb407469867f8f433a752d6ff9a836ee0"
+    },
+    {
+      "path": "eight-point/verify_all.py",
+      "bytes": 2701,
+      "sha256": "d5fc235ec32f7b8b7449b8bfed7a66374eb8e0e3846e75f85d01e80c7aeeec27"
+    },
+    {
+      "path": "eight-point/verify_tube.py",
+      "bytes": 7160,
+      "sha256": "756e4a6bfba06fbbc7228d11c8ff7ef704cede40997a3474d37dbef18a8ebf75"
+    },
+    {
+      "path": "eight-point/witness.json",
+      "bytes": 844,
+      "sha256": "e3d53eebff2b0661f92f86827eadafbb022ad6f25160709302f59eed58069ae1"
+    },
+    {
+      "path": "power-moment/acceptance.py",
+      "bytes": 781,
+      "sha256": "2070db158d8c90790dbc7916fc16d01d33f4021214801e2941bb3026fc082602"
+    },
+    {
+      "path": "power-moment/complex_interval.py",
+      "bytes": 4257,
+      "sha256": "2d12da286fcab02a5a5ce0d99ac43b46ccbb04efdc8cea9acd14887c0f5c0f07"
+    },
+    {
+      "path": "power-moment/LOCAL_RIGIDITY.md",
+      "bytes": 4033,
+      "sha256": "3e8498db03e8999d1d6cebf80d663e195de29402b53a1e2bc6601858f8e13f4b"
+    },
+    {
+      "path": "power-moment/verify_isolation.py",
+      "bytes": 5819,
+      "sha256": "d17910c1e7622b8949c35938f891d32e9cd0efdb1b98b26a19a463e776220ed6"
+    },
+    {
+      "path": "power-moment/witnesses.py",
+      "bytes": 861,
+      "sha256": "d273fdfb1f2deeab97f74ea080fcd86e66d44552cca462ace8e44d0e6e0e0831"
+    }
+  ]
+}
