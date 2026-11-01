@@ -265,6 +265,108 @@ def vertex_checks():
         'maximum_vertices_per_physical_box':512,'floating_point_acceptance':False}
 
 
+def centered_checks():
+    E.setup(40)
+    cases,feasible_records=0,0
+    for index in range(8):
+        weights=[(2*i+j+index+1)*E.S//(11+index) for i,j in E.PAIRS]
+        intervals=[((-3+(i%3))*E.S//5,(1+(i%4))*E.S//7) for i in range(8)]
+        if index%2:
+            intervals[0]=(0,0)
+        if index==6:
+            intervals=[(v*E.S,v*E.S) for v in [-1,1,0,0,0,0,0,0]]
+        if index==7:
+            intervals=[(-E.S,E.S)]+[(0,0)]*7
+        rows=[0]*8
+        matrix=[[0]*8 for _ in range(8)]
+        for (i,j),w in zip(E.PAIRS,weights):
+            rows[i]+=w
+            rows[j]+=w
+            matrix[i][j]=matrix[j][i]=w
+        active=[i for i,(lo,hi) in enumerate(intervals) if lo!=hi]
+        limit=min((rows[i]+rows[j]+2*matrix[i][j])//2
+            for i in active for j in active if i<j) if len(active)>1 else 4*E.S
+        etas=sorted(set([-E.S,0,min(4*E.S,limit),limit]))
+        actual=R.centered_slice_max(intervals,weights,etas)
+        expected=[None]*len(etas)
+        count=0
+        free_choices=active or [None]
+        for free in free_choices:
+            indices=[i for i in range(8) if i!=free]
+            choices=[(intervals[i][0],) if intervals[i][0]==intervals[i][1] else intervals[i] for i in indices]
+            for values in product(*choices):
+                x=[0]*8
+                for i,v in zip(indices,values):
+                    x[i]=v
+                if free is not None:
+                    x[free]=-sum(values)
+                if any(not lo<=v<=hi for v,(lo,hi) in zip(x,intervals)) or sum(x)!=0:
+                    continue
+                count+=1
+                graph=sum(w*(x[i]-x[j])**2 for (i,j),w in zip(E.PAIRS,weights))
+                mass=sum(v*v for v in x)
+                for k,eta in enumerate(etas):
+                    value=graph-eta*mass
+                    expected[k]=value if expected[k] is None else max(expected[k],value)
+        need(actual is not None and actual['upper']==[-(-v//(E.S*E.S)) for v in expected],
+             'centered Gray-code updates equal independent sliced Cartesian enumeration')
+        need(actual['feasible_vertex_records']==count,'all feasible sliced vertex records accounted for')
+        feasible_records+=count
+        cases+=1
+    need(R.centered_slice_max([(E.S,2*E.S)]*8,[E.S]*28,[0]) is None,
+         'an empty centroid slice never produces a numeric target bound')
+    try:
+        R.centered_slice_max([(-E.S,E.S)]*2+[(0,0)]*6,[E.S]*28,[9*E.S])
+    except ValueError:
+        invalid_rejected=True
+    else:
+        raise ArithmeticError('unsafe exchange multiplier accepted')
+    # At eta=9 for the unit complete graph, Q(t,-t,0,...,0)=-2*t^2.
+    # The midpoint value 0 exceeds the two boundary values -2.
+    def unsafe_value(t):
+        x=[F(t),-F(t)]+[F(0)]*6
+        return sum((x[i]-x[j])**2 for i,j in E.PAIRS)-9*sum(v*v for v in x)
+    need(unsafe_value(0)==0 and unsafe_value(1)==unsafe_value(-1)==-2
+        and unsafe_value(0)>max(unsafe_value(1),unsafe_value(-1)),
+        'interior counterexample if exchange convexity were omitted')
+    q=[C(1),C(-1),C(0,1),C(0,-1),C(1,F(1,2)),C(-1,-F(1,2)),C(F(1,2)),C(-F(1,2))]
+    values=[q[0].re]+[v for z in q[1:7] for v in [z.re,z.im]]
+    center=[int(v*E.S) for v in values]
+    box=[E.point(v) for v in center]
+    qbox=E.positions(box)
+    bound=R.centered_target_upper(box,qbox,E.model()['radius'],center)
+    lower,upper=exact_log_product(q)
+    need(bound is not None and lower<=F(bound['log_Delta_over_target_upper'],E.S)<upper+F(1,10**6),
+         'mass-seven physical point has a tight direct-log bound at its own reference center')
+    c=[2*z for z in q]
+    graph=sum((q[i]-q[j]).norm()/(c[i]-c[j]).norm() for i,j in E.PAIRS)
+    for eta in [F(-3,2),F(0),F(4),F(17,3)]:
+        need(7*eta+graph-eta*sum(z.norm() for z in q)==graph,
+             'arbitrary exact mass multiplier leaves the physical global bound unchanged')
+    line=[C(v) for v in [F(6,5),F(-6,5),F(9,10),F(-9,10),F(1),F(-1),F(1,2),F(-1,2)]]
+    values=[line[0].re]+[v for z in line[1:7] for v in [z.re,z.im]]
+    center=[round(v*E.S) for v in values]
+    radius=E.S//12
+    box=[(v-radius,v+radius) for v in center]
+    cp=E.positions([E.point(v) for v in center])
+    qbox=[((z[0][0]-radius,z[0][0]+radius),(z[1][0]-radius,z[1][0]+radius)) for z in cp]
+    qbox[0]=box[0],E.ZERO
+    centered=R.centered_target_upper(box,qbox,E.model()['radius'],center)
+    old=R.vertex_target_upper(box,qbox,E.model()['radius'],center)
+    need(centered is not None and old is not None
+        and centered['log_Delta_over_target_upper']<old['log_Delta_over_target_upper']<0,
+        'physical wide box improves after retaining centroid and mass multiplier')
+    direct,_=exact_log_product(line)
+    need(direct<=F(centered['log_Delta_over_target_upper'],E.S),'independent exact product in the centered wide box')
+    return {'sliced_Cartesian_enumeration_cases':cases,'independent_feasible_vertex_records':feasible_records,
+        'unsafe_exchange_multiplier_rejected':invalid_rejected,
+        'interior_counterexample_without_exchange_condition':True,'mass_multiplier_identity_cases':4,
+        'nonempty_actual_wide_box_radius':str(F(radius,E.S)),
+        'centered_wide_box_log_upper':str(F(centered['log_Delta_over_target_upper'],E.S)),
+        'previous_vertex_wide_box_log_upper':str(F(old['log_Delta_over_target_upper'],E.S)),
+        'floating_point_acceptance':False}
+
+
 def guard_checks():
     base = json.loads(gzip.decompress((ROOT/'joint-closure/certificates/partial_cover.json.gz').read_bytes()))
     nodes = [{'kind':'unknown'} for _ in base['pending']]
@@ -280,7 +382,7 @@ def guard_checks():
             path.write_bytes(gzip.compress(json.dumps(data).encode(),mtime=0))
         save(toy)
         need(check(path,False)['unresolved_regions']==21,'initial frontier remains unresolved')
-        for kind in range(7):
+        for kind in range(8):
             altered=json.loads(json.dumps(toy))
             if kind==0:
                 altered['roots'].pop()
@@ -295,9 +397,12 @@ def guard_checks():
                 altered['pending'].pop(0)
                 altered['nodes'][0]={'kind':'excluded','reason':'mass_quadratic_log',
                     'algorithm':99 if kind==4 else 2}
-            else:
+            elif kind==6:
                 altered['pending'].pop(0)
                 altered['nodes'][0]={'kind':'excluded','reason':'mass_quadratic_vertices','algorithm':3}
+            else:
+                altered['pending'].pop(0)
+                altered['nodes'][0]={'kind':'excluded','reason':'mass_centered_quadratic','algorithm':4}
             save(altered)
             try:
                 check(path,False)
@@ -305,7 +410,7 @@ def guard_checks():
                 rejected+=1
             else:
                 raise ArithmeticError('invalid frontier accounting or unjustified Taylor exclusion accepted')
-    need(rejected==7,'all seven false-proof variants rejected')
+    need(rejected==8,'all eight false-proof variants rejected')
     return {'initial_21_regions_preserved':True,'false_proof_variants_rejected':rejected}
 
 
@@ -314,4 +419,5 @@ if __name__=='__main__':
         'logarithm_arithmetic':logarithm_checks(),'Taylor_arithmetic':Taylor_checks(),
         'global_quadratic_arithmetic':quadratic_checks(),
         'quadratic_vertex_arithmetic':vertex_checks(),
+        'centered_mass_slice_arithmetic':centered_checks(),
         'coverage_guards':guard_checks(),'full_eight_point_exclusion_proved':False},indent=2))

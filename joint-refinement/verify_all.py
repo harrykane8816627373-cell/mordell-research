@@ -52,7 +52,7 @@ def main():
 
         def run(script, *arguments):
             result = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/script), *arguments],
-                cwd=stage, env=env, stdout=subprocess.PIPE, text=True, encoding='utf-8', timeout=1200)
+                cwd=stage, env=env, stdout=subprocess.PIPE, text=True, encoding='utf-8', timeout=2400)
             need(result.returncode == 0, script+': '+result.stdout[-3000:])
             return result.stdout
 
@@ -85,6 +85,7 @@ def main():
         'quadratic_with_legacy_midpoint_Taylor_unavailable': cover['quadratic_with_legacy_midpoint_Taylor_unavailable'],
         'vertex_excluded_leaves':cover['vertex_excluded_leaves'],
         'vertex_with_legacy_midpoint_Taylor_unavailable':cover['vertex_with_legacy_midpoint_Taylor_unavailable'],
+        'centered_excluded_leaves':cover['centered_excluded_leaves'],
         'unresolved_regions': cover['unresolved_regions'],
         'complete_cover': False, 'full_eight_point_exclusion_proved': False}, indent=2))
 

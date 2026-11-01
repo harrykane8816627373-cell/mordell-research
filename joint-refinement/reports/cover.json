@@ -1,61 +1,76 @@
 {
   "passed": true,
   "base_certificate_sha256": "9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58",
-  "continuation_sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde",
+  "continuation_sha256": "b6a892f0011ba33db0085e3b57dd2ee4b52853daa4b49196a3711b5a506b4e6c",
   "precision_bits": 40,
   "scope": "global_maximum",
   "base_open_regions_accounted_for": 21,
-  "continuation_nodes": 230019,
+  "continuation_nodes": 250017,
   "continuation_counts": {
-    "ellipse_covariance": 1344,
-    "force_sign": 12856,
+    "ellipse_covariance": 1346,
+    "force_sign": 13263,
     "mass": 605,
+    "mass_centered_quadratic": 3789,
     "mass_log_Taylor": 1553,
-    "mass_or_radius": 4640,
-    "mass_quadratic_log": 12531,
-    "mass_quadratic_vertices": 7321,
-    "maximum_radius": 564,
-    "old_ellipse": 5272,
-    "ordered_separation": 20197,
-    "ordering": 959,
-    "polynomial_Ward_1": 2841,
-    "separation": 7951,
-    "split": 114999,
-    "stationarity": 1461,
-    "strict_subset": 34906,
-    "unresolved": 19
+    "mass_or_radius": 4826,
+    "mass_quadratic_log": 12659,
+    "mass_quadratic_vertices": 9214,
+    "maximum_radius": 1397,
+    "old_ellipse": 5366,
+    "ordered_separation": 21198,
+    "ordering": 969,
+    "polynomial_Ward_1": 2857,
+    "separation": 8984,
+    "split": 124998,
+    "stationarity": 1466,
+    "strict_subset": 35510,
+    "unresolved": 17
   },
   "processed_node_algorithms": {
     "1": 100000,
     "2": 100000,
-    "3": 30000
+    "3": 30000,
+    "4": 20000
   },
-  "combined_tree_nodes": 290019,
-  "combined_excluded_leaves": 144991,
-  "unresolved_regions": 19,
+  "combined_tree_nodes": 310017,
+  "combined_excluded_leaves": 154992,
+  "unresolved_regions": 17,
   "new_Taylor_excluded_leaves": 1553,
   "Taylor_center_counts": {
     "midpoint": 1553
   },
   "largest_Taylor_upper_endpoint": -190264859,
   "largest_Taylor_log_upper": "-190264859/1099511627776",
-  "quadratic_excluded_leaves": 12531,
+  "quadratic_excluded_leaves": 12659,
   "quadratic_center_counts": {
-    "midpoint": 12531
+    "midpoint": 12659
   },
   "quadratic_bound_schemes": {
     "equal/separable": 22,
-    "radius/centered_linear": 6123,
-    "radius/separable": 6386
+    "radius/centered_linear": 6214,
+    "radius/separable": 6423
   },
   "quadratic_with_legacy_midpoint_Taylor_unavailable": 3,
   "largest_quadratic_log_upper": "-1583967/1099511627776",
-  "vertex_excluded_leaves": 7321,
+  "vertex_excluded_leaves": 9214,
   "vertex_center_counts": {
-    "midpoint": 7321
+    "midpoint": 9214
   },
-  "vertex_with_legacy_midpoint_Taylor_unavailable": 28,
+  "vertex_with_legacy_midpoint_Taylor_unavailable": 33,
   "largest_vertex_log_upper": "-6448017/549755813888",
+  "centered_excluded_leaves": 3789,
+  "centered_center_counts": {
+    "midpoint": 3789
+  },
+  "centered_multiplier_choice_counts": {
+    "1": 204,
+    "2": 3585
+  },
+  "centered_mass_multiplier_range": [
+    "1010203177697/274877906944",
+    "6344373684967/1099511627776"
+  ],
+  "largest_centered_log_upper": "-23464635/549755813888",
   "complete_cover": false,
   "full_eight_point_exclusion_proved": false
 }

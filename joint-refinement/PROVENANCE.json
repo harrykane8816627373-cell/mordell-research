@@ -2,19 +2,23 @@
   "date": "2026-11-01",
   "research_initiator": "蒋丰灿 (Fengcan Jiang)",
   "collaboration": "OpenAI Codex",
-  "parent_commit": "b469f04f26bd3848fceaa9b1e83d86d89853f422",
+  "parent_commit": "fae69e9d3e8a3d67bc7d1d46c2825f6a25f70e7a",
   "base_cover_sha256": "9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58",
-  "prior_continuation_sha256": "68327112b23153212f4196fadb43b5e9ee04fd0ec4a3d7641fc388dc25ecd9ed",
-  "continuation_sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde",
-  "prior_processed_nodes_preserved": 100000,
-  "added_processed_nodes": 130000,
-  "total_continuation_processed_nodes": 230000,
-  "new_global_quadratic_excluded_leaves": 12531,
-  "new_vertex_excluded_leaves": 7321,
-  "combined_tree_nodes": 290019,
-  "combined_excluded_leaves": 144991,
-  "unresolved_coordinate_regions": 19,
-  "coverage_scope": "Hypothetical non-candidate global maxima, retaining inherited global-only cuts. Open regions are continuous and some remain wide.",
+  "prior_continuation_sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde",
+  "continuation_sha256": "b6a892f0011ba33db0085e3b57dd2ee4b52853daa4b49196a3711b5a506b4e6c",
+  "prior_processed_nodes_preserved": 230000,
+  "added_processed_nodes": 20000,
+  "processed_node_algorithms": {
+    "2": 100000,
+    "1": 100000,
+    "4": 20000,
+    "3": 30000
+  },
+  "new_centered_excluded_leaves": 3789,
+  "combined_tree_nodes": 310017,
+  "combined_excluded_leaves": 154992,
+  "unresolved_coordinate_regions": 17,
+  "coverage_scope": "Hypothetical non-candidate global maxima, retaining inherited global-only cuts; open coordinate regions may remain wide.",
   "reference_centers_are_assumed_stationary": false,
   "reference_center_list_is_complete": false,
   "acceptance_requires_floating_point": false,
@@ -23,17 +27,16 @@
   "full_formalization": false,
   "full_eight_point_exclusion_proved": false,
   "prior_entries_replayed": 20,
-  "new_exact_entries_replayed": 2,
-  "global_quadratic_with_legacy_midpoint_Taylor_unavailable": 3,
-  "vertex_with_legacy_midpoint_Taylor_unavailable": 28,
-  "global_quadratic_center_counts": {
-    "midpoint": 12531
-  },
-  "vertex_center_counts": {
-    "midpoint": 7321
-  },
+  "current_exact_entries_replayed": 2,
   "prior_frontier_summary_checked": true,
-  "prior_open_regions_closed": 14,
-  "prior_open_regions_unclosed": 5,
-  "open_descendants_of_unclosed_regions": 19
+  "prior_open_regions_closed": 6,
+  "prior_open_regions_unclosed": 13,
+  "open_descendants_of_unclosed_regions": 17,
+  "centered_center_counts": {
+    "midpoint": 3789
+  },
+  "centered_mass_multiplier_range": [
+    "1010203177697/274877906944",
+    "6344373684967/1099511627776"
+  ]
 }

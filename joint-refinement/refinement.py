@@ -251,8 +251,118 @@ def vertex_target_upper(box,qbox,radius,midpoint=None):
         'negative_diagonal_clips':clipped}
 
 
+def centered_slice_max(intervals,weights,multipliers):
+    """Maximize exchange-convex quadratic majorants on sum(x)=0 sliced boxes."""
+    if len(intervals)!=8 or len(weights)!=28 or not multipliers:
+        raise ValueError('eight intervals, 28 weights and at least one multiplier')
+    if any(type(v) is not int or v<0 for v in weights):
+        raise ValueError('nonnegative integer-grid edge weights')
+    if any(type(v) is not int for v in multipliers) or any(lo>hi for lo,hi in intervals):
+        raise ValueError('exact multipliers and ordered intervals')
+    if sum(v[0] for v in intervals)>0 or sum(v[1] for v in intervals)<0:
+        return None
+    matrix=[[0]*8 for _ in range(8)]
+    for (i,j),w in zip(E.PAIRS,weights):
+        matrix[i][i]+=w
+        matrix[j][j]+=w
+        matrix[i][j]=matrix[j][i]=-w
+    active=[i for i,(lo,hi) in enumerate(intervals) if lo!=hi]
+    for eta in multipliers:
+        if any(matrix[i][i]+matrix[j][j]-2*matrix[i][j]-2*eta<0
+            for i in active for j in active if i<j):
+            raise ValueError('exchange convexity is required for vertex acceptance')
+    best=[None]*len(multipliers)
+    tested,feasible=0,0
+
+    def record(x,value,mass):
+        nonlocal tested,feasible
+        tested+=1
+        if any(not lo<=v<=hi for v,(lo,hi) in zip(x,intervals)):
+            return
+        feasible+=1
+        for k,eta in enumerate(multipliers):
+            score=value-eta*mass
+            best[k]=score if best[k] is None else max(best[k],score)
+
+    if not active:
+        x=[v[0] for v in intervals]
+        value=sum(w*(x[i]-x[j])**2 for (i,j),w in zip(E.PAIRS,weights))
+        record(x,value,sum(v*v for v in x))
+    for free in active:
+        other=[i for i in active if i!=free]
+        x=[v[0] for v in intervals]
+        x[free]=-sum(x[i] for i in range(8) if i!=free)
+        state=[0]*8
+        row=[sum(matrix[i][j]*x[j] for j in range(8)) for i in range(8)]
+        value=sum(w*(x[i]-x[j])**2 for (i,j),w in zip(E.PAIRS,weights))
+        mass=sum(v*v for v in x)
+        record(x,value,mass)
+        for step in range(1,1 << len(other)):
+            k=other[(step & -step).bit_length()-1]
+            next_state=1-state[k]
+            change=intervals[k][next_state]-x[k]
+            curvature=matrix[k][k]+matrix[free][free]-2*matrix[k][free]
+            value+=2*change*(row[k]-row[free])+change*change*curvature
+            mass+=2*change*(x[k]-x[free])+2*change*change
+            x[k]+=change
+            x[free]-=change
+            state[k]=next_state
+            for j in range(8):
+                row[j]+=change*(matrix[j][k]-matrix[j][free])
+            record(x,value,mass)
+    if feasible==0:
+        return None
+    return {'upper':[-(-v//(E.S*E.S)) for v in best],
+        'vertex_records_checked':tested,'feasible_vertex_records':feasible}
+
+
+def centered_target_upper(box,qbox,radius,midpoint=None):
+    """Global log bound retaining exact centroid slices and a mass multiplier."""
+    if midpoint is None:
+        midpoint,_=E.slab_center(box,radius,qbox[7])
+    if len(midpoint)!=13 or not all(type(v) is int for v in midpoint):
+        raise ValueError('exact rational reference center')
+    center=E.positions([E.point(v) for v in midpoint])
+    product,weights=1,[]
+    for i,j in E.PAIRS:
+        dx=center[i][0][0]-center[j][0][0]
+        dy=center[i][1][0]-center[j][1][0]
+        squared=dx*dx+dy*dy
+        if not squared:
+            return None
+        product*=squared
+        weights.append(E.rat(E.S**2,squared)[1])
+    rows=[0]*8
+    matrix=[[0]*8 for _ in range(8)]
+    for (i,j),w in zip(E.PAIRS,weights):
+        rows[i]+=w
+        rows[j]+=w
+        matrix[i][j]=matrix[j][i]=w
+    pairs=set()
+    for component in [0,1]:
+        active=[i for i in range(8) if qbox[i][component][0]!=qbox[i][component][1]]
+        pairs.update((i,j) for i in active for j in active if i<j)
+    limit=min((rows[i]+rows[j]+2*matrix[i][j])//2 for i,j in pairs) if pairs else 4*E.S
+    multipliers=sorted(set([min(4*E.S,limit),limit]))
+    results=[]
+    for component in [0,1]:
+        result=centered_slice_max([v[component] for v in qbox],weights,multipliers)
+        if result is None:
+            return None
+        results.append(result)
+    constant=log_ratio(product,7**7*E.S**56)[1]-28*E.S
+    candidates=[constant+7*eta+results[0]['upper'][k]+results[1]['upper'][k]
+        for k,eta in enumerate(multipliers)]
+    chosen=min(range(len(candidates)),key=lambda k:candidates[k])
+    return {'log_Delta_over_target_upper':candidates[chosen],
+        'mass_multiplier':multipliers[chosen], 'exchange_convexity_limit':limit,
+        'mass_multiplier_choices':len(multipliers),
+        'vertex_records_checked':sum(v['vertex_records_checked'] for v in results),
+        'feasible_vertex_records':sum(v['feasible_vertex_records'] for v in results)}
+
+
 def contract(box, settings, passes=5, algorithm=1):
-    if type(algorithm) is not int or algorithm not in [1, 2, 3]:
+    if type(algorithm) is not int or algorithm not in [1, 2, 3, 4]:
         raise ValueError('supported exact exclusion algorithm')
     box, reason, aux = _contract_v1(box, settings, passes)
     if box is None or algorithm == 1:
@@ -284,4 +394,15 @@ def contract(box, settings, passes=5, algorithm=1):
             upper['center_source']='reference_'+str(index)
             upper['legacy_midpoint_Taylor_defined']=target_log_upper(box,aux[0],settings['radius']) is not None
             return None,'mass_quadratic_vertices',upper
+    if algorithm == 3:
+        return box,None,aux
+    upper=centered_target_upper(box,aux[0],settings['radius'])
+    if upper is not None and upper['log_Delta_over_target_upper']<0:
+        upper['center_source']='midpoint'
+        return None,'mass_centered_quadratic',upper
+    for index,center in nearest:
+        upper=centered_target_upper(box,aux[0],settings['radius'],center)
+        if upper is not None and upper['log_Delta_over_target_upper']<0:
+            upper['center_source']='reference_'+str(index)
+            return None,'mass_centered_quadratic',upper
     return box, None, aux

@@ -52,12 +52,15 @@ def check(path, replay_base=True, progress=False):
     quadratic_without_local_Taylor = 0
     vertex_bounds,vertex_centers=[],Counter()
     vertex_without_local_Taylor=0
+    centered_bounds,centered_centers=[],Counter()
+    centered_multiplier_choices=Counter()
+    centered_mass_multipliers=[]
     while stack:
         index, original = stack.pop()
         need(type(index) is int and 0 <= index < len(nodes) and index not in seen,
             'forest without shared or unreachable branches')
         seen.add(index)
-        if progress and len(seen)%20000==0:
+        if progress and len(seen)%5000==0:
             print('Replayed continuation nodes:',len(seen),'of',len(nodes),flush=True,file=sys.stderr)
         node = nodes[index]
         if node['kind'] == 'unknown':
@@ -66,7 +69,7 @@ def check(path, replay_base=True, progress=False):
             continue
         need(index not in pending, 'processed node is not marked pending')
         algorithm = node.get('algorithm', 1)
-        need(type(algorithm) is int and algorithm in [1,2,3], 'supported node algorithm')
+        need(type(algorithm) is int and algorithm in [1,2,3,4], 'supported node algorithm')
         algorithms[algorithm] += 1
         box, reason, aux = R.contract(original, settings, passes=5, algorithm=algorithm)
         if node['kind'] == 'excluded':
@@ -84,6 +87,11 @@ def check(path, replay_base=True, progress=False):
                 vertex_bounds.append(aux['log_Delta_over_target_upper'])
                 vertex_centers[aux['center_source']] += 1
                 vertex_without_local_Taylor += not aux['legacy_midpoint_Taylor_defined']
+            if reason == 'mass_centered_quadratic':
+                centered_bounds.append(aux['log_Delta_over_target_upper'])
+                centered_centers[aux['center_source']]+=1
+                centered_multiplier_choices[str(aux['mass_multiplier_choices'])]+=1
+                centered_mass_multipliers.append(aux['mass_multiplier'])
         elif node['kind'] == 'split':
             need(box is not None, 'partition follows sound contractions')
             dim, cut = node['dim'], node['cut']
@@ -122,6 +130,12 @@ def check(path, replay_base=True, progress=False):
         'vertex_center_counts':dict(sorted(vertex_centers.items())),
         'vertex_with_legacy_midpoint_Taylor_unavailable':vertex_without_local_Taylor,
         'largest_vertex_log_upper':str(Fraction(max(vertex_bounds),E.S)) if vertex_bounds else None,
+        'centered_excluded_leaves':len(centered_bounds),
+        'centered_center_counts':dict(sorted(centered_centers.items())),
+        'centered_multiplier_choice_counts':dict(sorted(centered_multiplier_choices.items())),
+        'centered_mass_multiplier_range':[str(Fraction(min(centered_mass_multipliers),E.S)),
+            str(Fraction(max(centered_mass_multipliers),E.S))] if centered_mass_multipliers else None,
+        'largest_centered_log_upper':str(Fraction(max(centered_bounds),E.S)) if centered_bounds else None,
         'complete_cover': complete, 'full_eight_point_exclusion_proved': complete}
 
 

@@ -18,7 +18,7 @@ def main():
     p.add_argument('--nodes', type=int, default=10000)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--resume', type=Path)
-    p.add_argument('--algorithm', type=int, choices=[1, 2, 3], default=3)
+    p.add_argument('--algorithm', type=int, choices=[1, 2, 3, 4], default=4)
     args = p.parse_args()
     source = BASE.read_bytes()
     if hashlib.sha256(source).hexdigest() != R.BASE_SHA256:

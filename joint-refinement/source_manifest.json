@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
-  "base_commit": "b469f04f26bd3848fceaa9b1e83d86d89853f422",
-  "purpose": "Pinned actual-coordinate rotation, Taylor, global quadratic and vertex certificates; complete exclusion remains unproved.",
+  "base_commit": "fae69e9d3e8a3d67bc7d1d46c2825f6a25f70e7a",
+  "purpose": "Pinned actual-coordinate centered mass-slice, quadratic, vertex and inherited partial-cover proofs.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -184,39 +184,44 @@
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
     {
+      "path": "joint-refinement/CENTERED_MASS.md",
+      "bytes": 6562,
+      "sha256": "15b9c0ad8bd3b5fbfe466cf6a7aa551fe2b0427a48ea2a42833bde4a74923f04"
+    },
+    {
       "path": "joint-refinement/GLOBAL_QUADRATIC.md",
-      "bytes": 7210,
-      "sha256": "e7024eb877188ac0ab59a6d94c872520d9ba0a39c6055a16c225aaa3e19a9694"
+      "bytes": 7355,
+      "sha256": "6394528c4c174eb464f840a8c921d84f891a5c9a0b3f45bf0f9f15a05440c497"
     },
     {
       "path": "joint-refinement/PROVENANCE.json",
-      "bytes": 1754,
-      "sha256": "dacb1e36150d765665aac8a5eb32c72c0cac84c3b46f64a089fffc2ce852867e"
+      "bytes": 1686,
+      "sha256": "7f29f66523b5dd8ab53ad975f17a6c398ae9aab8e96e7b1ce9ab0d32b90d43be"
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 9451,
-      "sha256": "3c536fc079d9ba12469d14b9ce0853472833d244d839911d9b0de0f3ead4d9b9"
+      "bytes": 9649,
+      "sha256": "4b5455dca65271f7de43511511b6597c8f5c787ca9c0bf1ea77bb323b911676e"
     },
     {
       "path": "joint-refinement/certificates/continuation.json.gz",
-      "bytes": 1056175,
-      "sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde"
+      "bytes": 1138271,
+      "sha256": "b6a892f0011ba33db0085e3b57dd2ee4b52853daa4b49196a3711b5a506b4e6c"
     },
     {
       "path": "joint-refinement/certificates/prior_frontier.json",
-      "bytes": 18671,
-      "sha256": "de24b2823efdc3baa08787506f98d008fb5c81e2430d59e3ab4e8e8b3502260c"
+      "bytes": 18577,
+      "sha256": "94df46c86f0e2ab79832385d4649047a6f1e4e30905fac39ce7fc75d1534f109"
     },
     {
       "path": "joint-refinement/check.py",
-      "bytes": 7308,
-      "sha256": "1363aba3acf38f20033c277819fc7180c685b83071211e75bd5435375dba0589"
+      "bytes": 8304,
+      "sha256": "74660f97e906e42f5668746fe95edf1f3ad5cd70ba7b57ecc5715cb7109f1a88"
     },
     {
       "path": "joint-refinement/propose.py",
-      "bytes": 3556,
-      "sha256": "b2564f1d00b1bd3a2d848858a1026f0713db729e1edf8beefdff539f3bc6fe45"
+      "bytes": 3559,
+      "sha256": "aa183fb5eb0692570a03eddf8a42efb288cf4b1b12622471bd36effacae80c9b"
     },
     {
       "path": "joint-refinement/reference_centers.json",
@@ -225,23 +230,23 @@
     },
     {
       "path": "joint-refinement/refinement.py",
-      "bytes": 12661,
-      "sha256": "37de9dfbeda2abf700e6eea63ff0052fb716e0c85a39fe76e245050500ae2f36"
+      "bytes": 18077,
+      "sha256": "62873331298421a76e0aa4375727270467168c3818fd418826ae3f8c0d3d3489"
     },
     {
       "path": "joint-refinement/reports/arithmetic.json",
-      "bytes": 2010,
-      "sha256": "61f0b33eefa01c5ec1ae5cb176755092196ae267787a8d67d926c7e46e61dc53"
+      "bytes": 2556,
+      "sha256": "e61593c38feef2f60104f72db097c1b0d87206d08d4de641e6d4abcbcfbeb87c"
     },
     {
       "path": "joint-refinement/reports/cover.json",
-      "bytes": 1884,
-      "sha256": "ffe34bec1ff27c6b5f9f33aedfe6a801afae49f93ecdd0761e8425c641311a2d"
+      "bytes": 2288,
+      "sha256": "9c5042bb503764877fab4c2b3064cfd404fac9019c6b293d700f4b532fbc2751"
     },
     {
       "path": "joint-refinement/reports/frontier_progress.json",
-      "bytes": 3763,
-      "sha256": "345461be79670497fcdfb1f258184ff3b65217aec20f2b9d8660b929af4b530d"
+      "bytes": 3802,
+      "sha256": "197afd1a8fbfcada8b079cb797d9647dc6c743fe48564339928ab57f52150f27"
     },
     {
       "path": "joint-refinement/summarize_frontier.py",
@@ -250,13 +255,13 @@
     },
     {
       "path": "joint-refinement/verify.py",
-      "bytes": 15014,
-      "sha256": "4e02e80d933688e888bfe04f75b7c3f2605eebbc023f62c76763c97788528efe"
+      "bytes": 20663,
+      "sha256": "ab2dbb2d9f2e154b02afc4677fdd368a42fa82c20f667898017c4b714c503707"
     },
     {
       "path": "joint-refinement/verify_all.py",
-      "bytes": 4536,
-      "sha256": "65efd6d3dd9ff6b135d0deb354516e26558e626fcf3c1b03666cfebfc0276d8a"
+      "bytes": 4606,
+      "sha256": "afd2900d64dd68977c239fa8c6d8ef0fe352a53b6b73df3dd4a4c87ffcf532e3"
     },
     {
       "path": "power-moment/LOCAL_RIGIDITY.md",

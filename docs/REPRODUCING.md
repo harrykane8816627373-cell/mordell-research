@@ -39,9 +39,11 @@ python -B -S -O scripts/verify_current.py --refinement
 
 该命令包含旧联合覆盖，只重放一次旧覆盖树。新专题[证明与报告](../joint-refinement/README.md)明确保留未排空状态；历史离线包仍是当时的冻结快照。
 
-[全局二次证明](../joint-refinement/GLOBAL_QUADRATIC.md)给出150组标量二次极值核对、1152个独立 Cartesian 角点核对及实际非空大盒基准。新节点明确标记算法2或3，旧节点仍按算法1重放。仅核对输入哈希的 `--check-fixed-inputs` 会明确输出 `proof_replay_performed=false`，不能替代完整重放。
+[全局二次证明](../joint-refinement/GLOBAL_QUADRATIC.md)给出150组标量二次极值核对、1152个独立 Cartesian 角点核对及实际非空大盒基准。该阶段节点明确标记算法2或3，较早节点仍按算法1重放。仅核对输入哈希的 `--check-fixed-inputs` 会明确输出 `proof_replay_performed=false`，不能替代完整重放。
 
-完整覆盖通过后，`python -B -S -O joint-refinement/summarize_frontier.py` 可快速复核旧19盒中14个已关闭、其余5个留下19个开放后代；它重构旧快照哈希并核对后代计数，不重放区间算术。
+当前算法4继续加入[中心化切片与质量对偶](../joint-refinement/CENTERED_MASS.md)，核对8组切片、1208个可行顶点记录，以及违反交换凸性时的内部极大反例。各版本节点均按记录版本重放。
+
+完整覆盖通过后，`python -B -S -O joint-refinement/summarize_frontier.py` 可快速复核上一阶段各旧盒的关闭情况；它重构旧快照哈希并核对后代计数，不重放区间算术。旧提交中的历史计数按相应快照理解。
 
 基础入口默认不重复耗时较长的60021节点覆盖重放。加上新专题：
 

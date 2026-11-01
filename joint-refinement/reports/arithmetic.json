@@ -47,9 +47,20 @@
     "maximum_vertices_per_physical_box": 512,
     "floating_point_acceptance": false
   },
+  "centered_mass_slice_arithmetic": {
+    "sliced_Cartesian_enumeration_cases": 8,
+    "independent_feasible_vertex_records": 1208,
+    "unsafe_exchange_multiplier_rejected": true,
+    "interior_counterexample_without_exchange_condition": true,
+    "mass_multiplier_identity_cases": 4,
+    "nonempty_actual_wide_box_radius": "91625968981/1099511627776",
+    "centered_wide_box_log_upper": "-1174596422541/1099511627776",
+    "previous_vertex_wide_box_log_upper": "-16431790529/17179869184",
+    "floating_point_acceptance": false
+  },
   "coverage_guards": {
     "initial_21_regions_preserved": true,
-    "false_proof_variants_rejected": 7
+    "false_proof_variants_rejected": 8
   },
   "full_eight_point_exclusion_proved": false
 }
