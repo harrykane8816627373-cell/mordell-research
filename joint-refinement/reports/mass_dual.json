@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "projection_and_mass_lines": {
+    "independent_projection_cases": 7,
+    "independent_vertex_records": 255,
+    "non_grid_projection_mass": "8/7",
+    "upper_mass_rejection_example": "2",
+    "lower_mass_rejection_example": "50/7",
+    "floating_point_acceptance": false
+  },
+  "grid_envelope": {
+    "independent_upper_envelope_queries": 264,
+    "independent_grid_minimization_cases": 24,
+    "parameters_checked_per_scan_at_least": 93,
+    "floating_point_acceptance": false
+  },
+  "physical_box": {
+    "actual_center_and_mass_exact": true,
+    "whole_box_log_upper": "-3134983177319/1099511627776",
+    "previous_two_parameter_log_upper": "-1174596422541/1099511627776",
+    "parameter_candidates": 8,
+    "self_reference_point_tight": true,
+    "benchmark_is_a_remaining_stationary_branch": false
+  },
+  "coverage_guards": {
+    "false_exclusions_rejected": 2
+  },
+  "full_eight_point_exclusion_proved": false
+}

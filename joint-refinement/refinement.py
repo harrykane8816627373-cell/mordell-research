@@ -362,7 +362,7 @@ def centered_target_upper(box,qbox,radius,midpoint=None):
 
 
 def contract(box, settings, passes=5, algorithm=1):
-    if type(algorithm) is not int or algorithm not in [1, 2, 3, 4]:
+    if type(algorithm) is not int or algorithm not in [1, 2, 3, 4, 5]:
         raise ValueError('supported exact exclusion algorithm')
     box, reason, aux = _contract_v1(box, settings, passes)
     if box is None or algorithm == 1:
@@ -405,4 +405,22 @@ def contract(box, settings, passes=5, algorithm=1):
         if upper is not None and upper['log_Delta_over_target_upper']<0:
             upper['center_source']='reference_'+str(index)
             return None,'mass_centered_quadratic',upper
+    if algorithm==4:
+        return box,None,aux
+    from mass_dual import mass_range,target_upper
+    bounds=mass_range(aux[0])
+    if bounds is not None:
+        lower,upper_mass=bounds
+        if lower>7*E.S*E.S or upper_mass<7*E.S*E.S:
+            return None,'centered_mass_range',{'mass_range_side':'lower' if lower>7*E.S*E.S else 'upper',
+                'minimum_mass_raw':str(lower),'maximum_mass_raw':str(upper_mass)}
+    upper=target_upper(box,aux[0],settings['radius'])
+    if upper is not None and upper['log_Delta_over_target_upper']<0:
+        upper['center_source']='midpoint'
+        return None,'mass_envelope_log',upper
+    for index,center in nearest:
+        upper=target_upper(box,aux[0],settings['radius'],center)
+        if upper is not None and upper['log_Delta_over_target_upper']<0:
+            upper['center_source']='reference_'+str(index)
+            return None,'mass_envelope_log',upper
     return box, None, aux

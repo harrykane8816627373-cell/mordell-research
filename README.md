@@ -14,20 +14,20 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[中心化切片与质量对偶](joint-refinement/CENTERED_MASS.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
+|八点最新进展与准确剩余分支|[精确质量范围与参数包络](joint-refinement/MASS_DUAL_ENVELOPE.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 当前续算：中心化切片与质量对偶
+## 当前续算：精确质量范围与参数包络
 
 在实际质量7、无碰撞的八点上，完整实能量 Hessian 半正定已经强迫全部逐点驻点方程：旋转向量 iq 的二次型恒为0，而 H(iq)=ig，其中 g 为真实梯度。这一结论需要完整 Hessian；低阶主块不能替代。
 
-本轮在目标值二次子问题中精确保留坐标和为0，并用严格的质量对偶参数收紧上界。只有在交换方向凸性通过核对后，才枚举切片顶点；这一新筛选额外排除3789个传播后包围域，无需待检点驻定。
+本轮精确计算中心化盒能否达到质量7，并在交换凸性允许的参数网格上求质量对偶包络的最小值。旧筛选尚未直接排除后，参数包络新增排除197个叶盒，质量范围再排除5个。全部25万个已处理旧节点保留，新增1万个处理节点；20个必需旧入口与3个当前入口已完整重放。
 
-与旧树合并后有310017个节点、154992个排除叶，仍有17个连续开放区域，部分区域仍较宽。**完整排空仍未完成。** [新解析证明](joint-refinement/CENTERED_MASS.md) · [精确森林与复核](joint-refinement/README.md)
+与旧树合并后有320019个节点、159991个排除叶，仍有19个连续开放区域，部分区域仍较宽。**完整排空仍未完成。** [新解析证明](joint-refinement/MASS_DUAL_ENVELOPE.md) · [精确森林与复核](joint-refinement/README.md)
 
-按上一阶段快照追踪，原19个开放盒中6个已完整关闭；余下13个原区域细分后留下当前17个开放盒。[旧开放域进度](joint-refinement/reports/frontier_progress.json)给出坐标盒统计，完整问题仍然开放。
+按上一阶段快照追踪，原17个开放盒中5个已完整关闭；余下12个原区域细分后留下当前19个开放盒。[旧开放域进度](joint-refinement/reports/frontier_progress.json)核对全部旧节点、边界与后代，盒数不代表未解驻点数。
 
 ## 上一阶段：等价多项式矩阵与冻结覆盖
 

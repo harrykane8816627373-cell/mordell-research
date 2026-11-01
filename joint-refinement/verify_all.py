@@ -60,6 +60,7 @@ def main():
             run('joint-closure/verify_all.py')
             print('PASS 20 prior entries including the frozen 60021-node tree', flush=True)
         entries = [('verify.py', [], 'arithmetic.json'),
+            ('verify_mass_dual.py', [], 'mass_dual.json'),
             ('check.py', ['joint-refinement/certificates/continuation.json.gz', '--base-already-replayed','--progress'], 'cover.json')]
         results = {}
         for script, arguments, report in entries:
@@ -76,7 +77,7 @@ def main():
         (HERE/'reports').mkdir(exist_ok=True)
         for name, result in results.items():
             (HERE/'reports'/name).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps({'passed': True, 'new_exact_entries': 2,
+    print(json.dumps({'passed': True, 'new_exact_entries': 3,
         'prior_entries_replayed': 0 if args.prior_already_replayed else 20,
         'combined_tree_nodes': cover['combined_tree_nodes'],
         'combined_excluded_leaves': cover['combined_excluded_leaves'],
@@ -86,6 +87,8 @@ def main():
         'vertex_excluded_leaves':cover['vertex_excluded_leaves'],
         'vertex_with_legacy_midpoint_Taylor_unavailable':cover['vertex_with_legacy_midpoint_Taylor_unavailable'],
         'centered_excluded_leaves':cover['centered_excluded_leaves'],
+        'mass_range_excluded_leaves':cover['mass_range_excluded_leaves'],
+        'envelope_excluded_leaves':cover['envelope_excluded_leaves'],
         'unresolved_regions': cover['unresolved_regions'],
         'complete_cover': False, 'full_eight_point_exclusion_proved': False}, indent=2))
 

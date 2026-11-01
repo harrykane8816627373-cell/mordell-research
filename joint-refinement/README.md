@@ -1,16 +1,16 @@
-# 八点联合续算：中心化切片、质量对偶与严格覆盖
+# 八点联合续算：精确质量范围、参数包络与严格覆盖
 
 2026-11-01。研究发起：蒋丰灿（Fengcan Jiang）；OpenAI Codex 协作。
 
 **完整排空仍未完成。** 本专题从[上一轮覆盖](../joint-closure/README.md)的21个开放坐标盒继续；最终节点、排除叶与开放盒数量以[精确重放报告](reports/cover.json)为准。开放盒是有限计算截断留下的连续区域，有些仍然很宽，不是驻点分类，也不代表离全域排空只差相应数目的孤立解。
 
-本专题保留旋转饱和、局部 Taylor、[全局二次与角点上包](GLOBAL_QUADRATIC.md)。本轮新增[精确中心化切片与质量对偶上界](CENTERED_MASS.md)，在目标值子问题中保留坐标和为0，并核对交换方向凸性后枚举切片顶点。旧 `joint-closure` 证书与历史离线包保持原字节；上一阶段的快照可从[提交 fae69e9](https://github.com/harrykane8816627373-cell/mordell-research/tree/fae69e9d3e8a3d67bc7d1d46c2825f6a25f70e7a/joint-refinement)追溯。
+本专题保留旋转饱和、局部 Taylor、[全局二次与角点上包](GLOBAL_QUADRATIC.md)和[中心化切片](CENTERED_MASS.md)。本轮新增[精确质量范围与参数包络](MASS_DUAL_ENVELOPE.md)：先精确求中心化盒的最小、最大质量，再求固定参考图在合法参数网格上的最小对偶上界。旧 `joint-closure` 证书与历史离线包保持原字节。
 
-当前固定输入已在临时副本完整重放通过，含20个必需旧入口、2个当前入口。当前森林累计250000个处理节点：算法1为100000、算法2为100000、算法3为30000、算法4为20000；另有17个开放节点。与原树合并后为310017个节点、154992个排除叶、17个开放叶。新中心化筛选产生3789次额外排除；接受状态及完整细分计数见报告。这些计数不等于全域覆盖比例。
+当前固定输入已在临时副本完整重放通过，含20个必需旧入口、3个当前入口。森林累计260000个处理节点：算法1为100000、算法2为100000、算法3为30000、算法4为20000、算法5为10000；另有19个开放节点。与原树合并后为320019个节点、159991个排除叶、19个开放叶。算法5新增197次包络排除、5次精确质量范围排除，均在旧算法1至4尚未直接排除后生效。这些计数不等于全域覆盖比例。
 
-上一阶段的23万处理节点与290019节点合并账本按 fae69e9 原提交保存；本轮保留全部23万个已处理旧节点，扩展其开放叶。更早的10万节点 Taylor 阶段可从[提交 b469f04](https://github.com/harrykane8816627373-cell/mordell-research/tree/b469f04f26bd3848fceaa9b1e83d86d89853f422/joint-refinement)追溯。
+本轮保留[2f25467快照](https://github.com/harrykane8816627373-cell/mordell-research/tree/2f25467a6fb67fd816fac156ef81f73c92182ff4/joint-refinement)全部25万个已处理旧节点，只扩展其开放叶。该快照合并310017节点、154992排除叶、17个开放盒。更早的二次与角点阶段见[fae69e9](https://github.com/harrykane8816627373-cell/mordell-research/tree/fae69e9d3e8a3d67bc7d1d46c2825f6a25f70e7a/joint-refinement)，Taylor 阶段见[b469f04](https://github.com/harrykane8816627373-cell/mordell-research/tree/b469f04f26bd3848fceaa9b1e83d86d89853f422/joint-refinement)。
 
-[旧开放域汇总](reports/frontier_progress.json)精确重构 fae69e9 快照后确认：其19个开放盒中，6个已连同全部后代关闭；余下13个原区域细分后，留下当前17个开放盒。当前仍有较宽的开放盒；盒数比较不表示驻点分类或体积覆盖比例。上一阶段“关闭14个旧盒”的历史报告保留在 fae69e9 提交中。
+[旧开放域汇总](reports/frontier_progress.json)精确重构2f25467快照后确认：其17个开放盒中，5个已连同全部后代关闭；余下12个原区域细分后，留下当前19个开放盒。盒数增加来自细分，不能用来判断未解孤立驻点的增减。部分区域仍较宽；各历史阶段的旧盒关闭数按对应快照理解。
 
 ## 1. 质量恰为7时，完整 Hessian PSD 已强迫驻点
 
@@ -128,7 +128,7 @@ log2 也用同一严格公式。全部运算在2⁻⁴⁰整数网格向外取�
 9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58
 ~~~
 
-森林的21个根与原21个开放盒逐一对应。每个节点先做五轮既有保解传播，再按节点记录的算法版本尝试目标值上界；否则对最长坐标区间作精确二分。算法2加入全局二次上界，算法3加入角点上包，算法4继续保留中心化切片和质量对偶参数。新版本仅在旧筛选尚未排除后尝试新方法。所有排除与分裂均由独立接受入口重新计算。
+森林的21个根与原21个开放盒逐一对应。每个节点先做五轮既有保解传播，再按节点记录的算法版本尝试目标值上界；否则对最长坐标区间作精确二分。算法2加入全局二次上界，算法3加入角点上包，算法4继续保留中心化切片和质量对偶参数，算法5加入精确质量范围和参数包络。新版本仅在旧筛选尚未排除后尝试新方法。所有排除与分裂均由独立接受入口重新计算。
 
 前一阶段608次 Taylor 排除的最大对数目标值上端为 −190264859/1099511627776。当前各方法的严格上端在报告中分别记录。排除发生在既有联合约束传播后的实际坐标包围域上；原输入盒内被传播删去的点使用相应旧必要条件。目标值定理本身按其前提适用于传播后的质量7包围域。
 
@@ -150,7 +150,7 @@ python -B -S -O joint-refinement/verify_all.py
 python -B -S -O joint-refinement/check.py joint-refinement/certificates/continuation.json.gz
 ~~~
 
-在完整覆盖报告已经通过后，可快速复核上一阶段19个盒的关闭情况：
+在完整覆盖报告已经通过后，可快速复核上一阶段17个盒的关闭情况：
 
 ~~~bash
 python -B -S -O joint-refinement/summarize_frontier.py
@@ -161,7 +161,7 @@ python -B -S -O joint-refinement/summarize_frontier.py
 接受与生成均只需标准库。继续生成下一批：
 
 ~~~bash
-python -B -S -O joint-refinement/propose.py --nodes 100000 --algorithm 4 --resume joint-refinement/certificates/continuation.json.gz --output PATH_TO_NEXT.json.gz
+python -B -S -O joint-refinement/propose.py --nodes 100000 --algorithm 5 --resume joint-refinement/certificates/continuation.json.gz --output PATH_TO_NEXT.json.gz
 ~~~
 
 本专题不会覆盖写回旧 `joint-closure` 固定字节。历史部分覆盖离线包仍是当时的21盒快照；本轮新证书与代码以当前专题为准。一般解析量词由本文证明承担；有限算术及森林覆盖由程序重放。没有外部同行评审或整篇形式化证明。

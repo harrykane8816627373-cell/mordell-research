@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
-  "base_commit": "fae69e9d3e8a3d67bc7d1d46c2825f6a25f70e7a",
-  "purpose": "Pinned actual-coordinate centered mass-slice, quadratic, vertex and inherited partial-cover proofs.",
+  "base_commit": "2f25467a6fb67fd816fac156ef81f73c92182ff4",
+  "purpose": "Pinned exact centered normalization ranges, grid-dual envelopes and inherited partial-cover proofs.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -185,8 +185,8 @@
     },
     {
       "path": "joint-refinement/CENTERED_MASS.md",
-      "bytes": 6562,
-      "sha256": "15b9c0ad8bd3b5fbfe466cf6a7aa551fe2b0427a48ea2a42833bde4a74923f04"
+      "bytes": 6887,
+      "sha256": "7f451343d3e2b0d63a280aad626360a9fffac6be0082e65497c1d1c488f5614a"
     },
     {
       "path": "joint-refinement/GLOBAL_QUADRATIC.md",
@@ -194,34 +194,44 @@
       "sha256": "6394528c4c174eb464f840a8c921d84f891a5c9a0b3f45bf0f9f15a05440c497"
     },
     {
+      "path": "joint-refinement/MASS_DUAL_ENVELOPE.md",
+      "bytes": 7667,
+      "sha256": "626dcd9adc4370794e04c5945eeb3ec0299fa075dc4169f1a7a8a9cdf5743663"
+    },
+    {
       "path": "joint-refinement/PROVENANCE.json",
-      "bytes": 1686,
-      "sha256": "7f29f66523b5dd8ab53ad975f17a6c398ae9aab8e96e7b1ce9ab0d32b90d43be"
+      "bytes": 2459,
+      "sha256": "aeed1a45db00eb2392c7500f8573ecb14ff9be11d407922a8a962cca2d19432f"
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 9649,
-      "sha256": "4b5455dca65271f7de43511511b6597c8f5c787ca9c0bf1ea77bb323b911676e"
+      "bytes": 9853,
+      "sha256": "dea72d5d24a99efa6f28e637fc68a640c6cc9cc1b1d0be400570195afd6a53a6"
     },
     {
       "path": "joint-refinement/certificates/continuation.json.gz",
-      "bytes": 1138271,
-      "sha256": "b6a892f0011ba33db0085e3b57dd2ee4b52853daa4b49196a3711b5a506b4e6c"
+      "bytes": 1179847,
+      "sha256": "20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e"
     },
     {
       "path": "joint-refinement/certificates/prior_frontier.json",
-      "bytes": 18577,
-      "sha256": "94df46c86f0e2ab79832385d4649047a6f1e4e30905fac39ce7fc75d1534f109"
+      "bytes": 16656,
+      "sha256": "e46d559375c9668db596bb744745ca0f6c619e04568b0be614e686ecee7e2768"
     },
     {
       "path": "joint-refinement/check.py",
-      "bytes": 8304,
-      "sha256": "74660f97e906e42f5668746fe95edf1f3ad5cd70ba7b57ecc5715cb7109f1a88"
+      "bytes": 9556,
+      "sha256": "6248913101506d746d5cd7d45a17075776b9c79737e356e7fec45434bf05af38"
+    },
+    {
+      "path": "joint-refinement/mass_dual.py",
+      "bytes": 7666,
+      "sha256": "b40895aa3717ae1b29c923a99505276d48297ad27e9bca1f3486169ef5d90061"
     },
     {
       "path": "joint-refinement/propose.py",
-      "bytes": 3559,
-      "sha256": "aa183fb5eb0692570a03eddf8a42efb288cf4b1b12622471bd36effacae80c9b"
+      "bytes": 3562,
+      "sha256": "5afdd108bf1ed9f1a8317db88d3f2b04220c41d0f8895c750d403c2c8a6d6701"
     },
     {
       "path": "joint-refinement/reference_centers.json",
@@ -230,8 +240,8 @@
     },
     {
       "path": "joint-refinement/refinement.py",
-      "bytes": 18077,
-      "sha256": "62873331298421a76e0aa4375727270467168c3818fd418826ae3f8c0d3d3489"
+      "bytes": 18999,
+      "sha256": "103e4f9d62f47480fb92cad2cb9e2cf6893bf4bb226e435e829ec360a964606f"
     },
     {
       "path": "joint-refinement/reports/arithmetic.json",
@@ -240,13 +250,18 @@
     },
     {
       "path": "joint-refinement/reports/cover.json",
-      "bytes": 2288,
-      "sha256": "9c5042bb503764877fab4c2b3064cfd404fac9019c6b293d700f4b532fbc2751"
+      "bytes": 2791,
+      "sha256": "9a4cf735fbd0b096d85ba7b9716802aa561d34fe6d2822a818e514b2fc5e45a1"
     },
     {
       "path": "joint-refinement/reports/frontier_progress.json",
-      "bytes": 3802,
-      "sha256": "197afd1a8fbfcada8b079cb797d9647dc6c743fe48564339928ab57f52150f27"
+      "bytes": 3537,
+      "sha256": "fe566764fe9de62f8cf96e1e0f1ad767273cb75705a5e130647475fbb0bfd748"
+    },
+    {
+      "path": "joint-refinement/reports/mass_dual.json",
+      "bytes": 970,
+      "sha256": "e1c2fa77a5fde7e3c77183841883d12263f696f555173bd45eeded308d8d4c37"
     },
     {
       "path": "joint-refinement/summarize_frontier.py",
@@ -260,8 +275,13 @@
     },
     {
       "path": "joint-refinement/verify_all.py",
-      "bytes": 4606,
-      "sha256": "afd2900d64dd68977c239fa8c6d8ef0fe352a53b6b73df3dd4a4c87ffcf532e3"
+      "bytes": 4809,
+      "sha256": "630222a6d67726cbce720f660ed3b91cd79285267922835a64f32b0344e28eeb"
+    },
+    {
+      "path": "joint-refinement/verify_mass_dual.py",
+      "bytes": 9724,
+      "sha256": "1db83d2338050240e919f45b6b2bc558257ffbdd5e204334ad17ca5303973c73"
     },
     {
       "path": "power-moment/LOCAL_RIGIDITY.md",

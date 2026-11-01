@@ -25,7 +25,7 @@ python -B -S -O radial-gap/verify_all.py
 
 ## 联合物理系统与部分覆盖
 
-当前完整续算入口包含20个必需旧入口、旋转饱和与严格对数算术、全局二次与角点上包核对，以及全部版本节点的逐项重放：
+当前完整续算入口包含20个必需旧入口、旋转饱和与严格对数算术、全局二次与角点上包核对、精确中心化质量范围与参数包络，以及全部版本节点的逐项重放，共3个当前入口：
 
 ~~~bash
 python -B -S -O joint-refinement/verify_all.py
@@ -41,7 +41,9 @@ python -B -S -O scripts/verify_current.py --refinement
 
 [全局二次证明](../joint-refinement/GLOBAL_QUADRATIC.md)给出150组标量二次极值核对、1152个独立 Cartesian 角点核对及实际非空大盒基准。该阶段节点明确标记算法2或3，较早节点仍按算法1重放。仅核对输入哈希的 `--check-fixed-inputs` 会明确输出 `proof_replay_performed=false`，不能替代完整重放。
 
-当前算法4继续加入[中心化切片与质量对偶](../joint-refinement/CENTERED_MASS.md)，核对8组切片、1208个可行顶点记录，以及违反交换凸性时的内部极大反例。各版本节点均按记录版本重放。
+算法4继续加入[中心化切片与质量对偶](../joint-refinement/CENTERED_MASS.md)，核对8组切片、1208个可行顶点记录，以及违反交换凸性时的内部极大反例。各版本节点均按记录版本重放。
+
+当前算法5加入[精确质量范围与参数包络](../joint-refinement/MASS_DUAL_ENVELOPE.md)，以独立面枚举、255条 Cartesian 顶点记录、264个包络查询及24组穷举参数最小化核对新算术。森林仍逐节点按原算法版本重放。
 
 完整覆盖通过后，`python -B -S -O joint-refinement/summarize_frontier.py` 可快速复核上一阶段各旧盒的关闭情况；它重构旧快照哈希并核对后代计数，不重放区间算术。旧提交中的历史计数按相应快照理解。
 

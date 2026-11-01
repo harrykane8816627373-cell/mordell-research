@@ -55,6 +55,10 @@ def check(path, replay_base=True, progress=False):
     centered_bounds,centered_centers=[],Counter()
     centered_multiplier_choices=Counter()
     centered_mass_multipliers=[]
+    envelope_bounds,envelope_centers=[],Counter()
+    envelope_candidates=[]
+    envelope_multipliers=[]
+    mass_range_sides=Counter()
     while stack:
         index, original = stack.pop()
         need(type(index) is int and 0 <= index < len(nodes) and index not in seen,
@@ -69,7 +73,7 @@ def check(path, replay_base=True, progress=False):
             continue
         need(index not in pending, 'processed node is not marked pending')
         algorithm = node.get('algorithm', 1)
-        need(type(algorithm) is int and algorithm in [1,2,3,4], 'supported node algorithm')
+        need(type(algorithm) is int and algorithm in [1,2,3,4,5], 'supported node algorithm')
         algorithms[algorithm] += 1
         box, reason, aux = R.contract(original, settings, passes=5, algorithm=algorithm)
         if node['kind'] == 'excluded':
@@ -92,6 +96,13 @@ def check(path, replay_base=True, progress=False):
                 centered_centers[aux['center_source']]+=1
                 centered_multiplier_choices[str(aux['mass_multiplier_choices'])]+=1
                 centered_mass_multipliers.append(aux['mass_multiplier'])
+            if reason=='centered_mass_range':
+                mass_range_sides[aux['mass_range_side']]+=1
+            if reason=='mass_envelope_log':
+                envelope_bounds.append(aux['log_Delta_over_target_upper'])
+                envelope_centers[aux['center_source']]+=1
+                envelope_candidates.append(aux['dual_candidate_count'])
+                envelope_multipliers.append(aux['mass_multiplier'])
         elif node['kind'] == 'split':
             need(box is not None, 'partition follows sound contractions')
             dim, cut = node['dim'], node['cut']
@@ -136,6 +147,14 @@ def check(path, replay_base=True, progress=False):
         'centered_mass_multiplier_range':[str(Fraction(min(centered_mass_multipliers),E.S)),
             str(Fraction(max(centered_mass_multipliers),E.S))] if centered_mass_multipliers else None,
         'largest_centered_log_upper':str(Fraction(max(centered_bounds),E.S)) if centered_bounds else None,
+        'mass_range_excluded_leaves':sum(mass_range_sides.values()),
+        'mass_range_exclusion_sides':dict(sorted(mass_range_sides.items())),
+        'envelope_excluded_leaves':len(envelope_bounds),
+        'envelope_center_counts':dict(sorted(envelope_centers.items())),
+        'envelope_candidate_count_range':[min(envelope_candidates),max(envelope_candidates)] if envelope_candidates else None,
+        'envelope_mass_multiplier_range':[str(Fraction(min(envelope_multipliers),E.S)),
+            str(Fraction(max(envelope_multipliers),E.S))] if envelope_multipliers else None,
+        'largest_envelope_log_upper':str(Fraction(max(envelope_bounds),E.S)) if envelope_bounds else None,
         'complete_cover': complete, 'full_eight_point_exclusion_proved': complete}
 
 
