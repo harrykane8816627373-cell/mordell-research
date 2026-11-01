@@ -52,7 +52,7 @@ L_0v_k=\left(\frac14+\frac{k(7-k)}8\right)v_k,\qquad1\le k\le6.
 
 [验证器](verify_energy_basin.py)在 Q(ζ₇) 中从每条实际逆差乘其共轭重新生成 L₀，检查上述完整作用及特征多项式，保留非单位正交基的度量 diag(1,7,…,7)。没有用浮点特征值决定接受。
 
-## 3. 直接展开目标，避免全球 Hessian 扰动损失
+## 3. 直接展开目标，避免整个球内的 Hessian 扰动损失
 
 取使距离最小的旋转和重排，令 h=w−w*，于是 Re〈iw*,h〉=0。参考最小点距大于12/7。定义
 
@@ -64,15 +64,15 @@ u_{ij}=\frac{h_i-h_j}{w_i^*-w_j^*},\qquad
 最后使用 ||h||≤1/5、√2<99/70。参考真实力方程及相同二阶矩给
 
 ```math
-2\operatorname{Re}\sum_{i\lt j}u_{ij}
-=2\operatorname{Re}\sum_i\overline{w_i^*}h_i=-\|h\|^2.
+2\Re\sum_{i\lt j}u_{ij}
+=2\Re\sum_i\overline{w_i^*}h_i=-\|h\|^2.
 ```
 
 由收敛的 log(1+u) 级数，
 
 ```math
 \log\frac{\Delta_w}T
-=-\|h\|^2-\operatorname{Re}(h^TB_0h)+R.
+=-\|h\|^2-\Re(h^TB_0h)+R.
 ```
 
 注意这里是 hᵀB₀h，不是 Hermitian 形式 h*B₀h。[此前完整稳定谱](../power-moment/LOCAL_RIGIDITY.md)使固定旋转切片上的二次项至少为 (2/7)||h||²。
