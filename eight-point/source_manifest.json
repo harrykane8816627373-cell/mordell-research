@@ -15,8 +15,8 @@
     },
     {
       "path": "eight-point/MOMENT_TUBE.md",
-      "bytes": 6635,
-      "sha256": "549d1a45b712bbd0397c9208cbe6483de189b765e5dbf538410c8fcb2e682bce"
+      "bytes": 6662,
+      "sha256": "9fba5c15196436772f710a0fc078423f7573f8e2cdc0b19c42ed52e5eea1be2e"
     },
     {
       "path": "eight-point/OPEN_BRANCHES.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "eight-point/README.md",
-      "bytes": 2189,
-      "sha256": "d5281927259a3a2607d91006a740c28ea12b3fab17ec11acd87cf495307608e2"
+      "bytes": 2188,
+      "sha256": "8e2ed70299e7a3b8d043f330789a14a76b21bc76567573514f37ac29e20cff2a"
     },
     {
       "path": "eight-point/tube_verification.json",

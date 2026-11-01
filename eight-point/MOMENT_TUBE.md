@@ -79,8 +79,8 @@ Y^8-Y+\sum_{k\in J}d_kY^{8-k},\qquad
 两处误差均严格小于边界下端。Rouché 定理给每盘恰一个根。设 u 为旋转、重排后的 q，v 为参考根向量（||u||²=||v||²=7），则 ||u−tv||²<8t²r²。反三角不等式给
 
 ```math
-|t-1|<\sqrt{8/7}\,tr,\qquad
-t<\frac1{1-(15/14)r}<\frac{100}{99}.
+|t-1|\lt \sqrt{8/7}\,tr,\qquad
+t\lt \frac1{1-(15/14)r}\lt \frac{100}{99}.
 ```
 
 利用两向量相同的归一化长度，有准确恒等式
@@ -92,8 +92,8 @@ t<\frac1{1-(15/14)r}<\frac{100}{99}.
 所以回到 w 尺度，
 
 ```math
-d(w)^2\le4\|u-v\|^2<32tr^2
-<32\frac{100}{99}\left(\frac7{800}\right)^2<\frac1{400}.
+d(w)^2\le4\|u-v\|^2\lt 32tr^2
+\lt 32\frac{100}{99}\left(\frac7{800}\right)^2\lt \frac1{400}.
 ```
 
 这一步消除了 p₇ 对应的自由径向尺度，无须额外限制 p₇−896。
@@ -112,8 +112,8 @@ d(w)^2\le4\|u-v\|^2<32tr^2
 
 ```math
 |x^*(B(w)-B(w^*))y|
-\le\eta\left(\sum_{i<j}|x_i-x_j|^2\right)^{1/2}
-          \left(\sum_{i<j}|y_i-y_j|^2\right)^{1/2}
+\le\eta\left(\sum_{i\lt j}|x_i-x_j|^2\right)^{1/2}
+          \left(\sum_{i\lt j}|y_i-y_j|^2\right)^{1/2}
 \le8\eta\|x\|\|y\|.
 ```
 
@@ -122,7 +122,7 @@ d(w)^2\le4\|u-v\|^2<32tr^2
 ```math
 \|B(w)-B(w^*)\|\le
 \frac{16(99/70)\rho}{(12/7-(99/70)\rho)^3}
-<\frac27-\frac1{35}.
+\lt \frac27-\frac1{35}.
 ```
 
 故整个固定切片与凸球交集上的 Hessian 下端大于1/35。验证器重新运行旧 cyclotomic 实际逐点力及完整谱检查，不只信任保存的特征值列表。

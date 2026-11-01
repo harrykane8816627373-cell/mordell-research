@@ -4,7 +4,7 @@
 
 ```math
 M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
-\Delta_n(z)=\prod_{i<j}|z_i-z_j|^2.
+\Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2.
 ```
 
 **八点完整无条件锐界、一般非零矩分支和一般 n 的简洁锐值公式仍开放。** 本仓库分别记录已证定理、带条件的排除、可达下界和未完成覆盖。

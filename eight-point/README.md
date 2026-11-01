@@ -9,7 +9,7 @@
 令 w=√(7/2)z，p_k=Σw_i^k。对中心化、Σ|w_i|²=28的八点构型，已证明
 
 ```math
-|p_2|\le1/10,\ |p_3|\le1/5,\ |p_4|\le2/5,\
+|p_2|\le1/10,\ |p_3|\le1/5,\ |p_4|\le2/5,
 |p_5|\le4/5,\ |p_6|\le8/5,\ |p_8|\le32/5
 \quad\Longrightarrow\quad
 \log\frac{\Delta_w}{4^{28}7^7}\le-\frac{d^2}{35},
