@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "proof_replay_performed": false,
+  "requires_complete_cover_replay": true,
+  "prior_commit": "b469f04f26bd3848fceaa9b1e83d86d89853f422",
+  "prior_certificate_sha256": "68327112b23153212f4196fadb43b5e9ee04fd0ec4a3d7641fc388dc25ecd9ed",
+  "prior_snapshot_reconstructed_exactly": true,
+  "current_certificate_sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde",
+  "prior_regions": 19,
+  "closed_prior_regions": 14,
+  "unclosed_prior_regions": 5,
+  "current_open_descendants": 19,
+  "scope": "Coordinate regions; no stationary point classification or covered-volume percentage.",
+  "rows": [
+    {
+      "prior_frontier_id": 0,
+      "closed": false,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        0
+      ]
+    },
+    {
+      "prior_frontier_id": 1,
+      "closed": false,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        1
+      ]
+    },
+    {
+      "prior_frontier_id": 2,
+      "closed": false,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        2
+      ]
+    },
+    {
+      "prior_frontier_id": 3,
+      "closed": false,
+      "excluded_descendant_leaves": 0,
+      "open_descendants": [
+        3
+      ]
+    },
+    {
+      "prior_frontier_id": 4,
+      "closed": false,
+      "excluded_descendant_leaves": 62908,
+      "open_descendants": [
+        104176,
+        104178,
+        104180,
+        104278,
+        134430,
+        134432,
+        134434,
+        134790,
+        147304,
+        229432,
+        229904,
+        229906,
+        229908,
+        230017,
+        230018
+      ]
+    },
+    {
+      "prior_frontier_id": 76240,
+      "closed": true,
+      "excluded_descendant_leaves": 210,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 92128,
+      "closed": true,
+      "excluded_descendant_leaves": 1206,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 96442,
+      "closed": true,
+      "excluded_descendant_leaves": 169,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 97094,
+      "closed": true,
+      "excluded_descendant_leaves": 1,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 97096,
+      "closed": true,
+      "excluded_descendant_leaves": 37,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 97098,
+      "closed": true,
+      "excluded_descendant_leaves": 16,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 99646,
+      "closed": true,
+      "excluded_descendant_leaves": 83,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 99648,
+      "closed": true,
+      "excluded_descendant_leaves": 257,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 99650,
+      "closed": true,
+      "excluded_descendant_leaves": 9,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 99652,
+      "closed": true,
+      "excluded_descendant_leaves": 24,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 99912,
+      "closed": true,
+      "excluded_descendant_leaves": 33,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 99918,
+      "closed": true,
+      "excluded_descendant_leaves": 45,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 100016,
+      "closed": true,
+      "excluded_descendant_leaves": 1,
+      "open_descendants": []
+    },
+    {
+      "prior_frontier_id": 100018,
+      "closed": true,
+      "excluded_descendant_leaves": 1,
+      "open_descendants": []
+    }
+  ],
+  "full_eight_point_exclusion_proved": false
+}

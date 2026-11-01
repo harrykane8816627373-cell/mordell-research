@@ -18,6 +18,7 @@ def main():
     p.add_argument('--nodes', type=int, default=10000)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--resume', type=Path)
+    p.add_argument('--algorithm', type=int, choices=[1, 2, 3], default=3)
     args = p.parse_args()
     source = BASE.read_bytes()
     if hashlib.sha256(source).hexdigest() != R.BASE_SHA256:
@@ -27,6 +28,9 @@ def main():
     settings = E.model(base['settings']['scope'])
     if args.resume:
         data = json.loads(gzip.decompress(args.resume.read_bytes()))
+        if (data['base_sha256'] != R.BASE_SHA256 or data['precision_bits'] != E.BITS
+            or data['settings'] != json.loads(json.dumps(settings))):
+            raise ArithmeticError('same rigorous resume model')
         nodes = data['nodes']
         roots = data['roots']
         pending = [(i, [tuple(v) for v in box]) for i, box in data['pending']]
@@ -40,9 +44,9 @@ def main():
         if not pending:
             break
         index, original = pending.pop()
-        box, reason, aux = R.contract(original, settings, passes=5)
+        box, reason, aux = R.contract(original, settings, passes=5, algorithm=args.algorithm)
         if box is None:
-            record = {'kind': 'excluded', 'reason': reason}
+            record = {'kind': 'excluded', 'reason': reason, 'algorithm':args.algorithm}
             counts[reason] += 1
         else:
             dim = max(range(13), key=lambda k: box[k][1]-box[k][0])
@@ -55,7 +59,8 @@ def main():
             left[dim], right[dim] = (lo, cut), (cut, hi)
             li, ri = len(nodes), len(nodes)+1
             nodes += [{'kind': 'unknown'}, {'kind': 'unknown'}]
-            record = {'kind': 'split', 'dim': dim, 'cut': cut, 'left': li, 'right': ri}
+            record = {'kind': 'split', 'dim': dim, 'cut': cut, 'left': li, 'right': ri,
+                'algorithm':args.algorithm}
             pending += [(ri, right), (li, left)]
             counts['split'] += 1
         nodes[index] = record

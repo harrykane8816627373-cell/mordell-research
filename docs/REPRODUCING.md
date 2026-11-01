@@ -25,7 +25,7 @@ python -B -S -O radial-gap/verify_all.py
 
 ## 联合物理系统与部分覆盖
 
-当前完整续算入口包含上一阶段20个必需旧入口、旋转饱和与对数算术核对、新森林的逐节点重放：
+当前完整续算入口包含20个必需旧入口、旋转饱和与严格对数算术、全局二次与角点上包核对，以及全部版本节点的逐项重放：
 
 ~~~bash
 python -B -S -O joint-refinement/verify_all.py
@@ -38,6 +38,10 @@ python -B -S -O scripts/verify_current.py --refinement
 ~~~
 
 该命令包含旧联合覆盖，只重放一次旧覆盖树。新专题[证明与报告](../joint-refinement/README.md)明确保留未排空状态；历史离线包仍是当时的冻结快照。
+
+[全局二次证明](../joint-refinement/GLOBAL_QUADRATIC.md)给出150组标量二次极值核对、1152个独立 Cartesian 角点核对及实际非空大盒基准。新节点明确标记算法2或3，旧节点仍按算法1重放。仅核对输入哈希的 `--check-fixed-inputs` 会明确输出 `proof_replay_performed=false`，不能替代完整重放。
+
+完整覆盖通过后，`python -B -S -O joint-refinement/summarize_frontier.py` 可快速复核旧19盒中14个已关闭、其余5个留下19个开放后代；它重构旧快照哈希并核对后代计数，不重放区间算术。
 
 基础入口默认不重复耗时较长的60021节点覆盖重放。加上新专题：
 

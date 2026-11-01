@@ -86,7 +86,75 @@ def target_log_upper(box, qbox, radius, midpoint=None):
         'linear_residual_upper': linear_upper, 'Taylor_remainder_upper': remainder_upper}
 
 
-def contract(box, settings, passes=5):
+def _quadratic_max(d, b, interval):
+    """Upper of d*x*x+b*x on an integer-grid real interval; all b in a box."""
+    lo, hi = interval
+    best = None
+    for slope in b:
+        for x in [lo, hi]:
+            value = -(-(d*x*x+slope*x*E.S)//(E.S*E.S))
+            best = value if best is None else max(best, value)
+        if d < 0:
+            numerator, denominator = slope*E.S, -2*d
+            if lo*denominator <= numerator <= hi*denominator:
+                value = -(-(slope*slope)//(-4*d))
+                best = max(best, value)
+    return best
+
+
+def quadratic_target_upper(box, qbox, radius, midpoint=None):
+    """Global mass-preserving log majorant; no small-displacement condition."""
+    if midpoint is None:
+        midpoint, _ = E.slab_center(box, radius, qbox[7])
+    if len(midpoint) != 13 or not all(type(v) is int for v in midpoint):
+        raise ValueError('exact rational center')
+    center = E.positions([E.point(x) for x in midpoint])
+    delta = [E.cs(z, c) for z, c in zip(qbox, center)]
+    product, weights = 1, []
+    for i, j in E.PAIRS:
+        dx = center[i][0][0]-center[j][0][0]
+        dy = center[i][1][0]-center[j][1][0]
+        squared = dx*dx+dy*dy
+        if not squared:
+            return None
+        product *= squared
+        weights.append(E.rat(E.S**2, squared))
+    try:
+        inverse, _ = E.invert_edges(center)
+    except ZeroDivisionError:
+        return None
+    gradient, _ = E.force_gradient(center, inverse)
+    reduced = E.reduced_gradient(gradient)
+    linear = sum(E.scale(E.mul(E.neg(g), E.sub(a, E.point(c))), 2)[1]
+        for g, a, c in zip(reduced, box, midpoint))
+    mass = sum(z[0][0]**2+z[1][0]**2 for z in center)
+    constant = log_ratio(product, 7**7*E.S**56)[1]
+    constant += E.scale(E.sub(E.rat(7), E.rat(mass, E.S**2)), 4)[1]
+    adaptive = [max(1, E.sqrt_hi(E.cnorm(z)[1])) for z in delta]
+    best = None
+    for name, a in [('equal', [1]*8), ('radius', adaptive)]:
+        diagonal = [-4*E.S]*8
+        for (i, j), w in zip(E.PAIRS, weights):
+            diagonal[i] += E.mul(w, E.rat(a[i]+a[j], a[i]))[1]
+            diagonal[j] += E.mul(w, E.rat(a[i]+a[j], a[j]))[1]
+        norm_bound = 0
+        separable = 0
+        for i in range(8):
+            norm_bound += E.mul(E.point(diagonal[i]), E.cnorm(delta[i]))[1]
+            for component in [0, 1]:
+                separable += _quadratic_max(diagonal[i], E.scale(E.neg(gradient[i][component]), 2),
+                    delta[i][component])
+        variants = [('centered_linear', linear+norm_bound), ('separable', separable)]
+        for mode, bound in variants:
+            result = {'log_Delta_over_target_upper': constant+bound,
+                'weight_scheme': name, 'quadratic_box_bound': mode,
+                'negative_diagonal_coefficients': sum(d < 0 for d in diagonal)}
+            if best is None or result['log_Delta_over_target_upper'] < best['log_Delta_over_target_upper']:
+                best = result
+    return best
+
+
+def _contract_v1(box, settings, passes=5):
     box, reason, aux = E.contract(box, settings, passes=passes)
     if box is None:
         return box, reason, aux
@@ -104,4 +172,116 @@ def contract(box, settings, passes=5):
         if upper is not None and upper['log_Delta_over_target_upper'] < 0:
             upper['center_source'] = 'reference_'+str(index)
             return None, 'mass_log_Taylor', upper
+    return box, None, aux
+
+
+def vertex_quadratic_upper(intervals, slopes, weights):
+    """Enumerate a coordinatewise convex majorant in at most 256 Gray-code vertices."""
+    diagonal = [-4*E.S]*8
+    interaction = [[0]*8 for _ in range(8)]
+    for (i,j),w in zip(E.PAIRS,weights):
+        if type(w) is not int or w < 0:
+            raise ValueError('nonnegative exact upper edge weights')
+        diagonal[i] += w
+        diagonal[j] += w
+        interaction[i][j] = interaction[j][i] = -2*w
+    constant, clipped = 0, 0
+    for i,d in enumerate(diagonal):
+        if d < 0:
+            lo,hi = intervals[i]
+            minimum = 0 if lo <= 0 <= hi else min(lo*lo,hi*hi)
+            constant += d*minimum
+            diagonal[i] = 0
+            clipped += 1
+    values=[]
+    for d,b,interval in zip(diagonal,slopes,intervals):
+        values.append([d*x*x+E.S*(b[1] if x >= 0 else b[0])*x for x in interval])
+    x=[v[0] for v in intervals]
+    state=[0]*8
+    rows=[sum(interaction[i][j]*x[j] for j in range(8)) for i in range(8)]
+    value=constant+sum(v[0] for v in values)+sum(interaction[i][j]*x[i]*x[j] for i,j in E.PAIRS)
+    best=value
+    active=[i for i,v in enumerate(intervals) if v[0] != v[1]]
+    for step in range(1,1 << len(active)):
+        k=active[(step & -step).bit_length()-1]
+        next_state=1-state[k]
+        change=intervals[k][next_state]-x[k]
+        value += values[k][next_state]-values[k][state[k]]+change*rows[k]
+        x[k] += change
+        state[k]=next_state
+        for j in range(8):
+            if j != k:
+                rows[j] += interaction[j][k]*change
+        best=max(best,value)
+    return -(-best//(E.S*E.S)), 1 << len(active), clipped
+
+
+def vertex_target_upper(box,qbox,radius,midpoint=None):
+    if midpoint is None:
+        midpoint,_=E.slab_center(box,radius,qbox[7])
+    if len(midpoint) != 13 or not all(type(v) is int for v in midpoint):
+        raise ValueError('exact rational reference center')
+    center=E.positions([E.point(v) for v in midpoint])
+    delta=[E.cs(z,c) for z,c in zip(qbox,center)]
+    product,weights=1,[]
+    for i,j in E.PAIRS:
+        dx=center[i][0][0]-center[j][0][0]
+        dy=center[i][1][0]-center[j][1][0]
+        squared=dx*dx+dy*dy
+        if not squared:
+            return None
+        product *= squared
+        weights.append(E.rat(E.S**2,squared)[1])
+    try:
+        inverse,_=E.invert_edges(center)
+    except ZeroDivisionError:
+        return None
+    gradient,_=E.force_gradient(center,inverse)
+    mass=sum(z[0][0]**2+z[1][0]**2 for z in center)
+    upper=log_ratio(product,7**7*E.S**56)[1]
+    upper+=E.scale(E.sub(E.rat(7),E.rat(mass,E.S**2)),4)[1]
+    vertices,clipped=0,0
+    for component in [0,1]:
+        bound,count,clip=vertex_quadratic_upper([v[component] for v in delta],
+            [E.scale(E.neg(v[component]),2) for v in gradient],weights)
+        upper+=bound
+        vertices+=count
+        clipped=max(clipped,clip)
+    return {'log_Delta_over_target_upper':upper,'vertices_enumerated':vertices,
+        'negative_diagonal_clips':clipped}
+
+
+def contract(box, settings, passes=5, algorithm=1):
+    if type(algorithm) is not int or algorithm not in [1, 2, 3]:
+        raise ValueError('supported exact exclusion algorithm')
+    box, reason, aux = _contract_v1(box, settings, passes)
+    if box is None or algorithm == 1:
+        return box, reason, aux
+    upper = quadratic_target_upper(box, aux[0], settings['radius'])
+    if upper is not None and upper['log_Delta_over_target_upper'] < 0:
+        upper['center_source'] = 'midpoint'
+        upper['legacy_midpoint_Taylor_defined'] = target_log_upper(box, aux[0], settings['radius']) is not None
+        return None, 'mass_quadratic_log', upper
+    midpoint = [(a+b)//2 for a, b in box]
+    nearest = sorted(enumerate(REFERENCES['centers']),
+        key=lambda item: sum((a-b)**2 for a, b in zip(midpoint, item[1])))[:2]
+    for index, center in nearest:
+        upper = quadratic_target_upper(box, aux[0], settings['radius'], center)
+        if upper is not None and upper['log_Delta_over_target_upper'] < 0:
+            upper['center_source'] = 'reference_'+str(index)
+            upper['legacy_midpoint_Taylor_defined'] = target_log_upper(box, aux[0], settings['radius']) is not None
+            return None, 'mass_quadratic_log', upper
+    if algorithm == 2:
+        return box,None,aux
+    upper=vertex_target_upper(box,aux[0],settings['radius'])
+    if upper is not None and upper['log_Delta_over_target_upper'] < 0:
+        upper['center_source']='midpoint'
+        upper['legacy_midpoint_Taylor_defined']=target_log_upper(box,aux[0],settings['radius']) is not None
+        return None,'mass_quadratic_vertices',upper
+    for index,center in nearest:
+        upper=vertex_target_upper(box,aux[0],settings['radius'],center)
+        if upper is not None and upper['log_Delta_over_target_upper'] < 0:
+            upper['center_source']='reference_'+str(index)
+            upper['legacy_midpoint_Taylor_defined']=target_log_upper(box,aux[0],settings['radius']) is not None
+            return None,'mass_quadratic_vertices',upper
     return box, None, aux

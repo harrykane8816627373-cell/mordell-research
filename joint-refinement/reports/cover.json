@@ -1,37 +1,61 @@
 {
   "passed": true,
   "base_certificate_sha256": "9b40704b8be9b15a219c89b64989bd71caddf74564386570900164494f857b58",
-  "continuation_sha256": "68327112b23153212f4196fadb43b5e9ee04fd0ec4a3d7641fc388dc25ecd9ed",
+  "continuation_sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde",
   "precision_bits": 40,
   "scope": "global_maximum",
   "base_open_regions_accounted_for": 21,
-  "continuation_nodes": 100019,
+  "continuation_nodes": 230019,
   "continuation_counts": {
-    "ellipse_covariance": 1084,
-    "force_sign": 7493,
-    "mass": 243,
-    "mass_log_Taylor": 608,
-    "mass_or_radius": 2500,
-    "maximum_radius": 47,
-    "old_ellipse": 6,
-    "ordered_separation": 8718,
-    "ordering": 803,
-    "polynomial_Ward_1": 2747,
-    "separation": 891,
-    "split": 49999,
-    "stationarity": 1101,
-    "strict_subset": 23760,
+    "ellipse_covariance": 1344,
+    "force_sign": 12856,
+    "mass": 605,
+    "mass_log_Taylor": 1553,
+    "mass_or_radius": 4640,
+    "mass_quadratic_log": 12531,
+    "mass_quadratic_vertices": 7321,
+    "maximum_radius": 564,
+    "old_ellipse": 5272,
+    "ordered_separation": 20197,
+    "ordering": 959,
+    "polynomial_Ward_1": 2841,
+    "separation": 7951,
+    "split": 114999,
+    "stationarity": 1461,
+    "strict_subset": 34906,
     "unresolved": 19
   },
-  "combined_tree_nodes": 160019,
-  "combined_excluded_leaves": 79991,
+  "processed_node_algorithms": {
+    "1": 100000,
+    "2": 100000,
+    "3": 30000
+  },
+  "combined_tree_nodes": 290019,
+  "combined_excluded_leaves": 144991,
   "unresolved_regions": 19,
-  "new_Taylor_excluded_leaves": 608,
+  "new_Taylor_excluded_leaves": 1553,
   "Taylor_center_counts": {
-    "midpoint": 608
+    "midpoint": 1553
   },
   "largest_Taylor_upper_endpoint": -190264859,
   "largest_Taylor_log_upper": "-190264859/1099511627776",
+  "quadratic_excluded_leaves": 12531,
+  "quadratic_center_counts": {
+    "midpoint": 12531
+  },
+  "quadratic_bound_schemes": {
+    "equal/separable": 22,
+    "radius/centered_linear": 6123,
+    "radius/separable": 6386
+  },
+  "quadratic_with_legacy_midpoint_Taylor_unavailable": 3,
+  "largest_quadratic_log_upper": "-1583967/1099511627776",
+  "vertex_excluded_leaves": 7321,
+  "vertex_center_counts": {
+    "midpoint": 7321
+  },
+  "vertex_with_legacy_midpoint_Taylor_unavailable": 28,
+  "largest_vertex_log_upper": "-6448017/549755813888",
   "complete_cover": false,
   "full_eight_point_exclusion_proved": false
 }

@@ -6,6 +6,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import sys
 import refinement as R
 
 E = R.E
@@ -18,7 +19,7 @@ def need(ok, label):
         raise ArithmeticError(label)
 
 
-def check(path, replay_base=True):
+def check(path, replay_base=True, progress=False):
     raw = BASE.read_bytes()
     need(hashlib.sha256(raw).hexdigest() == R.BASE_SHA256, 'frozen base certificate')
     base = json.loads(gzip.decompress(raw))
@@ -46,24 +47,43 @@ def check(path, replay_base=True):
     nodes, seen, counts = data['nodes'], set(), Counter()
     taylor_bounds = []
     taylor_centers = Counter()
+    algorithms, quadratic_centers, quadratic_schemes = Counter(), Counter(), Counter()
+    quadratic_bounds = []
+    quadratic_without_local_Taylor = 0
+    vertex_bounds,vertex_centers=[],Counter()
+    vertex_without_local_Taylor=0
     while stack:
         index, original = stack.pop()
         need(type(index) is int and 0 <= index < len(nodes) and index not in seen,
             'forest without shared or unreachable branches')
         seen.add(index)
+        if progress and len(seen)%20000==0:
+            print('Replayed continuation nodes:',len(seen),'of',len(nodes),flush=True,file=sys.stderr)
         node = nodes[index]
         if node['kind'] == 'unknown':
             need(index in pending and pending[index] == original, 'unresolved box remains explicit')
             counts['unresolved'] += 1
             continue
         need(index not in pending, 'processed node is not marked pending')
-        box, reason, aux = R.contract(original, settings, passes=5)
+        algorithm = node.get('algorithm', 1)
+        need(type(algorithm) is int and algorithm in [1,2,3], 'supported node algorithm')
+        algorithms[algorithm] += 1
+        box, reason, aux = R.contract(original, settings, passes=5, algorithm=algorithm)
         if node['kind'] == 'excluded':
             need(box is None and reason == node['reason'], 'whole leaf excluded with exact bound')
             counts[reason] += 1
             if reason == 'mass_log_Taylor':
                 taylor_bounds.append(aux['log_Delta_over_target_upper'])
                 taylor_centers[aux['center_source']] += 1
+            if reason == 'mass_quadratic_log':
+                quadratic_bounds.append(aux['log_Delta_over_target_upper'])
+                quadratic_centers[aux['center_source']] += 1
+                quadratic_schemes[aux['weight_scheme']+'/'+aux['quadratic_box_bound']] += 1
+                quadratic_without_local_Taylor += not aux['legacy_midpoint_Taylor_defined']
+            if reason == 'mass_quadratic_vertices':
+                vertex_bounds.append(aux['log_Delta_over_target_upper'])
+                vertex_centers[aux['center_source']] += 1
+                vertex_without_local_Taylor += not aux['legacy_midpoint_Taylor_defined']
         elif node['kind'] == 'split':
             need(box is not None, 'partition follows sound contractions')
             dim, cut = node['dim'], node['cut']
@@ -85,6 +105,7 @@ def check(path, replay_base=True):
         'precision_bits': E.BITS, 'scope': settings['scope'],
         'base_open_regions_accounted_for': len(old), 'continuation_nodes': len(nodes),
         'continuation_counts': dict(sorted(counts.items())),
+        'processed_node_algorithms': {str(k):v for k,v in sorted(algorithms.items())},
         'combined_tree_nodes': 60021-len(old)+len(nodes),
         'combined_excluded_leaves': 29990+excluded,
         'unresolved_regions': len(pending),
@@ -92,6 +113,15 @@ def check(path, replay_base=True):
         'Taylor_center_counts': dict(sorted(taylor_centers.items())),
         'largest_Taylor_upper_endpoint': max(taylor_bounds) if taylor_bounds else None,
         'largest_Taylor_log_upper': str(Fraction(max(taylor_bounds), E.S)) if taylor_bounds else None,
+        'quadratic_excluded_leaves': len(quadratic_bounds),
+        'quadratic_center_counts': dict(sorted(quadratic_centers.items())),
+        'quadratic_bound_schemes': dict(sorted(quadratic_schemes.items())),
+        'quadratic_with_legacy_midpoint_Taylor_unavailable': quadratic_without_local_Taylor,
+        'largest_quadratic_log_upper': str(Fraction(max(quadratic_bounds), E.S)) if quadratic_bounds else None,
+        'vertex_excluded_leaves':len(vertex_bounds),
+        'vertex_center_counts':dict(sorted(vertex_centers.items())),
+        'vertex_with_legacy_midpoint_Taylor_unavailable':vertex_without_local_Taylor,
+        'largest_vertex_log_upper':str(Fraction(max(vertex_bounds),E.S)) if vertex_bounds else None,
         'complete_cover': complete, 'full_eight_point_exclusion_proved': complete}
 
 
@@ -100,5 +130,6 @@ if __name__ == '__main__':
     p.add_argument('certificate', type=Path)
     p.add_argument('--base-already-replayed', action='store_true',
         help='only for a caller that separately replayed the pinned base tree')
+    p.add_argument('--progress',action='store_true',help='write replay progress to stderr')
     args = p.parse_args()
-    print(json.dumps(check(args.certificate, not args.base_already_replayed), indent=2))
+    print(json.dumps(check(args.certificate, not args.base_already_replayed,args.progress), indent=2))

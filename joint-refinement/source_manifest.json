@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
-  "base_commit": "571b97262654907d122b4dc7088305075a0dd23d",
-  "purpose": "Pinned inputs for exact rotation/Taylor arithmetic and the incomplete continuation forest.",
+  "base_commit": "b469f04f26bd3848fceaa9b1e83d86d89853f422",
+  "purpose": "Pinned actual-coordinate rotation, Taylor, global quadratic and vertex certificates; complete exclusion remains unproved.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -184,29 +184,39 @@
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
     {
+      "path": "joint-refinement/GLOBAL_QUADRATIC.md",
+      "bytes": 7210,
+      "sha256": "e7024eb877188ac0ab59a6d94c872520d9ba0a39c6055a16c225aaa3e19a9694"
+    },
+    {
       "path": "joint-refinement/PROVENANCE.json",
-      "bytes": 1423,
-      "sha256": "23a2aa28f7c46d3e173f72b9667bb50cef648a67a1122acbf6e07518c6d66629"
+      "bytes": 1754,
+      "sha256": "dacb1e36150d765665aac8a5eb32c72c0cac84c3b46f64a089fffc2ce852867e"
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 8107,
-      "sha256": "f07aa2edeb724fff074533869812d52a5841a119ded601bbc1c446716b7785b8"
+      "bytes": 9451,
+      "sha256": "3c536fc079d9ba12469d14b9ce0853472833d244d839911d9b0de0f3ead4d9b9"
     },
     {
       "path": "joint-refinement/certificates/continuation.json.gz",
-      "bytes": 493515,
-      "sha256": "68327112b23153212f4196fadb43b5e9ee04fd0ec4a3d7641fc388dc25ecd9ed"
+      "bytes": 1056175,
+      "sha256": "8776265842c652d8f78f80ce7707cf9d0373701d34679c8dba524d5b6e7fefde"
+    },
+    {
+      "path": "joint-refinement/certificates/prior_frontier.json",
+      "bytes": 18671,
+      "sha256": "de24b2823efdc3baa08787506f98d008fb5c81e2430d59e3ab4e8e8b3502260c"
     },
     {
       "path": "joint-refinement/check.py",
-      "bytes": 5152,
-      "sha256": "9620be01294d00e2539b9b0a33c0d1f0aeb99d438a6e3d008443eaafeb381322"
+      "bytes": 7308,
+      "sha256": "1363aba3acf38f20033c277819fc7180c685b83071211e75bd5435375dba0589"
     },
     {
       "path": "joint-refinement/propose.py",
-      "bytes": 3165,
-      "sha256": "68ec789313f744597a7d854259db4e5dc3a2bad843fe07d9171e95e3cc50ddc1"
+      "bytes": 3556,
+      "sha256": "b2564f1d00b1bd3a2d848858a1026f0713db729e1edf8beefdff539f3bc6fe45"
     },
     {
       "path": "joint-refinement/reference_centers.json",
@@ -215,28 +225,38 @@
     },
     {
       "path": "joint-refinement/refinement.py",
-      "bytes": 4575,
-      "sha256": "30b75328c1da44e3faf3dc458776f10a78d42e3a6e9644e3434e79fc3b66a7c1"
+      "bytes": 12661,
+      "sha256": "37de9dfbeda2abf700e6eea63ff0052fb716e0c85a39fe76e245050500ae2f36"
     },
     {
       "path": "joint-refinement/reports/arithmetic.json",
-      "bytes": 1274,
-      "sha256": "3e866faa5c5582329aa268a6fffbf44da63362a7a9795253020c341ff674a45f"
+      "bytes": 2010,
+      "sha256": "61f0b33eefa01c5ec1ae5cb176755092196ae267787a8d67d926c7e46e61dc53"
     },
     {
       "path": "joint-refinement/reports/cover.json",
-      "bytes": 1151,
-      "sha256": "504b302e56fb444665e3cade7308c0577a528f38d85d0569cee509fc36f214be"
+      "bytes": 1884,
+      "sha256": "ffe34bec1ff27c6b5f9f33aedfe6a801afae49f93ecdd0761e8425c641311a2d"
+    },
+    {
+      "path": "joint-refinement/reports/frontier_progress.json",
+      "bytes": 3763,
+      "sha256": "345461be79670497fcdfb1f258184ff3b65217aec20f2b9d8660b929af4b530d"
+    },
+    {
+      "path": "joint-refinement/summarize_frontier.py",
+      "bytes": 3505,
+      "sha256": "01f53be720550fe5d167ed3f88111335e6bfd5c17672d7cecb157d0e97c95153"
     },
     {
       "path": "joint-refinement/verify.py",
-      "bytes": 8039,
-      "sha256": "739eba9da7d20f9712f300b05a70adcdaa3b3842531f06d708b7db837b40b404"
+      "bytes": 15014,
+      "sha256": "4e02e80d933688e888bfe04f75b7c3f2605eebbc023f62c76763c97788528efe"
     },
     {
       "path": "joint-refinement/verify_all.py",
-      "bytes": 4168,
-      "sha256": "ef27a5164560c26ba9dd70afd6ddce4b0dcf6f9c881a7ff23e26121d1e9151f9"
+      "bytes": 4536,
+      "sha256": "65efd6d3dd9ff6b135d0deb354516e26558e626fcf3c1b03666cfebfc0276d8a"
     },
     {
       "path": "power-moment/LOCAL_RIGIDITY.md",

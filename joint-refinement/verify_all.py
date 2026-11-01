@@ -52,15 +52,15 @@ def main():
 
         def run(script, *arguments):
             result = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/script), *arguments],
-                cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=1200)
-            need(result.returncode == 0, script+': '+result.stdout[-3000:]+result.stderr[-3000:])
+                cwd=stage, env=env, stdout=subprocess.PIPE, text=True, encoding='utf-8', timeout=1200)
+            need(result.returncode == 0, script+': '+result.stdout[-3000:])
             return result.stdout
 
         if not args.prior_already_replayed:
             run('joint-closure/verify_all.py')
             print('PASS 20 prior entries including the frozen 60021-node tree', flush=True)
         entries = [('verify.py', [], 'arithmetic.json'),
-            ('check.py', ['joint-refinement/certificates/continuation.json.gz', '--base-already-replayed'], 'cover.json')]
+            ('check.py', ['joint-refinement/certificates/continuation.json.gz', '--base-already-replayed','--progress'], 'cover.json')]
         results = {}
         for script, arguments, report in entries:
             actual = json.loads(run('joint-refinement/'+script, *arguments))
@@ -81,6 +81,10 @@ def main():
         'combined_tree_nodes': cover['combined_tree_nodes'],
         'combined_excluded_leaves': cover['combined_excluded_leaves'],
         'new_Taylor_excluded_leaves': cover['new_Taylor_excluded_leaves'],
+        'quadratic_excluded_leaves': cover['quadratic_excluded_leaves'],
+        'quadratic_with_legacy_midpoint_Taylor_unavailable': cover['quadratic_with_legacy_midpoint_Taylor_unavailable'],
+        'vertex_excluded_leaves':cover['vertex_excluded_leaves'],
+        'vertex_with_legacy_midpoint_Taylor_unavailable':cover['vertex_with_legacy_midpoint_Taylor_unavailable'],
         'unresolved_regions': cover['unresolved_regions'],
         'complete_cover': False, 'full_eight_point_exclusion_proved': False}, indent=2))
 

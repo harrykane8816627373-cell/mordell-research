@@ -1,6 +1,7 @@
 """Exact checks of rotation saturation, logarithm arithmetic and continuation guards."""
 from pathlib import Path
 from fractions import Fraction as F
+from itertools import product
 import gzip
 import json
 import sys
@@ -147,6 +148,123 @@ def Taylor_checks():
         'whole_box_log_upper_bounds': bounds, 'wide_pole_box_rejected_as_inconclusive': True}
 
 
+def quadratic_checks():
+    E.setup(40)
+    cases = 0
+    for d in [-4*E.S,-E.S//3,0,E.S//3,4*E.S]:
+        for b in [(-2*E.S,E.S),(-E.S,-E.S),(0,0),(E.S,2*E.S),(-E.S//7,E.S//5)]:
+            for interval in [(-3*E.S,-E.S),(-E.S,E.S),(E.S,2*E.S),(0,0),(0,2*E.S),(-2*E.S,0)]:
+                actual = []
+                for slope in map(lambda x:F(x,E.S),b):
+                    coefficient = F(d,E.S)
+                    lo, hi = map(lambda x:F(x,E.S),interval)
+                    points = [lo,hi]
+                    if coefficient < 0:
+                        vertex = -slope/(2*coefficient)
+                        if lo <= vertex <= hi:
+                            points.append(vertex)
+                    actual += [coefficient*x*x+slope*x for x in points]
+                exact = max(actual)
+                upper = F(R._quadratic_max(d,b,interval),E.S)
+                need(exact <= upper < exact+F(1,E.S), 'independent Fraction quadratic endpoint/vertex maximum')
+                cases += 1
+    q = [C(1),C(-1),C(0,1),C(0,-1),C(1,F(1,2)),C(-1,-F(1,2)),C(F(1,2)),C(-F(1,2))]
+    displacement = [C(F(i-3,11),F(2*i-5,13)) for i in range(8)]
+    a = [(i+1)**2 for i in range(8)]
+    diagonal = [F(-4)]*8
+    lhs = -4*sum(z.norm() for z in displacement)
+    square_remainder = F()
+    for i,j in E.PAIRS:
+        w = 1/(q[i]-q[j]).norm()
+        diagonal[i] += w*(1+F(a[j],a[i]))
+        diagonal[j] += w*(1+F(a[i],a[j]))
+        lhs += w*(displacement[i]-displacement[j]).norm()
+        square_remainder += w*(F(j+1,i+1)*displacement[i]+F(i+1,j+1)*displacement[j]).norm()
+    rhs = sum(d*z.norm() for d,z in zip(diagonal,displacement))
+    need(rhs-lhs == square_remainder >= 0, 'exact weighted-Laplacian diagonal majorizer identity')
+    values = [q[0].re]+[v for z in q[1:7] for v in [z.re,z.im]]
+    center = [int(v*E.S) for v in values]
+    point_box = [E.point(v) for v in center]
+    lower,_ = exact_log_product(q)
+    for scalar in [F(-1),F(1,2),F(2)]:
+        arbitrary = [int(v*scalar) for v in center]
+        upper = R.quadratic_target_upper(point_box,E.positions(point_box),E.model()['radius'],arbitrary)
+        need(upper is not None and lower <= F(upper['log_Delta_over_target_upper'],E.S),
+             'global majorant accepts arbitrary distant rational reference centers')
+    line = [C(v) for v in [F(6,5),F(-6,5),F(9,10),F(-9,10),F(1),F(-1),F(1,2),F(-1,2)]]
+    need(sum(line,C()) == C() and sum(z.norm() for z in line) == 7 and len(set(line)) == 8,
+         'wide-box benchmark has an actual distinct centered mass-seven point')
+    values = [line[0].re]+[v for z in line[1:7] for v in [z.re,z.im]]
+    center = [round(v*E.S) for v in values]
+    radius = E.S//16
+    box = [(v-radius,v+radius) for v in center]
+    c = E.positions([E.point(v) for v in center])
+    qbox = [((z[0][0]-radius,z[0][0]+radius),(z[1][0]-radius,z[1][0]+radius)) for z in c]
+    qbox[0] = box[0],E.ZERO
+    for actual,interval in zip(line,qbox):
+        need(all(F(interval[k][0],E.S) <= value <= F(interval[k][1],E.S)
+            for k,value in enumerate([actual.re,actual.im])), 'actual benchmark is inside the whole physical box')
+    need(R.target_log_upper(box,qbox,E.model()['radius'],center) is None,
+         'legacy Taylor disk test is unavailable on this benchmark')
+    upper = R.quadratic_target_upper(box,qbox,E.model()['radius'],center)
+    need(upper is not None and upper['log_Delta_over_target_upper'] < 0,
+         'global quadratic bound excludes entire normalized wide box without a Taylor disk')
+    direct,_ = exact_log_product(line)
+    need(direct <= F(upper['log_Delta_over_target_upper'],E.S), 'independent exact product of the physical benchmark')
+    return {'independent_scalar_quadratic_maxima':cases,'weighted_Laplacian_square_identity':True,
+        'arbitrary_distant_reference_centers':3,'nonempty_actual_wide_box_radius':str(F(radius,E.S)),
+        'legacy_Taylor_unavailable_on_wide_box':True,
+        'wide_box_log_upper':str(F(upper['log_Delta_over_target_upper'],E.S)),
+        'wide_box_is_claimed_to_pass_all_old_global_cuts':False,'floating_point_acceptance':False}
+
+
+def vertex_checks():
+    E.setup(40)
+    cases,vertices=0,0
+    for index in range(6):
+        weights=[(i+j+index+1)*E.S//(100 if index==0 else 7+index)
+            for i,j in E.PAIRS]
+        intervals=[((-2+(i%3))*E.S//7,(1+(i%4))*E.S//9) for i in range(8)]
+        if index%2:
+            intervals[0]=(E.S//3,E.S//3)
+        slopes=[(-((i+1)*E.S)//13,(i+2)*E.S//17) for i in range(8)]
+        upper,count,clipped=R.vertex_quadratic_upper(intervals,slopes,weights)
+        rows=[-4*E.S]*8
+        for (i,j),w in zip(E.PAIRS,weights):
+            rows[i]+=w
+            rows[j]+=w
+        best=None
+        for x in product(*[(a,) if a==b else (a,b) for a,b in intervals]):
+            raw=sum(w*(x[i]-x[j])**2 for (i,j),w in zip(E.PAIRS,weights))
+            raw-=4*E.S*sum(v*v for v in x)
+            raw+=E.S*sum((b[1] if v>=0 else b[0])*v for b,v in zip(slopes,x))
+            for d,v,(lo,hi) in zip(rows,x,intervals):
+                if d<0:
+                    minimum=0 if lo<=0<=hi else min(lo*lo,hi*hi)
+                    raw+=(-d)*(v*v-minimum)
+            best=raw if best is None else max(best,raw)
+            vertices+=1
+        need(upper==-(-best//(E.S*E.S)), 'Gray-code maximum equals independent full Cartesian enumeration')
+        need(count==2**sum(lo!=hi for lo,hi in intervals)
+             and clipped==sum(v<0 for v in rows), 'vertex and clipping counts')
+        cases+=1
+    line=[C(v) for v in [F(6,5),F(-6,5),F(9,10),F(-9,10),F(1),F(-1),F(1,2),F(-1,2)]]
+    values=[line[0].re]+[v for z in line[1:7] for v in [z.re,z.im]]
+    center=[round(v*E.S) for v in values]
+    r=E.S//16
+    box=[(v-r,v+r) for v in center]
+    c=E.positions([E.point(v) for v in center])
+    qbox=[((z[0][0]-r,z[0][0]+r),(z[1][0]-r,z[1][0]+r)) for z in c]
+    qbox[0]=box[0],E.ZERO
+    bound=R.vertex_target_upper(box,qbox,E.model()['radius'],center)
+    lower,_=exact_log_product(line)
+    need(bound is not None and lower <= F(bound['log_Delta_over_target_upper'],E.S) < 0,
+         'physical wide-box target bound by full quadratic vertex majorant')
+    return {'independent_Cartesian_enumeration_cases':cases,'independently_enumerated_vertices':vertices,
+        'wide_box_log_upper':str(F(bound['log_Delta_over_target_upper'],E.S)),
+        'maximum_vertices_per_physical_box':512,'floating_point_acceptance':False}
+
+
 def guard_checks():
     base = json.loads(gzip.decompress((ROOT/'joint-closure/certificates/partial_cover.json.gz').read_bytes()))
     nodes = [{'kind':'unknown'} for _ in base['pending']]
@@ -162,7 +280,7 @@ def guard_checks():
             path.write_bytes(gzip.compress(json.dumps(data).encode(),mtime=0))
         save(toy)
         need(check(path,False)['unresolved_regions']==21,'initial frontier remains unresolved')
-        for kind in range(4):
+        for kind in range(7):
             altered=json.loads(json.dumps(toy))
             if kind==0:
                 altered['roots'].pop()
@@ -170,9 +288,16 @@ def guard_checks():
                 altered['full_eight_point_exclusion_proved']=True
             elif kind==2:
                 altered['pending'].pop()
-            else:
+            elif kind==3:
                 altered['pending'].pop(0)
                 altered['nodes'][0]={'kind':'excluded','reason':'mass_log_Taylor'}
+            elif kind in [4,5]:
+                altered['pending'].pop(0)
+                altered['nodes'][0]={'kind':'excluded','reason':'mass_quadratic_log',
+                    'algorithm':99 if kind==4 else 2}
+            else:
+                altered['pending'].pop(0)
+                altered['nodes'][0]={'kind':'excluded','reason':'mass_quadratic_vertices','algorithm':3}
             save(altered)
             try:
                 check(path,False)
@@ -180,11 +305,13 @@ def guard_checks():
                 rejected+=1
             else:
                 raise ArithmeticError('invalid frontier accounting or unjustified Taylor exclusion accepted')
-    need(rejected==4,'all four false-proof variants rejected')
+    need(rejected==7,'all seven false-proof variants rejected')
     return {'initial_21_regions_preserved':True,'false_proof_variants_rejected':rejected}
 
 
 if __name__=='__main__':
     print(json.dumps({'passed':True,'rotation_saturation':rotation_checks(),
         'logarithm_arithmetic':logarithm_checks(),'Taylor_arithmetic':Taylor_checks(),
+        'global_quadratic_arithmetic':quadratic_checks(),
+        'quadratic_vertex_arithmetic':vertex_checks(),
         'coverage_guards':guard_checks(),'full_eight_point_exclusion_proved':False},indent=2))

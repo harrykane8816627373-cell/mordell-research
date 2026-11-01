@@ -30,9 +30,26 @@
     ],
     "wide_pole_box_rejected_as_inconclusive": true
   },
+  "global_quadratic_arithmetic": {
+    "independent_scalar_quadratic_maxima": 150,
+    "weighted_Laplacian_square_identity": true,
+    "arbitrary_distant_reference_centers": 3,
+    "nonempty_actual_wide_box_radius": "1/16",
+    "legacy_Taylor_unavailable_on_wide_box": true,
+    "wide_box_log_upper": "-2110383545355/274877906944",
+    "wide_box_is_claimed_to_pass_all_old_global_cuts": false,
+    "floating_point_acceptance": false
+  },
+  "quadratic_vertex_arithmetic": {
+    "independent_Cartesian_enumeration_cases": 6,
+    "independently_enumerated_vertices": 1152,
+    "wide_box_log_upper": "-10063752362573/1099511627776",
+    "maximum_vertices_per_physical_box": 512,
+    "floating_point_acceptance": false
+  },
   "coverage_guards": {
     "initial_21_regions_preserved": true,
-    "false_proof_variants_rejected": 4
+    "false_proof_variants_rejected": 7
   },
   "full_eight_point_exclusion_proved": false
 }
