@@ -1,0 +1,8 @@
+{
+  "construction": "householder_mass7_v1",
+  "target_grid_denominator": 1024,
+  "target_coordinates": [1169, -1161, -14, -455, -909, -474, 914, -387, 4, 384, 5, 484, -948],
+  "reflection_coefficient": "7588352/7583629",
+  "negative_principal_pair": [0, 5],
+  "purpose": "A centred exact mass-seven old-ellipse input retained by all 127 indicator probes but rejected by a complex two-column Gram minor; not a stationary or target-value counterexample."
+}

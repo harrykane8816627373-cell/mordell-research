@@ -1,0 +1,255 @@
+{
+  "passed": true,
+  "parent_commit": "e846b8e9be902a636787974fba1e219cddc8f495",
+  "parent_certificate_sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b",
+  "attachment_sha256": "87c08af482404117068462cf7151464f4685509523bb64f0e998ae7ca48204fb",
+  "force_certificate_sha256": "2f2af13b0164ded1fc5b199874c76f790b0e3c713fa4b432b36d86525d22b30b",
+  "scope": "global_maximum",
+  "parent_frontier_regions": 21,
+  "force_tree_nodes": 25801,
+  "processed_nodes": 25790,
+  "imported_processed_nodes": 5846,
+  "new_processed_nodes": 19944,
+  "endpoint_distance_processed_nodes": 4867,
+  "counts": {
+    "joint_force/centered_mass_range": 1,
+    "joint_force/ellipse_covariance": 224,
+    "joint_force/ellipse_split_log": 22,
+    "joint_force/force_affine_exact": 1149,
+    "joint_force/force_sign": 334,
+    "joint_force/geometry": 95,
+    "joint_force/mass_centered_quadratic": 1656,
+    "joint_force/mass_envelope_log": 391,
+    "joint_force/mass_or_radius": 681,
+    "joint_force/mass_quadratic_log": 12,
+    "joint_force/mass_quadratic_vertices": 483,
+    "joint_force/maximum_radius": 762,
+    "joint_force/old_ellipse": 69,
+    "joint_force/ordered_separation": 978,
+    "joint_force/ordering": 5,
+    "joint_force/polynomial_Ward_1": 131,
+    "joint_force/separation": 976,
+    "joint_force/strict_subset": 866,
+    "joint_force_global/centered_mass_range": 10,
+    "joint_force_global/ellipse_covariance": 2,
+    "joint_force_global/ellipse_split_log": 20,
+    "joint_force_global/force_affine_exact": 800,
+    "joint_force_global/force_sign": 1,
+    "joint_force_global/mass_centered_quadratic": 339,
+    "joint_force_global/mass_envelope_log": 146,
+    "joint_force_global/mass_or_radius": 69,
+    "joint_force_global/mass_quadratic_log": 1,
+    "joint_force_global/mass_quadratic_vertices": 121,
+    "joint_force_global/maximum_radius": 108,
+    "joint_force_global/old_ellipse": 55,
+    "joint_force_global/ordered_separation": 353,
+    "joint_force_global/polynomial_Ward_1": 6,
+    "joint_force_global/separation": 40,
+    "joint_force_global/strict_subset": 363,
+    "split": 12890,
+    "unresolved": 11,
+    "uploaded/ellipse": 7,
+    "uploaded/force_affine": 907,
+    "uploaded/force_taylor": 143,
+    "uploaded/radius": 25,
+    "uploaded/separation": 549
+  },
+  "uploaded_six_closed_regions": [
+    9976,
+    10012,
+    10014,
+    10016,
+    10019,
+    10020
+  ],
+  "total_closed_parent_regions": 10,
+  "closed_parent_ids": [
+    1282,
+    7062,
+    7954,
+    9814,
+    9976,
+    10012,
+    10014,
+    10016,
+    10019,
+    10020
+  ],
+  "newly_closed_beyond_upload": [
+    1282,
+    7062,
+    7954,
+    9814
+  ],
+  "remaining_parent_regions": 11,
+  "remaining_parent_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "open_leaf_boxes": 11,
+  "combined_tree_nodes": 355801,
+  "combined_excluded_leaves": 177890,
+  "frontier": [
+    {
+      "parent_region_id": 0,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        0
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 1,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        1
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 2,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        2
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 3,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        3
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 4,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        4
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 5,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        5
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 6,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        6
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 7,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        7
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 8,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        8
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 9,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        9
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 10,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        10
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 1282,
+      "excluded_leaves": 2434,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 7062,
+      "excluded_leaves": 6134,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 7954,
+      "excluded_leaves": 1653,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 9814,
+      "excluded_leaves": 2653,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 9976,
+      "excluded_leaves": 9,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10012,
+      "excluded_leaves": 4,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10014,
+      "excluded_leaves": 3,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10016,
+      "excluded_leaves": 1,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10020,
+      "excluded_leaves": 8,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10019,
+      "excluded_leaves": 1,
+      "open_leaves": [],
+      "closed": true
+    }
+  ],
+  "unchanged_parent_arithmetic_inputs": 36,
+  "parent_arithmetic_replayed_by_this_checker": false,
+  "complete_cover": false,
+  "full_eight_point_exclusion_proved": false
+}

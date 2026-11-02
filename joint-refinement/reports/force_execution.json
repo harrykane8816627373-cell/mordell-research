@@ -5,7 +5,11 @@
   "inherited_dependency_proof_reused": true,
   "parent_chain_reused": true,
   "unchanged_parent_arithmetic_inputs": 36,
-  "new_exact_entries_replayed": 3,
+  "checkpoint_prefix_reused": true,
+  "checkpoint_processed_nodes_reused": 25790,
+  "unchanged_checkpoint_arithmetic_inputs": 50,
+  "force_processed_nodes_replayed_this_invocation": 35001,
+  "new_exact_entries_replayed": 4,
   "independent_attachment_replayer_uses_assert": false,
   "full_eight_point_exclusion_proved": false
 }

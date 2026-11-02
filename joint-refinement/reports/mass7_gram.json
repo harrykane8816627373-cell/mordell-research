@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "mass": 7,
+  "centred": true,
+  "reflection_coefficient": "7588352/7583629",
+  "old_ellipse_strict_upper": "1/5",
+  "both_old_moments_nonzero": true,
+  "squared_separation_strict_lower": "1/2",
+  "squared_radius_strict_upper": "49/32",
+  "radial_deficit_strict_lower": "1/1200",
+  "single_column_budgets_strictly_satisfied": 8,
+  "indicator_inequalities_strictly_satisfied": 127,
+  "negative_principal_pair": [
+    0,
+    5
+  ],
+  "negative_determinant_strict_interval": [
+    "-7/500",
+    "-1/100"
+  ],
+  "old_interval_probes_retain_input": true,
+  "new_interval_pair_Gram_rejects_input": true,
+  "stationarity_satisfied": false,
+  "target_threshold_satisfied": false,
+  "illustrative_probe_separation_only": true,
+  "floating_point_acceptance": false,
+  "full_eight_point_exclusion_proved": false
+}

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "correlated_edge_arithmetic": {
+    "independent_actual_corners": 8,
+    "independent_exact_edge_records": 448,
+    "known_shifted_force_Newton_images": 16,
+    "strictly_improved_edges_at_midpoint": 5,
+    "independent_complex_remainder_components": 256,
+    "known_complex_remainder_Newton_images": 16,
+    "strictly_improved_remainder_components_at_midpoint": 15,
+    "arbitrary_reference_outside_box_checked": true,
+    "odd_width_half_grid_center_checked": true,
+    "previous_midpoint_bound_dominated": true,
+    "floating_point_acceptance": false
+  },
+  "full_Hessian_pair_Gram": {
+    "independent_complex_principal_determinants": 84,
+    "strict_improvement_example_scale": "45/32",
+    "strict_improvement_example_mass": "14175/1024",
+    "strict_improvement_negative_determinant": "-489668627445551391294272/19927279307375244140625",
+    "old_exact_indicator_inequalities_satisfied": 127,
+    "all_single_column_budgets_satisfied_in_strict_example": true,
+    "wide_positive_Hessian_input_retained": true,
+    "all_two_column_tests_are_only_necessary": true,
+    "floating_point_acceptance": false
+  },
+  "checkpoint_reuse_guards": {
+    "accepted_processed_nodes": 25790,
+    "unchanged_arithmetic_inputs": 50,
+    "unchanged_checkpoint_has_no_new_progress": true,
+    "false_checkpoint_variants_rejected": 11,
+    "acceptance_uses_assert": false,
+    "old_arithmetic_replayed_by_this_test": false
+  },
+  "full_eight_point_exclusion_proved": false
+}

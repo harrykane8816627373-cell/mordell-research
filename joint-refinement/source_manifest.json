@@ -1,7 +1,7 @@
 {
   "date": "2026-11-02",
   "base_commit": "e846b8e9be902a636787974fba1e219cddc8f495",
-  "purpose": "Pinned original six-closure upload, exact force/Newton enclosures and composed frontier proof.",
+  "purpose": "Pinned original uploads, accepted force checkpoint, edge-correlated and complex remainders, pair Gram stability and composed frontier proof.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -189,14 +189,19 @@
       "sha256": "7f451343d3e2b0d63a280aad626360a9fffac6be0082e65497c1d1c488f5614a"
     },
     {
+      "path": "joint-refinement/EDGE_REMAINDERS.md",
+      "bytes": 10849,
+      "sha256": "72ed3a85dcf6600ecbc0def04b6b70390ae5ddd734df7655de544f20944b6959"
+    },
+    {
       "path": "joint-refinement/FORCE_CLOSURES.md",
-      "bytes": 10100,
-      "sha256": "ecbb9de8ff4aa4e484d98182137de6e588be8488250bc369410bc568ec30954f"
+      "bytes": 10480,
+      "sha256": "f527491071cf1d9e9756d1b1edcf29ab42d8f8c0adbd5c4d8691a3cdf0a3a479"
     },
     {
       "path": "joint-refinement/FORCE_PROVENANCE.json",
-      "bytes": 2016,
-      "sha256": "e3ba16fc190eae81f47e4fad3bbed6f4857f01483d221ed62141eafe22b09d19"
+      "bytes": 2825,
+      "sha256": "e10bd280e7b62cabd7dce92f851894306b1608f51ce6d4a82157aceb0b753421"
     },
     {
       "path": "joint-refinement/GLOBAL_QUADRATIC.md",
@@ -225,8 +230,8 @@
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 10078,
-      "sha256": "285477826bbf5b1b006d976b167ecd82336cc43c025dde11c079f97f4ac79663"
+      "bytes": 10710,
+      "sha256": "0c2558e8c6b5e208eefe7d73e1fe43478580b4c2440a59b5da5a6d66d4412999"
     },
     {
       "path": "joint-refinement/audit_six.py",
@@ -244,9 +249,24 @@
       "sha256": "20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e"
     },
     {
-      "path": "joint-refinement/certificates/force_extension.json.gz",
+      "path": "joint-refinement/certificates/force_checkpoint_768598a.json",
+      "bytes": 9061,
+      "sha256": "213ccb3f16f35fd8067255ffb8d4b8e659c47e7a15e66d9b75c00f4211087d8c"
+    },
+    {
+      "path": "joint-refinement/certificates/force_checkpoint_768598a.json.gz",
       "bytes": 102526,
       "sha256": "2f2af13b0164ded1fc5b199874c76f790b0e3c713fa4b432b36d86525d22b30b"
+    },
+    {
+      "path": "joint-refinement/certificates/force_checkpoint_768598a_report.json",
+      "bytes": 6020,
+      "sha256": "7e631b147a74dc883d81389027086c1b9ec7f400996593c1b46d3bcb154d2cf6"
+    },
+    {
+      "path": "joint-refinement/certificates/force_extension.json.gz",
+      "bytes": 259069,
+      "sha256": "173bf7f6ccf804a687afbb122af5b9130625f455ef2c104e1e3f2dbef390184f"
     },
     {
       "path": "joint-refinement/certificates/force_parent.json",
@@ -257,6 +277,11 @@
       "path": "joint-refinement/certificates/joint_extension.json.gz",
       "bytes": 43463,
       "sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b"
+    },
+    {
+      "path": "joint-refinement/certificates/mass7_gram_witness.json",
+      "bytes": 455,
+      "sha256": "0ff5888f0c5f61765d558fb763820e0645e00b4523f1d8ab48747f1bbda6a6b4"
     },
     {
       "path": "joint-refinement/certificates/prior_frontier.json",
@@ -270,13 +295,23 @@
     },
     {
       "path": "joint-refinement/check_force.py",
-      "bytes": 8016,
-      "sha256": "3dba6c33fb21ac899d7af1d5fe0b1cf5969c99964a5d7a7f4afa5a6b480693aa"
+      "bytes": 10041,
+      "sha256": "5565612989c27588f50f2caafcd6cf842a0f0508e8c2afea28bdc7880d03b78f"
     },
     {
       "path": "joint-refinement/check_joint.py",
       "bytes": 6943,
       "sha256": "205bb47cc1ac2f06b1ef9882e87bd5c2d75e97967b48cab95f134b3bbc4416ae"
+    },
+    {
+      "path": "joint-refinement/checkpoint_force.py",
+      "bytes": 2920,
+      "sha256": "9e4baaed72b3c7ec38b5f543542cfa2f1527b8ceb1c3ba080623e07617a670a5"
+    },
+    {
+      "path": "joint-refinement/edge_force.py",
+      "bytes": 4831,
+      "sha256": "ea48d4e926f8b38d2c35cb30733b5b17c7cdc5ca35b4f15bb3b88764e26e55fc"
     },
     {
       "path": "joint-refinement/ellipse_dual.py",
@@ -294,6 +329,11 @@
       "sha256": "8ba95115253ab5bb053deae772030260681a7f968594b70427099fcbcb000086"
     },
     {
+      "path": "joint-refinement/gram_force.py",
+      "bytes": 392,
+      "sha256": "30972b161b786532f901754b2f5bfff9d7b61b606549806d456be2b3a42b211a"
+    },
+    {
       "path": "joint-refinement/inherited/mordell-eight-point-six-closures-2026-11-01.zip",
       "bytes": 52209,
       "sha256": "87c08af482404117068462cf7151464f4685509523bb64f0e998ae7ca48204fb"
@@ -304,9 +344,24 @@
       "sha256": "b40895aa3717ae1b29c923a99505276d48297ad27e9bca1f3486169ef5d90061"
     },
     {
+      "path": "joint-refinement/pair_gram.py",
+      "bytes": 1321,
+      "sha256": "db45ef081ea1c8855b9efa4969c7ff64a23b3251ba400e80bbb9dc57e4711af7"
+    },
+    {
+      "path": "joint-refinement/phase_force.py",
+      "bytes": 3749,
+      "sha256": "0a67ff774d506345af834fe0ea3ae2f063f4ff620051912f6c30c9288ec967ff"
+    },
+    {
       "path": "joint-refinement/propose.py",
       "bytes": 3562,
       "sha256": "5afdd108bf1ed9f1a8317db88d3f2b04220c41d0f8895c750d403c2c8a6d6701"
+    },
+    {
+      "path": "joint-refinement/propose_edge.py",
+      "bytes": 3729,
+      "sha256": "ed267cc0a5ba3afc63b676d8467d3e85de59b3d959105939c0ae7d3961a7c3a7"
     },
     {
       "path": "joint-refinement/propose_force.py",
@@ -344,6 +399,11 @@
       "sha256": "9a4cf735fbd0b096d85ba7b9716802aa561d34fe6d2822a818e514b2fc5e45a1"
     },
     {
+      "path": "joint-refinement/reports/edge_arithmetic.json",
+      "bytes": 1520,
+      "sha256": "92e679755b0c54f816979a036f6dd596134b6a2f7a560db345cc34682ad66de0"
+    },
+    {
       "path": "joint-refinement/reports/ellipse_dual.json",
       "bytes": 1685,
       "sha256": "1e47951252f2f7066b694f502208dd890845721cdca6a32e40ae33770cb987a4"
@@ -355,13 +415,13 @@
     },
     {
       "path": "joint-refinement/reports/force_cover.json",
-      "bytes": 6020,
-      "sha256": "7e631b147a74dc883d81389027086c1b9ec7f400996593c1b46d3bcb154d2cf6"
+      "bytes": 7652,
+      "sha256": "06c49ad2867731a1b6afa2eda64864c259b11c94faaefa1c9d76cc798b5c6849"
     },
     {
       "path": "joint-refinement/reports/force_execution.json",
-      "bytes": 396,
-      "sha256": "8a3aa4ee9a582c76d77a62fa2f55e0ad0b52f8ad7ab4ab29a7c77981760e6931"
+      "bytes": 589,
+      "sha256": "48e2277f7f493a8f74c959f4632e679b6fce0ffd561453cfffe59b5285a4f6bc"
     },
     {
       "path": "joint-refinement/reports/force_import.json",
@@ -382,6 +442,11 @@
       "path": "joint-refinement/reports/joint_execution.json",
       "bytes": 252,
       "sha256": "9528c9116257cdcd0fd28f9dccddc28d668467035e9a2d16372ab1b5024ed16f"
+    },
+    {
+      "path": "joint-refinement/reports/mass7_gram.json",
+      "bytes": 824,
+      "sha256": "9d0ca833c5984a007f0e572400514348afb293033d43d835760d2f13b31c8aa8"
     },
     {
       "path": "joint-refinement/reports/mass_dual.json",
@@ -409,14 +474,19 @@
       "sha256": "630222a6d67726cbce720f660ed3b91cd79285267922835a64f32b0344e28eeb"
     },
     {
+      "path": "joint-refinement/verify_edge_force.py",
+      "bytes": 11897,
+      "sha256": "47178f00ce79db0889af7cd3b665aac684ae72bacc1f888149b58b084e2541a3"
+    },
+    {
       "path": "joint-refinement/verify_ellipse_dual.py",
       "bytes": 7526,
       "sha256": "44f2b9a4a44a3800f66fe4412d3193a07dff4c57aba30092e2910a1223897346"
     },
     {
       "path": "joint-refinement/verify_force.py",
-      "bytes": 4714,
-      "sha256": "4e4d71aa9842cfc95e89b7e99882564e20dc26605013924336165b4ee9277f35"
+      "bytes": 6119,
+      "sha256": "c3d3b60c4f47b67aba47c61ff49f8668a52137010506c29cf33fb6a41f90c20a"
     },
     {
       "path": "joint-refinement/verify_force_enclosure.py",
@@ -427,6 +497,11 @@
       "path": "joint-refinement/verify_joint.py",
       "bytes": 4777,
       "sha256": "7de0bbb68ebb6ec095ed53fb0413bb9aec25b04233a8c21a9fcce9dd9b7add9b"
+    },
+    {
+      "path": "joint-refinement/verify_mass7_gram.py",
+      "bytes": 4846,
+      "sha256": "777ccd211a9bad15733bbd435fe2ec1db22f83c20ebc4206c3479e744e00d88e"
     },
     {
       "path": "joint-refinement/verify_mass_dual.py",

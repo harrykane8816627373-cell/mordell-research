@@ -25,7 +25,7 @@ python -B -S -O radial-gap/verify_all.py
 
 ## 联合物理系统与部分覆盖
 
-当前完整续算入口先重放完整父链，再独立重放上传证书、精确力余项/Newton算术及全部力方程总树，共3个新增入口：
+当前完整续算入口先重放完整父链，再独立重放上传证书、精确力余项/Newton算术、相关点差/复余项/二列Gram检查及全部力方程总树，共4个新增入口：
 
 ~~~bash
 python -B -S -O joint-refinement/verify_force.py
@@ -47,9 +47,11 @@ python -B -S -O scripts/verify_current.py --refinement
 
 父阶段[联合证明](../joint-refinement/JOINT_STABILITY.md)给出内点条件 min|qᵢ|²<3/4、严格四阶径向预算与旧椭圆的两个参数包络。新算术独立穷举267220对整数参数，并按系数核对平方和分解、105个 Bernstein 查询与201个质量参数；六份伪造覆盖必须被拒绝。
 
-固定e846b8e父链已经准确验收且36个旧算术输入未变时，可使用 `verify_force.py --parent-already-replayed`。本轮采用此方式，从固定输入临时副本重放全部5846个上传步骤、19944个新增步骤和新算术；[执行记录](../joint-refinement/reports/force_execution.json)明确报告父链没有在本次调用中重跑。首次复核应使用不带跳过参数的默认完整命令。
+固定e846b8e父链已验收且36个旧算术输入未变时，可用 `--parent-already-replayed`。若768598a的25790个处理步骤及其父链也已验收，可用 `--checkpoint-already-replayed`；程序固定原证书、报告、元数据，检查50个旧算术输入未变，要求旧处理步骤全部原样保留，再逐节点重放所有后代。本次采用后者，在固定输入临时副本实际重放35001个新增处理步骤。[执行记录](../joint-refinement/reports/force_execution.json)明确报告复用范围；首次复核使用不带跳过参数的默认完整命令。
 
 [力方程联合证明](../joint-refinement/FORCE_CLOSURES.md)核对312个复Jacobian条目、24个精确余项、3个已知目标力的Newton像，以及局部圆盘不确定而终点点距可用的条件外包；254个指示向量模式核对完整Hessian必要谱条件，8份伪造覆盖必须被拒绝。上传门槛729/1000按全部多项式系数复核。新增接受检查不使用 `assert`，`-O` 不会跳过它们；原ZIP完整保留。
+
+[新的独立检查](../joint-refinement/EDGE_REMAINDERS.md)另外核对448条点差记录、256个复余项分量、两种必要像各16个已知解，以及84个复Gram主子式；11种伪造检查点必须被拒绝。另有质量7、旧椭圆内的严格探针加强见证，单独运行 `python -B -S -O joint-refinement/verify_mass7_gram.py` 可复算其有理反射、全部127个旧不等式和负主子式。该演示不作为总树叶的依赖。当前总账有11个未闭合原域、30个开放后代盒，完整排空仍未完成。
 
 `reports/force_cover.json` 是最新力方程总账；`reports/joint_cover.json` 和 `reports/cover.json` 分别保留e846b8e、92fbc4d父快照报告。`summarize_frontier.py` 只核对2f25467到92fbc4d的历史边界，不能替代最新增量的算术重放。
 

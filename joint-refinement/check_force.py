@@ -45,7 +45,7 @@ def parent_data():
     return parent,report,settings,meta
 
 
-def check(path,progress=False):
+def check(path,progress=False,reuse_checkpoint=False):
     parent,old_report,settings,meta=parent_data()
     initial=initialize()
     raw=path.read_bytes()
@@ -55,6 +55,11 @@ def check(path,progress=False):
         'bound force model, attachment and parent')
     need(data['roots']==initial['roots'],'all original twenty-one parent regions are covered once')
     nodes=data['nodes']
+    checkpoint=None
+    if 'checkpoint_sha256' in data or reuse_checkpoint:
+        import checkpoint_force as P
+        checkpoint=P.load_checkpoint()
+        P.descendant(data,checkpoint[0])
     need(len(nodes)>=len(initial['nodes']),'entire imported forest retained')
     imported_processed=0
     for i,node in enumerate(initial['nodes']):
@@ -76,7 +81,14 @@ def check(path,progress=False):
     seen=set()
     counts=Counter()
     engines=Counter()
-    newtons=0
+    if reuse_checkpoint:
+        base,accepted,_=checkpoint
+        seen={i for i,node in enumerate(base['nodes']) if node['kind']!='unknown'}
+        counts=Counter({k:v for k,v in accepted['counts'].items() if k!='unresolved'})
+        engines=Counter(n['engine'] for n in base['nodes'] if n['kind']!='unknown')
+        stack=[(i,[tuple(p) for p in b],r) for i,b,r in base['pending']]
+        for row in accepted['frontier']:
+            frontier[row['parent_region_id']]['excluded_leaves']=row['excluded_leaves']
     while stack:
         i,original,root=stack.pop()
         need(type(i) is int and 0<=i<len(nodes) and i not in seen,'disjoint acyclic force forest')
@@ -88,13 +100,22 @@ def check(path,progress=False):
             frontier[root]['open_leaves'].append(i)
             counts['unresolved']+=1
             continue
-        need(i not in pending and node['engine'] in ['uploaded','joint_force','joint_force_global'],'known processed engine')
+        need(i not in pending and node['engine'] in ['uploaded','joint_force','joint_force_global','joint_force_edge','joint_force_phase','joint_force_gram'],'known processed engine')
         engines[node['engine']]+=1
         if node['engine']=='uploaded':
             box,reason=original,None
             if node['kind']=='excluded':
                 need(A.excludes(box,node['reason']),'independent exact uploaded whole-box rejection')
                 reason=node['reason']
+        elif node['engine']=='joint_force_edge':
+            import edge_force
+            box,reason,aux=edge_force.contract(original,settings)
+        elif node['engine']=='joint_force_phase':
+            import phase_force
+            box,reason,aux=phase_force.contract(original,settings)
+        elif node['engine']=='joint_force_gram':
+            import gram_force
+            box,reason,aux=gram_force.contract(original,settings)
         else:
             endpoint=settings['separation'] if node['engine']=='joint_force_global' else None
             box,reason,aux=K.contract(original,settings,endpoint_separation=endpoint)
@@ -126,8 +147,15 @@ def check(path,progress=False):
         'attachment_sha256':A.ZIP_SHA256,'force_certificate_sha256':hashlib.sha256(raw).hexdigest(),
         'scope':'global_maximum','parent_frontier_regions':21,'force_tree_nodes':len(nodes),
         'processed_nodes':len(nodes)-len(pending),'imported_processed_nodes':imported_processed,
-        'new_processed_nodes':engines['joint_force']+engines['joint_force_global'],
+        'new_processed_nodes':sum(v for k,v in engines.items() if k!='uploaded'),
         'endpoint_distance_processed_nodes':engines['joint_force_global'],'counts':dict(sorted(counts.items())),
+        'edge_correlated_processed_nodes':engines['joint_force_edge'],
+        'complex_remainder_processed_nodes':engines['joint_force_phase'],
+        'pair_Gram_processed_nodes':engines['joint_force_gram'],
+        'checkpoint_sha256':data.get('checkpoint_sha256'),
+        'checkpoint_processed_nodes':checkpoint[1]['processed_nodes'] if checkpoint else 0,
+        'processed_since_checkpoint':len(nodes)-len(pending)-checkpoint[1]['processed_nodes'] if checkpoint else None,
+        'newly_closed_since_checkpoint':sorted(set(closed)-set(checkpoint[1]['closed_parent_ids'])) if checkpoint else [],
         'uploaded_six_closed_regions':list(A.CLOSED),'total_closed_parent_regions':len(closed),
         'closed_parent_ids':closed,'newly_closed_beyond_upload':sorted(set(closed)-set(A.CLOSED)),
         'remaining_parent_regions':len(remaining),'remaining_parent_ids':remaining,'open_leaf_boxes':len(pending),
@@ -141,5 +169,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('certificate',type=Path)
     parser.add_argument('--progress',action='store_true')
+    parser.add_argument('--reuse-checkpoint',action='store_true',
+        help='only when the exact archived 768598a proof is already accepted; checks all 50 unchanged arithmetic inputs')
     args=parser.parse_args()
-    print(json.dumps(check(args.certificate,args.progress),indent=2))
+    print(json.dumps(check(args.certificate,args.progress,args.reuse_checkpoint),indent=2))

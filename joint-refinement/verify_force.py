@@ -17,6 +17,8 @@ def main():
         help='only when the exact e846b8e parent proof chain is already accepted and its 36 arithmetic inputs are unchanged')
     group.add_argument('--legacy-inputs-already-replayed',action='store_true',
         help='caller has replayed joint-closure and its prior inputs; still replay both later parent forests')
+    group.add_argument('--checkpoint-already-replayed',action='store_true',
+        help='reuse exactly the accepted 768598a force prefix and parent chain; replay all descendants and check 50 unchanged arithmetic inputs')
     parser.add_argument('--record-reports',action='store_true')
     args=parser.parse_args()
     manifest_raw=(HERE/'source_manifest.json').read_bytes()
@@ -41,32 +43,43 @@ def main():
                 cwd=stage,env=env,stdout=subprocess.PIPE,text=True,encoding='utf-8',timeout=3600)
             need(result.returncode==0,script+': '+result.stdout[-3000:])
             return result.stdout
-        if args.parent_already_replayed:print('REUSE accepted e846b8e parent; all 36 arithmetic inputs must match',flush=True)
+        if args.checkpoint_already_replayed:
+            print('REUSE accepted 768598a prefix (25,790 processed nodes) and parent chain; all 50 arithmetic inputs must match',flush=True)
+        elif args.parent_already_replayed:print('REUSE accepted e846b8e parent; all 36 arithmetic inputs must match',flush=True)
         else:
             arguments=['--legacy-inputs-already-replayed'] if args.legacy_inputs_already_replayed else []
             run('verify_joint.py',*arguments)
             print('PASS complete accepted parent proof chain',flush=True)
         entries=[('audit_six.py',['joint-refinement/inherited/mordell-eight-point-six-closures-2026-11-01.zip'],'force_import.json'),
             ('verify_force_enclosure.py',[],'force_arithmetic.json'),
-            ('check_force.py',['joint-refinement/certificates/force_extension.json.gz','--progress'],'force_cover.json')]
+            ('verify_edge_force.py',[],'edge_arithmetic.json'),
+            ('check_force.py',['joint-refinement/certificates/force_extension.json.gz','--progress']+
+                (['--reuse-checkpoint'] if args.checkpoint_already_replayed else []),'force_cover.json')]
         for script,arguments,name in entries:
             result=json.loads(run(script,*arguments))
-            need(result['passed'] is True and result['full_eight_point_exclusion_proved'] is False,'honest new partial proof status')
+            need(result['passed'] is True,'successful exact proof entry')
+            if name!='force_cover.json':need(result['full_eight_point_exclusion_proved'] is False,'arithmetic lemma alone is not global exclusion')
+            else:need(result['full_eight_point_exclusion_proved'] is (result['open_leaf_boxes']==0),
+                'complete exclusion requires zero unresolved coordinate boxes')
             if not args.record_reports:
                 expected=json.loads((stage/'joint-refinement/reports'/name).read_text())
                 need(result==expected,'deterministic exact report '+name)
             results[name]=result
             print('PASS '+script,flush=True)
-    execution={'passed':True,'parent_forests_replayed_this_invocation':not args.parent_already_replayed,
-        'parent_full_chain_replayed_this_invocation':not (args.parent_already_replayed or args.legacy_inputs_already_replayed),
-        'inherited_dependency_proof_reused':args.parent_already_replayed or args.legacy_inputs_already_replayed,
-        'parent_chain_reused':args.parent_already_replayed,'unchanged_parent_arithmetic_inputs':36,
-        'new_exact_entries_replayed':3,'independent_attachment_replayer_uses_assert':False,
-        'full_eight_point_exclusion_proved':False}
+    cover=results['force_cover.json']
+    execution={'passed':True,'parent_forests_replayed_this_invocation':not (args.parent_already_replayed or args.checkpoint_already_replayed),
+        'parent_full_chain_replayed_this_invocation':not (args.parent_already_replayed or args.legacy_inputs_already_replayed or args.checkpoint_already_replayed),
+        'inherited_dependency_proof_reused':args.parent_already_replayed or args.legacy_inputs_already_replayed or args.checkpoint_already_replayed,
+        'parent_chain_reused':args.parent_already_replayed or args.checkpoint_already_replayed,'unchanged_parent_arithmetic_inputs':36,
+        'checkpoint_prefix_reused':args.checkpoint_already_replayed,
+        'checkpoint_processed_nodes_reused':25790 if args.checkpoint_already_replayed else 0,
+        'unchanged_checkpoint_arithmetic_inputs':50 if args.checkpoint_already_replayed else 0,
+        'force_processed_nodes_replayed_this_invocation':cover['processed_nodes']-(25790 if args.checkpoint_already_replayed else 0),
+        'new_exact_entries_replayed':4,'independent_attachment_replayer_uses_assert':False,
+        'full_eight_point_exclusion_proved':cover['full_eight_point_exclusion_proved']}
     if args.record_reports:
         for name,result in results.items():(HERE/'reports'/name).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
         (HERE/'reports/force_execution.json').write_text(json.dumps(execution,indent=2)+'\n',encoding='utf-8')
-    cover=results['force_cover.json']
     print(json.dumps(dict(execution,total_closed_parent_regions=cover['total_closed_parent_regions'],
         newly_closed_beyond_upload=cover['newly_closed_beyond_upload'],remaining_parent_regions=cover['remaining_parent_regions'],
         open_leaf_boxes=cover['open_leaf_boxes'],combined_tree_nodes=cover['combined_tree_nodes'],
