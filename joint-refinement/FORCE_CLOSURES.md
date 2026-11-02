@@ -2,7 +2,7 @@
 
 2026-11-02。蒋丰灿（Fengcan Jiang）研究项目；OpenAI Codex 协作。
 
-最新点差、复余项与二列稳定性进展见[后续证明](EDGE_REMAINDERS.md)。本页记录768598a已验收阶段：将用户上传的 `mordell-eight-point-six-closures-2026-11-01.zip` 与仓库 e846b8e 的完整联合约束接合。**整个八点非零矩分支仍未排空。** 最新关闭的原区域、尚未关闭的原区域和开放后代盒分别列在[力方程覆盖报告](reports/force_cover.json)，不能把它们混作驻点数。
+最新整体进展见[共同子集预算](SUBSET_BUDGET.md)和[119/80半径证明](TARGET_RADIUS.md)；8be9f91点差与复余项阶段见[后续证明](EDGE_REMAINDERS.md)。本页记录768598a已验收阶段：将用户上传的 `mordell-eight-point-six-closures-2026-11-01.zip` 与仓库 e846b8e 的完整联合约束接合。**整个八点非零矩分支仍未排空。** 最新关闭的原区域、尚未关闭的原区域和开放后代盒分别列在[力方程覆盖报告](reports/force_cover.json)，不能把它们混作驻点数。
 
 ## 1. 输入、来源和独立复核
 

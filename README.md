@@ -14,20 +14,20 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[复余项与二列稳定性](joint-refinement/EDGE_REMAINDERS.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
+|八点最新进展与准确剩余分支|[子集预算与当前排空](joint-refinement/SUBSET_BUDGET.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 当前联合排除：复余项与完整稳定性加强
+## 当前联合排除：119/80半径与共同子集预算
 
-此前已合并六项闭合附件，并进一步闭合1282、7062、7954、9814，累计关闭原21域中的10域。本次继续处理 **35001个节点**，新增 **17491个排除叶**；尚未整域关闭的仍为 **11个原区域（0–10）**，细分后有 **30个开放叶盒**。这些坐标外包不是已分类驻点。
+本轮完整排空了 **原编号10的整个区域**，未闭合原区域从11个降为 **10个（0–9）**。按上轮30个开放盒逐项追踪，其中 **16个已包含全部后代地关闭**，剩余 **14个开放盒**；它们是连续坐标外包，不是14个驻点。[完整闭合与当前边界](joint-refinement/SUBSET_BUDGET.md)
 
-新方法直接包围13个真实变量所给的点差，保留有限倒数恒等式中复余项的实部、虚部，再联合Newton必要像、旧椭圆、质量和目标值条件。另加入完整Hessian对应Gram矩阵的28个二阶主子式；给出精确质量7、旧椭圆内、二三阶矩非零的有理见证：全部127个旧子集谱不等式通过，而新主子式严格为负；该见证不满足驻点和目标值条件。[新证明与独立检查](joint-refinement/EDGE_REMAINDERS.md)
+联合已有七点锐界、八点目标阈值与Schwarz引理，得到全局最优者的新必要条件 **maxᵢ|qᵢ|²<119/80**，原未量化界为49/32。证明保留七点完整驻点分类的既有外部依赖，没有把该条件推广到任意稳定驻点。[完整解析证明](joint-refinement/TARGET_RADIUS.md)
 
-合并总账为390821个节点、195381个排除叶。4个接受入口已从固定输入临时副本通过，实际重放全部35001个新增处理步骤；此前已验收的25790个旧步骤及父链按固定检查点复用，50个旧算术输入逐字节未变。[执行范围](joint-refinement/reports/force_execution.json)与[全部开放叶](joint-refinement/reports/force_cover.json)分别记录，**完整八点锐界仍未证明**。
+搜索还把严格真子集的点距和改写为共同质量与子集重心预算，并传播给每个实际点。6个接受入口从固定输入临时副本通过，实际重放 **33608个新增处理步骤**，新增 **16812个排除叶**；60791个已验收步骤及祖先链按固定前缀复用，61个旧算术输入逐字节未变。[执行范围](joint-refinement/reports/force_execution.json)
 
-附件已有的更强内点门槛 minᵢ|qᵢ|²<729/1000 继续保留，使用质量7、真实驻点、旧椭圆及完整Hessian假设；对应无内点驻点上的严格负曲率间隙为 λ_min(H)<−1/4000。[附件结果、来源与既有闭合](joint-refinement/FORCE_CLOSURES.md)
+合并总账为424413个节点、212193个排除叶。[最新覆盖报告](joint-refinement/reports/force_cover.json)保留全部14个开放盒，**完整八点锐界仍未证明**。此前729/1000内点门槛、−1/4000无内点负曲率间隙、旧椭圆、真实逐点力方程及完整Hessian条件继续保留。[已有结果与来源](joint-refinement/FORCE_CLOSURES.md)
 
 ## 上一阶段：等价多项式矩阵与冻结覆盖
 

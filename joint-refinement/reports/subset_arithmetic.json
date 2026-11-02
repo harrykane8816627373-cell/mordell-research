@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "subset_budget_arithmetic": {
+    "subset_classes": 246,
+    "independent_corner_identities": 1968,
+    "independent_dependent_centroid_enclosures": 1968,
+    "known_mass7_boxes_retained": 5,
+    "all_246_strict_subset_inequalities_verified_for_retained_point": true,
+    "continuous_shared_budget_strictly_improves_naive_pair_bounds": true,
+    "strict_threshold_rational_equality_checked": true,
+    "global_scope_guard_checked": true,
+    "floating_point_acceptance": false
+  },
+  "accepted_prefix_guards": {
+    "accepted_processed_nodes": 60791,
+    "unchanged_arithmetic_inputs": 61,
+    "false_recent_prefix_variants_rejected": 8,
+    "old_arithmetic_replayed_by_this_test": false,
+    "single_valid_leaf_closure_accounting_checked": true,
+    "acceptance_uses_assert": false
+  },
+  "full_eight_point_exclusion_proved": false
+}

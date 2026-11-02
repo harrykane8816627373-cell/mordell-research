@@ -83,7 +83,7 @@ def main():
     if args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'joint-refinement/verify_force.py'), '--legacy-inputs-already-replayed'],
-            cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=5400)
+            cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=18000)
         require(proc.returncode == 0, 'joint-refinement: '+proc.stdout[-3000:]+proc.stderr[-3000:])
         print('PASS imported/force closure continuation; the stored cover remains incomplete.', flush=True)
     else:

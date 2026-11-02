@@ -2,7 +2,7 @@
 
 研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**；推导与代码包含 OpenAI Codex 协作。更新于2026-11-02。定理的全部假设和证明以所链接正文为准。
 
-**八点当前入口：[复余项与二列稳定性](../joint-refinement/EDGE_REMAINDERS.md) · [未完成覆盖](../joint-refinement/README.md) · [完整联合归约](../docs/EIGHT_POINT_REDUCTION.md)。** 既有径向区域已推进到 E≤1/1200；此前已合并附件的729/1000内点门槛并累计闭合10个原区域；本次加强复余项和二列稳定性检查，新增17491个排除叶，原11域仍未闭合，细分后保留30个开放叶盒。原局部能量、五倍矩管域与零矩分类保留。整个剩余可行域仍未覆盖，完整八点锐界未证。
+**八点当前入口：[共同子集预算与119/80半径](../joint-refinement/SUBSET_BUDGET.md) · [未完成覆盖](../joint-refinement/README.md) · [完整联合归约](../docs/EIGHT_POINT_REDUCTION.md)。** 既有径向区域已推进到 E≤1/1200；此前已合并附件的729/1000内点门槛并累计闭合10个原区域；本次完整关闭原编号10，原未解域降为10个（0–9），上轮30个开放盒关闭16个，余14盒；沿用七点锐界另得全局平方半径<119/80。原局部能量、五倍矩管域与零矩分类保留。整个剩余可行域仍未覆盖，完整八点锐界未证。
 
 一般 n 的当前最强结论集中在下方表格；各次推进与较弱历史常数见[研究索引](../docs/RESEARCH_INDEX.md)。六、七点的外部分类依赖、有限层数与渐近层数的不同前提继续保留。
 
@@ -17,7 +17,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |五点|$`M_5=3125`$，等号单位正五边形，允许旋转、重排|[作者方法](../earlier-results/five_point_method.md)、[PDF](../earlier-results/five_point_proof.pdf)、[TeX](../earlier-results/five_point_proof.tex)；主线为二阶条件、径向矩、投影及四次对数上界|
 |六、七点|$`M_6=6^{15}/5^{10}`$、$`M_7=7^{21}/6^{15}`$，等号原点加相应正多边形|[主稿](../earlier-results/six_seven_proof.tex)、[复核](../earlier-results/six_seven_verification.md)、[覆盖审计](../earlier-results/six_seven_coverage_audit.md)；全局证明依赖 Faugère–Svartz 完整物理驻点分类，七点356次枝的物理排空为论文输入，未在本地独立重建|
 |六、七点含原点类|不调用上述分类的锐界与方差惩罚|[独立证明](../earlier-results/six_seven_origin_proof.tex)；结论仅适用于含原点类|
-|八点|[径向缺额区域](../radial-gap/README.md)：E≤1/1200时 log(Δ_q/7⁷)≤−E/32；[局部能量与五倍矩管域](../eight-point/ENERGY_BASIN.md)、旧11盒继续有效；[联合续算](../joint-refinement/EDGE_REMAINDERS.md)保留附件729/1000内点门槛与此前10个原域闭合；本次新增35001个处理步骤和17491个排除叶，原11域、细分后30个开放叶仍未排空|候选 $`8^{28}/7^{21}`$ 可达；旧椭圆内的非零矩物理系统仍未排空，**完整锐界仍开放**；[旧分类归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)保留全部前提|
+|八点|[径向缺额区域](../radial-gap/README.md)：E≤1/1200时 log(Δ_q/7⁷)≤−E/32；[局部能量与五倍矩管域](../eight-point/ENERGY_BASIN.md)、旧11盒继续有效；[联合续算](../joint-refinement/SUBSET_BUDGET.md)保留附件729/1000内点门槛，新增完整闭合原编号10；沿用七点锐界推出平方半径<119/80；余原10域、14盒仍未排空|候选 $`8^{28}/7^{21}`$ 可达；旧椭圆内的非零矩物理系统仍未排空，**完整锐界仍开放**；[旧分类归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)保留全部前提|
 |中心正多边形类|5≤n≤10模旋转严格局部最大；n=10使用四阶项，n≥11有显式增益扰动|[一般 n 审核第6、7节](../earlier-results/general_n_proof.md)；五点中心正方形、十点中心正九边形仍全局次优|
 |一般 n|已有有限上下界、全局网格包围、结构与渐近定理|没有得到所有有限 n 的简洁锐值公式；有限代数刻画不代表已执行巨大消元或枚举|
 

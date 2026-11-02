@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "quartic_nonnegative_factorization_coefficients_checked": 5,
+  "uniform_constant_term_modulus_squared_upper": "494424620106921/1125899906842624",
+  "strict_modulus_upper": "2/3",
+  "sharp_boundary_automorphism_examples": 5,
+  "strict_boundary_derivative_lower": "1/5",
+  "seven_subset_centered_mass_strict_lower": "53/10",
+  "squared_radius_strict_upper": "119/80",
+  "squared_radius_gain_over_49_over_32": "7/160",
+  "new_to_old_squared_radius_ratio": "34/35",
+  "seven_point_sharp_bound_is_inherited_external_input": true,
+  "seven_point_full_classification_rebuilt_here": false,
+  "analytic_Schwarz_bridge_requires_written_proof": true,
+  "global_scope_guard_checked": true,
+  "floating_point_acceptance": false,
+  "full_eight_point_exclusion_proved": false
+}

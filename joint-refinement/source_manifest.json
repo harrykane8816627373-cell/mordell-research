@@ -1,7 +1,7 @@
 {
   "date": "2026-11-02",
   "base_commit": "e846b8e9be902a636787974fba1e219cddc8f495",
-  "purpose": "Pinned original uploads, accepted force checkpoint, edge-correlated and complex remainders, pair Gram stability and composed frontier proof.",
+  "purpose": "Pinned accepted prefixes, shared subset mass/centroid contraction, target-value/M7/Schwarz radius bound, and composed closed-frontier proof.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -190,18 +190,18 @@
     },
     {
       "path": "joint-refinement/EDGE_REMAINDERS.md",
-      "bytes": 10849,
-      "sha256": "72ed3a85dcf6600ecbc0def04b6b70390ae5ddd734df7655de544f20944b6959"
+      "bytes": 11206,
+      "sha256": "4bb30a5efac04040a6acf92674cb1038d34f664cb61da98abd5da27be6096254"
     },
     {
       "path": "joint-refinement/FORCE_CLOSURES.md",
-      "bytes": 10480,
-      "sha256": "f527491071cf1d9e9756d1b1edcf29ab42d8f8c0adbd5c4d8691a3cdf0a3a479"
+      "bytes": 10566,
+      "sha256": "0ad016b0626374c898bf7a9e93239321cd633511dcb9bc451b6c03d5a3dd1b1b"
     },
     {
       "path": "joint-refinement/FORCE_PROVENANCE.json",
-      "bytes": 2825,
-      "sha256": "e10bd280e7b62cabd7dce92f851894306b1608f51ce6d4a82157aceb0b753421"
+      "bytes": 4672,
+      "sha256": "a00e18cace00ed8758bf929b255ea2ec5d4af422314f96b654f1ad7e7159ad4e"
     },
     {
       "path": "joint-refinement/GLOBAL_QUADRATIC.md",
@@ -230,8 +230,18 @@
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 10710,
-      "sha256": "0c2558e8c6b5e208eefe7d73e1fe43478580b4c2440a59b5da5a6d66d4412999"
+      "bytes": 10582,
+      "sha256": "e8cd695af7f1d63368412405ef6b7a68fc52471f987d33c0508f14d26341ed25"
+    },
+    {
+      "path": "joint-refinement/SUBSET_BUDGET.md",
+      "bytes": 6330,
+      "sha256": "4d01461771dfd6d33c61c997ade33ef1ca0dacf32ed4d9087b5a261b0c542bb7"
+    },
+    {
+      "path": "joint-refinement/TARGET_RADIUS.md",
+      "bytes": 4439,
+      "sha256": "ab93514d18d07c5d31652e815c5873a7fa58304c3352ed28671cbf96b643bc2b"
     },
     {
       "path": "joint-refinement/audit_six.py",
@@ -264,9 +274,24 @@
       "sha256": "7e631b147a74dc883d81389027086c1b9ec7f400996593c1b46d3bcb154d2cf6"
     },
     {
-      "path": "joint-refinement/certificates/force_extension.json.gz",
+      "path": "joint-refinement/certificates/force_checkpoint_8be9f91.json",
+      "bytes": 11017,
+      "sha256": "ffb6037fd34a501005a7c63cdd41f8ee06863b76ac2e753a15524b467090d2f1"
+    },
+    {
+      "path": "joint-refinement/certificates/force_checkpoint_8be9f91.json.gz",
       "bytes": 259069,
       "sha256": "173bf7f6ccf804a687afbb122af5b9130625f455ef2c104e1e3f2dbef390184f"
+    },
+    {
+      "path": "joint-refinement/certificates/force_checkpoint_8be9f91_report.json",
+      "bytes": 7652,
+      "sha256": "06c49ad2867731a1b6afa2eda64864c259b11c94faaefa1c9d76cc798b5c6849"
+    },
+    {
+      "path": "joint-refinement/certificates/force_extension.json.gz",
+      "bytes": 407369,
+      "sha256": "6e7a0b073e8ea28f0a2aceefe2b1a466cbf118c3e2475f46f57ab0417d96b081"
     },
     {
       "path": "joint-refinement/certificates/force_parent.json",
@@ -295,8 +320,8 @@
     },
     {
       "path": "joint-refinement/check_force.py",
-      "bytes": 10041,
-      "sha256": "5565612989c27588f50f2caafcd6cf842a0f0508e8c2afea28bdc7880d03b78f"
+      "bytes": 12850,
+      "sha256": "aafefb1c660cafa7a649ef1865e555659950090bd0c681d1058ca7e78c32aeb9"
     },
     {
       "path": "joint-refinement/check_joint.py",
@@ -344,6 +369,11 @@
       "sha256": "b40895aa3717ae1b29c923a99505276d48297ad27e9bca1f3486169ef5d90061"
     },
     {
+      "path": "joint-refinement/merge_frontier.py",
+      "bytes": 4128,
+      "sha256": "93333edc7f258366f799343218b8f92b8b72f96abdc406a40f3c5e65e8b71070"
+    },
+    {
       "path": "joint-refinement/pair_gram.py",
       "bytes": 1321,
       "sha256": "db45ef081ea1c8855b9efa4969c7ff64a23b3251ba400e80bbb9dc57e4711af7"
@@ -360,8 +390,8 @@
     },
     {
       "path": "joint-refinement/propose_edge.py",
-      "bytes": 3729,
-      "sha256": "ed267cc0a5ba3afc63b676d8467d3e85de59b3d959105939c0ae7d3961a7c3a7"
+      "bytes": 5886,
+      "sha256": "5856b7c0c00eca17ed49a5aa2262efdb1121f768c774ede0fc5a13694512f910"
     },
     {
       "path": "joint-refinement/propose_force.py",
@@ -377,6 +407,11 @@
       "path": "joint-refinement/radial_stability.py",
       "bytes": 2518,
       "sha256": "e5c4ae5037dbda417c1b0c85ce888d2bfbd26428698d440a6a22525d43f89b75"
+    },
+    {
+      "path": "joint-refinement/recent_force.py",
+      "bytes": 2718,
+      "sha256": "17f81034356a21726a37badc80f476756ebbc21e7680b1ad4a60da1e59c1ee32"
     },
     {
       "path": "joint-refinement/reference_centers.json",
@@ -415,13 +450,13 @@
     },
     {
       "path": "joint-refinement/reports/force_cover.json",
-      "bytes": 7652,
-      "sha256": "06c49ad2867731a1b6afa2eda64864c259b11c94faaefa1c9d76cc798b5c6849"
+      "bytes": 15173,
+      "sha256": "fc8a55370096bd8b5050e69f4689891a843995a08119b7c46b5b79a96886d47f"
     },
     {
       "path": "joint-refinement/reports/force_execution.json",
-      "bytes": 589,
-      "sha256": "48e2277f7f493a8f74c959f4632e679b6fce0ffd561453cfffe59b5285a4f6bc"
+      "bytes": 726,
+      "sha256": "be015feb45a0b627d7913d45ec5edf9f36d2353ef4c9ae83a71cebb8170aa922"
     },
     {
       "path": "joint-refinement/reports/force_import.json",
@@ -459,9 +494,34 @@
       "sha256": "ca4a66214f42c0496fb2a28417c10476c9d31cedc5e85a89add53d3a428e9442"
     },
     {
+      "path": "joint-refinement/reports/subset_arithmetic.json",
+      "bytes": 880,
+      "sha256": "a67488b8f67a792016311028ea3b7dbedc9f03879901cdb3826d15519823bfbf"
+    },
+    {
+      "path": "joint-refinement/reports/target_radius.json",
+      "bytes": 803,
+      "sha256": "c156fbfc88e834739534311ca86bea848a01082406896090fbeaba5a83a4f6ef"
+    },
+    {
+      "path": "joint-refinement/subset_budget.py",
+      "bytes": 3902,
+      "sha256": "429900baba4fc44d95ee67734d85097efc718e2ca7514bcd7dfca416fd4aed5c"
+    },
+    {
+      "path": "joint-refinement/subset_force.py",
+      "bytes": 634,
+      "sha256": "6eedd808791637e55854c3a23da1a7cf4c582aee18b7a2cedcd1cf0fcca67b64"
+    },
+    {
       "path": "joint-refinement/summarize_frontier.py",
       "bytes": 3505,
       "sha256": "01f53be720550fe5d167ed3f88111335e6bfd5c17672d7cecb157d0e97c95153"
+    },
+    {
+      "path": "joint-refinement/target_radius.py",
+      "bytes": 542,
+      "sha256": "8e253d03f1e474bbd948514a5b290776001d1e26b703a29c3f25f9d476ab1909"
     },
     {
       "path": "joint-refinement/verify.py",
@@ -485,8 +545,8 @@
     },
     {
       "path": "joint-refinement/verify_force.py",
-      "bytes": 6119,
-      "sha256": "c3d3b60c4f47b67aba47c61ff49f8668a52137010506c29cf33fb6a41f90c20a"
+      "bytes": 7068,
+      "sha256": "a22368b95c915309efa6c0e82135a7fa2eb2fc217fa2f469c4e2e3d008996b59"
     },
     {
       "path": "joint-refinement/verify_force_enclosure.py",
@@ -512,6 +572,16 @@
       "path": "joint-refinement/verify_radial_stability.py",
       "bytes": 6887,
       "sha256": "b53b72c7416fb8c6f506920a7f443a4d1d31c44fdfe7fd8444386d8882d3d163"
+    },
+    {
+      "path": "joint-refinement/verify_subset_budget.py",
+      "bytes": 8542,
+      "sha256": "d2562d333043b7bd865407e0517e51ab1fad99395dcc3cccabf78a7ed54a96c7"
+    },
+    {
+      "path": "joint-refinement/verify_target_radius.py",
+      "bytes": 3352,
+      "sha256": "c052f50633653bcc3f4a0f134a07973627aaac87dcbc4de96acc5b51d138b0f7"
     },
     {
       "path": "power-moment/LOCAL_RIGIDITY.md",
@@ -582,6 +652,20 @@
       "path": "radial-gap/verify_gap.py",
       "bytes": 8744,
       "sha256": "00f7577c56f857c6da15e299c6cb68cc2d3b1e770ee66531c5bfa7353a26f26e"
+    }
+  ],
+  "inherited_theorem_references": [
+    {
+      "path": "earlier-results/six_seven_coverage_audit.md",
+      "source_commit": "8be9f9126b290e8bb64cb46544184f5f30a1044c",
+      "git_blob_sha256": "785871fec5c986c02c738c9432c00c9f6aa1016cef43eb2a7a280f51188f5158",
+      "classification_replayed_by_this_arithmetic_driver": false
+    },
+    {
+      "path": "earlier-results/six_seven_proof.tex",
+      "source_commit": "8be9f9126b290e8bb64cb46544184f5f30a1044c",
+      "git_blob_sha256": "3e4b3ed41f9fea320ab21909747e7dcc93fa9a6fb21a03c140f7fbe3fb71ad06",
+      "classification_replayed_by_this_arithmetic_driver": false
     }
   ]
 }
