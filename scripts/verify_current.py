@@ -22,7 +22,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--first3-archive', type=Path)
     parser.add_argument('--joint', action='store_true', help='also replay the partial joint-cover tree')
-    parser.add_argument('--refinement', action='store_true', help='also replay the joint Hessian/ellipse continuation')
+    parser.add_argument('--refinement', action='store_true', help='also replay the current imported/force closure proof chain')
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
              *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md')),
@@ -82,10 +82,10 @@ def main():
         print('NOT RUN joint-closure cover replay: supply --joint (the stored cover remains incomplete).')
     if args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
-            str(ROOT/'joint-refinement/verify_joint.py'), '--legacy-inputs-already-replayed'],
-            cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=3000)
+            str(ROOT/'joint-refinement/verify_force.py'), '--legacy-inputs-already-replayed'],
+            cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=5400)
         require(proc.returncode == 0, 'joint-refinement: '+proc.stdout[-3000:]+proc.stderr[-3000:])
-        print('PASS joint Hessian/ellipse continuation; the stored cover remains incomplete.', flush=True)
+        print('PASS imported/force closure continuation; the stored cover remains incomplete.', flush=True)
     else:
         print('NOT RUN joint-refinement continuation: supply --refinement.')
     if args.first3_archive is not None:

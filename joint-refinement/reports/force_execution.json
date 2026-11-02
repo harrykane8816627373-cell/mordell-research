@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "parent_forests_replayed_this_invocation": false,
+  "parent_full_chain_replayed_this_invocation": false,
+  "inherited_dependency_proof_reused": true,
+  "parent_chain_reused": true,
+  "unchanged_parent_arithmetic_inputs": 36,
+  "new_exact_entries_replayed": 3,
+  "independent_attachment_replayer_uses_assert": false,
+  "full_eight_point_exclusion_proved": false
+}

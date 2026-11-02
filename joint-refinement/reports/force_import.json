@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "attachment_sha256": "87c08af482404117068462cf7151464f4685509523bb64f0e998ae7ca48204fb",
+  "parent_sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b",
+  "all_uploaded_boxes_equal_parent_boxes": true,
+  "closed_parent_regions": [
+    9976,
+    10012,
+    10014,
+    10016,
+    10019,
+    10020
+  ],
+  "remaining_parent_regions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    1282,
+    7062,
+    7954,
+    9814
+  ],
+  "complete_proof_nodes": 46,
+  "closure_proofs": [
+    {
+      "passed": true,
+      "root": 9976,
+      "processed_nodes": 17,
+      "counts": {
+        "force_affine": 9,
+        "split": 8
+      },
+      "pending_boxes": 0,
+      "selected_scope_complete": true
+    },
+    {
+      "passed": true,
+      "root": 10012,
+      "processed_nodes": 7,
+      "counts": {
+        "force_affine": 4,
+        "split": 3
+      },
+      "pending_boxes": 0,
+      "selected_scope_complete": true
+    },
+    {
+      "passed": true,
+      "root": 10014,
+      "processed_nodes": 5,
+      "counts": {
+        "force_affine": 3,
+        "split": 2
+      },
+      "pending_boxes": 0,
+      "selected_scope_complete": true
+    },
+    {
+      "passed": true,
+      "root": 10016,
+      "processed_nodes": 1,
+      "counts": {
+        "force_affine": 1
+      },
+      "pending_boxes": 0,
+      "selected_scope_complete": true
+    },
+    {
+      "passed": true,
+      "root": 10019,
+      "processed_nodes": 1,
+      "counts": {
+        "force_affine": 1
+      },
+      "pending_boxes": 0,
+      "selected_scope_complete": true
+    },
+    {
+      "passed": true,
+      "root": 10020,
+      "processed_nodes": 15,
+      "counts": {
+        "force_affine": 5,
+        "force_taylor": 3,
+        "split": 7
+      },
+      "pending_boxes": 0,
+      "selected_scope_complete": true
+    }
+  ],
+  "partial_proofs": [
+    {
+      "passed": true,
+      "root": 7954,
+      "processed_nodes": 1800,
+      "counts": {
+        "ellipse": 7,
+        "force_affine": 34,
+        "radius": 25,
+        "separation": 191,
+        "split": 1543
+      },
+      "pending_boxes": 1287,
+      "selected_scope_complete": false
+    },
+    {
+      "passed": true,
+      "root": 9814,
+      "processed_nodes": 4000,
+      "counts": {
+        "force_affine": 850,
+        "force_taylor": 140,
+        "separation": 358,
+        "split": 2652
+      },
+      "pending_boxes": 1305,
+      "selected_scope_complete": false
+    }
+  ],
+  "uses_assert_for_acceptance": false,
+  "uses_floating_point_for_acceptance": false,
+  "full_parent_arithmetic_replayed": false,
+  "full_eight_point_exclusion_proved": false
+}

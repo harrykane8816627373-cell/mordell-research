@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-01",
-  "base_commit": "92fbc4ddbdca4e37f081c061d1a2c49c25af4fed",
-  "purpose": "Pinned joint fourth-mode stability, old-ellipse mass coupling and compositional exact cover.",
+  "date": "2026-11-02",
+  "base_commit": "e846b8e9be902a636787974fba1e219cddc8f495",
+  "purpose": "Pinned original six-closure upload, exact force/Newton enclosures and composed frontier proof.",
   "files": [
     {
       "path": "eight-point/.gitattributes",
@@ -189,6 +189,16 @@
       "sha256": "7f451343d3e2b0d63a280aad626360a9fffac6be0082e65497c1d1c488f5614a"
     },
     {
+      "path": "joint-refinement/FORCE_CLOSURES.md",
+      "bytes": 10100,
+      "sha256": "ecbb9de8ff4aa4e484d98182137de6e588be8488250bc369410bc568ec30954f"
+    },
+    {
+      "path": "joint-refinement/FORCE_PROVENANCE.json",
+      "bytes": 2016,
+      "sha256": "e3ba16fc190eae81f47e4fad3bbed6f4857f01483d221ed62141eafe22b09d19"
+    },
+    {
       "path": "joint-refinement/GLOBAL_QUADRATIC.md",
       "bytes": 7355,
       "sha256": "6394528c4c174eb464f840a8c921d84f891a5c9a0b3f45bf0f9f15a05440c497"
@@ -215,8 +225,13 @@
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 10278,
-      "sha256": "c31a7d2bcd5077ea3a8d2ccce18e17a7fe9dc0b40573d8cf69f428a9fbdf5e8d"
+      "bytes": 10078,
+      "sha256": "285477826bbf5b1b006d976b167ecd82336cc43c025dde11c079f97f4ac79663"
+    },
+    {
+      "path": "joint-refinement/audit_six.py",
+      "bytes": 5493,
+      "sha256": "e5d3a60008f033818dd91a206da33e77098ae585d7ca716d48ba7a99c2fa629e"
     },
     {
       "path": "joint-refinement/certificates/accepted_parent.json",
@@ -227,6 +242,16 @@
       "path": "joint-refinement/certificates/continuation.json.gz",
       "bytes": 1179847,
       "sha256": "20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e"
+    },
+    {
+      "path": "joint-refinement/certificates/force_extension.json.gz",
+      "bytes": 102526,
+      "sha256": "2f2af13b0164ded1fc5b199874c76f790b0e3c713fa4b432b36d86525d22b30b"
+    },
+    {
+      "path": "joint-refinement/certificates/force_parent.json",
+      "bytes": 6596,
+      "sha256": "06f904dbddbb128a16ae0543866ba990ab033cc680e52935c92c43ac1349fb64"
     },
     {
       "path": "joint-refinement/certificates/joint_extension.json.gz",
@@ -244,6 +269,11 @@
       "sha256": "6248913101506d746d5cd7d45a17075776b9c79737e356e7fec45434bf05af38"
     },
     {
+      "path": "joint-refinement/check_force.py",
+      "bytes": 8016,
+      "sha256": "3dba6c33fb21ac899d7af1d5fe0b1cf5969c99964a5d7a7f4afa5a6b480693aa"
+    },
+    {
       "path": "joint-refinement/check_joint.py",
       "bytes": 6943,
       "sha256": "205bb47cc1ac2f06b1ef9882e87bd5c2d75e97967b48cab95f134b3bbc4416ae"
@@ -254,6 +284,21 @@
       "sha256": "a0a1e1730b7c080558cc7f11e5add4efbf745f22f4b350e7aaed7e6becbd2049"
     },
     {
+      "path": "joint-refinement/force_contract.py",
+      "bytes": 1975,
+      "sha256": "06e3c17c081d86d76d4fc3c4d45159cd613dd164a097a8e7ff05309ec15042b9"
+    },
+    {
+      "path": "joint-refinement/force_enclosure.py",
+      "bytes": 6220,
+      "sha256": "8ba95115253ab5bb053deae772030260681a7f968594b70427099fcbcb000086"
+    },
+    {
+      "path": "joint-refinement/inherited/mordell-eight-point-six-closures-2026-11-01.zip",
+      "bytes": 52209,
+      "sha256": "87c08af482404117068462cf7151464f4685509523bb64f0e998ae7ca48204fb"
+    },
+    {
       "path": "joint-refinement/mass_dual.py",
       "bytes": 7666,
       "sha256": "b40895aa3717ae1b29c923a99505276d48297ad27e9bca1f3486169ef5d90061"
@@ -262,6 +307,11 @@
       "path": "joint-refinement/propose.py",
       "bytes": 3562,
       "sha256": "5afdd108bf1ed9f1a8317db88d3f2b04220c41d0f8895c750d403c2c8a6d6701"
+    },
+    {
+      "path": "joint-refinement/propose_force.py",
+      "bytes": 5502,
+      "sha256": "0896e1279bc3cc05769acafea0afa2606da76712f9a3e4ce53ae1cb314df1519"
     },
     {
       "path": "joint-refinement/propose_joint.py",
@@ -297,6 +347,26 @@
       "path": "joint-refinement/reports/ellipse_dual.json",
       "bytes": 1685,
       "sha256": "1e47951252f2f7066b694f502208dd890845721cdca6a32e40ae33770cb987a4"
+    },
+    {
+      "path": "joint-refinement/reports/force_arithmetic.json",
+      "bytes": 1480,
+      "sha256": "30dfdb79b42607b85f7a02d892f799ec018149dc1a43521667e2a3956dc887b7"
+    },
+    {
+      "path": "joint-refinement/reports/force_cover.json",
+      "bytes": 6020,
+      "sha256": "7e631b147a74dc883d81389027086c1b9ec7f400996593c1b46d3bcb154d2cf6"
+    },
+    {
+      "path": "joint-refinement/reports/force_execution.json",
+      "bytes": 396,
+      "sha256": "8a3aa4ee9a582c76d77a62fa2f55e0ad0b52f8ad7ab4ab29a7c77981760e6931"
+    },
+    {
+      "path": "joint-refinement/reports/force_import.json",
+      "bytes": 2794,
+      "sha256": "0f02ba1f0645e1b926be3da7368befd69fcb3fd6d12d635e01f5dc0ed61ff2e3"
     },
     {
       "path": "joint-refinement/reports/frontier_progress.json",
@@ -342,6 +412,16 @@
       "path": "joint-refinement/verify_ellipse_dual.py",
       "bytes": 7526,
       "sha256": "44f2b9a4a44a3800f66fe4412d3193a07dff4c57aba30092e2910a1223897346"
+    },
+    {
+      "path": "joint-refinement/verify_force.py",
+      "bytes": 4714,
+      "sha256": "4e4d71aa9842cfc95e89b7e99882564e20dc26605013924336165b4ee9277f35"
+    },
+    {
+      "path": "joint-refinement/verify_force_enclosure.py",
+      "bytes": 11128,
+      "sha256": "5765f2375c32e9ff2eb85084029f0f86410bdc6cfb64415eee495f0b66b77410"
     },
     {
       "path": "joint-refinement/verify_joint.py",

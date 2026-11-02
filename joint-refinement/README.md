@@ -1,18 +1,22 @@
-# 八点联合续算：完整四阶稳定性、旧椭圆与质量耦合
+# 八点联合续算：附件合并、精确力外包与剩余11域
 
-2026-11-01。研究发起：蒋丰灿（Fengcan Jiang）；OpenAI Codex 协作。
+2026-11-02。研究发起：蒋丰灿（Fengcan Jiang）；OpenAI Codex 协作。
 
-**完整排空仍未完成。** 本专题沿用旧覆盖与此前的严格目标值界，现将[完整四阶稳定性、旧椭圆和质量范围直接联合](JOINT_STABILITY.md)。最新结果以[联合增量覆盖报告](reports/joint_cover.json)为准；开放盒是连续外包，有些仍很宽，不是驻点分类。
+**完整排空仍未完成。** 最新结果以[力方程总树报告](reports/force_cover.json)为准。本轮将用户上传的六项闭合及两份部分树，与此前全部必要条件和[新的精确力外包](FORCE_CLOSURES.md)接合，原 ZIP、原父森林与旧算术源文件保持原字节。
 
-新解析结论为：质量7、真实驻点、完整 Hessian PSD 和旧椭圆共同强迫 **minᵢ|qᵢ|²<3/4**。同时得到严格径向预算 Σg(tᵢ)+|s₄|²+(216/175)|s₃|²<−3/4，g 及其精确平方和分解见证明页。旧径向门槛 E>1/1200、零矩分支分类和全部必要条件继续保留。
+|相同21个父区域的进度|已完整闭合|尚未闭合|
+|---|---:|---:|
+|e846b8e父快照|0|21|
+|上传六项闭合附件|6|15|
+|本轮联合续算|10|11|
 
-本轮在[92fbc4d父快照](https://github.com/harrykane8816627373-cell/mordell-research/tree/92fbc4ddbdca4e37f081c061d1a2c49c25af4fed/joint-refinement)的19个开放盒上新增10000个处理节点。旧椭圆的两个分量质量参数新增60次目标值排除、1次质量可行性排除；四阶径向判据在本批的新增直接排除数为0。原19个盒中7个已连同全部后代关闭，其余12个原区域细分后留下21个开放盒。合并累计330021个节点、164990个排除叶；节点数不表示覆盖体积比例。
+新增完整闭合的原区域为1282、7062、7954、9814，均包含其全部后代。剩余原编号0–10仍是较宽的连续坐标外包，不是驻点分类。原5846个上传步骤保留，新增19944个处理节点，其中4867个使用终点点距版本；合并累计355801节点、177890个排除叶、11个开放叶。
 
-[父证书](certificates/continuation.json.gz)保持原字节，SHA-256为20b66183f129822133dc0f8ab2d5471cd7c2a035e914dc4eb301f43d6d0fff6e，其[原覆盖报告](reports/cover.json)仍记录320019节点与19个开放盒。新增[增量证书](certificates/joint_extension.json.gz)单独覆盖这19个盒的全部后代；最新21个开放盒和每个旧盒的关闭状态均在联合报告中逐项列出。
+[原始附件](inherited/mordell-eight-point-six-closures-2026-11-01.zip)的21个输入盒与[固定父证书](certificates/joint_extension.json.gz)的21个未解盒逐项相等。独立接受器用显式检查重新核算5846个上传步骤和所有新增步骤。附件中的729/1000内点门槛也已按多项式系数复核，作为用户已有成果收录；本轮另外导出相应无内点驻点上的 −1/4000 统一负曲率间隙。
 
-本轮3个新增接受入口已在固定输入的临时副本重放通过。父证明复用上一轮完整通过的20个旧入口与3个父入口；29个旧算术输入逐字节未变。本次未重复父森林的算术重放，[执行记录](reports/joint_execution.json)明确输出该区别。默认 `verify_joint.py` 会从头重放完整父证明和全部新增节点。
+本轮3个新增入口均已在固定输入临时副本通过。父链采用此前已验收的e846b8e固定版本，36个旧算术输入未变，本次没有重跑完整父链；[执行记录](reports/force_execution.json)明确区分了复用与实际重放。默认 `verify_force.py` 会从完整父链开始重放。
 
-此前的[全局二次与角点界](GLOBAL_QUADRATIC.md)、[中心化切片](CENTERED_MASS.md)、[共同质量参数包络](MASS_DUAL_ENVELOPE.md)和旋转饱和定理继续作为父证明；旧研究快照按对应提交理解。
+父阶段的[四阶稳定性与椭圆](JOINT_STABILITY.md)、[共同质量包络](MASS_DUAL_ENVELOPE.md)、[中心化切片](CENTERED_MASS.md)、[全局二次界](GLOBAL_QUADRATIC.md)和旋转饱和继续保留。原[联合报告](reports/joint_cover.json)仍记录e846b8e的330021节点、21个开放盒；更早[报告](reports/cover.json)仍指92fbc4d的320019节点、19个开放盒，均不是最新力方程总账。
 
 ## 1. 质量恰为7时，完整 Hessian PSD 已强迫驻点
 
@@ -142,26 +146,26 @@ log2 也用同一严格公式。全部运算在2⁻⁴⁰整数网格向外取�
 
 ## 4. 复核与续算
 
-从固定输入临时副本重放完整父证明及本轮全部新增入口：
+重放完整父链、上传证书、力方程算术及全部新总树：
 
 ~~~bash
-python -B -S -O joint-refinement/verify_joint.py
+python -B -S -O joint-refinement/verify_force.py
 ~~~
 
-该默认入口重放20个既有依赖入口、3个父入口和3个新增入口。只有准确的父证明已验收通过时，才可加 `--parent-already-replayed` 复用它；该选项仍验证父证书、原报告和29个旧算术输入的字节，并重放全部新增节点，不能替代首次父证明重放。
+父链已准确验收且36个旧算术输入未变时，可使用 `--parent-already-replayed`。本轮使用该复用选项，仍重放上传的5846个步骤及全部19944个新增步骤，不能用哈希核对代替首次父证明验收。
 
-单独重放本轮增量树（以前提成立的父证明为基础）：
+单独重放新总树（以已经验收的固定父链为前提）：
 
 ~~~bash
-python -B -S -O joint-refinement/check_joint.py joint-refinement/certificates/joint_extension.json.gz
+python -B -S -O joint-refinement/check_force.py joint-refinement/certificates/force_extension.json.gz
 ~~~
 
-`verify_all.py` 和 `check.py` 继续核对截至92fbc4d的原父森林，不能单独当作最新增量验收。`summarize_frontier.py` 继续核对2f25467到92fbc4d的历史边界；本轮各父盒关闭情况直接列在联合报告中。
-
-接受与生成均只需标准库。继续扩展同一固定父边界：
+继续处理某个尚未闭合的原区域，例如编号10：
 
 ~~~bash
-python -B -S -O joint-refinement/propose_joint.py --nodes 100000 --resume joint-refinement/certificates/joint_extension.json.gz --output PATH_TO_NEXT.json.gz
+python -B -S -O joint-refinement/propose_force.py --global-endpoint --nodes 20000 --roots 10 --resume joint-refinement/certificates/force_extension.json.gz --output PATH_TO_NEXT.json.gz
 ~~~
 
-本专题不改写旧 `joint-closure` 证书或历史离线包。解析量词由证明页承担，有限算术与新增树覆盖由程序重放；没有外部同行评审或整篇形式化证明。
+不指定 `--roots` 时处理全部未解叶。局部与终点点距版本分别在节点中标记，旧已处理步骤不改写，所有未解叶必须保留。接受和生成只需标准库，证明条件使用显式检查。
+
+`verify_joint.py`、`check_joint.py` 继续核对截至e846b8e的父增量；`verify_all.py`、`check.py` 继续核对截至92fbc4d的更早父森林，不能单独当作最新力方程总树验收。历史离线包与原始 ZIP 不追溯改写。没有独立同行评审或整篇形式化证明。

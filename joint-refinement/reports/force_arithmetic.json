@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "affine_and_quadratic_Newton": {
+    "actual_continuous_boxes": 3,
+    "independent_complex_Jacobian_entries": 312,
+    "odd_width_half_grid_centers": true,
+    "exact_actual_remainders_checked": 24,
+    "shifted_force_Newton_images_checked": 3,
+    "floating_point_acceptance": false
+  },
+  "global_endpoint_force": {
+    "local_disk_method_is_inconclusive": true,
+    "actual_endpoint_separation_verified": true,
+    "global_actual_remainders_checked": 8,
+    "global_shifted_force_Newton_checked": true,
+    "mass_seven_is_not_required_for_this_force_lemma": true,
+    "floating_point_acceptance": false
+  },
+  "uploaded_radial_threshold": {
+    "source": "user attachment, not a newly attributed discovery",
+    "inner_squared_radius_threshold": "729/1000",
+    "exact_contradiction_margin": "-49638643/3125000000",
+    "coefficient_identity_checked": true,
+    "additional_uniform_Hessian_min_strict_upper": "-1/4000",
+    "curvature_gap_source": "derived here from the uploaded polynomial identity"
+  },
+  "full_Hessian_subset_modes": {
+    "independent_exact_indicator_modes": 254,
+    "all_complement_classes_checked": 127,
+    "wide_positive_Hessian_input_retained": true,
+    "floating_point_acceptance": false
+  },
+  "proof_guards": {
+    "original_six_closures_preserved": true,
+    "false_proof_variants_rejected": 8,
+    "acceptance_uses_assert": false
+  },
+  "full_eight_point_exclusion_proved": false
+}

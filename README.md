@@ -1,6 +1,6 @@
 # Mordell 距离乘积研究
 
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-01**。
+研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-02**。
 
 ```math
 M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
@@ -14,20 +14,20 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[完整四阶稳定性与旧椭圆](joint-refinement/JOINT_STABILITY.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
+|八点最新进展与准确剩余分支|[附件合并与力方程排除](joint-refinement/FORCE_CLOSURES.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 当前联合排除：完整四阶稳定性、旧椭圆与质量
+## 当前联合排除：六项闭合附件与精确力方程续算
 
-在实际质量7、无碰撞的八点上，完整实能量 Hessian 半正定已经强迫真实驻点。本轮将其四阶模式与旧椭圆直接联合，证明任何剩余构型都必须满足 **minᵢ|qᵢ|²<3/4**；所有点均在平方半径≥3/4区域的整类因此排除。更强的径向—矩预算也已给出，仍使用同一组实际点。
+上传的六项闭合及两份部分树已与父证书逐项对齐、独立重放，原 ZIP 按原字节保存。在附件已闭合的6个原区域之外，本轮进一步完全闭合 **1282、7062、7954、9814**，从附件的15个未闭合原区域减少到 **11个**。它们是连续坐标外包，不是11个已知驻点。
 
-目标值筛选同时把旧椭圆的实、虚质量范围并入两个参数的精确包络。本轮新增10000个处理节点，额外60次目标值排除、1次质量可行性排除。上一轮19个开放盒中的7个已连同全部后代关闭；其余12个旧区域细分后留下21个连续开放盒。
+续算将既有质量、旧椭圆、Ward、严格点距和目标值条件，与仿射力外包及 Newton 必要像取交集。已证终点点距还被直接用于余项分母。原5846个上传步骤保留，新增19944个处理节点；原21域累计闭合10个，剩余原编号0–10。合并355801节点、177890个排除叶，仍有11个开放叶。
 
-合并累计330021个节点、164990个排除叶。**完整排空仍未完成。** [联合证明](joint-refinement/JOINT_STABILITY.md) · [当前覆盖报告](joint-refinement/reports/joint_cover.json)
+同时独立复核并合并附件已有的更强内点门槛 **minᵢ|qᵢ|²<729/1000**，保留质量7、真实驻点、旧椭圆及完整 Hessian 假设。对相应无内点驻点，本轮还推出严格负曲率间隙 λ_min(H)<−1/4000。[解析证明与来源](joint-refinement/FORCE_CLOSURES.md)
 
-本轮3个新增接受入口已从固定输入临时副本重放通过。父证明采用上一轮已通过的固定证书，29个旧算术输入逐字节未变；本次未重复整片父森林，执行范围由[记录](joint-refinement/reports/joint_execution.json)明确列出。四阶径向定理在本批叶盒中的新增直接排除数为0，解析结论与有限计数分别记录。
+3个新增接受入口已从固定输入临时副本重放通过，证明条件不依赖 `assert`。固定父链复用此前验收结果，36个旧算术输入逐字节未变；执行范围由[记录](joint-refinement/reports/force_execution.json)列出。[最新覆盖报告](joint-refinement/reports/force_cover.json)保留全部11个开放盒，**完整八点锐界仍未证明**。
 
 ## 上一阶段：等价多项式矩阵与冻结覆盖
 
