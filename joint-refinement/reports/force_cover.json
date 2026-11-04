@@ -3,13 +3,13 @@
   "parent_commit": "e846b8e9be902a636787974fba1e219cddc8f495",
   "parent_certificate_sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b",
   "attachment_sha256": "87c08af482404117068462cf7151464f4685509523bb64f0e998ae7ca48204fb",
-  "force_certificate_sha256": "6e7a0b073e8ea28f0a2aceefe2b1a466cbf118c3e2475f46f57ab0417d96b081",
+  "force_certificate_sha256": "ed276cec51017b7063f54497348e38b7c3afcd4ea6078b30ba615f6474d4ec68",
   "scope": "global_maximum",
   "parent_frontier_regions": 21,
-  "force_tree_nodes": 94413,
-  "processed_nodes": 94399,
+  "force_tree_nodes": 104431,
+  "processed_nodes": 104403,
   "imported_processed_nodes": 5846,
-  "new_processed_nodes": 88553,
+  "new_processed_nodes": 98557,
   "endpoint_distance_processed_nodes": 54867,
   "counts": {
     "joint_force/centered_mass_range": 1,
@@ -30,6 +30,22 @@
     "joint_force/polynomial_Ward_1": 131,
     "joint_force/separation": 976,
     "joint_force/strict_subset": 866,
+    "joint_force_ellipse_schur_radius/ellipse_mass_split": 10,
+    "joint_force_ellipse_schur_radius/ellipse_split_log": 47,
+    "joint_force_ellipse_schur_radius/force_sign": 37,
+    "joint_force_ellipse_schur_radius/mass_centered_quadratic": 168,
+    "joint_force_ellipse_schur_radius/mass_envelope_log": 2,
+    "joint_force_ellipse_schur_radius/mass_or_radius": 70,
+    "joint_force_ellipse_schur_radius/mass_quadratic_vertices": 40,
+    "joint_force_ellipse_schur_radius/maximum_radius": 2,
+    "joint_force_ellipse_schur_radius/old_ellipse": 1,
+    "joint_force_ellipse_schur_radius/ordered_separation": 95,
+    "joint_force_ellipse_schur_radius/phase_force_affine": 524,
+    "joint_force_ellipse_schur_radius/polynomial_Ward_1": 1,
+    "joint_force_ellipse_schur_radius/separation": 62,
+    "joint_force_ellipse_schur_radius/stationarity": 6,
+    "joint_force_ellipse_schur_radius/strict_subset": 428,
+    "joint_force_ellipse_schur_radius/subset_centroid_budget": 6,
     "joint_force_global/centered_mass_range": 21,
     "joint_force_global/ellipse_covariance": 87,
     "joint_force_global/ellipse_mass_split": 58,
@@ -67,6 +83,25 @@
     "joint_force_gram/separation": 154,
     "joint_force_gram/stationarity": 1,
     "joint_force_gram/strict_subset": 310,
+    "joint_force_schwarz2_radius/ellipse_covariance": 2,
+    "joint_force_schwarz2_radius/ellipse_mass_split": 5,
+    "joint_force_schwarz2_radius/ellipse_split_log": 57,
+    "joint_force_schwarz2_radius/force_sign": 48,
+    "joint_force_schwarz2_radius/mass_centered_quadratic": 465,
+    "joint_force_schwarz2_radius/mass_envelope_log": 35,
+    "joint_force_schwarz2_radius/mass_or_radius": 46,
+    "joint_force_schwarz2_radius/mass_quadratic_vertices": 73,
+    "joint_force_schwarz2_radius/maximum_radius": 2,
+    "joint_force_schwarz2_radius/old_ellipse": 5,
+    "joint_force_schwarz2_radius/ordered_separation": 312,
+    "joint_force_schwarz2_radius/ordering": 3,
+    "joint_force_schwarz2_radius/phase_force_affine": 425,
+    "joint_force_schwarz2_radius/polynomial_Ward_1": 23,
+    "joint_force_schwarz2_radius/separation": 102,
+    "joint_force_schwarz2_radius/stationarity": 5,
+    "joint_force_schwarz2_radius/strict_subset": 1370,
+    "joint_force_schwarz2_radius/subset_centroid_budget": 14,
+    "joint_force_schwarz2_radius/subset_centroid_geometry": 1,
     "joint_force_subset/force_sign": 7,
     "joint_force_subset/mass_centered_quadratic": 98,
     "joint_force_subset/mass_envelope_log": 16,
@@ -99,8 +134,23 @@
     "joint_force_subset_fast/subset_centroid_budget": 17,
     "joint_force_subset_fast/subset_centroid_geometry": 7,
     "joint_force_target_radius/mass_centered_quadratic": 2,
-    "split": 47196,
-    "unresolved": 14,
+    "joint_force_translated_subset/ellipse_covariance": 3,
+    "joint_force_translated_subset/ellipse_split_log": 1,
+    "joint_force_translated_subset/force_sign": 31,
+    "joint_force_translated_subset/mass_centered_quadratic": 39,
+    "joint_force_translated_subset/mass_envelope_log": 2,
+    "joint_force_translated_subset/mass_or_radius": 5,
+    "joint_force_translated_subset/mass_quadratic_vertices": 9,
+    "joint_force_translated_subset/maximum_radius": 2,
+    "joint_force_translated_subset/ordered_separation": 70,
+    "joint_force_translated_subset/ordering": 5,
+    "joint_force_translated_subset/phase_force_affine": 197,
+    "joint_force_translated_subset/polynomial_Ward_1": 7,
+    "joint_force_translated_subset/separation": 56,
+    "joint_force_translated_subset/strict_subset": 58,
+    "joint_force_translated_subset/translated_subset_budget": 18,
+    "split": 52205,
+    "unresolved": 28,
     "uploaded/ellipse": 7,
     "uploaded/force_affine": 907,
     "uploaded/force_taylor": 143,
@@ -113,95 +163,29 @@
   "subset_budget_processed_nodes": 797,
   "subset_budget_fast_processed_nodes": 12809,
   "target_radius_processed_nodes": 2,
-  "accepted_prefix_sha256": "173bf7f6ccf804a687afbb122af5b9130625f455ef2c104e1e3f2dbef390184f",
-  "accepted_prefix_processed_nodes": 60791,
-  "processed_since_accepted_prefix": 33608,
-  "newly_closed_since_accepted_prefix": [
-    10
-  ],
-  "accepted_frontier_regions": 30,
-  "closed_accepted_frontier_ids": [
-    25802,
-    26052,
-    51554,
-    55736,
-    55738,
-    55782,
-    55802,
-    55806,
-    56184,
-    58160,
-    59514,
-    60790,
-    60792,
-    60818,
-    60819,
-    60820
-  ],
-  "remaining_accepted_frontier_regions": 14,
-  "accepted_frontier": [
-    {
-      "accepted_leaf_id": 55806,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 1,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 55802,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 4,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 55782,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 7,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 55738,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 2,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 55736,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 34,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 51554,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 862,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 26052,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 10416,
-      "open_leaves": [],
-      "closed": true
-    },
-    {
-      "accepted_leaf_id": 25802,
-      "parent_region_id": 10,
-      "excluded_leaves_since_prefix": 1036,
-      "open_leaves": [],
-      "closed": true
-    },
+  "schwarz2_radius_processed_nodes": 6000,
+  "ellipse_schur_radius_processed_nodes": 3000,
+  "translated_subset_processed_nodes": 1004,
+  "nov2_prefix_sha256": "6e7a0b073e8ea28f0a2aceefe2b1a466cbf118c3e2475f46f57ab0417d96b081",
+  "nov2_prefix_processed_nodes": 94399,
+  "processed_since_nov2_prefix": 10004,
+  "newly_closed_since_nov2_prefix": [],
+  "nov2_frontier_regions": 14,
+  "closed_nov2_frontier_ids": [],
+  "remaining_nov2_frontier_regions": 14,
+  "nov2_frontier": [
     {
       "accepted_leaf_id": 9,
       "parent_region_id": 9,
-      "excluded_leaves_since_prefix": 0,
+      "excluded_leaves_since_prefix": 1498,
       "open_leaves": [
-        9
+        94414,
+        94942,
+        95054,
+        96180,
+        96182,
+        96184,
+        97100
       ],
       "closed": false
     },
@@ -316,9 +300,241 @@
     {
       "accepted_leaf_id": 55820,
       "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 3497,
+      "open_leaves": [
+        102614,
+        102820,
+        104320,
+        104356,
+        104388,
+        104390,
+        104424,
+        104426,
+        104430
+      ],
+      "closed": false
+    }
+  ],
+  "accepted_prefix_sha256": "173bf7f6ccf804a687afbb122af5b9130625f455ef2c104e1e3f2dbef390184f",
+  "accepted_prefix_processed_nodes": 60791,
+  "processed_since_accepted_prefix": 43612,
+  "newly_closed_since_accepted_prefix": [
+    10
+  ],
+  "accepted_frontier_regions": 30,
+  "closed_accepted_frontier_ids": [
+    25802,
+    26052,
+    51554,
+    55736,
+    55738,
+    55782,
+    55802,
+    55806,
+    56184,
+    58160,
+    59514,
+    60790,
+    60792,
+    60818,
+    60819,
+    60820
+  ],
+  "remaining_accepted_frontier_regions": 14,
+  "accepted_frontier": [
+    {
+      "accepted_leaf_id": 55806,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 1,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55802,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 4,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55782,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 7,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55738,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 2,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55736,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 34,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 51554,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 862,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 26052,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 10416,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 25802,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 1036,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 9,
+      "parent_region_id": 9,
+      "excluded_leaves_since_prefix": 1498,
+      "open_leaves": [
+        94414,
+        94942,
+        95054,
+        96180,
+        96182,
+        96184,
+        97100
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 8,
+      "parent_region_id": 8,
       "excluded_leaves_since_prefix": 0,
       "open_leaves": [
-        55820
+        8
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 7,
+      "parent_region_id": 7,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        7
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 5,
+      "parent_region_id": 5,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        5
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 4,
+      "parent_region_id": 4,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        4
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 3,
+      "parent_region_id": 3,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        3
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 2,
+      "parent_region_id": 2,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        2
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 1,
+      "parent_region_id": 1,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        1
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 0,
+      "parent_region_id": 0,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        0
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55810,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55810
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55812,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55812
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55814,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55814
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55818,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55818
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55820,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 3497,
+      "open_leaves": [
+        102614,
+        102820,
+        104320,
+        104356,
+        104388,
+        104390,
+        104424,
+        104426,
+        104430
       ],
       "closed": false
     },
@@ -381,7 +597,7 @@
   ],
   "checkpoint_sha256": "2f2af13b0164ded1fc5b199874c76f790b0e3c713fa4b432b36d86525d22b30b",
   "checkpoint_processed_nodes": 25790,
-  "processed_since_checkpoint": 68609,
+  "processed_since_checkpoint": 78613,
   "newly_closed_since_checkpoint": [
     10
   ],
@@ -427,9 +643,9 @@
     8,
     9
   ],
-  "open_leaf_boxes": 14,
-  "combined_tree_nodes": 424413,
-  "combined_excluded_leaves": 212193,
+  "open_leaf_boxes": 28,
+  "combined_tree_nodes": 434431,
+  "combined_excluded_leaves": 217188,
   "frontier": [
     {
       "parent_region_id": 0,
@@ -481,13 +697,21 @@
     },
     {
       "parent_region_id": 6,
-      "excluded_leaves": 6944,
+      "excluded_leaves": 10441,
       "open_leaves": [
         55810,
         55812,
         55814,
         55818,
-        55820
+        102614,
+        102820,
+        104320,
+        104356,
+        104388,
+        104390,
+        104424,
+        104426,
+        104430
       ],
       "closed": false
     },
@@ -509,9 +733,15 @@
     },
     {
       "parent_region_id": 9,
-      "excluded_leaves": 0,
+      "excluded_leaves": 1498,
       "open_leaves": [
-        9
+        94414,
+        94942,
+        95054,
+        96180,
+        96182,
+        96184,
+        97100
       ],
       "closed": false
     },

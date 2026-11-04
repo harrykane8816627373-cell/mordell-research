@@ -1,5 +1,7 @@
 # 复现指南
 
+更新：2026-11-04。
+
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
 
 ## 当前幂和与八点
@@ -25,7 +27,7 @@ python -B -S -O radial-gap/verify_all.py
 
 ## 联合物理系统与部分覆盖
 
-当前完整续算入口先重放完整父链，再独立重放上传证书、精确力余项/Newton算术、相关点差/复余项/二列Gram检查、共同子集预算、119/80半径常数及全部力方程总树，共6个接受入口：
+当前完整续算入口先重放完整父链，再核对上传证书、精确力余项/Newton、相关点差/复余项/二列Gram、共同子集预算、历史119/80半径、二阶Schwarz半径、旧椭圆–Schur半径、19dbbd3前缀防伪、平移子集及力方程总树，共10个接受入口：[11月4日证明与执行范围](../joint-refinement/NOV4_PROGRESS.md)。
 
 ~~~bash
 python -B -S -O joint-refinement/verify_force.py
@@ -47,15 +49,23 @@ python -B -S -O scripts/verify_current.py --refinement
 
 父阶段[联合证明](../joint-refinement/JOINT_STABILITY.md)给出内点条件 min|qᵢ|²<3/4、严格四阶径向预算与旧椭圆的两个参数包络。新算术独立穷举267220对整数参数，并按系数核对平方和分解、105个 Bernstein 查询与201个质量参数；六份伪造覆盖必须被拒绝。
 
-本次使用已验收的8be9f91固定前缀：60791个旧处理步骤及祖先链复用，61个旧算术输入逐字节不变，全部33608个新增处理步骤仍在固定输入临时副本逐节点重放。仅在该前缀此前已经验收时，可运行 `verify_force.py --accepted-prefix-already-replayed`。[执行记录](../joint-refinement/reports/force_execution.json)明确列出范围；首次复核使用不带跳过参数的默认完整命令。
+当前新增 `--nov2-prefix-already-replayed`，仅当19dbbd3此前已经验收时使用：复用94399个旧处理步骤及祖先链，要求70个旧算术输入逐字节不变，仍逐节点重放全部新增步骤。首次复核使用不带跳过参数的默认完整命令。
+
+~~~bash
+python -B -S -O joint-refinement/verify_force.py --nov2-prefix-already-replayed
+~~~
+
+[执行记录](../joint-refinement/reports/force_execution.json)明确列出本次实际范围。更早的 `--accepted-prefix-already-replayed` 固定8be9f91的60791个处理步骤与61个旧输入；19dbbd3历史阶段曾使用它重放33608个新增步骤。旧选项保留其原语义。
 
 更早的 `--checkpoint-already-replayed` 仍对应768598a的25790步及50个旧算术输入；`--parent-already-replayed` 对应e846b8e父链及36个旧输入。它们不是本次实际使用的前缀模式。
 
 [力方程联合证明](../joint-refinement/FORCE_CLOSURES.md)核对312个复Jacobian条目、24个精确余项、3个已知目标力的Newton像，以及局部圆盘不确定而终点点距可用的条件外包；254个指示向量模式核对完整Hessian必要谱条件，8份伪造覆盖必须被拒绝。上传门槛729/1000按全部多项式系数复核。新增接受检查不使用 `assert`，`-O` 不会跳过它们；原ZIP完整保留。
 
-[新的独立检查](../joint-refinement/EDGE_REMAINDERS.md)另外核对448条点差记录、256个复余项分量、两种必要像各16个已知解，以及84个复Gram主子式；11种伪造检查点必须被拒绝。另有质量7、旧椭圆内的严格探针加强见证，单独运行 `python -B -S -O joint-refinement/verify_mass7_gram.py` 可复算其有理反射、全部127个旧不等式和负主子式。该演示不作为总树叶的依赖。当前总账已完整关闭原编号10，尚有10个原域、14个开放盒，完整排空仍未完成。
+[新的独立检查](../joint-refinement/EDGE_REMAINDERS.md)另外核对448条点差记录、256个复余项分量、两种必要像各16个已知解，以及84个复Gram主子式；11种伪造检查点必须被拒绝。另有质量7、旧椭圆内的严格探针加强见证，单独运行 `python -B -S -O joint-refinement/verify_mass7_gram.py` 可复算其有理反射、全部127个旧不等式和负主子式。该演示不作为总树叶的依赖。原编号10在19dbbd3阶段已完整关闭；11月4日仅导入旧叶9与55820的两棵部分树，旧14盒没有新增整盒关闭。当前原区域仍0–9，当前有28个开放后代盒；全部新增步骤已独立重放，完整排空仍未完成。
 
 [新子集检查](../joint-refinement/SUBSET_BUDGET.md)核对1968个准确子集恒等式及重心包围，并验证真实单叶关闭与原父区域关闭的区别。[119/80半径证明](../joint-refinement/TARGET_RADIUS.md)中的四次非负分解、严格有理比较和边界导数恒等式由脚本检查；全体多项式的Schwarz解析桥梁需阅读正文，七点完整驻点分类没有在本轮重建。
+
+[二阶Schwarz核对](../joint-refinement/verify_schwarz2_radius.py)检查231/160常数与0处一次项消失；[旧椭圆–Schur核对](../joint-refinement/verify_ellipse_schur_radius.py)检查23/16的二次项与严格有理间隙；[平移子集核对](../joint-refinement/verify_translated_subset.py)独立核对1968个实际角点恒等式、相关重心包围、5个准确质量7保留盒、连续严格加强、边界等号与作用域。圆盘映射的解析桥梁仍须阅读证明，七点完整驻点分类未在本轮重建。
 
 `reports/force_cover.json` 是最新力方程总账；`reports/joint_cover.json` 和 `reports/cover.json` 分别保留e846b8e、92fbc4d父快照报告。`summarize_frontier.py` 只核对2f25467到92fbc4d的历史边界，不能替代最新增量的算术重放。
 

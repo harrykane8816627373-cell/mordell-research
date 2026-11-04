@@ -22,6 +22,9 @@ def main():
     parser.add_argument('--subset-budget',action='store_true',help='shared strict-subset mass and centroid budgets with the accepted force kernel')
     parser.add_argument('--subset-fast',action='store_true',help='one shared-budget/force composition pass per node')
     parser.add_argument('--target-radius',action='store_true',help='apply the target-value/M7/Schwarz radius bound 119/80')
+    parser.add_argument('--schwarz2-radius',action='store_true',help='apply the centered second-order Schwarz radius bound 231/160')
+    parser.add_argument('--ellipse-schur-radius',action='store_true',help='apply the old-ellipse Schur radius bound 23/16')
+    parser.add_argument('--translated-subset',action='store_true',help='fixed-centre strict-subset bounds after the 23/16 kernel')
     parser.add_argument('--sweep-only',action='store_true',help='try every selected open leaf once; retain unresolved original boxes without splitting')
     args=parser.parse_args()
     data=json.loads(gzip.decompress(args.resume.read_bytes()))
@@ -60,6 +63,15 @@ def main():
     if args.target_radius:
         import target_radius
         kernel=target_radius;engine='joint_force_target_radius'
+    if args.schwarz2_radius:
+        import schwarz2_radius
+        kernel=schwarz2_radius;engine='joint_force_schwarz2_radius'
+    if args.ellipse_schur_radius:
+        import ellipse_schur_radius
+        kernel=ellipse_schur_radius;engine='joint_force_ellipse_schur_radius'
+    if args.translated_subset:
+        import translated_subset
+        kernel=translated_subset;engine='joint_force_translated_subset'
     counts=Counter();start=time.monotonic()
     retained=[]
     for number in range(args.nodes):

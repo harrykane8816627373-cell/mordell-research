@@ -1,0 +1,589 @@
+{
+  "passed": true,
+  "parent_commit": "e846b8e9be902a636787974fba1e219cddc8f495",
+  "parent_certificate_sha256": "44562c49f23e2fb322b91a0b45279cd4da5581644b07be6bf2b1d7c052f2bc2b",
+  "attachment_sha256": "87c08af482404117068462cf7151464f4685509523bb64f0e998ae7ca48204fb",
+  "force_certificate_sha256": "6e7a0b073e8ea28f0a2aceefe2b1a466cbf118c3e2475f46f57ab0417d96b081",
+  "scope": "global_maximum",
+  "parent_frontier_regions": 21,
+  "force_tree_nodes": 94413,
+  "processed_nodes": 94399,
+  "imported_processed_nodes": 5846,
+  "new_processed_nodes": 88553,
+  "endpoint_distance_processed_nodes": 54867,
+  "counts": {
+    "joint_force/centered_mass_range": 1,
+    "joint_force/ellipse_covariance": 224,
+    "joint_force/ellipse_split_log": 22,
+    "joint_force/force_affine_exact": 1149,
+    "joint_force/force_sign": 334,
+    "joint_force/geometry": 95,
+    "joint_force/mass_centered_quadratic": 1656,
+    "joint_force/mass_envelope_log": 391,
+    "joint_force/mass_or_radius": 681,
+    "joint_force/mass_quadratic_log": 12,
+    "joint_force/mass_quadratic_vertices": 483,
+    "joint_force/maximum_radius": 762,
+    "joint_force/old_ellipse": 69,
+    "joint_force/ordered_separation": 978,
+    "joint_force/ordering": 5,
+    "joint_force/polynomial_Ward_1": 131,
+    "joint_force/separation": 976,
+    "joint_force/strict_subset": 866,
+    "joint_force_global/centered_mass_range": 21,
+    "joint_force_global/ellipse_covariance": 87,
+    "joint_force_global/ellipse_mass_split": 58,
+    "joint_force_global/ellipse_split_log": 404,
+    "joint_force_global/force_affine_exact": 8333,
+    "joint_force_global/force_sign": 335,
+    "joint_force_global/force_taylor_exact": 75,
+    "joint_force_global/mass_centered_quadratic": 5600,
+    "joint_force_global/mass_envelope_log": 1058,
+    "joint_force_global/mass_or_radius": 369,
+    "joint_force_global/mass_quadratic_log": 38,
+    "joint_force_global/mass_quadratic_vertices": 1484,
+    "joint_force_global/maximum_radius": 941,
+    "joint_force_global/old_ellipse": 400,
+    "joint_force_global/ordered_separation": 3905,
+    "joint_force_global/ordering": 14,
+    "joint_force_global/polynomial_Ward_1": 193,
+    "joint_force_global/separation": 1421,
+    "joint_force_global/stationarity": 69,
+    "joint_force_global/strict_subset": 2622,
+    "joint_force_gram/ellipse_covariance": 3,
+    "joint_force_gram/ellipse_mass_split": 1,
+    "joint_force_gram/ellipse_split_log": 37,
+    "joint_force_gram/force_sign": 110,
+    "joint_force_gram/mass_centered_quadratic": 570,
+    "joint_force_gram/mass_envelope_log": 59,
+    "joint_force_gram/mass_or_radius": 6,
+    "joint_force_gram/mass_quadratic_vertices": 158,
+    "joint_force_gram/maximum_radius": 25,
+    "joint_force_gram/old_ellipse": 13,
+    "joint_force_gram/ordered_separation": 519,
+    "joint_force_gram/phase_force_affine": 502,
+    "joint_force_gram/phase_force_taylor": 26,
+    "joint_force_gram/polynomial_Ward_1": 1,
+    "joint_force_gram/separation": 154,
+    "joint_force_gram/stationarity": 1,
+    "joint_force_gram/strict_subset": 310,
+    "joint_force_subset/force_sign": 7,
+    "joint_force_subset/mass_centered_quadratic": 98,
+    "joint_force_subset/mass_envelope_log": 16,
+    "joint_force_subset/mass_quadratic_vertices": 53,
+    "joint_force_subset/ordered_separation": 99,
+    "joint_force_subset/phase_force_affine": 33,
+    "joint_force_subset/polynomial_Ward_1": 1,
+    "joint_force_subset/separation": 72,
+    "joint_force_subset/strict_subset": 20,
+    "joint_force_subset_fast/centered_mass_range": 5,
+    "joint_force_subset_fast/ellipse_covariance": 11,
+    "joint_force_subset_fast/ellipse_mass_split": 2,
+    "joint_force_subset_fast/ellipse_split_log": 33,
+    "joint_force_subset_fast/force_sign": 136,
+    "joint_force_subset_fast/mass_centered_quadratic": 953,
+    "joint_force_subset_fast/mass_envelope_log": 201,
+    "joint_force_subset_fast/mass_or_radius": 3,
+    "joint_force_subset_fast/mass_quadratic_log": 4,
+    "joint_force_subset_fast/mass_quadratic_vertices": 433,
+    "joint_force_subset_fast/maximum_radius": 324,
+    "joint_force_subset_fast/old_ellipse": 17,
+    "joint_force_subset_fast/ordered_separation": 1404,
+    "joint_force_subset_fast/ordering": 2,
+    "joint_force_subset_fast/phase_force_affine": 1873,
+    "joint_force_subset_fast/phase_force_taylor": 1,
+    "joint_force_subset_fast/polynomial_Ward_1": 38,
+    "joint_force_subset_fast/separation": 372,
+    "joint_force_subset_fast/stationarity": 1,
+    "joint_force_subset_fast/strict_subset": 577,
+    "joint_force_subset_fast/subset_centroid_budget": 17,
+    "joint_force_subset_fast/subset_centroid_geometry": 7,
+    "joint_force_target_radius/mass_centered_quadratic": 2,
+    "split": 47196,
+    "unresolved": 14,
+    "uploaded/ellipse": 7,
+    "uploaded/force_affine": 907,
+    "uploaded/force_taylor": 143,
+    "uploaded/radius": 25,
+    "uploaded/separation": 549
+  },
+  "edge_correlated_processed_nodes": 0,
+  "complex_remainder_processed_nodes": 0,
+  "pair_Gram_processed_nodes": 5001,
+  "subset_budget_processed_nodes": 797,
+  "subset_budget_fast_processed_nodes": 12809,
+  "target_radius_processed_nodes": 2,
+  "accepted_prefix_sha256": "173bf7f6ccf804a687afbb122af5b9130625f455ef2c104e1e3f2dbef390184f",
+  "accepted_prefix_processed_nodes": 60791,
+  "processed_since_accepted_prefix": 33608,
+  "newly_closed_since_accepted_prefix": [
+    10
+  ],
+  "accepted_frontier_regions": 30,
+  "closed_accepted_frontier_ids": [
+    25802,
+    26052,
+    51554,
+    55736,
+    55738,
+    55782,
+    55802,
+    55806,
+    56184,
+    58160,
+    59514,
+    60790,
+    60792,
+    60818,
+    60819,
+    60820
+  ],
+  "remaining_accepted_frontier_regions": 14,
+  "accepted_frontier": [
+    {
+      "accepted_leaf_id": 55806,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 1,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55802,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 4,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55782,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 7,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55738,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 2,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 55736,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 34,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 51554,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 862,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 26052,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 10416,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 25802,
+      "parent_region_id": 10,
+      "excluded_leaves_since_prefix": 1036,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 9,
+      "parent_region_id": 9,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        9
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 8,
+      "parent_region_id": 8,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        8
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 7,
+      "parent_region_id": 7,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        7
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 5,
+      "parent_region_id": 5,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        5
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 4,
+      "parent_region_id": 4,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        4
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 3,
+      "parent_region_id": 3,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        3
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 2,
+      "parent_region_id": 2,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        2
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 1,
+      "parent_region_id": 1,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        1
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 0,
+      "parent_region_id": 0,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        0
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55810,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55810
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55812,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55812
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55814,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55814
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55818,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55818
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 55820,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 0,
+      "open_leaves": [
+        55820
+      ],
+      "closed": false
+    },
+    {
+      "accepted_leaf_id": 56184,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 2160,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 58160,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 1347,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 59514,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 399,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 60790,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 318,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 60792,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 207,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 60818,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 13,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 60820,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 5,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "accepted_leaf_id": 60819,
+      "parent_region_id": 6,
+      "excluded_leaves_since_prefix": 1,
+      "open_leaves": [],
+      "closed": true
+    }
+  ],
+  "checkpoint_sha256": "2f2af13b0164ded1fc5b199874c76f790b0e3c713fa4b432b36d86525d22b30b",
+  "checkpoint_processed_nodes": 25790,
+  "processed_since_checkpoint": 68609,
+  "newly_closed_since_checkpoint": [
+    10
+  ],
+  "uploaded_six_closed_regions": [
+    9976,
+    10012,
+    10014,
+    10016,
+    10019,
+    10020
+  ],
+  "total_closed_parent_regions": 11,
+  "closed_parent_ids": [
+    10,
+    1282,
+    7062,
+    7954,
+    9814,
+    9976,
+    10012,
+    10014,
+    10016,
+    10019,
+    10020
+  ],
+  "newly_closed_beyond_upload": [
+    10,
+    1282,
+    7062,
+    7954,
+    9814
+  ],
+  "remaining_parent_regions": 10,
+  "remaining_parent_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "open_leaf_boxes": 14,
+  "combined_tree_nodes": 424413,
+  "combined_excluded_leaves": 212193,
+  "frontier": [
+    {
+      "parent_region_id": 0,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        0
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 1,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        1
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 2,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        2
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 3,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        3
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 4,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        4
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 5,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        5
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 6,
+      "excluded_leaves": 6944,
+      "open_leaves": [
+        55810,
+        55812,
+        55814,
+        55818,
+        55820
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 7,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        7
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 8,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        8
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 9,
+      "excluded_leaves": 0,
+      "open_leaves": [
+        9
+      ],
+      "closed": false
+    },
+    {
+      "parent_region_id": 10,
+      "excluded_leaves": 27359,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 1282,
+      "excluded_leaves": 2434,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 7062,
+      "excluded_leaves": 6134,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 7954,
+      "excluded_leaves": 1653,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 9814,
+      "excluded_leaves": 2653,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 9976,
+      "excluded_leaves": 9,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10012,
+      "excluded_leaves": 4,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10014,
+      "excluded_leaves": 3,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10016,
+      "excluded_leaves": 1,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10020,
+      "excluded_leaves": 8,
+      "open_leaves": [],
+      "closed": true
+    },
+    {
+      "parent_region_id": 10019,
+      "excluded_leaves": 1,
+      "open_leaves": [],
+      "closed": true
+    }
+  ],
+  "unchanged_parent_arithmetic_inputs": 36,
+  "parent_arithmetic_replayed_by_this_checker": false,
+  "complete_cover": false,
+  "full_eight_point_exclusion_proved": false
+}

@@ -1,6 +1,6 @@
 # Mordell 距离乘积研究
 
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-02**。
+研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-04**。
 
 ```math
 M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
@@ -14,20 +14,28 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[子集预算与当前排空](joint-refinement/SUBSET_BUDGET.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
+|八点最新进展与准确剩余分支|[11月4日进展与当前边界](joint-refinement/NOV4_PROGRESS.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 当前联合排除：119/80半径与共同子集预算
+## 当前联合排除：二阶Schwarz、旧椭圆与平移子集预算
 
-本轮完整排空了 **原编号10的整个区域**，未闭合原区域从11个降为 **10个（0–9）**。按上轮30个开放盒逐项追踪，其中 **16个已包含全部后代地关闭**，剩余 **14个开放盒**；它们是连续坐标外包，不是14个驻点。[完整闭合与当前边界](joint-refinement/SUBSET_BUDGET.md)
+[11月4日续算](joint-refinement/NOV4_PROGRESS.md)给出两个不同作用域的必要条件：所有质量7的八点全局最优者满足 **maxᵢ|qᵢ|²<231/160**；再联合剩余分支的旧矩椭圆，可加强为 **maxᵢ|qᵢ|²<23/16**。[二阶Schwarz证明](joint-refinement/SCHWARZ2_RADIUS.md) · [旧椭圆–Schur证明](joint-refinement/ELLIPSE_SCHUR_RADIUS.md)。两项均沿用已有七点锐界，其外部完整驻点分类没有在本轮重建。
+
+[固定有理中心的平移子集预算](joint-refinement/TRANSLATED_SUBSET.md)继续保留同一组真实坐标与共同重心，对离原点较远的聚集子集给出更紧的整盒上界。本轮仅续算旧叶9与55820的两棵**部分树**；19dbbd3的14个旧开放盒没有新增整盒关闭，原区域仍为 **0–9**。已独立重放10004个新增处理步骤、4995个排除叶，当前28个开放盒来自进一步细分，不是28个驻点。
+
+当前总账合并434431个节点、217188个排除叶；本轮10个接受入口通过，实际范围以[覆盖报告](joint-refinement/reports/force_cover.json)及[执行记录](joint-refinement/reports/force_execution.json)为准。10个接受入口已从固定输入临时副本通过；此前已验收19dbbd3时可复用其94399个旧处理步骤及70个不变算术输入，全部新步骤已独立重放。**完整八点锐界仍未证明，剩余非零矩分支尚未排空。**
+
+## 19dbbd3阶段（2026-11-02）：119/80半径与原编号10闭合
+
+该阶段完整排空了 **原编号10的整个区域**，未闭合原区域从11个降为 **10个（0–9）**。按上轮30个开放盒逐项追踪，其中 **16个已包含全部后代地关闭**，剩余 **14个开放盒**；它们是连续坐标外包，不是14个驻点。[完整闭合与当前边界](joint-refinement/SUBSET_BUDGET.md)
 
 联合已有七点锐界、八点目标阈值与Schwarz引理，得到全局最优者的新必要条件 **maxᵢ|qᵢ|²<119/80**，原未量化界为49/32。证明保留七点完整驻点分类的既有外部依赖，没有把该条件推广到任意稳定驻点。[完整解析证明](joint-refinement/TARGET_RADIUS.md)
 
-搜索还把严格真子集的点距和改写为共同质量与子集重心预算，并传播给每个实际点。6个接受入口从固定输入临时副本通过，实际重放 **33608个新增处理步骤**，新增 **16812个排除叶**；60791个已验收步骤及祖先链按固定前缀复用，61个旧算术输入逐字节未变。[执行范围](joint-refinement/reports/force_execution.json)
+搜索还把严格真子集的点距和改写为共同质量与子集重心预算，并传播给每个实际点。6个接受入口从固定输入临时副本通过，实际重放 **33608个新增处理步骤**，新增 **16812个排除叶**；60791个已验收步骤及祖先链按固定前缀复用，61个旧算术输入逐字节未变。[该阶段冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)
 
-合并总账为424413个节点、212193个排除叶。[最新覆盖报告](joint-refinement/reports/force_cover.json)保留全部14个开放盒，**完整八点锐界仍未证明**。此前729/1000内点门槛、−1/4000无内点负曲率间隙、旧椭圆、真实逐点力方程及完整Hessian条件继续保留。[已有结果与来源](joint-refinement/FORCE_CLOSURES.md)
+合并总账为424413个节点、212193个排除叶。[19dbbd3冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)保留当时全部14个开放盒，**完整八点锐界仍未证明**。此前729/1000内点门槛、−1/4000无内点负曲率间隙、旧椭圆、真实逐点力方程及完整Hessian条件继续保留。[已有结果与来源](joint-refinement/FORCE_CLOSURES.md)
 
 ## 上一阶段：等价多项式矩阵与冻结覆盖
 

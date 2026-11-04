@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "accepted_commit": "19dbbd32f70fee7b5305d7c70f8f8859b4e90ba2",
+  "accepted_processed_nodes": 94399,
+  "unchanged_arithmetic_inputs": 70,
+  "accepted_open_boxes": 14,
+  "forged_prefix_variants_rejected": 9,
+  "zero_new_step_accounting_checked": true,
+  "prior_arithmetic_replayed_by_this_test": false,
+  "full_eight_point_exclusion_proved": false
+}

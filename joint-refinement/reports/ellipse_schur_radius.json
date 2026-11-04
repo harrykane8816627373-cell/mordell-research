@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "centered_power_sum_products_checked": 3,
+  "two_stage_boundary_examples": 3,
+  "constant_term_modulus_strict_upper": "329/500",
+  "second_Schur_constant_term_modulus_upper": "10651375/13041828",
+  "boundary_derivative_strict_lower": "8511842889/19641665287",
+  "high_radius_derivative_upper": "3/7",
+  "squared_radius_strict_upper": "23/16",
+  "gain_over_universal_second_order_radius": "1/160",
+  "requires_global_maximizer_and_old_moment_ellipse": true,
+  "old_ellipse_hypothesis_must_be_explicit_in_model": true,
+  "scope_guards_checked": 3,
+  "s2_is_the_global_complex_power_sum": true,
+  "analytic_Schur_bridge_requires_written_proof": true,
+  "seven_point_sharp_bound_is_inherited_external_input": true,
+  "seven_point_full_classification_rebuilt_here": false,
+  "floating_point_acceptance": false,
+  "full_eight_point_exclusion_proved": false
+}

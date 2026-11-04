@@ -21,6 +21,8 @@ def main():
         help='reuse exactly the accepted 768598a force prefix and parent chain; replay all descendants and check 50 unchanged arithmetic inputs')
     group.add_argument('--accepted-prefix-already-replayed',action='store_true',
         help='reuse exactly the accepted 8be9f91 force prefix and parent chain; replay all descendants and check 61 unchanged arithmetic inputs')
+    group.add_argument('--nov2-prefix-already-replayed',action='store_true',
+        help='reuse exactly the accepted 19dbbd3 force prefix and parent chain; replay all descendants and check 70 unchanged arithmetic inputs')
     parser.add_argument('--record-reports',action='store_true')
     args=parser.parse_args()
     manifest_raw=(HERE/'source_manifest.json').read_bytes()
@@ -46,7 +48,9 @@ def main():
                 timeout=10800 if script=='check_force.py' else 3600)
             need(result.returncode==0,script+': '+result.stdout[-3000:])
             return result.stdout
-        if args.accepted_prefix_already_replayed:
+        if args.nov2_prefix_already_replayed:
+            print('REUSE accepted 19dbbd3 prefix (94,399 processed nodes) and parent chain; all 70 arithmetic inputs must match',flush=True)
+        elif args.accepted_prefix_already_replayed:
             print('REUSE accepted 8be9f91 prefix (60,791 processed nodes) and parent chain; all 61 arithmetic inputs must match',flush=True)
         elif args.checkpoint_already_replayed:
             print('REUSE accepted 768598a prefix (25,790 processed nodes) and parent chain; all 50 arithmetic inputs must match',flush=True)
@@ -60,8 +64,13 @@ def main():
             ('verify_edge_force.py',[],'edge_arithmetic.json'),
             ('verify_subset_budget.py',[],'subset_arithmetic.json'),
             ('verify_target_radius.py',[],'target_radius.json'),
+            ('verify_schwarz2_radius.py',[],'schwarz2_radius.json'),
+            ('verify_ellipse_schur_radius.py',[],'ellipse_schur_radius.json'),
+            ('verify_nov2_prefix.py',[],'nov2_prefix.json'),
+            ('verify_translated_subset.py',[],'translated_subset.json'),
             ('check_force.py',['joint-refinement/certificates/force_extension.json.gz','--progress']+
-                (['--reuse-accepted-prefix'] if args.accepted_prefix_already_replayed else
+                (['--reuse-nov2-prefix'] if args.nov2_prefix_already_replayed else
+                    ['--reuse-accepted-prefix'] if args.accepted_prefix_already_replayed else
                     ['--reuse-checkpoint'] if args.checkpoint_already_replayed else []),'force_cover.json')]
         for script,arguments,name in entries:
             result=json.loads(run(script,*arguments))
@@ -75,8 +84,8 @@ def main():
             results[name]=result
             print('PASS '+script,flush=True)
     cover=results['force_cover.json']
-    reused=args.parent_already_replayed or args.checkpoint_already_replayed or args.accepted_prefix_already_replayed
-    prefix_nodes=60791 if args.accepted_prefix_already_replayed else 25790 if args.checkpoint_already_replayed else 0
+    reused=args.parent_already_replayed or args.checkpoint_already_replayed or args.accepted_prefix_already_replayed or args.nov2_prefix_already_replayed
+    prefix_nodes=94399 if args.nov2_prefix_already_replayed else 60791 if args.accepted_prefix_already_replayed else 25790 if args.checkpoint_already_replayed else 0
     execution={'passed':True,'parent_forests_replayed_this_invocation':not reused,
         'parent_full_chain_replayed_this_invocation':not (reused or args.legacy_inputs_already_replayed),
         'inherited_dependency_proof_reused':reused or args.legacy_inputs_already_replayed,
@@ -87,8 +96,11 @@ def main():
         'accepted_prefix_reused':args.accepted_prefix_already_replayed,
         'accepted_prefix_processed_nodes_reused':60791 if args.accepted_prefix_already_replayed else 0,
         'unchanged_accepted_prefix_arithmetic_inputs':61 if args.accepted_prefix_already_replayed else 0,
+        'nov2_prefix_reused':args.nov2_prefix_already_replayed,
+        'nov2_prefix_processed_nodes_reused':94399 if args.nov2_prefix_already_replayed else 0,
+        'unchanged_nov2_prefix_arithmetic_inputs':70 if args.nov2_prefix_already_replayed else 0,
         'force_processed_nodes_replayed_this_invocation':cover['processed_nodes']-prefix_nodes,
-        'new_exact_entries_replayed':6,'independent_attachment_replayer_uses_assert':False,
+        'new_exact_entries_replayed':10,'independent_attachment_replayer_uses_assert':False,
         'full_eight_point_exclusion_proved':cover['full_eight_point_exclusion_proved']}
     if args.record_reports:
         for name,result in results.items():(HERE/'reports'/name).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')

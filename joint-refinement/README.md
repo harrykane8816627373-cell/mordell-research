@@ -1,8 +1,8 @@
-# 八点联合续算：半径119/80、共同预算与剩余10域
+# 八点联合续算：二阶Schwarz、旧椭圆与平移子集预算
 
-2026-11-02。研究发起：蒋丰灿（Fengcan Jiang）；OpenAI Codex 协作。
+2026-11-04。研究发起：蒋丰灿（Fengcan Jiang）；OpenAI Codex 协作。
 
-**完整排空仍未完成。** 本轮以[共同子集质量与重心预算](SUBSET_BUDGET.md)联合此前全部实际点约束，完整关闭原编号10的整个区域；另由[七点锐界、目标值与Schwarz引理](TARGET_RADIUS.md)推出 maxᵢ|qᵢ|²<119/80，保留已披露七点外部分类依赖。
+**完整排空仍未完成。** 最新入口为[11月4日进展](NOV4_PROGRESS.md)。质量7的八点全局最优者满足[二阶Schwarz界](SCHWARZ2_RADIUS.md) maxᵢ|qᵢ|²<231/160；再联合旧矩椭圆，[第二个Schur步骤](ELLIPSE_SCHUR_RADIUS.md)将剩余分支加强到 maxᵢ|qᵢ|²<23/16。两者作用域不同，且都沿用已披露七点锐界的外部完整驻点分类；本轮没有重建该分类。
 
 |相同21个父区域的进度|已完整闭合|尚未闭合|
 |---|---:|---:|
@@ -10,17 +10,18 @@
 |上传六项闭合附件|6|15|
 |768598a已验收检查点|10|11|
 |8be9f91已验收检查点|10|11|
-|本轮完整闭合原编号10|11|10|
+|19dbbd3阶段完整闭合原编号10|11|10|
+|11月4日部分树续算|11|10|
 
-对8be9f91的30个开放盒逐一追踪，本轮完整关闭16个，余下14个仍保持原边界，没有把部分树误计为闭合。当前原编号0–9尚未全部关闭；原编号10的所有后代均有排除证书。[数学总账](reports/force_cover.json)分别记录两层边界，不给出驻点数或体积比例。
+本轮对19dbbd3的旧叶9与55820导入两棵部分树，原14个开放盒没有新增整盒关闭，原编号0–9仍开放。已独立重放10004个新增处理步骤，含6000个二阶Schwarz版本、3000个椭圆–Schur版本和1004个平移子集版本；新增4995个排除叶。总力森林104431节点、104403个处理步骤、28个开放盒；与祖先合并434431节点、217188个排除叶。盒数增加来自细分，不是新增驻点或覆盖比例。10个接受入口已通过，详见[总账](reports/force_cover.json)与[实际执行范围](reports/force_execution.json)。
 
-实际重放33608个新增处理步骤，新增16812个排除叶。总力森林94413个节点、94399个处理步骤、14个开放叶；与祖先合并为424413个节点、212193个排除叶。此前全部5846个上传步骤和已验收旧步骤保留。
+[新平移子集预算](TRANSLATED_SUBSET.md)对每个子集固定一个有理中心，准确使用 W=mΣ|qᵢ−c|²−|Σqᵢ−mc|²，再取整盒上界。它在继承23/16联合内核尚存活的盒上直接拒绝，所有子集及力方程仍由相同13个实际坐标计算。
 
-6个接受入口从固定输入临时副本通过；本次复用[8be9f91已验收前缀](certificates/force_checkpoint_8be9f91_report.json)的60791个旧处理步骤及祖先链，61个旧算术输入逐字节未变。[实际执行范围](reports/force_execution.json)与数学总账分开。默认 `verify_force.py` 仍完整重放；此前已验收该固定前缀时，可用 `--accepted-prefix-already-replayed`。
+当前 `verify_force.py` 包含10个接受入口。仅在19dbbd3此前已经验收时，可用 `--nov2-prefix-already-replayed` 复用其94399个旧处理步骤及祖先链；70个旧算术输入必须逐字节不变，全部新增步骤仍从固定输入临时副本重放。默认命令仍重放完整父链，哈希检查不能替代首次验收。
 
-[子集算术检查](reports/subset_arithmetic.json)核对1968个独立角点恒等式、1968个相关重心包围、5个保留同一准确质量7点的连续盒及严格阈值边界，并拒绝8种伪造前缀。[新半径核对](reports/target_radius.json)检查非负分解、缩放常数及边界导数恒等式；Schwarz解析桥梁见正文，七点完整分类没有在本轮重建。
+19dbbd3历史阶段的[共同子集预算与119/80证明](SUBSET_BUDGET.md)保留：当时完整关闭原编号10，上轮30盒中16盒整棵关闭，余14盒；新增33608个处理步骤、16812个排除叶，合并424413节点、212193个排除叶。[冻结报告](certificates/force_checkpoint_19dbbd3_report.json)保留其原计数。119/80旧半径及其算法版本不被追溯改写。
 
-父阶段的[力余项与二列Gram](EDGE_REMAINDERS.md)、[四阶稳定性](JOINT_STABILITY.md)、[共同质量包络](MASS_DUAL_ENVELOPE.md)、[中心化切片](CENTERED_MASS.md)、[全局二次界](GLOBAL_QUADRATIC.md)和旋转饱和均保留。附件729/1000内点门槛及对应 −1/4000 间隙见[来源接合](FORCE_CLOSURES.md)。[joint报告](reports/joint_cover.json)与[更早报告](reports/cover.json)仍是冻结快照。
+此前的[力余项与二列Gram](EDGE_REMAINDERS.md)、[四阶稳定性](JOINT_STABILITY.md)、[共同质量包络](MASS_DUAL_ENVELOPE.md)、[中心化切片](CENTERED_MASS.md)、[全局二次界](GLOBAL_QUADRATIC.md)和旋转饱和均保留。附件729/1000内点门槛及对应 −1/4000 间隙见[来源接合](FORCE_CLOSURES.md)。[joint报告](reports/joint_cover.json)与[更早报告](reports/cover.json)仍是冻结快照。
 
 ## 1. 质量恰为7时，完整 Hessian PSD 已强迫驻点
 
@@ -56,7 +57,7 @@ Hu=ig,\qquad u^THu=4\sum_i|q_i|^2-28=0.
 
 ~~~math
 \boxed{\sum|q_i|^2=7,\quad \Delta_q\ge7^7,\quad
-E_{\rm rad}>1/1200,\quad \max_i|q_i|^2<119/80,\quad\min_i|q_i|^2<729/1000,\quad
+E_{\rm rad}>1/1200,\quad \max_i|q_i|^2<23/16,\quad\min_i|q_i|^2<729/1000,\quad
 |s_2|^2+\frac{54}{175}|s_3|^2<1,\quad s_2s_3\ne0,\quad H(q)\succeq0.}
 ~~~
 
@@ -156,7 +157,7 @@ log2 也用同一严格公式。全部运算在2⁻⁴⁰整数网格向外取�
 python -B -S -O joint-refinement/verify_force.py
 ~~~
 
-父链已准确验收且36个旧算术输入未变时，可使用 `--parent-already-replayed`。本轮使用该复用选项，仍重放上传的5846个步骤及全部19944个新增步骤，不能用哈希核对代替首次父证明验收。
+仅当19dbbd3证明此前已经准确验收时，可使用 `--nov2-prefix-already-replayed`；程序固定其证书、报告和70个旧算术输入，复用94399个旧处理步骤及祖先链，再逐节点核算本轮新增步骤。实际执行情况以执行记录为准，不能用哈希核对代替首次验收。更早的前缀选项继续对应各自冻结阶段。
 
 单独重放新总树（以已经验收的固定父链为前提）：
 
@@ -164,10 +165,10 @@ python -B -S -O joint-refinement/verify_force.py
 python -B -S -O joint-refinement/check_force.py joint-refinement/certificates/force_extension.json.gz
 ~~~
 
-继续处理某个尚未闭合的原区域，例如编号10：
+继续处理某个尚未闭合的原区域，例如编号9：
 
 ~~~bash
-python -B -S -O joint-refinement/propose_force.py --global-endpoint --nodes 20000 --roots 10 --resume joint-refinement/certificates/force_extension.json.gz --output PATH_TO_NEXT.json.gz
+python -B -S -O joint-refinement/propose_edge.py --translated-subset --nodes 20000 --roots 9 --resume joint-refinement/certificates/force_extension.json.gz --output PATH_TO_NEXT.json.gz
 ~~~
 
 不指定 `--roots` 时处理全部未解叶。局部与终点点距版本分别在节点中标记，旧已处理步骤不改写，所有未解叶必须保留。接受和生成只需标准库，证明条件使用显式检查。

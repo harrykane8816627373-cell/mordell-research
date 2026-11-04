@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "subset_classes": 246,
+  "independent_translated_corner_identities": 1968,
+  "dependent_centroid_enclosures": 1968,
+  "exact_mass7_boxes_retained": 5,
+  "continuous_strict_strengthening_checked": true,
+  "strict_threshold_equality_rejected": true,
+  "empty_centred_intersection_rejected": true,
+  "scope_guard_rejections": 2,
+  "floating_point_acceptance": false,
+  "acceptance_uses_assert": false,
+  "full_eight_point_exclusion_proved": false
+}

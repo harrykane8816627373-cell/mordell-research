@@ -45,7 +45,7 @@ def parent_data():
     return parent,report,settings,meta
 
 
-def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
+def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False,reuse_nov2=False):
     parent,old_report,settings,meta=parent_data()
     initial=initialize()
     raw=path.read_bytes()
@@ -65,7 +65,12 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
         import recent_force as N
         recent=N.load_recent()
         N.descendant(data,recent[0])
-    need(not (reuse_checkpoint and reuse_recent),'select only one reused prefix')
+    nov2=None
+    if 'nov2_prefix_sha256' in data or reuse_nov2:
+        import nov2_force as V
+        nov2=V.load_current()
+        V.descendant(data,nov2[0])
+    need(sum([reuse_checkpoint,reuse_recent,reuse_nov2])<=1,'select only one reused prefix')
     need(len(nodes)>=len(initial['nodes']),'entire imported forest retained')
     imported_processed=0
     for i,node in enumerate(initial['nodes']):
@@ -87,21 +92,30 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
     if recent:
         accepted_frontier={i:{'accepted_leaf_id':i,'parent_region_id':r,'excluded_leaves_since_prefix':0,'open_leaves':[]}
             for i,b,r in recent[0]['pending']}
-    stack=[(j,old[root],root,None) for root,j in data['roots']]
+    nov2_frontier={}
+    if nov2:
+        nov2_frontier={i:{'accepted_leaf_id':i,'parent_region_id':r,'excluded_leaves_since_prefix':0,'open_leaves':[]}
+            for i,b,r in nov2[0]['pending']}
+    stack=[(j,old[root],root,None,None) for root,j in data['roots']]
     seen=set()
     counts=Counter()
     engines=Counter()
-    if reuse_checkpoint or reuse_recent:
-        base,accepted,_=recent if reuse_recent else checkpoint
+    if reuse_checkpoint or reuse_recent or reuse_nov2:
+        base,accepted,_=nov2 if reuse_nov2 else recent if reuse_recent else checkpoint
         seen={i for i,node in enumerate(base['nodes']) if node['kind']!='unknown'}
         counts=Counter({k:v for k,v in accepted['counts'].items() if k!='unresolved'})
         engines=Counter(n['engine'] for n in base['nodes'] if n['kind']!='unknown')
-        stack=[(i,[tuple(p) for p in b],r,i if reuse_recent else None) for i,b,r in base['pending']]
+        stack=[(i,[tuple(p) for p in b],r,i if reuse_recent or reuse_nov2 else None,i if reuse_nov2 else None)
+            for i,b,r in base['pending']]
         for row in accepted['frontier']:
             frontier[row['parent_region_id']]['excluded_leaves']=row['excluded_leaves']
+        if reuse_nov2:
+            for row in accepted['accepted_frontier']:
+                accepted_frontier[row['accepted_leaf_id']]['excluded_leaves_since_prefix']=row['excluded_leaves_since_prefix']
     while stack:
-        i,original,root,origin=stack.pop()
+        i,original,root,origin,nov2_origin=stack.pop()
         if i in accepted_frontier:origin=i
+        if i in nov2_frontier:nov2_origin=i
         need(type(i) is int and 0<=i<len(nodes) and i not in seen,'disjoint acyclic force forest')
         seen.add(i)
         if progress and len(seen)%2000==0:print('Replayed force nodes:',len(seen),'of',len(nodes),file=sys.stderr,flush=True)
@@ -112,9 +126,12 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
             if recent:
                 need(origin in accepted_frontier,'every current open leaf descends from one accepted open region')
                 accepted_frontier[origin]['open_leaves'].append(i)
+            if nov2:
+                need(nov2_origin in nov2_frontier,'every current open leaf descends from one Nov 2 open region')
+                nov2_frontier[nov2_origin]['open_leaves'].append(i)
             counts['unresolved']+=1
             continue
-        need(i not in pending and node['engine'] in ['uploaded','joint_force','joint_force_global','joint_force_edge','joint_force_phase','joint_force_gram','joint_force_subset','joint_force_subset_fast','joint_force_target_radius'],'known processed engine')
+        need(i not in pending and node['engine'] in ['uploaded','joint_force','joint_force_global','joint_force_edge','joint_force_phase','joint_force_gram','joint_force_subset','joint_force_subset_fast','joint_force_target_radius','joint_force_schwarz2_radius','joint_force_ellipse_schur_radius','joint_force_translated_subset'],'known processed engine')
         engines[node['engine']]+=1
         if node['engine']=='uploaded':
             box,reason=original,None
@@ -139,6 +156,15 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
         elif node['engine']=='joint_force_target_radius':
             import target_radius
             box,reason,aux=target_radius.contract(original,settings)
+        elif node['engine']=='joint_force_schwarz2_radius':
+            import schwarz2_radius
+            box,reason,aux=schwarz2_radius.contract(original,settings)
+        elif node['engine']=='joint_force_ellipse_schur_radius':
+            import ellipse_schur_radius
+            box,reason,aux=ellipse_schur_radius.contract(original,settings)
+        elif node['engine']=='joint_force_translated_subset':
+            import translated_subset
+            box,reason,aux=translated_subset.contract(original,settings)
         else:
             endpoint=settings['separation'] if node['engine']=='joint_force_global' else None
             box,reason,aux=K.contract(original,settings,endpoint_separation=endpoint)
@@ -147,6 +173,7 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
             counts[node['engine']+'/'+reason]+=1
             frontier[root]['excluded_leaves']+=1
             if origin is not None:accepted_frontier[origin]['excluded_leaves_since_prefix']+=1
+            if nov2_origin is not None:nov2_frontier[nov2_origin]['excluded_leaves_since_prefix']+=1
         elif node['kind']=='split':
             need(box is not None,'new split follows only sound contractions')
             dim,cut=node['dim'],node['cut']
@@ -154,7 +181,7 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
                 'proper complete exact binary split')
             left,right=list(box),list(box)
             left[dim],right[dim]=(box[dim][0],cut),(cut,box[dim][1])
-            stack += [(node['left'],left,root,origin),(node['right'],right,root,origin)]
+            stack += [(node['left'],left,root,origin,nov2_origin),(node['right'],right,root,origin,nov2_origin)]
             counts['split']+=1
         else:raise ArithmeticError('unknown force proof node')
     need(len(seen)==len(nodes) and counts['unresolved']==len(pending),'every proof node and open leaf accounted for')
@@ -171,6 +198,10 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
     for row in accepted_frontier.values():
         row['open_leaves'].sort();row['closed']=not row['open_leaves'];accepted_rows.append(row)
     closed_accepted=sorted(row['accepted_leaf_id'] for row in accepted_rows if row['closed'])
+    nov2_rows=[]
+    for row in nov2_frontier.values():
+        row['open_leaves'].sort();row['closed']=not row['open_leaves'];nov2_rows.append(row)
+    closed_nov2=sorted(row['accepted_leaf_id'] for row in nov2_rows if row['closed'])
     return {'passed':True,'parent_commit':meta['parent_commit'],'parent_certificate_sha256':A.PARENT_SHA256,
         'attachment_sha256':A.ZIP_SHA256,'force_certificate_sha256':hashlib.sha256(raw).hexdigest(),
         'scope':'global_maximum','parent_frontier_regions':21,'force_tree_nodes':len(nodes),
@@ -183,6 +214,15 @@ def check(path,progress=False,reuse_checkpoint=False,reuse_recent=False):
         'subset_budget_processed_nodes':engines['joint_force_subset'],
         'subset_budget_fast_processed_nodes':engines['joint_force_subset_fast'],
         'target_radius_processed_nodes':engines['joint_force_target_radius'],
+        'schwarz2_radius_processed_nodes':engines['joint_force_schwarz2_radius'],
+        'ellipse_schur_radius_processed_nodes':engines['joint_force_ellipse_schur_radius'],
+        'translated_subset_processed_nodes':engines['joint_force_translated_subset'],
+        'nov2_prefix_sha256':data.get('nov2_prefix_sha256'),
+        'nov2_prefix_processed_nodes':nov2[1]['processed_nodes'] if nov2 else 0,
+        'processed_since_nov2_prefix':len(nodes)-len(pending)-nov2[1]['processed_nodes'] if nov2 else None,
+        'newly_closed_since_nov2_prefix':sorted(set(closed)-set(nov2[1]['closed_parent_ids'])) if nov2 else [],
+        'nov2_frontier_regions':len(nov2_rows),'closed_nov2_frontier_ids':closed_nov2,
+        'remaining_nov2_frontier_regions':len(nov2_rows)-len(closed_nov2),'nov2_frontier':nov2_rows,
         'accepted_prefix_sha256':data.get('accepted_prefix_sha256'),
         'accepted_prefix_processed_nodes':recent[1]['processed_nodes'] if recent else 0,
         'processed_since_accepted_prefix':len(nodes)-len(pending)-recent[1]['processed_nodes'] if recent else None,
@@ -211,5 +251,7 @@ if __name__=='__main__':
         help='only when the exact archived 768598a proof is already accepted; checks all 50 unchanged arithmetic inputs')
     parser.add_argument('--reuse-accepted-prefix',action='store_true',
         help='only when the exact archived 8be9f91 proof is already accepted; checks all 61 unchanged arithmetic inputs')
+    parser.add_argument('--reuse-nov2-prefix',action='store_true',
+        help='only when the exact archived 19dbbd3 proof is already accepted; checks all 70 unchanged arithmetic inputs')
     args=parser.parse_args()
-    print(json.dumps(check(args.certificate,args.progress,args.reuse_checkpoint,args.reuse_accepted_prefix),indent=2))
+    print(json.dumps(check(args.certificate,args.progress,args.reuse_checkpoint,args.reuse_accepted_prefix,args.reuse_nov2_prefix),indent=2))
