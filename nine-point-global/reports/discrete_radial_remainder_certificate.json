@@ -1,0 +1,7 @@
+{
+  "piecewise_polynomial_identities": true,
+  "seven_variable_cauchy_identity": true,
+  "old_boundary_point_excluded": true,
+  "old_boundary_excess": "[0.001725269355676691487773188753619006639428171 +/- 2.43e-46]",
+  "global_M9_proved": false
+}

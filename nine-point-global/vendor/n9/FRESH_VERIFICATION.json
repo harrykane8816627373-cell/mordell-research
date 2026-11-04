@@ -1,0 +1,26 @@
+{
+  "coefficient_sha256": "1d1cef17749fcb242e6f09dffe3c26183ae672fe4707b2bad70bb0b12b0e9d88",
+  "all_input_hashes_verified": true,
+  "fresh_algebra_and_local_verification_passed": true,
+  "fresh_full_cover_passed": true,
+  "unresolved_boxes": 0,
+  "counts": {
+    "visited": 31613,
+    "outside": 2716,
+    "moment_outside": 0,
+    "quartic_outside": 662,
+    "local": 50,
+    "positive": 2589,
+    "cubic_positive": 5695,
+    "arb_recomputed": 1,
+    "arb_positive": 0,
+    "split": 15806,
+    "arb_refreshed": 1,
+    "discrete_radial_outside": 107,
+    "physical_correction_positive": 2919,
+    "quadratic_correction_positive": 1069,
+    "arb_correction_positive": 0
+  },
+  "elapsed_seconds": 118.42200000002049,
+  "proof_scope": "Computer-verifiable premises. Global bound and equality classification follow by the accompanying kernel summation argument."
+}

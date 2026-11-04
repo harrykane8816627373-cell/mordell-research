@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-04",
+  "kind": "immutable record of the completed replay; auditing this record is not another proof execution",
+  "source_manifest_sha256": "e5fed083c4caaddfee4088f63c9c427f5855abfd0b51127ff7295919281e0e45",
+  "files_sha256": {
+    "reports/basic_exact_certificate.json": "1e5561d31e881f296f2c7af9592253894535fff7962f492180c5c9bac4292eb2",
+    "reports/discrete_radial_remainder_certificate.json": "eb983e8ff111bf01349ce7cfefe09ee4b6b2a7c017ce233a493050a9ced5d32b",
+    "reports/fourth_moment_radius_certificate.json": "3e1a87f4ae9c2b8aac18387b3a9a7ef498349631ce75bfb27f6242788bdaeff5",
+    "reports/fresh_replay.log": "98156251dda31ce9f829dcca92814f80f12aa313752328326193b9a038661a72",
+    "reports/global_pair_bound_bernstein_frontier.json": "efccc9d214c8b3cee8390d945c90a593243705356096ea94fb60977bdf264618",
+    "reports/global_pair_bound_exact_definition_certificate.json": "5f70ffdc994311a910bf9cbffc236ccb81506cdcfc0a9de5fa7620f98a33ceb0",
+    "reports/global_pair_bound_local_preconditioned_certificate.json": "018774834c9a39386e43f65ce1777e4cf93b859e95ad9dc6f595b34282116adf",
+    "reports/integrity_checks.json": "e040b0f5f52a4f614c3a782b49e6ff2b9f404892425c90c2db9682d91087e378",
+    "reports/replay.json": "783c896f1b33df23559ee284de1dca83e4a12f95b901c91884e17b319ddb1a2b"
+  },
+  "upstream_commit": "31cc934b7dfa0ef2308566a1bce48cbfb2e01559",
+  "full_nine_point_exclusion_proved": true
+}

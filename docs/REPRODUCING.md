@@ -4,6 +4,36 @@
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
 
+## 九点与一般点数结构
+
+九点固定上游与完整解析推导见[九点专题](../nine-point-global/README.md)和[证明正文](../nine-point-global/PROOF.md)。首次复核在独立环境安装所列依赖：
+
+~~~powershell
+python -m venv .venv-n9
+.venv-n9\Scripts\python.exe -m pip install -r nine-point-global/vendor/n9/requirements.txt
+.venv-n9\Scripts\python.exe -B nine-point-global/verify_global.py
+~~~
+
+该入口默认从完整初始域重新运行，不使用 `--resume` 复用旧零未决结果；`--check-inputs` 仅核对固定字节，不执行证明。只有实际完整运行成功后，才可用 `--record-report` 保存本地报告。本仓库的实际重放与文献原始证书分别记录；不能把下载的零未决报告当成本地重新运行。
+
+[九点实际重放记录](../nine-point-global/reports/replay.json)保存完整初始域的31613个处理盒、15807个终端盒和0未决结果，全部8个上游检查实际执行。记录绑定具体输入与软件版本；默认轻量接受与重新运行完整覆盖应分开理解。
+
+一般点数的连续相位相容性、环对缺额及有限有理见证见[结构研究](../general-structure/README.md)，检查只需 Python 标准库：
+
+```bash
+python -B -S -O general-structure/verify_all.py
+```
+
+该检查认证环族内的相位结构与明确缺额；不把受限环族中的改善称为全部十二点构型的最优性证明。
+
+十点严格比较只需标准库：
+
+```bash
+python -B -S -O scripts/verify_ten_point_transition.py
+```
+
+它用精确整数复核 Δ/C₁₀>1，不证明这个见证达到 M₁₀；转换推导见[十点证明](TEN_POINT_TRANSITION.md)。
+
 ## 八点完整域证书与桥接
 
 Ji–Xu–Yu固定核证书的首次完整重放使用独立环境：
@@ -75,7 +105,7 @@ python -B -S -O joint-refinement/verify_force.py --nov2-prefix-already-replayed
 
 [力方程联合证明](../joint-refinement/FORCE_CLOSURES.md)核对312个复Jacobian条目、24个精确余项、3个已知目标力的Newton像，以及局部圆盘不确定而终点点距可用的条件外包；254个指示向量模式核对完整Hessian必要谱条件，8份伪造覆盖必须被拒绝。上传门槛729/1000按全部多项式系数复核。新增接受检查不使用 `assert`，`-O` 不会跳过它们；原ZIP完整保留。
 
-[新的独立检查](../joint-refinement/EDGE_REMAINDERS.md)另外核对448条点差记录、256个复余项分量、两种必要像各16个已知解，以及84个复Gram主子式；11种伪造检查点必须被拒绝。另有质量7、旧椭圆内的严格探针加强见证，单独运行 `python -B -S -O joint-refinement/verify_mass7_gram.py` 可复算其有理反射、全部127个旧不等式和负主子式。该演示不作为总树叶的依赖。原编号10在19dbbd3阶段已完整关闭；11月4日仅导入旧叶9与55820的两棵部分树，旧14盒没有新增整盒关闭。当前原区域仍0–9，当前有28个开放后代盒；全部新增步骤已独立重放，完整排空仍未完成。
+[新的独立检查](../joint-refinement/EDGE_REMAINDERS.md)另外核对448条点差记录、256个复余项分量、两种必要像各16个已知解，以及84个复Gram主子式；11种伪造检查点必须被拒绝。另有质量7、旧椭圆内的严格探针加强见证，单独运行 `python -B -S -O joint-refinement/verify_mass7_gram.py` 可复算其有理反射、全部127个旧不等式和负主子式。该演示不作为总树叶的依赖。原编号10在19dbbd3阶段已完整关闭；11月4日仅导入旧叶9与55820的两棵部分树，旧14盒没有新增整盒关闭。这条历史路线的原区域仍0–9，保存28个开放后代盒；全部新增步骤已独立重放，但该树未逐盒排空。当前八点全局结论由完整核证书承担。
 
 [新子集检查](../joint-refinement/SUBSET_BUDGET.md)核对1968个准确子集恒等式及重心包围，并验证真实单叶关闭与原父区域关闭的区别。[119/80半径证明](../joint-refinement/TARGET_RADIUS.md)中的四次非负分解、严格有理比较和边界导数恒等式由脚本检查；全体多项式的Schwarz解析桥梁需阅读正文，七点完整驻点分类没有在本轮重建。
 
@@ -111,7 +141,7 @@ python -B -S -O algebraic-gap/verify_all.py --source-archive PATH_TO_FIRST3_ZIP
 python -B -S -O scripts/verify_current.py --refinement --first3-archive PATH_TO_FIRST3_ZIP
 ```
 
-[本轮证明页](../algebraic-gap/README.md)列出准确源包名和哈希；完整新离线包只携带3个必要旧文件，解压后无需额外参数。该入口重新构造结果式、逐项重放14179个整数系数、验证齐次权和七个乘子范数，再用精确分数核算全局楔形下界。它没有重跑旧零矩构型的全部分类；完整八点排除状态仍为 false。
+[本轮证明页](../algebraic-gap/README.md)列出准确源包名和哈希；完整新离线包只携带3个必要旧文件，解压后无需额外参数。该入口重新构造结果式、逐项重放14179个整数系数、验证齐次权和七个乘子范数，再用精确分数核算全局楔形下界。它没有重跑旧零矩构型的全部分类；这个局部方法的完整八点排除标志仍为 false。
 
 ## 保留的两阶段局部能量证书
 
@@ -141,6 +171,6 @@ python -B -S -O configuration-bounds/verify_all.py
 
 ## 历史包与当前网页
 
-历史 ZIP 是冻结快照；当前 README、证明状态页可能随后更新。`configuration-bounds/status_updates.zip` 中的状态快照由自己的清单检查，不要求与当前网页逐字相同。本次仅同步当前 `PROOF_STATUS.md` 在本地专题清单里的哈希，不追溯改写历史 ZIP。
+历史 ZIP 是冻结快照；当前 README、证明状态页可能随后更新。`configuration-bounds/status_updates.zip` 中的状态快照由自己的清单检查，不要求与当前网页逐字相同。当前 `PROOF_STATUS.md` 在本地专题清单里的字节数与哈希随网页状态更新；历史 ZIP 与其快照清单保持原字节。
 
 哈希保证字节一致；有理程序保证所列运算与有限检查；数学桥梁与全覆盖量词必须由证明及实际穷尽证据承担。[旧八点方法的开放域记录](../eight-point/OPEN_BRANCHES.md)作为历史保留；当前剩余系统由新的全域核接合排除。

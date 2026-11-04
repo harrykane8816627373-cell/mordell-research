@@ -1,0 +1,113 @@
+
+REPLAY verify_basics.py
+A Abar characteristic t*(t - 16)*(9*t - 64)**4*(9*t - 16)**2*(81*t - 784)/43046721
+{
+  "global_M9_determined": false,
+  "candidate_stationary_exact": true,
+  "candidate_strict_local_maximum_mod_rotation": true,
+  "candidate_value": "22528399544939174411840147874772641/19342813113834066795298816",
+  "candidate_value_approx": 1164690958.4638834,
+  "A_Abar_characteristic": "t*(t - 16)*(9*t - 64)**4*(9*t - 16)**2*(81*t - 784)/43046721",
+  "A_Abar_eigenvalues": {
+    "16": 1,
+    "784/81": 1,
+    "16/9": 2,
+    "64/9": 4,
+    "0": 1
+  },
+  "all_maxima_radius_squared_polynomial": "384*t**3 - 1024*t**2 + 765*t - 741",
+  "alpha_interval": [
+    "6891216051/3193537559",
+    "84251687978/39044042151"
+  ],
+  "rescaled_radius_squared_bound": "2011379/1048576",
+  "rescaled_min_distance_squared": "1/4",
+  "joint_radius_moment_scaling_verified": true,
+  "excluded_equal_squared_radii": "71/40",
+  "excluded_pair_FV": "11223199/6488100",
+  "cantrell_ratio_polynomial": "t**13 - 4*t**12 - 88*t**11 + 795*t**10 - 2876*t**9 + 5528*t**8 - 5791*t**7 + 2941*t**6 - 426*t**5 - 181*t**4 + 79*t**3 - 8*t**2 - 3*t + 1",
+  "cantrell_third_real_root_interval": [
+    "7215581119587/1093107778736",
+    "8730729654023/1322641702821"
+  ],
+  "cantrell_ratio_squared_approx": 6.6009786591498205,
+  "source_coordinate_identity_scope": "Verified separately by derive_contact_coordinates.py and certify_contact_configuration.py; see FRIEDMAN_N9_EXCLUSION_PROOF.txt.",
+  "source_url": "https://groups.google.com/g/sci.math.research/c/UFEX1TnyO_0",
+  "seconds": 0.28100000001722947
+}
+
+REPLAY verify_fourth_moment_bound.py
+{
+  "global_M9_determined": false,
+  "all_positive_local_maxima_bound_proved": true,
+  "scaling": "x=sqrt(8/9) z; u=|x|\u00b2",
+  "fourth_moment_necessary_inequality": "405 T4 - 1008 T3 + 912 T2 - 3072 <= 0",
+  "c": "2025-9*sqrt(18465)",
+  "c_ball": "[802.02616544751866060988661772721690493337267355887669575 +/- 2.21e-54]",
+  "increasing_polynomial": "405*s**4 - 2025*s**3 + 9*sqrt(18465)*s**3 - 45*sqrt(18465)*s**2/2 + 6909*s**2/2 - 14372 + 100*sqrt(18465)",
+  "radial_rho": "5/2 - sqrt(18465)/90",
+  "radial_kappa": "-1017/2 + 9*sqrt(18465)/2",
+  "radial_L": "14372/405 - 20*sqrt(18465)/81",
+  "radial_nonnegative_sum_inequality": "sum r_i^2*(r_i-rho)^2 <= L",
+  "beta_closed_form": "(rho+sqrt(rho^2+4*sqrt(L)))/2",
+  "beta_ball": "[1.77410189294807033841934478548654122451700641360489976727 +/- 6.27e-57]",
+  "beta_unique_root_above_17_over_10_interval": [
+    "88705094647/50000000000",
+    "35482037859/20000000000"
+  ],
+  "beta_lower_polynomial_ball": "[-2.32568151484324331485882823980207903864274220e-8 +/- 7.30e-53]",
+  "beta_upper_polynomial_ball": "[5.5608303331301874877402385618303548225800143e-9 +/- 5.46e-53]",
+  "upper_squared_radius_x": "1860281/1048576",
+  "upper_squared_radius_x_float": 1.7741022109985352,
+  "upper_squared_radius_z": "16742529/8388608",
+  "upper_squared_radius_z_float": 1.995864987373352,
+  "mathematical_proof": "FOURTH_MOMENT_RADIUS_PROOF.txt",
+  "working_precision_bits": 192
+}
+
+REPLAY verify_discrete_radial_remainder.py
+{
+  "piecewise_polynomial_identities": true,
+  "seven_variable_cauchy_identity": true,
+  "old_boundary_point_excluded": true,
+  "old_boundary_excess": "[0.001725269355676691487773188753619006639428171 +/- 2.43e-46]",
+  "global_M9_proved": false
+}
+
+REPLAY verify_pair_bound_definition.py
+{
+  "coefficient_sha256": "1d1cef17749fcb242e6f09dffe3c26183ae672fe4707b2bad70bb0b12b0e9d88",
+  "kernel_definition_exact": true,
+  "all_serialized_entries_checked": true,
+  "contact_values_and_gradients_exact": true,
+  "matrix_count": 8,
+  "matrix_dimension": 6,
+  "global_majorant_proved": false
+}
+
+REPLAY verify_pair_bound_local_preconditioned.py
+All 8 matrices rigorously positive definite
+LOCAL CERTIFIED 0 radius 0.000244140625 kappa 1
+LOCAL CERTIFIED 1 radius 6.103515625e-05 kappa 0
+LOCAL CERTIFIED 2 radius 0.0001220703125 kappa 0
+LOCAL CERTIFIED 3 radius 0.0078125 kappa 0
+LOCAL CERTIFIED 4 radius 0.000244140625 kappa 1
+Local certificates saved; no global coverage claim.
+
+REPLAY check_arb_bernstein.py
+Tensor basis and tangent checks passed: 36 seconds 0.20300000003771856
+
+REPLAY check_physical_boundary_bernstein.py
+Verified physical-boundary correction upper coefficients: 124416
+
+REPLAY verify_pair_bound_cover.py
+BERNSTEIN START (18, 18, 8) frontier 1
+BERNSTEIN {'visited': 6000, 'outside': 91, 'moment_outside': 0, 'quartic_outside': 3, 'local': 16, 'positive': 22, 'cubic_positive': 2859, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 3009, 'arb_refreshed': 0, 'discrete_radial_outside': 0, 'physical_correction_positive': 0, 'quadratic_correction_positive': 0, 'arb_correction_positive': 0} pending 19 seconds 6.5
+BERNSTEIN {'visited': 8000, 'outside': 116, 'moment_outside': 0, 'quartic_outside': 3, 'local': 20, 'positive': 24, 'cubic_positive': 3834, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 4003, 'arb_refreshed': 0, 'discrete_radial_outside': 0, 'physical_correction_positive': 0, 'quadratic_correction_positive': 0, 'arb_correction_positive': 0} pending 7 seconds 8.9
+BERNSTEIN {'visited': 12000, 'outside': 320, 'moment_outside': 0, 'quartic_outside': 227, 'local': 21, 'positive': 339, 'cubic_positive': 5038, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 6006, 'arb_refreshed': 0, 'discrete_radial_outside': 45, 'physical_correction_positive': 3, 'quadratic_correction_positive': 1, 'arb_correction_positive': 0} pending 13 seconds 12.7
+BERNSTEIN {'visited': 14000, 'outside': 438, 'moment_outside': 0, 'quartic_outside': 487, 'local': 24, 'positive': 642, 'cubic_positive': 5317, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 7007, 'arb_refreshed': 0, 'discrete_radial_outside': 45, 'physical_correction_positive': 38, 'quadratic_correction_positive': 2, 'arb_correction_positive': 0} pending 15 seconds 14.3
+BERNSTEIN {'visited': 18000, 'outside': 1014, 'moment_outside': 0, 'quartic_outside': 504, 'local': 24, 'positive': 1011, 'cubic_positive': 5382, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 9007, 'arb_refreshed': 0, 'discrete_radial_outside': 45, 'physical_correction_positive': 867, 'quadratic_correction_positive': 146, 'arb_correction_positive': 0} pending 15 seconds 18.8
+BERNSTEIN {'visited': 22000, 'outside': 1554, 'moment_outside': 0, 'quartic_outside': 504, 'local': 49, 'positive': 1423, 'cubic_positive': 5382, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 11011, 'arb_refreshed': 0, 'discrete_radial_outside': 45, 'physical_correction_positive': 1595, 'quadratic_correction_positive': 437, 'arb_correction_positive': 0} pending 23 seconds 25.3
+BERNSTEIN {'visited': 26000, 'outside': 2119, 'moment_outside': 0, 'quartic_outside': 504, 'local': 49, 'positive': 1807, 'cubic_positive': 5393, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 13002, 'arb_refreshed': 0, 'discrete_radial_outside': 45, 'physical_correction_positive': 2381, 'quadratic_correction_positive': 700, 'arb_correction_positive': 0} pending 5 seconds 31.4
+BERNSTEIN {'visited': 28000, 'outside': 2237, 'moment_outside': 0, 'quartic_outside': 662, 'local': 49, 'positive': 2279, 'cubic_positive': 5425, 'arb_recomputed': 0, 'arb_positive': 0, 'split': 14003, 'arb_refreshed': 0, 'discrete_radial_outside': 107, 'physical_correction_positive': 2495, 'quadratic_correction_positive': 743, 'arb_correction_positive': 0} pending 7 seconds 34.0
+BERNSTEIN STOP {'visited': 31613, 'outside': 2716, 'moment_outside': 0, 'quartic_outside': 662, 'local': 50, 'positive': 2589, 'cubic_positive': 5695, 'arb_recomputed': 1, 'arb_positive': 0, 'split': 15806, 'arb_refreshed': 1, 'discrete_radial_outside': 107, 'physical_correction_positive': 2919, 'quadratic_correction_positive': 1069, 'arb_correction_positive': 0} UNRESOLVED 0 GLOBAL PROVED True

@@ -1,0 +1,34 @@
+{
+  "global_M9_determined": false,
+  "candidate_stationary_exact": true,
+  "candidate_strict_local_maximum_mod_rotation": true,
+  "candidate_value": "22528399544939174411840147874772641/19342813113834066795298816",
+  "candidate_value_approx": 1164690958.4638834,
+  "A_Abar_characteristic": "t*(t - 16)*(9*t - 64)**4*(9*t - 16)**2*(81*t - 784)/43046721",
+  "A_Abar_eigenvalues": {
+    "16": 1,
+    "784/81": 1,
+    "16/9": 2,
+    "64/9": 4,
+    "0": 1
+  },
+  "all_maxima_radius_squared_polynomial": "384*t**3 - 1024*t**2 + 765*t - 741",
+  "alpha_interval": [
+    "6891216051/3193537559",
+    "84251687978/39044042151"
+  ],
+  "rescaled_radius_squared_bound": "2011379/1048576",
+  "rescaled_min_distance_squared": "1/4",
+  "joint_radius_moment_scaling_verified": true,
+  "excluded_equal_squared_radii": "71/40",
+  "excluded_pair_FV": "11223199/6488100",
+  "cantrell_ratio_polynomial": "t**13 - 4*t**12 - 88*t**11 + 795*t**10 - 2876*t**9 + 5528*t**8 - 5791*t**7 + 2941*t**6 - 426*t**5 - 181*t**4 + 79*t**3 - 8*t**2 - 3*t + 1",
+  "cantrell_third_real_root_interval": [
+    "7215581119587/1093107778736",
+    "8730729654023/1322641702821"
+  ],
+  "cantrell_ratio_squared_approx": 6.6009786591498205,
+  "source_coordinate_identity_scope": "Verified separately by derive_contact_coordinates.py and certify_contact_configuration.py; see FRIEDMAN_N9_EXCLUSION_PROOF.txt.",
+  "source_url": "https://groups.google.com/g/sci.math.research/c/UFEX1TnyO_0",
+  "seconds": 0.28100000001722947
+}

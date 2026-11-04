@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "python": "3.12.14",
+  "optimization_safe": true,
+  "binomial_resultants_via_independent_sylvester_determinants": 256,
+  "population_multisets_checked": 4367,
+  "sign_assignments_exhausted": 114686,
+  "compatible_multisets": 546,
+  "minimum_compatible_total_population_by_ring_count": {
+    "1": 2,
+    "2": 4,
+    "3": 8,
+    "4": 12,
+    "5": 20
+  },
+  "twelve_point_product_independently_expanded_in_Q_sqrt3": true,
+  "fixed_family_sign_values_checked_against_all_phase_upper": 104,
+  "malformed_inputs_rejected": 6,
+  "continuum_claim": "proved analytically in CONTINUOUS_PHASES.md, not inferred from sampling",
+  "unrestricted_Mn_upper_computed": false,
+  "unrestricted_n12_lower_bound_improvement_claimed": false,
+  "source_sha256": {
+    "CONTINUOUS_PHASES.md": "05455ba71cee7688dc57d7718bf9a907cc582b39fc4d5a76f27771f875258180",
+    "phase_frustration.py": "acdd25e4a75f649857bdaf71c91d7a7e6a946a8d346c3d6e08aebf315564ba8d",
+    "README.md": "5d955a78851e521a3b4f5ec234e9ede5952e595f48a3a30b6ad6b687fe1c7b84",
+    "verify_all.py": "c3fea149c5f224acc194aafe69c11d439870259de61d5f3cba3ba7c858822624"
+  }
+}

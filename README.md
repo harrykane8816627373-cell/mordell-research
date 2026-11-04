@@ -4,126 +4,49 @@
 
 ```math
 M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
-\Delta_n(z)=\prod_{i\lt j}|z_i-z_j|^2.
+\Delta_n(z)=\prod_{i<j}|z_i-z_j|^2.
 ```
 
-**八点完整无条件锐界、一般非零矩分支和一般 n 的简洁锐值公式仍开放。** 本仓库分别记录已证定理、带条件的排除、可达下界和未完成覆盖。
+**八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
 
-## 阅读入口
+## 当前结果
+
+|点数或问题|结论|证明与边界|
+|---|---|---|
+|2≤n≤5|Mₙ=nⁿ，等号为单位正 n 边形|[五点作者方法与既有证明](earlier-results/README.md)|
+|n=6、7|M₆=6¹⁵/5¹⁰，M₇=7²¹/6¹⁵；等号为原点加相应正多边形|[主稿与依赖审计](earlier-results/six_seven_coverage_audit.md)；本项目现有全局证明保留 Faugère–Svartz 分类输入|
+|n=8|M₈=8²⁸/7²¹；等号为原点加半径 √(8/7) 的正七边形|[全域证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)；完整重放 386915 个盒，未决 0|
+|n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
+|n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
+|10≤n≤100|91 项保存整数构型改善此前下界包络|[自由构型](symmetry-breaking/README.md)；可达下界，不是全局最优认证|
+|一般 n 的结构|有限上下界、分布与层数约束；新增连续相位相容性与环对缺额|[完整状态表](configuration-bounds/PROOF_STATUS.md) · [一般点数结构](general-structure/README.md)；未证明晶格结晶或简洁锐值公式|
+
+八、九点全局核与其计算机辅助证明归于 **Xiang Ji、Tiancheng Xu、Wensheng Yu** 的[arXiv:2611.03088v1](https://arxiv.org/abs/2611.03088v1)。本仓库固定来源、保留许可与署名、复现证书并写明与已有定理的衔接。
+
+新增结构定理把正规多环的相位竞争化为人口的二进赋值条件，并对不相容循环给出严格正缺额。十二点的三个正方形环提供精确见证：连续相位可超过同一固定家族全部正负符号相位的两倍；这项比较不宣称改进无约束十二点最优下界。
+
+## 阅读与复现
 
 |需要了解什么|入口|
 |---|---|
-|目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点全局锐界与剩余系统排除|[全域证书复现](eight-point-global/README.md) · [与已有成果的桥接](eight-point-global/PROOF_BRIDGE.md) · [实际重放记录](eight-point-global/reports/replay.json)|
-|各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
-|如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
+|结论、假设、外部依赖和未解决问题|[证明状态总表](configuration-bounds/PROOF_STATUS.md)|
+|九点完整证明与计算范围|[九点专题](nine-point-global/README.md)|
+|一般点数与最优构型的数学结构|[结构研究](general-structure/README.md) · [一般 n 研究索引](docs/RESEARCH_INDEX.md)|
+|证书运行、固定输入及软件依赖|[复现指南](docs/REPRODUCING.md)|
+|专题关系、历史 ZIP 和 Release|[研究索引](docs/RESEARCH_INDEX.md)|
+|本次仓库整理及历史状态如何理解|[仓库状态](docs/REPOSITORY_STATUS.md) · [整理前首页](docs/HISTORY_2026-11-04.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 八点全局锐界：Ji–Xu–Yu证书复现与既有子集定理衔接
-
-已复现 Xiang Ji、Tiancheng Xu、Wensheng Yu 的[预印本2611.03088v1](https://arxiv.org/abs/2611.03088v1)所给八点完整域证书。核及其计算机辅助证明归于上述作者；本仓库保留固定代码、授权署名和实际执行记录，并联合本项目已有严格子集定理，给出[自含桥接证明](eight-point-global/PROOF_BRIDGE.md)。
-
-```math
-\boxed{M_8=8^{28}/7^{21}.}
-```
-
-在质量7尺度，Δ≤7⁷，等号恰为原点加单位正七边形，允许旋转与重排。因此**Δ≥7⁷且s₂s₃≠0的剩余联合系统为空**。这条接合使用已有严格子集界，不调用七点完整驻点分类。旧局部森林保留其28个开放盒作为历史搜索记录；全局排除由新的全域核证书承担。
-
-完整重放实际遍历386915个盒，认证193458个终端盒，未决数为0。[执行记录](eight-point-global/reports/replay.json)逐项记录输入哈希和版本。首次复核及软件依赖见[八点全局入口](eight-point-global/README.md)。源文件绑定、完整域遍历、正定与接触检查、等号推导及各自范围均有记录；没有声称外部同行评审或整篇形式化证明。
-
-## 11月4日局部续算阶段：二阶Schwarz、旧椭圆与平移子集预算
-
-[11月4日续算](joint-refinement/NOV4_PROGRESS.md)给出两个不同作用域的必要条件：所有质量7的八点全局最优者满足 **maxᵢ|qᵢ|²<231/160**；再联合剩余分支的旧矩椭圆，可加强为 **maxᵢ|qᵢ|²<23/16**。[二阶Schwarz证明](joint-refinement/SCHWARZ2_RADIUS.md) · [旧椭圆–Schur证明](joint-refinement/ELLIPSE_SCHUR_RADIUS.md)。两项均沿用已有七点锐界，其外部完整驻点分类没有在本轮重建。
-
-[固定有理中心的平移子集预算](joint-refinement/TRANSLATED_SUBSET.md)继续保留同一组真实坐标与共同重心，对离原点较远的聚集子集给出更紧的整盒上界。本轮仅续算旧叶9与55820的两棵**部分树**；19dbbd3的14个旧开放盒没有新增整盒关闭，原区域仍为 **0–9**。已独立重放10004个新增处理步骤、4995个排除叶，当前28个开放盒来自进一步细分，不是28个驻点。
-
-当前总账合并434431个节点、217188个排除叶；本轮10个接受入口通过，实际范围以[覆盖报告](joint-refinement/reports/force_cover.json)及[执行记录](joint-refinement/reports/force_execution.json)为准。10个接受入口已从固定输入临时副本通过；此前已验收19dbbd3时可复用其94399个旧处理步骤及70个不变算术输入，全部新步骤已独立重放。该阶段的局部森林保留其有限展开边界；随后全域证书解决了全局锐界与剩余系统。
-
-## 19dbbd3阶段（2026-11-02）：119/80半径与原编号10闭合
-
-该阶段完整排空了 **原编号10的整个区域**，未闭合原区域从11个降为 **10个（0–9）**。按上轮30个开放盒逐项追踪，其中 **16个已包含全部后代地关闭**，剩余 **14个开放盒**；它们是连续坐标外包，不是14个驻点。[完整闭合与当前边界](joint-refinement/SUBSET_BUDGET.md)
-
-联合已有七点锐界、八点目标阈值与Schwarz引理，得到全局最优者的新必要条件 **maxᵢ|qᵢ|²<119/80**，原未量化界为49/32。证明保留七点完整驻点分类的既有外部依赖，没有把该条件推广到任意稳定驻点。[完整解析证明](joint-refinement/TARGET_RADIUS.md)
-
-搜索还把严格真子集的点距和改写为共同质量与子集重心预算，并传播给每个实际点。6个接受入口从固定输入临时副本通过，实际重放 **33608个新增处理步骤**，新增 **16812个排除叶**；60791个已验收步骤及祖先链按固定前缀复用，61个旧算术输入逐字节未变。[该阶段冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)
-
-合并总账为424413个节点、212193个排除叶。[19dbbd3冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)保留当时全部14个开放盒，截至该历史阶段尚无完整全局证明。此前729/1000内点门槛、−1/4000无内点负曲率间隙、旧椭圆、真实逐点力方程及完整Hessian条件继续保留。[已有结果与来源](joint-refinement/FORCE_CLOSURES.md)
-
-## 上一阶段：等价多项式矩阵与冻结覆盖
-
-在实际质量7、中心化且无碰撞的八点上，真实驻点平方和与完整实能量 Hessian 可等价合并为一个8×8整数系数 Hermitian 多项式矩阵半正定条件；也可保留12个实 Ward 等式和6×6完整稳定性矩阵，最高次数分别为8和14。该模型保留全部逐点物理条件。
-
-冻结的上一阶段覆盖树有60021个节点、29990个排除叶和21个开放坐标区域；新续算见上节。另认证一个旧椭圆内的非零矩真实驻点：其旧四模式子块正定，但完整 Hessian 不稳定，且目标值低于候选。[等价证明、真实驻点盒与历史检查点](joint-closure/README.md)
-
-## 已证径向区域：缺额门槛推进到 1/1200
-
-令 q=√(7/8)z、Σq=0、Σ|q|²=7，记 E=Σ|q_i|²(|q_i|²−1)²。继承已披露依赖的七点锐界与现有局部能量定理，得到
-
-```math
-E\le1/1200\quad\Longrightarrow\quad
-\log(\Delta_q/7^7)\le-E/32,\qquad
-\Delta_q/7^7\le1-E/64.
-```
-
-在此区域，只有中心正七边形能达到候选值。无需预设驻点、稳定性、旧椭圆或半径上界。相对上传统一包的1/35000，径向门槛扩大175/6，约29.17倍；**E>1/1200 的剩余物理系统仍未排空**。
-
-新证明用中心化消去径向扰动的一阶项，再以圆上七点的全局角向凹性控制候选轨道距离。原统一包按字节保留，14个标准库入口已重放。[完整证明、真实点见证与复现](radial-gap/README.md)
-
-## 非零矩代数耦合（保留）
-
-在旧椭圆、真实驻点方程和 Δ_w≥4²⁸7⁷ 的交集中，已推出力1尺度下的新必要条件
-
-```math
-|p_2|\ge10^{-36}|p_3|.
-```
-
-它把旧的“p₂=0 ⇒ p₃=0”整数证书量化到非零矩分支，不要求靠近候选。完整重放重新构造结果式、检查14179个整数系数，并计算七个乘子范数。常数很小，只排除靠近 p₂=0 轴的细楔形区域，**不能完成剩余非零矩分支的排空**。[证明、联合目标值筛选式与复现](algebraic-gap/README.md)
-
-## 已证目标值区域：直接对数余项与五倍矩管域
-
-取力1尺度 w=√(7/2)z、p_k=Σw_i^k。d 为到“原点加半径2正七边形”全部旋转、重排轨道的欧氏距离。对 Σ|w_i|²=28 的八点构型，已证明
-
-```math
-d\le\frac15\quad\Longrightarrow\quad
-\log\frac{\Delta_w}{4^{28}7^7}\le-\frac{d^2}{30}.
-```
-
-目标值排除的欧氏半径从1/20扩大到1/5。进一步，中心化构型只要满足
-
-```math
-|p_2|\le1/2,\quad |p_3|\le1,\quad |p_4|\le2,\quad
-|p_5|\le4,\quad |p_6|\le8,\quad |p_8|\le32,
-```
-
-就必有 d²<3/100，进入上述排除区域。六个模长门槛都是上一管域的**五倍**，仍**无须另设 p₇ 条件**。证明联合实际距离 Laplacian 的完整谱、对数展开余项和 Fourier–Parseval 根误差估计。[完整证明与精确报告](eight-point/ENERGY_BASIN.md)
-
-整个区域内只有候选轨道能达到候选值；这里不据此宣称较大区域内所有真实驻点都只能是候选。管域之外的[六类剩余条件](eight-point/OPEN_BRANCHES.md)及完整物理系统的联合穷尽仍未完成。
-
-原有 p₂、p₃ 椭圆与零矩分类继续作为前置条件，后续只在它们限定的非零矩物理系统中推进。[三个尺度与当前完整归约](docs/EIGHT_POINT_REDUCTION.md)明确说明新旧结果怎样取交集。
-
-## 主要成果与边界
-
-|问题|当前结论|范围与证明|
-|---|---|---|
-|五点锐值|M₅=5⁵，单位正五边形|[作者二阶条件与矩方法](earlier-results/five_point_method.md)|
-|六、七点锐值|M₆=6¹⁵/5¹⁰；M₇=7²¹/6¹⁵|[主稿](earlier-results/six_seven_proof.tex)；全局证明引用 Faugère–Svartz 完整物理驻点分类，[依赖审计](earlier-results/six_seven_coverage_audit.md)|
-|八点候选与部分排除|候选 8²⁸/7²¹ 可达；E≤1/1200、矩管域及若干几何类已排除|[最新径向界](radial-gap/README.md) · [当前联合归约](docs/EIGHT_POINT_REDUCTION.md)；**完整锐界未证**|
-|有限 n 下界|10≤n≤100的91项保存整数见证改善此前包络|[自由构型](symmetry-breaking/README.md)；不是全局最优认证|
-|最优构型半径层数|n≥10¹⁴时 K>0.51√n；初等渐近系数>0.513|[最新层数证明](annular-layer/README.md)；保留外部渐近输入时系数>0.556，后者无有效有限起点|
-|一般 n 上界与分布|严格圆盘修正、线性缺额、二维运输、含边界覆盖|[证明总表](configuration-bounds/PROOF_STATUS.md)；未确定晶格、精确 γ 或所有有限 n 锐值|
-
-所有结论以正文的尺度、假设和外部依赖为准。历史较弱常数集中在[研究索引](docs/RESEARCH_INDEX.md)，不与当前最强结论混列。
-
-## 复核与下载
-
-在仓库根目录运行当前幂和与八点检查（Python 标准库）：
+轻量核验使用 Python 标准库：
 
 ```bash
 python -B -S -O scripts/verify_current.py
 ```
 
-[联合系统部分覆盖包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-joint-partial-2026-11-01) · [径向—角向包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-radial-2026-11-01) · [全局代数包](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/eight-point-algebraic-2026-11-01) · [能量阶段包](eight-point/mordell-eight-point-energy-2026-11-01.zip) · [所有专题和历史附件](docs/RESEARCH_INDEX.md) · [完整复现说明](docs/REPRODUCING.md)。历史 ZIP 保持原字节；GitHub 自动生成的 Source code 压缩包不包含 Release 中的大型研究附件。
+该命令重放所列小型证书、核对已验收的全域证据及输入绑定；**完整区间覆盖需按[复现指南](docs/REPRODUCING.md)安装固定数值依赖后另行执行**。哈希核对、局部搜索和小残差分别只说明其实际检查范围。
 
-程序认证精确算术、有限盒及所列常数；解析和几何桥梁仍需阅读证明。浮点搜索、小残差、有限目录和验证通过不能代替全域覆盖。没有外部同行评审、整篇形式化证明或全球优先权声明；仓库未指定许可证。
+旧八点局部森林仍保存 28 个开放后代盒，表示这条历史坐标搜索尚未逐盒完成；八点全局锐界由新的全域核证书与解析桥接证明。历史证明、原稿、ZIP、来源和原始报告均保留，不把历史未决数改记为零。
 
-**English:** Jiang Fengcan's research on finite-point Mordell discriminant maxima. Exact certificates and conditional exclusions are indexed with their hypotheses. The complete eight-point sharp bound and a simple general-n sharp formula remain open.
+仓库自有材料未指定统一许可证；导入的第三方代码、数据与说明沿用其明确许可。计算机辅助证书和协作审阅不等于外部同行评审或整篇形式化证明。
+
+**English:** Fengcan Jiang's Mordell distance-product research. The n=8 and n=9 global certificates have been reproduced with fixed provenance and full-domain replay. Exact general-n maxima and all maximizing configurations for n≥10 remain open here.

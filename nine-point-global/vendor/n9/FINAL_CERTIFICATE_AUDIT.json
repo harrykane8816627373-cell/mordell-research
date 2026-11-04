@@ -1,0 +1,11 @@
+{
+  "coefficient_sha256": "1d1cef17749fcb242e6f09dffe3c26183ae672fe4707b2bad70bb0b12b0e9d88",
+  "fresh_complete_cover_verified": true,
+  "partition_tree_conservation_verified": true,
+  "visited_boxes": 31613,
+  "certified_leaves": 15807,
+  "unresolved_boxes": 0,
+  "kernel_definition_and_all_contact_equations_verified": true,
+  "strict_matrix_and_local_certificates_verified": true,
+  "scope": "All computer-verifiable premises passed. The global bound and complete equality classification are deduced in PROOF_ZH.txt."
+}

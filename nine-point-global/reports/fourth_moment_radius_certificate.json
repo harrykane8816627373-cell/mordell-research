@@ -1,0 +1,27 @@
+{
+  "global_M9_determined": false,
+  "all_positive_local_maxima_bound_proved": true,
+  "scaling": "x=sqrt(8/9) z; u=|x|\u00b2",
+  "fourth_moment_necessary_inequality": "405 T4 - 1008 T3 + 912 T2 - 3072 <= 0",
+  "c": "2025-9*sqrt(18465)",
+  "c_ball": "[802.02616544751866060988661772721690493337267355887669575 +/- 2.21e-54]",
+  "increasing_polynomial": "405*s**4 - 2025*s**3 + 9*sqrt(18465)*s**3 - 45*sqrt(18465)*s**2/2 + 6909*s**2/2 - 14372 + 100*sqrt(18465)",
+  "radial_rho": "5/2 - sqrt(18465)/90",
+  "radial_kappa": "-1017/2 + 9*sqrt(18465)/2",
+  "radial_L": "14372/405 - 20*sqrt(18465)/81",
+  "radial_nonnegative_sum_inequality": "sum r_i^2*(r_i-rho)^2 <= L",
+  "beta_closed_form": "(rho+sqrt(rho^2+4*sqrt(L)))/2",
+  "beta_ball": "[1.77410189294807033841934478548654122451700641360489976727 +/- 6.27e-57]",
+  "beta_unique_root_above_17_over_10_interval": [
+    "88705094647/50000000000",
+    "35482037859/20000000000"
+  ],
+  "beta_lower_polynomial_ball": "[-2.32568151484324331485882823980207903864274220e-8 +/- 7.30e-53]",
+  "beta_upper_polynomial_ball": "[5.5608303331301874877402385618303548225800143e-9 +/- 5.46e-53]",
+  "upper_squared_radius_x": "1860281/1048576",
+  "upper_squared_radius_x_float": 1.7741022109985352,
+  "upper_squared_radius_z": "16742529/8388608",
+  "upper_squared_radius_z_float": 1.995864987373352,
+  "mathematical_proof": "FOURTH_MOMENT_RADIUS_PROOF.txt",
+  "working_precision_bits": 192
+}

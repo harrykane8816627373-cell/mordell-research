@@ -1,0 +1,179 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "bytes": 8
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "c67d4dbd2dcc4389d0b12a227f0b9a716741f134e0908e6a8e47f881dbaedcd3",
+      "bytes": 9868
+    },
+    {
+      "path": "README.md",
+      "sha256": "dd69a3a7c2e0d30cb61fb5697885b23de2937ff254a6714177e398979bc63896",
+      "bytes": 2535
+    },
+    {
+      "path": "UPSTREAM.json",
+      "sha256": "86e58f21339396e92c00ba7c9ac677e4ca24a5e2c5ba50f7c6eb6a6663a3cbb0",
+      "bytes": 9375
+    },
+    {
+      "path": "vendor/LICENSE",
+      "sha256": "7401cb3cd38284b1ee2096247e82cba44b4cbfe6d80f142a33999bc56f3b5d95",
+      "bytes": 1067
+    },
+    {
+      "path": "vendor/LICENSE-DOCS.txt",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+      "bytes": 17023
+    },
+    {
+      "path": "vendor/LICENSING.md",
+      "sha256": "e95fe9b280168ec163ecc1dc96e36fc02715c8b22540038a4e2a4b40bbc6f8e8",
+      "bytes": 1033
+    },
+    {
+      "path": "vendor/n9/arb_bernstein.py",
+      "sha256": "ff18dccd70f083cf5e7fb79ba1a2c9b75b38886f82cc239198407c0b2d85e751",
+      "bytes": 3204
+    },
+    {
+      "path": "vendor/n9/BASIC_RESULTS.txt",
+      "sha256": "b069f0b962aaf8e97db28028a6da5a2eaf9968e70b982d4755b9f592ef0f812e",
+      "bytes": 4576
+    },
+    {
+      "path": "vendor/n9/check_arb_bernstein.py",
+      "sha256": "b78900e08bb3a2635ffe5c7a6b92dc69edda9086ee8390d478bd7cdb45a8cc7a",
+      "bytes": 2909
+    },
+    {
+      "path": "vendor/n9/check_physical_boundary_bernstein.py",
+      "sha256": "cbcfe1ffe598022b1b721104185e52730c65d68a31ecb36ce564d917f41d17cb",
+      "bytes": 1263
+    },
+    {
+      "path": "vendor/n9/cubic_log_bernstein.py",
+      "sha256": "76fec5e1aacb5f9ce424bc0939187544643d5b9c3710669f8d268132c66e4331",
+      "bytes": 1949
+    },
+    {
+      "path": "vendor/n9/DISCRETE_RADIAL_REMAINDER_PROOF.txt",
+      "sha256": "dfd6e51b400e2d62433670d7b39fa73b16bebe3335ddb71abba9720ceaea59e8",
+      "bytes": 1617
+    },
+    {
+      "path": "vendor/n9/FINAL_CERTIFICATE_AUDIT.json",
+      "sha256": "f931fcf86bf5393b218a4365f12dfb83956ee2559c0d430772b26f3e63ca1041",
+      "bytes": 532
+    },
+    {
+      "path": "vendor/n9/FOURTH_MOMENT_RADIUS_PROOF.txt",
+      "sha256": "0ba89aa9551886ead2facea048c56ad0682f013ff3f1f06d26eb1dfc84c7d0a9",
+      "bytes": 3350
+    },
+    {
+      "path": "vendor/n9/FRESH_VERIFICATION.json",
+      "sha256": "6eb3fe0ee6f74a417c576aecb174c6c62e9287b1d358b75c493b47dc3b1e69c4",
+      "bytes": 885
+    },
+    {
+      "path": "vendor/n9/global_pair_bound_bernstein_frontier.json",
+      "sha256": "3144aa17e88766b9896afb9ac7f68ecf91326b03f91eec7c70ccf44173382eef",
+      "bytes": 894
+    },
+    {
+      "path": "vendor/n9/global_pair_bound_exact_contacts.json",
+      "sha256": "1d1cef17749fcb242e6f09dffe3c26183ae672fe4707b2bad70bb0b12b0e9d88",
+      "bytes": 272469
+    },
+    {
+      "path": "vendor/n9/global_pair_bound_exact_definition_certificate.json",
+      "sha256": "5f70ffdc994311a910bf9cbffc236ccb81506cdcfc0a9de5fa7620f98a33ceb0",
+      "bytes": 306
+    },
+    {
+      "path": "vendor/n9/global_pair_bound_local_preconditioned_certificate.json",
+      "sha256": "ee16355fbcc55272db57bf87c20c11fcad7722de57f936b20ba9178de566b5ab",
+      "bytes": 7019
+    },
+    {
+      "path": "vendor/n9/physical_boundary_bernstein.py",
+      "sha256": "d2e8bd72e5cd8ac512d417ae50eefc4cc7d67a3c36598ba79f531f1ed2ae71e0",
+      "bytes": 3216
+    },
+    {
+      "path": "vendor/n9/PROOF_ZH.txt",
+      "sha256": "73a348ff828c302a1cee2874cd463c350dac7c8c3b2a8e26ee6dfdef97d03439",
+      "bytes": 10254
+    },
+    {
+      "path": "vendor/n9/QUARTIC_RADIAL_MOMENT_PROOF.txt",
+      "sha256": "9424bc4ab545773fd5e804193fdba65e0a83246fc29be5e62e624b9201df2ca1",
+      "bytes": 1864
+    },
+    {
+      "path": "vendor/n9/requirements.txt",
+      "sha256": "20cba329c835c28df7691b3088bee8a9f367b4e7622ffefe041fa9e4461e0c34",
+      "bytes": 49
+    },
+    {
+      "path": "vendor/n9/source_manifest.json",
+      "sha256": "11675a37e1a5323052e7b82755c94bfb51e7ba86b5f46024ba14df3ef423d365",
+      "bytes": 3620
+    },
+    {
+      "path": "vendor/n9/TWO_RADIUS_DOMAIN.txt",
+      "sha256": "3a30c640c9bebfa686c4b31d51faf4c42697d288159da73b9c6b4f6fbf530596",
+      "bytes": 1397
+    },
+    {
+      "path": "vendor/n9/verify_basics.py",
+      "sha256": "69c4181839079856a1d2a7f817dd002ca4d97fbc4684d2f3fe0c545638ae6f6c",
+      "bytes": 3969
+    },
+    {
+      "path": "vendor/n9/verify_discrete_radial_remainder.py",
+      "sha256": "30a7ee94f1948907ccb38b07b50a6c83bf45069dbdd75c26de8178ddf6815aa9",
+      "bytes": 1445
+    },
+    {
+      "path": "vendor/n9/verify_fourth_moment_bound.py",
+      "sha256": "2dab9e4947324d8fe027f89397a4d8fa8dc21ffc52d7e5b9dd54ec416230739e",
+      "bytes": 3602
+    },
+    {
+      "path": "vendor/n9/verify_pair_bound_cover.py",
+      "sha256": "47bc40ca21f31c17bb5306bd5bebb20b0d64bca954169a568ef9d9a66ced2196",
+      "bytes": 12952
+    },
+    {
+      "path": "vendor/n9/verify_pair_bound_definition.py",
+      "sha256": "f3a8bdd53b99ef3319f1ea6f8b6fcabf4a271b75a9fa41ab06dacd76b05b1773",
+      "bytes": 3843
+    },
+    {
+      "path": "vendor/n9/verify_pair_bound_local_preconditioned.py",
+      "sha256": "de8f3ed4fa775ec700b95f8b08d4f9f2f063b65c6a3df577956a6a6b01398c18",
+      "bytes": 7692
+    },
+    {
+      "path": "vendor/proofs/n9/README.md",
+      "sha256": "a7ac641055f18fffec64efb1e8e421328f4ffb1a686dd1efd064a91fcd9a0bf3",
+      "bytes": 1881
+    },
+    {
+      "path": "vendor/proofs/n9/README.zh-CN.md",
+      "sha256": "7aa66b07ece2db296181e9808479d716bb4bd09e9ccd816471b4e48805486398",
+      "bytes": 1576
+    },
+    {
+      "path": "verify_global.py",
+      "sha256": "8cfac1679519cda54e21d59ae10168d92b47d60f34f92a071fd2d0e000d93418",
+      "bytes": 9700
+    }
+  ]
+}

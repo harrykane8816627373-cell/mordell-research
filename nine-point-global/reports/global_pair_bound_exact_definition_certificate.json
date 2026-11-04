@@ -1,0 +1,9 @@
+{
+  "coefficient_sha256": "1d1cef17749fcb242e6f09dffe3c26183ae672fe4707b2bad70bb0b12b0e9d88",
+  "kernel_definition_exact": true,
+  "all_serialized_entries_checked": true,
+  "contact_values_and_gradients_exact": true,
+  "matrix_count": 8,
+  "matrix_dimension": 6,
+  "global_majorant_proved": false
+}

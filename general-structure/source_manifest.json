@@ -1,0 +1,9 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "CONTINUOUS_PHASES.md": "05455ba71cee7688dc57d7718bf9a907cc582b39fc4d5a76f27771f875258180",
+    "phase_frustration.py": "acdd25e4a75f649857bdaf71c91d7a7e6a946a8d346c3d6e08aebf315564ba8d",
+    "README.md": "5d955a78851e521a3b4f5ec234e9ede5952e595f48a3a30b6ad6b687fe1c7b84",
+    "verify_all.py": "c3fea149c5f224acc194aafe69c11d439870259de61d5f3cba3ba7c858822624"
+  }
+}

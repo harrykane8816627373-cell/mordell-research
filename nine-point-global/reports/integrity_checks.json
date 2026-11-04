@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "kernel_byte_tamper_rejected": true,
+  "tamper": "append one newline to fixed exact kernel in disposable copy",
+  "parent_flags": [
+    "-B",
+    "-S",
+    "-O"
+  ],
+  "returncode": 1,
+  "expected_error": "fixed input vendor/n9/global_pair_bound_exact_contacts.json",
+  "original_source_manifest_sha256": "e5fed083c4caaddfee4088f63c9c427f5855abfd0b51127ff7295919281e0e45",
+  "actual_proof_replay_in_this_test": false
+}
