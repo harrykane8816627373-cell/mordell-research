@@ -1,6 +1,6 @@
 # 严格子集条件与共同质量、重心预算
 
-本文保留19dbbd3阶段的计数与证明；最新进展见[11月4日续算](NOV4_PROGRESS.md)。
+本文保留19dbbd3阶段的计数与证明；最新全局结果见[全域证书复现](../eight-point-global/README.md)，局部续算见[11月4日记录](NOV4_PROGRESS.md)。
 
 2026-11-02。蒋丰灿（Fengcan Jiang）研究项目；OpenAI Codex 协作。
 

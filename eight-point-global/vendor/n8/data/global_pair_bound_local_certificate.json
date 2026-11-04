@@ -1,0 +1,43 @@
+{
+  "coefficient_sha256": "405ebbccbe70b6da7c69f13e1fdbb130625f5aba98898729cb2cdf16153995d9",
+  "local_positivity_proved": true,
+  "records": [
+    {
+      "contact": 0,
+      "radius": 0.000244140625,
+      "Hessian_LDL_pivots": [
+        "[0.29 +/- 6.20e-3]",
+        "[0.2 +/- 0.0577]",
+        "[+/- 0.239]"
+      ]
+    },
+    {
+      "contact": 1,
+      "radius": 3.0517578125e-05,
+      "Hessian_LDL_pivots": [
+        "[0.19 +/- 2.12e-3]",
+        "[0.01 +/- 4.97e-3]",
+        "[+/- 0.579]"
+      ]
+    },
+    {
+      "contact": 2,
+      "radius": 0.00048828125,
+      "Hessian_LDL_pivots": [
+        "[0.1 +/- 4.95e-3]",
+        "[0.01 +/- 6.30e-3]",
+        "[0.06 +/- 7.87e-3]"
+      ]
+    },
+    {
+      "contact": 3,
+      "radius": 0.00390625,
+      "Hessian_LDL_pivots": [
+        "[+/- 0.0924]",
+        "[+/- 0.0936]",
+        "[+/- 0.138]"
+      ]
+    }
+  ],
+  "global_majorant_proved": false
+}

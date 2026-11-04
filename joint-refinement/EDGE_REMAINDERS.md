@@ -2,7 +2,7 @@
 
 2026-11-02。蒋丰灿（Fengcan Jiang）研究项目；OpenAI Codex 协作。
 
-后续新半径与整域闭合见[119/80半径证明](TARGET_RADIUS.md)及[当前子集预算](SUBSET_BUDGET.md)。本页保留8be9f91阶段的结果：在[既有力方程外包](FORCE_CLOSURES.md)上，本次加入两种余项收紧方法和完整稳定性的二列 Gram 条件。它们使用同一组13维真实坐标，继续联合旧椭圆、精确质量、逐点驻点和已证目标值界。[当前总账](reports/force_cover.json)记录实际完成范围；**剩余非零矩分支尚未排空**。
+最新全局结果见[外部核证书复现](../eight-point-global/README.md)。后续局部半径与整域闭合见[119/80半径证明](TARGET_RADIUS.md)及[当前子集预算](SUBSET_BUDGET.md)。本页保留8be9f91阶段的结果：在[既有力方程外包](FORCE_CLOSURES.md)上，本次加入两种余项收紧方法和完整稳定性的二列 Gram 条件。它们使用同一组13维真实坐标，继续联合旧椭圆、精确质量、逐点驻点和已证目标值界。[当前总账](reports/force_cover.json)记录实际完成范围；**剩余非零矩分支尚未排空**。
 
 ## 1. 直接包围线性点差
 

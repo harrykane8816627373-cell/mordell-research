@@ -2,7 +2,7 @@
 
 研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**；推导与代码包含 OpenAI Codex 协作。更新于2026-11-04。定理的全部假设和证明以所链接正文为准。
 
-**八点当前入口：[11月4日联合进展](../joint-refinement/NOV4_PROGRESS.md) · [未完成覆盖](../joint-refinement/README.md) · [完整联合归约](../docs/EIGHT_POINT_REDUCTION.md)。** 质量7的八点全局最优者有平方半径<231/160；再联合旧矩椭圆得<23/16，七点锐界的外部分类依赖没有重建。新增固定中心平移子集预算。19dbbd3已完整关闭原编号10；本轮对旧叶9与55820导入部分树，旧14盒没有新增整盒关闭，原区域仍0–9。当前为28个开放后代盒，新增10004步骤已独立重放。既有E≤1/1200径向区域、729/1000内点门槛、局部能量、五倍矩管域及零矩分类保留。完整八点锐界未证。
+**八点当前结果：[全局证书复现](../eight-point-global/README.md) · [与既有严格子集定理的桥接](../eight-point-global/PROOF_BRIDGE.md) · [实际重放记录](../eight-point-global/reports/replay.json)。** Ji、Xu、Yu预印本的固定三变量核证书已完整重放，并与本仓库已有子集界接合，得到 M₈=8²⁸/7²¹及全部等号。质量7下Δ≤7⁷，等号恰为中心加单位正七边形，所以用户的Δ≥7⁷、s₂s₃≠0联合系统为空。这条桥接不需要七点完整驻点分类；旧局部森林及其28个开放盒保留为历史有限搜索记录。
 
 一般 n 的当前最强结论集中在下方表格；各次推进与较弱历史常数见[研究索引](../docs/RESEARCH_INDEX.md)。六、七点的外部分类依赖、有限层数与渐近层数的不同前提继续保留。
 
@@ -17,11 +17,11 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |五点|$`M_5=3125`$，等号单位正五边形，允许旋转、重排|[作者方法](../earlier-results/five_point_method.md)、[PDF](../earlier-results/five_point_proof.pdf)、[TeX](../earlier-results/five_point_proof.tex)；主线为二阶条件、径向矩、投影及四次对数上界|
 |六、七点|$`M_6=6^{15}/5^{10}`$、$`M_7=7^{21}/6^{15}`$，等号原点加相应正多边形|[主稿](../earlier-results/six_seven_proof.tex)、[复核](../earlier-results/six_seven_verification.md)、[覆盖审计](../earlier-results/six_seven_coverage_audit.md)；全局证明依赖 Faugère–Svartz 完整物理驻点分类，七点356次枝的物理排空为论文输入，未在本地独立重建|
 |六、七点含原点类|不调用上述分类的锐界与方差惩罚|[独立证明](../earlier-results/six_seven_origin_proof.tex)；结论仅适用于含原点类|
-|八点|[径向缺额区域](../radial-gap/README.md)：E≤1/1200时 log(Δ_q/7⁷)≤−E/32；[局部能量与五倍矩管域](../eight-point/ENERGY_BASIN.md)、旧11盒继续有效；[11月4日联合续算](../joint-refinement/NOV4_PROGRESS.md)保留729/1000内点门槛；全局平方半径<231/160、旧椭圆内<23/16；平移子集加强连续盒排除；原区域仍0–9，部分细分后有28开放盒，尚无新整域闭合|候选 $`8^{28}/7^{21}`$ 可达；旧椭圆内的非零矩物理系统仍未排空，**完整锐界仍开放**；[旧分类归档](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)保留全部前提|
+|八点|M₈=8²⁸/7²¹，等号恰为原点加半径√(8/7)的正七边形，允许旋转与重排；质量7下非零二三阶矩挑战者系统为空|[Ji–Xu–Yu证书复现](../eight-point-global/README.md)、[既有严格子集定理接合](../eight-point-global/PROOF_BRIDGE.md)；固定外部代码、原作者署名及软件依赖明确保留，未声称外部同行评审或形式化证明|
 |中心正多边形类|5≤n≤10模旋转严格局部最大；n=10使用四阶项，n≥11有显式增益扰动|[一般 n 审核第6、7节](../earlier-results/general_n_proof.md)；五点中心正方形、十点中心正九边形仍全局次优|
 |一般 n|已有有限上下界、全局网格包围、结构与渐近定理|没有得到所有有限 n 的简洁锐值公式；有限代数刻画不代表已执行巨大消元或枚举|
 
-八点已证的 $`p_2=0`$、$`p_3=0`$ 分类保留真实驻点及相应稳定约束；七点共任意圆、六共圆且两例外等距、两直线等类别各有假设。连续核已连接部分远端带，尚有过渡区域未覆盖。不能去掉条件后把这些成果拼接为完整八点证明。
+八点已证的 $`p_2=0`$、$`p_3=0`$ 分类保留真实驻点及相应稳定约束；七点共任意圆、六共圆且两例外等距、两直线等类别各有假设。连续核已连接部分远端带，尚有过渡区域未覆盖。这些旧分类继续保留各自条件；新的八点全局结果由上述核证书与子集域桥接承担。
 
 ## 2. 既有一般 n 方法与后续联合
 
@@ -99,4 +99,4 @@ python -B -S -O verify_all.py
 
 入口核对公开字节并重放本专题代码、完整旧下界基线及原Hermite入口。执行范围以[verification_report.json](verification_report.json)为准；不追溯改写历史报告的执行计数，没有冒充运行更大的网格、更多上升步或全部驻点消元。
 
-完整八点材料另见[研究Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)。解析、几何及外部分类输入仍须阅读证明；标准库检查、哈希通过和AI交叉审阅不等于外部同行评审或整篇形式化证明。一般n锐值、八点完整锐界、一般非零矩分支、精确γ及真实边界修正继续开放。
+完整八点材料另见[研究Release](https://github.com/harrykane8816627373-cell/mordell-research/releases/tag/research-2026-10-27)。解析、几何及外部分类输入仍须阅读证明；标准库检查、哈希通过和AI交叉审阅不等于外部同行评审或整篇形式化证明。一般n锐值、精确γ及真实边界修正继续开放；八点全局锐界与本页指定的非零矩剩余系统由新全域证书接合解决。

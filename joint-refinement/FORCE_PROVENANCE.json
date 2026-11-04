@@ -54,5 +54,7 @@
     55820
   ],
   "partial_proposals_preserve_all_open_descendants": true,
-  "full_eight_point_exclusion_proved": false
+  "full_eight_point_exclusion_proved": false,
+  "scope": "historical finite coordinate forest; its completeness flag does not describe the later global kernel proof",
+  "later_global_theorem_and_remaining_system_exclusion": "eight-point-global/reports/replay.json"
 }

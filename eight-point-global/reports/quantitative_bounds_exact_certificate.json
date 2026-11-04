@@ -1,0 +1,20 @@
+{
+  "global_optimality_proved": false,
+  "candidate_orbit_radius": "1/16",
+  "log_discriminant_loss_coefficient": "25/81",
+  "candidate_distance_squared_strict_lower_bound": "6/7",
+  "all_local_maxima_squared_radius_strict_upper_bound": "421/200",
+  "strong_squared_radius_algebraic_bound_polynomial": "882*t**3 - 2352*t**2 + 1755*t - 1496",
+  "strong_squared_radius_algebraic_bound_interval": [
+    "55731654020/26487072253",
+    "16537064057/7859418821"
+  ],
+  "strong_squared_radius_algebraic_bound_approx": 2.1041077506664663,
+  "all_local_maxima_minimum_distance_squared_lower_bound": "16/49",
+  "cubic_envelope_root_interval": [
+    "37102273563/16378154401",
+    "25357572763/11193660174"
+  ],
+  "shifted_inner_point_discriminant_ratio": "23880011413915601798292092939388583936000000000000000000000000000000000000000000/24730074886825028507979845718557587133568156316023129937633167093226402932764721",
+  "shifted_inner_point_discriminant_ratio_approx": 0.9656263283957017
+}

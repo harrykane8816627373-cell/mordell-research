@@ -1,0 +1,6 @@
+{
+  "coefficient_sha256": "405ebbccbe70b6da7c69f13e1fdbb130625f5aba98898729cb2cdf16153995d9",
+  "kernel_definition_exact": true,
+  "contact_values_and_gradients_exact": true,
+  "global_majorant_proved": false
+}

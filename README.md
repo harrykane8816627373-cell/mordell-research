@@ -14,18 +14,30 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |需要了解什么|入口|
 |---|---|
 |目前哪些结论已证，使用了哪些外部输入|[当前证明状态总表](configuration-bounds/PROOF_STATUS.md)|
-|八点最新进展与准确剩余分支|[11月4日进展与当前边界](joint-refinement/NOV4_PROGRESS.md) · [当前覆盖](joint-refinement/README.md) · [联合归约](docs/EIGHT_POINT_REDUCTION.md)|
+|八点全局锐界与剩余系统排除|[全域证书复现](eight-point-global/README.md) · [与已有成果的桥接](eight-point-global/PROOF_BRIDGE.md) · [实际重放记录](eight-point-global/reports/replay.json)|
 |各专题的关系、历史版本和下载|[研究索引](docs/RESEARCH_INDEX.md)|
 |如何实际运行证书|[复现指南](docs/REPRODUCING.md)|
 |作者原稿与五、六、七点证明|[既有证明](earlier-results/README.md) · [完整原稿](source-review/README.md)|
 
-## 当前联合排除：二阶Schwarz、旧椭圆与平移子集预算
+## 八点全局锐界：Ji–Xu–Yu证书复现与既有子集定理衔接
+
+已复现 Xiang Ji、Tiancheng Xu、Wensheng Yu 的[预印本2611.03088v1](https://arxiv.org/abs/2611.03088v1)所给八点完整域证书。核及其计算机辅助证明归于上述作者；本仓库保留固定代码、授权署名和实际执行记录，并联合本项目已有严格子集定理，给出[自含桥接证明](eight-point-global/PROOF_BRIDGE.md)。
+
+```math
+\boxed{M_8=8^{28}/7^{21}.}
+```
+
+在质量7尺度，Δ≤7⁷，等号恰为原点加单位正七边形，允许旋转与重排。因此**Δ≥7⁷且s₂s₃≠0的剩余联合系统为空**。这条接合使用已有严格子集界，不调用七点完整驻点分类。旧局部森林保留其28个开放盒作为历史搜索记录；全局排除由新的全域核证书承担。
+
+完整重放实际遍历386915个盒，认证193458个终端盒，未决数为0。[执行记录](eight-point-global/reports/replay.json)逐项记录输入哈希和版本。首次复核及软件依赖见[八点全局入口](eight-point-global/README.md)。源文件绑定、完整域遍历、正定与接触检查、等号推导及各自范围均有记录；没有声称外部同行评审或整篇形式化证明。
+
+## 11月4日局部续算阶段：二阶Schwarz、旧椭圆与平移子集预算
 
 [11月4日续算](joint-refinement/NOV4_PROGRESS.md)给出两个不同作用域的必要条件：所有质量7的八点全局最优者满足 **maxᵢ|qᵢ|²<231/160**；再联合剩余分支的旧矩椭圆，可加强为 **maxᵢ|qᵢ|²<23/16**。[二阶Schwarz证明](joint-refinement/SCHWARZ2_RADIUS.md) · [旧椭圆–Schur证明](joint-refinement/ELLIPSE_SCHUR_RADIUS.md)。两项均沿用已有七点锐界，其外部完整驻点分类没有在本轮重建。
 
 [固定有理中心的平移子集预算](joint-refinement/TRANSLATED_SUBSET.md)继续保留同一组真实坐标与共同重心，对离原点较远的聚集子集给出更紧的整盒上界。本轮仅续算旧叶9与55820的两棵**部分树**；19dbbd3的14个旧开放盒没有新增整盒关闭，原区域仍为 **0–9**。已独立重放10004个新增处理步骤、4995个排除叶，当前28个开放盒来自进一步细分，不是28个驻点。
 
-当前总账合并434431个节点、217188个排除叶；本轮10个接受入口通过，实际范围以[覆盖报告](joint-refinement/reports/force_cover.json)及[执行记录](joint-refinement/reports/force_execution.json)为准。10个接受入口已从固定输入临时副本通过；此前已验收19dbbd3时可复用其94399个旧处理步骤及70个不变算术输入，全部新步骤已独立重放。**完整八点锐界仍未证明，剩余非零矩分支尚未排空。**
+当前总账合并434431个节点、217188个排除叶；本轮10个接受入口通过，实际范围以[覆盖报告](joint-refinement/reports/force_cover.json)及[执行记录](joint-refinement/reports/force_execution.json)为准。10个接受入口已从固定输入临时副本通过；此前已验收19dbbd3时可复用其94399个旧处理步骤及70个不变算术输入，全部新步骤已独立重放。该阶段的局部森林保留其有限展开边界；随后全域证书解决了全局锐界与剩余系统。
 
 ## 19dbbd3阶段（2026-11-02）：119/80半径与原编号10闭合
 
@@ -35,7 +47,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 搜索还把严格真子集的点距和改写为共同质量与子集重心预算，并传播给每个实际点。6个接受入口从固定输入临时副本通过，实际重放 **33608个新增处理步骤**，新增 **16812个排除叶**；60791个已验收步骤及祖先链按固定前缀复用，61个旧算术输入逐字节未变。[该阶段冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)
 
-合并总账为424413个节点、212193个排除叶。[19dbbd3冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)保留当时全部14个开放盒，**完整八点锐界仍未证明**。此前729/1000内点门槛、−1/4000无内点负曲率间隙、旧椭圆、真实逐点力方程及完整Hessian条件继续保留。[已有结果与来源](joint-refinement/FORCE_CLOSURES.md)
+合并总账为424413个节点、212193个排除叶。[19dbbd3冻结报告](joint-refinement/certificates/force_checkpoint_19dbbd3_report.json)保留当时全部14个开放盒，截至该历史阶段尚无完整全局证明。此前729/1000内点门槛、−1/4000无内点负曲率间隙、旧椭圆、真实逐点力方程及完整Hessian条件继续保留。[已有结果与来源](joint-refinement/FORCE_CLOSURES.md)
 
 ## 上一阶段：等价多项式矩阵与冻结覆盖
 

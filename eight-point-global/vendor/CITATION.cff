@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "For the mathematics, cite the manuscript listed below. For the software, cite the GitHub release or commit used."
+title: "Optimal Configurations for Mordell’s Problem"
+type: software
+authors:
+  - family-names: "Jxxxx-2001"
+repository-code: "https://github.com/Jxxxx-2001/mordell-discriminant"
+url: "https://github.com/Jxxxx-2001/mordell-discriminant"
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: "Optimal Configurations for Mordell’s Problem"
+  authors:
+    - family-names: Ji
+      given-names: Xiang
+    - family-names: Xu
+      given-names: Tiancheng
+    - family-names: Yu
+      given-names: Wensheng
+  year: 2026

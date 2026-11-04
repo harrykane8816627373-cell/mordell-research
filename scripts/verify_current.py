@@ -23,11 +23,13 @@ def main():
     parser.add_argument('--first3-archive', type=Path)
     parser.add_argument('--joint', action='store_true', help='also replay the partial joint-cover tree')
     parser.add_argument('--refinement', action='store_true', help='also replay the current imported/force closure proof chain')
+    parser.add_argument('--global-eight', action='store_true', help='fresh full attributed n8 global proof replay; needs the pinned numerical dependencies')
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
              *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md')),
              *sorted((ROOT/'algebraic-gap').glob('*.md')), *sorted((ROOT/'radial-gap').glob('*.md')),
-             *sorted((ROOT/'joint-closure').glob('*.md')), *sorted((ROOT/'joint-refinement').glob('*.md'))]
+             *sorted((ROOT/'joint-closure').glob('*.md')), *sorted((ROOT/'joint-refinement').glob('*.md')),
+             *sorted((ROOT/'eight-point-global').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -96,7 +98,32 @@ def main():
         print('PASS algebraic-gap/verify_all.py: full inherited identity and quantitative gap', flush=True)
     else:
         print('NOT RUN algebraic-gap full replay: supply --first3-archive (see docs/REPRODUCING.md).')
-    print('PASS requested replays. Complete eight-point exclusion remains unproved.')
+    global_dir=ROOT/'eight-point-global'
+    proc=subprocess.run([sys.executable,'-B','-S','-O',str(global_dir/'verify_global.py'),'--check-inputs'],
+        cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf-8',timeout=60)
+    require(proc.returncode==0,'global n8 fixed inputs: '+proc.stderr[-3000:])
+    accepted=json.loads((global_dir/'accepted_replay.json').read_text(encoding='utf-8'))
+    manifest=(global_dir/'source_manifest.json').read_bytes()
+    require(hashlib.sha256(manifest).hexdigest()==accepted['source_manifest_sha256'],'accepted global n8 input set unchanged')
+    for name,expected in accepted['files_sha256'].items():
+        require(hashlib.sha256((global_dir/name).read_bytes()).hexdigest()==expected,'accepted global n8 evidence '+name)
+    result=json.loads((global_dir/'reports/replay.json').read_text(encoding='utf-8'))
+    require(result['passed'] is True and result['proof_replay_performed'] is True
+        and result['full_eight_point_exclusion_proved'] is True and result['unresolved_boxes']==0,
+        'accepted complete n8 global replay')
+    bindings={row['path']:row['sha256'] for row in json.loads(manifest)['files']}
+    require(result['input_sha256']==bindings,'accepted n8 result binds the current inputs')
+    proc=subprocess.run([sys.executable,'-B','-S','-O',str(global_dir/'verify_bridge.py')],
+        cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf-8',timeout=60)
+    require(proc.returncode==0,'global n8 exact bridge: '+proc.stderr[-3000:])
+    if args.global_eight:
+        proc=subprocess.run([sys.executable,'-B','-S','-O',str(global_dir/'verify_global.py')],
+            cwd=ROOT,env=env,capture_output=True,text=True,encoding='utf-8',timeout=4000)
+        require(proc.returncode==0,'fresh n8 global replay: '+proc.stdout[-3000:]+proc.stderr[-3000:])
+        print('PASS fresh full attributed n8 global replay and exact bridge.',flush=True)
+    else:
+        print('PASS fixed n8 inputs, accepted replay evidence and exact bridge; full cover reused (use --global-eight to replay).',flush=True)
+    print('PASS requested checks. The n8 global bound and nonzero-moment exclusion have an accepted full replay.')
 
 
 if __name__ == '__main__':

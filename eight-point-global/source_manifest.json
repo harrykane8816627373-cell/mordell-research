@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-04",
+  "upstream_commit": "31cc934b7dfa0ef2308566a1bce48cbfb2e01559",
+  "purpose": "Fixed attributed inputs for a fresh n8 global replay and existing-subset bridge",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "PROOF_BRIDGE.md",
+      "bytes": 5177,
+      "sha256": "41f7db70c8f2559231f62f20e50c9d358bee022076d1d0e0d746990bdaebcb3b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1908,
+      "sha256": "acfe596702aef26fba09e72907d12bcf354182c5ae729de1f6f34973604c8019"
+    },
+    {
+      "path": "UPSTREAM.json",
+      "bytes": 5149,
+      "sha256": "a4a765c6ceede97c56ee51d1a233c5dd7e5ca6cbc06b45cd5657729b28210d2a"
+    },
+    {
+      "path": "vendor/CITATION.cff",
+      "bytes": 668,
+      "sha256": "13fe094641b36417fdca2e93a32d6fbf654a9fa3ac70b889abf5d22e39fb88c8"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1067,
+      "sha256": "7401cb3cd38284b1ee2096247e82cba44b4cbfe6d80f142a33999bc56f3b5d95"
+    },
+    {
+      "path": "vendor/LICENSE-DOCS.txt",
+      "bytes": 17023,
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    {
+      "path": "vendor/LICENSING.md",
+      "bytes": 1033,
+      "sha256": "e95fe9b280168ec163ecc1dc96e36fc02715c8b22540038a4e2a4b40bbc6f8e8"
+    },
+    {
+      "path": "vendor/n8/PROOF_ZH.txt",
+      "bytes": 13373,
+      "sha256": "3b394d0b52e52a633cc41bfed3f3bc19bd3b09254de6c6d06855e36a038fb362"
+    },
+    {
+      "path": "vendor/n8/README_ZH.txt",
+      "bytes": 1308,
+      "sha256": "0d13caf427e51e63e8070347ab1e63f00987f7b9baac89bc7e7b4601d7cc1c01"
+    },
+    {
+      "path": "vendor/n8/data/FINAL_CERTIFICATE.json",
+      "bytes": 1442,
+      "sha256": "d1885126132dcc696348358fd8bdfa05bc88cdaefc177ad6e2970020c3f94944"
+    },
+    {
+      "path": "vendor/n8/data/global_pair_bound_bernstein_frontier.json",
+      "bytes": 426,
+      "sha256": "fd239fa7ed45d36566fd829dcc0678ecb66e67bb08b2b00457e9aef45ee95589"
+    },
+    {
+      "path": "vendor/n8/data/global_pair_bound_exact_contacts.json",
+      "bytes": 92195,
+      "sha256": "405ebbccbe70b6da7c69f13e1fdbb130625f5aba98898729cb2cdf16153995d9"
+    },
+    {
+      "path": "vendor/n8/data/global_pair_bound_exact_definition_certificate.json",
+      "bytes": 215,
+      "sha256": "df9b29e41c729c070cd73b3dcf5eddf2477ea4f5dca662704dcd1785692cbd12"
+    },
+    {
+      "path": "vendor/n8/data/global_pair_bound_local_certificate.json",
+      "bytes": 954,
+      "sha256": "618e5b2c563fc2f555082b42a15a8b6408fee6338436a2d46dd738d1476c0ce7"
+    },
+    {
+      "path": "vendor/n8/data/global_pair_bound_psd_certificate.json",
+      "bytes": 44128,
+      "sha256": "b0fb4307b9109a28bac1a5d49a379f445f97c5eaa93024928f8556486dcd508b"
+    },
+    {
+      "path": "vendor/n8/data/quantitative_bounds_exact_certificate.json",
+      "bytes": 1000,
+      "sha256": "2c72c931cf57343f220b60d3266771379b5551d471e8d2c5deb2235eb2cf0ab8"
+    },
+    {
+      "path": "vendor/n8/requirements.txt",
+      "bytes": 50,
+      "sha256": "77f584eec623be0b6e64b486a5d504dbe8d94b5e87db6c0d3d3f70ae94b8a850"
+    },
+    {
+      "path": "vendor/n8/verify_all.py",
+      "bytes": 3071,
+      "sha256": "e492a7eca0f1d3c33b6c6049bee73b7fd72bff2b5c2f505b3cc74c7c7472d88a"
+    },
+    {
+      "path": "vendor/n8/verify_contact_neighborhoods.py",
+      "bytes": 3857,
+      "sha256": "c35ab26e8ba0b8b99b7c6f36b5c60caac392eb9f1132ba9be56ce3c0a20465b9"
+    },
+    {
+      "path": "vendor/n8/verify_exact_definition.py",
+      "bytes": 2815,
+      "sha256": "30bca6602687cdccf1ae66da137d5d5c88d8d28c92e578bac05836f34ebc8ba0"
+    },
+    {
+      "path": "vendor/n8/verify_global_cover.py",
+      "bytes": 6739,
+      "sha256": "e32ade961c1a317015ea09e3b86f6647e814e057edf885bdf751a27a4feae0fe"
+    },
+    {
+      "path": "vendor/n8/verify_positive_definiteness.py",
+      "bytes": 2027,
+      "sha256": "6128319f3908688efbb3456b622c4f2271500a9ea6c1e6f6938608101353cead"
+    },
+    {
+      "path": "vendor/n8/verify_radius_bounds.py",
+      "bytes": 3739,
+      "sha256": "0afd4831db72f06f930a397912eea3cb01b1d191ff8d0a666a1742f5de8a7380"
+    },
+    {
+      "path": "verify_bridge.py",
+      "bytes": 4241,
+      "sha256": "f5ad568fa26817cd2b72153aeb2b253834275e43683bc25d9f9e1db0e52b3a38"
+    },
+    {
+      "path": "verify_global.py",
+      "bytes": 7315,
+      "sha256": "1f7bc2a65893038d64a8efea6cde95b42ecdad07974bb60de22be6da5914414b"
+    }
+  ]
+}

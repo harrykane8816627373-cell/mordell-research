@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-04",
+  "kind": "immutable record of the completed replay; auditing this record is not another proof execution",
+  "source_manifest_sha256": "879bbc2457cc29cd4535e257ef4cc1ec2e8d0e17357e0f51cec4d346ca567f84",
+  "files_sha256": {
+    "reports/FINAL_CERTIFICATE.json": "f59f8c65d48857596678ab7c5d5cec9c916a8f1c586fef831502204634654f25",
+    "reports/fresh_replay.log": "a611fa6ae8d888b613c1db8f27ad196f2c244f0d7d6edbeabceefbe7203a94f8",
+    "reports/global_pair_bound_bernstein_frontier.json": "d62af2bbacbdb9428f10f771d9481edf1725ac4abc7247654d09f93657196f81",
+    "reports/global_pair_bound_exact_definition_certificate.json": "df9b29e41c729c070cd73b3dcf5eddf2477ea4f5dca662704dcd1785692cbd12",
+    "reports/global_pair_bound_local_certificate.json": "618e5b2c563fc2f555082b42a15a8b6408fee6338436a2d46dd738d1476c0ce7",
+    "reports/global_pair_bound_psd_certificate.json": "b0fb4307b9109a28bac1a5d49a379f445f97c5eaa93024928f8556486dcd508b",
+    "reports/quantitative_bounds_exact_certificate.json": "2c72c931cf57343f220b60d3266771379b5551d471e8d2c5deb2235eb2cf0ab8",
+    "reports/replay.json": "425dd8d31d1d799c8aba11a7ae9bdd52d4e6be6135d9201789bbc8bb84e15ed5"
+  },
+  "upstream_commit": "31cc934b7dfa0ef2308566a1bce48cbfb2e01559",
+  "full_eight_point_exclusion_proved": true
+}

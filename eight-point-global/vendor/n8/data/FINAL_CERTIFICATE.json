@@ -1,0 +1,37 @@
+{
+  "global_majorant_proved": true,
+  "all_required_computational_checks_passed": true,
+  "mathematical_conclusion_with_supplied_proof": "M8=8^28/7^21; equality exactly center plus regular heptagon, up to rotation and relabeling",
+  "coefficient_sha256": "405ebbccbe70b6da7c69f13e1fdbb130625f5aba98898729cb2cdf16153995d9",
+  "cover_counts": {
+    "visited": 386915,
+    "outside": 20298,
+    "local": 444,
+    "positive": 172716,
+    "split": 193457
+  },
+  "unresolved_boxes": 0,
+  "domain": {
+    "u_and_v": [
+      "0",
+      "965267/524288"
+    ],
+    "t_squared_at_most": "u*v",
+    "u_plus_v_minus_2t_at_least": "2/7"
+  },
+  "seconds": 218.71900000004098,
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "sympy": "1.14.0",
+    "python_flint": "0.9.0"
+  },
+  "files_sha256": {
+    "verify_all.py": "e492a7eca0f1d3c33b6c6049bee73b7fd72bff2b5c2f505b3cc74c7c7472d88a",
+    "verify_contact_neighborhoods.py": "c35ab26e8ba0b8b99b7c6f36b5c60caac392eb9f1132ba9be56ce3c0a20465b9",
+    "verify_exact_definition.py": "30bca6602687cdccf1ae66da137d5d5c88d8d28c92e578bac05836f34ebc8ba0",
+    "verify_global_cover.py": "e32ade961c1a317015ea09e3b86f6647e814e057edf885bdf751a27a4feae0fe",
+    "verify_positive_definiteness.py": "6128319f3908688efbb3456b622c4f2271500a9ea6c1e6f6938608101353cead",
+    "verify_radius_bounds.py": "0afd4831db72f06f930a397912eea3cb01b1d191ff8d0a666a1742f5de8a7380"
+  }
+}

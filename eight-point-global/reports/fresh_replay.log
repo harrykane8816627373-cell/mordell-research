@@ -1,0 +1,164 @@
+VERIFY verify_radius_bounds.py
+{
+  "global_optimality_proved": false,
+  "candidate_orbit_radius": "1/16",
+  "log_discriminant_loss_coefficient": "25/81",
+  "candidate_distance_squared_strict_lower_bound": "6/7",
+  "all_local_maxima_squared_radius_strict_upper_bound": "421/200",
+  "strong_squared_radius_algebraic_bound_polynomial": "882*t**3 - 2352*t**2 + 1755*t - 1496",
+  "strong_squared_radius_algebraic_bound_interval": [
+    "55731654020/26487072253",
+    "16537064057/7859418821"
+  ],
+  "strong_squared_radius_algebraic_bound_approx": 2.1041077506664663,
+  "all_local_maxima_minimum_distance_squared_lower_bound": "16/49",
+  "cubic_envelope_root_interval": [
+    "37102273563/16378154401",
+    "25357572763/11193660174"
+  ],
+  "shifted_inner_point_discriminant_ratio_approx": 0.9656263283957017
+}
+VERIFY verify_exact_definition.py
+{'coefficient_sha256': '405ebbccbe70b6da7c69f13e1fdbb130625f5aba98898729cb2cdf16153995d9', 'kernel_definition_exact': True, 'contact_values_and_gradients_exact': True, 'global_majorant_proved': False}
+VERIFY verify_positive_definiteness.py
+All seven exact auxiliary matrices are positive definite.
+Polynomial terms: 193 max total degree: 12
+Continuum majorant is NOT yet certified.
+VERIFY verify_contact_neighborhoods.py 0
+LOCAL CERTIFIED 0 radius 0.000244140625
+LOCAL CERTIFIED 1 radius 3.0517578125e-05
+LOCAL CERTIFIED 2 radius 0.00048828125
+LOCAL CERTIFIED 3 radius 0.00390625
+All contact neighborhoods certified; full-domain coverage is verified separately.
+VERIFY verify_global_cover.py 180
+BERNSTEIN START (13, 13, 7) frontier 1
+BERNSTEIN {'visited': 8000, 'outside': 209, 'local': 0, 'positive': 3785, 'split': 4006} pending 13 seconds 1.7
+BERNSTEIN {'visited': 12000, 'outside': 209, 'local': 0, 'positive': 5785, 'split': 6006} pending 13 seconds 2.5
+BERNSTEIN {'visited': 14000, 'outside': 209, 'local': 0, 'positive': 6784, 'split': 7007} pending 15 seconds 2.9
+BERNSTEIN {'visited': 18000, 'outside': 209, 'local': 0, 'positive': 8784, 'split': 9007} pending 15 seconds 3.8
+BERNSTEIN {'visited': 22000, 'outside': 226, 'local': 0, 'positive': 10767, 'split': 11007} pending 15 seconds 4.6
+BERNSTEIN {'visited': 28000, 'outside': 342, 'local': 0, 'positive': 13650, 'split': 14008} pending 17 seconds 5.8
+BERNSTEIN {'visited': 30000, 'outside': 342, 'local': 0, 'positive': 14650, 'split': 15008} pending 17 seconds 6.2
+BERNSTEIN {'visited': 32000, 'outside': 342, 'local': 0, 'positive': 15650, 'split': 16008} pending 17 seconds 6.6
+BERNSTEIN {'visited': 34000, 'outside': 342, 'local': 0, 'positive': 16650, 'split': 17008} pending 17 seconds 7.0
+BERNSTEIN {'visited': 40000, 'outside': 342, 'local': 0, 'positive': 19649, 'split': 20009} pending 19 seconds 8.3
+BERNSTEIN {'visited': 44000, 'outside': 342, 'local': 0, 'positive': 21648, 'split': 22010} pending 21 seconds 9.1
+BERNSTEIN {'visited': 46000, 'outside': 342, 'local': 0, 'positive': 22649, 'split': 23009} pending 19 seconds 9.5
+BERNSTEIN {'visited': 50000, 'outside': 402, 'local': 0, 'positive': 24589, 'split': 25009} pending 19 seconds 10.3
+BERNSTEIN {'visited': 52000, 'outside': 453, 'local': 0, 'positive': 25536, 'split': 26011} pending 23 seconds 10.7
+BERNSTEIN {'visited': 56000, 'outside': 530, 'local': 0, 'positive': 27458, 'split': 28012} pending 25 seconds 11.5
+BERNSTEIN {'visited': 60000, 'outside': 625, 'local': 0, 'positive': 29364, 'split': 30011} pending 23 seconds 12.4
+BERNSTEIN {'visited': 68000, 'outside': 625, 'local': 0, 'positive': 33362, 'split': 34013} pending 27 seconds 14.0
+BERNSTEIN {'visited': 70000, 'outside': 625, 'local': 0, 'positive': 34363, 'split': 35012} pending 25 seconds 14.5
+BERNSTEIN {'visited': 72000, 'outside': 625, 'local': 0, 'positive': 35362, 'split': 36013} pending 27 seconds 14.9
+BERNSTEIN {'visited': 74000, 'outside': 625, 'local': 0, 'positive': 36363, 'split': 37012} pending 25 seconds 15.3
+BERNSTEIN {'visited': 82000, 'outside': 655, 'local': 0, 'positive': 40332, 'split': 41013} pending 27 seconds 17.0
+BERNSTEIN {'visited': 84000, 'outside': 706, 'local': 30, 'positive': 41251, 'split': 42013} pending 27 seconds 17.4
+BERNSTEIN {'visited': 92000, 'outside': 751, 'local': 114, 'positive': 45121, 'split': 46014} pending 29 seconds 19.0
+BERNSTEIN {'visited': 102000, 'outside': 751, 'local': 315, 'positive': 49920, 'split': 51014} pending 29 seconds 21.2
+BERNSTEIN {'visited': 104000, 'outside': 751, 'local': 315, 'positive': 50920, 'split': 52014} pending 29 seconds 21.7
+BERNSTEIN {'visited': 108000, 'outside': 751, 'local': 315, 'positive': 52921, 'split': 54013} pending 27 seconds 22.5
+BERNSTEIN {'visited': 112000, 'outside': 751, 'local': 315, 'positive': 54921, 'split': 56013} pending 27 seconds 23.4
+BERNSTEIN {'visited': 118000, 'outside': 849, 'local': 366, 'positive': 57773, 'split': 59012} pending 25 seconds 24.8
+BERNSTEIN {'visited': 124000, 'outside': 1028, 'local': 366, 'positive': 60597, 'split': 62009} pending 19 seconds 26.1
+BERNSTEIN {'visited': 128000, 'outside': 1028, 'local': 366, 'positive': 62596, 'split': 64010} pending 21 seconds 27.0
+BERNSTEIN {'visited': 130000, 'outside': 1028, 'local': 366, 'positive': 63595, 'split': 65011} pending 23 seconds 27.4
+BERNSTEIN {'visited': 136000, 'outside': 1028, 'local': 366, 'positive': 66595, 'split': 68011} pending 23 seconds 28.7
+BERNSTEIN {'visited': 138000, 'outside': 1028, 'local': 366, 'positive': 67595, 'split': 69011} pending 23 seconds 29.1
+BERNSTEIN {'visited': 140000, 'outside': 1028, 'local': 366, 'positive': 68594, 'split': 70012} pending 25 seconds 29.5
+BERNSTEIN {'visited': 144000, 'outside': 1028, 'local': 366, 'positive': 70593, 'split': 72013} pending 27 seconds 30.3
+BERNSTEIN {'visited': 146000, 'outside': 1028, 'local': 366, 'positive': 71594, 'split': 73012} pending 25 seconds 30.8
+BERNSTEIN {'visited': 148000, 'outside': 1028, 'local': 366, 'positive': 72594, 'split': 74012} pending 25 seconds 31.2
+BERNSTEIN {'visited': 150000, 'outside': 1028, 'local': 366, 'positive': 73593, 'split': 75013} pending 27 seconds 31.6
+BERNSTEIN {'visited': 154000, 'outside': 1028, 'local': 366, 'positive': 75593, 'split': 77013} pending 27 seconds 32.4
+BERNSTEIN {'visited': 156000, 'outside': 1028, 'local': 366, 'positive': 76593, 'split': 78013} pending 27 seconds 32.8
+BERNSTEIN {'visited': 162000, 'outside': 1028, 'local': 366, 'positive': 79593, 'split': 81013} pending 27 seconds 34.1
+BERNSTEIN {'visited': 164000, 'outside': 1028, 'local': 366, 'positive': 80594, 'split': 82012} pending 25 seconds 34.5
+BERNSTEIN {'visited': 170000, 'outside': 1028, 'local': 366, 'positive': 83596, 'split': 85010} pending 21 seconds 35.7
+BERNSTEIN {'visited': 176000, 'outside': 1028, 'local': 366, 'positive': 86597, 'split': 88009} pending 19 seconds 37.0
+BERNSTEIN {'visited': 178000, 'outside': 1028, 'local': 366, 'positive': 87595, 'split': 89011} pending 23 seconds 37.4
+BERNSTEIN {'visited': 180000, 'outside': 1028, 'local': 366, 'positive': 88596, 'split': 90010} pending 21 seconds 37.8
+BERNSTEIN {'visited': 182000, 'outside': 1028, 'local': 366, 'positive': 89596, 'split': 91010} pending 21 seconds 38.2
+BERNSTEIN {'visited': 188000, 'outside': 1163, 'local': 366, 'positive': 92462, 'split': 94009} pending 19 seconds 39.5
+BERNSTEIN {'visited': 196000, 'outside': 1299, 'local': 366, 'positive': 96325, 'split': 98010} pending 21 seconds 41.1
+BERNSTEIN {'visited': 206000, 'outside': 1299, 'local': 366, 'positive': 101327, 'split': 103008} pending 17 seconds 43.1
+BERNSTEIN {'visited': 210000, 'outside': 1332, 'local': 366, 'positive': 103297, 'split': 105005} pending 11 seconds 44.0
+BERNSTEIN {'visited': 214000, 'outside': 1471, 'local': 366, 'positive': 105158, 'split': 107005} pending 11 seconds 44.8
+BERNSTEIN {'visited': 218000, 'outside': 1471, 'local': 366, 'positive': 107157, 'split': 109006} pending 13 seconds 45.7
+BERNSTEIN {'visited': 226000, 'outside': 1472, 'local': 366, 'positive': 111154, 'split': 113008} pending 17 seconds 47.4
+BERNSTEIN {'visited': 230000, 'outside': 1472, 'local': 366, 'positive': 113155, 'split': 115007} pending 15 seconds 48.2
+BERNSTEIN {'visited': 238000, 'outside': 1472, 'local': 366, 'positive': 117155, 'split': 119007} pending 15 seconds 49.9
+BERNSTEIN {'visited': 242000, 'outside': 1472, 'local': 366, 'positive': 119154, 'split': 121008} pending 17 seconds 50.7
+BERNSTEIN {'visited': 244000, 'outside': 1472, 'local': 366, 'positive': 120158, 'split': 122004} pending 9 seconds 51.1
+BERNSTEIN {'visited': 248000, 'outside': 1473, 'local': 366, 'positive': 122155, 'split': 124006} pending 13 seconds 52.0
+BERNSTEIN {'visited': 252000, 'outside': 1474, 'local': 366, 'positive': 124153, 'split': 126007} pending 15 seconds 52.8
+BERNSTEIN {'visited': 256000, 'outside': 1498, 'local': 366, 'positive': 126131, 'split': 128005} pending 11 seconds 53.6
+BERNSTEIN {'visited': 258000, 'outside': 1743, 'local': 366, 'positive': 126888, 'split': 129003} pending 7 seconds 54.0
+BERNSTEIN {'visited': 260000, 'outside': 1924, 'local': 366, 'positive': 127706, 'split': 130004} pending 9 seconds 54.4
+BERNSTEIN {'visited': 262000, 'outside': 1973, 'local': 366, 'positive': 128656, 'split': 131005} pending 11 seconds 54.8
+BERNSTEIN {'visited': 264000, 'outside': 1999, 'local': 366, 'positive': 129630, 'split': 132005} pending 11 seconds 55.2
+BERNSTEIN {'visited': 274000, 'outside': 2132, 'local': 366, 'positive': 134499, 'split': 137003} pending 7 seconds 57.2
+BERNSTEIN {'visited': 280000, 'outside': 2234, 'local': 369, 'positive': 137393, 'split': 140004} pending 9 seconds 58.5
+BERNSTEIN {'visited': 288000, 'outside': 2430, 'local': 369, 'positive': 141197, 'split': 144004} pending 9 seconds 60.1
+BERNSTEIN {'visited': 292000, 'outside': 2524, 'local': 369, 'positive': 143100, 'split': 146007} pending 15 seconds 60.9
+BERNSTEIN {'visited': 294000, 'outside': 2581, 'local': 371, 'positive': 144040, 'split': 147008} pending 17 seconds 61.3
+BERNSTEIN {'visited': 302000, 'outside': 2722, 'local': 418, 'positive': 147854, 'split': 151006} pending 13 seconds 62.9
+BERNSTEIN {'visited': 304000, 'outside': 2775, 'local': 418, 'positive': 148801, 'split': 152006} pending 13 seconds 63.3
+BERNSTEIN {'visited': 310000, 'outside': 3813, 'local': 441, 'positive': 150739, 'split': 155007} pending 15 seconds 64.4
+BERNSTEIN {'visited': 326000, 'outside': 7698, 'local': 441, 'positive': 154855, 'split': 163006} pending 13 seconds 67.2
+BERNSTEIN {'visited': 328000, 'outside': 8161, 'local': 441, 'positive': 155392, 'split': 164006} pending 13 seconds 67.6
+BERNSTEIN {'visited': 330000, 'outside': 8646, 'local': 441, 'positive': 155907, 'split': 165006} pending 13 seconds 67.9
+BERNSTEIN {'visited': 338000, 'outside': 10599, 'local': 441, 'positive': 157952, 'split': 169008} pending 17 seconds 69.3
+BERNSTEIN {'visited': 340000, 'outside': 11160, 'local': 441, 'positive': 158391, 'split': 170008} pending 17 seconds 69.6
+BERNSTEIN {'visited': 344000, 'outside': 12143, 'local': 441, 'positive': 159408, 'split': 172008} pending 17 seconds 70.3
+BERNSTEIN {'visited': 348000, 'outside': 13159, 'local': 441, 'positive': 160394, 'split': 174006} pending 13 seconds 71.0
+BERNSTEIN {'visited': 352000, 'outside': 14131, 'local': 441, 'positive': 161421, 'split': 176007} pending 15 seconds 71.7
+BERNSTEIN {'visited': 358000, 'outside': 15658, 'local': 441, 'positive': 162894, 'split': 179007} pending 15 seconds 72.7
+BERNSTEIN {'visited': 360000, 'outside': 16155, 'local': 441, 'positive': 163396, 'split': 180008} pending 17 seconds 73.1
+BERNSTEIN {'visited': 366000, 'outside': 17667, 'local': 441, 'positive': 164885, 'split': 183007} pending 15 seconds 74.1
+BERNSTEIN {'visited': 370000, 'outside': 17950, 'local': 441, 'positive': 166606, 'split': 185003} pending 7 seconds 74.9
+BERNSTEIN {'visited': 372000, 'outside': 17969, 'local': 441, 'positive': 167583, 'split': 186007} pending 15 seconds 75.3
+BERNSTEIN {'visited': 374000, 'outside': 18008, 'local': 444, 'positive': 168547, 'split': 187001} pending 3 seconds 75.7
+BERNSTEIN {'visited': 380000, 'outside': 19255, 'local': 444, 'positive': 170294, 'split': 190007} pending 15 seconds 76.8
+BERNSTEIN {'visited': 382000, 'outside': 19779, 'local': 444, 'positive': 170771, 'split': 191006} pending 13 seconds 77.1
+BERNSTEIN {'visited': 384000, 'outside': 20028, 'local': 444, 'positive': 171522, 'split': 192006} pending 13 seconds 77.5
+BERNSTEIN {'visited': 386000, 'outside': 20115, 'local': 444, 'positive': 172438, 'split': 193003} pending 7 seconds 77.9
+BERNSTEIN STOP {'visited': 386915, 'outside': 20298, 'local': 444, 'positive': 172716, 'split': 193457} UNRESOLVED 0 GLOBAL PROVED True
+ALL REQUIRED CERTIFICATES PASSED; UNRESOLVED BOXES: 0
+{
+  "global_majorant_proved": true,
+  "all_required_computational_checks_passed": true,
+  "mathematical_conclusion_with_supplied_proof": "M8=8^28/7^21; equality exactly center plus regular heptagon, up to rotation and relabeling",
+  "coefficient_sha256": "405ebbccbe70b6da7c69f13e1fdbb130625f5aba98898729cb2cdf16153995d9",
+  "cover_counts": {
+    "visited": 386915,
+    "outside": 20298,
+    "local": 444,
+    "positive": 172716,
+    "split": 193457
+  },
+  "unresolved_boxes": 0,
+  "domain": {
+    "u_and_v": [
+      "0",
+      "965267/524288"
+    ],
+    "t_squared_at_most": "u*v",
+    "u_plus_v_minus_2t_at_least": "2/7"
+  },
+  "seconds": 87.14000000001397,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "sympy": "1.14.0",
+    "python_flint": "0.9.0"
+  },
+  "files_sha256": {
+    "verify_all.py": "e492a7eca0f1d3c33b6c6049bee73b7fd72bff2b5c2f505b3cc74c7c7472d88a",
+    "verify_contact_neighborhoods.py": "c35ab26e8ba0b8b99b7c6f36b5c60caac392eb9f1132ba9be56ce3c0a20465b9",
+    "verify_exact_definition.py": "30bca6602687cdccf1ae66da137d5d5c88d8d28c92e578bac05836f34ebc8ba0",
+    "verify_global_cover.py": "e32ade961c1a317015ea09e3b86f6647e814e057edf885bdf751a27a4feae0fe",
+    "verify_positive_definiteness.py": "6128319f3908688efbb3456b622c4f2271500a9ea6c1e6f6938608101353cead",
+    "verify_radius_bounds.py": "0afd4831db72f06f930a397912eea3cb01b1d191ff8d0a666a1742f5de8a7380"
+  }
+}

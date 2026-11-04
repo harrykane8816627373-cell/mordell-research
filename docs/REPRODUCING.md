@@ -4,7 +4,21 @@
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
 
-## 当前幂和与八点
+## 八点完整域证书与桥接
+
+Ji–Xu–Yu固定核证书的首次完整重放使用独立环境：
+
+~~~powershell
+python -m venv .venv-n8
+.venv-n8\Scripts\python.exe -m pip install -r eight-point-global/vendor/n8/requirements.txt
+.venv-n8\Scripts\python.exe -B eight-point-global/verify_global.py
+~~~
+
+这会从完整初始盒重新运行六个原始脚本及准确桥接，原始断言保持启用；不读取已保存的零未决结果来跳过覆盖。固定输入及MIT/CC BY署名见[全局目录](../eight-point-global/README.md)。基础统一入口只审核已验收记录、输入绑定并重算桥接；需要统一入口重新运行完整全域时，在上述环境运行 `scripts/verify_current.py --global-eight`。
+
+旧局部树的未决盒作为历史计算记录保留；其 `full_eight_point_exclusion_proved=false` 表示那棵坐标树未展开完成，不撤回新全域核的全局结论。
+
+## 当前幂和与历史八点局部路线
 
 ```bash
 python -B -S -O scripts/verify_current.py
@@ -15,7 +29,7 @@ python -B -S -O scripts/verify_current.py
 - `power-moment/verify_all.py`：四个旧精确入口，包含代数、结构、参考谱及11个目标盒。
 - `radial-gap/verify_all.py`：包含已有 `eight-point/verify_all.py` 的两个精确入口、上传统一包的14个标准库入口，以及新的径向—角向常数和实际点见证。新门槛是 E≤1/1200、对数缺口 E/32；上传原包的49条哈希也会核对。可选 SymPy 根配对测试未执行。
 
-仓库文件不因重放而更新计时。两个程序都明确保留 `full_eight_point_exclusion_proved=false`，这表示完整八点覆盖尚未证明。
+仓库文件不因重放而更新计时。这两个历史程序保留 `full_eight_point_exclusion_proved=false`，表示各自局部证书未完成全覆盖；当前全局结论见 `eight-point-global/reports/replay.json`，其完整重放标志为true。
 
 仅重放本轮径向专题及必需输入：
 
@@ -129,4 +143,4 @@ python -B -S -O configuration-bounds/verify_all.py
 
 历史 ZIP 是冻结快照；当前 README、证明状态页可能随后更新。`configuration-bounds/status_updates.zip` 中的状态快照由自己的清单检查，不要求与当前网页逐字相同。本次仅同步当前 `PROOF_STATUS.md` 在本地专题清单里的哈希，不追溯改写历史 ZIP。
 
-哈希保证字节一致；有理程序保证所列运算与有限检查；数学桥梁与全覆盖量词必须由证明及实际穷尽证据承担。[八点未关闭部分](../eight-point/OPEN_BRANCHES.md)继续开放。
+哈希保证字节一致；有理程序保证所列运算与有限检查；数学桥梁与全覆盖量词必须由证明及实际穷尽证据承担。[旧八点方法的开放域记录](../eight-point/OPEN_BRANCHES.md)作为历史保留；当前剩余系统由新的全域核接合排除。

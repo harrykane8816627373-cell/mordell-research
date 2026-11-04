@@ -190,8 +190,8 @@
     },
     {
       "path": "joint-refinement/EDGE_REMAINDERS.md",
-      "bytes": 11206,
-      "sha256": "4bb30a5efac04040a6acf92674cb1038d34f664cb61da98abd5da27be6096254"
+      "bytes": 11289,
+      "sha256": "d29772f20741c30492873993d10ba0d9c90533ad6a4dcac37e7b507e2c1cddf4"
     },
     {
       "path": "joint-refinement/ELLIPSE_SCHUR_RADIUS.md",
@@ -200,13 +200,13 @@
     },
     {
       "path": "joint-refinement/FORCE_CLOSURES.md",
-      "bytes": 10566,
-      "sha256": "0ad016b0626374c898bf7a9e93239321cd633511dcb9bc451b6c03d5a3dd1b1b"
+      "bytes": 10658,
+      "sha256": "49c4a5c7a4990ef6c9c38d82f2bcc62245de74acc9390df4f6d0b349e70b97dd"
     },
     {
       "path": "joint-refinement/FORCE_PROVENANCE.json",
-      "bytes": 2094,
-      "sha256": "244342e04a349ef227d779e5bdd9286ec29e3e00c70ee5999d7310a9806f5c46"
+      "bytes": 2314,
+      "sha256": "fe3d06ff145bafa08326986bd4fce1c6664c3dc3643628fd2fcc0b9af76eee63"
     },
     {
       "path": "joint-refinement/GLOBAL_QUADRATIC.md",
@@ -230,8 +230,8 @@
     },
     {
       "path": "joint-refinement/NOV4_PROGRESS.md",
-      "bytes": 4211,
-      "sha256": "8e873bc71b824c62eabee52983c4549fc16f8d95b4468cd227542ef8abd2c49e"
+      "bytes": 4496,
+      "sha256": "3f0cac7110eddf7af1e85b4eeb42a9407f04283f78a2ec5e660dc1ba17672797"
     },
     {
       "path": "joint-refinement/PROVENANCE.json",
@@ -240,8 +240,8 @@
     },
     {
       "path": "joint-refinement/README.md",
-      "bytes": 11096,
-      "sha256": "82d9e227d102e569f1f6ac16783bd0faac33d54e664cb15efd6b3d3a4fbd44b1"
+      "bytes": 11482,
+      "sha256": "9613a75ca8a721be27cd9bbe7bf95e97a4c532abf59e99ef7c34cc15f7669e49"
     },
     {
       "path": "joint-refinement/SCHWARZ2_RADIUS.md",
@@ -250,8 +250,8 @@
     },
     {
       "path": "joint-refinement/SUBSET_BUDGET.md",
-      "bytes": 6418,
-      "sha256": "33bb64b0fb2c4928f4275e68cd8e9cc1391c7e19d7ab4ec1d3d1455db43ad035"
+      "bytes": 6495,
+      "sha256": "af588e1e29658d456ae6518f8612f208e82001fcc3ca67a383ef5bc70ebdce5d"
     },
     {
       "path": "joint-refinement/TARGET_RADIUS.md",
