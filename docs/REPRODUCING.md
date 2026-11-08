@@ -1,5 +1,16 @@
 # 复现指南
 
+## Jacobian与新的十二点3%全局证书
+
+```bash
+python -B -S -O twelve-point-kernel-refinement/verify_all.py
+python -B -S -O jacobian-assist/verify_all.py
+```
+
+第一个命令实际重放87385节点、全部Gram矩块和可达值比较，约65秒；证明M₁₂<103V₁₂/100。第二个只核对已发生的Jacobian计算记录及独立有理检查，不要求安装或重启Jacobian。两者均接入统一默认入口。原15%全域覆盖仍保存并照常验证。
+
+要重算真实Jacobian后端与stdio调用，在完成[固定版本安装](../jacobian-assist/README.md)后执行统一入口的`--jacobian`选项；非默认解释器可用`--jacobian-python`指定。新核严格接受不依赖Jacobian，Windows配置未启用PPL、Singular、QEPCAD。
+
 更新：2026-11-08。
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。

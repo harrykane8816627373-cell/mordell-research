@@ -1,5 +1,9 @@
 # 研究索引：当前主线、方法依赖与历史版本
 
+## Jacobian辅助与十二点3%全局界
+
+当前更强结论为V₁₂<C₁₂≤M₁₂<103V₁₂/100，真实候选比例>100/103。见[新完整证书](../twelve-point-kernel-refinement/README.md)、[Jacobian配置及真实计算](../jacobian-assist/README.md)、[研究记录](CANDIDATE_KERNEL_RESEARCH.md)。87385节点完整覆盖只需标准库；原15%界作为历史证据保留。
+
 2026-11-08。返回[首页](../README.md) · [当前证明状态](../configuration-bounds/PROOF_STATUS.md)。
 
 首页与证明总表保留当前最强结论；本页集中历次专题入口。各专题中的历史比较、较弱常数和运行计数按原日期理解，不能把多条有共同预算的能量界直接相加。

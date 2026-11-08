@@ -9,7 +9,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 **八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
 
-## 十二点：已证的全局定量范围
+## Jacobian与十二点3%全局包围
+
+[新连续核证书](twelve-point-kernel-refinement/README.md)已将上一轮15%的范围收紧为 **V₁₂<C₁₂≤M₁₂<103V₁₂/100**。因此已认证真实候选与全局最大值之比严格大于 **100/103≈97.0874%**。新核在质量11尺度只需点对补偿1/2500；完整标准库重放87385个节点、未决0，没有假设未知最大点具有D₃对称。
+
+[Jacobian 0.23.0辅助环境](jacobian-assist/README.md)已配置本地MCP，并实际执行新旧核的精确惯性、真实径向Bernstein系数、Arb二阶包围及平方和证书。新核由广域多谷反例反馈与SDP发现，严格上界由独立整数覆盖承担。原15%证书继续保存；候选恰为全局最优仍未证明。
+
+## 十二点上一轮：15%全局包围（历史证据）
 
 [十二点连续核上界](twelve-point-kernel-upper/README.md)给出原质量12尺度的严格结论
 
@@ -53,7 +59,7 @@ V_{12}\le M_{12}<\frac{23}{20}V_{12},
 |n=6、7|M₆=6¹⁵/5¹⁰，M₇=7²¹/6¹⁵；等号为原点加相应正多边形|[主稿与依赖审计](earlier-results/six_seven_coverage_audit.md)；本项目现有全局证明保留 Faugère–Svartz 分类输入|
 |n=8|M₈=8²⁸/7²¹；等号为原点加半径 √(8/7) 的正七边形|[全域证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)；完整重放 386915 个盒，未决 0|
 |n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
-|n=12|V₁₂≤M₁₂<23V₁₂/20；现有真实候选值与M₁₂之比>20/23|[连续核全局上界](twelve-point-kernel-upper/README.md)；V₁₂为旧整数构型可达值，37053节点完整覆盖；非锐界、不分类所有最大构型|
+|n=12|V₁₂<C₁₂≤M₁₂<103V₁₂/100；真实候选比值>100/103|[新连续核上界](twelve-point-kernel-refinement/README.md)；87385节点完整覆盖；非锐界、不分类全部最大点|
 |n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
 |10≤n≤100|旧91项保存下界保留；本轮在其中16项再取得严格改善|[本轮自由构型](finite-search-nov5/README.md) · [旧基线](symmetry-breaking/README.md)；均为可达下界|
 |10、12、19点候选范围|精确D₂/D₃/D₆候选、整局部区域的候选值上界及十点全局必要域|[候选筛选](candidate-global-screen/README.md) · [局部上界](candidate-basin/README.md) · [十点必要域](maximizer-domain/README.md)；补集未覆盖、未证明全局锐值|

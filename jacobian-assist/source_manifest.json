@@ -1,0 +1,29 @@
+{
+  "scope": "optional actual Jacobian calculations, fixed evidence and reproducible discovery source; global proof independent",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "bootstrap.py": "e523fa9569b85f3c949d17c3d7f56778cf0a840a0d1b9635433f10189d08f48e",
+    "bridge.py": "74b027a6d155489b2abc93cbc2db6034c829e83a151c9f5264f2c5f0ca268593",
+    "environment.json": "d65138aafb45a8aa71167809624a6de21bde529e9704df6a4f64ad82f85277a7",
+    "injected_mcp_report.json": "623b626f0f92d48157d1d0fb2f3dd24a0290ba252911dc3da25d5c2364f6792f",
+    "mcp_probe.py": "6f32dfdc51e2d8dda8ea6880abfda2a6b7d597093a4d93a288a765c53d664f6b",
+    "mcp_report.json": "0645067401cd8108e4c225060be86c4cb5815bf932733822f4a0fd4550c12026",
+    "native_report.json": "b4987decac9ca602907db628ae205c2d5ed5b152dc3000b85f191070b5ff51ed",
+    "README.md": "895308d67339c6e2c2651cdaa5483419f18fd05649d0e21103e0955145db9ad9",
+    "refined_native_report.json": "c344b1130b15ef09766ab08830e7b9a8674236937c96cb6576eb9e3b69b5e44f",
+    "requirements-windows.lock": "4cb71e095c066d6b9ffd1477a747af6cbf133022d8d7154773d61b9401a36492",
+    "search/bernstein_discovery.py": "3ce72f9ae8218528028ffe933add1edc69bb6b82273718f23c9b1322f1244b88",
+    "search/cover_candidate.py": "c52d615497fc3c14b07895dbde7771a0aa4795c237d27888effb6ef6334e7389",
+    "search/cut_search.py": "f52fa4022b56f27faa72361cacb5ea60067d4f50ae1d75dd2ca7a6e3e21d7a32",
+    "search/seeds/float-bernstein-c0.00065.json": "bff4b8c885961327d4eaf4415a9dd2e3897d6deecce7193e642dfb9f87a18a6c",
+    "search/seeds/float-bernstein-c0.002.json": "2c852f219b9265366d10792ffd8efd98e3981fa66def885d27a9969114202291",
+    "verify_all.py": "54e71eec7de6528ef4cbd5317e5262636cbf0269575049edd7cc6b1a75baedfa"
+  },
+  "dependencies": {
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "candidate-kernel/data/n12_exact_interpretation.json": "3817ae78b338f3a1d525ab4905eb11d046a336b993a0a09a8e480bd4d9cec947",
+    "twelve-point-kernel-refinement/kernel.json": "a927251f8f4f4bc9abd99870881f2029274bf16a15a3fac840dd97ff1a9e4fce",
+    "candidate-kernel/discover_sdp.py": "7ed13471d1d291583a1ca20ec1e65a8d6a8611407a60c4644826112848d562c7",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d"
+  }
+}

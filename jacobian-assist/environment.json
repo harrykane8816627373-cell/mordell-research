@@ -1,0 +1,28 @@
+{
+  "jacobian_version": "0.23.0",
+  "python_version": "3.12.14",
+  "platform": "Windows x86-64",
+  "official_wheel_sha256": "72fe5a9210db17e18e756a25cb94473b2c188bba591ad8ab8d7dfff9531e05f8",
+  "upstream_source_ref": "f693b76a600f8ee0d95a4e429a53bb576e9aeac1",
+  "available_modules": {
+    "flint": true,
+    "sympy": true,
+    "z3": true,
+    "cypari": true,
+    "ppl": false
+  },
+  "optional_runtime_availability": {
+    "singular": "MISSING",
+    "qepcad": "MISSING"
+  },
+  "installation_scope": "unchanged official wheel, all available native Windows dependencies; missing mandatory pplpy explicitly retained",
+  "expected_pip_check_exception": "jacobian 0.23.0 requires pplpy==0.9.0, unavailable in this native Windows environment",
+  "MCP_registration": {
+    "name": "jacobian",
+    "transport": "stdio",
+    "module": "jacobian.mcp.stdio_cli",
+    "version_pinned": true,
+    "actual_handshake_and_operation_executed": true
+  },
+  "source_ref_scope": "main inspected at installation; official wheel is identified by PyPI version and SHA256, not a claimed source build commit"
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "kernel": "candidate-kernel/data/n12_exact_interpretation.json",
+      "exact_positive_inertia_matrices": 12,
+      "exact_Bernstein_coefficients": 7,
+      "recorded_Arb_log_second_jet": "ENCLOSED"
+    },
+    {
+      "kernel": "twelve-point-kernel-refinement/kernel.json",
+      "exact_positive_inertia_matrices": 12,
+      "exact_Bernstein_coefficients": 7,
+      "recorded_Arb_log_second_jet": "ENCLOSED"
+    }
+  ],
+  "MCP": {
+    "actual_stdio_handshake_record_checked": true,
+    "injected_MCP_inertia_and_radial_SOS_records_checked": true
+  },
+  "Jacobian_executed_now": false,
+  "default_scope": "fixed actual execution evidence plus independent rational checks",
+  "new_global_bound_proved_by_this_script": false
+}

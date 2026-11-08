@@ -26,6 +26,8 @@ def main():
     parser.add_argument('--refinement', action='store_true', help='also replay the current imported/force closure proof chain')
     parser.add_argument('--global-eight', action='store_true', help='fresh full attributed n8 global proof replay; needs the pinned numerical dependencies')
     parser.add_argument('--global-nine', action='store_true', help='fresh full attributed n9 global proof replay; needs the pinned numerical dependencies')
+    parser.add_argument('--jacobian', action='store_true', help='also re-execute the optional pinned native Jacobian and stdio MCP checks')
+    parser.add_argument('--jacobian-python', type=Path, help='optional Jacobian interpreter; implies --jacobian')
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
              *sorted((ROOT/'docs').glob('*.md')), *sorted((ROOT/'eight-point').glob('*.md')),
@@ -46,7 +48,9 @@ def main():
              *sorted((ROOT/'maximizer-domain').glob('*.md')),
              *sorted((ROOT/'candidate-basin').glob('*.md')),
              *sorted((ROOT/'candidate-kernel').glob('*.md')),
-             *sorted((ROOT/'twelve-point-kernel-upper').glob('*.md'))]
+             *sorted((ROOT/'twelve-point-kernel-upper').glob('*.md')),
+             *sorted((ROOT/'twelve-point-kernel-refinement').glob('*.md')),
+             *sorted((ROOT/'jacobian-assist').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -160,6 +164,16 @@ def main():
             'validated-maxima/verify_all.py', 'validated-maxima/dyadic.py',
             'validated-maxima/certificates.json', 'validated-maxima/PROOF.md',
             'symmetry-breaking/integer_witnesses.json', 'finite-n/SUBSET_PROOF.md'),
+        'twelve-point-kernel-refinement': ('twelve-point-kernel-upper/verify_cover.py',
+            'twelve-point-kernel-upper/verify_all.py', 'candidate-kernel/verify_all.py',
+            'candidate-kernel/verify_psd.py', 'validated-maxima/verify_all.py',
+            'validated-maxima/dyadic.py', 'validated-maxima/certificates.json',
+            'validated-maxima/PROOF.md', 'symmetry-breaking/integer_witnesses.json',
+            'finite-n/SUBSET_PROOF.md'),
+        'jacobian-assist': ('candidate-kernel/verify_psd.py',
+            'candidate-kernel/data/n12_exact_interpretation.json',
+            'twelve-point-kernel-refinement/kernel.json',
+            'candidate-kernel/discover_sdp.py', 'validated-maxima/certificates.json'),
     }
     for suite, dependencies in candidate_dependencies.items():
         with tempfile.TemporaryDirectory(prefix='mordell-candidate-') as temp:
@@ -178,8 +192,21 @@ def main():
             require(result['passed'] is True, suite+': acceptance flag')
         if suite == 'twelve-point-kernel-upper':
             print('PASS fresh full n12 continuous kernel cover and global bound V12 < M12 < (23/20)*V12; no sharp value claimed.', flush=True)
+        elif suite == 'twelve-point-kernel-refinement':
+            print('PASS fresh full refined n12 cover: 87385 nodes, no pending boxes, M12 < (103/100)*V12; no sharp value claimed.', flush=True)
+        elif suite == 'jacobian-assist':
+            print('PASS fixed actual Jacobian records and independent rational checks; backend not restarted in this step.', flush=True)
         else:
             print('PASS '+suite+'/verify_all.py (candidate structure, domain, local caps or rejected kernel fits; no global sharp bound).', flush=True)
+    if args.jacobian or args.jacobian_python:
+        interpreter = args.jacobian_python or Path.home()/'.codex/tools/jacobian/0.23.0/venv/Scripts/python.exe'
+        require(interpreter.is_file(), 'Jacobian interpreter missing; see jacobian-assist/README.md or supply --jacobian-python')
+        proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(ROOT/'jacobian-assist/verify_all.py'),
+            '--jacobian-python', str(interpreter)], cwd=ROOT, env=env,
+            capture_output=True, text=True, encoding='utf-8', timeout=240)
+        require(proc.returncode == 0, 'actual Jacobian re-execution: '+proc.stdout[-2000:]+proc.stderr[-3000:])
+        require(json.loads(proc.stdout)['Jacobian_executed_now'] is True, 'actual backend and MCP execution flag')
+        print('PASS fresh optional Jacobian native computations and real stdio MCP operation.', flush=True)
     if args.joint or args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'joint-closure/verify_all.py'), '--skip-prior'],

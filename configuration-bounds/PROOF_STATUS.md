@@ -1,5 +1,11 @@
 # 当前证明状态与统一入口
 
+## 当前更新：Jacobian与十二点3%全局包围
+
+[新十二点核证书](../twelve-point-kernel-refinement/README.md)严格证明V₁₂<C₁₂≤M₁₂<103V₁₂/100，故真实候选比例>100/103≈97.0874%。87385节点完整连续覆盖、未决0；全部12个Gram块、真实候选根与可达值比较均重新精确接受。该结论是非锐全局界，未证明候选等于M₁₂或分类全部最大点。
+
+[Jacobian固定环境](../jacobian-assist/README.md)已配置stdio MCP并实际执行精确惯性、Bernstein、Arb二阶包围与SOS证书；新界的正式接受仍只需独立标准库。原15%界与所有历史证据保留，Windows未启用PPL、Singular、QEPCAD。
+
 研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**；推导与代码包含 OpenAI Codex 协作。更新于2026-11-08。定理的全部假设和证明以所链接正文为准。
 
 **八点当前结果：[全局证书复现](../eight-point-global/README.md) · [与既有严格子集定理的桥接](../eight-point-global/PROOF_BRIDGE.md) · [实际重放记录](../eight-point-global/reports/replay.json)。** Ji、Xu、Yu预印本的固定三变量核证书已完整重放，并与本仓库已有子集界接合，得到 M₈=8²⁸/7²¹及全部等号。质量7下Δ≤7⁷，等号恰为中心加单位正七边形，所以用户的Δ≥7⁷、s₂s₃≠0联合系统为空。这条桥接不需要七点完整驻点分类；旧局部森林及其28个开放盒保留为历史有限搜索记录。
