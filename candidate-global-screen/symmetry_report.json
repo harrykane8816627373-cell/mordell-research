@@ -1,0 +1,933 @@
+{
+  "passed": true,
+  "date": "2026-11-08",
+  "arithmetic": "standard-library integer dyadic intervals and integer isqrt",
+  "prior_root_acceptance_recomputed": true,
+  "pinned_dependency_sha256": {
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d"
+  },
+  "certificate_sha256": "29e329e70d8267885da025ca99283516395d9efe5484845d2f851c5e955e3bf8",
+  "rows": [
+    {
+      "n": 10,
+      "passed": true,
+      "original_root_classification": "strict_local_maximum_mod_rotation",
+      "rotation_order_exact": 2,
+      "reflection_exact": true,
+      "dihedral_group_order_exact": 4,
+      "root_refinement_error_upper": "1/231584178474632390844003419149682475324622074619677294870863990293594242023424",
+      "root_refinement_error_power_upper": "2^-256",
+      "regauged_images": [
+        {
+          "kind": "rotation",
+          "permutation": [
+            4,
+            5,
+            6,
+            7,
+            0,
+            1,
+            2,
+            3,
+            9,
+            8
+          ],
+          "image_distance_from_old_midpoint_upper": "2^-255",
+          "image_in_original_uniqueness_box": true
+        },
+        {
+          "kind": "reflection",
+          "permutation": [
+            3,
+            2,
+            1,
+            0,
+            7,
+            6,
+            5,
+            4,
+            9,
+            8
+          ],
+          "image_distance_from_old_midpoint_upper": "2^-254",
+          "image_in_original_uniqueness_box": true
+        }
+      ],
+      "exact_radial_layer_populations": [
+        2,
+        4,
+        4
+      ],
+      "radial_layers": [
+        {
+          "point_indices": [
+            8,
+            9
+          ],
+          "squared_radius_interval": [
+            "4928265016589493674716115446630373268041499181910982945237607664206153319553393319626580733017185295187973942007663/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+            "2464132508294746837358057723315186634020749590955491472618803832103076659776855675265997935474615736470120201267371/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+          ]
+        },
+        {
+          "point_indices": [
+            1,
+            2,
+            5,
+            6
+          ],
+          "squared_radius_interval": [
+            "45261534939648662465093845059138068382075201221495590192513604667589633637190728694908184794695780941240124198114871/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+            "11315383734912165616273461264784517095518800305373897548128401166897408409297940053387715185835973211407139174032165/9850501549098619803069760025035903451269934817616361666987073351061430442874302652853566563721228910201656997576704"
+          ]
+        },
+        {
+          "point_indices": [
+            0,
+            3,
+            4,
+            7
+          ],
+          "squared_radius_interval": [
+            "50779348043042788728245697467905779496603397363712535004738325010921594131774601972767203148314300170873426067604595/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+            "50779348043042788728245697467905779496603397363712535004738325010921594131775374571218942702206855226121535123762987/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+          ]
+        }
+      ],
+      "exact_origin_point_indices": [],
+      "O2_pair_contact_types_exact": 15,
+      "pair_contact_orbits": [
+        {
+          "representative": [
+            1,
+            0
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            2,
+            0
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            2,
+            1
+          ],
+          "multiplicity": 2
+        },
+        {
+          "representative": [
+            3,
+            0
+          ],
+          "multiplicity": 2
+        },
+        {
+          "representative": [
+            4,
+            0
+          ],
+          "multiplicity": 2
+        },
+        {
+          "representative": [
+            4,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            4,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            4,
+            3
+          ],
+          "multiplicity": 2
+        },
+        {
+          "representative": [
+            5,
+            1
+          ],
+          "multiplicity": 2
+        },
+        {
+          "representative": [
+            5,
+            2
+          ],
+          "multiplicity": 2
+        },
+        {
+          "representative": [
+            8,
+            0
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            8,
+            1
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            8,
+            2
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            8,
+            3
+          ],
+          "multiplicity": 4
+        },
+        {
+          "representative": [
+            9,
+            8
+          ],
+          "multiplicity": 1
+        }
+      ],
+      "vanishing_complex_moment_degrees_1_through_18": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17
+      ],
+      "radially_weighted_nonmultiple_harmonics_vanish_for_every_radial_weight": true,
+      "symmetry_of_all_global_maximizers_claimed": false,
+      "D2_rectangle_nondegeneracy": {
+        "normalization": "sum |z_i|^2=10",
+        "inner_axis_point_index": 8,
+        "inner_axis_squared_modulus_positive": true,
+        "reflection_fixing_inner_axis": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          8,
+          9
+        ],
+        "inner_layer_second_moment_exact": "2*inner_squared_radius",
+        "all_layer_second_moments_real_in_inner_axis_gauge": true,
+        "outer_layers": [
+          {
+            "point_indices": [
+              1,
+              2,
+              5,
+              6
+            ],
+            "real_layer_second_moment_interval": [
+              "-133176194422672839782134970868970216761454947646046764928876796775995391472455408047286287130919369586403899070791193/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+              "-16647024302834104972766871358621277095181868455755845616109599596999423934053678623978802840012152399348988480434659/4925250774549309901534880012517951725634967408808180833493536675530715221437151326426783281860614455100828498788352"
+            ],
+            "nonzero": true,
+            "absolute_value_strictly_less_than_four_squared_radius": true
+          },
+          {
+            "point_indices": [
+              0,
+              3,
+              4,
+              7
+            ],
+            "real_layer_second_moment_interval": [
+              "135283668182768015328947606776084128935835412368484207095120361163217588371987539906496122356493525664082622193096647/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+              "135283668182768015328947606776084128935835412368484207095120361163217588372014760978644827063574542783516447126651047/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+            ],
+            "nonzero": true,
+            "absolute_value_strictly_less_than_four_squared_radius": true
+          }
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "passed": true,
+      "original_root_classification": "strict_local_maximum_mod_rotation",
+      "rotation_order_exact": 3,
+      "reflection_exact": true,
+      "dihedral_group_order_exact": 6,
+      "root_refinement_error_upper": "1/231584178474632390844003419149682475324622074619677294870863990293594242023424",
+      "root_refinement_error_power_upper": "2^-256",
+      "regauged_images": [
+        {
+          "kind": "rotation",
+          "permutation": [
+            2,
+            8,
+            4,
+            10,
+            0,
+            3,
+            9,
+            6,
+            11,
+            7,
+            5,
+            1
+          ],
+          "image_distance_from_old_midpoint_upper": "2^-254",
+          "image_in_original_uniqueness_box": true
+        },
+        {
+          "kind": "reflection",
+          "permutation": [
+            11,
+            4,
+            8,
+            3,
+            1,
+            10,
+            9,
+            7,
+            2,
+            6,
+            5,
+            0
+          ],
+          "image_distance_from_old_midpoint_upper": "2^-254",
+          "image_in_original_uniqueness_box": true
+        }
+      ],
+      "exact_radial_layer_populations": [
+        3,
+        3,
+        6
+      ],
+      "radial_layers": [
+        {
+          "point_indices": [
+            6,
+            7,
+            9
+          ],
+          "squared_radius_interval": [
+            "7495723894614216439841840710851420452942610359151102184106968278424141216947001916132041738479645466625058716117841/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+            "3747861947307108219920920355425710226471305179575551092053484139212070608473670649046031925602026939717796243811995/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+          ]
+        },
+        {
+          "point_indices": [
+            3,
+            5,
+            10
+          ],
+          "squared_radius_interval": [
+            "2895598321806264009608852233370163311526958782196682345597376851814109038270153571009678661659393556986842631898209/2462625387274654950767440006258975862817483704404090416746768337765357610718575663213391640930307227550414249394176",
+            "46329573148900224153741635733922612984431340515146917529558029629025744612323410960904662880143536218569623180187655/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+          ]
+        },
+        {
+          "point_indices": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            11
+          ],
+          "squared_radius_interval": [
+            "25945681935515869063883170988950105445736251551890941739532043927383250314179455638412802233493548842606178217767847/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+            "12972840967757934531941585494475052722868125775945470869766021963691625157089923072255492004116718441777998849662949/9850501549098619803069760025035903451269934817616361666987073351061430442874302652853566563721228910201656997576704"
+          ]
+        }
+      ],
+      "exact_origin_point_indices": [],
+      "O2_pair_contact_types_exact": 14,
+      "pair_contact_orbits": [
+        {
+          "representative": [
+            1,
+            0
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            2,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            2,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            3,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            3,
+            1
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            3,
+            2
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            4,
+            1
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            5,
+            3
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            6,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            6,
+            1
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            6,
+            3
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            6,
+            4
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            7,
+            3
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            7,
+            6
+          ],
+          "multiplicity": 3
+        }
+      ],
+      "vanishing_complex_moment_degrees_1_through_18": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        16,
+        17
+      ],
+      "radially_weighted_nonmultiple_harmonics_vanish_for_every_radial_weight": true,
+      "symmetry_of_all_global_maximizers_claimed": false,
+      "D3_third_moment_nondegeneracy": {
+        "normalization": "sum |z_i|^2=12",
+        "axis_point_index": 6,
+        "axis_squared_modulus_positive": true,
+        "reflection_fixing_axis": [
+          8,
+          2,
+          1,
+          5,
+          11,
+          3,
+          6,
+          9,
+          0,
+          7,
+          10,
+          4
+        ],
+        "moment_definition": "sum_i_in_layer (z_i*conj(w))^3",
+        "all_layer_third_moments_real_in_axis_gauge": true,
+        "layers": [
+          {
+            "point_indices": [
+              6,
+              7,
+              9
+            ],
+            "real_axis_weighted_third_moment_interval": [
+              "203453580013397169154574904370823095522328660767546351282626328275698586005685103918486084793126776994174856362727/9850501549098619803069760025035903451269934817616361666987073351061430442874302652853566563721228910201656997576704",
+              "406907160026794338309149808741646191044657321535092702565252656551397172011456890432661752640469536013401323145253/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+            ],
+            "nonzero": true,
+            "regular_triangle_by_certified_rotation": true,
+            "regular_triangle_moment_modulus_squared_exact": "9*(layer_squared_radius*axis_squared_radius)^3"
+          },
+          {
+            "point_indices": [
+              3,
+              5,
+              10
+            ],
+            "real_axis_weighted_third_moment_interval": [
+              "-6252625376073667624343930999473736832425285692014920116458633917737307848131443817215382937789226553482120895657321/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+              "-781578172009208453042991374934217104053160711501865014557329239717163481016310503010331706381359332416969781042801/2462625387274654950767440006258975862817483704404090416746768337765357610718575663213391640930307227550414249394176"
+            ],
+            "nonzero": true,
+            "regular_triangle_by_certified_rotation": true,
+            "regular_triangle_moment_modulus_squared_exact": "9*(layer_squared_radius*axis_squared_radius)^3"
+          },
+          {
+            "point_indices": [
+              0,
+              1,
+              2,
+              4,
+              8,
+              11
+            ],
+            "real_axis_weighted_third_moment_interval": [
+              "13383794363335854270701524318548595705503628692516727547446546217304078887431884891251632723805492586666707563526953/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+              "13383794363335854270701524318548595705503628692516727547446546217304078887436383541820656241868105750687972205150389/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+            ],
+            "nonzero": true,
+            "regular_triangle_by_certified_rotation": false,
+            "square_strictly_below_36_times_radius_product_cubed": true
+          }
+        ]
+      }
+    },
+    {
+      "n": 19,
+      "passed": true,
+      "original_root_classification": "strict_local_maximum_mod_rotation",
+      "rotation_order_exact": 6,
+      "reflection_exact": true,
+      "dihedral_group_order_exact": 12,
+      "root_refinement_error_upper": "1/231584178474632390834587766546602454178868390484865795246710457126898190254080",
+      "root_refinement_error_power_upper": "2^-256",
+      "regauged_images": [
+        {
+          "kind": "rotation",
+          "permutation": [
+            2,
+            10,
+            11,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            4,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            0,
+            1
+          ],
+          "image_distance_from_old_midpoint_upper": "2^-254",
+          "image_in_original_uniqueness_box": true
+        },
+        {
+          "kind": "reflection",
+          "permutation": [
+            0,
+            18,
+            17,
+            3,
+            8,
+            7,
+            6,
+            5,
+            4,
+            9,
+            16,
+            15,
+            14,
+            13,
+            12,
+            11,
+            10,
+            2,
+            1
+          ],
+          "image_distance_from_old_midpoint_upper": "2^-255",
+          "image_in_original_uniqueness_box": true
+        }
+      ],
+      "exact_radial_layer_populations": [
+        1,
+        6,
+        6,
+        6
+      ],
+      "radial_layers": [
+        {
+          "point_indices": [
+            3
+          ],
+          "squared_radius_interval": [
+            "0",
+            "1/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+          ]
+        },
+        {
+          "point_indices": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "squared_radius_interval": [
+            "15432862485674740171409623516968078507282558969817236824569027462380045978967541720374163123488018944301426733306269/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+            "964553905354671260713101469810504906705159935613577301535564216398752873685507721578695499153762942650497480572597/2462625387274654950767440006258975862817483704404090416746768337765357610718575663213391640930307227550414249394176"
+          ]
+        },
+        {
+          "point_indices": [
+            1,
+            10,
+            12,
+            14,
+            16,
+            18
+          ],
+          "squared_radius_interval": [
+            "13141679032643864581280511896836255287212093277980872789770843903280992984803294983004869602358810650372620763560689/9850501549098619803069760025035903451269934817616361666987073351061430442874302652853566563721228910201656997576704",
+            "26283358065287729162561023793672510574424186555961745579541687806561985969607126867336383156935211649017404036302097/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+          ]
+        },
+        {
+          "point_indices": [
+            0,
+            2,
+            11,
+            13,
+            15,
+            17
+          ],
+          "squared_radius_interval": [
+            "28386720502832826171175977939737505363310787804033259899091929685637050512446452902168457664880244281021056879698579/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+            "56773441005665652342351955879475010726621575608066519798183859371274101024893722730644356229741988693999768382298457/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+          ]
+        }
+      ],
+      "exact_origin_point_indices": [
+        3
+      ],
+      "O2_pair_contact_types_exact": 22,
+      "pair_contact_orbits": [
+        {
+          "representative": [
+            1,
+            0
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            2,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            3,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            3,
+            1
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            4,
+            0
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            4,
+            1
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            4,
+            2
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            4,
+            3
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            5,
+            0
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            5,
+            1
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            5,
+            4
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            6,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            6,
+            1
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            6,
+            4
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            7,
+            4
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            10,
+            0
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            10,
+            1
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            11,
+            0
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            12,
+            0
+          ],
+          "multiplicity": 12
+        },
+        {
+          "representative": [
+            12,
+            1
+          ],
+          "multiplicity": 6
+        },
+        {
+          "representative": [
+            13,
+            0
+          ],
+          "multiplicity": 3
+        },
+        {
+          "representative": [
+            14,
+            1
+          ],
+          "multiplicity": 3
+        }
+      ],
+      "vanishing_complex_moment_degrees_1_through_18": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "radially_weighted_nonmultiple_harmonics_vanish_for_every_radial_weight": true,
+      "symmetry_of_all_global_maximizers_claimed": false,
+      "D6_sixth_moment_structure": {
+        "normalization": "sum |z_i|^2=19",
+        "axis_point_index": 4,
+        "axis_squared_modulus_positive": true,
+        "reflection_fixing_axis": [
+          11,
+          10,
+          2,
+          3,
+          4,
+          9,
+          8,
+          7,
+          6,
+          5,
+          1,
+          0,
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
+        "moment_definition": "sum_i_in_layer (z_i*conj(w))^6",
+        "all_positive_layer_sixth_moments_real_in_axis_gauge": true,
+        "regular_hexagon_layer_sixth_moment_modulus_squared_exact": "36*(layer_squared_radius*axis_squared_radius)^6",
+        "positive_layers": [
+          {
+            "point_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "real_axis_weighted_sixth_moment_interval": [
+              "426784362573576588091766715516534432972349077344252565775118591088136583079451288907268527099712584930091989638507/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408",
+              "426784362573576588091766715516534432972349077344252565775118591088136583079664547569817365369750104403041261735547/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+            ],
+            "nonzero": true,
+            "regular_hexagon_by_certified_rotation": true
+          },
+          {
+            "point_indices": [
+              1,
+              10,
+              12,
+              14,
+              16,
+              18
+            ],
+            "real_axis_weighted_sixth_moment_interval": [
+              "-4216397912458174312121149019550809311052835678747276739996938501951916521520601081321716474358525092996808074453301/4925250774549309901534880012517951725634967408808180833493536675530715221437151326426783281860614455100828498788352",
+              "-16865591649832697248484596078203237244211342714989106959987754007807666086076025093651255896786395578728743312640313/19701003098197239606139520050071806902539869635232723333974146702122860885748605305707133127442457820403313995153408"
+            ],
+            "nonzero": true,
+            "regular_hexagon_by_certified_rotation": true
+          },
+          {
+            "point_indices": [
+              0,
+              2,
+              11,
+              13,
+              15,
+              17
+            ],
+            "real_axis_weighted_sixth_moment_interval": [
+              "42494692105201404111048860696259193950582019944415661658762559912881607081920560266614779897477373189624009243485125/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816",
+              "42494692105201404111048860696259193950582019944415661658762559912881607081935774127653410007527486444418738749424357/39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816"
+            ],
+            "nonzero": true,
+            "regular_hexagon_by_certified_rotation": true
+          }
+        ]
+      }
+    }
+  ],
+  "global_optimality_claimed": false
+}

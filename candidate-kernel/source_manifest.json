@@ -1,0 +1,16 @@
+{
+  "files": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "data/n10_discovery.json": "569aad2e989cd22646716785ead611a4d9204bd61e7bfb540fd63c8b61cba9f8",
+    "data/n10_exact_interpretation.json": "7d8603a1b55c4a31c493bce69685ed831e1f5b7a0f542f78d7e4b37dba1b3ffe",
+    "data/n12_discovery.json": "a58b50c2143799aaa060b731eeae0dafc8f37d35e9a4835e9f28d9d45d5973e9",
+    "data/n12_exact_interpretation.json": "3817ae78b338f3a1d525ab4905eb11d046a336b993a0a09a8e480bd4d9cec947",
+    "discover_sdp.py": "7ed13471d1d291583a1ca20ec1e65a8d6a8611407a60c4644826112848d562c7",
+    "discovery_environment.json": "1aeeec8ca8edcca2043758d00493016be9c546733c13f8540b74899e49033a00",
+    "README.md": "afc04da91f6115d8613010da3fbc73e0f824b70fb8cce6615fc9c63914508dff",
+    "RIGIDITY.md": "6aa1b0b446f28f6540fc375fff435501f2a9717af2ba341b084cb015dd91ffb2",
+    "verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9"
+  },
+  "scope": "fixed rational kernel identities, exact Gram blocks and rejected unshifted fits; no sharp global bound"
+}

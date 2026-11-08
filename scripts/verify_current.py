@@ -41,7 +41,12 @@ def main():
              *sorted((ROOT/'four-ring-rigidity').glob('*.md')),
              *sorted((ROOT/'phase-deficit-sharp').glob('*.md')),
              *sorted((ROOT/'family-exclusion-nov8').glob('*.md')),
-             *sorted((ROOT/'validated-maxima-nov8').glob('*.md'))]
+             *sorted((ROOT/'validated-maxima-nov8').glob('*.md')),
+             *sorted((ROOT/'candidate-global-screen').glob('*.md')),
+             *sorted((ROOT/'maximizer-domain').glob('*.md')),
+             *sorted((ROOT/'candidate-basin').glob('*.md')),
+             *sorted((ROOT/'candidate-kernel').glob('*.md')),
+             *sorted((ROOT/'twelve-point-kernel-upper').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -140,6 +145,41 @@ def main():
             result, _ = json.JSONDecoder().raw_decode(proc.stdout.lstrip())
             require(result['passed'] is True, suite+': exact acceptance flag')
         print('PASS '+suite+'/verify_all.py (fixed dependencies and exact Nov8 acceptance).', flush=True)
+    candidate_dependencies = {
+        'candidate-global-screen': ('validated-maxima/verify_all.py', 'validated-maxima/dyadic.py',
+            'validated-maxima/certificates.json', 'validated-maxima/PROOF.md', 'symmetry-breaking/explore.py',
+            'symmetry-breaking/integer_witnesses.json', 'finite-search-nov5/integer_witnesses.json',
+            'radial-angular/population_search_verification.json'),
+        'candidate-basin': ('validated-maxima/verify_all.py', 'validated-maxima/dyadic.py',
+            'validated-maxima/certificates.json', 'validated-maxima/PROOF.md'),
+        'maximizer-domain': ('eight-point-global', 'nine-point-global', 'finite-n/SUBSET_PROOF.md',
+            'symmetry-breaking/integer_witnesses.json'),
+        'candidate-kernel': (),
+        'twelve-point-kernel-upper': ('candidate-kernel/data/n12_exact_interpretation.json',
+            'candidate-kernel/verify_psd.py', 'candidate-kernel/verify_all.py',
+            'validated-maxima/verify_all.py', 'validated-maxima/dyadic.py',
+            'validated-maxima/certificates.json', 'validated-maxima/PROOF.md',
+            'symmetry-breaking/integer_witnesses.json', 'finite-n/SUBSET_PROOF.md'),
+    }
+    for suite, dependencies in candidate_dependencies.items():
+        with tempfile.TemporaryDirectory(prefix='mordell-candidate-') as temp:
+            stage = Path(temp)
+            for name in (suite, *dependencies):
+                source, dest = ROOT/name, stage/name
+                if source.is_dir():
+                    shutil.copytree(source, dest, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+                else:
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(source, dest)
+            proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/suite/'verify_all.py')],
+                cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=240)
+            require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
+            result, _ = json.JSONDecoder().raw_decode(proc.stdout.lstrip())
+            require(result['passed'] is True, suite+': acceptance flag')
+        if suite == 'twelve-point-kernel-upper':
+            print('PASS fresh full n12 continuous kernel cover and global bound V12 < M12 < (23/20)*V12; no sharp value claimed.', flush=True)
+        else:
+            print('PASS '+suite+'/verify_all.py (candidate structure, domain, local caps or rejected kernel fits; no global sharp bound).', flush=True)
     if args.joint or args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'joint-closure/verify_all.py'), '--skip-prior'],

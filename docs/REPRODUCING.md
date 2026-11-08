@@ -4,6 +4,24 @@
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
 
+## 候选、必要域与正定核
+
+以下五组正式接受均只需Python标准库，关键判断在`-O`下保留：
+
+```bash
+python -B -S -O candidate-global-screen/verify_all.py
+python -B -S -O maximizer-domain/verify_all.py
+python -B -S -O candidate-basin/verify_all.py
+python -B -S -O candidate-kernel/verify_all.py
+python -B -S -O twelve-point-kernel-upper/verify_all.py
+```
+
+[候选专题](../candidate-global-screen/README.md)核对1000次已保存数值记录的来源与汇总，并重放真实根、精确对称与点对类型证书；它不重新运行搜索，也不把频率变成全局证明。[必要域](../maximizer-domain/README.md)核对已验收的八九点证据绑定，精确重算十点整数下界、Schwarz端点及非线性排除；完整八九点覆盖仍由下述独立重放命令执行。[局部上界](../candidate-basin/README.md)重放真实根与整个扩大盒的Hessian负性，而非只检查候选点处特征值。
+
+[正定核专题](../candidate-kernel/README.md)核验精确矩恒等式及原始数值核的有理失败见证；无余量majorant仍不成立。[十二点全局上界](../twelve-point-kernel-upper/README.md)另行精确接受增加21/10000余量后的连续majorant，重算整数可达值与比值比较、真实候选值下端，以及37053节点的完整树。该入口约30秒，纯标准库；统一默认入口也实际重放完整覆盖，不用已有零未决报告跳过计算。它证明M₁₂<23V₁₂/20，不证明候选锐界或最大构型分类。
+
+数值搜索另外需要NumPy；SDP发现需要NumPy、SciPy、CVXPY及相应求解器。发现依赖不参与正式接受，复现浮点搜索或求解器不能替代连续域证明。各次发现记录及具体运行参数随专题保存。
+
 ## 11月8日四环、非线性相位与高点数认证
 
 以下正式接受只需要Python标准库：

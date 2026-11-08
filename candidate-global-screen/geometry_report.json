@@ -1,0 +1,1754 @@
+{
+  "date": "2026-11-08",
+  "numpy_version": "2.3.4",
+  "rows": [
+    {
+      "n": 10,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 0.12507649970981577,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.1487114314445837,
+          "population": 4
+        },
+        {
+          "squared_radius": 1.2887503187005085,
+          "population": 4
+        }
+      ],
+      "radial_shell_count": 3,
+      "pair_count": 45,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 15,
+      "distance_squared_types_at_tolerance_1e_8": 15,
+      "rotation_matches": [
+        {
+          "order": 2,
+          "max_matching_distance": 1.734723475976807e-16,
+          "permutation": [
+            4,
+            5,
+            6,
+            7,
+            0,
+            1,
+            2,
+            3,
+            9,
+            8
+          ]
+        }
+      ],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 5.551115123125783e-18,
+          "radial_weight1_abs": 4.163336342344338e-18,
+          "radial_weight2_abs": 4.163336342344338e-18
+        },
+        {
+          "k": 2,
+          "normalized_abs": 0.02356076683602343,
+          "radial_weight1_abs": 0.04450367069026653,
+          "radial_weight2_abs": 0.09671793888497052
+        },
+        {
+          "k": 3,
+          "normalized_abs": 9.71445146547012e-18,
+          "radial_weight1_abs": 1.1102230246251566e-17,
+          "radial_weight2_abs": 1.1102230246251566e-17
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.017111782079576483,
+          "radial_weight1_abs": 0.027902848206070315,
+          "radial_weight2_abs": 0.040435818570924695
+        },
+        {
+          "k": 5,
+          "normalized_abs": 1.665334536937735e-17,
+          "radial_weight1_abs": 1.942890293094024e-17,
+          "radial_weight2_abs": 2.2204460492503132e-17
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.1522172694157678,
+          "radial_weight1_abs": 0.22076531517327733,
+          "radial_weight2_abs": 0.31254644282032673
+        },
+        {
+          "k": 7,
+          "normalized_abs": 2.237726045655905e-17,
+          "radial_weight1_abs": 2.4825341532472732e-17,
+          "radial_weight2_abs": 3.554447978966673e-17
+        },
+        {
+          "k": 8,
+          "normalized_abs": 0.6388746196252121,
+          "radial_weight1_abs": 0.7884910885422627,
+          "radial_weight2_abs": 0.9761043247553218
+        },
+        {
+          "k": 9,
+          "normalized_abs": 2.2204460492503132e-17,
+          "radial_weight1_abs": 2.7755575615628914e-17,
+          "radial_weight2_abs": 2.7755575615628914e-17
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.004477131420099899,
+          "radial_weight1_abs": 0.032138614103326586,
+          "radial_weight2_abs": 0.07170663591496136
+        },
+        {
+          "k": 11,
+          "normalized_abs": 2.830524433501838e-17,
+          "radial_weight1_abs": 2.7755575615628914e-17,
+          "radial_weight2_abs": 4.041272810440266e-17
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.0840361057209328,
+          "radial_weight1_abs": 0.11516552038719652,
+          "radial_weight2_abs": 0.15630451221611147
+        },
+        {
+          "k": 13,
+          "normalized_abs": 2.989366980140909e-17,
+          "radial_weight1_abs": 3.510833468576702e-17,
+          "radial_weight2_abs": 4.041272810440266e-17
+        },
+        {
+          "k": 14,
+          "normalized_abs": 0.28468495234196073,
+          "radial_weight1_abs": 0.3788345666083954,
+          "radial_weight2_abs": 0.5019465486561102
+        },
+        {
+          "k": 15,
+          "normalized_abs": 2.7755575615628914e-17,
+          "radial_weight1_abs": 2.7755575615628914e-17,
+          "radial_weight2_abs": 3.554447978966673e-17
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.5106206871303764,
+          "radial_weight1_abs": 0.6369430618793553,
+          "radial_weight2_abs": 0.7966003517004089
+        },
+        {
+          "k": 17,
+          "normalized_abs": 2.355138688025663e-17,
+          "radial_weight1_abs": 2.7755575615628914e-17,
+          "radial_weight2_abs": 3.140184917367551e-17
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.020688508814306953,
+          "radial_weight1_abs": 0.008459329483429921,
+          "radial_weight2_abs": 0.010008022581155584
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        0.0778732506592329,
+        0.666758133405992,
+        0.8933379807052707,
+        2.0300564627868964,
+        2.080920924787107,
+        3.2805361570669396,
+        3.330519359213291,
+        4.365097850787815,
+        4.499999999999999,
+        4.500000000000002,
+        4.6349021492121825,
+        5.66948064078671,
+        5.719463842933064,
+        6.919079075212894,
+        6.969943537213104,
+        8.10666201929473,
+        8.333241866594001,
+        8.922126749340757
+      ],
+      "sphere_tangent_min_curvature": 0.0778732506592329,
+      "sphere_tangent_max_curvature": 8.922126749340757,
+      "sphere_tangent_condition_number": 114.5724195896646,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 11,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 0.20462298391194403,
+          "population": 1
+        },
+        {
+          "squared_radius": 0.2123861414783319,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.1966567770828018,
+          "population": 1
+        },
+        {
+          "squared_radius": 1.2320366676899848,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3022911133403965,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3605069987914589,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.38427839640491,
+          "population": 1
+        }
+      ],
+      "radial_shell_count": 7,
+      "pair_count": 55,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 31,
+      "distance_squared_types_at_tolerance_1e_8": 31,
+      "rotation_matches": [],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 1.198536219765794e-17,
+          "radial_weight1_abs": 3.7446869039089326e-17,
+          "radial_weight2_abs": 0.000529376084704752
+        },
+        {
+          "k": 2,
+          "normalized_abs": 0.001796209109338703,
+          "radial_weight1_abs": 0.003412797307743576,
+          "radial_weight2_abs": 0.006262623241446623
+        },
+        {
+          "k": 3,
+          "normalized_abs": 0.024577580740615154,
+          "radial_weight1_abs": 0.044239645333107334,
+          "radial_weight2_abs": 0.09237240821365095
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.00038272643578353036,
+          "radial_weight1_abs": 0.0006541839447128686,
+          "radial_weight2_abs": 0.0011918027832133623
+        },
+        {
+          "k": 5,
+          "normalized_abs": 0.09556154871214217,
+          "radial_weight1_abs": 0.15299560018313346,
+          "radial_weight2_abs": 0.23617334867761453
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.013584522784867648,
+          "radial_weight1_abs": 0.019710808549971145,
+          "radial_weight2_abs": 0.025934041727495503
+        },
+        {
+          "k": 7,
+          "normalized_abs": 0.005259621190826193,
+          "radial_weight1_abs": 0.007761790698344454,
+          "radial_weight2_abs": 0.011431913639274592
+        },
+        {
+          "k": 8,
+          "normalized_abs": 0.5608939577697486,
+          "radial_weight1_abs": 0.7342757025064673,
+          "radial_weight2_abs": 0.963510154632312
+        },
+        {
+          "k": 9,
+          "normalized_abs": 0.0010712197896418842,
+          "radial_weight1_abs": 0.0019187412168708336,
+          "radial_weight2_abs": 0.003186026946268022
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.03143561922184555,
+          "radial_weight1_abs": 0.04711380707411117,
+          "radial_weight2_abs": 0.07056669950659605
+        },
+        {
+          "k": 11,
+          "normalized_abs": 0.018294465532471473,
+          "radial_weight1_abs": 0.045766629723370436,
+          "radial_weight2_abs": 0.08822481659732832
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.0031690156391753666,
+          "radial_weight1_abs": 0.004699438843169903,
+          "radial_weight2_abs": 0.006932737218604384
+        },
+        {
+          "k": 13,
+          "normalized_abs": 0.19214008669408597,
+          "radial_weight1_abs": 0.2732457869440873,
+          "radial_weight2_abs": 0.3862995971036104
+        },
+        {
+          "k": 14,
+          "normalized_abs": 0.025990797624897817,
+          "radial_weight1_abs": 0.03412299978358994,
+          "radial_weight2_abs": 0.04392617738571331
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.016578768415954927,
+          "radial_weight1_abs": 0.024024380150923397,
+          "radial_weight2_abs": 0.03482272985782358
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.43771755762130227,
+          "radial_weight1_abs": 0.5781043858549515,
+          "radial_weight2_abs": 0.765135486783494
+        },
+        {
+          "k": 17,
+          "normalized_abs": 0.0014015721200058386,
+          "radial_weight1_abs": 0.00257728459168694,
+          "radial_weight2_abs": 0.004341793451455795
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.07188463010248135,
+          "radial_weight1_abs": 0.10347303947538632,
+          "radial_weight2_abs": 0.14862183542013363
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        0.0009483219060865464,
+        0.387237422727071,
+        0.7076956276421565,
+        1.8113377530780526,
+        1.9949915947956198,
+        3.6290883294786536,
+        3.6772838622132324,
+        4.179523976863729,
+        4.797494946285961,
+        4.999999999999998,
+        5.0,
+        5.20250505371404,
+        5.820476023136274,
+        6.3227161377867676,
+        6.370911670521352,
+        8.005008405204382,
+        8.188662246921943,
+        9.292304372357844,
+        9.612762577272932,
+        9.999051678093911
+      ],
+      "sphere_tangent_min_curvature": 0.0009483219060865464,
+      "sphere_tangent_max_curvature": 9.999051678093911,
+      "sphere_tangent_condition_number": 10543.94253039787,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 12,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 0.19023711273108018,
+          "population": 3
+        },
+        {
+          "squared_radius": 1.175817619995696,
+          "population": 3
+        },
+        {
+          "squared_radius": 1.3169726336366119,
+          "population": 6
+        }
+      ],
+      "radial_shell_count": 3,
+      "pair_count": 66,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 14,
+      "distance_squared_types_at_tolerance_1e_8": 14,
+      "rotation_matches": [
+        {
+          "order": 3,
+          "max_matching_distance": 3.554447978966673e-16,
+          "permutation": [
+            2,
+            8,
+            4,
+            10,
+            0,
+            3,
+            9,
+            6,
+            11,
+            7,
+            5,
+            1
+          ]
+        }
+      ],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 9.25185853854297e-18,
+          "radial_weight1_abs": 4.625929269271485e-17,
+          "radial_weight2_abs": 1.3877787807814457e-16
+        },
+        {
+          "k": 2,
+          "normalized_abs": 5.551115123125783e-17,
+          "radial_weight1_abs": 1.3343220141622404e-16,
+          "radial_weight2_abs": 1.2952601953960158e-16
+        },
+        {
+          "k": 3,
+          "normalized_abs": 0.02854201600585742,
+          "radial_weight1_abs": 0.051894574556104425,
+          "radial_weight2_abs": 0.10040606270945247
+        },
+        {
+          "k": 4,
+          "normalized_abs": 7.473417450352271e-17,
+          "radial_weight1_abs": 1.216891998090932e-16,
+          "radial_weight2_abs": 2.3129646346357425e-16
+        },
+        {
+          "k": 5,
+          "normalized_abs": 1.8064831288047365e-16,
+          "radial_weight1_abs": 2.6894119993512124e-16,
+          "radial_weight2_abs": 4.163336342344337e-16
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.1175248690991207,
+          "radial_weight1_abs": 0.18074063768662801,
+          "radial_weight2_abs": 0.2677221568053163
+        },
+        {
+          "k": 7,
+          "normalized_abs": 5.233641528945917e-17,
+          "radial_weight1_abs": 8.275113844157577e-17,
+          "radial_weight2_abs": 1.8503717077085943e-16
+        },
+        {
+          "k": 8,
+          "normalized_abs": 2.3231193875057564e-16,
+          "radial_weight1_abs": 3.6188843062238402e-16,
+          "radial_weight2_abs": 5.278629220826411e-16
+        },
+        {
+          "k": 9,
+          "normalized_abs": 0.6432117476146542,
+          "radial_weight1_abs": 0.8259518170257345,
+          "radial_weight2_abs": 1.0628526839019807
+        },
+        {
+          "k": 10,
+          "normalized_abs": 9.435081445006126e-17,
+          "radial_weight1_abs": 1.5809582800891824e-16,
+          "radial_weight2_abs": 2.2850404966761176e-16
+        },
+        {
+          "k": 11,
+          "normalized_abs": 3.2592289892512643e-16,
+          "radial_weight1_abs": 4.502148676309506e-16,
+          "radial_weight2_abs": 6.753223014464259e-16
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.02243409599876673,
+          "radial_weight1_abs": 0.04742139614536364,
+          "radial_weight2_abs": 0.08346943402531647
+        },
+        {
+          "k": 13,
+          "normalized_abs": 1.7675650919352822e-16,
+          "radial_weight1_abs": 2.5905203907920316e-16,
+          "radial_weight2_abs": 3.719201103062486e-16
+        },
+        {
+          "k": 14,
+          "normalized_abs": 3.6509690682502504e-16,
+          "radial_weight1_abs": 5.218286068382518e-16,
+          "radial_weight2_abs": 7.364967543892252e-16
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.25174756435773604,
+          "radial_weight1_abs": 0.3466230914187648,
+          "radial_weight2_abs": 0.4742227578093837
+        },
+        {
+          "k": 16,
+          "normalized_abs": 1.375387650744455e-16,
+          "radial_weight1_abs": 1.9669721060701173e-16,
+          "radial_weight2_abs": 3.535130183870564e-16
+        },
+        {
+          "k": 17,
+          "normalized_abs": 5.4468230035687e-16,
+          "radial_weight1_abs": 7.303842792487116e-16,
+          "radial_weight2_abs": 1.009470620076132e-15
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.5629259347203911,
+          "radial_weight1_abs": 0.7286375121638762,
+          "radial_weight2_abs": 0.9446386375090766
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        0.16688915946082308,
+        0.7649269001248533,
+        0.7649269001248546,
+        2.181866657107351,
+        2.181866657107361,
+        2.952317261223419,
+        3.0544480306288246,
+        3.0544480306288295,
+        4.88011493638436,
+        5.499999999999998,
+        5.5,
+        5.500000000000002,
+        5.5000000000000036,
+        6.119885063615642,
+        7.945551969371177,
+        7.945551969371177,
+        8.047682738776585,
+        8.818133342892642,
+        8.818133342892642,
+        10.235073099875144,
+        10.235073099875148,
+        10.833110840539177
+      ],
+      "sphere_tangent_min_curvature": 0.16688915946082308,
+      "sphere_tangent_max_curvature": 10.833110840539177,
+      "sphere_tangent_condition_number": 64.91201031593805,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 13,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 0.24916816777625392,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.25966093887257746,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.2603915398607404,
+          "population": 1
+        },
+        {
+          "squared_radius": 1.2828916655467755,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3266338785985547,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3642454004622153,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.387204178813253,
+          "population": 2
+        }
+      ],
+      "radial_shell_count": 7,
+      "pair_count": 78,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 42,
+      "distance_squared_types_at_tolerance_1e_8": 42,
+      "rotation_matches": [],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 1.708035422500241e-17,
+          "radial_weight1_abs": 3.079204648066709e-17,
+          "radial_weight2_abs": 0.0004199259343684304
+        },
+        {
+          "k": 2,
+          "normalized_abs": 8.921426550683761e-06,
+          "radial_weight1_abs": 1.7099400888824727e-05,
+          "radial_weight2_abs": 6.187920859896191e-05
+        },
+        {
+          "k": 3,
+          "normalized_abs": 0.0003192360137220089,
+          "radial_weight1_abs": 0.0005852660251570132,
+          "radial_weight2_abs": 0.0010532328788518837
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.020273026769620995,
+          "radial_weight1_abs": 0.03547779676061227,
+          "radial_weight2_abs": 0.07048122676243306
+        },
+        {
+          "k": 5,
+          "normalized_abs": 0.060808306094030484,
+          "radial_weight1_abs": 0.10134718299413883,
+          "radial_weight2_abs": 0.16176392696423733
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.003024216851304333,
+          "radial_weight1_abs": 0.004788624816321814,
+          "radial_weight2_abs": 0.007359743743094829
+        },
+        {
+          "k": 7,
+          "normalized_abs": 0.0001205491058196789,
+          "radial_weight1_abs": 0.00019367065612986776,
+          "radial_weight2_abs": 0.00031908463375872846
+        },
+        {
+          "k": 8,
+          "normalized_abs": 0.023078286607645895,
+          "radial_weight1_abs": 0.03220699279992449,
+          "radial_weight2_abs": 0.043893331754958374
+        },
+        {
+          "k": 9,
+          "normalized_abs": 0.5768542376928462,
+          "radial_weight1_abs": 0.7718120759423956,
+          "radial_weight2_abs": 1.0337512257278927
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.025515903570072617,
+          "radial_weight1_abs": 0.03603297597783047,
+          "radial_weight2_abs": 0.05134118725773832
+        },
+        {
+          "k": 11,
+          "normalized_abs": 0.0011767499038982342,
+          "radial_weight1_abs": 0.0017931375698366338,
+          "radial_weight2_abs": 0.002730658307644801
+        },
+        {
+          "k": 12,
+          "normalized_abs": 3.5707221094264625e-06,
+          "radial_weight1_abs": 0.0006053643026486501,
+          "radial_weight2_abs": 0.0016736197478868448
+        },
+        {
+          "k": 13,
+          "normalized_abs": 0.02078178039509629,
+          "radial_weight1_abs": 0.043097861087726064,
+          "radial_weight2_abs": 0.07800476180813413
+        },
+        {
+          "k": 14,
+          "normalized_abs": 0.14305657223818963,
+          "radial_weight1_abs": 0.20810686594828018,
+          "radial_weight2_abs": 0.300782429425531
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.01162312873534914,
+          "radial_weight1_abs": 0.016885630498216484,
+          "radial_weight2_abs": 0.02443944179446717
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.0007106494718820914,
+          "radial_weight1_abs": 0.0009501821037429774,
+          "radial_weight2_abs": 0.0012475644156361326
+        },
+        {
+          "k": 17,
+          "normalized_abs": 0.04091747759724432,
+          "radial_weight1_abs": 0.05511174831041242,
+          "radial_weight2_abs": 0.07381258380037951
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.4841919133245918,
+          "radial_weight1_abs": 0.6506904469308298,
+          "radial_weight2_abs": 0.8753168560417345
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        1.1484187895691714e-05,
+        0.5721229912364498,
+        0.5898940529382211,
+        0.8926336183691701,
+        2.4943196769252425,
+        3.325043687300257,
+        3.380166839222342,
+        4.204968124454352,
+        4.732914048198002,
+        5.4686506993193,
+        5.621518922909938,
+        5.999999999999997,
+        6.000000000000002,
+        6.3784810770900595,
+        6.531349300680701,
+        7.267085951801996,
+        7.79503187554565,
+        8.619833160777661,
+        8.674956312699743,
+        9.50568032307476,
+        11.10736638163083,
+        11.410105947061771,
+        11.42787700876355,
+        11.999988515812108
+      ],
+      "sphere_tangent_min_curvature": 1.1484187895691714e-05,
+      "sphere_tangent_max_curvature": 11.999988515812108,
+      "sphere_tangent_condition_number": 1044913.9830178062,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 14,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 0.23150887278610613,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.23735028140238124,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.2501276737921054,
+          "population": 4
+        },
+        {
+          "squared_radius": 1.3305256529141885,
+          "population": 4
+        },
+        {
+          "squared_radius": 1.3698341923989221,
+          "population": 2
+        }
+      ],
+      "radial_shell_count": 5,
+      "pair_count": 91,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 29,
+      "distance_squared_types_at_tolerance_1e_8": 29,
+      "rotation_matches": [
+        {
+          "order": 2,
+          "max_matching_distance": 1.5700924586837752e-16,
+          "permutation": [
+            1,
+            0,
+            5,
+            10,
+            6,
+            2,
+            4,
+            11,
+            12,
+            13,
+            3,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 1.586032892321652e-17,
+          "radial_weight1_abs": 1.773238680890909e-17,
+          "radial_weight2_abs": 7.93016446160826e-18
+        },
+        {
+          "k": 2,
+          "normalized_abs": 0.0002529036982417687,
+          "radial_weight1_abs": 0.0004863532658495119,
+          "radial_weight2_abs": 0.0005388621421873066
+        },
+        {
+          "k": 3,
+          "normalized_abs": 2.3790493384824782e-17,
+          "radial_weight1_abs": 1.586032892321652e-17,
+          "radial_weight2_abs": 7.93016446160826e-18
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.027647305633114783,
+          "radial_weight1_abs": 0.048914532692735976,
+          "radial_weight2_abs": 0.09023348466549967
+        },
+        {
+          "k": 5,
+          "normalized_abs": 7.93016446160826e-18,
+          "radial_weight1_abs": 7.93016446160826e-18,
+          "radial_weight2_abs": 4.956352788505163e-19
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.06850791376339059,
+          "radial_weight1_abs": 0.11065157000520401,
+          "radial_weight2_abs": 0.17222373963632606
+        },
+        {
+          "k": 7,
+          "normalized_abs": 3.96508223080413e-18,
+          "radial_weight1_abs": 1.586032892321652e-17,
+          "radial_weight2_abs": 3.96508223080413e-18
+        },
+        {
+          "k": 8,
+          "normalized_abs": 0.0070948159793704476,
+          "radial_weight1_abs": 0.00958349229371038,
+          "radial_weight2_abs": 0.011985429936488996
+        },
+        {
+          "k": 9,
+          "normalized_abs": 3.96508223080413e-18,
+          "radial_weight1_abs": 2.5077381918405006e-17,
+          "radial_weight2_abs": 2.8592614589190863e-17
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.568928685500364,
+          "radial_weight1_abs": 0.7480670424995899,
+          "radial_weight2_abs": 0.9848568546511106
+        },
+        {
+          "k": 11,
+          "normalized_abs": 1.2538690959202503e-17,
+          "radial_weight1_abs": 1.773238680890909e-17,
+          "radial_weight2_abs": 7.93016446160826e-18
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.011868311908880701,
+          "radial_weight1_abs": 0.018016179238863585,
+          "radial_weight2_abs": 0.027432849146735817
+        },
+        {
+          "k": 13,
+          "normalized_abs": 3.96508223080413e-18,
+          "radial_weight1_abs": 3.96508223080413e-18,
+          "radial_weight2_abs": 0.0
+        },
+        {
+          "k": 14,
+          "normalized_abs": 0.051325814330195785,
+          "radial_weight1_abs": 0.08415106008143738,
+          "radial_weight2_abs": 0.1324652043519995
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.0,
+          "radial_weight1_abs": 4.956352788505163e-19,
+          "radial_weight2_abs": 7.991878734485375e-18
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.14583443153548023,
+          "radial_weight1_abs": 0.20807991075270546,
+          "radial_weight2_abs": 0.29508422280596963
+        },
+        {
+          "k": 17,
+          "normalized_abs": 5.9476233462061954e-18,
+          "radial_weight1_abs": 9.912705577010325e-18,
+          "radial_weight2_abs": 8.174226425932567e-18
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.008875301122089146,
+          "radial_weight1_abs": 0.010110171060385793,
+          "radial_weight2_abs": 0.010656110773045199
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        0.002516073300011511,
+        0.7043314710526475,
+        0.803075776936764,
+        1.218291170482659,
+        2.932247308752232,
+        3.1178038613378694,
+        3.3560971202459786,
+        3.601359691747988,
+        3.8017460097187272,
+        4.1031388276745115,
+        6.13794436247266,
+        6.334771852644683,
+        6.499999999999996,
+        6.500000000000002,
+        6.665228147355315,
+        6.862055637527335,
+        8.89686117232549,
+        9.198253990281279,
+        9.39864030825201,
+        9.643902879754014,
+        9.882196138662138,
+        10.067752691247774,
+        11.781708829517354,
+        12.196924223063233,
+        12.29566852894736,
+        12.997483926699992
+      ],
+      "sphere_tangent_min_curvature": 0.002516073300011511,
+      "sphere_tangent_max_curvature": 12.997483926699992,
+      "sphere_tangent_condition_number": 5165.781110844636,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 15,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 0.21756829095519906,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.2178107280873825,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.2019477169718447,
+          "population": 1
+        },
+        {
+          "squared_radius": 1.2186179612020487,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.258397826886648,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3011377163860551,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3337860365449603,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.351707581451784,
+          "population": 2
+        }
+      ],
+      "radial_shell_count": 8,
+      "pair_count": 105,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 56,
+      "distance_squared_types_at_tolerance_1e_8": 56,
+      "rotation_matches": [],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 4.577566798522238e-17,
+          "radial_weight1_abs": 4.45628518485889e-17,
+          "radial_weight2_abs": 0.0001110803255204553
+        },
+        {
+          "k": 2,
+          "normalized_abs": 3.1433616307438874e-06,
+          "radial_weight1_abs": 6.062197430738331e-06,
+          "radial_weight2_abs": 1.2558680143934978e-05
+        },
+        {
+          "k": 3,
+          "normalized_abs": 0.0010226956699201852,
+          "radial_weight1_abs": 0.0018992919584231948,
+          "radial_weight2_abs": 0.0023695270972031867
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.03431886792370577,
+          "radial_weight1_abs": 0.06128369271031666,
+          "radial_weight2_abs": 0.10866840139570073
+        },
+        {
+          "k": 5,
+          "normalized_abs": 4.825698570459361e-05,
+          "radial_weight1_abs": 8.27193725599911e-05,
+          "radial_weight2_abs": 8.663455522682393e-05
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.0004130021272972137,
+          "radial_weight1_abs": 0.0006798552730510171,
+          "radial_weight2_abs": 0.0010773892130762513
+        },
+        {
+          "k": 7,
+          "normalized_abs": 0.0807701882481705,
+          "radial_weight1_abs": 0.12684937172717226,
+          "radial_weight2_abs": 0.1927454400692295
+        },
+        {
+          "k": 8,
+          "normalized_abs": 0.0075559606495505275,
+          "radial_weight1_abs": 0.010071925827659374,
+          "radial_weight2_abs": 0.01238701923964859
+        },
+        {
+          "k": 9,
+          "normalized_abs": 5.055167853202333e-06,
+          "radial_weight1_abs": 4.0338693427595205e-06,
+          "radial_weight2_abs": 3.977143551378099e-06
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.003779679620090002,
+          "radial_weight1_abs": 0.0049828770448230525,
+          "radial_weight2_abs": 0.006591479378477545
+        },
+        {
+          "k": 11,
+          "normalized_abs": 0.5643661545698779,
+          "radial_weight1_abs": 0.7315700179253133,
+          "radial_weight2_abs": 0.9497901323386312
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.0033788740098309542,
+          "radial_weight1_abs": 0.004667158606719856,
+          "radial_weight2_abs": 0.006450711436223222
+        },
+        {
+          "k": 13,
+          "normalized_abs": 0.00014092310119504683,
+          "radial_weight1_abs": 0.00022690216346700403,
+          "radial_weight2_abs": 0.0003606705455741574
+        },
+        {
+          "k": 14,
+          "normalized_abs": 0.011368930867103163,
+          "radial_weight1_abs": 0.0182052548284798,
+          "radial_weight2_abs": 0.028758024811439405
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.07566981138850547,
+          "radial_weight1_abs": 0.1158727813112123,
+          "radial_weight2_abs": 0.17311119683360893
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.0004554173539863628,
+          "radial_weight1_abs": 0.0006707985295705448,
+          "radial_weight2_abs": 0.0009828079039178156
+        },
+        {
+          "k": 17,
+          "normalized_abs": 0.0020189083401789595,
+          "radial_weight1_abs": 0.00286983333814316,
+          "radial_weight2_abs": 0.00405562942188599
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.15937222893359645,
+          "radial_weight1_abs": 0.22350699278305902,
+          "radial_weight2_abs": 0.31169352075434453
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        -2.5295903096633765e-06,
+        0.9370168760142492,
+        0.942033842401751,
+        1.473323583167318,
+        2.1149815360082624,
+        2.3230650349004174,
+        2.630379228370571,
+        2.9855560392756493,
+        3.5046740165196737,
+        3.8541705679845544,
+        3.9711345012056203,
+        6.811256429381567,
+        6.997039493118775,
+        6.999999999999999,
+        7.000000000000002,
+        7.00296050688123,
+        7.188743570618433,
+        10.028865498794378,
+        10.145829432015452,
+        10.495325983480326,
+        11.014443960724353,
+        11.369620771629437,
+        11.676934965099584,
+        11.885018463991743,
+        12.526676416832684,
+        13.057966157598242,
+        13.062983123985752,
+        14.00000252959031
+      ],
+      "sphere_tangent_min_curvature": -2.5295903096633765e-06,
+      "sphere_tangent_max_curvature": 14.00000252959031,
+      "sphere_tangent_condition_number": null,
+      "existing_exact_classification": "unstable_stationary_orbit"
+    },
+    {
+      "n": 17,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 3.422098814738093e-05,
+          "population": 1
+        },
+        {
+          "squared_radius": 0.37587314226601365,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.38304798008713625,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.38726549115869224,
+          "population": 1
+        },
+        {
+          "squared_radius": 1.286765641415162,
+          "population": 1
+        },
+        {
+          "squared_radius": 1.3046423005950094,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3446275208526874,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.3874101599911253,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.423047478949206,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.4443187404778186,
+          "population": 2
+        }
+      ],
+      "radial_shell_count": 10,
+      "pair_count": 136,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 73,
+      "distance_squared_types_at_tolerance_1e_8": 73,
+      "rotation_matches": [],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 2.6926863520719043e-17,
+          "radial_weight1_abs": 4.8200393645896475e-17,
+          "radial_weight2_abs": 0.00030006231099835297
+        },
+        {
+          "k": 2,
+          "normalized_abs": 6.911905495112823e-06,
+          "radial_weight1_abs": 1.339181689673281e-05,
+          "radial_weight2_abs": 7.17866271364112e-06
+        },
+        {
+          "k": 3,
+          "normalized_abs": 4.433760037730724e-07,
+          "radial_weight1_abs": 8.313300070880721e-07,
+          "radial_weight2_abs": 1.6254104156430216e-06
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.0001619634232302037,
+          "radial_weight1_abs": 0.0002935586538443825,
+          "radial_weight2_abs": 0.00048040641411716976
+        },
+        {
+          "k": 5,
+          "normalized_abs": 0.029990452462719162,
+          "radial_weight1_abs": 0.05248329180324631,
+          "radial_weight2_abs": 0.09793703530600284
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.07110700408517918,
+          "radial_weight1_abs": 0.11999306701464468,
+          "radial_weight2_abs": 0.19536382151067608
+        },
+        {
+          "k": 7,
+          "normalized_abs": 0.003249364997382531,
+          "radial_weight1_abs": 0.005279777474405852,
+          "radial_weight2_abs": 0.00839920477545088
+        },
+        {
+          "k": 8,
+          "normalized_abs": 0.000172540969151983,
+          "radial_weight1_abs": 0.00026849473101922474,
+          "radial_weight2_abs": 0.0004148352342639765
+        },
+        {
+          "k": 9,
+          "normalized_abs": 1.7061156084538454e-05,
+          "radial_weight1_abs": 3.602833755170971e-05,
+          "radial_weight2_abs": 6.854005967256217e-05
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.019852462018517647,
+          "radial_weight1_abs": 0.02755779405523452,
+          "radial_weight2_abs": 0.03715664147788582
+        },
+        {
+          "k": 11,
+          "normalized_abs": 0.4941760315898262,
+          "radial_weight1_abs": 0.6840247905441136,
+          "radial_weight2_abs": 0.9482238972014194
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.027658756486485112,
+          "radial_weight1_abs": 0.04188176884586002,
+          "radial_weight2_abs": 0.06368892881792718
+        },
+        {
+          "k": 13,
+          "normalized_abs": 0.0014589693211777778,
+          "radial_weight1_abs": 0.002318448908396154,
+          "radial_weight2_abs": 0.0036766321396679382
+        },
+        {
+          "k": 14,
+          "normalized_abs": 0.00012710920007159797,
+          "radial_weight1_abs": 0.00019310531637481662,
+          "radial_weight2_abs": 0.0002938007128319883
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.0014053348854374704,
+          "radial_weight1_abs": 0.0026746776425437013,
+          "radial_weight2_abs": 0.004699420976565982
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.040658522449364236,
+          "radial_weight1_abs": 0.07170323047792129,
+          "radial_weight2_abs": 0.12049814182352676
+        },
+        {
+          "k": 17,
+          "normalized_abs": 0.15535593783175278,
+          "radial_weight1_abs": 0.2316532486098668,
+          "radial_weight2_abs": 0.34370172354004913
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.013317721949934087,
+          "radial_weight1_abs": 0.02016205312495226,
+          "radial_weight2_abs": 0.030463557596893016
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        7.19447269858248e-06,
+        0.6167552944491728,
+        0.6254814275634144,
+        0.8835911115176533,
+        0.8896690864402295,
+        2.0040895658454616,
+        2.092920927301451,
+        3.0401421954463466,
+        3.913530761487242,
+        4.692737465715307,
+        5.370916194404466,
+        5.958604617945459,
+        6.024038848472099,
+        7.116030289710676,
+        7.922045670001262,
+        7.9999999999999964,
+        8.000000000000004,
+        8.077954329998732,
+        8.883969710289316,
+        9.975961151527889,
+        10.041395382054535,
+        10.62908380559552,
+        11.30726253428469,
+        12.086469238512754,
+        12.95985780455365,
+        13.907079072698545,
+        13.995910434154533,
+        15.110330913559771,
+        15.116408888482333,
+        15.374518572436575,
+        15.383244705550819,
+        15.999992805527288
+      ],
+      "sphere_tangent_min_curvature": 7.19447269858248e-06,
+      "sphere_tangent_max_curvature": 15.999992805527288,
+      "sphere_tangent_condition_number": 2223928.4900865285,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 18,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 2.890482707385234e-05,
+          "population": 1
+        },
+        {
+          "squared_radius": 0.410369477767917,
+          "population": 1
+        },
+        {
+          "squared_radius": 0.41226771710961907,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.41648246574799624,
+          "population": 2
+        },
+        {
+          "squared_radius": 0.4188490860048748,
+          "population": 1
+        },
+        {
+          "squared_radius": 1.3645555224131671,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.379379969234199,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.4044879247661275,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.4308433090165975,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.4494214882037226,
+          "population": 2
+        },
+        {
+          "squared_radius": 1.4558757384172756,
+          "population": 1
+        }
+      ],
+      "radial_shell_count": 11,
+      "pair_count": 153,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 83,
+      "distance_squared_types_at_tolerance_1e_8": 83,
+      "rotation_matches": [],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 1.2715463329228437e-17,
+          "radial_weight1_abs": 6.472628563315355e-17,
+          "radial_weight2_abs": 0.0002828435633157411
+        },
+        {
+          "k": 2,
+          "normalized_abs": 6.01990047902993e-07,
+          "radial_weight1_abs": 1.1685689164784358e-06,
+          "radial_weight2_abs": 1.139354399415872e-05
+        },
+        {
+          "k": 3,
+          "normalized_abs": 5.413305069954275e-06,
+          "radial_weight1_abs": 1.0189750719898621e-05,
+          "radial_weight2_abs": 1.7310898346848616e-05
+        },
+        {
+          "k": 4,
+          "normalized_abs": 0.0004532371555565505,
+          "radial_weight1_abs": 0.0008264912832782698,
+          "radial_weight2_abs": 0.001416458274953434
+        },
+        {
+          "k": 5,
+          "normalized_abs": 0.03782785302812552,
+          "radial_weight1_abs": 0.06675503474861473,
+          "radial_weight2_abs": 0.11290238477097057
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.018436526000113695,
+          "radial_weight1_abs": 0.03145054496195063,
+          "radial_weight2_abs": 0.059689080749134676
+        },
+        {
+          "k": 7,
+          "normalized_abs": 9.77268879632536e-05,
+          "radial_weight1_abs": 0.00016090851440569978,
+          "radial_weight2_abs": 0.00022089992748824803
+        },
+        {
+          "k": 8,
+          "normalized_abs": 7.787006351776559e-06,
+          "radial_weight1_abs": 1.1739955131216596e-05,
+          "radial_weight2_abs": 1.6971619412940733e-05
+        },
+        {
+          "k": 9,
+          "normalized_abs": 1.2846908389506987e-05,
+          "radial_weight1_abs": 5.5744025344869256e-05,
+          "radial_weight2_abs": 0.0001391303075665497
+        },
+        {
+          "k": 10,
+          "normalized_abs": 0.002710228788265218,
+          "radial_weight1_abs": 0.002488204964572753,
+          "radial_weight2_abs": 0.001347762176012066
+        },
+        {
+          "k": 11,
+          "normalized_abs": 0.5148469146460183,
+          "radial_weight1_abs": 0.728319486279566,
+          "radial_weight2_abs": 1.030852149046264
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.006108099720065493,
+          "radial_weight1_abs": 0.008631638848701568,
+          "radial_weight2_abs": 0.012653461220469562
+        },
+        {
+          "k": 13,
+          "normalized_abs": 2.143277647241273e-05,
+          "radial_weight1_abs": 2.5219928293431575e-05,
+          "radial_weight2_abs": 3.1159063572035336e-05
+        },
+        {
+          "k": 14,
+          "normalized_abs": 4.745330912504284e-05,
+          "radial_weight1_abs": 6.57911832128343e-05,
+          "radial_weight2_abs": 8.951608911523742e-05
+        },
+        {
+          "k": 15,
+          "normalized_abs": 0.002393114054587902,
+          "radial_weight1_abs": 0.0035271153126458614,
+          "radial_weight2_abs": 0.005150685960349456
+        },
+        {
+          "k": 16,
+          "normalized_abs": 0.10221857753320206,
+          "radial_weight1_abs": 0.1553749626203365,
+          "radial_weight2_abs": 0.23505662732963722
+        },
+        {
+          "k": 17,
+          "normalized_abs": 0.026728931683013508,
+          "radial_weight1_abs": 0.048890662554499864,
+          "radial_weight2_abs": 0.08481417143699072
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.0005983096226492213,
+          "radial_weight1_abs": 0.0009414551858330813,
+          "radial_weight2_abs": 0.0014728050772423325
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        1.3284223588951146e-07,
+        0.5178741336708711,
+        0.5201322511979611,
+        1.5706342499382762,
+        1.6812407398361888,
+        1.6883070488087428,
+        1.7366328799237014,
+        2.4339954253737153,
+        4.096884765130954,
+        4.461216909663258,
+        4.466161231985057,
+        6.344858315523491,
+        6.731213610469237,
+        7.8373255915694,
+        8.136265529236153,
+        8.486711885559192,
+        8.499999999999996,
+        8.500000000000004,
+        8.513288114440803,
+        8.86373447076386,
+        9.162674408430602,
+        10.26878638953076,
+        10.655141684476504,
+        12.533838768014945,
+        12.538783090336743,
+        12.903115234869034,
+        14.566004574626291,
+        15.263367120076309,
+        15.31169295119128,
+        15.318759260163823,
+        15.429365750061736,
+        16.479867748802032,
+        16.482125866329124,
+        16.999999867157765
+      ],
+      "sphere_tangent_min_curvature": 1.3284223588951146e-07,
+      "sphere_tangent_max_curvature": 16.999999867157765,
+      "sphere_tangent_condition_number": 127971347.01419157,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    },
+    {
+      "n": 19,
+      "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+      "radial_shells_at_tolerance_1e_8": [
+        {
+          "squared_radius": 6.828782074281611e-34,
+          "population": 1
+        },
+        {
+          "squared_radius": 0.3916770737193311,
+          "population": 6
+        },
+        {
+          "squared_radius": 1.3341126811808288,
+          "population": 6
+        },
+        {
+          "squared_radius": 1.440876911766507,
+          "population": 6
+        }
+      ],
+      "radial_shell_count": 4,
+      "pair_count": 171,
+      "SO2_pair_contact_types_at_tolerance_1e_8": 22,
+      "distance_squared_types_at_tolerance_1e_8": 19,
+      "rotation_matches": [
+        {
+          "order": 2,
+          "max_matching_distance": 1.9374858783616065e-16,
+          "permutation": [
+            13,
+            14,
+            15,
+            3,
+            7,
+            8,
+            9,
+            4,
+            5,
+            6,
+            16,
+            17,
+            18,
+            0,
+            1,
+            2,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "order": 3,
+          "max_matching_distance": 3.3306690738754696e-16,
+          "permutation": [
+            11,
+            12,
+            13,
+            3,
+            6,
+            7,
+            8,
+            9,
+            4,
+            5,
+            14,
+            15,
+            16,
+            17,
+            18,
+            0,
+            1,
+            2,
+            10
+          ]
+        },
+        {
+          "order": 6,
+          "max_matching_distance": 2.482534153247273e-16,
+          "permutation": [
+            2,
+            10,
+            11,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            4,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            0,
+            1
+          ]
+        }
+      ],
+      "normalized_complex_moments": [
+        {
+          "k": 1,
+          "normalized_abs": 2.6936185613267912e-17,
+          "radial_weight1_abs": 1.3065969227617225e-17,
+          "radial_weight2_abs": 6.532984613808614e-17
+        },
+        {
+          "k": 2,
+          "normalized_abs": 5.581784500848259e-17,
+          "radial_weight1_abs": 8.263644519388289e-17,
+          "radial_weight2_abs": 7.108655804699221e-17
+        },
+        {
+          "k": 3,
+          "normalized_abs": 2.613193845523445e-17,
+          "radial_weight1_abs": 0.0,
+          "radial_weight2_abs": 3.5059674461847047e-17
+        },
+        {
+          "k": 4,
+          "normalized_abs": 2.337311630789803e-17,
+          "radial_weight1_abs": 5.3872371226535824e-17,
+          "radial_weight2_abs": 2.337311630789803e-17
+        },
+        {
+          "k": 5,
+          "normalized_abs": 1.652728903877658e-17,
+          "radial_weight1_abs": 2.921639538487254e-17,
+          "radial_weight2_abs": 2.921639538487254e-17
+        },
+        {
+          "k": 6,
+          "normalized_abs": 0.07146708686054806,
+          "radial_weight1_abs": 0.12308220514872162,
+          "radial_weight2_abs": 0.21044329425550742
+        },
+        {
+          "k": 7,
+          "normalized_abs": 1.7529837230923523e-17,
+          "radial_weight1_abs": 1.3065969227617225e-17,
+          "radial_weight2_abs": 4.2539713794108054e-17
+        },
+        {
+          "k": 8,
+          "normalized_abs": 1.461987957970292e-16,
+          "radial_weight1_abs": 1.8114165138620975e-16,
+          "radial_weight2_abs": 2.8047739569477637e-16
+        },
+        {
+          "k": 9,
+          "normalized_abs": 2.337311630789803e-17,
+          "radial_weight1_abs": 3.041914908452823e-17,
+          "radial_weight2_abs": 6.202457256948611e-17
+        },
+        {
+          "k": 10,
+          "normalized_abs": 8.180590707764311e-17,
+          "radial_weight1_abs": 1.2576631695153826e-16,
+          "radial_weight2_abs": 1.2491503928564198e-16
+        },
+        {
+          "k": 11,
+          "normalized_abs": 2.1068242328877478e-17,
+          "radial_weight1_abs": 4.5356042594976643e-17,
+          "radial_weight2_abs": 5.843279076974508e-17
+        },
+        {
+          "k": 12,
+          "normalized_abs": 0.5148886384102483,
+          "radial_weight1_abs": 0.7205144058799186,
+          "radial_weight2_abs": 1.0097795689258724
+        },
+        {
+          "k": 13,
+          "normalized_abs": 3.305457807755316e-17,
+          "radial_weight1_abs": 3.5543279023496105e-17,
+          "radial_weight2_abs": 7.839581536570336e-17
+        },
+        {
+          "k": 14,
+          "normalized_abs": 1.1992965539830275e-16,
+          "radial_weight1_abs": 1.6361181415528622e-16,
+          "radial_weight2_abs": 2.2235193324502233e-16
+        },
+        {
+          "k": 15,
+          "normalized_abs": 4.382459307730881e-17,
+          "radial_weight1_abs": 5.142923195069015e-17,
+          "radial_weight2_abs": 5.849182994559482e-17
+        },
+        {
+          "k": 16,
+          "normalized_abs": 7.018019001880525e-17,
+          "radial_weight1_abs": 6.745128654807204e-17,
+          "radial_weight2_abs": 9.349246523159212e-17
+        },
+        {
+          "k": 17,
+          "normalized_abs": 3.9738594019889814e-17,
+          "radial_weight1_abs": 6.81437584119888e-17,
+          "radial_weight2_abs": 7.618703802576504e-17
+        },
+        {
+          "k": 18,
+          "normalized_abs": 0.15785342033955035,
+          "radial_weight1_abs": 0.24430685811960504,
+          "radial_weight2_abs": 0.3745111269919384
+        }
+      ],
+      "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+        0.11392718800918483,
+        0.691596308747449,
+        0.6915963087474517,
+        1.8215387553294409,
+        1.821538755329444,
+        2.096263814735985,
+        2.0962638147359876,
+        2.826347800029228,
+        3.8459716870687477,
+        4.384804210878444,
+        4.384804210878448,
+        4.876696693250747,
+        5.517323898853225,
+        5.5173238988532285,
+        8.679251381054028,
+        8.679251381054032,
+        8.843857383828118,
+        8.999999999999996,
+        9.0,
+        9.156142616171877,
+        9.320748618945968,
+        9.320748618945974,
+        12.48267610114677,
+        12.482676101146774,
+        13.123303306749252,
+        13.615195789121545,
+        13.615195789121554,
+        14.15402831293125,
+        15.173652199970764,
+        15.903736185264009,
+        15.903736185264009,
+        16.178461244670537,
+        16.178461244670547,
+        17.308403691252543,
+        17.308403691252547,
+        17.88607281199082
+      ],
+      "sphere_tangent_min_curvature": 0.11392718800918483,
+      "sphere_tangent_max_curvature": 17.88607281199082,
+      "sphere_tangent_condition_number": 156.9956489275312,
+      "existing_exact_classification": "strict_local_maximum_mod_rotation"
+    }
+  ]
+}

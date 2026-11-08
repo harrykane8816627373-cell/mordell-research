@@ -1,0 +1,5725 @@
+{
+  "date": "2026-11-08",
+  "n": 10,
+  "numpy_version": "2.3.4",
+  "random_seed": 2026110810,
+  "max_steps_per_run": 500,
+  "scope": "finite floating exploration; neither counts nor Hessian eigenvalues prove globaloptimality",
+  "source_sha256": {
+    "symmetry-breaking/explore.py": "3508abe61028b2b2cae29b560646545826686b810332836ac19c8258f25d6b4b",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "finite-search-nov5/integer_witnesses.json": "83cc7ee2a03b549f1024e3f683afcdcb13298146293036cc75b54809ff7b2d82",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d",
+    "radial-angular/population_search_verification.json": "01d527aef81696b06acb6588a600f4411a9040bb4e3f3d31c4dc995370bb763b"
+  },
+  "summary": {
+    "cluster_log_tolerance": 1e-07,
+    "gradient_screen_tolerance": 1e-05,
+    "pinned_log_value": 24.70896720317788,
+    "runs": 100,
+    "gradient_screened_runs": 100,
+    "best_value_repeat_count": 94,
+    "clusters": [
+      {
+        "highest_log_value": 24.708967203177895,
+        "lowest_log_value": 24.708967203177863,
+        "count": 94,
+        "strata": {
+          "uniform_disk": 30,
+          "gaussian": 18,
+          "anchors": 5,
+          "perturbations": 30,
+          "spirals": 4,
+          "continuation": 7
+        },
+        "seed_indices": [
+          53,
+          74,
+          37,
+          40,
+          51,
+          55,
+          0,
+          1,
+          20,
+          24,
+          30,
+          32,
+          34,
+          36,
+          38,
+          44,
+          66,
+          2,
+          5,
+          8,
+          10,
+          11,
+          14,
+          43,
+          54,
+          62,
+          70,
+          75,
+          98,
+          4,
+          16,
+          21,
+          22,
+          23,
+          39,
+          42,
+          50,
+          59,
+          61,
+          67,
+          72,
+          73,
+          77,
+          79,
+          84,
+          86,
+          92,
+          93,
+          96,
+          99,
+          12,
+          18,
+          25,
+          27,
+          35,
+          45,
+          48,
+          52,
+          57,
+          58,
+          60,
+          65,
+          68,
+          69,
+          80,
+          81,
+          82,
+          88,
+          6,
+          13,
+          15,
+          17,
+          19,
+          31,
+          33,
+          41,
+          49,
+          56,
+          64,
+          71,
+          87,
+          94,
+          97,
+          3,
+          7,
+          26,
+          28,
+          29,
+          46,
+          47,
+          76,
+          85,
+          9,
+          63
+        ]
+      },
+      {
+        "highest_log_value": 24.70751672646435,
+        "lowest_log_value": 24.70751672646435,
+        "count": 2,
+        "strata": {
+          "continuation": 2
+        },
+        "seed_indices": [
+          89,
+          90
+        ]
+      },
+      {
+        "highest_log_value": 24.550085232324165,
+        "lowest_log_value": 24.550085232324165,
+        "count": 1,
+        "strata": {
+          "continuation": 1
+        },
+        "seed_indices": [
+          91
+        ]
+      },
+      {
+        "highest_log_value": 24.516244400628146,
+        "lowest_log_value": 24.5162444006279,
+        "count": 3,
+        "strata": {
+          "gaussian": 2,
+          "spirals": 1
+        },
+        "seed_indices": [
+          83,
+          78,
+          95
+        ]
+      }
+    ],
+    "stratified_frequencies": {
+      "anchors": {
+        "runs": 5,
+        "gradient_below_1e_5": 5,
+        "at_pinned_value_within_1e_7": 5
+      },
+      "continuation": {
+        "runs": 10,
+        "gradient_below_1e_5": 10,
+        "at_pinned_value_within_1e_7": 7
+      },
+      "gaussian": {
+        "runs": 20,
+        "gradient_below_1e_5": 20,
+        "at_pinned_value_within_1e_7": 18
+      },
+      "perturbations": {
+        "runs": 30,
+        "gradient_below_1e_5": 30,
+        "at_pinned_value_within_1e_7": 30
+      },
+      "spirals": {
+        "runs": 5,
+        "gradient_below_1e_5": 5,
+        "at_pinned_value_within_1e_7": 4
+      },
+      "uniform_disk": {
+        "runs": 30,
+        "gradient_below_1e_5": 30,
+        "at_pinned_value_within_1e_7": 30
+      }
+    },
+    "runnerup_log_gap": 0.0014504767135470331,
+    "runnerup_gap_scope": "distinct observed gradient-screened logvalueclusters only; absence is not an exclusion theorem"
+  },
+  "runs": [
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.6091119992012182e-08,
+      "steps": 2,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 0,
+      "stratum": "anchors",
+      "seed_label": "old_integer",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787325366827585,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536615616,
+          0
+        ],
+        [
+          -3536615616,
+          0
+        ],
+        [
+          10361239121,
+          4638939071
+        ],
+        [
+          3896972162,
+          9984225114
+        ],
+        [
+          -3896972162,
+          9984225114
+        ],
+        [
+          -10361239121,
+          4638939071
+        ],
+        [
+          -10361239121,
+          -4638939071
+        ],
+        [
+          -3896972162,
+          -9984225114
+        ],
+        [
+          3896972162,
+          -9984225114
+        ],
+        [
+          10361239121,
+          -4638939071
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.6091119992012182e-08,
+      "steps": 2,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 1,
+      "stratum": "anchors",
+      "seed_label": "best_integer",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787325366827585,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536615616,
+          0
+        ],
+        [
+          -3536615616,
+          0
+        ],
+        [
+          10361239121,
+          4638939071
+        ],
+        [
+          3896972162,
+          9984225114
+        ],
+        [
+          -3896972162,
+          9984225114
+        ],
+        [
+          -10361239121,
+          4638939071
+        ],
+        [
+          -10361239121,
+          -4638939071
+        ],
+        [
+          -3896972162,
+          -9984225114
+        ],
+        [
+          3896972162,
+          -9984225114
+        ],
+        [
+          10361239121,
+          -4638939071
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 8.881784197001252e-16,
+      "steps": 1,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 2,
+      "stratum": "anchors",
+      "seed_label": "certified_center",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.0778732506592329,
+      "terminal_integer_points_grid_1e10": [
+        [
+          11352313943,
+          0
+        ],
+        [
+          7636652139,
+          7520152077
+        ],
+        [
+          523131363,
+          10705021099
+        ],
+        [
+          -7561059426,
+          8467904831
+        ],
+        [
+          -11352313943,
+          0
+        ],
+        [
+          -7636652139,
+          -7520152077
+        ],
+        [
+          -523131363,
+          -10705021099
+        ],
+        [
+          7561059426,
+          -8467904831
+        ],
+        [
+          3227863517,
+          -1445180642
+        ],
+        [
+          -3227863517,
+          1445180642
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822126,
+      "gradient_max": 6.268250807295317e-09,
+      "steps": 10,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 3,
+      "stratum": "anchors",
+      "seed_label": "population_rings",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.07787326207253881,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536615613,
+          0
+        ],
+        [
+          -3536615613,
+          0
+        ],
+        [
+          10361239120,
+          4638939084
+        ],
+        [
+          3896972176,
+          9984225105
+        ],
+        [
+          -3896972176,
+          9984225105
+        ],
+        [
+          -10361239120,
+          4638939084
+        ],
+        [
+          -10361239120,
+          -4638939084
+        ],
+        [
+          -3896972176,
+          -9984225105
+        ],
+        [
+          3896972176,
+          -9984225105
+        ],
+        [
+          10361239120,
+          -4638939084
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 8.463275413816973e-09,
+      "steps": 53,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 4,
+      "stratum": "anchors",
+      "seed_label": "golden_spiral",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325668528922,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2183285635,
+          -2782249784
+        ],
+        [
+          -2183285628,
+          2782249777
+        ],
+        [
+          2746935972,
+          -11014961379
+        ],
+        [
+          5448826591,
+          9229378722
+        ],
+        [
+          -10260321046,
+          -3097895249
+        ],
+        [
+          10045827817,
+          -5287378909
+        ],
+        [
+          -2746935978,
+          11014961394
+        ],
+        [
+          -5448826612,
+          -9229378740
+        ],
+        [
+          10260321062,
+          3097895261
+        ],
+        [
+          -10045827811,
+          5287378908
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.4834396822038798e-08,
+      "steps": 28,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 5,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.02_0",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325754158626,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536615516,
+          -930535
+        ],
+        [
+          -3536615459,
+          930502
+        ],
+        [
+          10362459311,
+          4636212824
+        ],
+        [
+          3899598943,
+          9983199434
+        ],
+        [
+          -3894345111,
+          9985250073
+        ],
+        [
+          -10360018218,
+          4641665044
+        ],
+        [
+          -10362459308,
+          -4636212765
+        ],
+        [
+          -3899598991,
+          -9983199432
+        ],
+        [
+          3894345087,
+          -9985250090
+        ],
+        [
+          10360018230,
+          -4641665055
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.567904384103258e-08,
+      "steps": 31,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 6,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.02_1",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787324607125792,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536615231,
+          -1667004
+        ],
+        [
+          -3536615194,
+          1666973
+        ],
+        [
+          10363424548,
+          4634054755
+        ],
+        [
+          3901677844,
+          9982387153
+        ],
+        [
+          -3892265627,
+          9986060843
+        ],
+        [
+          -10359051377,
+          4643822387
+        ],
+        [
+          -10363424570,
+          -4634054730
+        ],
+        [
+          -3901677866,
+          -9982387152
+        ],
+        [
+          3892265622,
+          -9986060846
+        ],
+        [
+          10359051389,
+          -4643822379
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 1.6359663845832983e-08,
+      "steps": 30,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 7,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.02_2",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.07787325221816838,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536613370,
+          -3976943
+        ],
+        [
+          -3536613373,
+          3976915
+        ],
+        [
+          10366449094,
+          4627284867
+        ],
+        [
+          3908197035,
+          9979836621
+        ],
+        [
+          -3885742362,
+          9988600967
+        ],
+        [
+          -10356016022,
+          4650587445
+        ],
+        [
+          -10366449117,
+          -4627284855
+        ],
+        [
+          -3908197052,
+          -9979836644
+        ],
+        [
+          3885742381,
+          -9988600946
+        ],
+        [
+          10356016048,
+          -4650587426
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.0663882221706444e-08,
+      "steps": 28,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 8,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.02_3",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325483454666,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536396535,
+          -39361913
+        ],
+        [
+          -3536396585,
+          39361937
+        ],
+        [
+          10412227967,
+          4523332923
+        ],
+        [
+          4007853516,
+          9940234052
+        ],
+        [
+          -3785608084,
+          10026979354
+        ],
+        [
+          -10308966765,
+          4753970556
+        ],
+        [
+          -10412227966,
+          -4523332963
+        ],
+        [
+          -4007853485,
+          -9940234044
+        ],
+        [
+          3785608112,
+          -10026979349
+        ],
+        [
+          10308966754,
+          -4753970552
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.991029030534719e-08,
+      "steps": 26,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 9,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.02_4",
+      "normalized_log_value": 24.708967203177863,
+      "sphere_tangent_min_curvature_float": 0.07787323929965803,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536613200,
+          4082406
+        ],
+        [
+          -3536613296,
+          -4082322
+        ],
+        [
+          10355877469,
+          4650896070
+        ],
+        [
+          3885444668,
+          9988716761
+        ],
+        [
+          -3908494502,
+          9979720168
+        ],
+        [
+          -10366587033,
+          4626975846
+        ],
+        [
+          -10355877406,
+          -4650896160
+        ],
+        [
+          -3885444596,
+          -9988716765
+        ],
+        [
+          3908494534,
+          -9979720147
+        ],
+        [
+          10366586963,
+          -4626975857
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.2473086119513255e-08,
+      "steps": 29,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 10,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.02_5",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787323489845442,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536476076,
+          -31417678
+        ],
+        [
+          -3536476025,
+          31417744
+        ],
+        [
+          10402040602,
+          4546711284
+        ],
+        [
+          3985513895,
+          9949212164
+        ],
+        [
+          -3808122939,
+          10018450127
+        ],
+        [
+          -10319619975,
+          4730800712
+        ],
+        [
+          -10402040559,
+          -4546711306
+        ],
+        [
+          -3985513898,
+          -9949212149
+        ],
+        [
+          3808122888,
+          -10018450118
+        ],
+        [
+          10319619935,
+          -4730800779
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 2.7381488187927516e-09,
+      "steps": 35,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 11,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.08_0",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325002938972,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3535074755,
+          104386019
+        ],
+        [
+          -3535074756,
+          -104386016
+        ],
+        [
+          10219802937,
+          4942738093
+        ],
+        [
+          3600582049,
+          10094897338
+        ],
+        [
+          -4189966588,
+          9864852909
+        ],
+        [
+          -10493646817,
+          4331097822
+        ],
+        [
+          -10219802938,
+          -4942738094
+        ],
+        [
+          -3600582046,
+          -10094897334
+        ],
+        [
+          4189966592,
+          -9864852915
+        ],
+        [
+          10493646812,
+          -4331097821
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.8404337165378593e-08,
+      "steps": 28,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 12,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.08_1",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.0778732280895802,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3534653301,
+          -117798793
+        ],
+        [
+          -3534653134,
+          117798796
+        ],
+        [
+          10510005249,
+          4291249438
+        ],
+        [
+          4227367727,
+          9848883468
+        ],
+        [
+          -3562251967,
+          10108486743
+        ],
+        [
+          -10200974575,
+          4981480608
+        ],
+        [
+          -10510005230,
+          -4291249360
+        ],
+        [
+          -4227367817,
+          -9848883448
+        ],
+        [
+          3562251867,
+          -10108486751
+        ],
+        [
+          10200974581,
+          -4981480702
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.2044093722352045e-08,
+      "steps": 34,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 13,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.08_2",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787324948351056,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536599206,
+          10771758
+        ],
+        [
+          -3536599205,
+          -10771757
+        ],
+        [
+          10347061877,
+          4670475576
+        ],
+        [
+          3866544383,
+          9996048125
+        ],
+        [
+          -3927363813,
+          9972309481
+        ],
+        [
+          -10375320236,
+          4607359538
+        ],
+        [
+          -10347061889,
+          -4670475589
+        ],
+        [
+          -3866544374,
+          -9996048100
+        ],
+        [
+          3927363820,
+          -9972309499
+        ],
+        [
+          10375320231,
+          -4607359534
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.7735688473408118e-08,
+      "steps": 33,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 14,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.08_3",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787324421338628,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536292472,
+          -47810797
+        ],
+        [
+          -3536292375,
+          47810699
+        ],
+        [
+          10423005001,
+          4498443987
+        ],
+        [
+          4031590490,
+          9930630444
+        ],
+        [
+          -3761641602,
+          10035994979
+        ],
+        [
+          -10297579531,
+          4778586387
+        ],
+        [
+          -10423005044,
+          -4498443873
+        ],
+        [
+          -4031590564,
+          -9930630441
+        ],
+        [
+          3761641599,
+          -10035995024
+        ],
+        [
+          10297579554,
+          -4778586360
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.9343525892168145e-08,
+      "steps": 34,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 15,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.08_4",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787325161765228,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3532966842,
+          160609368
+        ],
+        [
+          -3532966811,
+          -160609266
+        ],
+        [
+          10139879973,
+          5104690665
+        ],
+        [
+          3439535385,
+          10150898486
+        ],
+        [
+          -4346367868,
+          9796950004
+        ],
+        [
+          -10561218639,
+          4163615322
+        ],
+        [
+          -10139879908,
+          -5104690698
+        ],
+        [
+          -3439535386,
+          -10150898443
+        ],
+        [
+          4346367822,
+          -9796950027
+        ],
+        [
+          10561218589,
+          -4163615410
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 5.417936144169744e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 16,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.08_5",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787322188900955,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536604354,
+          -8908035
+        ],
+        [
+          -3536604388,
+          8908066
+        ],
+        [
+          10372890694,
+          4612826548
+        ],
+        [
+          3922108051,
+          9974377853
+        ],
+        [
+          -3871811571,
+          9994009056
+        ],
+        [
+          -10349521752,
+          4665022130
+        ],
+        [
+          -10372890834,
+          -4612826571
+        ],
+        [
+          -3922107951,
+          -9974377656
+        ],
+        [
+          3871811652,
+          -9994009194
+        ],
+        [
+          10349521745,
+          -4665022195
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.530055193654789e-08,
+      "steps": 39,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 17,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.2_0",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.0778732493589219,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3533216088,
+          155029396
+        ],
+        [
+          -3533216066,
+          -155029414
+        ],
+        [
+          10147929099,
+          5088670422
+        ],
+        [
+          3455562395,
+          10145453758
+        ],
+        [
+          -4330890116,
+          9803801998
+        ],
+        [
+          -10554629898,
+          4180289484
+        ],
+        [
+          -10147929088,
+          -5088670408
+        ],
+        [
+          -3455562406,
+          -10145453735
+        ],
+        [
+          4330890110,
+          -9803802027
+        ],
+        [
+          10554629883,
+          -4180289475
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 4.155497279612064e-09,
+      "steps": 37,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 18,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.2_1",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325014851143,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2406631838,
+          -2591480885
+        ],
+        [
+          -2406631846,
+          2591480873
+        ],
+        [
+          9967864655,
+          3938631399
+        ],
+        [
+          4664162828,
+          9649700943
+        ],
+        [
+          -3651504033,
+          10749025546
+        ],
+        [
+          -10449936892,
+          4435521471
+        ],
+        [
+          -9967864664,
+          -3938631398
+        ],
+        [
+          -4664162826,
+          -9649700948
+        ],
+        [
+          3651504041,
+          -10749025541
+        ],
+        [
+          10449936898,
+          -4435521460
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 8.783306082449371e-09,
+      "steps": 35,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 19,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.2_2",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787325228633873,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2617887241,
+          2377880642
+        ],
+        [
+          -10788675800,
+          -3532634466
+        ],
+        [
+          10788675802,
+          3532634450
+        ],
+        [
+          4550597066,
+          10400341265
+        ],
+        [
+          -3828366750,
+          10010731805
+        ],
+        [
+          -9597630327,
+          4770391522
+        ],
+        [
+          -2617887250,
+          -2377880630
+        ],
+        [
+          -4550597049,
+          -10400341274
+        ],
+        [
+          3828366747,
+          -10010731793
+        ],
+        [
+          9597630320,
+          -4770391520
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822122,
+      "gradient_max": 1.036223196138053e-08,
+      "steps": 35,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 20,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.2_3",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.0778732457000201,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3535580273,
+          -85570096
+        ],
+        [
+          -3535580232,
+          85570098
+        ],
+        [
+          10470447154,
+          4386885957
+        ],
+        [
+          4137404346,
+          9887013113
+        ],
+        [
+          -3654258304,
+          10075591271
+        ],
+        [
+          -10245964507,
+          4888276065
+        ],
+        [
+          -10470447161,
+          -4386885934
+        ],
+        [
+          -4137404366,
+          -9887013103
+        ],
+        [
+          3654258282,
+          -10075591291
+        ],
+        [
+          10245964516,
+          -4888276079
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822122,
+      "gradient_max": 7.671106416751172e-09,
+      "steps": 37,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 21,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.2_4",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787324685299989,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3531670461,
+          186959258
+        ],
+        [
+          -3531670449,
+          -186959248
+        ],
+        [
+          10101518953,
+          5180187918
+        ],
+        [
+          3363718216,
+          10176273528
+        ],
+        [
+          -4419328068,
+          9764255346
+        ],
+        [
+          -10591983623,
+          4084717229
+        ],
+        [
+          -10101518943,
+          -5180187918
+        ],
+        [
+          -3363718224,
+          -10176273534
+        ],
+        [
+          4419328066,
+          -9764255353
+        ],
+        [
+          10591983611,
+          -4084717225
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 1.1936513999444287e-09,
+      "steps": 42,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 22,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.2_5",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325036275426,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3527910504,
+          -247986752
+        ],
+        [
+          -3527910509,
+          247986752
+        ],
+        [
+          10661017175,
+          3900992773
+        ],
+        [
+          4587471857,
+          9686394845
+        ],
+        [
+          -3187288307,
+          10232904594
+        ],
+        [
+          -10010454306,
+          5354048608
+        ],
+        [
+          -10661017176,
+          -3900992776
+        ],
+        [
+          -4587471854,
+          -9686394846
+        ],
+        [
+          3187288310,
+          -10232904592
+        ],
+        [
+          10010454305,
+          -5354048606
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 6.868048352259848e-09,
+      "steps": 51,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 23,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.45_0",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787324590736981,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3529165264,
+          -229439769
+        ],
+        [
+          -3529165231,
+          229439780
+        ],
+        [
+          10640365498,
+          3956975442
+        ],
+        [
+          4536494735,
+          9710373785
+        ],
+        [
+          -3241030608,
+          10216010153
+        ],
+        [
+          -10038458006,
+          5301357576
+        ],
+        [
+          -10640365480,
+          -3956975430
+        ],
+        [
+          -4536494752,
+          -9710373783
+        ],
+        [
+          3241030580,
+          -10216010152
+        ],
+        [
+          10038458001,
+          -5301357602
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.7669766094741135e-08,
+      "steps": 39,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 24,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.45_1",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787323470039886,
+      "terminal_integer_points_grid_1e10": [
+        [
+          10284973901,
+          -4805657463
+        ],
+        [
+          -3536154379,
+          57112686
+        ],
+        [
+          10434802055,
+          4471010841
+        ],
+        [
+          4057698922,
+          9919991046
+        ],
+        [
+          -3735229097,
+          10045855229
+        ],
+        [
+          -10284973885,
+          4805657446
+        ],
+        [
+          -10434802063,
+          -4471010790
+        ],
+        [
+          -4057698967,
+          -9919991070
+        ],
+        [
+          3735229049,
+          -10045855225
+        ],
+        [
+          3536154464,
+          -57112701
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.7655510387015738e-08,
+      "steps": 41,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 25,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.45_2",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325120693814,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3536409874,
+          -38148374
+        ],
+        [
+          -3536409850,
+          38148355
+        ],
+        [
+          10410674958,
+          4526906070
+        ],
+        [
+          4004441864,
+          9941608908
+        ],
+        [
+          -3789049031,
+          10025679587
+        ],
+        [
+          -10310597711,
+          4750432326
+        ],
+        [
+          -10410674945,
+          -4526906045
+        ],
+        [
+          -4004441886,
+          -9941608927
+        ],
+        [
+          3789049026,
+          -10025679589
+        ],
+        [
+          10310597701,
+          -4750432310
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 2.461544923448855e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 26,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.45_3",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.0778732361207512,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2816616179,
+          2138766760
+        ],
+        [
+          -2816616199,
+          -2138766724
+        ],
+        [
+          11057249894,
+          2571430780
+        ],
+        [
+          5446457241,
+          9960478653
+        ],
+        [
+          -2934345851,
+          10308285937
+        ],
+        [
+          -9141565496,
+          5594901473
+        ],
+        [
+          -11057249920,
+          -2571430815
+        ],
+        [
+          2934345860,
+          -10308285882
+        ],
+        [
+          -5446457227,
+          -9960478679
+        ],
+        [
+          9141565517,
+          -5594901502
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822094,
+      "gradient_max": 3.1744874451344884e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 27,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.45_4",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787324253661976,
+      "terminal_integer_points_grid_1e10": [
+        [
+          425667111,
+          -3510905556
+        ],
+        [
+          -425667130,
+          3510905453
+        ],
+        [
+          9442603179,
+          5070344038
+        ],
+        [
+          3358136329,
+          10844258959
+        ],
+        [
+          -5852294441,
+          9727573238
+        ],
+        [
+          -10380682511,
+          2666940784
+        ],
+        [
+          -9442603199,
+          -5070343991
+        ],
+        [
+          -3358136382,
+          -10844258964
+        ],
+        [
+          5852294482,
+          -9727573232
+        ],
+        [
+          10380682563,
+          -2666940730
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822122,
+      "gradient_max": 1.2916629543724412e-08,
+      "steps": 47,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 28,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.45_5",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.07787325285284297,
+      "terminal_integer_points_grid_1e10": [
+        [
+          4187666039,
+          -10551705285
+        ],
+        [
+          -2533962263,
+          2467120835
+        ],
+        [
+          10659855693,
+          -3904165579
+        ],
+        [
+          4172777394,
+          9872136095
+        ],
+        [
+          -10659855686,
+          3904165542
+        ],
+        [
+          -4187666096,
+          10551705304
+        ],
+        [
+          -9757088190,
+          -4435129452
+        ],
+        [
+          2533962300,
+          -2467120806
+        ],
+        [
+          -4172777418,
+          -9872136121
+        ],
+        [
+          9757088228,
+          4435129467
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 5.550198522996652e-09,
+      "steps": 41,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 29,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.8_0",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.07787324720315159,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2200217830,
+          10489527381
+        ],
+        [
+          -3488366615,
+          -582192693
+        ],
+        [
+          3488366612,
+          582192693
+        ],
+        [
+          9456228182,
+          6281304035
+        ],
+        [
+          -5487396046,
+          9206499211
+        ],
+        [
+          -9456228187,
+          -6281304035
+        ],
+        [
+          -10983539450,
+          2869998784
+        ],
+        [
+          -2200217828,
+          -10489527379
+        ],
+        [
+          5487396050,
+          -9206499214
+        ],
+        [
+          10983539452,
+          -2869998783
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 2.592996928285629e-09,
+      "steps": 54,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 30,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.8_1",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787325379361497,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2891901968,
+          2035817528
+        ],
+        [
+          -2560752969,
+          10407386193
+        ],
+        [
+          11142777616,
+          2171068596
+        ],
+        [
+          -8933886351,
+          5920879819
+        ],
+        [
+          5802059542,
+          9757619433
+        ],
+        [
+          8933886346,
+          -5920879820
+        ],
+        [
+          -11142777615,
+          -2171068601
+        ],
+        [
+          -5802059542,
+          -9757619432
+        ],
+        [
+          -2891901963,
+          -2035817524
+        ],
+        [
+          2560752967,
+          -10407386193
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.1047343484449357e-08,
+      "steps": 36,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 31,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.8_2",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787325220855358,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -10685408959,
+          -832573727
+        ],
+        [
+          1537947401,
+          -3184708462
+        ],
+        [
+          10685408916,
+          832573776
+        ],
+        [
+          7296101732,
+          7850989908
+        ],
+        [
+          -328385364,
+          11347563375
+        ],
+        [
+          -8683078032,
+          7312946578
+        ],
+        [
+          -7296101745,
+          -7850989904
+        ],
+        [
+          328385400,
+          -11347563413
+        ],
+        [
+          -1537947446,
+          3184708374
+        ],
+        [
+          8683078097,
+          -7312946503
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822122,
+      "gradient_max": 1.9333167955437602e-08,
+      "steps": 43,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 32,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.8_3",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787325438120586,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2915769306,
+          2001484318
+        ],
+        [
+          -11167667316,
+          -2039175850
+        ],
+        [
+          5917018299,
+          9688339702
+        ],
+        [
+          -2437527522,
+          10436934543
+        ],
+        [
+          8863259372,
+          -6026091305
+        ],
+        [
+          -8863259429,
+          6026091282
+        ],
+        [
+          -2915769288,
+          -2001484254
+        ],
+        [
+          -5917018293,
+          -9688339713
+        ],
+        [
+          11167667367,
+          2039175806
+        ],
+        [
+          2437527505,
+          -10436934527
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 1.0319862631114063e-08,
+      "steps": 40,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 33,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.8_4",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787325267958499,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -1564035950,
+          -11244057257
+        ],
+        [
+          1564035939,
+          11244057253
+        ],
+        [
+          7345448555,
+          -8655600351
+        ],
+        [
+          -986688634,
+          3396188372
+        ],
+        [
+          -7345448553,
+          8655600349
+        ],
+        [
+          8500559384,
+          6527758673
+        ],
+        [
+          -10675010123,
+          956714095
+        ],
+        [
+          986688658,
+          -3396188377
+        ],
+        [
+          -8500559398,
+          -6527758664
+        ],
+        [
+          10675010122,
+          -956714094
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 7.558110581840083e-09,
+      "steps": 43,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 34,
+      "stratum": "perturbations",
+      "seed_label": "noise_0.8_5",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787325495936005,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6386795341,
+          8606973243
+        ],
+        [
+          -3411986438,
+          930590384
+        ],
+        [
+          8775467503,
+          -7201819355
+        ],
+        [
+          3411986458,
+          -930590390
+        ],
+        [
+          -1132492995,
+          10657795401
+        ],
+        [
+          -8775467501,
+          7201819342
+        ],
+        [
+          -11216757471,
+          -1749109446
+        ],
+        [
+          -6386795341,
+          -8606973220
+        ],
+        [
+          1132492977,
+          -10657795410
+        ],
+        [
+          11216757468,
+          1749109452
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822098,
+      "gradient_max": 2.1695308216607145e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 35,
+      "stratum": "uniform_disk",
+      "seed_label": "0",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787326535638255,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -5258858621,
+          -9338926534
+        ],
+        [
+          10194792378,
+          3307166727
+        ],
+        [
+          10151901601,
+          -5080740673
+        ],
+        [
+          2971720398,
+          -10956455154
+        ],
+        [
+          2239751771,
+          -2736998741
+        ],
+        [
+          -10151901604,
+          5080740674
+        ],
+        [
+          -2971720393,
+          10956455165
+        ],
+        [
+          -10194792378,
+          -3307166737
+        ],
+        [
+          -2239751762,
+          2736998734
+        ],
+        [
+          5258858612,
+          9338926539
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.910324520792983e-08,
+      "steps": 43,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 36,
+      "stratum": "uniform_disk",
+      "seed_label": "1",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787323374920395,
+      "terminal_integer_points_grid_1e10": [
+        [
+          1127353920,
+          10658340207
+        ],
+        [
+          7070357642,
+          -8881727002
+        ],
+        [
+          -11334166240,
+          641644513
+        ],
+        [
+          3141020402,
+          -1625312516
+        ],
+        [
+          -1127353931,
+          -10658340212
+        ],
+        [
+          -7070357647,
+          8881726998
+        ],
+        [
+          -3141020387,
+          1625312504
+        ],
+        [
+          8049491017,
+          7076498986
+        ],
+        [
+          -8049491021,
+          -7076498965
+        ],
+        [
+          11334166245,
+          -641644513
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822126,
+      "gradient_max": 1.3436130430477533e-08,
+      "steps": 40,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 37,
+      "stratum": "uniform_disk",
+      "seed_label": "2",
+      "normalized_log_value": 24.708967203177888,
+      "sphere_tangent_min_curvature_float": 0.07787324819071591,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -2120181050,
+          2830632850
+        ],
+        [
+          -9924413659,
+          5511900319
+        ],
+        [
+          10327376792,
+          2866431868
+        ],
+        [
+          -10327376779,
+          -2866431880
+        ],
+        [
+          -5654951215,
+          -9104541205
+        ],
+        [
+          2120181035,
+          -2830632848
+        ],
+        [
+          2498594949,
+          -11073935842
+        ],
+        [
+          -2498594935,
+          11073935864
+        ],
+        [
+          5654951206,
+          9104541184
+        ],
+        [
+          9924413658,
+          -5511900310
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 1.2441283558928262e-08,
+      "steps": 63,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 38,
+      "stratum": "uniform_disk",
+      "seed_label": "3",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787324926703731,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -5705397098,
+          -9814452382
+        ],
+        [
+          2871652422,
+          2064282535
+        ],
+        [
+          -8991933117,
+          5832347886
+        ],
+        [
+          11120789653,
+          2281023762
+        ],
+        [
+          2663425416,
+          -10381585076
+        ],
+        [
+          -2871652420,
+          -2064282515
+        ],
+        [
+          8991933093,
+          -5832347881
+        ],
+        [
+          5705397121,
+          9814452378
+        ],
+        [
+          -2663425418,
+          10381585071
+        ],
+        [
+          -11120789652,
+          -2281023779
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 1.1713668257584686e-08,
+      "steps": 46,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 39,
+      "stratum": "uniform_disk",
+      "seed_label": "4",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.077873257180996,
+      "terminal_integer_points_grid_1e10": [
+        [
+          4171765664,
+          -9872563708
+        ],
+        [
+          10660255763,
+          3903073066
+        ],
+        [
+          9756633599,
+          -4436129367
+        ],
+        [
+          -10660255743,
+          -3903073069
+        ],
+        [
+          -4171765644,
+          9872563714
+        ],
+        [
+          -9756633634,
+          4436129380
+        ],
+        [
+          -2534215116,
+          -2466861120
+        ],
+        [
+          4188747438,
+          10551276056
+        ],
+        [
+          -4188747426,
+          -10551276075
+        ],
+        [
+          2534215099,
+          2466861122
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 9.103429121637419e-09,
+      "steps": 63,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 40,
+      "stratum": "uniform_disk",
+      "seed_label": "5",
+      "normalized_log_value": 24.708967203177888,
+      "sphere_tangent_min_curvature_float": 0.0778732503259753,
+      "terminal_integer_points_grid_1e10": [
+        [
+          5807706800,
+          -9007867944
+        ],
+        [
+          2311463101,
+          11114502685
+        ],
+        [
+          -2072137159,
+          -2865989803
+        ],
+        [
+          -5807706812,
+          9007867961
+        ],
+        [
+          2072137163,
+          2865989805
+        ],
+        [
+          -2311463104,
+          -11114502699
+        ],
+        [
+          -10374253868,
+          2691839418
+        ],
+        [
+          -9830036550,
+          -5678504504
+        ],
+        [
+          9830036555,
+          5678504504
+        ],
+        [
+          10374253874,
+          -2691839422
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 6.591372780917482e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 41,
+      "stratum": "uniform_disk",
+      "seed_label": "6",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787327238130935,
+      "terminal_integer_points_grid_1e10": [
+        [
+          10934832509,
+          -3050322577
+        ],
+        [
+          9376450029,
+          5191659860
+        ],
+        [
+          -10934832608,
+          3050322600
+        ],
+        [
+          2720844418,
+          -2259348433
+        ],
+        [
+          -5007708367,
+          10188124940
+        ],
+        [
+          3380290677,
+          10170780426
+        ],
+        [
+          -3380290666,
+          -10170780564
+        ],
+        [
+          -2720844517,
+          2259348468
+        ],
+        [
+          5007708382,
+          -10188124922
+        ],
+        [
+          -9376449856,
+          -5191659798
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 5.12171638433756e-10,
+      "steps": 50,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 42,
+      "stratum": "uniform_disk",
+      "seed_label": "7",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325068179363,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -5276765206,
+          -9328820508
+        ],
+        [
+          10142135779,
+          -5100207223
+        ],
+        [
+          -2234496817,
+          2741290561
+        ],
+        [
+          10201118241,
+          3287602445
+        ],
+        [
+          -2950695524,
+          10962136095
+        ],
+        [
+          2234496818,
+          -2741290563
+        ],
+        [
+          5276765205,
+          9328820508
+        ],
+        [
+          -10201118240,
+          -3287602443
+        ],
+        [
+          2950695524,
+          -10962136095
+        ],
+        [
+          -10142135779,
+          5100207224
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.7972722865522428e-08,
+      "steps": 57,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 43,
+      "stratum": "uniform_disk",
+      "seed_label": "8",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325670574952,
+      "terminal_integer_points_grid_1e10": [
+        [
+          8267796627,
+          -6820167330
+        ],
+        [
+          10701876250,
+          583941328
+        ],
+        [
+          1104498997,
+          3359722008
+        ],
+        [
+          -1104498994,
+          -3359722012
+        ],
+        [
+          7642765670,
+          8394234010
+        ],
+        [
+          -1171053714,
+          11291752082
+        ],
+        [
+          1171053710,
+          -11291752087
+        ],
+        [
+          -7642765659,
+          -8394234018
+        ],
+        [
+          -8267796630,
+          6820167339
+        ],
+        [
+          -10701876256,
+          -583941319
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822098,
+      "gradient_max": 7.136877419686855e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 44,
+      "stratum": "uniform_disk",
+      "seed_label": "9",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787325004010254,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -7959350952,
+          8094675055
+        ],
+        [
+          7962536,
+          10717792664
+        ],
+        [
+          -11339191676,
+          -545677940
+        ],
+        [
+          7266349451,
+          7878534651
+        ],
+        [
+          -7962493,
+          -10717792658
+        ],
+        [
+          11339191635,
+          545677980
+        ],
+        [
+          -3293598644,
+          1288354603
+        ],
+        [
+          3293598720,
+          -1288354663
+        ],
+        [
+          -7266349556,
+          -7878534640
+        ],
+        [
+          7959350980,
+          -8094675051
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 2.882925009828341e-09,
+      "steps": 40,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 45,
+      "stratum": "uniform_disk",
+      "seed_label": "10",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325206793654,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6830038289,
+          8259644062
+        ],
+        [
+          -1719481794,
+          3090474452
+        ],
+        [
+          983833008,
+          -11309602316
+        ],
+        [
+          -6830038286,
+          -8259644067
+        ],
+        [
+          9091314459,
+          -6798752328
+        ],
+        [
+          -9091314458,
+          6798752345
+        ],
+        [
+          -10619408353,
+          -1448899391
+        ],
+        [
+          10619408349,
+          1448899391
+        ],
+        [
+          1719481777,
+          -3090474459
+        ],
+        [
+          -983832993,
+          11309602311
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 7.51025686085427e-09,
+      "steps": 51,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 46,
+      "stratum": "uniform_disk",
+      "seed_label": "11",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.0778732544580493,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -2135700120,
+          -2818942176
+        ],
+        [
+          9954545377,
+          5457294030
+        ],
+        [
+          10311473234,
+          -2923125553
+        ],
+        [
+          2559395636,
+          11060041856
+        ],
+        [
+          -5604846988,
+          9135471155
+        ],
+        [
+          2135700111,
+          2818942182
+        ],
+        [
+          5604846995,
+          -9135471154
+        ],
+        [
+          -10311473238,
+          2923125547
+        ],
+        [
+          -9954545383,
+          -5457294030
+        ],
+        [
+          -2559395624,
+          -11060041857
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 4.273202458549008e-09,
+      "steps": 54,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 47,
+      "stratum": "uniform_disk",
+      "seed_label": "12",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.07787325262612277,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3150031857,
+          -1607777735
+        ],
+        [
+          8009918344,
+          7121260545
+        ],
+        [
+          -1067921988,
+          -10664458975
+        ],
+        [
+          1067921993,
+          10664458973
+        ],
+        [
+          11337566969,
+          -578452780
+        ],
+        [
+          -11337566975,
+          578452794
+        ],
+        [
+          -7119758527,
+          8842175624
+        ],
+        [
+          7119758543,
+          -8842175620
+        ],
+        [
+          -8009918343,
+          -7121260549
+        ],
+        [
+          -3150031872,
+          1607777722
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.8796204148685547e-08,
+      "steps": 52,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 48,
+      "stratum": "uniform_disk",
+      "seed_label": "13",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787323887476583,
+      "terminal_integer_points_grid_1e10": [
+        [
+          1471744102,
+          -10616266428
+        ],
+        [
+          -11155283251,
+          -2105869738
+        ],
+        [
+          11155283256,
+          2105869766
+        ],
+        [
+          9000637632,
+          -6918349105
+        ],
+        [
+          -6109111973,
+          -8806241721
+        ],
+        [
+          -3439923642,
+          821325015
+        ],
+        [
+          -1471744188,
+          10616266386
+        ],
+        [
+          -9000637669,
+          6918349018
+        ],
+        [
+          3439923785,
+          -821325013
+        ],
+        [
+          6109111949,
+          8806241819
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 1.178133501866796e-08,
+      "steps": 40,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 49,
+      "stratum": "uniform_disk",
+      "seed_label": "14",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787323765859806,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6829743703,
+          9068055623
+        ],
+        [
+          2215172515,
+          -11134093684
+        ],
+        [
+          -2215172521,
+          11134093706
+        ],
+        [
+          -787548928,
+          -3447813310
+        ],
+        [
+          -8865732572,
+          6022452037
+        ],
+        [
+          8865732598,
+          -6022452048
+        ],
+        [
+          10601321895,
+          1575791066
+        ],
+        [
+          -10601321906,
+          -1575791066
+        ],
+        [
+          787548928,
+          3447813310
+        ],
+        [
+          -6829743711,
+          -9068055634
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 1.7179943689882293e-08,
+      "steps": 43,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 50,
+      "stratum": "uniform_disk",
+      "seed_label": "15",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787324500161133,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3495663629,
+          -10800711445
+        ],
+        [
+          -5728213346,
+          -9801153189
+        ],
+        [
+          381019581,
+          3516031007
+        ],
+        [
+          -9506269837,
+          4949947150
+        ],
+        [
+          10345955522,
+          2798633137
+        ],
+        [
+          -10345955528,
+          -2798633131
+        ],
+        [
+          9506269859,
+          -4949947150
+        ],
+        [
+          -3495663630,
+          10800711437
+        ],
+        [
+          -381019586,
+          -3516031000
+        ],
+        [
+          5728213336,
+          9801153184
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822098,
+      "gradient_max": 7.685669856094535e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 51,
+      "stratum": "uniform_disk",
+      "seed_label": "16",
+      "normalized_log_value": 24.708967203177888,
+      "sphere_tangent_min_curvature_float": 0.07787328910504279,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6050841997,
+          9605328844
+        ],
+        [
+          -9336478339,
+          5263203885
+        ],
+        [
+          -497683287,
+          -3501422725
+        ],
+        [
+          -3134712004,
+          10910940031
+        ],
+        [
+          10433265875,
+          2453182945
+        ],
+        [
+          9336478276,
+          -5263203884
+        ],
+        [
+          -6050842037,
+          -9605328895
+        ],
+        [
+          -10433265907,
+          -2453182960
+        ],
+        [
+          497683400,
+          3501422812
+        ],
+        [
+          3134712025,
+          -10910940052
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 1.3891629402351668e-08,
+      "steps": 54,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 52,
+      "stratum": "uniform_disk",
+      "seed_label": "17",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325152834922,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -600352369,
+          3485287229
+        ],
+        [
+          6330467189,
+          -9423386719
+        ],
+        [
+          9177795812,
+          5535269374
+        ],
+        [
+          2812757252,
+          10998337529
+        ],
+        [
+          -2812757233,
+          -10998337526
+        ],
+        [
+          -6330467202,
+          9423386720
+        ],
+        [
+          -9177795809,
+          -5535269375
+        ],
+        [
+          10500843930,
+          -2145558202
+        ],
+        [
+          -10500843932,
+          2145558177
+        ],
+        [
+          600352362,
+          -3485287208
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 3.2150833106925347e-09,
+      "steps": 45,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 53,
+      "stratum": "uniform_disk",
+      "seed_label": "18",
+      "normalized_log_value": 24.708967203177895,
+      "sphere_tangent_min_curvature_float": 0.0778732516817716,
+      "terminal_integer_points_grid_1e10": [
+        [
+          9869787703,
+          4178329066
+        ],
+        [
+          -9869787704,
+          -4178329066
+        ],
+        [
+          10090643782,
+          -3612485468
+        ],
+        [
+          -100216657,
+          3535195411
+        ],
+        [
+          4930681418,
+          -10225625291
+        ],
+        [
+          100216658,
+          -3535195413
+        ],
+        [
+          -4343471016,
+          -10488531421
+        ],
+        [
+          4343471018,
+          10488531420
+        ],
+        [
+          -10090643783,
+          3612485468
+        ],
+        [
+          -4930681418,
+          10225625294
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 2.157489920051603e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 54,
+      "stratum": "uniform_disk",
+      "seed_label": "19",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787324036923512,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -6347450400,
+          -9411955441
+        ],
+        [
+          -606636423,
+          -3484198962
+        ],
+        [
+          2792919015,
+          -11003391995
+        ],
+        [
+          10504695983,
+          2126618223
+        ],
+        [
+          9167798997,
+          -5551810974
+        ],
+        [
+          -10504695984,
+          -2126618199
+        ],
+        [
+          -9167798984,
+          5551811004
+        ],
+        [
+          -2792918997,
+          11003391997
+        ],
+        [
+          606636409,
+          3484198897
+        ],
+        [
+          6347450384,
+          9411955449
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 4.2963067770074304e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 55,
+      "stratum": "uniform_disk",
+      "seed_label": "20",
+      "normalized_log_value": 24.708967203177888,
+      "sphere_tangent_min_curvature_float": 0.07787325576118742,
+      "terminal_integer_points_grid_1e10": [
+        [
+          11279312643,
+          1285355554
+        ],
+        [
+          692299098,
+          -10695413238
+        ],
+        [
+          -3370735994,
+          1070415260
+        ],
+        [
+          6736081948,
+          8336446604
+        ],
+        [
+          8471208746,
+          -7557357594
+        ],
+        [
+          -692299066,
+          10695413320
+        ],
+        [
+          -8471208687,
+          7557357580
+        ],
+        [
+          3370735993,
+          -1070415280
+        ],
+        [
+          -11279312671,
+          -1285355518
+        ],
+        [
+          -6736082008,
+          -8336446688
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.3950797850270646e-08,
+      "steps": 39,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 56,
+      "stratum": "uniform_disk",
+      "seed_label": "21",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787325190480214,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -2689891104,
+          2296113177
+        ],
+        [
+          2689891138,
+          -2296113171
+        ],
+        [
+          -10892372423,
+          3198633303
+        ],
+        [
+          -3518188363,
+          -10123907045
+        ],
+        [
+          9446133029,
+          5063764724
+        ],
+        [
+          -4868800577,
+          10255233426
+        ],
+        [
+          3518188367,
+          10123907080
+        ],
+        [
+          10892372434,
+          -3198633322
+        ],
+        [
+          -9446133049,
+          -5063764738
+        ],
+        [
+          4868800548,
+          -10255233435
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822094,
+      "gradient_max": 3.488026933951005e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 57,
+      "stratum": "uniform_disk",
+      "seed_label": "22",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787324545751466,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -6492762905,
+          8527319217
+        ],
+        [
+          -1000584472,
+          -10670987504
+        ],
+        [
+          11237533429,
+          -1610240165
+        ],
+        [
+          6492762921,
+          -8527319211
+        ],
+        [
+          -11237533433,
+          1610240183
+        ],
+        [
+          -8685719893,
+          -7309808603
+        ],
+        [
+          3400215352,
+          972720672
+        ],
+        [
+          -3400215360,
+          -972720716
+        ],
+        [
+          1000584455,
+          10670987510
+        ],
+        [
+          8685719906,
+          7309808616
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822126,
+      "gradient_max": 1.5536679054406477e-08,
+      "steps": 38,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 58,
+      "stratum": "uniform_disk",
+      "seed_label": "23",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787326120087343,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6214046366,
+          8732512279
+        ],
+        [
+          -10486621624,
+          -2214025568
+        ],
+        [
+          -6214046388,
+          -8732512310
+        ],
+        [
+          -1938743112,
+          2957858217
+        ],
+        [
+          1938743099,
+          -2957858200
+        ],
+        [
+          -1800155495,
+          11208678454
+        ],
+        [
+          1800155496,
+          -11208678451
+        ],
+        [
+          9559734273,
+          -6122622981
+        ],
+        [
+          -9559734273,
+          6122622970
+        ],
+        [
+          10486621658,
+          2214025589
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 6.84203760314972e-09,
+      "steps": 45,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 59,
+      "stratum": "uniform_disk",
+      "seed_label": "24",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325609423454,
+      "terminal_integer_points_grid_1e10": [
+        [
+          9312913761,
+          -5304788445
+        ],
+        [
+          10444102312,
+          2406630422
+        ],
+        [
+          -513293267,
+          -3499168479
+        ],
+        [
+          513293253,
+          3499168473
+        ],
+        [
+          6093617730,
+          9578249049
+        ],
+        [
+          -3086022444,
+          10924811090
+        ],
+        [
+          -10444102321,
+          -2406630421
+        ],
+        [
+          -6093617724,
+          -9578249049
+        ],
+        [
+          3086022453,
+          -10924811087
+        ],
+        [
+          -9312913753,
+          5304788448
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 2.3106660140825852e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 60,
+      "stratum": "uniform_disk",
+      "seed_label": "25",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787326023549256,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3073410274,
+          -10267681937
+        ],
+        [
+          5311328341,
+          10033186074
+        ],
+        [
+          -9216354187,
+          5470827954
+        ],
+        [
+          11021482920,
+          2720651809
+        ],
+        [
+          -5311328337,
+          -10033186087
+        ],
+        [
+          2787450163,
+          2176642232
+        ],
+        [
+          -2787450216,
+          -2176642258
+        ],
+        [
+          9216354215,
+          -5470827941
+        ],
+        [
+          -11021482930,
+          -2720651789
+        ],
+        [
+          -3073410245,
+          10267681943
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 3.9061794132599914e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 61,
+      "stratum": "uniform_disk",
+      "seed_label": "26",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.0778732467423689,
+      "terminal_integer_points_grid_1e10": [
+        [
+          10668723694,
+          -1024440809
+        ],
+        [
+          965115944,
+          -3402381621
+        ],
+        [
+          -8541814787,
+          -6473680881
+        ],
+        [
+          -10668723625,
+          1024440719
+        ],
+        [
+          8541814753,
+          6473680754
+        ],
+        [
+          1635361715,
+          11233905103
+        ],
+        [
+          -965115917,
+          3402381773
+        ],
+        [
+          7290370253,
+          -8702041888
+        ],
+        [
+          -1635361659,
+          -11233905060
+        ],
+        [
+          -7290370371,
+          8702041910
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 6.294595067402042e-09,
+      "steps": 45,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 62,
+      "stratum": "uniform_disk",
+      "seed_label": "27",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325515622988,
+      "terminal_integer_points_grid_1e10": [
+        [
+          4469153840,
+          -10435597539
+        ],
+        [
+          9634629365,
+          4695216739
+        ],
+        [
+          -10760729940,
+          3616866467
+        ],
+        [
+          -9634629348,
+          -4695216734
+        ],
+        [
+          -4469153845,
+          10435597537
+        ],
+        [
+          3906508180,
+          9980497829
+        ],
+        [
+          -3906508183,
+          -9980497835
+        ],
+        [
+          -2599218282,
+          2398273194
+        ],
+        [
+          10760729929,
+          -3616866470
+        ],
+        [
+          2599218284,
+          -2398273188
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 9.420823587902305e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 63,
+      "stratum": "uniform_disk",
+      "seed_label": "28",
+      "normalized_log_value": 24.708967203177863,
+      "sphere_tangent_min_curvature_float": 0.07787331689183212,
+      "terminal_integer_points_grid_1e10": [
+        [
+          1774454858,
+          -10569884298
+        ],
+        [
+          8465571425,
+          -6573069477
+        ],
+        [
+          3036191508,
+          1813612845
+        ],
+        [
+          -3036191440,
+          -1813612885
+        ],
+        [
+          -11274039745,
+          -1330811483
+        ],
+        [
+          -8465571445,
+          6573069555
+        ],
+        [
+          11274039757,
+          1330811476
+        ],
+        [
+          6516248599,
+          9295888181
+        ],
+        [
+          -1774454931,
+          10569884211
+        ],
+        [
+          -6516248587,
+          -9295888125
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 1.3228577344648329e-08,
+      "steps": 52,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 64,
+      "stratum": "uniform_disk",
+      "seed_label": "29",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787324299461429,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -4223495773,
+          -10537415019
+        ],
+        [
+          -2542330660,
+          -2458496424
+        ],
+        [
+          -9741961629,
+          4468257619
+        ],
+        [
+          4223495749,
+          10537415019
+        ],
+        [
+          2542330692,
+          2458496433
+        ],
+        [
+          9741961648,
+          -4468257639
+        ],
+        [
+          -10673060193,
+          -3867921670
+        ],
+        [
+          -4139208630,
+          9886257920
+        ],
+        [
+          10673060195,
+          3867921674
+        ],
+        [
+          4139208601,
+          -9886257913
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.9216678914801832e-08,
+      "steps": 33,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 65,
+      "stratum": "gaussian",
+      "seed_label": "0",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325934155219,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -11320471091,
+          -849685583
+        ],
+        [
+          279573651,
+          -10714148657
+        ],
+        [
+          11320471130,
+          849685539
+        ],
+        [
+          -279573738,
+          10714148644
+        ],
+        [
+          -3326976713,
+          1199531416
+        ],
+        [
+          8173647342,
+          -7878230820
+        ],
+        [
+          7052371532,
+          8070638156
+        ],
+        [
+          -7052371498,
+          -8070638073
+        ],
+        [
+          -8173647454,
+          7878230732
+        ],
+        [
+          3326976840,
+          -1199531353
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.409446515054924e-08,
+      "steps": 45,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 66,
+      "stratum": "gaussian",
+      "seed_label": "1",
+      "normalized_log_value": 24.708967203177885,
+      "sphere_tangent_min_curvature_float": 0.07787324952012509,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -7796830338,
+          7353949896
+        ],
+        [
+          7796830349,
+          -7353949911
+        ],
+        [
+          -753546649,
+          10691272669
+        ],
+        [
+          753546638,
+          -10691272656
+        ],
+        [
+          7376946477,
+          8628771226
+        ],
+        [
+          11349681182,
+          244476263
+        ],
+        [
+          -11349681194,
+          -244476284
+        ],
+        [
+          -3195992415,
+          -1514358756
+        ],
+        [
+          3195992406,
+          1514358781
+        ],
+        [
+          -7376946456,
+          -8628771227
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 5.331413333031776e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 67,
+      "stratum": "gaussian",
+      "seed_label": "2",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325929286998,
+      "terminal_integer_points_grid_1e10": [
+        [
+          7220136019,
+          7920907779
+        ],
+        [
+          -8753119568,
+          7228964589
+        ],
+        [
+          437679508,
+          -11343873695
+        ],
+        [
+          10676893009,
+          935465898
+        ],
+        [
+          -10676893187,
+          -935465927
+        ],
+        [
+          -1568553829,
+          3169745927
+        ],
+        [
+          1568553553,
+          -3169745946
+        ],
+        [
+          -7220135872,
+          -7920907822
+        ],
+        [
+          -437679264,
+          11343873647
+        ],
+        [
+          8753119632,
+          -7228964451
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 6.312157019294773e-09,
+      "steps": 38,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 68,
+      "stratum": "gaussian",
+      "seed_label": "3",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325480371242,
+      "terminal_integer_points_grid_1e10": [
+        [
+          669557021,
+          -3472656533
+        ],
+        [
+          -669557024,
+          3472656525
+        ],
+        [
+          6516648928,
+          -9295607499
+        ],
+        [
+          -10541442342,
+          1936268677
+        ],
+        [
+          9065881915,
+          5716723537
+        ],
+        [
+          -6516648926,
+          9295607500
+        ],
+        [
+          10541442355,
+          -1936268671
+        ],
+        [
+          -2593440425,
+          -11052108330
+        ],
+        [
+          2593440425,
+          11052108332
+        ],
+        [
+          -9065881928,
+          -5716723539
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822098,
+      "gradient_max": 2.215316108333809e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 69,
+      "stratum": "gaussian",
+      "seed_label": "4",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787327999216176,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -10573746850,
+          -1751291096
+        ],
+        [
+          -6591602568,
+          -8451148971
+        ],
+        [
+          6591602561,
+          8451148953
+        ],
+        [
+          -1306105868,
+          11276928619
+        ],
+        [
+          -9281588174,
+          6536601053
+        ],
+        [
+          10573746838,
+          1751291103
+        ],
+        [
+          1306105884,
+          -11276928593
+        ],
+        [
+          1806955964,
+          -3040157926
+        ],
+        [
+          9281588194,
+          -6536601061
+        ],
+        [
+          -1806955981,
+          3040157918
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 4.886858917529935e-09,
+      "steps": 45,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 70,
+      "stratum": "gaussian",
+      "seed_label": "5",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325091848125,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6711354435,
+          9156022796
+        ],
+        [
+          -8324690255,
+          6750605552
+        ],
+        [
+          -1550556543,
+          10605042083
+        ],
+        [
+          -3073861707,
+          -1749006638
+        ],
+        [
+          8324690263,
+          -6750605553
+        ],
+        [
+          1550556545,
+          -10605042070
+        ],
+        [
+          -6711354437,
+          -9156022806
+        ],
+        [
+          11299659263,
+          1092122889
+        ],
+        [
+          3073861698,
+          1749006632
+        ],
+        [
+          -11299659262,
+          -1092122885
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 3.486658295415168e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 71,
+      "stratum": "gaussian",
+      "seed_label": "6",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.0778732504347448,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -10655549800,
+          -3915902215
+        ],
+        [
+          -4183646425,
+          9867534888
+        ],
+        [
+          9761966438,
+          -4424381774
+        ],
+        [
+          -2531243845,
+          -2469909982
+        ],
+        [
+          4183646593,
+          -9867534883
+        ],
+        [
+          -4176043533,
+          -10556310573
+        ],
+        [
+          -9761966461,
+          4424381885
+        ],
+        [
+          10655549741,
+          3915902270
+        ],
+        [
+          2531243673,
+          2469909855
+        ],
+        [
+          4176043619,
+          10556310528
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 2.0332356243102367e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 72,
+      "stratum": "gaussian",
+      "seed_label": "7",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787327129170164,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -6691391357,
+          -8372360797
+        ],
+        [
+          11272275509,
+          1345673711
+        ],
+        [
+          749502276,
+          -10691556916
+        ],
+        [
+          -8511514210,
+          7511934345
+        ],
+        [
+          -11272275482,
+          -1345673711
+        ],
+        [
+          6691391356,
+          8372360817
+        ],
+        [
+          -3376413766,
+          1052368836
+        ],
+        [
+          3376413759,
+          -1052368817
+        ],
+        [
+          8511514176,
+          -7511934325
+        ],
+        [
+          -749502260,
+          10691556856
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.9603966450176813e-08,
+      "steps": 38,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 73,
+      "stratum": "gaussian",
+      "seed_label": "8",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325215166921,
+      "terminal_integer_points_grid_1e10": [
+        [
+          11067374283,
+          -2527500488
+        ],
+        [
+          -11067374272,
+          2527500494
+        ],
+        [
+          2825087415,
+          -2127564588
+        ],
+        [
+          -9119275229,
+          -5631159958
+        ],
+        [
+          -5485968878,
+          9938771414
+        ],
+        [
+          -2825087425,
+          2127564591
+        ],
+        [
+          2893386903,
+          10319857321
+        ],
+        [
+          5485968876,
+          -9938771392
+        ],
+        [
+          9119275227,
+          5631159957
+        ],
+        [
+          -2893386901,
+          -10319857351
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 2.1321255871953326e-09,
+      "steps": 63,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 74,
+      "stratum": "gaussian",
+      "seed_label": "9",
+      "normalized_log_value": 24.708967203177895,
+      "sphere_tangent_min_curvature_float": 0.07787325094431058,
+      "terminal_integer_points_grid_1e10": [
+        [
+          5142905538,
+          -9403279515
+        ],
+        [
+          -2586926239,
+          -10400911299
+        ],
+        [
+          -5142905543,
+          9403279515
+        ],
+        [
+          -3507523594,
+          -452689948
+        ],
+        [
+          9682219821,
+          5927027190
+        ],
+        [
+          -10869796426,
+          3274531635
+        ],
+        [
+          2586926237,
+          10400911301
+        ],
+        [
+          -9682219820,
+          -5927027192
+        ],
+        [
+          3507523599,
+          452689953
+        ],
+        [
+          10869796427,
+          -3274531640
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 4.0783039167990864e-09,
+      "steps": 47,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 75,
+      "stratum": "gaussian",
+      "seed_label": "10",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787325151581069,
+      "terminal_integer_points_grid_1e10": [
+        [
+          4673171025,
+          -9645341654
+        ],
+        [
+          3641465739,
+          10752430392
+        ],
+        [
+          -2404211057,
+          -2593726887
+        ],
+        [
+          2404211051,
+          2593726895
+        ],
+        [
+          10445790747,
+          4445276975
+        ],
+        [
+          9971537946,
+          -3929322368
+        ],
+        [
+          -3641465728,
+          -10752430384
+        ],
+        [
+          -4673171022,
+          9645341649
+        ],
+        [
+          -9971537948,
+          3929322368
+        ],
+        [
+          -10445790752,
+          -4445276984
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822098,
+      "gradient_max": 4.8487030390731434e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 76,
+      "stratum": "gaussian",
+      "seed_label": "11",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.0778732650146009,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -9780918721,
+          4382325190
+        ],
+        [
+          4124793378,
+          -10576441368
+        ],
+        [
+          -5141902622,
+          -10121060768
+        ],
+        [
+          173585644,
+          3532352931
+        ],
+        [
+          10163464232,
+          3402225499
+        ],
+        [
+          5141902466,
+          10121060732
+        ],
+        [
+          -4124793257,
+          10576441320
+        ],
+        [
+          -10163464152,
+          -3402225355
+        ],
+        [
+          -173585639,
+          -3532353146
+        ],
+        [
+          9780918669,
+          -4382325034
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 3.852359853340204e-08,
+      "steps": 41,
+      "status": "floating_line_search_stop",
+      "seed_index": 77,
+      "stratum": "gaussian",
+      "seed_label": "12",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787323132298107,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3515624079,
+          -384755745
+        ],
+        [
+          4960046116,
+          9501004531
+        ],
+        [
+          10804419910,
+          3484184395
+        ],
+        [
+          -2787637557,
+          10348923576
+        ],
+        [
+          -10804419845,
+          -3484184516
+        ],
+        [
+          9795060671,
+          -5738625174
+        ],
+        [
+          -9795060780,
+          5738625155
+        ],
+        [
+          -4960046030,
+          -9501004514
+        ],
+        [
+          -3515624124,
+          384755891
+        ],
+        [
+          2787637559,
+          -10348923598
+        ]
+      ]
+    },
+    {
+      "objective": 20.483755599371833,
+      "gradient_max": 2.9770347964586108e-08,
+      "steps": 90,
+      "status": "floating_line_search_stop",
+      "seed_index": 78,
+      "stratum": "gaussian",
+      "seed_label": "13",
+      "normalized_log_value": 24.516244400628143,
+      "sphere_tangent_min_curvature_float": 2.0653725813745736e-07,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -9120914270,
+          5286155829
+        ],
+        [
+          -4,
+          -493
+        ],
+        [
+          -6789205276,
+          -8063855128
+        ],
+        [
+          3622090067,
+          9900478925
+        ],
+        [
+          -10383027524,
+          -1813053196
+        ],
+        [
+          10378638262,
+          -1847790930
+        ],
+        [
+          9136405435,
+          5254717632
+        ],
+        [
+          -3588331253,
+          9909978746
+        ],
+        [
+          -17486113,
+          -10540993686
+        ],
+        [
+          6761830675,
+          -8085637698
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 6.658620321786657e-10,
+      "steps": 55,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 79,
+      "stratum": "gaussian",
+      "seed_label": "14",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325052651253,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -6794972683,
+          8288515512
+        ],
+        [
+          -10613172566,
+          1493891303
+        ],
+        [
+          -9120045844,
+          -6760162397
+        ],
+        [
+          9120045845,
+          6760162398
+        ],
+        [
+          6794972683,
+          -8288515512
+        ],
+        [
+          1031754128,
+          11305331277
+        ],
+        [
+          1732563730,
+          3083159563
+        ],
+        [
+          -1732563730,
+          -3083159563
+        ],
+        [
+          10613172566,
+          -1493891302
+        ],
+        [
+          -1031754128,
+          -11305331278
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.8455267536410247e-08,
+      "steps": 54,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 80,
+      "stratum": "gaussian",
+      "seed_label": "15",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325600330805,
+      "terminal_integer_points_grid_1e10": [
+        [
+          6121255654,
+          -9560609866
+        ],
+        [
+          -523397213,
+          3497671427
+        ],
+        [
+          3054457168,
+          10933678388
+        ],
+        [
+          523397200,
+          -3497671421
+        ],
+        [
+          9297553938,
+          5331663333
+        ],
+        [
+          -10451009451,
+          2376456321
+        ],
+        [
+          -9297553938,
+          -5331663336
+        ],
+        [
+          -6121255643,
+          9560609876
+        ],
+        [
+          10451009453,
+          -2376456322
+        ],
+        [
+          -3054457166,
+          -10933678399
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 9.283862567599499e-09,
+      "steps": 52,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 81,
+      "stratum": "gaussian",
+      "seed_label": "16",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787325023271241,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -9908173371,
+          5541040721
+        ],
+        [
+          9908173362,
+          -5541040741
+        ],
+        [
+          -5681681669,
+          -9087884038
+        ],
+        [
+          5681681678,
+          9087884034
+        ],
+        [
+          2466041916,
+          -11081230485
+        ],
+        [
+          10335755599,
+          2836071141
+        ],
+        [
+          -10335755595,
+          -2836071160
+        ],
+        [
+          -2111853733,
+          2836851045
+        ],
+        [
+          -2466041924,
+          11081230499
+        ],
+        [
+          2111853736,
+          -2836851016
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.635534641053482e-08,
+      "steps": 36,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 82,
+      "stratum": "gaussian",
+      "seed_label": "17",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787322573987213,
+      "terminal_integer_points_grid_1e10": [
+        [
+          7555325741,
+          7601854759
+        ],
+        [
+          7651700472,
+          -8386090382
+        ],
+        [
+          3243220781,
+          -1410379043
+        ],
+        [
+          -3243220751,
+          1410378976
+        ],
+        [
+          407960904,
+          10710028537
+        ],
+        [
+          -11351657284,
+          -122102244
+        ],
+        [
+          -7555325799,
+          -7601854768
+        ],
+        [
+          -7651700437,
+          8386090368
+        ],
+        [
+          11351657288,
+          122102306
+        ],
+        [
+          -407960916,
+          -10710028508
+        ]
+      ]
+    },
+    {
+      "objective": 20.48375559937183,
+      "gradient_max": 5.847934936298316e-08,
+      "steps": 91,
+      "status": "floating_line_search_stop",
+      "seed_index": 83,
+      "stratum": "gaussian",
+      "seed_label": "18",
+      "normalized_log_value": 24.516244400628146,
+      "sphere_tangent_min_curvature_float": 1.130279290594502e-07,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -4806736088,
+          -9381742609
+        ],
+        [
+          -9712059059,
+          -4096875626
+        ],
+        [
+          10526545717,
+          528032800
+        ],
+        [
+          1307932107,
+          10458533457
+        ],
+        [
+          -352,
+          -6
+        ],
+        [
+          -5721529724,
+          8853736344
+        ],
+        [
+          8404964248,
+          -6363160850
+        ],
+        [
+          7726034713,
+          7172357433
+        ],
+        [
+          2347996833,
+          -10275239918
+        ],
+        [
+          -10073148395,
+          3104358975
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.1873249050609047e-08,
+      "steps": 43,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 84,
+      "stratum": "gaussian",
+      "seed_label": "19",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325627914997,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -8217564073,
+          -6880609226
+        ],
+        [
+          1383687693,
+          10628101979
+        ],
+        [
+          -1383687674,
+          -10628101996
+        ],
+        [
+          3100970773,
+          -1700479401
+        ],
+        [
+          -6854428857,
+          9049410857
+        ],
+        [
+          8217564079,
+          6880609233
+        ],
+        [
+          6854428912,
+          -9049410849
+        ],
+        [
+          -11315428262,
+          914393489
+        ],
+        [
+          -3100970813,
+          1700479361
+        ],
+        [
+          11315428222,
+          -914393447
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682212,
+      "gradient_max": 1.0284830764817343e-08,
+      "steps": 42,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 85,
+      "stratum": "continuation",
+      "seed_label": "previous_add_0",
+      "normalized_log_value": 24.708967203177867,
+      "sphere_tangent_min_curvature_float": 0.07787324491179415,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -3160793927,
+          1586515609
+        ],
+        [
+          11341207324,
+          -502044107
+        ],
+        [
+          7961751551,
+          7175071796
+        ],
+        [
+          996037809,
+          10671412852
+        ],
+        [
+          -7179177861,
+          8794000059
+        ],
+        [
+          -11341207327,
+          502044081
+        ],
+        [
+          -7961751535,
+          -7175071806
+        ],
+        [
+          -996037802,
+          -10671412841
+        ],
+        [
+          3160793915,
+          -1586515585
+        ],
+        [
+          7179177854,
+          -8794000058
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822105,
+      "gradient_max": 2.537270304969752e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 86,
+      "stratum": "continuation",
+      "seed_label": "previous_add_1",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787323317423923,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -1586515622,
+          -3160793934
+        ],
+        [
+          10671412865,
+          -996037803
+        ],
+        [
+          1586515581,
+          3160793902
+        ],
+        [
+          502044121,
+          11341207313
+        ],
+        [
+          -7175071790,
+          7961751561
+        ],
+        [
+          -10671412875,
+          996037817
+        ],
+        [
+          -8794000052,
+          -7179177864
+        ],
+        [
+          -502044067,
+          -11341207318
+        ],
+        [
+          7175071803,
+          -7961751528
+        ],
+        [
+          8794000037,
+          7179177853
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822126,
+      "gradient_max": 1.0284828988460504e-08,
+      "steps": 42,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 87,
+      "stratum": "continuation",
+      "seed_label": "previous_add_2",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.0778732449117918,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3160793927,
+          -1586515609
+        ],
+        [
+          11341207327,
+          -502044081
+        ],
+        [
+          7961751535,
+          7175071806
+        ],
+        [
+          996037802,
+          10671412841
+        ],
+        [
+          -3160793915,
+          1586515585
+        ],
+        [
+          -11341207324,
+          502044107
+        ],
+        [
+          -7961751551,
+          -7175071796
+        ],
+        [
+          -996037809,
+          -10671412852
+        ],
+        [
+          7179177861,
+          -8794000059
+        ],
+        [
+          -7179177854,
+          8794000058
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822112,
+      "gradient_max": 1.0284828988460504e-08,
+      "steps": 42,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 88,
+      "stratum": "continuation",
+      "seed_label": "previous_add_3",
+      "normalized_log_value": 24.708967203177874,
+      "sphere_tangent_min_curvature_float": 0.07787324491179418,
+      "terminal_integer_points_grid_1e10": [
+        [
+          1586515609,
+          3160793927
+        ],
+        [
+          10671412852,
+          -996037809
+        ],
+        [
+          8794000059,
+          7179177861
+        ],
+        [
+          502044081,
+          11341207327
+        ],
+        [
+          -7175071806,
+          7961751535
+        ],
+        [
+          -10671412841,
+          996037802
+        ],
+        [
+          -1586515585,
+          -3160793915
+        ],
+        [
+          -502044107,
+          -11341207324
+        ],
+        [
+          7175071796,
+          -7961751551
+        ],
+        [
+          -8794000058,
+          -7179177854
+        ]
+      ]
+    },
+    {
+      "objective": 20.29248327353563,
+      "gradient_max": 1.355881806830439e-08,
+      "steps": 20,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 89,
+      "stratum": "continuation",
+      "seed_label": "next_remove_0_3",
+      "normalized_log_value": 24.70751672646435,
+      "sphere_tangent_min_curvature_float": -0.07626728126341065,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3287945116,
+          -1271108539
+        ],
+        [
+          -3287945105,
+          1271108570
+        ],
+        [
+          9938923877,
+          4798494869
+        ],
+        [
+          -4126573386,
+          10236168869
+        ],
+        [
+          -10716847151,
+          4143097084
+        ],
+        [
+          -9938923869,
+          -4798494870
+        ],
+        [
+          -3815122320,
+          -9868482845
+        ],
+        [
+          4126573379,
+          -10236168865
+        ],
+        [
+          10716847139,
+          -4143097116
+        ],
+        [
+          3815122320,
+          9868482843
+        ]
+      ]
+    },
+    {
+      "objective": 20.292483273535627,
+      "gradient_max": 2.7364249532979557e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 90,
+      "stratum": "continuation",
+      "seed_label": "next_remove_1_10",
+      "normalized_log_value": 24.70751672646435,
+      "sphere_tangent_min_curvature_float": -0.07626727900925756,
+      "terminal_integer_points_grid_1e10": [
+        [
+          3287945112,
+          -1271108557
+        ],
+        [
+          -3287945130,
+          1271108513
+        ],
+        [
+          9938923889,
+          4798494890
+        ],
+        [
+          3815122306,
+          9868482800
+        ],
+        [
+          -4126573366,
+          10236168887
+        ],
+        [
+          -10716847115,
+          4143097126
+        ],
+        [
+          -9938923923,
+          -4798494867
+        ],
+        [
+          -3815122310,
+          -9868482811
+        ],
+        [
+          4126573407,
+          -10236168893
+        ],
+        [
+          10716847130,
+          -4143097087
+        ]
+      ]
+    },
+    {
+      "objective": 20.44991476767582,
+      "gradient_max": 1.21337340175387e-08,
+      "steps": 24,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 91,
+      "stratum": "continuation",
+      "seed_label": "next_remove_2_7",
+      "normalized_log_value": 24.550085232324165,
+      "sphere_tangent_min_curvature_float": -0.0992708566492326,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2980491685,
+          -4328804911
+        ],
+        [
+          -5117233214,
+          -1198251686
+        ],
+        [
+          10480383329,
+          3562178673
+        ],
+        [
+          1524542508,
+          3943496559
+        ],
+        [
+          -5358847382,
+          9685572079
+        ],
+        [
+          -11400694548,
+          2740374612
+        ],
+        [
+          -8266592164,
+          -8134508341
+        ],
+        [
+          645126562,
+          -11579748856
+        ],
+        [
+          10279306646,
+          -5641041043
+        ],
+        [
+          4233516579,
+          10950732914
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822126,
+      "gradient_max": 1.650172798406402e-08,
+      "steps": 37,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 92,
+      "stratum": "continuation",
+      "seed_label": "next_remove_3_5",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325295248058,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -2303014061,
+          -2683985124
+        ],
+        [
+          -10114837846,
+          3544178178
+        ],
+        [
+          10267704258,
+          4842445819
+        ],
+        [
+          2303014105,
+          2683985108
+        ],
+        [
+          -5039487347,
+          9459107230
+        ],
+        [
+          -10267704254,
+          -4842445781
+        ],
+        [
+          -3226597871,
+          -10884121365
+        ],
+        [
+          5039487380,
+          -9459107301
+        ],
+        [
+          10114837798,
+          -3544178152
+        ],
+        [
+          3226597838,
+          10884121388
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822122,
+      "gradient_max": 8.17101053485203e-09,
+      "steps": 38,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 93,
+      "stratum": "continuation",
+      "seed_label": "next_remove_4_8",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787325516599397,
+      "terminal_integer_points_grid_1e10": [
+        [
+          4463252247,
+          -9744255877
+        ],
+        [
+          -3530792767,
+          -202860664
+        ],
+        [
+          10078089849,
+          5225623108
+        ],
+        [
+          3530792762,
+          202860655
+        ],
+        [
+          -4463252240,
+          9744255853
+        ],
+        [
+          -10610269945,
+          4036979522
+        ],
+        [
+          -10078089857,
+          -5225623108
+        ],
+        [
+          -3317859781,
+          -10191317354
+        ],
+        [
+          10610269942,
+          -4036979513
+        ],
+        [
+          3317859790,
+          10191317377
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 6.3144209860865885e-09,
+      "steps": 34,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 94,
+      "stratum": "continuation",
+      "seed_label": "next_remove_5_1",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.07787325083973802,
+      "terminal_integer_points_grid_1e10": [
+        [
+          94941057,
+          -3535341014
+        ],
+        [
+          9876011929,
+          4163595976
+        ],
+        [
+          -94941056,
+          3535341034
+        ],
+        [
+          -4915416502,
+          10232971838
+        ],
+        [
+          -10085241725,
+          3627539443
+        ],
+        [
+          -9876011929,
+          -4163595992
+        ],
+        [
+          -4359117939,
+          -10482038095
+        ],
+        [
+          4915416493,
+          -10232971833
+        ],
+        [
+          10085241721,
+          -3627539454
+        ],
+        [
+          4359117951,
+          10482038096
+        ]
+      ]
+    },
+    {
+      "objective": 20.483755599372078,
+      "gradient_max": 5.925075896584531e-08,
+      "steps": 153,
+      "status": "floating_line_search_stop",
+      "seed_index": 95,
+      "stratum": "spirals",
+      "seed_label": "0",
+      "normalized_log_value": 24.5162444006279,
+      "sphere_tangent_min_curvature_float": 1.132457750437282e-06,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -1373,
+          2464
+        ],
+        [
+          7118360135,
+          7776861274
+        ],
+        [
+          -6421364836,
+          8359013300
+        ],
+        [
+          -9345324509,
+          -4871369326
+        ],
+        [
+          3174272531,
+          -10048335120
+        ],
+        [
+          10447386220,
+          1381237509
+        ],
+        [
+          453990273,
+          10530250667
+        ],
+        [
+          -10293539898,
+          2276114644
+        ],
+        [
+          -4029586846,
+          -9743358536
+        ],
+        [
+          8895808303,
+          -5660416877
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822122,
+      "gradient_max": 9.73296154782588e-09,
+      "steps": 44,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 96,
+      "stratum": "spirals",
+      "seed_label": "1",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787324959614116,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2244126945,
+          -2733412571
+        ],
+        [
+          -2244126916,
+          2733412566
+        ],
+        [
+          -10189489202,
+          -3323469984
+        ],
+        [
+          2989242432,
+          -10951687615
+        ],
+        [
+          10189489215,
+          3323469986
+        ],
+        [
+          -2989242459,
+          10951687611
+        ],
+        [
+          -5243913446,
+          -9347326624
+        ],
+        [
+          10160015728,
+          -5064495265
+        ],
+        [
+          5243913424,
+          9347326630
+        ],
+        [
+          -10160015723,
+          5064495266
+        ]
+      ]
+    },
+    {
+      "objective": 20.29103279682211,
+      "gradient_max": 1.9283080021637033e-08,
+      "steps": 70,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 97,
+      "stratum": "spirals",
+      "seed_label": "2",
+      "normalized_log_value": 24.70896720317787,
+      "sphere_tangent_min_curvature_float": 0.0778732752386081,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -964980759,
+          3402420019
+        ],
+        [
+          -10668683006,
+          1024864606
+        ],
+        [
+          964980754,
+          -3402420077
+        ],
+        [
+          7290024647,
+          -8702331494
+        ],
+        [
+          1635807979,
+          11233840118
+        ],
+        [
+          -8542071912,
+          -6473341438
+        ],
+        [
+          10668682930,
+          -1024864548
+        ],
+        [
+          -7290024586,
+          8702331491
+        ],
+        [
+          -1635807966,
+          -11233840144
+        ],
+        [
+          8542071918,
+          6473341467
+        ]
+      ]
+    },
+    {
+      "objective": 20.291032796822115,
+      "gradient_max": 1.7912135774622584e-08,
+      "steps": 47,
+      "status": "floating_gradient_tolerance",
+      "seed_index": 98,
+      "stratum": "spirals",
+      "seed_label": "3",
+      "normalized_log_value": 24.70896720317788,
+      "sphere_tangent_min_curvature_float": 0.07787324209208904,
+      "terminal_integer_points_grid_1e10": [
+        [
+          2229476498,
+          2745375091
+        ],
+        [
+          -2229476499,
+          -2745375126
+        ],
+        [
+          5293828500,
+          -9319148177
+        ],
+        [
+          2930629352,
+          10967517604
+        ],
+        [
+          -10132785219,
+          -5118759267
+        ],
+        [
+          10132785209,
+          5118759286
+        ],
+        [
+          -10207117593,
+          3268928465
+        ],
+        [
+          10207117631,
+          -3268928458
+        ],
+        [
+          -5293828505,
+          9319148195
+        ],
+        [
+          -2930629374,
+          -10967517614
+        ]
+      ]
+    },
+    {
+      "objective": 20.2910327968221,
+      "gradient_max": 2.0063893657606968e-08,
+      "steps": 500,
+      "status": "iteration_budget",
+      "seed_index": 99,
+      "stratum": "spirals",
+      "seed_label": "4",
+      "normalized_log_value": 24.708967203177878,
+      "sphere_tangent_min_curvature_float": 0.07787323181948991,
+      "terminal_integer_points_grid_1e10": [
+        [
+          -3214699349,
+          1474231334
+        ],
+        [
+          3214699356,
+          -1474231322
+        ],
+        [
+          619649877,
+          10699868091
+        ],
+        [
+          -619649880,
+          -10699868133
+        ],
+        [
+          7704159677,
+          7450977608
+        ],
+        [
+          -7704159655,
+          -7450977567
+        ],
+        [
+          11351852286,
+          -102377197
+        ],
+        [
+          -11351852309,
+          102377189
+        ],
+        [
+          7484386883,
+          -8535747454
+        ],
+        [
+          -7484386887,
+          8535747452
+        ]
+      ]
+    }
+  ],
+  "elapsed_seconds": 7.5,
+  "best_integer_points": [
+    [
+      986978770317,
+      417832906641
+    ],
+    [
+      -986978770396,
+      -417832906643
+    ],
+    [
+      1009064378176,
+      -361248546761
+    ],
+    [
+      -10021665683,
+      353519541070
+    ],
+    [
+      493068141835,
+      -1022562529125
+    ],
+    [
+      10021665777,
+      -353519541303
+    ],
+    [
+      -434347101646,
+      -1048853142135
+    ],
+    [
+      434347101809,
+      1048853141994
+    ],
+    [
+      -1009064378342,
+      361248546839
+    ],
+    [
+      -493068141846,
+      1022562529424
+    ]
+  ],
+  "best_log_value": 24.708967203177895,
+  "best_log_gain_over_pinned": 1.4210854715202004e-14,
+  "best_geometry": {
+    "n": 10,
+    "diagnostic_scope": "floating geometry and eigenvalues only; no new exact symmetry or Hessian certificate",
+    "radial_shells_at_tolerance_1e_8": [
+      {
+        "squared_radius": 0.12507649970146026,
+        "population": 2
+      },
+      {
+        "squared_radius": 1.1487114309272104,
+        "population": 4
+      },
+      {
+        "squared_radius": 1.2887503184638658,
+        "population": 4
+      }
+    ],
+    "radial_shell_count": 3,
+    "pair_count": 45,
+    "SO2_pair_contact_types_at_tolerance_1e_8": 15,
+    "distance_squared_types_at_tolerance_1e_8": 15,
+    "rotation_matches": [
+      {
+        "order": 2,
+        "max_matching_distance": 2.9849650112189656e-10,
+        "permutation": [
+          1,
+          0,
+          8,
+          5,
+          9,
+          3,
+          7,
+          6,
+          2,
+          4
+        ]
+      }
+    ],
+    "normalized_complex_moments": [
+      {
+        "k": 1,
+        "normalized_abs": 3.510833468576702e-17,
+        "radial_weight1_abs": 1.09849809648356e-10,
+        "radial_weight2_abs": 2.5352156390549375e-10
+      },
+      {
+        "k": 2,
+        "normalized_abs": 0.023560766816797665,
+        "radial_weight1_abs": 0.04450367060007494,
+        "radial_weight2_abs": 0.09671793869593691
+      },
+      {
+        "k": 3,
+        "normalized_abs": 4.8152253741035424e-11,
+        "radial_weight1_abs": 1.063097575069348e-10,
+        "radial_weight2_abs": 2.1079151535394345e-10
+      },
+      {
+        "k": 4,
+        "normalized_abs": 0.017111782044419755,
+        "radial_weight1_abs": 0.027902848150645893,
+        "radial_weight2_abs": 0.04043581848639054
+      },
+      {
+        "k": 5,
+        "normalized_abs": 1.857970284633358e-10,
+        "radial_weight1_abs": 2.9859417046049674e-10,
+        "radial_weight2_abs": 4.6465321733661203e-10
+      },
+      {
+        "k": 6,
+        "normalized_abs": 0.15221726911408107,
+        "radial_weight1_abs": 0.22076531471959107,
+        "radial_weight2_abs": 0.31254644215757904
+      },
+      {
+        "k": 7,
+        "normalized_abs": 3.593837902673103e-10,
+        "radial_weight1_abs": 5.158785449833132e-10,
+        "radial_weight2_abs": 7.282335964707971e-10
+      },
+      {
+        "k": 8,
+        "normalized_abs": 0.6388746188092465,
+        "radial_weight1_abs": 0.7884910874968779,
+        "radial_weight2_abs": 0.9761043234062435
+      },
+      {
+        "k": 9,
+        "normalized_abs": 1.4986795610979008e-10,
+        "radial_weight1_abs": 2.5858059662313367e-10,
+        "radial_weight2_abs": 4.1565266135005737e-10
+      },
+      {
+        "k": 10,
+        "normalized_abs": 0.004477131344808191,
+        "radial_weight1_abs": 0.032138613936930537,
+        "radial_weight2_abs": 0.07170663561977636
+      },
+      {
+        "k": 11,
+        "normalized_abs": 2.525438058512842e-10,
+        "radial_weight1_abs": 3.884690449065126e-10,
+        "radial_weight2_abs": 5.877434989481195e-10
+      },
+      {
+        "k": 12,
+        "normalized_abs": 0.08403610543075683,
+        "radial_weight1_abs": 0.11516551998023568,
+        "radial_weight2_abs": 0.1563045116521339
+      },
+      {
+        "k": 13,
+        "normalized_abs": 5.54570209856866e-10,
+        "radial_weight1_abs": 7.758375526571279e-10,
+        "radial_weight2_abs": 1.0800959828976452e-09
+      },
+      {
+        "k": 14,
+        "normalized_abs": 0.28468495140967104,
+        "radial_weight1_abs": 0.3788345653429261,
+        "radial_weight2_abs": 0.5019465469467325
+      },
+      {
+        "k": 15,
+        "normalized_abs": 5.99277309817683e-10,
+        "radial_weight1_abs": 7.974151481882739e-10,
+        "radial_weight2_abs": 1.0598989750849528e-09
+      },
+      {
+        "k": 16,
+        "normalized_abs": 0.510620685799738,
+        "radial_weight1_abs": 0.6369430601723938,
+        "radial_weight2_abs": 0.7966003495022476
+      },
+      {
+        "k": 17,
+        "normalized_abs": 2.673815545093241e-10,
+        "radial_weight1_abs": 4.0848172990656956e-10,
+        "radial_weight2_abs": 6.066328030961307e-10
+      },
+      {
+        "k": 18,
+        "normalized_abs": 0.020688508785730735,
+        "radial_weight1_abs": 0.008459329508944556,
+        "radial_weight2_abs": 0.010008022476309372
+      }
+    ],
+    "sphere_tangent_minus_force_Jacobian_eigenvalues": [
+      0.07787325168177177,
+      0.6667581334100595,
+      0.8933379800986793,
+      2.0300564629027513,
+      2.0809209252124434,
+      3.280536156537104,
+      3.3305193591092115,
+      4.365097850363086,
+      4.499999999999999,
+      4.5,
+      4.634902149636914,
+      5.669480640890785,
+      5.7194638434628935,
+      6.91907907478755,
+      6.969943537097243,
+      8.106662019901325,
+      8.333241866589939,
+      8.922126748318231
+    ],
+    "sphere_tangent_min_curvature": 0.07787325168177177,
+    "sphere_tangent_max_curvature": 8.922126748318231,
+    "sphere_tangent_condition_number": 114.57241807210528
+  }
+}

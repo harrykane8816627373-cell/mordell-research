@@ -9,6 +9,26 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 **八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
 
+## 十二点：已证的全局定量范围
+
+[十二点连续核上界](twelve-point-kernel-upper/README.md)给出原质量12尺度的严格结论
+
+```math
+V_{12}\le M_{12}<\frac{23}{20}V_{12},
+```
+
+其中V₁₂是仓库旧整数坐标经精确中心化、归一化后的可达值。已认证真实12点候选值还严格大于V₁₂，因此它与全局最大值的比严格大于 **20/23≈86.9565%**。这项结论覆盖全局最大值，没有预设最大构型的D₃对称；尚未证明候选达到最大值。
+
+证明将原核增加点对余量21/10000，精确核验正定矩块，并在整个必要两点域上完成Bernstein与对数切线覆盖：37053个节点、18526次分割、16237个正性叶、2290个域排除叶、未决0。正式接受只需Python标准库，约30秒实际重放完整覆盖。
+
+## 候选全局最优：优先12、10、19点
+
+[1000次确定性多起点搜索](candidate-global-screen/README.md)覆盖10—19点，结合完整局部稳定性及接触条件的复杂度，优先推进12点，其次10点和19点。三个已认证真实候选分别具有精确D₃、D₂、D₆对称与14、15、22类点对；对称性只针对这些候选，不预设所有全局最大点对称。搜索频率是数值证据，未给全局最优概率。
+
+[十点必要两点域](maximizer-domain/README.md)联合八、九点锐界、严格子集及二阶Schwarz信息，证明质量9下任何全局最大点都满足平方半径<1.5403、点距平方>0.4、八点补集中心化质量>5.68，以及额外非线性点对约束。[整区域局部上界](candidate-basin/README.md)则证明：10、12点到候选轨道的欧氏距离≤2⁻¹⁸、19点≤2⁻²⁰时，距离积不能超过候选值。
+
+[候选适配正定核](candidate-kernel/README.md)给出矩罚项与两点上界的严格接合公式，也保留10、12点原始数值核的精确失败点对。原始无余量majorant仍不成立；十二点新增的全局界由增加余量后的连续证明承担。完整推导、筛选依据与尚缺的锐界证明见[候选与核研究记录](docs/CANDIDATE_KERNEL_RESEARCH.md)；本轮仍未证明任何n≥10的全局锐值。
+
 ## 11月8日：四环共振、非线性缺额与高点数局部认证
 
 [四环人口定理](four-ring-rigidity/THEOREMS.md)继续加强逐点力条件：不等人口驻点至少有三条环小于最大人口；四环必须有唯一最大人口，且它严格小于其余人口总和。外部总人口不超过最大值两倍时，还需要人口重复或加法共振；特别地，(s,s,s,m) 的异人口情形只能保留 m=2s，未声称保留分支存在。
@@ -33,8 +53,10 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |n=6、7|M₆=6¹⁵/5¹⁰，M₇=7²¹/6¹⁵；等号为原点加相应正多边形|[主稿与依赖审计](earlier-results/six_seven_coverage_audit.md)；本项目现有全局证明保留 Faugère–Svartz 分类输入|
 |n=8|M₈=8²⁸/7²¹；等号为原点加半径 √(8/7) 的正七边形|[全域证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)；完整重放 386915 个盒，未决 0|
 |n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
+|n=12|V₁₂≤M₁₂<23V₁₂/20；现有真实候选值与M₁₂之比>20/23|[连续核全局上界](twelve-point-kernel-upper/README.md)；V₁₂为旧整数构型可达值，37053节点完整覆盖；非锐界、不分类所有最大构型|
 |n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
 |10≤n≤100|旧91项保存下界保留；本轮在其中16项再取得严格改善|[本轮自由构型](finite-search-nov5/README.md) · [旧基线](symmetry-breaking/README.md)；均为可达下界|
+|10、12、19点候选范围|精确D₂/D₃/D₆候选、整局部区域的候选值上界及十点全局必要域|[候选筛选](candidate-global-screen/README.md) · [局部上界](candidate-basin/README.md) · [十点必要域](maximizer-domain/README.md)；补集未覆盖、未证明全局锐值|
 |局部驻点与稳定性|12个不同点数的严格局部极大轨道、1个不稳定轨道有实际区间证书|[25、35、42、46点](validated-maxima-nov8/README.md) · [前轮8点数](validated-maxima/README.md)；不穷尽驻点、不认证全局最优|
 |一般 n 的结构|三、四环人口刚性与共振、旋转阶上限、非线性循环缺额及家族排除|[完整状态表](configuration-bounds/PROOF_STATUS.md) · [四环定理](four-ring-rigidity/README.md) · [家族排除](family-exclusion-nov8/README.md)；未证明晶格结晶或简洁锐值公式|
 
@@ -46,6 +68,8 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 |需要了解什么|入口|
 |---|---|
+|十二点可达值与全局最大值的严格比值界|[十二点连续核上界](twelve-point-kernel-upper/README.md)|
+|接近全局最优的候选、必要点对域与正定核|[候选与核研究记录](docs/CANDIDATE_KERNEL_RESEARCH.md)|
 |11月8日的新结构、家族排除及高点数认证|[本轮研究记录](docs/NOV8_RESEARCH.md)|
 |11月5日的新定理、下界与局部认证|[本轮研究记录](docs/NOV5_RESEARCH.md)|
 |结论、假设、外部依赖和未解决问题|[证明状态总表](configuration-bounds/PROOF_STATUS.md)|

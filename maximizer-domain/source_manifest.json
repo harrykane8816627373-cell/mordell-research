@@ -1,0 +1,13 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db",
+    "verify_all.py": "a76aa087d02dbc00489b83be053a254f1548b0db3fd8556fea67d3477366a290"
+  },
+  "dependencies": {
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43",
+    "eight-point-global/PROOF_BRIDGE.md": "41f7db70c8f2559231f62f20e50c9d358bee022076d1d0e0d746990bdaebcb3b",
+    "nine-point-global/PROOF.md": "c67d4dbd2dcc4389d0b12a227f0b9a716741f134e0908e6a8e47f881dbaedcd3"
+  }
+}

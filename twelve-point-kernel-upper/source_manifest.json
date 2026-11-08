@@ -1,0 +1,21 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "cover.txt": "b9cf865eab610349baee376ef8d429883f71bddf048675df5c2aa82a67e65414",
+    "README.md": "ec02fb577f2455ab744bcebf720254a07f30d6e658467a4efe037a5448c49275",
+    "verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996"
+  },
+  "dependencies": {
+    "candidate-kernel/data/n12_exact_interpretation.json": "3817ae78b338f3a1d525ab4905eb11d046a336b993a0a09a8e480bd4d9cec947",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d",
+    "validated-maxima/PROOF.md": "d3bd80d74bc73873f70fca6ef20f1f48770b5f1a763912e146db7472bd216341",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43"
+  },
+  "scope": "full exact replay of a nonsharp n12 global kernel upper bound; no candidate equality claim"
+}
