@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "date": "2026-11-08",
+  "optimization_safe": true,
+  "false_claims_or_byte_changes_rejected": [
+    "zero Newton preconditioner",
+    "singular alleged full Hessian congruence",
+    "midpoint shifted outside the certified root box",
+    "false zero positive second-variation direction",
+    "changed discovery seed coordinates",
+    "one altered byte in the fixed certificate data",
+    "one altered byte in the pinned prior dyadic dependency"
+  ],
+  "prior_files_modified": false
+}

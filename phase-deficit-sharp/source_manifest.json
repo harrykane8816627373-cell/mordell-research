@@ -1,0 +1,14 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "certificates/four_squares.json": "c2d22b2e0233bf78ae539e2eb243c1e01ffe64a0556bc9f69f22d364a91e0b5d",
+    "certificates/four_squares_box.json": "88ad3900113205b1d77d252217fa4d53b5a95bc39ecdae59a723411f123865a7",
+    "certificates/mixed_twentyfive_cycle.json": "39363102e9d6785bad50b643fb71c0b0c377d788884ad93d7e0aa820083f8998",
+    "core.py": "5048540dfe9536bec11db5dd2593774b2ae3c3c522baf428199a074ee22df0a7",
+    "discover.py": "12ccf44d0e58f718ec980ac482566ec63698e2b8bbf8586083a2619e5a5c9829",
+    "PROOF.md": "b8bbc44c3754d76badafdeec16f88e4e340465401c2b792a0e770b3b50a2f87d",
+    "README.md": "4cc0574cb97e19d7a8c2307f39676d48396451a7352599fba039037b3c3c7b30",
+    "verify_all.py": "adc49dea679dbea79b72507d7bb5ae219ba501219be7703e73731f38ec9b6718"
+  }
+}

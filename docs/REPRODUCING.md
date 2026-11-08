@@ -1,8 +1,22 @@
 # 复现指南
 
-更新：2026-11-05。
+更新：2026-11-08。
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
+
+## 11月8日四环、非线性相位与高点数认证
+
+以下正式接受只需要Python标准库：
+
+```bash
+python -B -S -O four-ring-rigidity/verify_all.py
+python -B -S -O phase-deficit-sharp/verify_all.py
+python -B -S -O family-exclusion-nov8/verify_all.py
+python -B -S -O validated-maxima-nov8/verify_all.py
+python -B -S -O validated-maxima-nov8/check_integrity.py
+```
+
+四组正式检查已接入统一入口。它们固定引用前轮代码、整数种子或角向数据；复制单个新目录而遗漏所列依赖会被拒绝。统一入口在临时副本运行，避免相位与家族程序生成的报告改写冻结文件。新的局部证书仍使用384位整数区间，所有接受判断在`-O`下执行；高精度发现不属于正式接受依赖。
 
 ## 11月5日一般点数与局部认证
 

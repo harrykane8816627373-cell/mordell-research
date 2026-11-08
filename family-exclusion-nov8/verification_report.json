@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "python": "3.12.14",
+  "optimization_safe": true,
+  "pinned_nonlinear_certificates_accepted_again": 3,
+  "feasible_integer_benchmarks_recomputed": {
+    "16": {
+      "n": 16,
+      "distance_count": 120,
+      "centered_mass_integer": "2560000003871403262",
+      "sum_integer_coordinates": [
+        -1,
+        1
+      ],
+      "value_recomputed_exactly": true
+    },
+    "25": {
+      "n": 25,
+      "distance_count": 300,
+      "centered_mass_integer": "6249999988153697320",
+      "sum_integer_coordinates": [
+        -2,
+        -1
+      ],
+      "value_recomputed_exactly": true
+    }
+  },
+  "benchmark_similarity_invariance_checks": 6,
+  "rejected_bad_inputs": [
+    "wrong pinned benchmark hash",
+    "wrong pinned nonlinear core hash",
+    "colliding feasible witness",
+    "floating witness coordinate",
+    "incorrect population",
+    "false ratio bracket",
+    "false prior-exclusion status",
+    "false qualitative claim",
+    "unaccepted nonlinear gap",
+    "unaccepted angular continuum cover"
+  ],
+  "cases": [
+    {
+      "label": "four_squares_fixed_radii",
+      "n": 16,
+      "nonlinear_certificate_accepted_again": true,
+      "nonlinear_log_gap": "119489373/20000000",
+      "E8_exact": "38330584357952554512763843561249040730488412696275974720193141209/114688000000000000000000000000000000000000000000000000000000000",
+      "upper_to_feasible_benchmark": {
+        "lower_rational": "4490398721963/100000000000000",
+        "upper_rational": "4490398721964/100000000000000",
+        "lower_decimal": "0.04490398721963",
+        "upper_decimal": "0.04490398721964",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_first_order_ratio": {
+        "lower_rational": "215179671433872/100000000000000",
+        "upper_rational": "215179671433873/100000000000000",
+        "lower_decimal": "2.15179671433872",
+        "upper_decimal": "2.15179671433873",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_quadratic_ratio": {
+        "lower_rational": "446396875571820/100000000000000",
+        "upper_rational": "446396875571821/100000000000000",
+        "lower_decimal": "4.46396875571820",
+        "upper_decimal": "4.46396875571821",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_quadratic_E8_ratio": {
+        "lower_rational": "141535683972624/100000000000000",
+        "upper_rational": "141535683972625/100000000000000",
+        "lower_decimal": "1.41535683972624",
+        "upper_decimal": "1.41535683972625",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "strict_exclusion_threshold": "1/20",
+      "entire_family_excluded": true,
+      "qualitative_status": "new exclusion from the displayed certified bounds",
+      "meaning": "every value in this specified family is below an independently feasible n-point value; not an upper bound for M_n"
+    },
+    {
+      "label": "four_squares_entire_radius_box",
+      "n": 16,
+      "nonlinear_certificate_accepted_again": true,
+      "nonlinear_log_gap": "119455433/20000000",
+      "E8_exact": "344460713445923685104360971336238343243154464913168276993247544641/1032192000000000000000000000000000000000000000000000000000000000",
+      "upper_to_feasible_benchmark": {
+        "lower_rational": "4704991411673/100000000000000",
+        "upper_rational": "4704991411674/100000000000000",
+        "lower_decimal": "0.04704991411673",
+        "upper_decimal": "0.04704991411674",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_first_order_ratio": {
+        "lower_rational": "225181444236588/100000000000000",
+        "upper_rational": "225181444236589/100000000000000",
+        "lower_decimal": "2.25181444236588",
+        "upper_decimal": "2.25181444236589",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_quadratic_ratio": {
+        "lower_rational": "467110938604522/100000000000000",
+        "upper_rational": "467110938604523/100000000000000",
+        "lower_decimal": "4.67110938604522",
+        "upper_decimal": "4.67110938604523",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_quadratic_E8_ratio": {
+        "lower_rational": "148162122521835/100000000000000",
+        "upper_rational": "148162122521836/100000000000000",
+        "lower_decimal": "1.48162122521835",
+        "upper_decimal": "1.48162122521836",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "strict_exclusion_threshold": "1/20",
+      "entire_family_excluded": true,
+      "qualitative_status": "new exclusion from the displayed certified bounds",
+      "meaning": "every value in this specified family is below an independently feasible n-point value; not an upper bound for M_n"
+    },
+    {
+      "label": "mixed_twentyfive_fixed_radii",
+      "n": 25,
+      "nonlinear_certificate_accepted_again": true,
+      "nonlinear_log_gap": "795833/5000000",
+      "E8_exact": "18467399072631642808472646900621056296043001695680361871041/15750000000000000000000000000000000000000000000000000000000",
+      "upper_to_feasible_benchmark": {
+        "lower_rational": "5179/100000000000000",
+        "upper_rational": "5180/100000000000000",
+        "lower_decimal": "0.00000000005179",
+        "upper_decimal": "0.00000000005180",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_first_order_ratio": {
+        "lower_rational": "5238/100000000000000",
+        "upper_rational": "5239/100000000000000",
+        "lower_decimal": "0.00000000005238",
+        "upper_decimal": "0.00000000005239",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_quadratic_ratio": {
+        "lower_rational": "5702/100000000000000",
+        "upper_rational": "5703/100000000000000",
+        "lower_decimal": "0.00000000005702",
+        "upper_decimal": "0.00000000005703",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "previous_quadratic_E8_ratio": {
+        "lower_rational": "5691/100000000000000",
+        "upper_rational": "5692/100000000000000",
+        "lower_decimal": "0.00000000005691",
+        "upper_decimal": "0.00000000005692",
+        "lower_closed": true,
+        "upper_open": true
+      },
+      "strict_exclusion_threshold": "1",
+      "entire_family_excluded": true,
+      "qualitative_status": "already excluded by previous quadratic bound; stronger arithmetic only",
+      "meaning": "every value in this specified family is below an independently feasible n-point value; not an upper bound for M_n"
+    }
+  ],
+  "inputs_sha256": {
+    "phase-deficit-sharp/core.py": "5048540dfe9536bec11db5dd2593774b2ae3c3c522baf428199a074ee22df0a7",
+    "phase-deficit-sharp/certificates/four_squares.json": "c2d22b2e0233bf78ae539e2eb243c1e01ffe64a0556bc9f69f22d364a91e0b5d",
+    "phase-deficit-sharp/certificates/four_squares_box.json": "88ad3900113205b1d77d252217fa4d53b5a95bc39ecdae59a723411f123865a7",
+    "phase-deficit-sharp/certificates/mixed_twentyfive_cycle.json": "39363102e9d6785bad50b643fb71c0b0c377d788884ad93d7e0aa820083f8998",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+  },
+  "source_sha256": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "certificates.json": "41600edf26055a2963890bf5dfa54a2bb30782e95da52d9f3e55a1566eacaecb",
+    "PROOF.md": "ecae3d90fa46cea71e7465ba0b6e3f9a38d7b39564088fdaaad9656f4991d0ab",
+    "README.md": "00027b730c9ac362b36e3a811069ce87b6213e9d8da70f535c239a2fb1a952c0",
+    "verify_all.py": "144f10efc69f4530c02770e7e9ab1297792df6ce06be389e389e14367d51f507"
+  },
+  "scope": "excludes exactly the three stated regular-ring families; unrestricted M_n sharpness remains unproved",
+  "unrestricted_Mn_upper_claimed": false
+}

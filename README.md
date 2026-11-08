@@ -1,6 +1,6 @@
 # Mordell 距离乘积研究
 
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-05**。
+研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-08**。
 
 ```math
 M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
@@ -8,6 +8,14 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 ```
 
 **八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
+
+## 11月8日：四环共振、非线性缺额与高点数局部认证
+
+[四环人口定理](four-ring-rigidity/THEOREMS.md)继续加强逐点力条件：不等人口驻点至少有三条环小于最大人口；四环必须有唯一最大人口，且它严格小于其余人口总和。外部总人口不超过最大值两倍时，还需要人口重复或加法共振；特别地，(s,s,s,m) 的异人口情形只能保留 m=2s，未声称保留分支存在。
+
+[非线性相位证书](phase-deficit-sharp/README.md)把指定四正方形环的认证缺额从约2.36195提高至5.97446865。保留指数正项后，[完整家族比较](family-exclusion-nov8/README.md)证明：该16点家族及每个半径独立变化±1/10000的整个盒，在所有连续相位下的值均低于一个已知16点可达值的5%，所以整个家族不能包含全局最优者。
+
+[25、35、42、46点的区间认证](validated-maxima-nov8/README.md)全部通过完整力与Hessian检验。结合前轮，已有12个不同点数的严格局部极大轨道和15点的一个不稳定轨道的实际证书。详细范围见[11月8日研究记录](docs/NOV8_RESEARCH.md)；一般锐值仍开放。
 
 ## 11月5日：完整力平衡、旋转阶与真实局部极值
 
@@ -27,8 +35,8 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 |n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
 |n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
 |10≤n≤100|旧91项保存下界保留；本轮在其中16项再取得严格改善|[本轮自由构型](finite-search-nov5/README.md) · [旧基线](symmetry-breaking/README.md)；均为可达下界|
-|局部驻点与稳定性|8个严格局部极大轨道、1个不稳定轨道有实际区间证书|[完整力及 Hessian 认证](validated-maxima/README.md)；不穷尽驻点、不认证全局最优|
-|一般 n 的结构|三环人口刚性、旋转阶上限、连续相位循环缺额与既有分布层数约束|[完整状态表](configuration-bounds/PROOF_STATUS.md) · [三环与旋转](ring-rigidity/README.md) · [相位预算](phase-packing/README.md)；未证明晶格结晶或简洁锐值公式|
+|局部驻点与稳定性|12个不同点数的严格局部极大轨道、1个不稳定轨道有实际区间证书|[25、35、42、46点](validated-maxima-nov8/README.md) · [前轮8点数](validated-maxima/README.md)；不穷尽驻点、不认证全局最优|
+|一般 n 的结构|三、四环人口刚性与共振、旋转阶上限、非线性循环缺额及家族排除|[完整状态表](configuration-bounds/PROOF_STATUS.md) · [四环定理](four-ring-rigidity/README.md) · [家族排除](family-exclusion-nov8/README.md)；未证明晶格结晶或简洁锐值公式|
 
 八、九点全局核与其计算机辅助证明归于 **Xiang Ji、Tiancheng Xu、Wensheng Yu** 的[arXiv:2611.03088v1](https://arxiv.org/abs/2611.03088v1)。本仓库固定来源、保留许可与署名、复现证书并写明与已有定理的衔接。
 
@@ -38,6 +46,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 |需要了解什么|入口|
 |---|---|
+|11月8日的新结构、家族排除及高点数认证|[本轮研究记录](docs/NOV8_RESEARCH.md)|
 |11月5日的新定理、下界与局部认证|[本轮研究记录](docs/NOV5_RESEARCH.md)|
 |结论、假设、外部依赖和未解决问题|[证明状态总表](configuration-bounds/PROOF_STATUS.md)|
 |九点完整证明与计算范围|[九点专题](nine-point-global/README.md)|

@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "3a1e7d1cdc990f2ff5f63cae28a4ae7e88c6e01d78015c7de756c0f5cfc5c242",
+    "THEOREMS.md": "f6b0107ac78c37ef360b9bbed07f49027fe4262cd0315ac83853217d0a94e089",
+    "four_ring_rigidity.py": "ce38b7a7ee739c7f07dd45b6b7b714b68ef4c466f985d06aceceac5bd714a0fe",
+    "verify_all.py": "6172515c09ab99037ac6ced1e389f9e3baa410104a787cdd62a2fc47ef1d9713",
+    "certificates.json": "f18aedf37562b48ee7b206c9d560d2c719e07af170dc7cdd1942f034dd6fb53a"
+  }
+}

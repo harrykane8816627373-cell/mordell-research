@@ -1,0 +1,50 @@
+{
+  "format": "mordell-family-exclusion-v1",
+  "date": "2026-11-08",
+  "exponential_order": 8,
+  "inputs": {
+    "phase-deficit-sharp/core.py": "5048540dfe9536bec11db5dd2593774b2ae3c3c522baf428199a074ee22df0a7",
+    "phase-deficit-sharp/certificates/four_squares.json": "c2d22b2e0233bf78ae539e2eb243c1e01ffe64a0556bc9f69f22d364a91e0b5d",
+    "phase-deficit-sharp/certificates/four_squares_box.json": "88ad3900113205b1d77d252217fa4d53b5a95bc39ecdae59a723411f123865a7",
+    "phase-deficit-sharp/certificates/mixed_twentyfive_cycle.json": "39363102e9d6785bad50b643fb71c0b0c377d788884ad93d7e0aa820083f8998",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+  },
+  "cases": [
+    {
+      "label": "four_squares_fixed_radii",
+      "n": 16,
+      "nonlinear_certificate": "phase-deficit-sharp/certificates/four_squares.json",
+      "ratio_lower": "4490398721963/100000000000000",
+      "ratio_upper": "4490398721964/100000000000000",
+      "threshold": "1/20",
+      "previous_first_order_excludes": false,
+      "previous_quadratic_excludes": false,
+      "previous_quadratic_E8_excludes": false,
+      "qualitative_status": "new exclusion from the displayed certified bounds"
+    },
+    {
+      "label": "four_squares_entire_radius_box",
+      "n": 16,
+      "nonlinear_certificate": "phase-deficit-sharp/certificates/four_squares_box.json",
+      "ratio_lower": "4704991411673/100000000000000",
+      "ratio_upper": "4704991411674/100000000000000",
+      "threshold": "1/20",
+      "previous_first_order_excludes": false,
+      "previous_quadratic_excludes": false,
+      "previous_quadratic_E8_excludes": false,
+      "qualitative_status": "new exclusion from the displayed certified bounds"
+    },
+    {
+      "label": "mixed_twentyfive_fixed_radii",
+      "n": 25,
+      "nonlinear_certificate": "phase-deficit-sharp/certificates/mixed_twentyfive_cycle.json",
+      "ratio_lower": "5179/100000000000000",
+      "ratio_upper": "5180/100000000000000",
+      "threshold": "1",
+      "previous_first_order_excludes": true,
+      "previous_quadratic_excludes": true,
+      "previous_quadratic_E8_excludes": true,
+      "qualitative_status": "already excluded by previous quadratic bound; stronger arithmetic only"
+    }
+  ]
+}

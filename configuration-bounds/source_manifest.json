@@ -100,9 +100,9 @@
     },
     {
       "path": "PROOF_STATUS.md",
-      "bytes": 15653,
-      "sha256": "e82cdf7a7906fc21964c83b8082938ede6e19d9a226bc5a751e98424d1348080",
-      "git_blob_sha": "785841dadf2c5eb3167a3b3f421cfb734c3cff47"
+      "bytes": 16644,
+      "sha256": "d2e2828b6f4f3814fd97918281d9ce27625fa003b5cc169022a17cad0943f85f",
+      "git_blob_sha": "3f9ac5bb61fa494bf7f663010defc0559db82758"
     },
     {
       "path": "PROVENANCE.json",
@@ -212,5 +212,5 @@
     "source_manifest.json",
     "verification_report.json"
   ],
-  "current_web_status_updated": "2026-11-05; current web status includes new general-n research; historical status_updates.zip and its manifest unchanged."
+  "current_web_status_updated": "2026-11-08; current web status includes new four-ring constraints, nonlinear family exclusion and higher-n local certificates; historical snapshots unchanged."
 }

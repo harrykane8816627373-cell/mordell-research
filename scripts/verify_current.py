@@ -37,7 +37,11 @@ def main():
              *sorted((ROOT/'ring-rigidity').glob('*.md')),
              *sorted((ROOT/'phase-packing').glob('*.md')),
              *sorted((ROOT/'finite-search-nov5').glob('*.md')),
-             *sorted((ROOT/'validated-maxima').glob('*.md'))]
+             *sorted((ROOT/'validated-maxima').glob('*.md')),
+             *sorted((ROOT/'four-ring-rigidity').glob('*.md')),
+             *sorted((ROOT/'phase-deficit-sharp').glob('*.md')),
+             *sorted((ROOT/'family-exclusion-nov8').glob('*.md')),
+             *sorted((ROOT/'validated-maxima-nov8').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -111,6 +115,31 @@ def main():
             require(proc.returncode == 0 and json.loads(proc.stdout)['passed'] is True,
                     suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
         print('PASS '+suite+'/verify_all.py (standard-library exact acceptance).', flush=True)
+    nov8_dependencies = {
+        'four-ring-rigidity': (),
+        'phase-deficit-sharp': ('phase-packing/certificates',),
+        'family-exclusion-nov8': ('phase-deficit-sharp', 'symmetry-breaking/integer_witnesses.json'),
+        'validated-maxima-nov8': ('validated-maxima/verify_all.py', 'validated-maxima/dyadic.py',
+            'validated-maxima/PROOF.md', 'validated-maxima/discover.py',
+            'finite-search-nov5/integer_witnesses.json', 'symmetry-breaking/integer_witnesses.json'),
+    }
+    for suite, dependencies in nov8_dependencies.items():
+        with tempfile.TemporaryDirectory(prefix='mordell-nov8-') as temp:
+            stage = Path(temp)
+            for name in (suite, *dependencies):
+                source, dest = ROOT/name, stage/name
+                if source.is_dir():
+                    shutil.copytree(source, dest, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+                else:
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(source, dest)
+            proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/suite/'verify_all.py')],
+                cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=240)
+            require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
+            # The nonlinear verifier appends a short rejection-count diagnostic.
+            result, _ = json.JSONDecoder().raw_decode(proc.stdout.lstrip())
+            require(result['passed'] is True, suite+': exact acceptance flag')
+        print('PASS '+suite+'/verify_all.py (fixed dependencies and exact Nov8 acceptance).', flush=True)
     if args.joint or args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'joint-closure/verify_all.py'), '--skip-prior'],
