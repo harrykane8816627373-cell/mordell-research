@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "date": "2026-11-05",
+  "source_manifest_sha256": "a710af1da20fb8ad15afa0632fb890cf824899453ee57e4820a82c15ede609eb",
+  "input_sha256": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "dfbdcc8aed36f0472cda874fa50e761c2ce6cf2d81185e16312f4824cc9b4342",
+    "THEOREMS.md": "21473d8fbb6ceda99aebe896ea311b972d32c5c3af1d237285f73dcdb5892642",
+    "ring_rigidity.py": "5d1ae87613aafe07760587c87e1732029be5cc9a23c525ae6c9294e015d88dfd",
+    "verify_all.py": "dd168efd29c18c48a529fd1963bb8439a51a3eea3ea6ba08103204f10490f4f7",
+    "certificates.json": "e8cd81a931b6d1d2aa2fd5b269013cfdcc05f5eef2e0501c54d620e5f2090831"
+  },
+  "universal_polynomial_identities_checked": [
+    "two equal largest populations: nonzero saturated remainder combination",
+    "unique largest unbalanced: constant/leading elimination q=0",
+    "unique largest unbalanced: constant/leading elimination q=1",
+    "balanced unequal populations: two different forced constants",
+    "balanced equal populations: product of the two smaller root constants",
+    "binary-center virial identity for every population a",
+    "strict AMGM obstruction after positive modulus reduction",
+    "general Fourier coefficient recurrence",
+    "general initial Fourier coefficient",
+    "constant Fourier mode",
+    "even-order Fourier range",
+    "odd-order Fourier range",
+    "no-center first excluded order m=8K",
+    "no-center immediately preceding order",
+    "center first excluded order m=8K+1 for K>=2",
+    "center immediately preceding order"
+  ],
+  "direct_fourier_audit": {
+    "rotation_orders_checked": 127,
+    "direct_coefficients_checked": 8255,
+    "all_root_traces_exact": true,
+    "floating_point_used": false
+  },
+  "residue_census": {
+    "profiles_checked": 25736,
+    "population_case_counts": {
+      "equal_population_not_excluded": 32,
+      "two_largest_equal": 752,
+      "unique_largest_balanced_equal": 24,
+      "unique_largest_balanced_unequal": 552,
+      "unique_largest_unbalanced": 24376
+    },
+    "finite_enumeration_replaces_general_proof": false
+  },
+  "stationary_witnesses": [
+    {
+      "n": 6,
+      "three_distinct_positive_radii_proved": true,
+      "full_pointwise_stationarity_proved": true,
+      "positive_second_variation": "60",
+      "unrestricted_nonradial_instability_proved": true
+    },
+    {
+      "n": 7,
+      "three_distinct_positive_radii_proved": true,
+      "full_pointwise_stationarity_proved": true,
+      "positive_second_variation": "105",
+      "unrestricted_nonradial_instability_proved": true
+    }
+  ],
+  "arbitrary_continuous_phases_allowed": true,
+  "unrestricted_hessian_used": true,
+  "global_optima_for_general_n_determined": false,
+  "floating_point_used": false,
+  "elapsed_seconds": 0.797
+}

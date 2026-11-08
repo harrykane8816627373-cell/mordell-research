@@ -1,8 +1,24 @@
 # 复现指南
 
-更新：2026-11-04。
+更新：2026-11-05。
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
+
+## 11月5日一般点数与局部认证
+
+以下均只需标准库，接受判断在 `-O` 下保留：
+
+```bash
+python -B -S -O ring-rigidity/verify_all.py
+python -B -S -O phase-packing/verify_all.py
+python -B -S -O finite-search-nov5/verify_all.py
+python -B -S -O validated-maxima/verify_all.py
+python -B -S -O validated-maxima/check_integrity.py
+```
+
+统一入口 `scripts/verify_current.py` 也执行上述四组正式核验。相位程序会生成报告，统一入口将它复制到临时目录运行；其余三组默认不改写冻结报告。局部认证拒绝伪造预条件矩阵、Hessian合同、偏移中点和固定数据篡改，记录另见[拒绝检查](../validated-maxima/integrity_report.json)。
+
+[搜索复现](../finite-search-nov5/README.md)另需NumPy，[高精度驻点发现](../validated-maxima/discover.py)另需mpmath；两者只生成候选。正式下界与驻点存在、稳定性接受不依赖数值优化器。实际执行范围及所有作用域见[本轮研究记录](NOV5_RESEARCH.md)。
 
 ## 九点与一般点数结构
 

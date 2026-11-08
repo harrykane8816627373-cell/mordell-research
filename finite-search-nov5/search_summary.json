@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-05",
+  "scope": "Floating discovery metadata, not an acceptance input for the lower-bound comparison.",
+  "waves": [
+    {
+      "path": "discovery_wave1.json",
+      "sha256": "6110a4dd74b63293258922f9c8ec39cbd581584914e274e80e18ee5a8803e2d3",
+      "min_n": 10,
+      "max_n": 50,
+      "optimizer_runs": 775,
+      "actual_optimizer_iterations": 265733,
+      "elapsed_seconds": 295.875,
+      "random_seed": 20261105,
+      "steps_per_run": 600
+    },
+    {
+      "path": "discovery_wave2.json",
+      "sha256": "c4458b1987a858c01e2275e75f3ed65a574cc37fdaa3f1879f27e694dee02852",
+      "min_n": 15,
+      "max_n": 50,
+      "optimizer_runs": 680,
+      "actual_optimizer_iterations": 168587,
+      "elapsed_seconds": 143.734,
+      "random_seed": 202611052,
+      "steps_per_run": 350
+    }
+  ],
+  "total_optimizer_runs": 1455,
+  "total_actual_optimizer_iterations": 434320,
+  "total_recorded_search_seconds": 439.60900000000004,
+  "material_gain_point_counts": [
+    17,
+    18,
+    25,
+    28,
+    31,
+    32,
+    34,
+    35,
+    36,
+    39,
+    42,
+    45,
+    46,
+    47,
+    49,
+    50
+  ],
+  "baseline_sha256": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+}

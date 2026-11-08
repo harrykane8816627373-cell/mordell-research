@@ -1,0 +1,878 @@
+{
+  "date": "2026-11-05",
+  "scope": "unit-strength unrestricted pointwise stationarity; no global optimum claimed",
+  "three_distinct_regular_rings_require_equal_populations": true,
+  "population_census": {
+    "minimum_population": 2,
+    "maximum_total_noncentral_population": 100,
+    "counts": {
+      "equal_population_not_excluded": 32,
+      "two_largest_equal": 752,
+      "unique_largest_balanced_equal": 24,
+      "unique_largest_balanced_unequal": 552,
+      "unique_largest_unbalanced": 24376
+    },
+    "profiles_checked": 25736,
+    "finite_census_replaces_general_proof": false
+  },
+  "examples": [
+    {
+      "populations": [
+        2,
+        2,
+        2
+      ],
+      "case": "equal_population_not_excluded"
+    },
+    {
+      "populations": [
+        2,
+        2,
+        3
+      ],
+      "case": "unique_largest_unbalanced"
+    },
+    {
+      "populations": [
+        2,
+        2,
+        4
+      ],
+      "case": "unique_largest_balanced_equal"
+    },
+    {
+      "populations": [
+        2,
+        3,
+        5
+      ],
+      "case": "unique_largest_balanced_unequal"
+    },
+    {
+      "populations": [
+        3,
+        4,
+        4
+      ],
+      "case": "two_largest_equal"
+    },
+    {
+      "populations": [
+        3,
+        4,
+        5
+      ],
+      "case": "unique_largest_unbalanced"
+    },
+    {
+      "populations": [
+        3,
+        3,
+        6
+      ],
+      "case": "unique_largest_balanced_equal"
+    },
+    {
+      "populations": [
+        4,
+        4,
+        4
+      ],
+      "case": "equal_population_not_excluded"
+    },
+    {
+      "populations": [
+        8,
+        8,
+        16
+      ],
+      "case": "unique_largest_balanced_equal"
+    },
+    {
+      "populations": [
+        9,
+        10,
+        10
+      ],
+      "case": "two_largest_equal"
+    }
+  ],
+  "rotational_order_necessary_condition": "floor(m^2/4) <= 2*(n-1+h), n=K*m+h, h in {0,1}",
+  "three_ring_thresholds": {
+    "without_center": 24,
+    "with_center": 25
+  },
+  "orbit_thresholds": [
+    {
+      "orbits": 1,
+      "center": 0,
+      "first_excluded_order": 8,
+      "at_threshold": {
+        "n": 8,
+        "rotation_order": 8,
+        "nonzero_orbits": 1,
+        "center": 0,
+        "floor_m_squared_over_four": 16,
+        "necessary_upper_bound": 14,
+        "operator_norm_over_kappa_lower": "8/7",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/7",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 7,
+        "rotation_order": 7,
+        "nonzero_orbits": 1,
+        "center": 0,
+        "floor_m_squared_over_four": 12,
+        "necessary_upper_bound": 12,
+        "operator_norm_over_kappa_lower": "1",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 1,
+      "center": 1,
+      "first_excluded_order": 10,
+      "at_threshold": {
+        "n": 11,
+        "rotation_order": 10,
+        "nonzero_orbits": 1,
+        "center": 1,
+        "floor_m_squared_over_four": 25,
+        "necessary_upper_bound": 22,
+        "operator_norm_over_kappa_lower": "25/22",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "3/11",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 10,
+        "rotation_order": 9,
+        "nonzero_orbits": 1,
+        "center": 1,
+        "floor_m_squared_over_four": 20,
+        "necessary_upper_bound": 20,
+        "operator_norm_over_kappa_lower": "1",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 2,
+      "center": 0,
+      "first_excluded_order": 16,
+      "at_threshold": {
+        "n": 32,
+        "rotation_order": 16,
+        "nonzero_orbits": 2,
+        "center": 0,
+        "floor_m_squared_over_four": 64,
+        "necessary_upper_bound": 62,
+        "operator_norm_over_kappa_lower": "32/31",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/31",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 30,
+        "rotation_order": 15,
+        "nonzero_orbits": 2,
+        "center": 0,
+        "floor_m_squared_over_four": 56,
+        "necessary_upper_bound": 58,
+        "operator_norm_over_kappa_lower": "28/29",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 2,
+      "center": 1,
+      "first_excluded_order": 17,
+      "at_threshold": {
+        "n": 35,
+        "rotation_order": 17,
+        "nonzero_orbits": 2,
+        "center": 1,
+        "floor_m_squared_over_four": 72,
+        "necessary_upper_bound": 70,
+        "operator_norm_over_kappa_lower": "36/35",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/35",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 33,
+        "rotation_order": 16,
+        "nonzero_orbits": 2,
+        "center": 1,
+        "floor_m_squared_over_four": 64,
+        "necessary_upper_bound": 66,
+        "operator_norm_over_kappa_lower": "32/33",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 3,
+      "center": 0,
+      "first_excluded_order": 24,
+      "at_threshold": {
+        "n": 72,
+        "rotation_order": 24,
+        "nonzero_orbits": 3,
+        "center": 0,
+        "floor_m_squared_over_four": 144,
+        "necessary_upper_bound": 142,
+        "operator_norm_over_kappa_lower": "72/71",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/71",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 69,
+        "rotation_order": 23,
+        "nonzero_orbits": 3,
+        "center": 0,
+        "floor_m_squared_over_four": 132,
+        "necessary_upper_bound": 136,
+        "operator_norm_over_kappa_lower": "33/34",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 3,
+      "center": 1,
+      "first_excluded_order": 25,
+      "at_threshold": {
+        "n": 76,
+        "rotation_order": 25,
+        "nonzero_orbits": 3,
+        "center": 1,
+        "floor_m_squared_over_four": 156,
+        "necessary_upper_bound": 152,
+        "operator_norm_over_kappa_lower": "39/38",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "1/19",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 73,
+        "rotation_order": 24,
+        "nonzero_orbits": 3,
+        "center": 1,
+        "floor_m_squared_over_four": 144,
+        "necessary_upper_bound": 146,
+        "operator_norm_over_kappa_lower": "72/73",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 4,
+      "center": 0,
+      "first_excluded_order": 32,
+      "at_threshold": {
+        "n": 128,
+        "rotation_order": 32,
+        "nonzero_orbits": 4,
+        "center": 0,
+        "floor_m_squared_over_four": 256,
+        "necessary_upper_bound": 254,
+        "operator_norm_over_kappa_lower": "128/127",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/127",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 124,
+        "rotation_order": 31,
+        "nonzero_orbits": 4,
+        "center": 0,
+        "floor_m_squared_over_four": 240,
+        "necessary_upper_bound": 246,
+        "operator_norm_over_kappa_lower": "40/41",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 4,
+      "center": 1,
+      "first_excluded_order": 33,
+      "at_threshold": {
+        "n": 133,
+        "rotation_order": 33,
+        "nonzero_orbits": 4,
+        "center": 1,
+        "floor_m_squared_over_four": 272,
+        "necessary_upper_bound": 266,
+        "operator_norm_over_kappa_lower": "136/133",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "6/133",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 129,
+        "rotation_order": 32,
+        "nonzero_orbits": 4,
+        "center": 1,
+        "floor_m_squared_over_four": 256,
+        "necessary_upper_bound": 258,
+        "operator_norm_over_kappa_lower": "128/129",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 5,
+      "center": 0,
+      "first_excluded_order": 40,
+      "at_threshold": {
+        "n": 200,
+        "rotation_order": 40,
+        "nonzero_orbits": 5,
+        "center": 0,
+        "floor_m_squared_over_four": 400,
+        "necessary_upper_bound": 398,
+        "operator_norm_over_kappa_lower": "200/199",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/199",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 195,
+        "rotation_order": 39,
+        "nonzero_orbits": 5,
+        "center": 0,
+        "floor_m_squared_over_four": 380,
+        "necessary_upper_bound": 388,
+        "operator_norm_over_kappa_lower": "95/97",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 5,
+      "center": 1,
+      "first_excluded_order": 41,
+      "at_threshold": {
+        "n": 206,
+        "rotation_order": 41,
+        "nonzero_orbits": 5,
+        "center": 1,
+        "floor_m_squared_over_four": 420,
+        "necessary_upper_bound": 412,
+        "operator_norm_over_kappa_lower": "105/103",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "4/103",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 201,
+        "rotation_order": 40,
+        "nonzero_orbits": 5,
+        "center": 1,
+        "floor_m_squared_over_four": 400,
+        "necessary_upper_bound": 402,
+        "operator_norm_over_kappa_lower": "200/201",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 6,
+      "center": 0,
+      "first_excluded_order": 48,
+      "at_threshold": {
+        "n": 288,
+        "rotation_order": 48,
+        "nonzero_orbits": 6,
+        "center": 0,
+        "floor_m_squared_over_four": 576,
+        "necessary_upper_bound": 574,
+        "operator_norm_over_kappa_lower": "288/287",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/287",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 282,
+        "rotation_order": 47,
+        "nonzero_orbits": 6,
+        "center": 0,
+        "floor_m_squared_over_four": 552,
+        "necessary_upper_bound": 562,
+        "operator_norm_over_kappa_lower": "276/281",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 6,
+      "center": 1,
+      "first_excluded_order": 49,
+      "at_threshold": {
+        "n": 295,
+        "rotation_order": 49,
+        "nonzero_orbits": 6,
+        "center": 1,
+        "floor_m_squared_over_four": 600,
+        "necessary_upper_bound": 590,
+        "operator_norm_over_kappa_lower": "60/59",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/59",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 289,
+        "rotation_order": 48,
+        "nonzero_orbits": 6,
+        "center": 1,
+        "floor_m_squared_over_four": 576,
+        "necessary_upper_bound": 578,
+        "operator_norm_over_kappa_lower": "288/289",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 7,
+      "center": 0,
+      "first_excluded_order": 56,
+      "at_threshold": {
+        "n": 392,
+        "rotation_order": 56,
+        "nonzero_orbits": 7,
+        "center": 0,
+        "floor_m_squared_over_four": 784,
+        "necessary_upper_bound": 782,
+        "operator_norm_over_kappa_lower": "392/391",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/391",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 385,
+        "rotation_order": 55,
+        "nonzero_orbits": 7,
+        "center": 0,
+        "floor_m_squared_over_four": 756,
+        "necessary_upper_bound": 768,
+        "operator_norm_over_kappa_lower": "63/64",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 7,
+      "center": 1,
+      "first_excluded_order": 57,
+      "at_threshold": {
+        "n": 400,
+        "rotation_order": 57,
+        "nonzero_orbits": 7,
+        "center": 1,
+        "floor_m_squared_over_four": 812,
+        "necessary_upper_bound": 800,
+        "operator_norm_over_kappa_lower": "203/200",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "3/100",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 393,
+        "rotation_order": 56,
+        "nonzero_orbits": 7,
+        "center": 1,
+        "floor_m_squared_over_four": 784,
+        "necessary_upper_bound": 786,
+        "operator_norm_over_kappa_lower": "392/393",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 8,
+      "center": 0,
+      "first_excluded_order": 64,
+      "at_threshold": {
+        "n": 512,
+        "rotation_order": 64,
+        "nonzero_orbits": 8,
+        "center": 0,
+        "floor_m_squared_over_four": 1024,
+        "necessary_upper_bound": 1022,
+        "operator_norm_over_kappa_lower": "512/511",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/511",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 504,
+        "rotation_order": 63,
+        "nonzero_orbits": 8,
+        "center": 0,
+        "floor_m_squared_over_four": 992,
+        "necessary_upper_bound": 1006,
+        "operator_norm_over_kappa_lower": "496/503",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 8,
+      "center": 1,
+      "first_excluded_order": 65,
+      "at_threshold": {
+        "n": 521,
+        "rotation_order": 65,
+        "nonzero_orbits": 8,
+        "center": 1,
+        "floor_m_squared_over_four": 1056,
+        "necessary_upper_bound": 1042,
+        "operator_norm_over_kappa_lower": "528/521",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "14/521",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 513,
+        "rotation_order": 64,
+        "nonzero_orbits": 8,
+        "center": 1,
+        "floor_m_squared_over_four": 1024,
+        "necessary_upper_bound": 1026,
+        "operator_norm_over_kappa_lower": "512/513",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 9,
+      "center": 0,
+      "first_excluded_order": 72,
+      "at_threshold": {
+        "n": 648,
+        "rotation_order": 72,
+        "nonzero_orbits": 9,
+        "center": 0,
+        "floor_m_squared_over_four": 1296,
+        "necessary_upper_bound": 1294,
+        "operator_norm_over_kappa_lower": "648/647",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/647",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 639,
+        "rotation_order": 71,
+        "nonzero_orbits": 9,
+        "center": 0,
+        "floor_m_squared_over_four": 1260,
+        "necessary_upper_bound": 1276,
+        "operator_norm_over_kappa_lower": "315/319",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 9,
+      "center": 1,
+      "first_excluded_order": 73,
+      "at_threshold": {
+        "n": 658,
+        "rotation_order": 73,
+        "nonzero_orbits": 9,
+        "center": 1,
+        "floor_m_squared_over_four": 1332,
+        "necessary_upper_bound": 1316,
+        "operator_norm_over_kappa_lower": "333/329",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "8/329",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 649,
+        "rotation_order": 72,
+        "nonzero_orbits": 9,
+        "center": 1,
+        "floor_m_squared_over_four": 1296,
+        "necessary_upper_bound": 1298,
+        "operator_norm_over_kappa_lower": "648/649",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 10,
+      "center": 0,
+      "first_excluded_order": 80,
+      "at_threshold": {
+        "n": 800,
+        "rotation_order": 80,
+        "nonzero_orbits": 10,
+        "center": 0,
+        "floor_m_squared_over_four": 1600,
+        "necessary_upper_bound": 1598,
+        "operator_norm_over_kappa_lower": "800/799",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/799",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 790,
+        "rotation_order": 79,
+        "nonzero_orbits": 10,
+        "center": 0,
+        "floor_m_squared_over_four": 1560,
+        "necessary_upper_bound": 1578,
+        "operator_norm_over_kappa_lower": "260/263",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 10,
+      "center": 1,
+      "first_excluded_order": 81,
+      "at_threshold": {
+        "n": 811,
+        "rotation_order": 81,
+        "nonzero_orbits": 10,
+        "center": 1,
+        "floor_m_squared_over_four": 1640,
+        "necessary_upper_bound": 1622,
+        "operator_norm_over_kappa_lower": "820/811",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "18/811",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 801,
+        "rotation_order": 80,
+        "nonzero_orbits": 10,
+        "center": 1,
+        "floor_m_squared_over_four": 1600,
+        "necessary_upper_bound": 1602,
+        "operator_norm_over_kappa_lower": "800/801",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 11,
+      "center": 0,
+      "first_excluded_order": 88,
+      "at_threshold": {
+        "n": 968,
+        "rotation_order": 88,
+        "nonzero_orbits": 11,
+        "center": 0,
+        "floor_m_squared_over_four": 1936,
+        "necessary_upper_bound": 1934,
+        "operator_norm_over_kappa_lower": "968/967",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/967",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 957,
+        "rotation_order": 87,
+        "nonzero_orbits": 11,
+        "center": 0,
+        "floor_m_squared_over_four": 1892,
+        "necessary_upper_bound": 1912,
+        "operator_norm_over_kappa_lower": "473/478",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 11,
+      "center": 1,
+      "first_excluded_order": 89,
+      "at_threshold": {
+        "n": 980,
+        "rotation_order": 89,
+        "nonzero_orbits": 11,
+        "center": 1,
+        "floor_m_squared_over_four": 1980,
+        "necessary_upper_bound": 1960,
+        "operator_norm_over_kappa_lower": "99/98",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "1/49",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 969,
+        "rotation_order": 88,
+        "nonzero_orbits": 11,
+        "center": 1,
+        "floor_m_squared_over_four": 1936,
+        "necessary_upper_bound": 1938,
+        "operator_norm_over_kappa_lower": "968/969",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 12,
+      "center": 0,
+      "first_excluded_order": 96,
+      "at_threshold": {
+        "n": 1152,
+        "rotation_order": 96,
+        "nonzero_orbits": 12,
+        "center": 0,
+        "floor_m_squared_over_four": 2304,
+        "necessary_upper_bound": 2302,
+        "operator_norm_over_kappa_lower": "1152/1151",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "2/1151",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 1140,
+        "rotation_order": 95,
+        "nonzero_orbits": 12,
+        "center": 0,
+        "floor_m_squared_over_four": 2256,
+        "necessary_upper_bound": 2278,
+        "operator_norm_over_kappa_lower": "1128/1139",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    },
+    {
+      "orbits": 12,
+      "center": 1,
+      "first_excluded_order": 97,
+      "at_threshold": {
+        "n": 1165,
+        "rotation_order": 97,
+        "nonzero_orbits": 12,
+        "center": 1,
+        "floor_m_squared_over_four": 2352,
+        "necessary_upper_bound": 2330,
+        "operator_norm_over_kappa_lower": "1176/1165",
+        "full_hessian_instability_proved": true,
+        "hessian_largest_eigenvalue_over_kappa_lower": "22/1165",
+        "necessary_condition_only": true
+      },
+      "immediately_below": {
+        "n": 1153,
+        "rotation_order": 96,
+        "nonzero_orbits": 12,
+        "center": 1,
+        "floor_m_squared_over_four": 2304,
+        "necessary_upper_bound": 2306,
+        "operator_norm_over_kappa_lower": "1152/1153",
+        "full_hessian_instability_proved": false,
+        "hessian_largest_eigenvalue_over_kappa_lower": null,
+        "necessary_condition_only": true
+      }
+    }
+  ],
+  "stationary_but_unstable_examples": [
+    {
+      "n": 6,
+      "center": 0,
+      "populations": [
+        2,
+        2,
+        2
+      ],
+      "polynomial_in_increasing_degree_order": [
+        "-15/8",
+        "0",
+        "45/4",
+        "0",
+        "-15/2",
+        "0",
+        "1"
+      ],
+      "squared_radius_isolation_intervals": [
+        [
+          "0",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "2"
+        ],
+        [
+          "2",
+          "8"
+        ]
+      ],
+      "force_multiplier": "1",
+      "full_hessian_direction": "v_i = i*(z_i^2-(n-1)/2)",
+      "direction_norm_squared": "30",
+      "positive_second_variation": "60"
+    },
+    {
+      "n": 7,
+      "center": 1,
+      "populations": [
+        2,
+        2,
+        2
+      ],
+      "polynomial_in_increasing_degree_order": [
+        "0",
+        "-105/8",
+        "0",
+        "105/4",
+        "0",
+        "-21/2",
+        "0",
+        "1"
+      ],
+      "squared_radius_isolation_intervals": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "3",
+          "8"
+        ]
+      ],
+      "force_multiplier": "1",
+      "full_hessian_direction": "v_i = i*(z_i^2-(n-1)/2)",
+      "direction_norm_squared": "105/2",
+      "positive_second_variation": "105"
+    }
+  ]
+}

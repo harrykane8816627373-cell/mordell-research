@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -32,7 +33,11 @@ def main():
              *sorted((ROOT/'joint-closure').glob('*.md')), *sorted((ROOT/'joint-refinement').glob('*.md')),
              *sorted((ROOT/'eight-point-global').glob('*.md')),
              *sorted((ROOT/'nine-point-global').glob('*.md')),
-             *sorted((ROOT/'general-structure').glob('*.md'))]
+             *sorted((ROOT/'general-structure').glob('*.md')),
+             *sorted((ROOT/'ring-rigidity').glob('*.md')),
+             *sorted((ROOT/'phase-packing').glob('*.md')),
+             *sorted((ROOT/'finite-search-nov5').glob('*.md')),
+             *sorted((ROOT/'validated-maxima').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -93,6 +98,19 @@ def main():
         require(proc.returncode == 0 and json.loads(proc.stdout)['passed'] is True,
                 'continuous phase structure: '+proc.stdout[-2000:]+proc.stderr[-3000:])
     print('PASS continuous-phase compatibility, strict family gaps and independent exact product checks.', flush=True)
+    for suite in ('ring-rigidity', 'phase-packing', 'finite-search-nov5', 'validated-maxima'):
+        with tempfile.TemporaryDirectory(prefix='mordell-nov5-') as temp:
+            stage = Path(temp)
+            shutil.copytree(ROOT/suite, stage/suite, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+            if suite == 'finite-search-nov5':
+                baseline = stage/'symmetry-breaking'
+                baseline.mkdir()
+                shutil.copyfile(ROOT/'symmetry-breaking/integer_witnesses.json', baseline/'integer_witnesses.json')
+            proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/suite/'verify_all.py')],
+                cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=180)
+            require(proc.returncode == 0 and json.loads(proc.stdout)['passed'] is True,
+                    suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
+        print('PASS '+suite+'/verify_all.py (standard-library exact acceptance).', flush=True)
     if args.joint or args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'joint-closure/verify_all.py'), '--skip-prior'],

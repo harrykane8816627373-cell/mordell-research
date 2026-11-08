@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "build_certificates.py": "aa448a60ddfbb14c59403923a77d36188ed16f80f59332904f53ec7f80fc3b37",
+    "certificates/compatible_fourteen.json": "a19dc6898343a3f0a8918c2b63659d4cab3c8fb6611795531dd4a3de7782b38c",
+    "certificates/four_squares_radius_box.json": "ba32deb212c7db768d70a37b083d4b77267bd1a3e2cbae42af1865ef0198b1b3",
+    "certificates/four_squares_triangles.json": "2ba45b410fd4ed602111466936852a7db2c22e8fe7ec42539448ff113f7ef016",
+    "certificates/mixed_twentyfive_cycles.json": "0ec19282d1f10e112c427163a8f6008467409c6e0e76b788ff4f9c35806623a9",
+    "certificates/mixed_twentyfive_triangles.json": "76f5f1425f75fcff12de67188b04a02da7d271917566178ad1c0e533dab9ef0f",
+    "packing.py": "fa419a2736c6edf4e4af3a7a09cd329a66e4228cc62c49a9c67b95aea9f489fe",
+    "PROOF.md": "0280e445b7fd8ac89baed80836e535dab0e31835f1dded864ce24f4d75c79079",
+    "README.md": "994f71fbe0486c8f286ed0fee32243407164074bcaaa7be0cca62aa68afdd58e",
+    "verify_all.py": "2eea806f6679fbe6bbd15ff3f72913df0b87f831e8b80434a92182328afa983f"
+  }
+}

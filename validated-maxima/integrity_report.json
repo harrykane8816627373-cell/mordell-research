@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "optimization_safe": true,
+  "false_certificates_rejected": [
+    "zero preconditioner",
+    "singular alleged Hessian congruence",
+    "shift midpoint outside root box",
+    "zero alleged instability direction",
+    "one altered byte in fixed certificate file"
+  ]
+}

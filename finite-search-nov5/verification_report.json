@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "date": "2026-11-05",
+  "optimization_safe": true,
+  "baseline_path": "symmetry-breaking/integer_witnesses.json",
+  "baseline_sha256": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+  "point_counts": [
+    17,
+    18,
+    25,
+    28,
+    31,
+    32,
+    34,
+    35,
+    36,
+    39,
+    42,
+    45,
+    46,
+    47,
+    49,
+    50
+  ],
+  "material_relative_gain_threshold": "1/10000",
+  "independent_centering_examples": 3,
+  "malformed_inputs_rejected": 6,
+  "scope": "Exact attainable lower bounds against the pinned saved witnesses only; no global optimality or exact stationary configuration is certified.",
+  "rows": [
+    {
+      "n": 17,
+      "ratio_new_over_baseline_interval": [
+        "1.010230047041",
+        "1.010230047042"
+      ],
+      "relative_gain_percent_interval": [
+        "1.023004704105",
+        "1.023004704106"
+      ],
+      "relative_gain_basis_points_floor": 102,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "28899999999323376442330",
+      "baseline_centered_mass_D": "2890000000256804106",
+      "new_raw_distance_product_sha256": "4873c8a91244c85a146a353040a09f6833e6eb27344c2de2ff15e244e92b5008",
+      "ratio_numerator_sha256": "0971d775a33b703ba84916f2cf9cf824367b38f9b0941bc47035f602689881ff",
+      "ratio_denominator_sha256": "40b06240d0ffba4f29dde60b1ebc2e1987a6b95d3d8ea69a8585153da9452013"
+    },
+    {
+      "n": 18,
+      "ratio_new_over_baseline_interval": [
+        "1.031222561372",
+        "1.031222561373"
+      ],
+      "relative_gain_percent_interval": [
+        "3.122256137237",
+        "3.122256137238"
+      ],
+      "relative_gain_basis_points_floor": 312,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "32400000000033048217906",
+      "baseline_centered_mass_D": "3239999995397657076",
+      "new_raw_distance_product_sha256": "a0b2fb5924aa6791919b1f34290ecca788c27c7bbdb9a027cceecb7250d70c87",
+      "ratio_numerator_sha256": "6336d65a54f67bec0604e4f4490c24ba2950fb5941c96df296f5ae87936c5a03",
+      "ratio_denominator_sha256": "d8b8af577110b6e8b22b7e3c317842ce22580bb1452a3e38c007d23cb825f418"
+    },
+    {
+      "n": 25,
+      "ratio_new_over_baseline_interval": [
+        "1.023141696685",
+        "1.023141696686"
+      ],
+      "relative_gain_percent_interval": [
+        "2.314169668531",
+        "2.314169668532"
+      ],
+      "relative_gain_basis_points_floor": 231,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "62499999998995217048970",
+      "baseline_centered_mass_D": "6249999988153697320",
+      "new_raw_distance_product_sha256": "18b436733a4ea412a49dda5dfd2952c006a8b4f40cf6e58322d12a3a77273d2f",
+      "ratio_numerator_sha256": "58656e48fb2d5a473548228989d1d7823624c9d8d6d2f5b75cdfe8c6db222421",
+      "ratio_denominator_sha256": "f44793051b96a4bea6b92453266aca0130f128630446542c4de909415880562e"
+    },
+    {
+      "n": 28,
+      "ratio_new_over_baseline_interval": [
+        "1.004094190322",
+        "1.004094190323"
+      ],
+      "relative_gain_percent_interval": [
+        "0.409419032249",
+        "0.409419032250"
+      ],
+      "relative_gain_basis_points_floor": 40,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "78399999999370972694771",
+      "baseline_centered_mass_D": "7839999998029602451",
+      "new_raw_distance_product_sha256": "fda07ad5a9ff0a9de06709d0b57dcded9b6ddf3c282ceda17d526deb148ce3c0",
+      "ratio_numerator_sha256": "045bb8a47e937eed0ac1c6a850b894eeb4d96e412ea618b00b00b8629a97399c",
+      "ratio_denominator_sha256": "451c10c1331d799c3cf95d9c058a50bdac4af1f32613e7fa01acf47102f4f0ea"
+    },
+    {
+      "n": 31,
+      "ratio_new_over_baseline_interval": [
+        "1.014119779046",
+        "1.014119779047"
+      ],
+      "relative_gain_percent_interval": [
+        "1.411977904612",
+        "1.411977904613"
+      ],
+      "relative_gain_basis_points_floor": 141,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "96099999999963707977754",
+      "baseline_centered_mass_D": "9610000009002424358",
+      "new_raw_distance_product_sha256": "e6f47777267709f25db3d4660c64fa7589fcf4680bef37181de24eda466e347b",
+      "ratio_numerator_sha256": "23db6becb39ad5126b7ed5d82a19ce6604c1ccbf2e41fa3a6f31828657b24624",
+      "ratio_denominator_sha256": "fbd1c59e8e72f280e14a9f07b34f2f9e97364014cb4b627833b0d62195020a39"
+    },
+    {
+      "n": 32,
+      "ratio_new_over_baseline_interval": [
+        "1.003264997217",
+        "1.003264997218"
+      ],
+      "relative_gain_percent_interval": [
+        "0.326499721742",
+        "0.326499721743"
+      ],
+      "relative_gain_basis_points_floor": 32,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "102400000001397648389374",
+      "baseline_centered_mass_D": "10240000003014923390",
+      "new_raw_distance_product_sha256": "bcec95fc6613e981146845acd80b99a4dc06a7dbf0d7d7b0a516838a13f94ee9",
+      "ratio_numerator_sha256": "e91d380e0dc88ff4d0d59ccded014d413a0af38e6377e87443426f42de4e66c7",
+      "ratio_denominator_sha256": "295562a23147fe3bce15574975c9deb4bc317587649b8c034764883c50b02dd6"
+    },
+    {
+      "n": 34,
+      "ratio_new_over_baseline_interval": [
+        "1.009792489730",
+        "1.009792489731"
+      ],
+      "relative_gain_percent_interval": [
+        "0.979248973070",
+        "0.979248973071"
+      ],
+      "relative_gain_basis_points_floor": 97,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "115600000001009837683929",
+      "baseline_centered_mass_D": "11560000016133738645",
+      "new_raw_distance_product_sha256": "8a56021b0fb2205c4d278a2471fef44860d6ce49e41ccee7a0f9837803653202",
+      "ratio_numerator_sha256": "e152b1ede0c6ec243a5c39c3731a11c631aabf8027c5650f80eee848f44ce4b6",
+      "ratio_denominator_sha256": "1869210b2b1c70d4be49ec1c61b42acd441a48d575a7f926677e437a0fde67fa"
+    },
+    {
+      "n": 35,
+      "ratio_new_over_baseline_interval": [
+        "1.036339237884",
+        "1.036339237885"
+      ],
+      "relative_gain_percent_interval": [
+        "3.633923788483",
+        "3.633923788484"
+      ],
+      "relative_gain_basis_points_floor": 363,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "122500000000683280101034",
+      "baseline_centered_mass_D": "12249999995526078810",
+      "new_raw_distance_product_sha256": "36989a95dd8a48e3a6c971df31ab62af4138d058d7689367e0355b429342f439",
+      "ratio_numerator_sha256": "06ce5eaddbd333ccc0e21169924573c1fd0b5354d89b062d7a37e4bb2ff3ba38",
+      "ratio_denominator_sha256": "9d21be4f3f3dada28367e81b386b44522a7d8508df0ab5a46a9fb5b96899fb4d"
+    },
+    {
+      "n": 36,
+      "ratio_new_over_baseline_interval": [
+        "1.028316786617",
+        "1.028316786618"
+      ],
+      "relative_gain_percent_interval": [
+        "2.831678661711",
+        "2.831678661712"
+      ],
+      "relative_gain_basis_points_floor": 283,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "129600000000255352558211",
+      "baseline_centered_mass_D": "12960000000178090686",
+      "new_raw_distance_product_sha256": "3cb363c157744fc7f2b469be4811ad97551111b3358cbc2b1263211e3e9009c1",
+      "ratio_numerator_sha256": "c73f31875617305551c0d14e4d89c7203446b0eeb8a563542c75d2fe0427e4bc",
+      "ratio_denominator_sha256": "3dbbbb2bb241f4fa1938af48b6e19e81cbb2a69dfef400b507e00cedc41bf31f"
+    },
+    {
+      "n": 39,
+      "ratio_new_over_baseline_interval": [
+        "1.006473460190",
+        "1.006473460191"
+      ],
+      "relative_gain_percent_interval": [
+        "0.647346019010",
+        "0.647346019011"
+      ],
+      "relative_gain_basis_points_floor": 64,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "152100000000152503170220",
+      "baseline_centered_mass_D": "15209999972696871770",
+      "new_raw_distance_product_sha256": "d792e074c70361e17065603050f47cf1e1b615766edd7f5027590d24d221070c",
+      "ratio_numerator_sha256": "491d6d4043c77345d30cc3a17251969a8c6530e3387ec718987921209dc8c198",
+      "ratio_denominator_sha256": "6c2d5853abe1d3194d1402a37ba662aa106c8dfb539dd7b5898e090e12c02172"
+    },
+    {
+      "n": 42,
+      "ratio_new_over_baseline_interval": [
+        "1.045381742393",
+        "1.045381742394"
+      ],
+      "relative_gain_percent_interval": [
+        "4.538174239393",
+        "4.538174239394"
+      ],
+      "relative_gain_basis_points_floor": 453,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "176399999998833020943741",
+      "baseline_centered_mass_D": "17640000011039242649",
+      "new_raw_distance_product_sha256": "506a80e835ac69f927353d38e6795486d8c7db1f9b6c2d7cceffc45ec504fc12",
+      "ratio_numerator_sha256": "c7ad6923adbc78bf16b94fc02aa2a64281cd1a65a65e041d80f1ee0b8700b031",
+      "ratio_denominator_sha256": "a12b95e1ce21f389b71b0103cd73c495558715bb90c4bc14e036149de0612ec6"
+    },
+    {
+      "n": 45,
+      "ratio_new_over_baseline_interval": [
+        "1.015583759724",
+        "1.015583759725"
+      ],
+      "relative_gain_percent_interval": [
+        "1.558375972429",
+        "1.558375972430"
+      ],
+      "relative_gain_basis_points_floor": 155,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "202500000000725760003590",
+      "baseline_centered_mass_D": "20249999997726429400",
+      "new_raw_distance_product_sha256": "3802ed96e26ca53715c86533bb4bf853198a5ac00e8fb51c24bff579309cfcc6",
+      "ratio_numerator_sha256": "b0fad5aa1920d0bf4a97fed42aafc982b9b3a45681760d243af78e93472c332d",
+      "ratio_denominator_sha256": "f310e16ae8fbd600817a9b0cba17a317bbb20cbd5c615184942d7aeabe3e73f5"
+    },
+    {
+      "n": 46,
+      "ratio_new_over_baseline_interval": [
+        "1.049316805422",
+        "1.049316805423"
+      ],
+      "relative_gain_percent_interval": [
+        "4.931680542211",
+        "4.931680542212"
+      ],
+      "relative_gain_basis_points_floor": 493,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "211600000001029361670336",
+      "baseline_centered_mass_D": "21160000015744543873",
+      "new_raw_distance_product_sha256": "0fbd99382313e40553bc405f8d917e8a35506dfaf130af7d43b5c45ba183789c",
+      "ratio_numerator_sha256": "cc0e2e04348cb5b75d6cce5a67dcfaf75eaf19568a70df41307e5e01a2e25717",
+      "ratio_denominator_sha256": "ec1a3dc03119ed017beb6d00acdda42650e101f3b0e025734dd979ce26352fda"
+    },
+    {
+      "n": 47,
+      "ratio_new_over_baseline_interval": [
+        "1.033812228174",
+        "1.033812228175"
+      ],
+      "relative_gain_percent_interval": [
+        "3.381222817402",
+        "3.381222817403"
+      ],
+      "relative_gain_basis_points_floor": 338,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "220900000002022968125468",
+      "baseline_centered_mass_D": "22090000018015970910",
+      "new_raw_distance_product_sha256": "9bd5611a90344f64cfd467681976f6765f0142820bbe133240b004292c34afe5",
+      "ratio_numerator_sha256": "0697db7d74f71c84e3ee022549a34ab8d24d5b01d765148672b7bc22769626c8",
+      "ratio_denominator_sha256": "448ce14ed821e137d735fca9d5f5a9b7f3e8ac353b04f9f58e87128da83f9035"
+    },
+    {
+      "n": 49,
+      "ratio_new_over_baseline_interval": [
+        "1.008856615464",
+        "1.008856615465"
+      ],
+      "relative_gain_percent_interval": [
+        "0.885661546420",
+        "0.885661546421"
+      ],
+      "relative_gain_basis_points_floor": 88,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "240099999999739167004050",
+      "baseline_centered_mass_D": "24010000007828473766",
+      "new_raw_distance_product_sha256": "e4c5938204145e48b1fb5a1cb07a8bc8966a619d5d96d45af5d2dd2739613523",
+      "ratio_numerator_sha256": "ea298fdcf05608bb07443588a858dfd3f273079c5ba4db242ac4e56f064abc43",
+      "ratio_denominator_sha256": "8b17014c01b1667906c4041c3720bbfc629865f5d33602510b561898fb92c824"
+    },
+    {
+      "n": 50,
+      "ratio_new_over_baseline_interval": [
+        "1.010977932481",
+        "1.010977932482"
+      ],
+      "relative_gain_percent_interval": [
+        "1.097793248179",
+        "1.097793248180"
+      ],
+      "relative_gain_basis_points_floor": 109,
+      "strictly_improves_pinned_baseline": true,
+      "new_centered_mass_D": "250000000000927382025749",
+      "baseline_centered_mass_D": "25000000002276316298",
+      "new_raw_distance_product_sha256": "c98a980dd3fa14f47399e8a09c1d265cae72fe59a0f39b8371cbba143b61836f",
+      "ratio_numerator_sha256": "8970d21ba1e85bfe3836b50c4d2d6d60813bdbf780e05a29c8a41709c89ef0be",
+      "ratio_denominator_sha256": "053cd105183249d6420a276b293181701d2a0b545071e5b214d6f7f74bf7e172"
+    }
+  ]
+}

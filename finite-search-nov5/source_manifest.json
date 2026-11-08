@@ -1,0 +1,52 @@
+{
+  "format": "mordell-finite-search-nov5-v1",
+  "date": "2026-11-05",
+  "scope": "New files only; original baseline is independently pinned in verify_all.py. Floating logs are provenance, not mathematical acceptance inputs.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "discovery_wave1.json",
+      "bytes": 318459,
+      "sha256": "6110a4dd74b63293258922f9c8ec39cbd581584914e274e80e18ee5a8803e2d3"
+    },
+    {
+      "path": "discovery_wave2.json",
+      "bytes": 285987,
+      "sha256": "c4458b1987a858c01e2275e75f3ed65a574cc37fdaa3f1879f27e694dee02852"
+    },
+    {
+      "path": "integer_witnesses.json",
+      "bytes": 40155,
+      "sha256": "83cc7ee2a03b549f1024e3f683afcdcb13298146293036cc75b54809ff7b2d82"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5672,
+      "sha256": "f5237c6f3477443a67ee8bfdea9374501fffe7e7b17a08d0bcdddfefb27a19af"
+    },
+    {
+      "path": "search.py",
+      "bytes": 5435,
+      "sha256": "ce1daa561f32d00274cf5e6edc719d24d875731c2dca5d1dae8260e53282c9d9"
+    },
+    {
+      "path": "search_summary.json",
+      "bytes": 1211,
+      "sha256": "eb936e930bcd6be8be913415f68fa99f0ab5f448d65f6a764e51c4191c0f65fb"
+    },
+    {
+      "path": "verification_report.json",
+      "bytes": 13054,
+      "sha256": "ce4c5fd8a03a5caee28eed77a3f0d4643f7cb96918d82a5bf4d28e12169c5eb2"
+    },
+    {
+      "path": "verify_all.py",
+      "bytes": 7068,
+      "sha256": "7bfaa5b3c1f02dedcf652c6ac16fb7d7faa7d9ffae20be8359dc90e1d2b7d860"
+    }
+  ]
+}
