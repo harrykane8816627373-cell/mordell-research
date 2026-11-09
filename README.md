@@ -9,7 +9,15 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 **八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
 
-## 十二点的全局差距收紧到1/300
+## 十二点的 Ward 全局上界
+
+十二点的全局值满足 **V₁₂<C₁₂≤M₁₂<(379/378)V₁₂**。候选值与全局最大值之比严格大于 **378/379（约99.7361%）**，可达值与上界的相对差小于1/378。标准库精确覆盖处理268239个节点，未决0。[完整证书](twelve-point-ward-upper/README.md)
+
+新核使用19个完整驻点 Ward 参数和5个质量参数。三个合并谐波块各有一个负特征值。基核的正半定性与修正项的驻定零和恒等式共同保证全局最大点的核和非负。Jacobian 已逐项核对包含修正的完整解析梯度。[惯性记录](twelve-point-ward-upper/jacobian_inertia.json) · [梯度生成器](scripts/build_ward_gradient.py)
+
+14类接触点的数值拟合在10⁻⁶容差内取得零采样松弛。精确接触、全域锐界与最大构型分类仍待完成。[接触实验](twelve-point-ward-upper/contact_trial.json)
+
+## 十二点的上一版301/300界
 
 已证 **V₁₂<C₁₂≤M₁₂<(301/300)V₁₂**。真实候选的目标值与全局最大值之比严格大于 **300/301（约99.6678%）**。点对补偿降至1/20000，整数覆盖处理229113个节点，未决0。全部12个Gram块、真实根及可达值比较均通过复核。全局锐值与构型唯一性仍待证明。[完整核证书](twelve-point-kernel-refinement-2/README.md)
 
@@ -65,7 +73,7 @@ V_{12}\le M_{12}<\frac{23}{20}V_{12},
 |n=6、7|M₆=6¹⁵/5¹⁰，M₇=7²¹/6¹⁵；等号为原点加相应正多边形|[主稿与依赖审计](earlier-results/six_seven_coverage_audit.md)；本项目现有全局证明保留 Faugère–Svartz 分类输入|
 |n=8|M₈=8²⁸/7²¹；等号为原点加半径 √(8/7) 的正七边形|[全域证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)；完整重放 386915 个盒，未决 0|
 |n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
-|n=12|V₁₂<C₁₂≤M₁₂<(301/300)V₁₂；真实候选比值>300/301|[最新完整核上界](twelve-point-kernel-refinement-2/README.md)；229113节点完整覆盖；非锐界、不分类全部最大点|
+|n=12|V₁₂<C₁₂≤M₁₂<(379/378)V₁₂，真实候选比值>378/379|268239节点完整覆盖。锐值仍待证明。[Ward 核上界](twelve-point-ward-upper/README.md)|
 |n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
 |10≤n≤100|旧91项保存下界保留；本轮在其中16项再取得严格改善|[本轮自由构型](finite-search-nov5/README.md) · [旧基线](symmetry-breaking/README.md)；均为可达下界|
 |10、12、19点候选范围|精确D₂/D₃/D₆候选、整局部区域的候选值上界及十点全局必要域|[候选筛选](candidate-global-screen/README.md) · [局部上界](candidate-basin/README.md) · [十点必要域](maximizer-domain/README.md)；补集未覆盖、未证明全局锐值|

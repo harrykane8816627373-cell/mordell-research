@@ -1,8 +1,12 @@
 # 研究索引：当前主线、方法依赖与历史版本
 
+## 十二点的 Ward 核证书
+
+当前最紧结果为 M₁₂<(379/378)V₁₂。精确重放覆盖268239个节点。完整驻点上的零和修正已实际用于两点上界，高阶 Ward 补偿公式可进入后续搜索。[Ward 证书](../twelve-point-ward-upper/README.md) · [高阶补偿](../stationary-kernel/HIGHER_HARMONICS.md) · [研究记录](CANDIDATE_KERNEL_RESEARCH.md)
+
 ## 十二点301/300上界、解析梯度与零和核
 
-当前最紧结论为V₁₂<C₁₂≤M₁₂<(301/300)V₁₂，候选比值>300/301（约99.6678%）。见[完整229113节点证书](../twelve-point-kernel-refinement-2/README.md)、[精确组合梯度](../jacobian-gradient/README.md)、[九点子集质量与三点必要式](../twelve-point-subset-domain/README.md)、[Ward零和核构造](../stationary-kernel/README.md)。原3%与15%证书作为历史证据保留。
+先前完整界为V₁₂<C₁₂≤M₁₂<(301/300)V₁₂，候选比值>300/301（约99.6678%）。见[完整229113节点证书](../twelve-point-kernel-refinement-2/README.md)、[精确组合梯度](../jacobian-gradient/README.md)、[九点子集质量与三点必要式](../twelve-point-subset-domain/README.md)、[Ward零和核构造](../stationary-kernel/README.md)。原3%与15%证书作为历史证据保留。
 
 ## Jacobian辅助与十二点3%全局界
 

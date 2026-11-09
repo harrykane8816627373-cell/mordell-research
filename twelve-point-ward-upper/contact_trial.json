@@ -1,0 +1,35 @@
+{
+  "scope": "one finite numerical SDP with fixed B and frozen features",
+  "source_candidate": "kernel.json",
+  "fixed_B": "0x1.b72e0fffb16cdp+4",
+  "warm_base_points": 12278,
+  "warm_points_with_saved_feedback": 12284,
+  "contact_classes": 14,
+  "interior_contacts": 13,
+  "physical_boundary_contacts": 1,
+  "Ward_parameters": 24,
+  "contact_and_gradient_tolerance": 1e-06,
+  "PSD_floor": 2e-07,
+  "Ward_absolute_weight_limit": 1,
+  "analytic_gradient_vs_finite_difference_max_error": 6.4493963780609675e-09,
+  "analytic_Ward_derivative_vs_finite_difference_max_error": 8.049951816246903e-10,
+  "baseline_contact_residuals": {
+    "max_abs_contact_value": 1.350902664850771e-05,
+    "max_abs_interior_gradient": 0.005932473911370872,
+    "max_abs_boundary_tangency": 0.001135980504867708,
+    "max_boundary_normal_tGt": -0.0008148936163117479
+  },
+  "status": "optimal",
+  "delta": 0.0,
+  "worst_warm_residual": 4.764528744683952e-07,
+  "contact_residuals": {
+    "max_abs_contact_value": 6.197315393074716e-07,
+    "max_abs_interior_gradient": 1.9835524337321123e-07,
+    "max_abs_boundary_tangency": 2.7992568174920482e-08,
+    "max_boundary_normal_tGt": -8.138333087072507e-05
+  },
+  "min_Q_eigenvalue": 4.835806594543204e-07,
+  "max_abs_Ward_weight": 0.9835497162687865,
+  "solve_seconds": 39.09299999999348,
+  "source_kernel_sha256": "48baa6540726fb26a725b8aa1886c3060e7232026c13b02e878e86cda1ec8c6d"
+}

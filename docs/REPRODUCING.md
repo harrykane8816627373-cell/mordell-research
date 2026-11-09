@@ -1,5 +1,19 @@
 # 复现指南
 
+## Ward 全局证书与解析梯度
+
+```bash
+python -B -S -O twelve-point-ward-upper/verify_all.py
+```
+
+该命令用标准库重放268239个节点并重建精确 Gram 块及 Ward 修正。`--record-report` 保存实际报告和节点进度。[证书及固定输入](../twelve-point-ward-upper/README.md)
+
+在 Jacobian 0.23.0 环境中可生成含 Ward 项的完整梯度。输出为 `work/jacobian-gradient-ward/gradient.json`，可由既有 `Residual` 读取。统一入口的 `--jacobian` 也会运行此生成器。[实现](../scripts/build_ward_gradient.py)
+
+```bash
+python -B scripts/build_ward_gradient.py
+```
+
 ## 当前十二点上界与本轮结构核验
 
 ```bash

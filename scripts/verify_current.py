@@ -54,7 +54,8 @@ def main():
              *sorted((ROOT/'jacobian-gradient').glob('*.md')),
              *sorted((ROOT/'twelve-point-kernel-refinement-2').glob('*.md')),
              *sorted((ROOT/'twelve-point-subset-domain').glob('*.md')),
-             *sorted((ROOT/'stationary-kernel').glob('*.md'))]
+             *sorted((ROOT/'stationary-kernel').glob('*.md')),
+             *sorted((ROOT/'twelve-point-ward-upper').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -184,8 +185,10 @@ def main():
             'symmetry-breaking/integer_witnesses.json'),
         'stationary-kernel': ('ring-rigidity/THEOREMS.md', 'source-review/revised_main.tex'),
     }
-    latest_kernel = 'twelve-point-kernel-refinement-2'
-    candidate_dependencies[latest_kernel] = candidate_dependencies['twelve-point-kernel-refinement']
+    refined_kernel = 'twelve-point-kernel-refinement-2'
+    latest_kernel = 'twelve-point-ward-upper'
+    candidate_dependencies[refined_kernel] = candidate_dependencies['twelve-point-kernel-refinement']
+    candidate_dependencies[latest_kernel] = (*candidate_dependencies[refined_kernel], 'stationary-kernel/README.md')
     for suite, dependencies in candidate_dependencies.items():
         with tempfile.TemporaryDirectory(prefix='mordell-candidate-') as temp:
             stage = Path(temp)
@@ -196,7 +199,7 @@ def main():
                 else:
                     dest.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copyfile(source, dest)
-            timeout = 900 if suite == latest_kernel else 240
+            timeout = 900 if suite in (refined_kernel, latest_kernel) else 240
             proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/suite/'verify_all.py')],
                 cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=timeout)
             require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
@@ -208,8 +211,10 @@ def main():
             print('PASS fresh full refined n12 cover: 87385 nodes, no pending boxes, M12 < (103/100)*V12; no sharp value claimed.', flush=True)
         elif suite == 'jacobian-assist':
             print('PASS fixed actual Jacobian records and independent rational checks; backend not restarted in this step.', flush=True)
-        elif suite == latest_kernel:
+        elif suite == refined_kernel:
             print('PASS refined n12 global upper bound M12 < (301/300)*V12 after full 229113-node replay.', flush=True)
+        elif suite == latest_kernel:
+            print('PASS Ward n12 global upper bound M12 < (379/378)*V12 after full 268239-node replay.', flush=True)
         elif suite in ('jacobian-gradient', 'twelve-point-subset-domain', 'stationary-kernel'):
             print('PASS '+suite+'/verify_all.py with standard-library exact arithmetic.', flush=True)
         else:
@@ -223,13 +228,12 @@ def main():
         require(proc.returncode == 0, 'actual Jacobian re-execution: '+proc.stdout[-2000:]+proc.stderr[-3000:])
         require(json.loads(proc.stdout)['Jacobian_executed_now'] is True, 'actual backend and MCP execution flag')
         print('PASS fresh optional Jacobian native computations and real stdio MCP operation.', flush=True)
-        proc = subprocess.run([str(interpreter), '-B', str(ROOT/'jacobian-gradient/analytic.py'), '--build',
-            '--kernel', str(ROOT/latest_kernel/'kernel.json'),
-            '--output', str(ROOT/'work/jacobian-gradient-current')], cwd=ROOT, env=env,
+        proc = subprocess.run([str(interpreter), '-B', str(ROOT/'scripts/build_ward_gradient.py')], cwd=ROOT, env=env,
             capture_output=True, text=True, encoding='utf-8', timeout=180)
         require(proc.returncode == 0, 'latest native gradient generation: '+proc.stderr[-3000:])
         gradient = json.loads(proc.stdout)
-        require(gradient['passed'] is True and gradient['global_coefficient_identity_checked'] is True,
+        require(gradient['passed'] is True and gradient['includes_ward_corrections'] is True and
+                gradient['global_coefficient_identity_checked'] is True,
                 'fresh complete native gradient coefficients')
         print('PASS latest kernel gradient from '+str(gradient['actual_Jacobian_native_gradient_calls'])+
               ' native Jacobian calls.', flush=True)

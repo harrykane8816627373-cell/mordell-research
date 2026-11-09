@@ -1,0 +1,24 @@
+{
+  "scope": "exact Ward-corrected nonsharp global twelve-point upper bound",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "cover.txt": "bd34a6b1b12a14ab59b9e2b4498f7e4e2acc865ebefcf1e49d4312662ce6d512",
+    "discovery_summary.json": "316600863b76b81f09ba934e905564411bb39c2e967b0d9898d4a89937538165",
+    "kernel.json": "48baa6540726fb26a725b8aa1886c3060e7232026c13b02e878e86cda1ec8c6d",
+    "README.md": "0fa596181b2d44d6119ba5607e31f6b03f46b227857bb320e2608980ef47e3b7",
+    "verify_all.py": "e07e142b5efc8c00bcafb121a241e3f1dbae3ad7afd89d06ef9a9e790c1160f4"
+  },
+  "dependencies": {
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d",
+    "validated-maxima/PROOF.md": "d3bd80d74bc73873f70fca6ef20f1f48770b5f1a763912e146db7472bd216341",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43",
+    "stationary-kernel/README.md": "b60534012a2922a8d598ab222990a85c2ee6dea9a146bd8acb4ff5a7d676453d"
+  }
+}
