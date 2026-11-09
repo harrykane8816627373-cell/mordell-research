@@ -1,42 +1,24 @@
 # 当前证明状态与统一入口
 
+蒋丰灿（Fengcan Jiang）研究项目，推导与代码包含 OpenAI Codex 协作。更新于 **2026-11-09**。
+
 ## 十二点全局锐值与等号
 
-已证 M₁₂=C₁₂，真实 D₃ 候选是旋转和重排下唯一的全局最大构型。三个半径层人口为3、3、6。精确接触的14个局部盒和补集上的728,050节点全部接受，补偿0、未决0。等号用基础核的径向矩和逐层谐波恢复。 [完整证明](../twelve-point-sharp-global/README.md)
+**M₁₂ = C₁₂**。真实 D₃ 候选是旋转和重排下唯一的全局最大构型，三层人口为 **3、3、6**。十四个接触盒与其补集共同给出 728,050 节点的完整覆盖，补偿为零，未决为零。等号由正定基核的径向矩和逐层谐波恢复。 [英文论文 PDF](../twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX](../twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [复核报告](../twelve-point-sharp-global/verification_report.json)
 
-## 十二点上一版15000/14999全局界
+|证明环节|结论与入口|
+|---|---|
+|删点与初始核|删一点给严格半径上端，Ward 核用 268,239 个节点控制全局缺额。 [删点域](../twelve-point-removal-domain/README.md) · [Ward 上界](../twelve-point-ward-upper/README.md)|
+|全局分带|任意最大构型在质量 11 下有三个平方半径落在 (0.12, 0.24)，其余九个落在 (0.94, 1.42)。 [99,603 节点复核](../twelve-point-ward-radii/README.md)|
+|精确取等与连续覆盖|接触矩阵秩为 44，十二个基础 Gram 块严格正定，所有必要点对域均获零补偿覆盖。 [完整证明](../twelve-point-sharp-global/README.md) · [复现顺序](../docs/REPRODUCING.md)|
 
-三个径向必要域共重放707,469个节点，零未决。点对补偿1/10⁶，得到 V₁₂<C₁₂≤M₁₂<(15000/14999)V₁₂，候选值超过全局最优值的99.99333%。锐值仍待证明。[新全局证书](../twelve-point-banded-upper/README.md)
+先前的 15%、3%、301/300、379/378 和 15000/14999 上界作为阶段证书归入[研究索引](../docs/RESEARCH_INDEX.md)。现行十二点结论由零补偿锐界给出。
 
-## 十二点最大构型的分带与精确接触
+## 八、九点的来源与重放
 
-质量11下，所有全局最大构型的平方半径分为内带(0.12, 0.24)三点和外带(0.94, 1.42)九点。完整点行覆盖为99,603个节点、零未决。另证任意十点子集的去重心质量严格大于7.573。上述必要域对未知最大构型直接成立。[半径与人口](../twelve-point-ward-radii/README.md) · [删点必要域](../twelve-point-removal-domain/README.md)
+八点的固定三变量核证书与本仓库的严格子集界接合，得到 M₈ = 8²⁸/7²¹ 及全部等号。在质量 7 下，目标不小于 7⁷ 且二、三次矩均非零的联合系统为空。 [全域证书复现](../eight-point-global/README.md) · [解析桥接](../eight-point-global/PROOF_BRIDGE.md)
 
-锐两点函数的14类接触已精确实现，接触矩阵秩44，十二个基础 Gram 块严格正定，十三个内点和一个 Gram 边界点均有局部两点上界。外带仍有明确的负缺额点，锐全局值及构型分类待证。[接触与负例](../twelve-point-sharp-contacts/README.md)
-
-## 十二点379/378全局界
-
-已证V₁₂<C₁₂≤M₁₂<(379/378)V₁₂，候选比值严格大于378/379（约99.7361%）。完整精确覆盖处理268239个节点，未决0。证明使用基核的正半定性和完整驻点上的 Ward 零和修正。锐值和构型唯一性仍待证明。[完整证书](../twelve-point-ward-upper/README.md)
-
-## 十二点301/300全局界
-
-已证V₁₂<C₁₂≤M₁₂<(301/300)V₁₂，真实候选比值>300/301（约99.6678%）。点对补偿为1/20000，完整覆盖229113个节点，未决0。全局锐值与构型唯一性仍待证明。[最新核证书](../twelve-point-kernel-refinement-2/README.md)
-
-本轮还验证了Jacobian组合梯度、q9>6.03和非线性三点必要式，以及19个Ward零和参数和5个质量参数。相应聚合矩条件保证修正的有序点对和为零。301/300界由正半定核覆盖给出。[梯度](../jacobian-gradient/README.md) · [三点域](../twelve-point-subset-domain/README.md) · [零和核](../stationary-kernel/README.md)
-
-## 当前更新：Jacobian与十二点3%全局包围
-
-[新十二点核证书](../twelve-point-kernel-refinement/README.md)严格证明V₁₂<C₁₂≤M₁₂<103V₁₂/100，故真实候选比例>100/103≈97.0874%。87385节点完整连续覆盖、未决0；全部12个Gram块、真实候选根与可达值比较均重新精确接受。该结论是非锐全局界，未证明候选等于M₁₂或分类全部最大点。
-
-[Jacobian固定环境](../jacobian-assist/README.md)已配置stdio MCP并实际执行精确惯性、Bernstein、Arb二阶包围与SOS证书；新界的正式接受仍只需独立标准库。原15%界与所有历史证据保留，Windows未启用PPL、Singular、QEPCAD。
-
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**；推导与代码包含 OpenAI Codex 协作。更新于2026-11-08。定理的全部假设和证明以所链接正文为准。
-
-**八点当前结果：[全局证书复现](../eight-point-global/README.md) · [与既有严格子集定理的桥接](../eight-point-global/PROOF_BRIDGE.md) · [实际重放记录](../eight-point-global/reports/replay.json)。** Ji、Xu、Yu预印本的固定三变量核证书已完整重放，并与本仓库已有子集界接合，得到 M₈=8²⁸/7²¹及全部等号。质量7下Δ≤7⁷，等号恰为中心加单位正七边形，所以用户的Δ≥7⁷、s₂s₃≠0联合系统为空。这条桥接不需要七点完整驻点分类；旧局部森林及其28个开放盒保留为历史有限搜索记录。
-
-**九点当前结果：** Ji、Xu、Yu 的[预印本 §4.4](https://arxiv.org/pdf/2611.03088v1)给出 M₉=9³⁶/8²⁸，等号恰为原点加半径 √(9/8) 的正八边形。本仓库已补齐[完整解析证明](../nine-point-global/PROOF.md)与[固定来源的独立重放](../nine-point-global/README.md)：从完整初始域遍历31613个盒，15807个终端盒，未决0；全部8个上游检查实际执行，来源及软件依赖保留。
-
-**十二点新增全局定量结果：** [连续核证书](../twelve-point-kernel-upper/README.md)严格证明V₁₂≤M₁₂<23V₁₂/20，其中V₁₂为旧整数构型的质量12可达值。已有真实候选值严格大于V₁₂，故它与全局值的比>20/23≈86.9565%。37053节点完整覆盖、未决0；该非锐界不预设所有最大点对称，也不证明候选达到最大值。
+九点得到 M₉ = 9³⁶/8²⁸，等号为原点加半径 √(9/8) 的正八边形。完整初始域遍历 31,613 个盒，未决为零。八、九点全局核与计算机辅助证明归于 Ji、Xu、Yu。 [九点解析证明](../nine-point-global/PROOF.md) · [上游预印本](https://arxiv.org/abs/2611.03088v1)
 
 一般 n 的当前最强结论集中在下方表格；各次推进与较弱历史常数见[研究索引](../docs/RESEARCH_INDEX.md)。六、七点的外部分类依赖、有限层数与渐近层数的不同前提继续保留。
 

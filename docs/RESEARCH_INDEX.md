@@ -1,26 +1,23 @@
-# 研究索引：当前主线、方法依赖与历史版本
+# 研究索引
 
 ## 十二点已证全局锐界
 
-真实 D₃ 候选达到 M₁₂，且在整体旋转及点重排下唯一。连续证明由分带、精确核回代、十四个局部盒和零补偿补集覆盖组成。 [锐界与等号证明](../twelve-point-sharp-global/README.md)
+真实 D₃ 候选达到 M₁₂，且在整体旋转及点重排下唯一。英文论文包括完整证明、固定输入的复现顺序及供其他点数使用的核构造。 [英文论文 PDF](../twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX](../twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [锐界与等号证书](../twelve-point-sharp-global/README.md)
 
-## 十二点的全局必要分带与锐接触
+## 十二点的证书演进
 
-任意全局最大构型必须内三外九。三个径向域上已证 M₁₂<(15000/14999)V₁₂。新的删点条件还能直接剪枝两点变量。真实候选接触矩阵的精确秩为44，已认证一个锐接触核的所有接触邻域。[分带全局上界](../twelve-point-banded-upper/README.md) · [半径分带](../twelve-point-ward-radii/README.md) · [删点剪枝](../twelve-point-removal-domain/README.md) · [精确接触](../twelve-point-sharp-contacts/README.md)
+V₁₂ 是整数见证的可达值。以下各行记录上界如何逐步收紧，以及后来用于锐界的独立工具。 [完整研究记录](CANDIDATE_KERNEL_RESEARCH.md)
 
-## 十二点的 Ward 核证书
+|阶段|证明与计算|
+|---|---|
+|15% 和 3% 全局上界|[15% 连续核](../twelve-point-kernel-upper/README.md) · [3% 改进](../twelve-point-kernel-refinement/README.md) · [Jacobian 配置](../jacobian-assist/README.md)|
+|M₁₂ < (301/300)V₁₂|[229,113 节点覆盖](../twelve-point-kernel-refinement-2/README.md) · [精确组合梯度](../jacobian-gradient/README.md) · [九点子集必要域](../twelve-point-subset-domain/README.md)|
+|M₁₂ < (379/378)V₁₂|[268,239 节点 Ward 核](../twelve-point-ward-upper/README.md) · [零和修正](../stationary-kernel/README.md) · [高阶补偿](../stationary-kernel/HIGHER_HARMONICS.md)|
+|必要径向域与精确接触|[删点剪枝](../twelve-point-removal-domain/README.md) · [内三外九](../twelve-point-ward-radii/README.md) · [接触矩阵秩 44](../twelve-point-sharp-contacts/README.md)|
+|M₁₂ < (15000/14999)V₁₂|[707,469 节点分带覆盖](../twelve-point-banded-upper/README.md)|
+|M₁₂ = C₁₂|[728,050 节点零补偿覆盖及等号证明](../twelve-point-sharp-global/README.md)|
 
-先前结果为 M₁₂<(379/378)V₁₂。精确重放覆盖268239个节点。完整驻点上的零和修正已实际用于两点上界，高阶 Ward 补偿公式可进入后续搜索。[Ward 证书](../twelve-point-ward-upper/README.md) · [高阶补偿](../stationary-kernel/HIGHER_HARMONICS.md) · [研究记录](CANDIDATE_KERNEL_RESEARCH.md)
-
-## 十二点301/300上界、解析梯度与零和核
-
-先前完整界为V₁₂<C₁₂≤M₁₂<(301/300)V₁₂，候选比值>300/301（约99.6678%）。见[完整229113节点证书](../twelve-point-kernel-refinement-2/README.md)、[精确组合梯度](../jacobian-gradient/README.md)、[九点子集质量与三点必要式](../twelve-point-subset-domain/README.md)、[Ward零和核构造](../stationary-kernel/README.md)。原3%与15%证书作为历史证据保留。
-
-## Jacobian辅助与十二点3%全局界
-
-上一轮结论为V₁₂<C₁₂≤M₁₂<103V₁₂/100，真实候选比例>100/103。见[新完整证书](../twelve-point-kernel-refinement/README.md)、[Jacobian配置及真实计算](../jacobian-assist/README.md)、[研究记录](CANDIDATE_KERNEL_RESEARCH.md)。87385节点完整覆盖只需标准库；原15%界作为历史证据保留。
-
-2026-11-08。返回[首页](../README.md) · [当前证明状态](../configuration-bounds/PROOF_STATUS.md)。
+2026-11-09。 [首页](../README.md) · [当前证明状态](../configuration-bounds/PROOF_STATUS.md)
 
 首页与证明总表保留当前最强结论；本页集中历次专题入口。各专题中的历史比较、较弱常数和运行计数按原日期理解，不能把多条有共同预算的能量界直接相加。
 

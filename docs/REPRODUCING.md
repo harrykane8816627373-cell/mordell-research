@@ -1,23 +1,34 @@
 # 复现指南
 
-## 十二点全局锐界
+## 编译十二点英文论文
+
+进入 [论文目录](../twelve-point-sharp-global/manuscript/README.md)，使用 TeX Live 编译。
 
 ```bash
-python -B -S -O twelve-point-sharp-global/verify_all.py
+latexmk -pdf mordell-n12-proof.tex
 ```
 
-只需 Python 标准库。重算真实根、接触方程、十二个 Gram 块和十四个局部盒，再重放728,050节点的零补偿连续覆盖。该入口以固定分带定理为前提，统一入口按顺序重算分带和其前提。 [完整证明](../twelve-point-sharp-global/README.md)
+[已编译 PDF](../twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [单文件 LaTeX 源码](../twelve-point-sharp-global/manuscript/mordell-n12-proof.tex)
 
-## 十二点必要域与锐接触
+## 十二点全局锐界的依赖顺序
 
 ```bash
 python -B -S -O twelve-point-removal-domain/verify_all.py
+python -B -S -O twelve-point-ward-upper/verify_all.py
 python -B -S -O twelve-point-ward-radii/verify_all.py
+python -B -S -O twelve-point-sharp-global/verify_all.py
+```
+
+以上命令从仓库根目录运行，只需 Python 标准库。它们依次复核删点必要域、Ward 缺额上界、内三外九分带和最终锐界。最后一步重算真实根、接触方程、十二个 Gram 块和十四个局部盒，再重放 728,050 个节点的零补偿覆盖。 [完整证明](../twelve-point-sharp-global/README.md) · [固定输入](../twelve-point-sharp-global/source_manifest.json)
+
+## 早期精确接触与分带上界
+
+```bash
 python -B -S -O twelve-point-sharp-contacts/verify_all.py
 python -B -S -O twelve-point-banded-upper/verify_all.py
 ```
 
-四个入口分别重算删点界、99,603节点的分带覆盖及人口、真实候选的精确接触及邻域曲率、707,469节点的分带全局上界。分带入口将先前完整 Ward 定理作为固定输入。统一入口按依赖顺序重放。所有接受均只需 Python 标准库。[删点](../twelve-point-removal-domain/README.md) · [分带](../twelve-point-ward-radii/README.md) · [接触](../twelve-point-sharp-contacts/README.md) · [新全局上界](../twelve-point-banded-upper/README.md)
+两个入口分别复核锐接触的局部证书和早期分带非锐上界。 [接触](../twelve-point-sharp-contacts/README.md) · [707,469 节点分带覆盖](../twelve-point-banded-upper/README.md)
 
 ## Ward 全局证书与解析梯度
 
@@ -33,7 +44,7 @@ python -B -S -O twelve-point-ward-upper/verify_all.py
 python -B scripts/build_ward_gradient.py
 ```
 
-## 当前十二点上界与本轮结构核验
+## 历史 301/300 界与结构核验
 
 ```bash
 python -B -S -O twelve-point-kernel-refinement-2/verify_all.py
@@ -44,9 +55,9 @@ python -B -S -O stationary-kernel/verify_all.py
 
 全部正式接受仅需Python标准库。第一项默认重放229113个节点，约3分钟，并重新计算全部Gram块、真实根和整数可达值。证明M₁₂<(301/300)V₁₂。梯度接受器验证29份原生结果的完整系数恒等式，不重启Jacobian。三点域核对已接受九点全域证据，未重新运行九点大覆盖。Ward程序核对带force残差的恒等式及结构化零形式，不宣称任意点自动驻定。
 
-四项已接入统一入口。统一默认还会复核历史小证书和先前十二点覆盖，耗时数分钟。加`--jacobian`会额外真实重算后端及最新核的组合梯度。生成输出在work/，不会覆盖已接受数据。
+统一入口会复核历史证书和十二点完整依赖链。加 `--jacobian` 可额外运行后端并重算有理 Ward 核的组合梯度，输出保存在 `work/`。
 
-## Jacobian与新的十二点3%全局证书
+## Jacobian 与历史十二点 3% 全局证书
 
 ```bash
 python -B -S -O twelve-point-kernel-refinement/verify_all.py
@@ -57,7 +68,7 @@ python -B -S -O jacobian-assist/verify_all.py
 
 要重算真实Jacobian后端与stdio调用，在完成[固定版本安装](../jacobian-assist/README.md)后执行统一入口的`--jacobian`选项；非默认解释器可用`--jacobian-python`指定。新核严格接受不依赖Jacobian，Windows配置未启用PPL、Singular、QEPCAD。
 
-更新：2026-11-08。
+更新于 2026-11-09。
 
 所有命令均在仓库根目录运行，除非另行注明。默认接受只需要 Python 标准库；解析证明与外部论文输入还需阅读正文。
 
