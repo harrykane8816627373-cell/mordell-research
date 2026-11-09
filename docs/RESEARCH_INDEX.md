@@ -1,8 +1,12 @@
 # 研究索引：当前主线、方法依赖与历史版本
 
+## 十二点301/300上界、解析梯度与零和核
+
+当前最紧结论为V₁₂<C₁₂≤M₁₂<(301/300)V₁₂，候选比值>300/301（约99.6678%）。见[完整229113节点证书](../twelve-point-kernel-refinement-2/README.md)、[精确组合梯度](../jacobian-gradient/README.md)、[九点子集质量与三点必要式](../twelve-point-subset-domain/README.md)、[Ward零和核构造](../stationary-kernel/README.md)。原3%与15%证书作为历史证据保留。
+
 ## Jacobian辅助与十二点3%全局界
 
-当前更强结论为V₁₂<C₁₂≤M₁₂<103V₁₂/100，真实候选比例>100/103。见[新完整证书](../twelve-point-kernel-refinement/README.md)、[Jacobian配置及真实计算](../jacobian-assist/README.md)、[研究记录](CANDIDATE_KERNEL_RESEARCH.md)。87385节点完整覆盖只需标准库；原15%界作为历史证据保留。
+上一轮结论为V₁₂<C₁₂≤M₁₂<103V₁₂/100，真实候选比例>100/103。见[新完整证书](../twelve-point-kernel-refinement/README.md)、[Jacobian配置及真实计算](../jacobian-assist/README.md)、[研究记录](CANDIDATE_KERNEL_RESEARCH.md)。87385节点完整覆盖只需标准库；原15%界作为历史证据保留。
 
 2026-11-08。返回[首页](../README.md) · [当前证明状态](../configuration-bounds/PROOF_STATUS.md)。
 

@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "scope": "numeric diagnostic only; no exhaustive minimum or new bound",
+  "source_sha256": "7ed13471d1d291583a1ca20ec1e65a8d6a8611407a60c4644826112848d562c7",
+  "points_compared": 83,
+  "maximum_gradient_disagreement": 5.480065290441871e-10,
+  "old_gradient_formula_bug_detected": false,
+  "old_attempt_slsqp_supplied_analytic_jacobian": false,
+  "analytic_gradient_slsqp_examples": [
+    {
+      "start": [
+        0.25,
+        0.6666666666666666,
+        -0.2
+      ],
+      "success": true,
+      "point": [
+        0.18555383962493033,
+        1.219927168945293,
+        -0.10071160892757658
+      ],
+      "h_minus_log_distance": -0.00010261848880877,
+      "evaluations": 26,
+      "iterations": 25
+    },
+    {
+      "start": [
+        1.1666666666666667,
+        1.5,
+        -0.75
+      ],
+      "success": true,
+      "point": [
+        1.10175855059187,
+        1.39765127075124,
+        -0.6120036839585806
+      ],
+      "h_minus_log_distance": -1.3664796103540766e-05,
+      "evaluations": 23,
+      "iterations": 23
+    },
+    {
+      "start": [
+        0.5264,
+        1.6805555555555556,
+        0.9033
+      ],
+      "success": true,
+      "point": [
+        0.589215389251914,
+        1.6805555555555556,
+        0.9027626442165317
+      ],
+      "h_minus_log_distance": -7.220741516278384e-05,
+      "evaluations": 12,
+      "iterations": 10
+    },
+    {
+      "start": [
+        1.238802,
+        1.680555,
+        -1.135873
+      ],
+      "success": true,
+      "point": [
+        1.165629426960014,
+        1.6805555555555556,
+        -1.2921512449528751
+      ],
+      "h_minus_log_distance": 3.6838974457609197e-06,
+      "evaluations": 14,
+      "iterations": 14
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "jacobian_gradient.json": "cbdb9117ce7176748d751f2fdcfa38c2c70d347e26b5fd7d5255876c9cf1831a",
+    "README.md": "08f45cd33efe2774a0983c197e00f46ff54cc331a345e08186bc5c9655fec828",
+    "verify_all.py": "f346a3161e54b1c31ab968a9259328e647e6c1f5c7745f3036d714204f723b0d"
+  },
+  "dependencies": {
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43",
+    "nine-point-global/PROOF.md": "c67d4dbd2dcc4389d0b12a227f0b9a716741f134e0908e6a8e47f881dbaedcd3",
+    "nine-point-global/accepted_replay.json": "7b57876684f09eb8a409f5a4159dce0e81143036c4f1a455bb1295d8f163498b",
+    "nine-point-global/source_manifest.json": "e5fed083c4caaddfee4088f63c9c427f5855abfd0b51127ff7295919281e0e45"
+  },
+  "scope": "new n12 global-maximizer nine-subset and three-point necessary conditions; no new sharp value or pair-only tightening"
+}

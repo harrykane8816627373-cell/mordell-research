@@ -1,5 +1,18 @@
 # 复现指南
 
+## 当前十二点上界与本轮结构核验
+
+```bash
+python -B -S -O twelve-point-kernel-refinement-2/verify_all.py
+python -B -S -O jacobian-gradient/verify_all.py
+python -B -S -O twelve-point-subset-domain/verify_all.py
+python -B -S -O stationary-kernel/verify_all.py
+```
+
+全部正式接受仅需Python标准库。第一项默认重放229113个节点，约3分钟，并重新计算全部Gram块、真实根和整数可达值。证明M₁₂<(301/300)V₁₂。梯度接受器验证29份原生结果的完整系数恒等式，不重启Jacobian。三点域核对已接受九点全域证据，未重新运行九点大覆盖。Ward程序核对带force残差的恒等式及结构化零形式，不宣称任意点自动驻定。
+
+四项已接入统一入口。统一默认还会复核历史小证书和先前十二点覆盖，耗时数分钟。加`--jacobian`会额外真实重算后端及最新核的组合梯度。生成输出在work/，不会覆盖已接受数据。
+
 ## Jacobian与新的十二点3%全局证书
 
 ```bash

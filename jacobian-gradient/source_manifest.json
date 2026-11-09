@@ -1,0 +1,20 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "analytic.py": "9a3921a61913226a3e4d283589333574c2940400abb4a1fcd8fb7d160c88cf03",
+    "boundary_gradient.json": "5e0b462da7b0ed37c8ea24b2b5583a37ad5af8351f1c745985cfd1adb19bf3b4",
+    "check_discover.py": "da60eb5082234cf9a22e8cd1c12e56f2c8e894d002e29a68667e366bbbdf4482",
+    "gradient.json": "f6f1c0a7a604c5e2733ec016eb80b45901ce26b7544498ddf4a1d5da6d675fa0",
+    "native_blocks.json": "e6eb7f387a6cb0d949dda9dc36a2ed0c0706da449b75f98c6c7d9b6adb7cad2c",
+    "numeric_crosscheck.json": "e1b736fe3e92a6e4ce4589c1478072fddd1d43a3ac27c09832deff73a87451f8",
+    "README.md": "4b2537fe967d031617a93f0a23167cb725572ca338c587d4458fd9499ebccdfa",
+    "report.json": "37d79d151b3ed7b5c4336a9cfb586f9b78291913bbd4e3628794c4afc13fcb41",
+    "verify_all.py": "6cbf798d2379f623c245555aee3722b8a9068f1211bb43e4751a7a1142d2b25c"
+  },
+  "dependencies": {
+    "twelve-point-kernel-refinement/kernel.json": "a927251f8f4f4bc9abd99870881f2029274bf16a15a3fac840dd97ff1a9e4fce",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+    "candidate-kernel/discover_sdp.py": "7ed13471d1d291583a1ca20ec1e65a8d6a8611407a60c4644826112848d562c7"
+  },
+  "scope": "exact composed gradient of the fixed previously accepted n12 three-percent kernel; no new global upper bound"
+}

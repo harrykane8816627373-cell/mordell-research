@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "date": "2026-11-08",
+  "arithmetic": "Python standard-library exact Gaussian rationals",
+  "scope": "existing full-force Ward identities and new zero-sum correction architecture",
+  "Ward_identities_claimed_original_here": false,
+  "arbitrary_nonstationary_point_sets_checked": 16,
+  "exact_force_residual_identities_checked": 96,
+  "ordered_sum_and_diagonal_correction_identities_checked": 64,
+  "abstract_constraint_vector_zero_form_checks": 464,
+  "n12_free_Ward_parameter_dimensions": [
+    9,
+    5,
+    5
+  ],
+  "n12_total_free_Ward_parameters": 19,
+  "optional_mass_only_free_parameters": 5,
+  "total_with_optional_mass_parameters": 24,
+  "n12_v2": [
+    "-3/4",
+    "1",
+    "0",
+    "0",
+    "0"
+  ],
+  "n12_v3": [
+    "-2/3",
+    "1",
+    "0",
+    "0",
+    "0"
+  ],
+  "optional_n12_v0": [
+    "1/12",
+    "1",
+    "0",
+    "0",
+    "0"
+  ],
+  "zero_ordered_sum_proved_for_all_complete_stationary_configurations": true,
+  "optional_radial_zero_sum_proved_for_all_mass_n_minus_one_configurations": true,
+  "arbitrary_configurations_falsely_assumed_stationary": false,
+  "full_correction_kernel_positive_semidefinite_claimed": false,
+  "explicit_non_PSD_correction_example_checked": true,
+  "new_global_numerical_bound_proved": false,
+  "formal_proof_assistant_verification_claimed": false,
+  "input_sha256": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "b60534012a2922a8d598ab222990a85c2ee6dea9a146bd8acb4ff5a7d676453d",
+    "verify_all.py": "04ebd312fe0ad521e16198a9eca0dc063012b582d20a98b37debf73923691587"
+  },
+  "dependency_sha256": {
+    "ring-rigidity/THEOREMS.md": "21473d8fbb6ceda99aebe896ea311b972d32c5c3af1d237285f73dcdb5892642",
+    "source-review/revised_main.tex": "1325f95a5330f883efcfddb50520b69bbe0f1b578e0cd017996df03e1be996ae"
+  }
+}

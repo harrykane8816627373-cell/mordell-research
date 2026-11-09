@@ -1,0 +1,23 @@
+{
+  "scope": "second exact complete nonsharp n12 global refinement; discovery output is not proof",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "cover.txt": "e4e0d563eff895e3b7d26d430b5eb4061e5d741cc884186cda7512109d3a7438",
+    "discovery_summary.json": "c5eab6831f42767ddfd5633024b677c839f2369416f97e131a2822f7f2a13ed5",
+    "kernel.json": "625ad8fe69c6796781ffb544514bb3e2dcce0bc801a04994f8cc434e08588d59",
+    "README.md": "b65c3ef49aea8c55825bb145cf30a36b65294d45542e50a1ba4a49c26e6b6243",
+    "verify_all.py": "9b856d3f08a6e42b655f3012c2b4201515346381fb7fec74777f3eb4723fa2a1"
+  },
+  "dependencies": {
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d",
+    "validated-maxima/PROOF.md": "d3bd80d74bc73873f70fca6ef20f1f48770b5f1a763912e146db7472bd216341",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43"
+  }
+}

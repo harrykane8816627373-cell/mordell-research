@@ -1,6 +1,6 @@
 # Mordell 距离乘积研究
 
-研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新：**2026-11-08**。
+研究资料与项目发起：**蒋丰灿（Fengcan Jiang）**（[GitHub](https://github.com/harrykane8816627373-cell)）。推导、精确证书与代码包含 OpenAI Codex 协作。更新于 **2026-11-09**。
 
 ```math
 M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
@@ -9,7 +9,13 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 **八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
 
-## Jacobian与十二点3%全局包围
+## 十二点的全局差距收紧到1/300
+
+已证 **V₁₂<C₁₂≤M₁₂<(301/300)V₁₂**。真实候选的目标值与全局最大值之比严格大于 **300/301（约99.6678%）**。点对补偿降至1/20000，整数覆盖处理229113个节点，未决0。全部12个Gram块、真实根及可达值比较均通过复核。全局锐值与构型唯一性仍待证明。[完整核证书](twelve-point-kernel-refinement-2/README.md)
+
+29份Jacobian原生求导结果组合成了核梯度，完整系数恒等式通过验证。新三点必要式给出九点子集去重心质量q>6.03。Ward恒等式提供19个驻定零和修正参数，质量约束另提供5个。数值全局界由正半定核覆盖给出。[组合梯度](jacobian-gradient/README.md) · [三点必要域](twelve-point-subset-domain/README.md) · [零和核构造](stationary-kernel/README.md)
+
+## 上一轮：Jacobian与十二点3%全局包围
 
 [新连续核证书](twelve-point-kernel-refinement/README.md)已将上一轮15%的范围收紧为 **V₁₂<C₁₂≤M₁₂<103V₁₂/100**。因此已认证真实候选与全局最大值之比严格大于 **100/103≈97.0874%**。新核在质量11尺度只需点对补偿1/2500；完整标准库重放87385个节点、未决0，没有假设未知最大点具有D₃对称。
 
@@ -59,7 +65,7 @@ V_{12}\le M_{12}<\frac{23}{20}V_{12},
 |n=6、7|M₆=6¹⁵/5¹⁰，M₇=7²¹/6¹⁵；等号为原点加相应正多边形|[主稿与依赖审计](earlier-results/six_seven_coverage_audit.md)；本项目现有全局证明保留 Faugère–Svartz 分类输入|
 |n=8|M₈=8²⁸/7²¹；等号为原点加半径 √(8/7) 的正七边形|[全域证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)；完整重放 386915 个盒，未决 0|
 |n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
-|n=12|V₁₂<C₁₂≤M₁₂<103V₁₂/100；真实候选比值>100/103|[新连续核上界](twelve-point-kernel-refinement/README.md)；87385节点完整覆盖；非锐界、不分类全部最大点|
+|n=12|V₁₂<C₁₂≤M₁₂<(301/300)V₁₂；真实候选比值>300/301|[最新完整核上界](twelve-point-kernel-refinement-2/README.md)；229113节点完整覆盖；非锐界、不分类全部最大点|
 |n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
 |10≤n≤100|旧91项保存下界保留；本轮在其中16项再取得严格改善|[本轮自由构型](finite-search-nov5/README.md) · [旧基线](symmetry-breaking/README.md)；均为可达下界|
 |10、12、19点候选范围|精确D₂/D₃/D₆候选、整局部区域的候选值上界及十点全局必要域|[候选筛选](candidate-global-screen/README.md) · [局部上界](candidate-basin/README.md) · [十点必要域](maximizer-domain/README.md)；补集未覆盖、未证明全局锐值|

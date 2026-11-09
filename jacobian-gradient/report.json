@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "kernel_source": "twelve-point-kernel-refinement/kernel.json",
+  "kernel_sha256": "a927251f8f4f4bc9abd99870881f2029274bf16a15a3fac840dd97ff1a9e4fce",
+  "helper_sha256": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+  "actual_Jacobian_native_gradient_calls": 29,
+  "blocks": [
+    {
+      "label": "affine_base",
+      "source_support": 3,
+      "gradient_supports": [
+        1,
+        1,
+        0
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "0",
+      "source_support": 61,
+      "gradient_supports": [
+        48,
+        48,
+        0
+      ],
+      "integer_coefficient_limbs": 3
+    },
+    {
+      "label": "1",
+      "source_support": 43,
+      "gradient_supports": [
+        29,
+        29,
+        25
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "2",
+      "source_support": 68,
+      "gradient_supports": [
+        54,
+        54,
+        25
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "3",
+      "source_support": 68,
+      "gradient_supports": [
+        54,
+        54,
+        50
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "4",
+      "source_support": 93,
+      "gradient_supports": [
+        79,
+        79,
+        50
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "5",
+      "source_support": 93,
+      "gradient_supports": [
+        79,
+        79,
+        75
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "6",
+      "source_support": 118,
+      "gradient_supports": [
+        104,
+        104,
+        75
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "7",
+      "source_support": 118,
+      "gradient_supports": [
+        104,
+        104,
+        100
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "8",
+      "source_support": 143,
+      "gradient_supports": [
+        129,
+        129,
+        100
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "9",
+      "source_support": 143,
+      "gradient_supports": [
+        129,
+        129,
+        125
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "10",
+      "source_support": 168,
+      "gradient_supports": [
+        154,
+        154,
+        125
+      ],
+      "integer_coefficient_limbs": 1
+    },
+    {
+      "label": "11",
+      "source_support": 168,
+      "gradient_supports": [
+        154,
+        154,
+        150
+      ],
+      "integer_coefficient_limbs": 1
+    }
+  ],
+  "admission_strategy": "exact common denominator, signed 250-bit integer coefficient limbs and <=64 source terms per call; each native input has <=76-digit coefficients and <=192 gradient terms",
+  "direct_block_coefficient_guard_observed": "128 digits; original block0 has coefficients exceeding it",
+  "direct_total_gradient_term_guard_observed": 256,
+  "complete_h_support": 602,
+  "complete_gradient_supports": [
+    527,
+    527,
+    500
+  ],
+  "global_coefficient_identity_checked": true,
+  "rational_point_crosschecks": [
+    {
+      "point": [
+        "1/4",
+        "2/3",
+        "-1/5"
+      ],
+      "exact_gradient_agrees": true
+    },
+    {
+      "point": [
+        "7/6",
+        "3/2",
+        "-3/4"
+      ],
+      "exact_gradient_agrees": true
+    },
+    {
+      "point": [
+        "329/625",
+        "121/72",
+        "9033/10000"
+      ],
+      "exact_gradient_agrees": true
+    },
+    {
+      "point": [
+        "619401/500000",
+        "336111/200000",
+        "-1135873/1000000"
+      ],
+      "exact_gradient_agrees": true
+    }
+  ],
+  "exploratory_float_gradient_absolute_errors": [
+    6.591949208711867e-16,
+    3.979087567253237e-12,
+    1.1634304630803172e-12,
+    1.14470682932577e-10
+  ],
+  "gradient_artifact_sha256": "f6f1c0a7a604c5e2733ec016eb80b45901ce26b7544498ddf4a1d5da6d675fa0",
+  "native_results_sha256": "e6eb7f387a6cb0d949dda9dc36a2ed0c0706da449b75f98c6c7d9b6adb7cad2c",
+  "seconds": 2.9689999999827705,
+  "scope": "exact derivative construction and exploratory numerical evaluator; no new global optimum claim"
+}

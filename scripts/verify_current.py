@@ -26,7 +26,7 @@ def main():
     parser.add_argument('--refinement', action='store_true', help='also replay the current imported/force closure proof chain')
     parser.add_argument('--global-eight', action='store_true', help='fresh full attributed n8 global proof replay; needs the pinned numerical dependencies')
     parser.add_argument('--global-nine', action='store_true', help='fresh full attributed n9 global proof replay; needs the pinned numerical dependencies')
-    parser.add_argument('--jacobian', action='store_true', help='also re-execute the optional pinned native Jacobian and stdio MCP checks')
+    parser.add_argument('--jacobian', action='store_true', help='also run native Jacobian checks and regenerate the latest kernel gradient')
     parser.add_argument('--jacobian-python', type=Path, help='optional Jacobian interpreter; implies --jacobian')
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
@@ -50,7 +50,11 @@ def main():
              *sorted((ROOT/'candidate-kernel').glob('*.md')),
              *sorted((ROOT/'twelve-point-kernel-upper').glob('*.md')),
              *sorted((ROOT/'twelve-point-kernel-refinement').glob('*.md')),
-             *sorted((ROOT/'jacobian-assist').glob('*.md'))]
+             *sorted((ROOT/'jacobian-assist').glob('*.md')),
+             *sorted((ROOT/'jacobian-gradient').glob('*.md')),
+             *sorted((ROOT/'twelve-point-kernel-refinement-2').glob('*.md')),
+             *sorted((ROOT/'twelve-point-subset-domain').glob('*.md')),
+             *sorted((ROOT/'stationary-kernel').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -174,7 +178,14 @@ def main():
             'candidate-kernel/data/n12_exact_interpretation.json',
             'twelve-point-kernel-refinement/kernel.json',
             'candidate-kernel/discover_sdp.py', 'validated-maxima/certificates.json'),
+        'jacobian-gradient': ('twelve-point-kernel-refinement/kernel.json',
+            'twelve-point-kernel-upper/verify_cover.py', 'candidate-kernel/discover_sdp.py'),
+        'twelve-point-subset-domain': ('nine-point-global', 'finite-n/SUBSET_PROOF.md',
+            'symmetry-breaking/integer_witnesses.json'),
+        'stationary-kernel': ('ring-rigidity/THEOREMS.md', 'source-review/revised_main.tex'),
     }
+    latest_kernel = 'twelve-point-kernel-refinement-2'
+    candidate_dependencies[latest_kernel] = candidate_dependencies['twelve-point-kernel-refinement']
     for suite, dependencies in candidate_dependencies.items():
         with tempfile.TemporaryDirectory(prefix='mordell-candidate-') as temp:
             stage = Path(temp)
@@ -185,8 +196,9 @@ def main():
                 else:
                     dest.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copyfile(source, dest)
+            timeout = 900 if suite == latest_kernel else 240
             proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/suite/'verify_all.py')],
-                cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=240)
+                cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=timeout)
             require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
             result, _ = json.JSONDecoder().raw_decode(proc.stdout.lstrip())
             require(result['passed'] is True, suite+': acceptance flag')
@@ -196,6 +208,10 @@ def main():
             print('PASS fresh full refined n12 cover: 87385 nodes, no pending boxes, M12 < (103/100)*V12; no sharp value claimed.', flush=True)
         elif suite == 'jacobian-assist':
             print('PASS fixed actual Jacobian records and independent rational checks; backend not restarted in this step.', flush=True)
+        elif suite == latest_kernel:
+            print('PASS refined n12 global upper bound M12 < (301/300)*V12 after full 229113-node replay.', flush=True)
+        elif suite in ('jacobian-gradient', 'twelve-point-subset-domain', 'stationary-kernel'):
+            print('PASS '+suite+'/verify_all.py with standard-library exact arithmetic.', flush=True)
         else:
             print('PASS '+suite+'/verify_all.py (candidate structure, domain, local caps or rejected kernel fits; no global sharp bound).', flush=True)
     if args.jacobian or args.jacobian_python:
@@ -207,6 +223,16 @@ def main():
         require(proc.returncode == 0, 'actual Jacobian re-execution: '+proc.stdout[-2000:]+proc.stderr[-3000:])
         require(json.loads(proc.stdout)['Jacobian_executed_now'] is True, 'actual backend and MCP execution flag')
         print('PASS fresh optional Jacobian native computations and real stdio MCP operation.', flush=True)
+        proc = subprocess.run([str(interpreter), '-B', str(ROOT/'jacobian-gradient/analytic.py'), '--build',
+            '--kernel', str(ROOT/latest_kernel/'kernel.json'),
+            '--output', str(ROOT/'work/jacobian-gradient-current')], cwd=ROOT, env=env,
+            capture_output=True, text=True, encoding='utf-8', timeout=180)
+        require(proc.returncode == 0, 'latest native gradient generation: '+proc.stderr[-3000:])
+        gradient = json.loads(proc.stdout)
+        require(gradient['passed'] is True and gradient['global_coefficient_identity_checked'] is True,
+                'fresh complete native gradient coefficients')
+        print('PASS latest kernel gradient from '+str(gradient['actual_Jacobian_native_gradient_calls'])+
+              ' native Jacobian calls.', flush=True)
     if args.joint or args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',
             str(ROOT/'joint-closure/verify_all.py'), '--skip-prior'],

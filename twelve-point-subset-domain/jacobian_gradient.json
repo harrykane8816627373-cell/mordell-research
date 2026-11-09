@@ -1,0 +1,1166 @@
+{
+  "scope": "Optional actual Jacobian exact derivative cross-check; standard-library proof independently checks the identity.",
+  "jacobian_version": "0.23.0",
+  "operation_id": "polynomial_field.scalar.gradient.compute",
+  "input": {
+    "polynomial": {
+      "domain": "QQ",
+      "variables": [
+        "R",
+        "y"
+      ],
+      "polynomial": {
+        "terms": [
+          {
+            "coefficient": {
+              "num": "18014398509481984",
+              "den": "1"
+            },
+            "exponents": [
+              27,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-121597189939003392",
+              "den": "1"
+            },
+            "exponents": [
+              26,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "395190867301761024",
+              "den": "1"
+            },
+            "exponents": [
+              25,
+              5
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-823314306878668800",
+              "den": "1"
+            },
+            "exponents": [
+              24,
+              6
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1234971460318003200",
+              "den": "1"
+            },
+            "exponents": [
+              23,
+              7
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-1420217179365703680",
+              "den": "1"
+            },
+            "exponents": [
+              22,
+              8
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1301865747751895040",
+              "den": "1"
+            },
+            "exponents": [
+              21,
+              9
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-976399310813921280",
+              "den": "1"
+            },
+            "exponents": [
+              20,
+              10
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "610249569258700800",
+              "den": "1"
+            },
+            "exponents": [
+              19,
+              11
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-322076161553203200",
+              "den": "1"
+            },
+            "exponents": [
+              18,
+              12
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "144934272698941440",
+              "den": "1"
+            },
+            "exponents": [
+              17,
+              13
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-55997332633681920",
+              "den": "1"
+            },
+            "exponents": [
+              16,
+              14
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "18665777544560640",
+              "den": "1"
+            },
+            "exponents": [
+              15,
+              15
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-5384358907084800",
+              "den": "1"
+            },
+            "exponents": [
+              14,
+              16
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1346089726771200",
+              "den": "1"
+            },
+            "exponents": [
+              13,
+              17
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-291652774133760",
+              "den": "1"
+            },
+            "exponents": [
+              12,
+              18
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "54684895150080",
+              "den": "1"
+            },
+            "exponents": [
+              11,
+              19
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-8846085980160",
+              "den": "1"
+            },
+            "exponents": [
+              10,
+              20
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1228623052800",
+              "den": "1"
+            },
+            "exponents": [
+              9,
+              21
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-145494835200",
+              "den": "1"
+            },
+            "exponents": [
+              8,
+              22
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "14549483520",
+              "den": "1"
+            },
+            "exponents": [
+              7,
+              23
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-1212456960",
+              "den": "1"
+            },
+            "exponents": [
+              6,
+              24
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "82667520",
+              "den": "1"
+            },
+            "exponents": [
+              5,
+              25
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-4492800",
+              "den": "1"
+            },
+            "exponents": [
+              4,
+              26
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "187200",
+              "den": "1"
+            },
+            "exponents": [
+              3,
+              27
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-5616",
+              "den": "1"
+            },
+            "exponents": [
+              2,
+              28
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "108",
+              "den": "1"
+            },
+            "exponents": [
+              1,
+              29
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-1",
+              "den": "1"
+            },
+            "exponents": [
+              0,
+              30
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "output": {
+    "source_polynomial": {
+      "domain": "QQ",
+      "variables": [
+        "R",
+        "y"
+      ],
+      "polynomial": {
+        "terms": [
+          {
+            "coefficient": {
+              "num": "18014398509481984",
+              "den": "1"
+            },
+            "exponents": [
+              27,
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-121597189939003392",
+              "den": "1"
+            },
+            "exponents": [
+              26,
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "395190867301761024",
+              "den": "1"
+            },
+            "exponents": [
+              25,
+              5
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-823314306878668800",
+              "den": "1"
+            },
+            "exponents": [
+              24,
+              6
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1234971460318003200",
+              "den": "1"
+            },
+            "exponents": [
+              23,
+              7
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-1420217179365703680",
+              "den": "1"
+            },
+            "exponents": [
+              22,
+              8
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1301865747751895040",
+              "den": "1"
+            },
+            "exponents": [
+              21,
+              9
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-976399310813921280",
+              "den": "1"
+            },
+            "exponents": [
+              20,
+              10
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "610249569258700800",
+              "den": "1"
+            },
+            "exponents": [
+              19,
+              11
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-322076161553203200",
+              "den": "1"
+            },
+            "exponents": [
+              18,
+              12
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "144934272698941440",
+              "den": "1"
+            },
+            "exponents": [
+              17,
+              13
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-55997332633681920",
+              "den": "1"
+            },
+            "exponents": [
+              16,
+              14
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "18665777544560640",
+              "den": "1"
+            },
+            "exponents": [
+              15,
+              15
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-5384358907084800",
+              "den": "1"
+            },
+            "exponents": [
+              14,
+              16
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1346089726771200",
+              "den": "1"
+            },
+            "exponents": [
+              13,
+              17
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-291652774133760",
+              "den": "1"
+            },
+            "exponents": [
+              12,
+              18
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "54684895150080",
+              "den": "1"
+            },
+            "exponents": [
+              11,
+              19
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-8846085980160",
+              "den": "1"
+            },
+            "exponents": [
+              10,
+              20
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "1228623052800",
+              "den": "1"
+            },
+            "exponents": [
+              9,
+              21
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-145494835200",
+              "den": "1"
+            },
+            "exponents": [
+              8,
+              22
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "14549483520",
+              "den": "1"
+            },
+            "exponents": [
+              7,
+              23
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-1212456960",
+              "den": "1"
+            },
+            "exponents": [
+              6,
+              24
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "82667520",
+              "den": "1"
+            },
+            "exponents": [
+              5,
+              25
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-4492800",
+              "den": "1"
+            },
+            "exponents": [
+              4,
+              26
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "187200",
+              "den": "1"
+            },
+            "exponents": [
+              3,
+              27
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-5616",
+              "den": "1"
+            },
+            "exponents": [
+              2,
+              28
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "108",
+              "den": "1"
+            },
+            "exponents": [
+              1,
+              29
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-1",
+              "den": "1"
+            },
+            "exponents": [
+              0,
+              30
+            ]
+          }
+        ]
+      }
+    },
+    "source_components": null,
+    "components": [
+      {
+        "domain": "QQ",
+        "variables": [
+          "R",
+          "y"
+        ],
+        "polynomial": {
+          "terms": [
+            {
+              "coefficient": {
+                "num": "486388759756013568",
+                "den": "1"
+              },
+              "exponents": [
+                26,
+                3
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-3161526938414088192",
+                "den": "1"
+              },
+              "exponents": [
+                25,
+                4
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "9879771682544025600",
+                "den": "1"
+              },
+              "exponents": [
+                24,
+                5
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-19759543365088051200",
+                "den": "1"
+              },
+              "exponents": [
+                23,
+                6
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "28404343587314073600",
+                "den": "1"
+              },
+              "exponents": [
+                22,
+                7
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-31244777946045480960",
+                "den": "1"
+              },
+              "exponents": [
+                21,
+                8
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "27339180702789795840",
+                "den": "1"
+              },
+              "exponents": [
+                20,
+                9
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-19527986216278425600",
+                "den": "1"
+              },
+              "exponents": [
+                19,
+                10
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "11594741815915315200",
+                "den": "1"
+              },
+              "exponents": [
+                18,
+                11
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-5797370907957657600",
+                "den": "1"
+              },
+              "exponents": [
+                17,
+                12
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "2463882635882004480",
+                "den": "1"
+              },
+              "exponents": [
+                16,
+                13
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-895957322138910720",
+                "den": "1"
+              },
+              "exponents": [
+                15,
+                14
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "279986663168409600",
+                "den": "1"
+              },
+              "exponents": [
+                14,
+                15
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-75381024699187200",
+                "den": "1"
+              },
+              "exponents": [
+                13,
+                16
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "17499166448025600",
+                "den": "1"
+              },
+              "exponents": [
+                12,
+                17
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-3499833289605120",
+                "den": "1"
+              },
+              "exponents": [
+                11,
+                18
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "601533846650880",
+                "den": "1"
+              },
+              "exponents": [
+                10,
+                19
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-88460859801600",
+                "den": "1"
+              },
+              "exponents": [
+                9,
+                20
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "11057607475200",
+                "den": "1"
+              },
+              "exponents": [
+                8,
+                21
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-1163958681600",
+                "den": "1"
+              },
+              "exponents": [
+                7,
+                22
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "101846384640",
+                "den": "1"
+              },
+              "exponents": [
+                6,
+                23
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-7274741760",
+                "den": "1"
+              },
+              "exponents": [
+                5,
+                24
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "413337600",
+                "den": "1"
+              },
+              "exponents": [
+                4,
+                25
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-17971200",
+                "den": "1"
+              },
+              "exponents": [
+                3,
+                26
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "561600",
+                "den": "1"
+              },
+              "exponents": [
+                2,
+                27
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-11232",
+                "den": "1"
+              },
+              "exponents": [
+                1,
+                28
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "108",
+                "den": "1"
+              },
+              "exponents": [
+                0,
+                29
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "domain": "QQ",
+        "variables": [
+          "R",
+          "y"
+        ],
+        "polynomial": {
+          "terms": [
+            {
+              "coefficient": {
+                "num": "54043195528445952",
+                "den": "1"
+              },
+              "exponents": [
+                27,
+                2
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-486388759756013568",
+                "den": "1"
+              },
+              "exponents": [
+                26,
+                3
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "1975954336508805120",
+                "den": "1"
+              },
+              "exponents": [
+                25,
+                4
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-4939885841272012800",
+                "den": "1"
+              },
+              "exponents": [
+                24,
+                5
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "8644800222226022400",
+                "den": "1"
+              },
+              "exponents": [
+                23,
+                6
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-11361737434925629440",
+                "den": "1"
+              },
+              "exponents": [
+                22,
+                7
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "11716791729767055360",
+                "den": "1"
+              },
+              "exponents": [
+                21,
+                8
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-9763993108139212800",
+                "den": "1"
+              },
+              "exponents": [
+                20,
+                9
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "6712745261845708800",
+                "den": "1"
+              },
+              "exponents": [
+                19,
+                10
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-3864913938638438400",
+                "den": "1"
+              },
+              "exponents": [
+                18,
+                11
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "1884145545086238720",
+                "den": "1"
+              },
+              "exponents": [
+                17,
+                12
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-783962656871546880",
+                "den": "1"
+              },
+              "exponents": [
+                16,
+                13
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "279986663168409600",
+                "den": "1"
+              },
+              "exponents": [
+                15,
+                14
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-86149742513356800",
+                "den": "1"
+              },
+              "exponents": [
+                14,
+                15
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "22883525355110400",
+                "den": "1"
+              },
+              "exponents": [
+                13,
+                16
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-5249749934407680",
+                "den": "1"
+              },
+              "exponents": [
+                12,
+                17
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "1039013007851520",
+                "den": "1"
+              },
+              "exponents": [
+                11,
+                18
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-176921719603200",
+                "den": "1"
+              },
+              "exponents": [
+                10,
+                19
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "25801084108800",
+                "den": "1"
+              },
+              "exponents": [
+                9,
+                20
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-3200886374400",
+                "den": "1"
+              },
+              "exponents": [
+                8,
+                21
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "334638120960",
+                "den": "1"
+              },
+              "exponents": [
+                7,
+                22
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-29098967040",
+                "den": "1"
+              },
+              "exponents": [
+                6,
+                23
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "2066688000",
+                "den": "1"
+              },
+              "exponents": [
+                5,
+                24
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-116812800",
+                "den": "1"
+              },
+              "exponents": [
+                4,
+                25
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "5054400",
+                "den": "1"
+              },
+              "exponents": [
+                3,
+                26
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-157248",
+                "den": "1"
+              },
+              "exponents": [
+                2,
+                27
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "3132",
+                "den": "1"
+              },
+              "exponents": [
+                1,
+                28
+              ]
+            },
+            {
+              "coefficient": {
+                "num": "-30",
+                "den": "1"
+              },
+              "exponents": [
+                0,
+                29
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

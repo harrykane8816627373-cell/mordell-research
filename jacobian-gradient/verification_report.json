@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "arithmetic": "standard-library Fraction and integer arithmetic",
+  "source_kernel_sha256": "a927251f8f4f4bc9abd99870881f2029274bf16a15a3fac840dd97ff1a9e4fce",
+  "actual_native_calls_reconstructed": 29,
+  "source_harmonic_blocks_reconstructed": 12,
+  "full_h_support": 602,
+  "full_gradient_supports": [
+    527,
+    527,
+    500
+  ],
+  "complete_source_and_derivative_coefficient_identities_checked": true,
+  "rational_points_checked": 4,
+  "native_admission_bounds": {
+    "maximum_source_terms": 64,
+    "maximum_total_gradient_terms": 191,
+    "maximum_integer_coefficient_decimal_digits": 76
+  },
+  "physical_boundary_gradient_and_KKT": {
+    "passed": true,
+    "physical_normal_exact": [
+      "v",
+      "u",
+      "-2*t"
+    ],
+    "normal_contact_condition": "t*G_t <= 0",
+    "both_sign_examples_checked": true
+  },
+  "Jacobian_runtime_needed_for_this_replay": false,
+  "numeric_diagnostics_rerun": false,
+  "new_global_upper_bound_proved": false,
+  "scope": "exact derivative composition and corrected boundary orientation; no new extremum or full-domain inequality"
+}
