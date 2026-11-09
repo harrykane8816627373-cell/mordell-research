@@ -1,0 +1,13 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "eb749eb7afed9d56feb26dec16353e5de2b8f53f478a2d88e1772f0dc6b54598",
+    "verify_all.py": "031c99a62697897b0da6f56e3cb6ac65a6fc11f03957520a2a282bf77c93da5d"
+  },
+  "dependencies": {
+    "asymptotics/proof.tex": "1bb0a8f3ab2ee38181a63b5128e8b4102e7bf8b5a6f38cb4377ddcd681dc264a",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43",
+    "maximizer-domain/README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+  }
+}

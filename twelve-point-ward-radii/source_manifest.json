@@ -1,0 +1,17 @@
+{
+  "twelve-point-ward-radii/.gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+  "twelve-point-ward-radii/cover.txt": "a1d8e07e221ba189235f033546c273c45987308b4c3d762599606d4f6eaeb7aa",
+  "twelve-point-ward-radii/cuts.json": "209dedea31800b26beffb12ef83c171be4312614ba1f313e770cc2d88a41153f",
+  "twelve-point-ward-radii/jacobian_radial_solve.json": "d9b428e6fd36d3664449274a87774f83e7393f7ea1329a04f790ccf4eae84e58",
+  "twelve-point-ward-radii/README.md": "76714758f7b9c3e00ed7ba2289b8aefeacd6f7bba62c051576715cedc4affdc4",
+  "twelve-point-ward-radii/verify_all.py": "b9f665f5dab24ab745623e8bb6c135a36dd30e2ba06427216025bbc4dc1a95bd",
+  "twelve-point-ward-upper/verify_all.py": "e07e142b5efc8c00bcafb121a241e3f1dbae3ad7afd89d06ef9a9e790c1160f4",
+  "twelve-point-ward-upper/kernel.json": "48baa6540726fb26a725b8aa1886c3060e7232026c13b02e878e86cda1ec8c6d",
+  "twelve-point-ward-upper/verification_report.json": "ed61375dbcdc91c3dd927bf02b76445cc8c389f1d7f754c30551e9eeaace3b12",
+  "twelve-point-ward-upper/README.md": "0fa596181b2d44d6119ba5607e31f6b03f46b227857bb320e2608980ef47e3b7",
+  "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+  "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+  "twelve-point-removal-domain/verify_all.py": "031c99a62697897b0da6f56e3cb6ac65a6fc11f03957520a2a282bf77c93da5d",
+  "twelve-point-removal-domain/source_manifest.json": "fd9ceccda3433ed158833e6725e11f551fb84f278f3b9929a31b577d2f7fae20",
+  "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+}

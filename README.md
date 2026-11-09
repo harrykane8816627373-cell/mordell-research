@@ -7,7 +7,21 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 \Delta_n(z)=\prod_{i<j}|z_i-z_j|^2.
 ```
 
-**八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般 n≥10 的锐值与全部最优构型仍未确定。** 定理、带条件的排除、可达下界和历史部分覆盖分别注明范围。
+**十二点全局锐界与全部最大构型已证明。** 八、九点全局锐界均已补齐固定来源的证明与完整证书重放。一般点数的锐值问题仍开放。
+
+## 十二点的全局锐界
+
+**M₁₂=C₁₂**。真实 D₃ 候选达到全局最大值，且最大构型在整体旋转和点重排下唯一。三层人口为 **3、3、6**，由内、中两条正三角形及最外两条共圆正三角形组成。728,050节点的精确两点覆盖补偿为零。等号由基础正定核的径向和角向零矩恢复。[全局证明、精确值与复现](twelve-point-sharp-global/README.md)
+
+## 十二点的上一版分带全局上界
+
+已证 **V₁₂<C₁₂≤M₁₂<(15000/14999)V₁₂**，真实候选值超过全局最优值的 **99.99333%**。三个必要径向域的整数覆盖共707,469个节点，未决0。每对点的补偿压到1/10⁶。[完整证明与复现](twelve-point-banded-upper/README.md)
+
+## 十二点最大构型的内三外九与锐接触
+
+在质量11尺度，任意全局最大构型恰有 **3 个点**的平方半径在 **(0.12, 0.24)**，其余 **9 个点**在 **(0.94, 1.42)**。逐点 Ward 不等式的99,603个节点全部通过精确重放，再用径向 Gram 块排除其他人口。删点法另给任意十点子集的去重心质量严格大于7.573。[分带与人口证书](twelve-point-ward-radii/README.md) · [删点必要域](twelve-point-removal-domain/README.md)
+
+早期锐接触核在真实候选的十四类点对上已实现精确取等，全部十二个基础 Gram 块及接触处曲率通过区间验证。该版本的严格负缺额例保留为发现记录。[精确接触](twelve-point-sharp-contacts/README.md)
 
 ## 十二点的 Ward 全局上界
 
@@ -15,7 +29,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\Delta_n(z),\qquad
 
 新核使用19个完整驻点 Ward 参数和5个质量参数。三个合并谐波块各有一个负特征值。基核的正半定性与修正项的驻定零和恒等式共同保证全局最大点的核和非负。Jacobian 已逐项核对包含修正的完整解析梯度。[惯性记录](twelve-point-ward-upper/jacobian_inertia.json) · [梯度生成器](scripts/build_ward_gradient.py)
 
-14类接触点的数值拟合在10⁻⁶容差内取得零采样松弛。精确接触、全域锐界与最大构型分类仍待完成。[接触实验](twelve-point-ward-upper/contact_trial.json)
+首轮接触数值拟合保留为发现记录。[接触实验](twelve-point-ward-upper/contact_trial.json)
 
 ## 十二点的上一版301/300界
 
@@ -47,7 +61,7 @@ V_{12}\le M_{12}<\frac{23}{20}V_{12},
 
 [十点必要两点域](maximizer-domain/README.md)联合八、九点锐界、严格子集及二阶Schwarz信息，证明质量9下任何全局最大点都满足平方半径<1.5403、点距平方>0.4、八点补集中心化质量>5.68，以及额外非线性点对约束。[整区域局部上界](candidate-basin/README.md)则证明：10、12点到候选轨道的欧氏距离≤2⁻¹⁸、19点≤2⁻²⁰时，距离积不能超过候选值。
 
-[候选适配正定核](candidate-kernel/README.md)给出矩罚项与两点上界的严格接合公式，也保留10、12点原始数值核的精确失败点对。原始无余量majorant仍不成立；十二点新增的全局界由增加余量后的连续证明承担。完整推导、筛选依据与尚缺的锐界证明见[候选与核研究记录](docs/CANDIDATE_KERNEL_RESEARCH.md)；本轮仍未证明任何n≥10的全局锐值。
+[候选适配正定核](candidate-kernel/README.md)给出矩罚项与两点上界的严格接合公式，也保留10、12点原始数值核的精确失败点对。十二点的最终证明使用分带、精确接触和连续覆盖。 [候选与核研究记录](docs/CANDIDATE_KERNEL_RESEARCH.md)
 
 ## 11月8日：四环共振、非线性缺额与高点数局部认证
 
@@ -73,7 +87,7 @@ V_{12}\le M_{12}<\frac{23}{20}V_{12},
 |n=6、7|M₆=6¹⁵/5¹⁰，M₇=7²¹/6¹⁵；等号为原点加相应正多边形|[主稿与依赖审计](earlier-results/six_seven_coverage_audit.md)；本项目现有全局证明保留 Faugère–Svartz 分类输入|
 |n=8|M₈=8²⁸/7²¹；等号为原点加半径 √(8/7) 的正七边形|[全域证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)；完整重放 386915 个盒，未决 0|
 |n=9|M₉=9³⁶/8²⁸；等号为原点加半径 √(9/8) 的正八边形|[完整证明与证书重放](nine-point-global/README.md)；完整初始域遍历 31613 个盒，未决 0|
-|n=12|V₁₂<C₁₂≤M₁₂<(379/378)V₁₂，真实候选比值>378/379|268239节点完整覆盖。锐值仍待证明。[Ward 核上界](twelve-point-ward-upper/README.md)|
+|n=12|M₁₂=C₁₂，D₃候选在旋转及重排下唯一|728050节点零补偿覆盖，三层人口3、3、6。[全局锐界](twelve-point-sharp-global/README.md)|
 |n≥10|中心正 (n−1) 边形不再全局最优|[十点整数比较](docs/TEN_POINT_TRANSITION.md)；n≥11 沿用 Gueron–Shafrir 不稳定性定理；不确定实际最优者|
 |10≤n≤100|旧91项保存下界保留；本轮在其中16项再取得严格改善|[本轮自由构型](finite-search-nov5/README.md) · [旧基线](symmetry-breaking/README.md)；均为可达下界|
 |10、12、19点候选范围|精确D₂/D₃/D₆候选、整局部区域的候选值上界及十点全局必要域|[候选筛选](candidate-global-screen/README.md) · [局部上界](candidate-basin/README.md) · [十点必要域](maximizer-domain/README.md)；补集未覆盖、未证明全局锐值|
@@ -112,4 +126,4 @@ python -B -S -O scripts/verify_current.py
 
 仓库自有材料未指定统一许可证；导入的第三方代码、数据与说明沿用其明确许可。计算机辅助证书和协作审阅不等于外部同行评审或整篇形式化证明。
 
-**English:** Fengcan Jiang's Mordell distance-product research. The n=8 and n=9 global certificates have been reproduced with fixed provenance and full-domain replay. Exact general-n maxima and all maximizing configurations for n≥10 remain open here.
+**English.** Fengcan Jiang's Mordell distance-product research. The n=12 maximum and the unique maximizing orbit have an exact computer-assisted proof. The attributed n=8 and n=9 certificates have been reproduced with fixed provenance and full-domain replay.

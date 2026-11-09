@@ -1,8 +1,16 @@
 # 研究索引：当前主线、方法依赖与历史版本
 
+## 十二点已证全局锐界
+
+真实 D₃ 候选达到 M₁₂，且在整体旋转及点重排下唯一。连续证明由分带、精确核回代、十四个局部盒和零补偿补集覆盖组成。 [锐界与等号证明](../twelve-point-sharp-global/README.md)
+
+## 十二点的全局必要分带与锐接触
+
+任意全局最大构型必须内三外九。三个径向域上已证 M₁₂<(15000/14999)V₁₂。新的删点条件还能直接剪枝两点变量。真实候选接触矩阵的精确秩为44，已认证一个锐接触核的所有接触邻域。[分带全局上界](../twelve-point-banded-upper/README.md) · [半径分带](../twelve-point-ward-radii/README.md) · [删点剪枝](../twelve-point-removal-domain/README.md) · [精确接触](../twelve-point-sharp-contacts/README.md)
+
 ## 十二点的 Ward 核证书
 
-当前最紧结果为 M₁₂<(379/378)V₁₂。精确重放覆盖268239个节点。完整驻点上的零和修正已实际用于两点上界，高阶 Ward 补偿公式可进入后续搜索。[Ward 证书](../twelve-point-ward-upper/README.md) · [高阶补偿](../stationary-kernel/HIGHER_HARMONICS.md) · [研究记录](CANDIDATE_KERNEL_RESEARCH.md)
+先前结果为 M₁₂<(379/378)V₁₂。精确重放覆盖268239个节点。完整驻点上的零和修正已实际用于两点上界，高阶 Ward 补偿公式可进入后续搜索。[Ward 证书](../twelve-point-ward-upper/README.md) · [高阶补偿](../stationary-kernel/HIGHER_HARMONICS.md) · [研究记录](CANDIDATE_KERNEL_RESEARCH.md)
 
 ## 十二点301/300上界、解析梯度与零和核
 
@@ -18,7 +26,7 @@
 
 ## 候选范围锁定与正定核
 
-十二点已取得全局定量范围V₁₂≤M₁₂<23V₁₂/20；锐界研究继续优先12点，其次10点和19点。完整接口与范围见[候选与核研究记录](CANDIDATE_KERNEL_RESEARCH.md)。
+此前十二点先取得全局定量范围V₁₂≤M₁₂<23V₁₂/20，并将12点列为首要锐界目标。完整接口与范围见[候选与核研究记录](CANDIDATE_KERNEL_RESEARCH.md)。
 
 |专题|已接受结果与边界|
 |---|---|

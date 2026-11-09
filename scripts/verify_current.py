@@ -26,7 +26,7 @@ def main():
     parser.add_argument('--refinement', action='store_true', help='also replay the current imported/force closure proof chain')
     parser.add_argument('--global-eight', action='store_true', help='fresh full attributed n8 global proof replay; needs the pinned numerical dependencies')
     parser.add_argument('--global-nine', action='store_true', help='fresh full attributed n9 global proof replay; needs the pinned numerical dependencies')
-    parser.add_argument('--jacobian', action='store_true', help='also run native Jacobian checks and regenerate the latest kernel gradient')
+    parser.add_argument('--jacobian', action='store_true', help='also run native Jacobian checks and regenerate the rational Ward kernel gradient')
     parser.add_argument('--jacobian-python', type=Path, help='optional Jacobian interpreter; implies --jacobian')
     args = parser.parse_args()
     pages = [ROOT/'README.md', ROOT/'configuration-bounds/PROOF_STATUS.md',
@@ -55,7 +55,12 @@ def main():
              *sorted((ROOT/'twelve-point-kernel-refinement-2').glob('*.md')),
              *sorted((ROOT/'twelve-point-subset-domain').glob('*.md')),
              *sorted((ROOT/'stationary-kernel').glob('*.md')),
-             *sorted((ROOT/'twelve-point-ward-upper').glob('*.md'))]
+             *sorted((ROOT/'twelve-point-ward-upper').glob('*.md')),
+             *sorted((ROOT/'twelve-point-removal-domain').glob('*.md')),
+             *sorted((ROOT/'twelve-point-ward-radii').glob('*.md')),
+             *sorted((ROOT/'twelve-point-sharp-contacts').glob('*.md')),
+             *sorted((ROOT/'twelve-point-banded-upper').glob('*.md')),
+             *sorted((ROOT/'twelve-point-sharp-global').glob('*.md'))]
     links = 0
     for page in pages:
         text = page.read_text(encoding='utf-8')
@@ -189,6 +194,24 @@ def main():
     latest_kernel = 'twelve-point-ward-upper'
     candidate_dependencies[refined_kernel] = candidate_dependencies['twelve-point-kernel-refinement']
     candidate_dependencies[latest_kernel] = (*candidate_dependencies[refined_kernel], 'stationary-kernel/README.md')
+    removal = 'twelve-point-removal-domain'
+    radii = 'twelve-point-ward-radii'
+    sharp_contacts = 'twelve-point-sharp-contacts'
+    banded_upper = 'twelve-point-banded-upper'
+    sharp_global = 'twelve-point-sharp-global'
+    candidate_dependencies[removal] = ('asymptotics/proof.tex', 'finite-n/SUBSET_PROOF.md',
+        'maximizer-domain/README.md', 'symmetry-breaking/integer_witnesses.json')
+    candidate_dependencies[radii] = (removal, *candidate_dependencies[removal],
+        'twelve-point-ward-upper/verify_all.py', 'twelve-point-ward-upper/kernel.json',
+        'twelve-point-ward-upper/README.md', 'twelve-point-ward-upper/verification_report.json',
+        'twelve-point-kernel-upper/verify_all.py', 'twelve-point-kernel-upper/verify_cover.py')
+    candidate_dependencies[sharp_contacts] = (*candidate_dependencies['candidate-basin'],
+        'candidate-global-screen/verify_symmetry.py', 'candidate-global-screen/symmetry_certificates.json')
+    for suite in (banded_upper, sharp_global):
+        manifest = json.loads((ROOT/suite/'source_manifest.json').read_bytes())
+        require(all((ROOT/name).resolve().is_relative_to(ROOT) for name in manifest),
+                'all fixed proof files stay in the repository')
+        candidate_dependencies[suite] = tuple(name for name in manifest if not name.startswith(suite+'/'))
     for suite, dependencies in candidate_dependencies.items():
         with tempfile.TemporaryDirectory(prefix='mordell-candidate-') as temp:
             stage = Path(temp)
@@ -199,7 +222,7 @@ def main():
                 else:
                     dest.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copyfile(source, dest)
-            timeout = 900 if suite in (refined_kernel, latest_kernel) else 240
+            timeout = 900 if suite in (refined_kernel, latest_kernel, radii, banded_upper, sharp_global) else 240
             proc = subprocess.run([sys.executable, '-B', '-S', '-O', str(stage/suite/'verify_all.py')],
                 cwd=stage, env=env, capture_output=True, text=True, encoding='utf-8', timeout=timeout)
             require(proc.returncode == 0, suite+': '+proc.stdout[-2000:]+proc.stderr[-3000:])
@@ -215,6 +238,16 @@ def main():
             print('PASS refined n12 global upper bound M12 < (301/300)*V12 after full 229113-node replay.', flush=True)
         elif suite == latest_kernel:
             print('PASS Ward n12 global upper bound M12 < (379/378)*V12 after full 268239-node replay.', flush=True)
+        elif suite == radii:
+            print('PASS Ward n12 radial bands and populations 3+9 after full 99603-node replay.', flush=True)
+        elif suite == sharp_contacts:
+            print('PASS exact n12 sharp contacts and local curvature with a certified negative pair in the complement.', flush=True)
+        elif suite == banded_upper:
+            print('PASS banded n12 global upper bound M12 < (15000/14999)*V12 after full 707469-node replay.', flush=True)
+        elif suite == sharp_global:
+            require(result['sharp_global_value_proved'] and result['all_maximizers_classified'] and result['pending']==0,
+                    'sharp n12 value and equality proof flags')
+            print('PASS exact n12 sharp value and unique maximizing orbit after 728050-node zero-slack replay.', flush=True)
         elif suite in ('jacobian-gradient', 'twelve-point-subset-domain', 'stationary-kernel'):
             print('PASS '+suite+'/verify_all.py with standard-library exact arithmetic.', flush=True)
         else:
@@ -235,7 +268,7 @@ def main():
         require(gradient['passed'] is True and gradient['includes_ward_corrections'] is True and
                 gradient['global_coefficient_identity_checked'] is True,
                 'fresh complete native gradient coefficients')
-        print('PASS latest kernel gradient from '+str(gradient['actual_Jacobian_native_gradient_calls'])+
+        print('PASS rational Ward kernel gradient from '+str(gradient['actual_Jacobian_native_gradient_calls'])+
               ' native Jacobian calls.', flush=True)
     if args.joint or args.refinement:
         proc = subprocess.run([sys.executable, '-B', '-S', '-O',

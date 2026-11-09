@@ -1,0 +1,13 @@
+{
+  "twelve-point-sharp-contacts/.gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+  "twelve-point-sharp-contacts/minor.json": "6b031dda9348b912b73940b3a3ae4dcfa2ba6b2e822df38ef7d6c08162395265",
+  "twelve-point-sharp-contacts/seed.json": "a69234ecd251728afc6f02d0700da376bed7dc78965a892f7e99baa6d47ed75b",
+  "twelve-point-sharp-contacts/verify_all.py": "b83b9e456d7a41b7b0fb1b60d1742fe51e5e9af9405a258837cd94896414d3cc",
+  "candidate-global-screen/verify_symmetry.py": "3fd1dadd934cb5d4a918bd2c4b5171372aedb1334255dd3619c79aed6bde5283",
+  "candidate-global-screen/symmetry_certificates.json": "29e329e70d8267885da025ca99283516395d9efe5484845d2f851c5e955e3bf8",
+  "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d",
+  "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+  "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+  "validated-maxima/PROOF.md": "d3bd80d74bc73873f70fca6ef20f1f48770b5f1a763912e146db7472bd216341",
+  "twelve-point-sharp-contacts/README.md": "80d3677cbd456dbc6733b5d4b291ef6bd3596c59f343046d9136dd1b794fbc66"
+}

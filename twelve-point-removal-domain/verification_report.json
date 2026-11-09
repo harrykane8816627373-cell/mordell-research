@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "normalization": "sum |z_i|^2=11",
+  "global_maximizers_only": true,
+  "squared_radius_strict_upper": "81/50",
+  "ten_point_centered_mass_strict_lower": "7573/1000",
+  "linear_pair_cut": "11*(u+v)+2*t<3427/100",
+  "endpoint_upper_over_witness_strict_upper": [
+    "997/1000",
+    "992/1000"
+  ],
+  "endpoint_upper_over_witness_display": [
+    0.9963914950530857,
+    0.991134981014873
+  ],
+  "single_radius": {
+    "passed": true,
+    "strict_radius_upper": "81/50",
+    "old_radius_upper": "121/72",
+    "endpoint_upper_over_witness_strict_upper": "997/1000",
+    "endpoint_upper_over_witness_display": 0.9963914950530857
+  },
+  "witness_pairs_retained": 66,
+  "witness_pairs_in_active_nonlinear_branch": 0,
+  "witness_max_squared_radius_display": 1.2072249215079147,
+  "witness_min_ten_mass_display": 8.16498479088121,
+  "nonlinear_excluded_pair": [
+    "8/5",
+    "8/5",
+    "-1/2"
+  ],
+  "whole_excluded_box_radius": "1/1000",
+  "sharp_global_value_proved": false,
+  "input_sha256": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "eb749eb7afed9d56feb26dec16353e5de2b8f53f478a2d88e1772f0dc6b54598",
+    "verify_all.py": "031c99a62697897b0da6f56e3cb6ac65a6fc11f03957520a2a282bf77c93da5d"
+  },
+  "dependency_sha256": {
+    "asymptotics/proof.tex": "1bb0a8f3ab2ee38181a63b5128e8b4102e7bf8b5a6f38cb4377ddcd681dc264a",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43",
+    "maximizer-domain/README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+  }
+}

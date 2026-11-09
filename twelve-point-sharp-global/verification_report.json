@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "n": 12,
+  "mass": 11,
+  "point_pair_slack": "0",
+  "node_count": 728050,
+  "pending": 0,
+  "signed_root_covers": [
+    {
+      "nodes": 7595,
+      "accepted": 3403,
+      "quadratic": 0,
+      "pruned": 283,
+      "local": 112,
+      "splits": 3797,
+      "maximum_depth": 22
+    },
+    {
+      "nodes": 39,
+      "accepted": 17,
+      "quadratic": 0,
+      "pruned": 3,
+      "local": 0,
+      "splits": 19,
+      "maximum_depth": 10
+    },
+    {
+      "nodes": 144183,
+      "accepted": 53620,
+      "quadratic": 0,
+      "pruned": 17196,
+      "local": 1276,
+      "splits": 72091,
+      "maximum_depth": 52
+    },
+    {
+      "nodes": 93415,
+      "accepted": 45990,
+      "quadratic": 0,
+      "pruned": 310,
+      "local": 408,
+      "splits": 46707,
+      "maximum_depth": 29
+    },
+    {
+      "nodes": 47105,
+      "accepted": 20721,
+      "quadratic": 0,
+      "pruned": 2520,
+      "local": 312,
+      "splits": 23552,
+      "maximum_depth": 41
+    },
+    {
+      "nodes": 435713,
+      "accepted": 211754,
+      "quadratic": 3709,
+      "pruned": 5590,
+      "local": 513,
+      "splits": 217856,
+      "maximum_depth": 36
+    }
+  ],
+  "local_contact_leaves": [
+    225,
+    79,
+    2,
+    48,
+    282,
+    4,
+    51,
+    134,
+    100,
+    179,
+    229,
+    139,
+    1037,
+    112
+  ],
+  "exact_contact_reconstruction": {
+    "contact_minor_order": 44,
+    "exact_positive_definite_Gram_blocks": 12,
+    "contacts_with_strict_point_curvature": 14,
+    "min_gram_pivot_strict_lower_power_of_two": -17,
+    "inward_contact_derivative_strict_lower_power_of_two": -13,
+    "independent_polynomial_interval_crosschecks": 18
+  },
+  "local_boxes": {
+    "local_boxes": 14,
+    "minimum_nominal_local_radius": "1/2048",
+    "local_cubic_hessian_min_pivot_strict_lower_power_of_two": -9
+  },
+  "radial_theorem_used_as_fixed_input": true,
+  "unknown_maximum_symmetry_assumed": false,
+  "sharp_global_value_proved": true,
+  "all_maximizers_classified": true,
+  "input_sha256": {
+    "twelve-point-sharp-global/.gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "twelve-point-sharp-global/0.txt": "c108f0dc17701dd6b19e964e7dd67279649109e63942288aeef8f75df51c31de",
+    "twelve-point-sharp-global/1.txt": "c88ce65b6f3aaeabc5d7a5199552b9f90cce94344cd8aac858acc7fc450d0f3e",
+    "twelve-point-sharp-global/2.txt": "f77deaf790882e8ef1528593079304aa2dc71481e09f67942a13e5e37a1f451a",
+    "twelve-point-sharp-global/3.txt": "e2fb9302f36f6ac40776415ed2eda90f6c9b41dea494d9692ff876bafb1f0bc3",
+    "twelve-point-sharp-global/4.txt": "ec31e243bdbedc06733bb69fe41c7c9cc61f9d98b6f260b0cb54b890da65309d",
+    "twelve-point-sharp-global/5.txt": "def4d5c79ca4493ab9a20f82efe806dbd035192bf66d4fe927d0528b42ca18ef",
+    "twelve-point-sharp-global/kernel_bridge.py": "244f79f8454fa476146b26dbc24a16cdf541a4558ccf901970c189dab3a1015e",
+    "twelve-point-sharp-global/local_boxes.json": "e2594c8863620e149bff383fb8cae2c0721669236fb808c4736ddb7aba024037",
+    "twelve-point-sharp-global/README.md": "6a27ffbb84dfff3f83b4548a35dca8ab100f370a23c225df00987a1992af745d",
+    "twelve-point-sharp-global/verify_all.py": "201d2e1d93e58dd4418165992ff510d61161c087c31d7706483c730825a83270",
+    "twelve-point-sharp-contacts/verify_all.py": "b83b9e456d7a41b7b0fb1b60d1742fe51e5e9af9405a258837cd94896414d3cc",
+    "twelve-point-sharp-contacts/minor.json": "6b031dda9348b912b73940b3a3ae4dcfa2ba6b2e822df38ef7d6c08162395265",
+    "twelve-point-sharp-contacts/README.md": "80d3677cbd456dbc6733b5d4b291ef6bd3596c59f343046d9136dd1b794fbc66",
+    "twelve-point-banded-upper/kernel.json": "c3143c24a2de18ac48405449dbb22ef20faaffaf8623cd1bb2d514105121310d",
+    "twelve-point-ward-radii/README.md": "76714758f7b9c3e00ed7ba2289b8aefeacd6f7bba62c051576715cedc4affdc4",
+    "twelve-point-ward-radii/verification_report.json": "4f352aa0d7351e2f8bf86a3f855fbc095a203f602abcdd395981d4bf8813efac",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+    "candidate-global-screen/verify_symmetry.py": "3fd1dadd934cb5d4a918bd2c4b5171372aedb1334255dd3619c79aed6bde5283",
+    "candidate-global-screen/symmetry_certificates.json": "29e329e70d8267885da025ca99283516395d9efe5484845d2f851c5e955e3bf8",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d",
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/PROOF.md": "d3bd80d74bc73873f70fca6ef20f1f48770b5f1a763912e146db7472bd216341",
+    "stationary-kernel/README.md": "b60534012a2922a8d598ab222990a85c2ee6dea9a146bd8acb4ff5a7d676453d",
+    "finite-n/SUBSET_PROOF.md": "8a3c69775418166d84a927ac3eeefdbf4ac061f77fb5e4fafe33dd054f6bee43",
+    "candidate-kernel/RIGIDITY.md": "6aa1b0b446f28f6540fc375fff435501f2a9717af2ba341b084cb015dd91ffb2"
+  }
+}

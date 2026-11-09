@@ -1,5 +1,24 @@
 # 复现指南
 
+## 十二点全局锐界
+
+```bash
+python -B -S -O twelve-point-sharp-global/verify_all.py
+```
+
+只需 Python 标准库。重算真实根、接触方程、十二个 Gram 块和十四个局部盒，再重放728,050节点的零补偿连续覆盖。该入口以固定分带定理为前提，统一入口按顺序重算分带和其前提。 [完整证明](../twelve-point-sharp-global/README.md)
+
+## 十二点必要域与锐接触
+
+```bash
+python -B -S -O twelve-point-removal-domain/verify_all.py
+python -B -S -O twelve-point-ward-radii/verify_all.py
+python -B -S -O twelve-point-sharp-contacts/verify_all.py
+python -B -S -O twelve-point-banded-upper/verify_all.py
+```
+
+四个入口分别重算删点界、99,603节点的分带覆盖及人口、真实候选的精确接触及邻域曲率、707,469节点的分带全局上界。分带入口将先前完整 Ward 定理作为固定输入。统一入口按依赖顺序重放。所有接受均只需 Python 标准库。[删点](../twelve-point-removal-domain/README.md) · [分带](../twelve-point-ward-radii/README.md) · [接触](../twelve-point-sharp-contacts/README.md) · [新全局上界](../twelve-point-banded-upper/README.md)
+
 ## Ward 全局证书与解析梯度
 
 ```bash

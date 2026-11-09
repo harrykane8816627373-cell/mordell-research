@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "n": 12,
+  "mass": 11,
+  "scope": "necessary conditions at all global maximizers",
+  "previous_ward_cover_used_as_fixed_theorem": true,
+  "previous_ward_cover_replayed_by_this_script": false,
+  "slack_budget_upper": "33/12500",
+  "excluded_row_slack_lower": "11/4000",
+  "row_cut_cover": {
+    "nodes": 99603,
+    "splits": 49775,
+    "accepted": 46539,
+    "pruned": 3289,
+    "maximum_depth": 24,
+    "intervals": 53,
+    "pending": 0
+  },
+  "analytic_radius_upper": "81/50",
+  "squared_radius_open_bands": [
+    [
+      "3/25",
+      "6/25"
+    ],
+    [
+      "47/50",
+      "71/50"
+    ]
+  ],
+  "population": {
+    "possible_inner_population": [
+      3
+    ],
+    "outer_population": 9,
+    "signed_radial_moment_lower_bounds_excluded_populations": {
+      "0": "97/25",
+      "1": "113/50",
+      "2": "16/25",
+      "4": "41/100",
+      "5": "169/100",
+      "6": "297/100",
+      "7": "17/4",
+      "8": "553/100",
+      "9": "681/100",
+      "10": "809/100",
+      "11": "937/100",
+      "12": "213/20"
+    },
+    "radial_dual_norm_squared_upper": "20",
+    "first_coordinate_error_upper": "1/10000",
+    "exact_native_linear_solve_verified_by_substitution": true,
+    "cubic_bernstein_subintervals": 256
+  },
+  "sharp_global_value_proved": false
+}
