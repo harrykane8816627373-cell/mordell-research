@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "kernel_sha256": "0f679d16061e26bbc8fe2a1cb4328f899cda21473e1ce23fb7dc67365199d7e0",
+  "tree_sha256": "fe99e2f71a282714d0eeb6e7e2216ec14003460493cee1254dcb5036cb742b8a",
+  "scope": "global nonsharp ten-point upper bound; no maximizer classification",
+  "arithmetic": "Python standard library, exact rational and unbounded integer arithmetic",
+  "c": "3/10000",
+  "global_maximum_over_feasible_witness_strict_upper": "507/500",
+  "actual_candidate_over_global_maximum_strict_lower": "500/507",
+  "B_plus_N_c": "703027523643628357/35184372088832000",
+  "strict_log_ratio_margin_lower": "1/3000",
+  "visited": 149817,
+  "counts": {
+    "A": 64748,
+    "P": 10161,
+    "S": 74908
+  },
+  "maximum_depth": 48,
+  "unresolved": 0,
+  "PSD_blocks": 10,
+  "minimum_exact_LDL_pivot_decimal_display": 5.190435687961977e-07,
+  "tensor_shape": [
+    21,
+    21,
+    11
+  ],
+  "Ward_parameters": 24,
+  "radial_force_parameters": 5,
+  "necessary_domain_replayed": true,
+  "radius_strict_upper": "1539/1000",
+  "root_exceeds_witness": true,
+  "sharp_global_optimality_proved": false
+}

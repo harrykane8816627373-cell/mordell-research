@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "inner_squared_radius_open_interval": [
+    "9/200",
+    "49/200"
+  ],
+  "inner_dot_product_open_interval": [
+    "-7/50",
+    "-47/500"
+  ],
+  "inner_midpoint_squared_strict_upper": "1/25",
+  "inner_angle_cosine_strict_upper": "-11/20",
+  "pair_deficit_strict_upper": "4401/1000000",
+  "nodes": 3083,
+  "counts": {
+    "A": 634,
+    "G": 466,
+    "P": 442,
+    "0": 609,
+    "1": 425,
+    "2": 507
+  },
+  "maximum_depth": 26,
+  "unresolved": 0
+}

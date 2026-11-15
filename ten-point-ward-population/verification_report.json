@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "allowed_closed_band_supersets": [
+    [
+      "0",
+      "3/10"
+    ],
+    [
+      "41/60",
+      "71/50"
+    ],
+    [
+      "149/100",
+      "1539/1000"
+    ]
+  ],
+  "strict_Gram_energy_upper": "27001/1000000",
+  "minorant_exclusions": [
+    {
+      "inner_count_excluded": 0,
+      "strict_Gram_energy_lower": "7/5",
+      "interval_Bernstein_node_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "inner_count_excluded": 1,
+      "strict_Gram_energy_lower": "3/100",
+      "interval_Bernstein_node_counts": [
+        1,
+        11,
+        1
+      ]
+    },
+    {
+      "inner_count_excluded": 4,
+      "strict_Gram_energy_lower": "43/1000",
+      "interval_Bernstein_node_counts": [
+        1,
+        9,
+        1
+      ]
+    },
+    {
+      "inner_count_excluded": 5,
+      "strict_Gram_energy_lower": "7/10",
+      "interval_Bernstein_node_counts": [
+        1,
+        1,
+        7
+      ]
+    }
+  ],
+  "mass_excludes_inner_population": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "possible_inner_population": [
+    2,
+    3
+  ],
+  "sharp_global_optimality_proved": false
+}

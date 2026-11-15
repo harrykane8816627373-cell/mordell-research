@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "marked_row_lower": "9/800",
+  "deficit_lower": "9/20000",
+  "small_radius_exclusion": [
+    "0",
+    "7/1000"
+  ],
+  "row_exclusions": [
+    {
+      "excluded_closed_interval": [
+        "7/1000",
+        "43/1000"
+      ],
+      "slabs": 12,
+      "nodes": 9522,
+      "counts": {
+        "A": 3515,
+        "P": 1264,
+        "0": 81,
+        "1": 1716,
+        "2": 2946
+      },
+      "maximum_depth": 27,
+      "unresolved": 0
+    },
+    {
+      "excluded_closed_interval": [
+        "51/200",
+        "3/10"
+      ],
+      "slabs": 10,
+      "nodes": 15614,
+      "counts": {
+        "A": 7051,
+        "P": 771,
+        "0": 34,
+        "1": 3084,
+        "2": 4674
+      },
+      "maximum_depth": 22,
+      "unresolved": 0
+    },
+    {
+      "excluded_closed_interval": [
+        "41/60",
+        "37/50"
+      ],
+      "slabs": 16,
+      "nodes": 28176,
+      "counts": {
+        "A": 13058,
+        "P": 1054,
+        "0": 0,
+        "1": 6099,
+        "2": 7965
+      },
+      "maximum_depth": 17,
+      "unresolved": 0
+    },
+    {
+      "excluded_closed_interval": [
+        "139/100",
+        "71/50"
+      ],
+      "slabs": 11,
+      "nodes": 16229,
+      "counts": {
+        "A": 6346,
+        "P": 1785,
+        "0": 73,
+        "1": 4090,
+        "2": 3935
+      },
+      "maximum_depth": 22,
+      "unresolved": 0
+    },
+    {
+      "excluded_closed_interval": [
+        "149/100",
+        "61/40"
+      ],
+      "slabs": 12,
+      "nodes": 19984,
+      "counts": {
+        "A": 5702,
+        "P": 4308,
+        "0": 229,
+        "1": 4687,
+        "2": 5058
+      },
+      "maximum_depth": 23,
+      "unresolved": 0
+    }
+  ],
+  "inner_pair": {
+    "dot_interval": [
+      "-31/200",
+      "-4/125"
+    ],
+    "midpoint_squared_strict_upper": "23/200",
+    "deficit_strict_upper": "13201/1000000",
+    "nodes": 415,
+    "counts": {
+      "A": 91,
+      "P": 65,
+      "G": 52,
+      "0": 58,
+      "1": 63,
+      "2": 86
+    },
+    "maximum_depth": 18,
+    "unresolved": 0
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "scope": "exact necessary conditions for each global ten-point maximizer; no symmetry",
+  "normalization": "sum |x_i|^2=9",
+  "fixed_dependency_count": 19,
+  "input_witness": {
+    "V_over_L_decimal_display": 1.0000384594597673,
+    "source_sha256": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "point_pairs_retained": 45,
+    "subsets_retained": 1012
+  },
+  "radius_strict_upper": "1539/1000",
+  "radius_endpoint_over_L_decimal_display": 0.9987447139325885,
+  "pair_weighted_envelope": {
+    "degree": 23,
+    "nodes": 9,
+    "leaves": 5,
+    "depth": 4,
+    "min_Bernstein_coefficient_decimal_display": 1.1617139605348717e-05
+  },
+  "higher_weighted_envelope_coefficients": {
+    "3": [
+      6,
+      2,
+      0,
+      0,
+      2,
+      6,
+      12
+    ],
+    "4": [
+      8,
+      5,
+      4,
+      5,
+      8,
+      13
+    ],
+    "5": [
+      10,
+      8,
+      8,
+      10,
+      14
+    ],
+    "6": [
+      12,
+      11,
+      12,
+      15
+    ],
+    "7": [
+      14,
+      14,
+      16
+    ],
+    "8": [
+      16,
+      17
+    ],
+    "9": [
+      18
+    ]
+  },
+  "subset_mass_and_population": {
+    "2": {
+      "at_most": 1,
+      "u_cutoff": "1007/10000",
+      "strict_uncentered_mass_lower": "1007/5000",
+      "verified_nodes": 7,
+      "largest_upper_over_L_decimal_display": 0.9989246380911306
+    },
+    "3": {
+      "at_most": 2,
+      "u_cutoff": "511/2500",
+      "strict_uncentered_mass_lower": "1533/2500",
+      "verified_nodes": 29,
+      "largest_upper_over_L_decimal_display": 0.9998609342836459
+    },
+    "4": {
+      "at_most": 3,
+      "u_cutoff": "3133/10000",
+      "strict_uncentered_mass_lower": "3133/2500",
+      "verified_nodes": 67,
+      "largest_upper_over_L_decimal_display": 0.9992751486812452
+    },
+    "5": {
+      "at_most": 4,
+      "u_cutoff": "531/1250",
+      "strict_uncentered_mass_lower": "531/250",
+      "verified_nodes": 405,
+      "largest_upper_over_L_decimal_display": 0.9999480905829233
+    },
+    "6": {
+      "at_most": 5,
+      "u_cutoff": "331/625",
+      "strict_uncentered_mass_lower": "1986/625",
+      "verified_nodes": 71,
+      "largest_upper_over_L_decimal_display": 0.9999140688088756
+    },
+    "7": {
+      "at_most": 6,
+      "u_cutoff": "6283/10000",
+      "strict_uncentered_mass_lower": "43981/10000",
+      "verified_nodes": 49,
+      "largest_upper_over_L_decimal_display": 0.9997309458813088
+    },
+    "8": {
+      "at_most": 7,
+      "u_cutoff": "7253/10000",
+      "strict_uncentered_mass_lower": "7253/1250",
+      "verified_nodes": 37,
+      "largest_upper_over_L_decimal_display": 0.9974731953587309
+    },
+    "9": {
+      "at_most": 8,
+      "u_cutoff": "1639/2000",
+      "strict_uncentered_mass_lower": "14751/2000",
+      "verified_nodes": 29,
+      "largest_upper_over_L_decimal_display": 0.999726466451459
+    }
+  },
+  "pair_prune": {
+    "midpoint_squared_max": "1/10000",
+    "distance_squared_max": "203/500",
+    "endpoint_over_L_decimal_display": 0.9962085990851685,
+    "strict_example_center": [
+      "1013/10000",
+      "1013/10000",
+      "-253/2500"
+    ],
+    "example_cube_radius": "1/100000"
+  },
+  "full_global_sharp_bound_proved": false
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "no_symmetry_assumed": true,
+  "global_pair_slack": "3/10000",
+  "marked_row_lower": "9/800",
+  "total_deficit_lower_if_excluded": "9/20000",
+  "covers": [
+    {
+      "excluded_closed_interval": [
+        "3/10",
+        "41/60"
+      ],
+      "slabs": 23,
+      "nodes": 36997,
+      "counts": {
+        "A": 16720,
+        "P": 1790,
+        "0": 301,
+        "1": 7926,
+        "2": 10260
+      },
+      "maximum_depth": 18,
+      "unresolved": 0
+    },
+    {
+      "excluded_closed_interval": [
+        "71/50",
+        "149/100"
+      ],
+      "slabs": 13,
+      "nodes": 15775,
+      "counts": {
+        "A": 5740,
+        "P": 2154,
+        "0": 32,
+        "1": 4100,
+        "2": 3749
+      },
+      "maximum_depth": 20,
+      "unresolved": 0
+    }
+  ]
+}

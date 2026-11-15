@@ -1,0 +1,13 @@
+{
+  "files": {
+    "README.md": "ab2749c3ff42bdbb62e2a74fc15487f8744e023023bf1f324df5337fcc248094",
+    "verify_all.py": "c4ea70caddfe76cfb64a79401314ed2fb6a43b68c4534effc5a21b5a237480d4"
+  },
+  "dependencies": {
+    "candidate-global-screen/verify_symmetry.py": "3fd1dadd934cb5d4a918bd2c4b5171372aedb1334255dd3619c79aed6bde5283",
+    "candidate-global-screen/symmetry_certificates.json": "29e329e70d8267885da025ca99283516395d9efe5484845d2f851c5e955e3bf8",
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d"
+  }
+}

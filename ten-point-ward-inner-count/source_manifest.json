@@ -1,0 +1,17 @@
+{
+  "files": {
+    "README.md": "0582f3c1c42bc8d4b1e5bf6bb440ccac5b567ce1d40f4ed8afec6bc87e69b2cc",
+    "verify_all.py": "bbd30e115d6b048630fbad265181b0e84ca84d469d8a1588227e7227f39170ab",
+    "verify_radial.py": "58a1816a74d0ed0cd3dee9788ed738ef65c7084972c6f0cc13a81f728dea18cd",
+    "row.json": "3066b6030ff2da3c8a61eb1a48a9a550be06526621b429c33aba5cfb44017098"
+  },
+  "dependencies": {
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "ten-point-ward-upper/kernel.json": "0f679d16061e26bbc8fe2a1cb4328f899cda21473e1ce23fb7dc67365199d7e0",
+    "ten-point-ward-upper/verification_report.json": "b0ca8398eede3fb54efa718b4ea766b17c29ce6701afe860d7a4f07d276efe95",
+    "ten-point-ward-radii/verify_all.py": "74cc504d912c5bc6a795aa4d1c617901adcaa73d9aeb0aadb34b7f1fda4c45d6",
+    "ten-point-ward-radii/verification_report.json": "ee27250001043c3a1207e57f50d25ba26728a0d8aa0a574835a4ed32abac7567",
+    "ten-point-ward-population/verification_report.json": "4d32a8451c0742d349d76ccb003ef551ab54678b1f9c153fc3cc750082a34495",
+    "ten-point-collapse-domain/verification_report.json": "2279042198d843b7358dde8eb3dcb5ad546894ac7e2da2e7cc3ab02f126600c2"
+  }
+}

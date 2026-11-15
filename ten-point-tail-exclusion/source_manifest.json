@@ -1,0 +1,39 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "30ad1e50089215aeffaca85a3952d17e9fe6cb06d0e468b91ca27741bd0acdc0",
+    "cover-1.json": "3129d372d9c0b72893cbddf8a52de7fd400f0489bef82e54c9f1973c9d00f76e",
+    "cover-2.json": "d166b9b15eeec5ef914816108d67db575fb45996d843fc58a6038f01162fff6f",
+    "cover-3.json": "ac091c4835cb7b83c0a57774858b52320c379ced16197c64d3a296714dfb9667",
+    "verify_all.py": "32c0ac6ddd7fd2b578430025dd2456a8fae80b13749d820e2d1cac36dcb86247"
+  },
+  "dependencies": {
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "ten-point-collapse-domain/README.md": "3cd9d8b9ab11987d4408a795c4096aa48fa05b9b938344a0a4bbc74cc894cb50",
+    "ten-point-collapse-domain/source_manifest.json": "54c1b9381add2821352a0235579a6273329a15ac52aff03adc2026c893e58eca",
+    "ten-point-collapse-domain/verification_report.json": "2279042198d843b7358dde8eb3dcb5ad546894ac7e2da2e7cc3ab02f126600c2",
+    "ten-point-collapse-domain/verify_all.py": "c5764e3f85e781ec9de3477c5d5d4bd7a7aefeb04060b1dc811cd6961d3f505a",
+    "ten-point-ward-inner-count/README.md": "0582f3c1c42bc8d4b1e5bf6bb440ccac5b567ce1d40f4ed8afec6bc87e69b2cc",
+    "ten-point-ward-inner-count/source_manifest.json": "b6a99cc8e8df838751dcf3b96f87399fc39e1b0663c3d25a82f5ed8bb9aa99bd",
+    "ten-point-ward-inner-count/verification_report.json": "1c7d02c25f3c38c86caa42c4ac467c63254291d7ec7c3e1a815c9a678038cd3e",
+    "ten-point-ward-inner-count/verify_all.py": "bbd30e115d6b048630fbad265181b0e84ca84d469d8a1588227e7227f39170ab",
+    "ten-point-ward-inner-count/verify_radial.py": "58a1816a74d0ed0cd3dee9788ed738ef65c7084972c6f0cc13a81f728dea18cd",
+    "ten-point-ward-population/README.md": "f65013f8be59e4b892f5fbc73c95a732684a311977306105c8e6aca446be6265",
+    "ten-point-ward-population/source_manifest.json": "5512ddb0efb3c1ee3123989f3dc6183464ecac4205cf9d4f18fb0eb9959e232e",
+    "ten-point-ward-population/verification_report.json": "4d32a8451c0742d349d76ccb003ef551ab54678b1f9c153fc3cc750082a34495",
+    "ten-point-ward-population/verify_all.py": "4274e736eef2175f2bbc183d8b59eea582c25d33bd61fa11703feb7ed541aa5c",
+    "ten-point-ward-radii/README.md": "06182a08ea455fea12dd51bf0edd503058086e03439338b600be6dda2edff5a4",
+    "ten-point-ward-radii/source_manifest.json": "f938282aca74011b1632a63520c2e31f48b4bf4304b9971d61d068326e2525c5",
+    "ten-point-ward-radii/verification_report.json": "ee27250001043c3a1207e57f50d25ba26728a0d8aa0a574835a4ed32abac7567",
+    "ten-point-ward-radii/verify_all.py": "74cc504d912c5bc6a795aa4d1c617901adcaa73d9aeb0aadb34b7f1fda4c45d6",
+    "ten-point-ward-upper/README.md": "3443e4712a3a3261f63b2227f056a16aba003565ec68facf254c66f477124e9a",
+    "ten-point-ward-upper/kernel.json": "0f679d16061e26bbc8fe2a1cb4328f899cda21473e1ce23fb7dc67365199d7e0",
+    "ten-point-ward-upper/source_manifest.json": "983dd824e2784420305688ad12abe98bf7a7cfe673b80e5a53c14e6f2434e65b",
+    "ten-point-ward-upper/verification_report.json": "b0ca8398eede3fb54efa718b4ea766b17c29ce6701afe860d7a4f07d276efe95",
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996"
+  }
+}

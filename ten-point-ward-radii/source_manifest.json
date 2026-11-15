@@ -1,0 +1,17 @@
+{
+  "files": {
+    "README.md": "06182a08ea455fea12dd51bf0edd503058086e03439338b600be6dda2edff5a4",
+    "verify_all.py": "74cc504d912c5bc6a795aa4d1c617901adcaa73d9aeb0aadb34b7f1fda4c45d6",
+    "mid.json": "c30f23b75cf1bc16403c28a9edd677cf0aa2d9aa895c3638dfe07b40f9ac7895",
+    "high.json": "37698f7d780cb11a1f4fa844db8fddfe23c382bcd3725972202616b9a4cb8db6"
+  },
+  "dependencies": {
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "ten-point-ward-upper/kernel.json": "0f679d16061e26bbc8fe2a1cb4328f899cda21473e1ce23fb7dc67365199d7e0",
+    "ten-point-ward-upper/verification_report.json": "b0ca8398eede3fb54efa718b4ea766b17c29ce6701afe860d7a4f07d276efe95",
+    "ten-point-ward-upper/source_manifest.json": "983dd824e2784420305688ad12abe98bf7a7cfe673b80e5a53c14e6f2434e65b",
+    "maximizer-domain/verify_all.py": "a76aa087d02dbc00489b83be053a254f1548b0db3fd8556fea67d3477366a290",
+    "maximizer-domain/README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db",
+    "ten-point-collapse-domain/verification_report.json": "2279042198d843b7358dde8eb3dcb5ad546894ac7e2da2e7cc3ab02f126600c2"
+  }
+}

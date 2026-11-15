@@ -1,0 +1,132 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "all_global_maximizers": true,
+  "exact_inner_count": 2,
+  "outer_count": 8,
+  "inner_squared_radius_strict_upper": "3/10",
+  "outer_squared_radius_open_interval": [
+    "41/60",
+    "71/50"
+  ],
+  "tail_excluded_closed_interval": [
+    "149/100",
+    "1539/1000"
+  ],
+  "tail_counts_excluded_by_six_point_mass": "4 or more",
+  "total_row_nodes": 67086,
+  "ward_budget_minus_witness_log_strict_upper": "1/1000000",
+  "covers": [
+    {
+      "tail_count": 1,
+      "marked_row_lower": "3/250",
+      "slabs": 12,
+      "counts": {
+        "A": 4165,
+        "P": 3021,
+        "0": 267,
+        "1": 3341,
+        "2": 3554
+      },
+      "nodes": 14348,
+      "maximum_depth": 22,
+      "unresolved": 0,
+      "budget_upper": "1/1000000",
+      "contradiction_lower_decimal_display": 0.0012
+    },
+    {
+      "tail_count": 2,
+      "marked_row_lower": "1/125",
+      "slabs": 12,
+      "counts": {
+        "A": 5963,
+        "P": 4654,
+        "0": 1127,
+        "1": 4566,
+        "2": 4888
+      },
+      "nodes": 21198,
+      "maximum_depth": 26,
+      "unresolved": 0,
+      "budget_upper": "1/500000",
+      "gram_cover": [
+        {
+          "interval": [
+            "0",
+            "3/10"
+          ],
+          "strict_floor": "-39/100000",
+          "visited": 7,
+          "maximum_depth": 3
+        },
+        {
+          "interval": [
+            "41/60",
+            "71/50"
+          ],
+          "strict_floor": "-1/12500",
+          "visited": 11,
+          "maximum_depth": 3
+        },
+        {
+          "interval": [
+            "149/100",
+            "1539/1000"
+          ],
+          "strict_floor": "57/6250",
+          "visited": 1,
+          "maximum_depth": 0
+        }
+      ],
+      "gram_lower_decimal_display": 0.008421481933016955,
+      "contradiction_lower_decimal_display": 0.0028214819330169543
+    },
+    {
+      "tail_count": 3,
+      "marked_row_lower": "1/1000",
+      "slabs": 12,
+      "counts": {
+        "A": 8581,
+        "P": 7207,
+        "0": 2470,
+        "1": 6506,
+        "2": 6776
+      },
+      "nodes": 31540,
+      "maximum_depth": 29,
+      "unresolved": 0,
+      "budget_upper": "1/500000",
+      "gram_cover": [
+        {
+          "interval": [
+            "0",
+            "3/10"
+          ],
+          "strict_floor": "-13/10000",
+          "visited": 7,
+          "maximum_depth": 3
+        },
+        {
+          "interval": [
+            "41/60",
+            "71/50"
+          ],
+          "strict_floor": "-111/100000",
+          "visited": 7,
+          "maximum_depth": 3
+        },
+        {
+          "interval": [
+            "149/100",
+            "1539/1000"
+          ],
+          "strict_floor": "1661/100000",
+          "visited": 1,
+          "maximum_depth": 0
+        }
+      ],
+      "gram_lower_decimal_display": 0.02074020797108836,
+      "contradiction_lower_decimal_display": 0.004840207971088361
+    }
+  ]
+}

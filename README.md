@@ -1,8 +1,8 @@
 # Mordell 距离乘积研究
 
-蒋丰灿（Fengcan Jiang）研究项目，推导、精确证书与代码包含 OpenAI Codex 协作。更新于 **2026-11-09**。
+蒋丰灿（Fengcan Jiang）研究项目，推导、精确证书与代码包含 OpenAI Codex 协作。更新于 **2026-11-15**。
 
-**最新成果 · 十二点全局锐界与唯一性**
+**十二点全局锐界与唯一性**
 
 [英文论文 PDF](twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX 源文件](twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [证明与证书](twelve-point-sharp-global/README.md) · [复现指南](docs/REPRODUCING.md)
 
@@ -23,6 +23,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\prod_{1\le i<j\le n}|z_i-z_j|^2.
 |6、7 点|M₆ = 6¹⁵/5¹⁰，M₇ = 7²¹/6¹⁵，等号为原点加相应正多边形。相关证明引用 Faugère–Svarts 物理驻点分类。 [证明与依赖审计](earlier-results/six_seven_coverage_audit.md)|
 |8 点|M₈ = 8²⁸/7²¹，等号为原点加半径 √(8/7) 的正七边形。 [证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)|
 |9 点|M₉ = 9³⁶/8²⁸，等号为原点加半径 √(9/8) 的正八边形。 [证明与证书复现](nine-point-global/README.md)|
+|10 点|C₁₀ ≤ M₁₀ < (201/200) C₁₀，其中 C₁₀ ≈ 5.3823025896 × 10¹⁰ 是真实 D₂ 候选值。质量 9 下，每个最大构型有两个平方半径在 (0.045, 0.245) 内的内点和八个在 (0.74, 1.39) 内的外点。 [全局上界](ten-point-banded-kernel/README.md) · [内点对](ten-point-inner-pair/README.md) · [证明链](docs/REPRODUCING.md#十点全局范围与局部锐界)|
 |12 点|真实 D₃ 构型的全局锐值及唯一性。 [英文论文](twelve-point-sharp-global/manuscript/README.md)|
 |其他点数及一般结构|一般锐值仍开放。现有结果包括严格可达下界、必要几何条件、环人口刚性、相位相容性与局部稳定性证书。 [证明状态总表](configuration-bounds/PROOF_STATUS.md) · [一般结构](general-structure/README.md)|
 

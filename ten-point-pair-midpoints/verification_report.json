@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "source_manifest_sha256": "38c8b77ffb508520037c8394b3b083caf5ea3e238284d794c560ff7ab3f083ff",
+  "normalization_mass": 9,
+  "candidate_antipodal_pairs_zero_based": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      8,
+      9
+    ]
+  ],
+  "candidate_interpair_separation_strict_lower": "73/100",
+  "candidate_complex_pair_laplacian_norm_strict_upper": "427/100",
+  "candidate_pair_length_laplacian_norm_strict_upper": [
+    "11",
+    "13"
+  ],
+  "matrix_checks": {
+    "inverse_square_positive": {
+      "dimension": 10,
+      "dyadic_diagonal_shift": "7/1099511627776",
+      "minimum_ldl_pivot_floor": "31009447735/1099511627776"
+    },
+    "inverse_square_negative": {
+      "dimension": 10,
+      "dyadic_diagonal_shift": "3/549755813888",
+      "minimum_ldl_pivot_floor": "133823485601/1099511627776"
+    },
+    "length_3": {
+      "dimension": 5,
+      "dyadic_diagonal_shift": "1/274877906944",
+      "minimum_ldl_pivot_floor": "10102412707/34359738368"
+    },
+    "length_4": {
+      "dimension": 5,
+      "dyadic_diagonal_shift": "1/274877906944",
+      "minimum_ldl_pivot_floor": "381237418689/549755813888"
+    }
+  },
+  "joint_amplitude_norm_upper": "1/150",
+  "stationary_midpoint_norm_upper": "13/100",
+  "stationary_pair_laplacian_norm_rational_upper": "184688455792069846631/37061508107446835000",
+  "stationary_pair_laplacian_norm_strict_upper": "499/100",
+  "unconstrained_midpoint_norm_for_energy_comparison": "17/100",
+  "midpoint_quadratic_loss_coefficient_rational_lower": "16207488658185751/121898329370915000",
+  "midpoint_quadratic_loss_coefficient_strict_lower": "1/8",
+  "prior_mass_ten_L_basin_replayed": true
+}

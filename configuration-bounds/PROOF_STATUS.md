@@ -1,6 +1,6 @@
 # 当前证明状态与统一入口
 
-蒋丰灿（Fengcan Jiang）研究项目，推导与代码包含 OpenAI Codex 协作。更新于 **2026-11-09**。
+蒋丰灿（Fengcan Jiang）研究项目，推导与代码包含 OpenAI Codex 协作。更新于 **2026-11-15**。
 
 ## 十二点全局锐值与等号
 
@@ -13,6 +13,12 @@
 |精确取等与连续覆盖|接触矩阵秩为 44，十二个基础 Gram 块严格正定，所有必要点对域均获零补偿覆盖。 [完整证明](../twelve-point-sharp-global/README.md) · [复现顺序](../docs/REPRODUCING.md)|
 
 先前的 15%、3%、301/300、379/378 和 15000/14999 上界作为阶段证书归入[研究索引](../docs/RESEARCH_INDEX.md)。现行十二点结论由零补偿锐界给出。
+
+## 十点全局范围与局部锐界
+
+**C₁₀ ≤ M₁₀ < (201/200) C₁₀。** 真实 D₂ 候选在质量 10 下的值约为 5.3823025896 × 10¹⁰。初始的 507/500 上界已由 191,632 节点分带核收紧。在质量 9 下，任一最大构型恰有两个平方半径在 (0.045, 0.245) 内的点，其余八个平方半径在 (0.74, 1.39) 内。内点夹角余弦小于 −11/20。 [分带核](../ten-point-banded-kernel/README.md) · [内点人数](../ten-point-ward-inner-count/README.md) · [最外带排除](../ten-point-tail-exclusion/README.md) · [内点对](../ten-point-inner-pair/README.md)
+
+候选由[五变量精确方程](../ten-point-contact-geometry/README.md)刻画。[局部锐界](../ten-point-local-basin/README.md)覆盖质量 10 下轨道半径 1/100 的邻域。新的[配对中点证书](../ten-point-pair-midpoints/README.md)在质量 9 下允许半差向量误差不超过 1/150 和中点范数不超过 0.17，等号仅在候选轨道。仍需证明全局最大构型都进入这个范围，或给出零余量全域核。
 
 ## 八、九点的来源与重放
 

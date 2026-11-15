@@ -1,0 +1,26 @@
+{
+  "files": {
+    "README.md": "feb32db9bc1d08d01f0bb1c32b04f17f1917831ac875b4f7a7cb8223039ff4ae",
+    "verify_all.py": "5bbc1e9fd9bc036ed090a9b06b71581165618ae74eeff4c9167c45412d2fe771",
+    "0.json": "c1d24e435fd795477f58ed761b0aae1975c8f2141862f832e1a781b611970d73",
+    "1.json": "4ff7ce06ba8a6ba7c18e89cd61c7237ef4d464528cb78cd1bdfacf89f2ed27b7",
+    "2.json": "6314e24e8415e1239e8f50b790a02c4fe55a555039a4864129727e9ce419c20f",
+    "3.json": "37a513df7290bdd69c1bbaf56bbf53757301f962b7641a20a3e75c6221e6318e",
+    "4.json": "688e833b18277f6a7597ec7194654a18a730b8a18dddae3106547474d939aa5b",
+    "inner-pair.txt": "64e80dd8298793c96e7dac40d534eaf748fc6e72dd4ef2f3f87eca147eca24b7"
+  },
+  "dependencies": {
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "ten-point-ward-upper/kernel.json": "0f679d16061e26bbc8fe2a1cb4328f899cda21473e1ce23fb7dc67365199d7e0",
+    "ten-point-ward-upper/verification_report.json": "b0ca8398eede3fb54efa718b4ea766b17c29ce6701afe860d7a4f07d276efe95",
+    "ten-point-ward-radii/verify_all.py": "74cc504d912c5bc6a795aa4d1c617901adcaa73d9aeb0aadb34b7f1fda4c45d6",
+    "ten-point-ward-radii/verification_report.json": "ee27250001043c3a1207e57f50d25ba26728a0d8aa0a574835a4ed32abac7567",
+    "ten-point-ward-inner-count/verification_report.json": "1c7d02c25f3c38c86caa42c4ac467c63254291d7ec7c3e1a815c9a678038cd3e",
+    "ten-point-collapse-domain/verification_report.json": "2279042198d843b7358dde8eb3dcb5ad546894ac7e2da2e7cc3ab02f126600c2",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5"
+  }
+}

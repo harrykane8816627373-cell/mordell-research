@@ -1,0 +1,28 @@
+{
+  "scope": "exact radial Gram energy excludes all inner counts except two and three",
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "f65013f8be59e4b892f5fbc73c95a732684a311977306105c8e6aca446be6265",
+    "dual.json": "82fdd77082b79cb7a701db1fec73df3841635f8442612a756e7de846a390ce03",
+    "verify_all.py": "4274e736eef2175f2bbc183d8b59eea582c25d33bd61fa11703feb7ed541aa5c"
+  },
+  "dependencies": {
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "ten-point-ward-radii/README.md": "06182a08ea455fea12dd51bf0edd503058086e03439338b600be6dda2edff5a4",
+    "ten-point-ward-radii/high.json": "37698f7d780cb11a1f4fa844db8fddfe23c382bcd3725972202616b9a4cb8db6",
+    "ten-point-ward-radii/mid.json": "c30f23b75cf1bc16403c28a9edd677cf0aa2d9aa895c3638dfe07b40f9ac7895",
+    "ten-point-ward-radii/source_manifest.json": "f938282aca74011b1632a63520c2e31f48b4bf4304b9971d61d068326e2525c5",
+    "ten-point-ward-radii/verification_report.json": "ee27250001043c3a1207e57f50d25ba26728a0d8aa0a574835a4ed32abac7567",
+    "ten-point-ward-radii/verify_all.py": "74cc504d912c5bc6a795aa4d1c617901adcaa73d9aeb0aadb34b7f1fda4c45d6",
+    "ten-point-ward-upper/README.md": "3443e4712a3a3261f63b2227f056a16aba003565ec68facf254c66f477124e9a",
+    "ten-point-ward-upper/cover.txt": "fe99e2f71a282714d0eeb6e7e2216ec14003460493cee1254dcb5036cb742b8a",
+    "ten-point-ward-upper/kernel.json": "0f679d16061e26bbc8fe2a1cb4328f899cda21473e1ce23fb7dc67365199d7e0",
+    "ten-point-ward-upper/source_manifest.json": "983dd824e2784420305688ad12abe98bf7a7cfe673b80e5a53c14e6f2434e65b",
+    "ten-point-ward-upper/verification_report.json": "b0ca8398eede3fb54efa718b4ea766b17c29ce6701afe860d7a4f07d276efe95",
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996"
+  }
+}

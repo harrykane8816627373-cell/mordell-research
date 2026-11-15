@@ -1,5 +1,21 @@
 # 研究索引
 
+## 十点全局范围与候选锐界
+
+质量 10 下的真实候选值 C₁₀ ≈ 5.3823025896 × 10¹⁰。严格证明 C₁₀ ≤ M₁₀ < (201/200) C₁₀。半径、人口和内点对的限制适用于任一全局最大构型。全局锐值尚未确定。
+
+|阶段|证明与计算|
+|---|---|
+|全局必要域|[缩并与加权 Vandermonde](../ten-point-collapse-domain/README.md)给出严格半径上端、子集质量下界与新点对剪枝。|
+|1.4% 全局上界|[149,817 节点 Ward 与径向力核](../ten-point-ward-upper/README.md)。|
+|径向范围与内层人数|[逐点行预算](../ten-point-ward-radii/README.md)排除两段平方半径；[径向 Gram 证书](../ten-point-ward-population/README.md)先缩到 2 或 3；[96,752 节点仿射行证书](../ten-point-ward-inner-count/README.md)最终锁定 2 个内点。|
+|两带收紧及内点对|[四个精确行平衡](../ten-point-counted-radii/README.md)进一步排除五段平方半径并约束内点内积；[最外带分类覆盖](../ten-point-tail-exclusion/README.md)排除整个最外带。|
+|0.5% 全局上界及内点角度|[191,632 节点分带核](../ten-point-banded-kernel/README.md)用精确人数零和式压低缺额。[内点对约束](../ten-point-inner-pair/README.md)进一步限制内点的半径、夹角和中点。|
+|精确候选与局部锐界|[五变量代数候选、15 类接触与秩 44](../ten-point-contact-geometry/README.md)；[反射抵消与 1/100 轨道邻域](../ten-point-local-basin/README.md)。|
+|配对中点|[五维中点方程与能量比较](../ten-point-pair-midpoints/README.md)给出条件中心对称和更宽的局部锐界。|
+
+[后续证书路线](TEN_POINT_RESEARCH.md)说明怎样将精确人数和二阶驻点条件用于下一轮核构造。
+
 ## 十二点已证全局锐界
 
 真实 D₃ 候选达到 M₁₂，且在整体旋转及点重排下唯一。英文论文包括完整证明、固定输入的复现顺序及供其他点数使用的核构造。 [英文论文 PDF](../twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX](../twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [锐界与等号证书](../twelve-point-sharp-global/README.md)

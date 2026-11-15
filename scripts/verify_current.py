@@ -48,6 +48,7 @@ def main():
              *sorted((ROOT/'maximizer-domain').glob('*.md')),
              *sorted((ROOT/'candidate-basin').glob('*.md')),
              *sorted((ROOT/'candidate-kernel').glob('*.md')),
+             *sorted(ROOT.glob('ten-point-*/*.md')),
              *sorted((ROOT/'twelve-point-kernel-upper').glob('*.md')),
              *sorted((ROOT/'twelve-point-kernel-refinement').glob('*.md')),
              *sorted((ROOT/'jacobian-assist').glob('*.md')),
