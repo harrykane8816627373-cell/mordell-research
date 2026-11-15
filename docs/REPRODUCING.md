@@ -21,12 +21,13 @@ python -B -S -O ten-point-counted-radii/verify_all.py
 python -B -S -O ten-point-tail-exclusion/verify_all.py
 python -B -S -O ten-point-banded-kernel/verify_all.py
 python -B -S -O ten-point-inner-pair/verify_all.py
+python -B -S -O ten-point-banded-kernel-refined/verify_all.py
 python -B -S -O ten-point-contact-geometry/verify_all.py
 python -B -S -O ten-point-local-basin/verify_all.py
 python -B -S -O ten-point-pair-midpoints/verify_all.py
 ```
 
-初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。半径收紧后，分带核重放 191,632 个节点。内点对的位置证书沿用分带核的缺额预算。候选根、接触几何与局部锐界独立于全域核。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
+初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。半径收紧后的两次分带覆盖分别重放 191,632 和 328,752 个节点。内点对的位置证书沿用各自的缺额预算。候选根、接触几何与局部锐界独立于全域核。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
 
 ## 编译十二点英文论文
 
