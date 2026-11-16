@@ -1,0 +1,17 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "d942471a921ac115d2a17c60e27a56987ac6bcbc1867e969e889da2f90614e45",
+    "verify_all.py": "47a0b6678293b9933d8d2bca8f7a1cc67c6fee085c76336a42d417f98d9b3b27"
+  },
+  "dependencies": {
+    "maximizer-domain/verification_report.json": "9b9fdfefecb79848c89c2dc26e352425b3c7ef60dde92f13f661820d6b22f738",
+    "stationary-kernel/README.md": "b60534012a2922a8d598ab222990a85c2ee6dea9a146bd8acb4ff5a7d676453d",
+    "ten-point-banded-kernel-refined/README.md": "4247736fbfadcd4a7c7f1808e41ad0bf6f6c6774a857f847697d1d639e85c257",
+    "ten-point-banded-kernel-refined/verification_report.json": "ee6efadec68409f95792faa48d1ca03fa28e1a97aefd9e966d128570096d22ac",
+    "ten-point-counted-radii/verification_report.json": "93ca765240fc86a840fb26817feffbb83772326309d6160b37d08665fe1b62c1",
+    "ten-point-refined-radii/README.md": "80fc128fd3114bfc578767dbf8f2bba3d09147128ebabd495d9f4ab87bfc9f78",
+    "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+    "ten-point-tail-exclusion/verification_report.json": "44d3dd169359f1b3b5bcb84f5fb3c3a95b064457c731332f39646642f086ec23"
+  }
+}

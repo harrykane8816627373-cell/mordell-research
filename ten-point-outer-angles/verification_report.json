@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "source_manifest_sha256": "3d2c7913327c1aba2da9d6298868e70bebbe73f54b4d457064fbb6b1b6be0b2e",
+  "normalization_mass": 9,
+  "outer_count": 8,
+  "outer_pair_angular_separation_cosine_strict_upper": "6/7",
+  "outer_count_per_closed_semicircle_upper": 5,
+  "outer_count_per_open_semicircle_lower": 3,
+  "six_ray_gap_vertices_checked": 7,
+  "six_ray_minimum_sine_sum_factor_times_sine_alpha": "38/7",
+  "six_ray_outer_directional_ward_sum_strict_lower": "2797/2000",
+  "inner_directional_ward_sum_modulus_strict_upper": "9319/7500",
+  "outer_pair_negative_curvature_lower": "12/25",
+  "inner_outer_positive_curvature_upper": [
+    "13/5",
+    "1/16"
+  ],
+  "fixed_mean_outer_angular_negative_hessian_lower": "471/400",
+  "at_most_one_angular_stationary_vector_per_fixed_data_convex_branch": true,
+  "refined_bands": {
+    "inner_squared_radius_open_interval": [
+      "37/500",
+      "43/250"
+    ],
+    "outer_squared_radius_open_interval": [
+      "169/200",
+      "164/125"
+    ],
+    "outer_pair_angular_separation_cosine_strict_upper": "17/20",
+    "fixed_mean_outer_angular_negative_hessian_lower": "173/100",
+    "closed_arc_length_pi_plus": "1/10",
+    "outer_count_per_closed_arc_upper": 5,
+    "extended_arc_ward_contradiction_gap": "611/25000",
+    "opposite_index_gradient_radius_coefficient": "988/45",
+    "opposite_index_gradient_inner_midpoint_coefficient": "460/7"
+  }
+}

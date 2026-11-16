@@ -1,0 +1,11 @@
+{
+  "files": {
+    "README.md": "f92ea050b18fd03f84f76f419462d18829b199915708bf204cbbe8204c2e37a7",
+    "verify_all.py": "892c965e9cf773525589f79b4be0347be2d0f91881db5920dca8ac76c5ba6b4b"
+  },
+  "dependencies": {
+    "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+    "ten-point-conditioned-inner/verification_report.json": "161b18e4073b893e534b5f090f465c6d95d6f283eec33c92af9d0f035cf824d2",
+    "stationary-kernel/README.md": "b60534012a2922a8d598ab222990a85c2ee6dea9a146bd8acb4ff5a7d676453d"
+  }
+}

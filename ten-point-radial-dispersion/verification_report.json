@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "sum_absolute_outer_squared_radius_deviations_strict_lower": "1/25",
+  "max_outer_squared_radius_deviation_from_mean_strict_lower": "1/200",
+  "sum_squared_outer_squared_radius_deviations_strict_lower": "1/5000",
+  "outer_squared_radius_span_strict_lower": "1/100",
+  "reciprocity_contradiction_rational_margin": "8980707964004500575752360019380009267359/2983363073914435027940855808000000000000000",
+  "reciprocity_contradiction_margin_strict_lower": "1/500"
+}

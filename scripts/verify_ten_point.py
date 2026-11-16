@@ -8,7 +8,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SUITES = ('maximizer-domain', 'ten-point-collapse-domain', 'ten-point-ward-upper',
           'ten-point-ward-radii', 'ten-point-ward-population', 'ten-point-ward-inner-count',
           'ten-point-counted-radii', 'ten-point-tail-exclusion', 'ten-point-banded-kernel',
-          'ten-point-inner-pair', 'ten-point-banded-kernel-refined', 'ten-point-contact-geometry',
+          'ten-point-inner-pair', 'ten-point-banded-kernel-refined', 'ten-point-curved-kernel',
+          'ten-point-refined-radii', 'ten-point-conditioned-inner', 'ten-point-radial-dispersion',
+          'ten-point-outer-angles', 'ten-point-outer-moments', 'ten-point-contact-geometry',
           'ten-point-local-basin', 'ten-point-pair-midpoints')
 
 

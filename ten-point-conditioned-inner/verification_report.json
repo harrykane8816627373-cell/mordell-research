@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "applies_to_every_global_maximizer": true,
+  "normalization_mass": 9,
+  "inner_squared_distance_open_interval": [
+    "41/100",
+    "11/20"
+  ],
+  "inner_angle_cosine_strict_upper": "-77/100",
+  "outer_supports": 35,
+  "outer_support_counts": {
+    "2": 58912,
+    "1": 58557,
+    "P": 1786,
+    "A": 126392,
+    "0": 10674
+  },
+  "inner_pair_counts": {
+    "P": 290,
+    "2": 474,
+    "A": 194,
+    "G": 438,
+    "1": 104,
+    "0": 68
+  },
+  "unresolved": 0
+}

@@ -2,7 +2,7 @@
 
 ## 十点全局范围与候选锐界
 
-质量 10 下的真实候选值 C₁₀ ≈ 5.3823025896 × 10¹⁰。严格证明 C₁₀ ≤ M₁₀ < (5017/5000) C₁₀。半径、人口和内点对的限制适用于任一全局最大构型。全局锐值尚未确定。
+质量 10 下的真实候选值 C₁₀ ≈ 5.3823025896 × 10¹⁰。严格证明 C₁₀ ≤ M₁₀ < (1253/1250) C₁₀。全局锐值尚未确定。
 
 |阶段|证明与计算|
 |---|---|
@@ -12,6 +12,9 @@
 |两带收紧及内点对|[四个精确行平衡](../ten-point-counted-radii/README.md)进一步排除五段平方半径并约束内点内积；[最外带分类覆盖](../ten-point-tail-exclusion/README.md)排除整个最外带。|
 |0.5% 全局上界及内点角度|[191,632 节点分带核](../ten-point-banded-kernel/README.md)用精确人数零和式压低缺额。[内点对约束](../ten-point-inner-pair/README.md)进一步限制内点的半径、夹角和中点。|
 |0.34% 全局上界及内点定位|[328,752 节点分带核](../ten-point-banded-kernel-refined/README.md)按内边和其余边分别控制缺额，再用 2,367 个节点收紧内点半径、夹角、中点及平方距离。|
+|0.24% 全局上界|[24,681 节点曲率核](../ten-point-curved-kernel/README.md)在对数切线中保留二次余项，降低连续覆盖的开销。|
+|内外几何范围|[半径与中点证书](../ten-point-refined-radii/README.md)收紧两带及中点范数。[联合行预算](../ten-point-conditioned-inner/README.md)限制两内点的平方距离和夹角。[外点多项式递推](../ten-point-radial-dispersion/README.md)排除平方半径跨度不超过 1/100 的配置。|
+|外点角序与配对|[统一负曲率](../ten-point-outer-angles/README.md)给出固定数据的唯一角向驻点与残差上界。[角矩与短弧计数](../ten-point-outer-moments/README.md)确定循环次序下的四组近对径配对。|
 |精确候选与局部锐界|[五变量代数候选、15 类接触与秩 44](../ten-point-contact-geometry/README.md)；[反射抵消与 1/100 轨道邻域](../ten-point-local-basin/README.md)。|
 |配对中点|[五维中点方程与能量比较](../ten-point-pair-midpoints/README.md)给出条件中心对称和更宽的局部锐界。|
 

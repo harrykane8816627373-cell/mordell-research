@@ -1,6 +1,6 @@
 # 当前证明状态与统一入口
 
-蒋丰灿（Fengcan Jiang）研究项目，推导与代码包含 OpenAI Codex 协作。更新于 **2026-11-15**。
+蒋丰灿（Fengcan Jiang）研究项目，推导与代码包含 OpenAI Codex 协作。更新于 **2026-11-16**。
 
 ## 十二点全局锐值与等号
 
@@ -16,9 +16,13 @@
 
 ## 十点全局范围与局部锐界
 
-**C₁₀ ≤ M₁₀ < (5017/5000) C₁₀。** 真实 D₂ 候选在质量 10 下的值约为 5.3823025896 × 10¹⁰。最强上界来自 328,752 节点分带核。在质量 9 下，任一最大构型恰有两个平方半径在 (0.054, 0.217) 内的点，其余八个平方半径在 (0.74, 1.39) 内。内点夹角余弦小于 −2/3，中点平方模小于 1/40，平方距离小于 3/5。 [分带核与内点对](../ten-point-banded-kernel-refined/README.md) · [内点人数](../ten-point-ward-inner-count/README.md) · [最外带排除](../ten-point-tail-exclusion/README.md)
+**C₁₀ ≤ M₁₀ < (1253/1250) C₁₀。** 真实 D₂ 候选在质量 10 下的值约为 5.3823025896 × 10¹⁰。最强上界由 24,681 节点的曲率核重放给出。 [全局上界](../ten-point-curved-kernel/README.md)
 
-候选由[五变量精确方程](../ten-point-contact-geometry/README.md)刻画。[局部锐界](../ten-point-local-basin/README.md)覆盖质量 10 下轨道半径 1/100 的邻域。新的[配对中点证书](../ten-point-pair-midpoints/README.md)在质量 9 下允许半差向量误差不超过 1/150 和中点范数不超过 0.17，等号仅在候选轨道。仍需证明全局最大构型都进入这个范围，或给出零余量全域核。
+质量 9 下，任一最大构型恰有两个平方半径在 (0.074, 0.172) 内的点，其余八个平方半径在 (0.845, 1.312) 内。两内点夹角余弦小于 −0.77，中点模小于 239/2000，平方距离在 (0.41, 0.55) 内。外点平方半径跨度严格大于 1/100。 [半径与中点](../ten-point-refined-radii/README.md) · [联合内边约束](../ten-point-conditioned-inner/README.md) · [径向离散](../ten-point-radial-dispersion/README.md)
+
+按圆周排序后，相隔四位的外点组成四个互不重叠的近对径点对，每对夹角的余弦小于 −0.913472。固定半径和平均外角的每个凸分支具有统一负 Hessian 界 173/100，可以用角力残差控制整条分支的最大值。 [角矩与配对](../ten-point-outer-moments/README.md) · [外角证书](../ten-point-outer-angles/README.md)
+
+候选由五变量精确方程刻画。配对中点证书在质量 9 下允许半差向量误差不超过 1/150 和中点范数不超过 0.17，等号仅在候选轨道。仍需证明全局最大构型都进入这个范围，或给出零余量全域核。 [精确候选](../ten-point-contact-geometry/README.md) · [配对局部锐界](../ten-point-pair-midpoints/README.md)
 
 ## 八、九点的来源与重放
 

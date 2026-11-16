@@ -1,0 +1,29 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "8182d49790188af0cab1fc321aa64705450e0252af7883cd9cda878cf905c89c",
+    "harmonics.json": "c7a78d2b9aa8c8e47370079a3c99f77b628ebcffe77985b2ccc6c140b814d8ef",
+    "odd-projection.json": "ff0df45817ec3cd68c3c2114c3b76a92fdbc5e2b10b30dfd150be04462e36e97",
+    "verify_all.py": "19f970aedbdd19abcbc0b336ec8f2d664dacd4df3d81e9d15b854f1cc4da2460"
+  },
+  "dependencies": {
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "maximizer-domain/README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db",
+    "stationary-kernel/README.md": "b60534012a2922a8d598ab222990a85c2ee6dea9a146bd8acb4ff5a7d676453d",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "ten-point-banded-kernel-refined/README.md": "4247736fbfadcd4a7c7f1808e41ad0bf6f6c6774a857f847697d1d639e85c257",
+    "ten-point-banded-kernel-refined/kernel.json": "acd09788b21fbba75e9954e84e57a7e9e19508c95604942acf48e2a444c23877",
+    "ten-point-banded-kernel-refined/source_manifest.json": "ac9e4463bd752c0e46400c95cd1e595de027276ce31365748be3f2471ca90899",
+    "ten-point-banded-kernel-refined/verification_report.json": "ee6efadec68409f95792faa48d1ca03fa28e1a97aefd9e966d128570096d22ac",
+    "ten-point-banded-kernel-refined/verify_all.py": "56dd18d9efd283f4307cb6ca824b0b1584c284368cbaca8dbf334e421ce6be37",
+    "ten-point-refined-radii/README.md": "80fc128fd3114bfc578767dbf8f2bba3d09147128ebabd495d9f4ab87bfc9f78",
+    "ten-point-refined-radii/source_manifest.json": "5a04a6a5419a9114a692aa3834074dcd849c3f21875d58e934596dc2594caa25",
+    "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+    "ten-point-refined-radii/verify_all.py": "1b1c5ab04344084b053389f1ddf77bcc9055008fc36b787d1fdc72b07fc0b9d2",
+    "ten-point-ward-inner-count/verify_radial.py": "58a1816a74d0ed0cd3dee9788ed738ef65c7084972c6f0cc13a81f728dea18cd",
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996"
+  }
+}

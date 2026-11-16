@@ -22,12 +22,18 @@ python -B -S -O ten-point-tail-exclusion/verify_all.py
 python -B -S -O ten-point-banded-kernel/verify_all.py
 python -B -S -O ten-point-inner-pair/verify_all.py
 python -B -S -O ten-point-banded-kernel-refined/verify_all.py
+python -B -S -O ten-point-curved-kernel/verify_all.py
+python -B -S -O ten-point-refined-radii/verify_all.py
+python -B -S -O ten-point-conditioned-inner/verify_all.py
+python -B -S -O ten-point-radial-dispersion/verify_all.py
+python -B -S -O ten-point-outer-angles/verify_all.py
+python -B -S -O ten-point-outer-moments/verify_all.py
 python -B -S -O ten-point-contact-geometry/verify_all.py
 python -B -S -O ten-point-local-basin/verify_all.py
 python -B -S -O ten-point-pair-midpoints/verify_all.py
 ```
 
-初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。半径收紧后的两次分带覆盖分别重放 191,632 和 328,752 个节点。内点对的位置证书沿用各自的缺额预算。候选根、接触几何与局部锐界独立于全域核。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
+初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。最新曲率核把上界收紧到候选值的 1.0024 倍，重放 24,681 个节点。另有精确证书给出内外平方半径带、内点对的几何约束、外点径向离散和固定分支的外角凹性。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
 
 ## 编译十二点英文论文
 

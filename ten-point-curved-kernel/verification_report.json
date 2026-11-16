@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "scope": "exact ten-point curved majorant on the accepted two bands",
+  "c": "53/1000000",
+  "c_inner": "3/50000",
+  "c_mixed": "53/1000000",
+  "B": "5620420276963433/281474976710656",
+  "visited": 24681,
+  "counts": {
+    "A": 2273,
+    "Q": 7374,
+    "P": 2696,
+    "S": 12338
+  },
+  "unresolved": 0,
+  "maximum_depth": 31,
+  "regions": [
+    {
+      "id": [
+        0,
+        0,
+        -1
+      ],
+      "counts": {
+        "A": 2124,
+        "Q": 120,
+        "P": 1850,
+        "0": 1526,
+        "1": 1388,
+        "2": 1179
+      },
+      "visited": 8187
+    },
+    {
+      "id": [
+        0,
+        1,
+        -1
+      ],
+      "counts": {
+        "A": 39,
+        "Q": 665,
+        "P": 118,
+        "0": 309,
+        "1": 284,
+        "2": 228
+      },
+      "visited": 1643
+    },
+    {
+      "id": [
+        1,
+        1,
+        -1
+      ],
+      "counts": {
+        "A": 108,
+        "Q": 944,
+        "P": 300,
+        "0": 398,
+        "1": 448,
+        "2": 505
+      },
+      "visited": 2703
+    },
+    {
+      "id": [
+        0,
+        1,
+        1
+      ],
+      "counts": {
+        "A": 1,
+        "Q": 1610,
+        "P": 95,
+        "0": 617,
+        "1": 653,
+        "2": 435
+      },
+      "visited": 3411
+    },
+    {
+      "id": [
+        1,
+        1,
+        1
+      ],
+      "counts": {
+        "A": 1,
+        "Q": 4035,
+        "P": 333,
+        "0": 1354,
+        "1": 1335,
+        "2": 1679
+      },
+      "visited": 8737
+    }
+  ],
+  "tensor_shape": [
+    21,
+    21,
+    11
+  ],
+  "PSD_blocks": 10,
+  "min_gram_pivot_display": 2.6998627924396433e-07,
+  "polynomial_crosschecks": 30,
+  "piecewise_zero_sum_directions": 54,
+  "logarithmic_gap_upper_display": 0.002391999999991423,
+  "kernel_sha256": "4b1edebb9cdc042ec30196a32f342a9330e43a7c74683c36a99e79c6e01c9781",
+  "proof_sha256": "6bb86d0d7587070095c6140510aea8be1e15105ddb42695f2562c0aa422eb511",
+  "global_over_witness_strict_upper": "1253/1250",
+  "candidate_over_global_strict_lower": "1250/1253",
+  "log_ratio_margin_strict_lower": "1/200000",
+  "log_upper_mass_nine": "87829586954808201393/4398046511104000000",
+  "inner_pair_deficit_strict_upper": "2333/1000000",
+  "exact_inner_count": 2,
+  "exact_outer_count": 8,
+  "curvature_reference_lanes_checked": 80,
+  "sharp_global_optimum_proved": false
+}

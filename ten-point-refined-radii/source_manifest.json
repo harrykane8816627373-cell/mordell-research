@@ -1,0 +1,33 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "verify_all.py": "1b1c5ab04344084b053389f1ddf77bcc9055008fc36b787d1fdc72b07fc0b9d2",
+    "README.md": "80fc128fd3114bfc578767dbf8f2bba3d09147128ebabd495d9f4ab87bfc9f78",
+    "outer-low.json": "3ac6edcd098200158081fc7a9e6be687f9d3f1b38a48ce97eddb08191c0bead6",
+    "outer-high.json": "43ced6463ed125ca6d4ec8ac5d4940db924c76ac53fd398222495d34190061d8",
+    "inner-low.json": "5d308ef2b58d45cead90cb36ecd474a17faaa03055786e2be54104d0e1995c39",
+    "inner-high.json": "5338d8532780f2080bd23832e1e6607d08df6e6cc6f39c37618047faca157bb5",
+    "midpoint.py": "7d591f931895e08374dcdccafd0a6b27dffd649e94901bc5641240d16fbef292",
+    "jacobian_midpoint_solve.json": "3ec53af1b47fcf2c7de8590fc70adb41a6f251b14d0c41b51f3744da0638de8d"
+  },
+  "dependencies": {
+    "candidate-kernel/verify_all.py": "3cec828558c8c6fe8edba01c8bf128b9a0b39ec2d520fc50de5307a2288b433b",
+    "candidate-kernel/verify_psd.py": "2d7aec5c006a1f30abf221ebe78c51ef93504307ae37a7f1bcc6fe220303a8a9",
+    "symmetry-breaking/integer_witnesses.json": "73e5f42ef78db59dd0ff3e05227caf75eb3834a02486c509767c8534c3c954d5",
+    "ten-point-banded-kernel-refined/README.md": "4247736fbfadcd4a7c7f1808e41ad0bf6f6c6774a857f847697d1d639e85c257",
+    "ten-point-banded-kernel-refined/cover.json": "9a8187f33b12215579312e4248626c793763314b19625b4717bcdc3693385f26",
+    "ten-point-banded-kernel-refined/inner-pair.txt": "450bd483f321eaa89f4adfa69194dbf03b6207a0e17a0092b4d9fe758e15b563",
+    "ten-point-banded-kernel-refined/kernel.json": "acd09788b21fbba75e9954e84e57a7e9e19508c95604942acf48e2a444c23877",
+    "ten-point-banded-kernel-refined/source_manifest.json": "ac9e4463bd752c0e46400c95cd1e595de027276ce31365748be3f2471ca90899",
+    "ten-point-banded-kernel-refined/verification_report.json": "ee6efadec68409f95792faa48d1ca03fa28e1a97aefd9e966d128570096d22ac",
+    "ten-point-banded-kernel-refined/verify_all.py": "56dd18d9efd283f4307cb6ca824b0b1584c284368cbaca8dbf334e421ce6be37",
+    "ten-point-banded-kernel/source_manifest.json": "431a88d8ca2ca44fa6c8fbcab99a5388daa24358e8746d48898b790a15787d69",
+    "ten-point-banded-kernel/verify_all.py": "e8c87ce2d5c802ec19cd8bd927984f09b083775a99d9081349bdcf677b946ac8",
+    "ten-point-collapse-domain/verify_all.py": "c5764e3f85e781ec9de3477c5d5d4bd7a7aefeb04060b1dc811cd6961d3f505a",
+    "ten-point-ward-radii/verify_all.py": "74cc504d912c5bc6a795aa4d1c617901adcaa73d9aeb0aadb34b7f1fda4c45d6",
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "twelve-point-kernel-upper/verify_all.py": "a41e00aeb9c74f6020ed6e12de8b0697c73d7e8fc88407db0db9424e0533ebce",
+    "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
+    "ten-point-ward-inner-count/verify_radial.py": "58a1816a74d0ed0cd3dee9788ed738ef65c7084972c6f0cc13a81f728dea18cd"
+  }
+}
