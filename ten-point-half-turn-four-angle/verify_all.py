@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 BITS = 43
 DEFAULT_DEPTH = 30
-MIDPOINT_CEILING = F(1,86)
+MIDPOINT_CEILING = F(1,44)
 
 
 def read(path):
@@ -59,9 +59,9 @@ def inputs():
     require(local['passed'] and local['normalization_mass']==9 and
             F(local['half_difference_radius'])==F(7,250) and saddle['passed'] and
             F(saddle['mass_nine_excluded_orbit_radius'])==F(21,500), 'two mass-nine orbit tests')
-    check_midpoint_bridge()
+    sixth_order = check_midpoint_bridge()
     engine = load('ten-point-half-turn-phase-sweep').Sweep()
-    data = [MIDPOINT_CEILING.denominator]
+    data = [MIDPOINT_CEILING.denominator, sixth_order]
     def append(interval):
         lo = engine.box.endpoint(interval,False)
         hi = engine.box.endpoint(interval)
@@ -83,6 +83,7 @@ def check_midpoint_bridge():
     proof = read(ROOT/'ten-point-pair-perturbation/verification_report.json')
     require(proof['passed'] and proof['applies_to_every_global_maximizer'] and
             proof['small_midpoint_quartic_energy_coefficient']==74 and
+            proof['small_midpoint_quadratic_sixth_order_coefficient']==846 and
             F(proof['projected_cross_pair_distance_strict_lower'])==F(4,7) and
             F(proof['one_cross_pair_distance_strict_lower'])==F(99,100), 'projection estimates')
     mu, d, amp = MIDPOINT_CEILING, F(4,7), F(9359,10000)
@@ -97,8 +98,6 @@ def check_midpoint_bridge():
     require(amp**2+F(43,400)>long**2 and
             2*F(1128,1000)*sum(1/(v*(v**2-2*mu**2)) for v in (d,long))<15,
             'one long edge for every pair of half differences')
-    require(14*sum(1/(v**2*(v**2-2*mu**2)) for v in (d,long))<147,
-            'midpoint directional stationarity remainder')
     cos_hi = F(39,50)+2*F(3,250)
     require(2/(2-2*cos_hi**2)<3 and
             4*a*u/(amp**2-a)**2<3 and 5*3+10*u<28, 'repair Hessian operator norm')
@@ -109,8 +108,8 @@ def check_midpoint_bridge():
     require(74+raw_gradient*displacement+14*displacement**2<242, 'energy residual after repair')
     require(4*F(43,400)>F(13,20)**2 and 4*l>F(9,5)**2, 'inverse square-root estimate')
     require(1/(2*amp)+F(1128,1000)*F(3,5)<F(3,2), 'representative displacement after repair')
-    require(F(27,1000)+3*mu**2<F(7,250) and
-            2*((F(26,1000)+3*mu**2)**2+mu**2)<F(21,500)**2, 'terminal orbit comparisons')
+    require(3*mu**2<F(7,250), 'nonempty candidate orbit test')
+    return ceil(28*sum(1/(v**2*(v**2-2*mu**2)**2) for v in (d,long)))
 
 
 def replay(compiler, depth, text):
@@ -123,7 +122,8 @@ def replay(compiler, depth, text):
                    for mode in ([],['midpoints'])]
     labels = ('root_boxes','visited','bisected','geometry_excluded','energy_excluded',
               'force_excluded','krawczyk_excluded','candidate_basin','saddle_excluded',
-              'unresolved','midpoint_stationarity_forces_zero','certified_radial_inclusions','maximum_depth')
+              'unresolved','midpoint_stationarity_forces_zero','certified_radial_inclusions',
+              'energy_radial_localizations','local_hessian_refinements','sharper_radial_inclusions','maximum_depth')
     def counts(output):
         numbers = list(map(int,output.split()))
         require(len(numbers)==len(labels) and all(x>=0 for x in numbers), 'counts')

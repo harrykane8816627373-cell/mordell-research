@@ -5,10 +5,12 @@
 #include <cmath>
 #include <iostream>
 #include <string>
+#include <utility>
 #include <vector>
 
 using Angles = std::array<Interval,4>;
 using Radii = std::array<Interval,5>;
+using ForceAllowance = std::array<Integer,5>;
 using Vec = std::array<Interval,9>;
 using Matrix = std::array<Vec,9>;
 using FloatMatrix = std::array<std::array<double,9>,9>;
@@ -31,9 +33,10 @@ std::array<Turn,2> anchors;
 std::array<Radii,2> anchor_radii;
 Integer nodes=0, geometry=0, energy=0, force=0, krawczyk=0, basin=0, saddle=0, unknown=0;
 Integer radial_inclusions=0, split=0, zero_midpoints=0;
+Integer energy_radial_localizations=0, local_hessian_refinements=0, sharper_radial_inclusions=0;
 int deepest=0, max_depth=0;
 bool small_midpoints=false;
-Interval force_slack, energy_slack, midpoint_sq;
+Interval force_slack, energy_slack, midpoint_sq, midpoint_test;
 
 bool outside_force_slack(Interval x) {
     return small_midpoints ? x.lo>force_slack.hi || x.hi<-force_slack.hi : nonzero(x);
@@ -152,8 +155,10 @@ int paired_orbit(const Angles &angle,const Radii &r) {
                 total=total+square((r[j+1]-anchor_radii[k][u+1])/rat(9,5))
                       + chord*rat(1271,2000);
             }
-            Interval bound=k==0?rat(27,1000):rat(26,1000);
-            if (total.hi<square(bound).lo) return k+1;
+            const auto amplitude=point(sqrt_upper(total.hi))+midpoint_sq*3;
+            if (k==0 && amplitude.hi<rat(7,250).lo) return k+1;
+            if (k==1 && ((square(amplitude)+midpoint_sq)*2).hi<square(rat(21,500)).lo)
+                return k+1;
         }
     }
     return 0;
@@ -181,16 +186,17 @@ Radii unscaled_radius_box(Radii r) {
 }
 
 using RealQuadratic=std::array<std::array<Integer,10>,10>;
-bool positive_definite(RealQuadratic a) {
-    for (int i=0;i<10;++i) {
+template<std::size_t N>
+bool positive_definite(std::array<std::array<Integer,N>,N> a) {
+    for (std::size_t i=0;i<N;++i) {
         if (a[i][i]<=0) return false;
-        for (int j=i+1;j<10;++j) {
+        for (std::size_t j=i+1;j<N;++j) {
             if (a[j][j]<=0 || Wide(a[i][j])*a[i][j]>=Wide(a[i][i])*a[j][j]) return false;
         }
-        for (int j=i+1;j<10;++j) {
-            for (int k=j;k<10;++k)
+        for (std::size_t j=i+1;j<N;++j) {
+            for (std::size_t k=j;k<N;++k)
                 a[j][k]=checked(Wide(a[j][k])-ceil_ratio(Wide(a[i][j])*a[i][k],a[i][i]));
-            a[j][j]-=(9-i);
+            a[j][j]-=static_cast<Integer>(N-1-i);
         }
     }
     return true;
@@ -203,7 +209,7 @@ bool requires_zero_midpoints(const Angles &angle,const Radii &repaired) {
     const auto r=unscaled_radius_box(repaired);
     for (int i=1;i<5;++i) a[i]=raw[i-1];
     RealQuadratic lower{};
-    for (int i=0;i<10;++i) lower[i][i]=10*unit-(midpoint_sq*147).hi;
+    for (int i=0;i<10;++i) lower[i][i]=10*unit-midpoint_test.hi;
     for (int i=0;i<5;++i) for (int j=i+1;j<5;++j) {
         auto u=direction(a[i]), relative=direction(a[j]-a[i]);
         auto d=square(r[i]-r[j])+r[i]*r[j]*(one-relative.cos)*2;
@@ -386,13 +392,17 @@ Interval exp_upper(Interval x) {
     return sum+(term*x/7)/(one-x/8);
 }
 
-bool energy_excluded(const Derivatives &mid, const Derivatives &fixed, const Edges &edges,
-                     const Radii &ref, const Angles &a) {
+const Interval product_witness=rat(469765409,1LL<<26);
+struct EnergyData { Interval product,angular,radial; };
+
+EnergyData energy_data(const Derivatives &mid,const Derivatives &fixed,const Edges &edges,
+                       const Radii &ref,const Angles &a) {
     Vec disp{};
     for (int i=0;i<4;++i) disp[i+5]=(a[i]-center(a[i]))*tau;
     Interval increase;
     if (small_midpoints) increase=energy_slack;
-    for (int i=0;i<5;++i) increase=increase+square(fixed.g[i])*2;
+    Interval radial;
+    for (int i=0;i<5;++i) radial=radial+square(fixed.g[i])*2;
     for (int i=5;i<9;++i) increase=increase+mid.g[i]*disp[i];
     Interval product=one;
     for (auto r:ref) product=product*r;
@@ -406,8 +416,87 @@ bool energy_excluded(const Derivatives &mid, const Derivatives &fixed, const Edg
         if (k==4) product=product/(1<<16);
         product=product*square(mid.distance[k]);
     }
-    Interval bound=point(std::max<Integer>(0,increase.hi));
-    return bound.hi<=unit && (product*exp_upper(bound)).hi<rat(469765409,1LL<<26).lo;
+    return {product,increase,radial};
+}
+
+bool energy_excluded(const EnergyData &data) {
+    Interval bound=point(std::max<Integer>(0,(data.angular+data.radial).hi));
+    return bound.hi<=unit && (data.product*exp_upper(bound)).hi<product_witness.lo;
+}
+
+// Complete the radial concavity square at the feasible reference. A large
+// objective confines the repaired radii even without an exact radial root.
+bool energy_radii(const EnergyData &data,const Radii &ref,const Derivatives &fixed,Radii &r) {
+    const auto budget=data.product/product_witness-one+data.angular+data.radial;
+    if (budget.hi>unit/16) return false;
+    const auto radius=sqrt_upper(8*std::max<Integer>(0,budget.hi));
+    Integer total=0,max_total=0;
+    for (int i=0;i<5;++i) {
+        const Interval band=i==0?inner_band:outer_band;
+        const auto delta=(fixed.g[i]*4+Interval{-radius,radius})*band;
+        r[i]=ref[i]+delta;
+        if (!meet(r[i],band)) return false;
+        total+=r[i].hi-r[i].lo;
+        max_total+=band.hi-band.lo;
+    }
+    return total*5<max_total*4;
+}
+
+Integer curvature_upper(Interval r,Interval s,Interval c,Integer fallback) {
+    const auto ratio=r/s;
+    auto cosh_ratio=[](Interval q){return (q+one/q)/2;};
+    const auto left=cosh_ratio(point(ratio.lo)), right=cosh_ratio(point(ratio.hi));
+    Interval q{ratio.lo<=unit && unit<=ratio.hi?unit:std::min(left.lo,right.lo),
+               std::max(left.hi,right.hi)};
+    const auto slope=rat(2)-square(q)-c*q;
+    if (q.lo<=c.hi || (slope.lo<0 && slope.hi>0)) return fallback;
+    const auto endpoint=point(slope.lo>=0?c.hi:c.lo);
+    auto curvature=[&](Integer z) {
+        auto t=point(z);
+        return ((one-t*endpoint)*2/square(t-endpoint)).hi;
+    };
+    return std::min(fallback,std::max(curvature(q.lo),curvature(q.hi)));
+}
+
+bool radial_hessian_floor(const Radii &r,const Edges &e,const Derivatives &data,
+                          Interval inner,Interval outer) {
+    std::array<std::array<Integer,5>,5> lower{};
+    for (int i=0;i<5;++i) lower[i][i]=10*r[i].lo-(i==0?inner:outer).hi;
+    for (int k=0;k<10;++k) {
+        const auto [i,j,mid,range]=e[k];
+        const auto b=curvature_upper(r[i],r[j],range.cos,data.b[k].hi);
+        lower[i][i]-=b;
+        lower[j][j]-=b;
+        lower[i][j]=b;
+    }
+    return positive_definite(lower);
+}
+
+bool local_energy_contraction(Radii &r,const EnergyData &data,const Edges &e,
+                              const Radii &ref,const Derivatives &fixed) {
+    Radii hull;
+    for (int i=0;i<5;++i) hull[i]={std::min(r[i].lo,ref[i].lo),std::max(r[i].hi,ref[i].hi)};
+    Derivatives ranges;
+    if (!derivatives(hull,e,false,ranges)) return true;
+    for (const auto &[inner,outer]:std::array<std::pair<Interval,Interval>,3>{{
+        {rat(3,4),rat(3,2)},{rat(1,2),one},{rat(1,3),rat(2,3)}
+    }}) {
+        if (!radial_hessian_floor(hull,e,ranges,inner,outer)) continue;
+        ++local_hessian_refinements;
+        auto budget=(data.product/product_witness-one+data.angular)*2;
+        for (int i=0;i<5;++i)
+            budget=budget+square(fixed.g[i])/(i==0?inner:outer);
+        if (budget.hi<0) return false;
+        for (int i=0;i<5;++i) {
+            const auto stiffness=i==0?inner:outer;
+            const auto radius=sqrt_upper((budget/stiffness).hi);
+            const Interval band=i==0?inner_band:outer_band;
+            if (!meet(r[i],ref[i]+(fixed.g[i]/stiffness+Interval{-radius,radius})*band))
+                return false;
+        }
+        return true;
+    }
+    return true;
 }
 
 Vec multiply(const Matrix &m,const Vec &x,int rows) {
@@ -445,13 +534,13 @@ bool radial_model(const Derivatives &mid,const Derivatives &fixed,const Edges &e
 }
 
 bool radial_inclusion(const Edges &e,const Radii &ref,const RadialModel &model,
-                      bool approximate,Radii &out) {
+                      bool approximate,Radii &out,const ForceAllowance *known_noise=nullptr) {
     auto error=model.residual;
     std::array<Integer,5> widths{};
     const int padding=approximate?64:8;
     for (int i=0;i<5;++i) {
         if (approximate) {
-            const auto noise=preconditioned_force_slack(model.preconditioner[i]);
+            const auto noise=known_noise?(*known_noise)[i]:preconditioned_force_slack(model.preconditioner[i]);
             error[i]=error[i]+Interval{-noise,noise};
         }
         widths[i]=mag(error[i])+std::max<Integer>(128,mag(error[i])/padding);
@@ -511,8 +600,8 @@ bool tighten_approximate_radii(Radii &r,const Radii &ref,const Edges &e,const Ra
 }
 
 // Bound each row of P times the repaired radial force using its own coefficients.
-std::array<Integer,5> radial_force_noise(const Angles &angle,const Radii &r,const Matrix &p) {
-    std::array<Integer,5> result;
+ForceAllowance radial_force_noise(const Angles &angle,const Radii &r,const Matrix &p) {
+    ForceAllowance result;
     for (int i=0;i<5;++i) result[i]=preconditioned_force_slack(p[i]);
     const auto extended_angles=unscaled_angle_box(angle);
     const auto extended=unscaled_radius_box(r);
@@ -559,6 +648,13 @@ std::array<Integer,5> radial_force_noise(const Angles &angle,const Radii &r,cons
 bool tighten_repaired_radii(Radii &r,const Angles &angle,const Radii &ref,const Edges &e,
                             const RadialModel &model) {
     const auto noise=radial_force_noise(angle,r,model.preconditioner);
+    // The old box bounds the actual force error. For that fixed error, radial
+    // uniqueness also applies to a newly certified inclusion box inside K.
+    Radii smaller;
+    if (radial_inclusion(e,ref,model,true,smaller,&noise)) {
+        ++sharper_radial_inclusions;
+        for (int i=0;i<5;++i) if (!meet(r[i],smaller[i])) return false;
+    }
     for (int pass=0;pass<2;++pass) {
         Radii hull;
         for (int i=0;i<5;++i) hull[i]={std::min(r[i].lo,ref[i].lo),std::max(r[i].hi,ref[i].hi)};
@@ -628,23 +724,32 @@ void visit(Angles a,int depth,const Radii &seed) {
     Radii ref=reference(e,seed);
     Derivatives mid,fixed;
     if (derivatives(ref,e,true,mid) && derivatives(ref,e,false,fixed)) {
-        if (energy_excluded(mid,fixed,e,ref,a)) { ++energy; return; }
+        const auto energy_bound=energy_data(mid,fixed,e,ref,a);
+        if (energy_excluded(energy_bound)) { ++energy; return; }
         auto jac=float_jacobian(mid,ref,e);
-        Radii r;
+        Radii r,energy_box;
+        const bool energy_localized=small_midpoints && energy_radii(energy_bound,ref,fixed,energy_box);
+        if (energy_localized) ++energy_radial_localizations;
         RadialModel model;
         if (radial_model(mid,fixed,e,ref,a,jac,model)) {
             const bool approximate=small_midpoints && radial_inclusion(e,ref,model,true,r);
-            if (approximate || radial_inclusion(e,ref,model,false,r)) {
-                ++radial_inclusions;
+            const bool included=approximate || radial_inclusion(e,ref,model,false,r);
+            if (included || energy_localized) {
+                if (included) ++radial_inclusions;
                 if (small_midpoints) {
-                    if (!approximate) for (int i=0;i<5;++i) {
+                    if (!included) r=energy_box;
+                    if (included && !approximate) for (int i=0;i<5;++i) {
                         auto bound=i==0?rat(53,400):rat(1271,1000);
                         Integer inflation=(force_slack*4*bound).hi;
                         r[i]=r[i]+Interval{-inflation,inflation};
                         if (!meet(r[i],i==0?inner_band:outer_band)) throw std::logic_error("radial bounds");
                     }
+                    if (included && energy_localized) for (int i=0;i<5;++i) {
+                        if (!meet(r[i],energy_box[i])) { ++energy; return; }
+                    }
                     if (!tighten_approximate_radii(r,ref,e,model) ||
                         !tighten_repaired_radii(r,a,ref,e,model)) { ++force; return; }
+                    if (!local_energy_contraction(r,energy_bound,e,ref,fixed)) { ++energy; return; }
                     if (requires_zero_midpoints(a,r)) { ++zero_midpoints; return; }
                     const int paired=paired_orbit(a,r);
                     if (paired) { ++(paired==1?basin:saddle); return; }
@@ -681,11 +786,13 @@ int main(int argc,char **argv) {
             direction(upper_gap).cos.hi>=gap_cos.lo)
             throw std::logic_error("gap bounds in turns");
         Integer denominator;
-        if (!(std::cin>>denominator) || denominator<=0) return 2;
+        int sixth_order;
+        if (!(std::cin>>denominator>>sixth_order) || denominator<=0 || sixth_order<=0) return 2;
         const auto midpoint_limit=rat(1,denominator);
         midpoint_sq=square(midpoint_limit);
         force_slack=midpoint_sq*132;
         energy_slack=square(midpoint_sq)*242;
+        midpoint_test=square(midpoint_sq)*sixth_order;
         for (auto &row:anchors) for (auto &v:row) {
             if (!(std::cin>>v.cos.lo>>v.cos.hi>>v.sin.lo>>v.sin.hi)) return 2;
         }
@@ -709,6 +816,7 @@ int main(int argc,char **argv) {
             throw std::logic_error("subdivision counts");
         std::cout<<roots<<" "<<nodes<<" "<<split<<" "<<geometry<<" "<<energy<<" "<<force<<" "<<krawczyk
                  <<" "<<basin<<" "<<saddle<<" "<<unknown<<" "<<zero_midpoints
-                 <<" "<<radial_inclusions<<" "<<deepest<<"\n";
+                 <<" "<<radial_inclusions<<" "<<energy_radial_localizations<<" "<<local_hessian_refinements
+                 <<" "<<sharper_radial_inclusions<<" "<<deepest<<"\n";
     } catch (const std::exception &e) { std::cerr<<e.what()<<"\n"; return 1; }
 }

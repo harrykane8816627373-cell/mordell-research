@@ -8,7 +8,7 @@
   },
   "files": {
     ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
-    "README.md": "498e2415795c74d032cd8171ac6ec3403cdbcddd9541e80f33512616bf5734d9",
-    "verify_all.py": "2d8f8d50c75795e3400a17f9bc839bd0228cafe5c4b09b8eab28bd7d45c58468"
+    "README.md": "6c6084126dcba938b57d4fdd995d7c635981aa3d41e4d873e1ba799ce2a25a16",
+    "verify_all.py": "93c14db27bb12bf073d40abe6323b2d14cd4e32251f504ad80a56e6c655051db"
   }
 }

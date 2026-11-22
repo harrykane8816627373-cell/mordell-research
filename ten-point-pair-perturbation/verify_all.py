@@ -52,13 +52,17 @@ def main():
             2*a_min**2*(1-gap_cos_hi-2*turn_shift)>d_min**2, 'outer-outer separation')
     eta_max = F(43,125)
     require(abs_inner_m<abs_outer_m and 2*abs_outer_m==eta_max, 'difference of two midpoints')
-    rho, local_m, long = F(3,8), F(1,50), F(99,100)
+    rho, local_m, long = F(3,8), F(1,30), F(99,100)
     require((eta_max/d_min)**2<rho, 'uniform small perturbation ratio')
     require(a_min**2+inner_lo/4>long**2 and a_min**2>inner_lo/4, 'one long edge per pair')
     def factor(eta_squared):
         return 7*sum((1+eta_squared/length**2)/(length**4*(1-eta_squared/length**2))
                      for length in (d_min,long))
     require(factor(eta_max**2)<150 and factor(2*local_m**2)<74, 'quartic coefficients')
+    def sixth_order(eta_squared):
+        return 28*sum(1/(length**2*(length**2-eta_squared)**2) for length in (d_min,long))
+    require(sixth_order(eta_max**2)<2017 and sixth_order(2*local_m**2)<846,
+            'sixth-order midpoint stationarity')
     require(4*r_max/(d_min*(d_min**2-eta_max**2))<38, 'force coefficient')
     print(json.dumps({'passed':True, 'normalization_mass':9, 'applies_to_every_global_maximizer':True,
                       'projected_cross_pair_distance_strict_lower':str(d_min),
@@ -66,6 +70,8 @@ def main():
                       'uniform_quartic_energy_coefficient':150,
                       'smaller_midpoint_norm_ceiling':str(local_m),
                       'small_midpoint_quartic_energy_coefficient':74,
+                      'midpoint_quadratic_sixth_order_coefficient':2017,
+                      'small_midpoint_quadratic_sixth_order_coefficient':846,
                       'quadratic_force_coefficient':38}, indent=2))
 
 
