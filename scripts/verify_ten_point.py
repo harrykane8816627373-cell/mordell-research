@@ -11,7 +11,12 @@ SUITES = ('maximizer-domain', 'ten-point-collapse-domain', 'ten-point-ward-upper
           'ten-point-inner-pair', 'ten-point-banded-kernel-refined', 'ten-point-curved-kernel',
           'ten-point-refined-radii', 'ten-point-conditioned-inner', 'ten-point-radial-dispersion',
           'ten-point-outer-angles', 'ten-point-outer-moments', 'ten-point-contact-geometry',
-          'ten-point-local-basin', 'ten-point-pair-midpoints')
+          'ten-point-local-basin', 'ten-point-pair-midpoints', 'ten-point-tight-pairing',
+          'ten-point-angular-upper', 'ten-point-midpoint-budget', 'ten-point-weighted-pair-basin', 'ten-point-d2-cover',
+          'ten-point-saddle-exclusion', 'ten-point-angular-radii', 'ten-point-outer-gap',
+          'ten-point-inner-midpoint', 'ten-point-inner-edge', 'ten-point-quartic-midpoints',
+          'ten-point-half-turn-chart', 'ten-point-half-turn-dispersion', 'ten-point-phase-sweep',
+          'ten-point-inner-field', 'ten-point-outer-recovery', 'ten-point-pair-perturbation')
 
 
 def main():
@@ -27,7 +32,8 @@ def main():
         if report != saved:
             raise ArithmeticError(suite + ': replay differs from the recorded report')
         print('PASS '+suite+'/verify_all.py', flush=True)
-    print('PASS n10 strict global ratio, radial restrictions, exact inner count, and local sharpness.', flush=True)
+    print('PASS n10 global bounds, angle and radial reductions, midpoint comparison, '
+          'D2-conditional classification, half-turn chart, phase covers, and pair perturbation.', flush=True)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,27 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "bounds.cpp": "476b4ea40263a60bb7414f273a390c973911e91cc2757188b22db393e957d5a3",
+    "candidate.json": "8b6fbd8d42512c5498d3df1b62883691f04b73dbcd113c38429980ecdab65965",
+    "discover.py": "ae6e41b308adfcafe0943cb47e7b9ebbca0afae5af79822c1164cb9535cd2369",
+    "phases.py": "1a453f6abfd65335d07edda5b2044540ea5e39f46c3b97c940792cee9436b480",
+    "README.md": "4b3601648eb0ffd4161899f8ce74842905053d0f4ad61151bb7562abf9c574fe",
+    "saddle.json": "c921d77b719c391b60021b0e443608312e12bbc640c342bc344459470ea2506c",
+    "tubes.py": "40f10309a93e043178b17b8d6e3c8773e4ed57a3735562bcbe1d75a4671f4eb4",
+    "verify_all.py": "80f6fff06ed162334fcc94aea5b7efce5169ccf25650780ae5e6f1625e9c49b7"
+  },
+  "dependencies": {
+    "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
+    "ten-point-contact-geometry/check_root_box.py": "a6d1b2887c3055e72b6b74e5ba8ce3f38ab29daa379bc874a1722531114c74ef",
+    "ten-point-inner-edge/verification_report.json": "5488f918f56f6a6a6ef2eb11f87ef030e3166701c1a433853b67345031dec7a5",
+    "ten-point-inner-midpoint/verification_report.json": "6c95aee09d0b65ce25e821084190d05123031eb30567e25d42d262de3feb05e9",
+    "ten-point-outer-gap/verification_report.json": "1da6da3f193d899b2814d8124edc1a058826a5d9c3454f62168d266da97ca89f",
+    "ten-point-phase-sweep/source_manifest.json": "c8fa7fa4a13f3e6059498646d4b194db87a2d58876777624b1462ec52a0e9180",
+    "ten-point-phase-sweep/verify_all.py": "23371e570b1241b82bf143bc4be934ad914cd19c02cf97164e7f3e5a4fb8657f",
+    "ten-point-quartic-midpoints/verification_report.json": "bf3d471fac884fc7d28f50c6d973b9c9ea9c815b146e80b346c469eb68378125",
+    "ten-point-saddle-exclusion/saddle-jacobian.json": "5703f1ee57aed2656449b0202694352e079a7d4862cd739fda94164f862aad1a",
+    "ten-point-saddle-exclusion/verification_report.json": "d9075c4a44982b240722c03bb3807f38d41d0706c9d1b986ea1accf8291eb9f6",
+    "ten-point-saddle-exclusion/verify_all.py": "a3ef35ccbd618c4b0f8389a33ee503930fa2aea20903cdfacb4c8907d35864e4",
+    "ten-point-weighted-pair-basin/verify_all.py": "24d6b643b2f597b6d1e4ac8405981a04cf7d38536e845fc70dd9236099b85c85"
+  }
+}

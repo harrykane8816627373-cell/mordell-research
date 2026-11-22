@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "half_difference_radius": "7/250",
+  "midpoint_norm_cap": "149/500",
+  "individual_midpoint_caps": [
+    "239/2000",
+    "43/250"
+  ],
+  "signed_quartic_relative_upper": "61/10",
+  "relative_energy_loss_strict_lower": "1/20",
+  "relative_energy_loss_certified_budget": "670686499/11902500000",
+  "signed_quartic_matrix": {
+    "dimension": 55,
+    "dyadic_diagonal_shift": "9/549755813888",
+    "minimum_ldl_pivot_floor": "4762612152749/549755813888"
+  },
+  "jacobian_lower_matrix_inertia": [
+    55,
+    0,
+    0
+  ],
+  "angular_localization": {
+    "candidate_successive_gap_types_verified": 3,
+    "half_difference_error_coefficient_for_projected_angular_gradient": "40/161",
+    "free_shape_parameters_after_outer_angle_elimination": 11
+  }
+}

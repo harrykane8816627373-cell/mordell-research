@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "assumption": "half-turn symmetry",
+  "angle_neighborhoods": {
+    "candidate": {
+      "squared_image_angle_tolerance": "11/500",
+      "log_radius_box_half_widths": [
+        "1097/25000",
+        "619/100000",
+        "1049/100000",
+        "1049/100000",
+        "619/100000"
+      ],
+      "induced_norm_upper_millionths": 25845,
+      "local_comparison_radius": "7/250"
+    },
+    "saddle": {
+      "squared_image_angle_tolerance": "3/125",
+      "log_radius_box_half_widths": [
+        "1571/50000",
+        "427/100000",
+        "123/12500",
+        "7/400",
+        "123/12500"
+      ],
+      "induced_norm_upper_millionths": 39993,
+      "local_comparison_radius": "21/500"
+    }
+  }
+}

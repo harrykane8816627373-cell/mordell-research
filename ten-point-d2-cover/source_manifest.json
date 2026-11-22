@@ -1,0 +1,8 @@
+{
+  "ten-point-d2-cover/verify_all.py": "acdf9d312c81a070ebb90d6ff2b890195bf8da5e0c8d3acf4d73f7087d666582",
+  "ten-point-weighted-pair-basin/verify_all.py": "24d6b643b2f597b6d1e4ac8405981a04cf7d38536e845fc70dd9236099b85c85",
+  "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+  "ten-point-conditioned-inner/verification_report.json": "161b18e4073b893e534b5f090f465c6d95d6f283eec33c92af9d0f035cf824d2",
+  "ten-point-radial-dispersion/verification_report.json": "926a8cb8c3531185a146a9fef60c1f3f42798da4a53326dbb193cc5c66003f62",
+  "maximizer-domain/verification_report.json": "9b9fdfefecb79848c89c2dc26e352425b3c7ef60dde92f13f661820d6b22f738"
+}

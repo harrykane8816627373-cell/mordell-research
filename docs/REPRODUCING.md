@@ -31,9 +31,47 @@ python -B -S -O ten-point-outer-moments/verify_all.py
 python -B -S -O ten-point-contact-geometry/verify_all.py
 python -B -S -O ten-point-local-basin/verify_all.py
 python -B -S -O ten-point-pair-midpoints/verify_all.py
+python -B -S -O ten-point-tight-pairing/verify_all.py
+python -B -S -O ten-point-angular-upper/verify_all.py
+python -B -S -O ten-point-midpoint-budget/verify_all.py
+python -B -S -O ten-point-weighted-pair-basin/verify_all.py
+python -B -S -O ten-point-d2-cover/verify_all.py
+python -B -S -O ten-point-saddle-exclusion/verify_all.py
+python -B -S -O ten-point-angular-radii/verify_all.py
+python -B -S -O ten-point-outer-gap/verify_all.py
+python -B -S -O ten-point-inner-midpoint/verify_all.py
+python -B -S -O ten-point-inner-edge/verify_all.py
+python -B -S -O ten-point-quartic-midpoints/verify_all.py
+python -B -S -O ten-point-half-turn-chart/verify_all.py
+python -B -S -O ten-point-half-turn-dispersion/verify_all.py
+python -B -S -O ten-point-phase-sweep/verify_all.py
+python -B -S -O ten-point-inner-field/verify_all.py
+python -B -S -O ten-point-outer-recovery/verify_all.py
+python -B -S -O ten-point-pair-perturbation/verify_all.py
 ```
 
-初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。最新曲率核把上界收紧到候选值的 1.0024 倍，重放 24,681 个节点。另有精确证书给出内外平方半径带、内点对的几何约束、外点径向离散和固定分支的外角凹性。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
+以下入口使用支持 `__int128` 的 GNU C++ 编译器。默认半转径向覆盖重放两个参数图至深度 25，并报告未决盒数。其余两项复核半转分支的五径向严格凹性，以及任意最大构型的内边与外角联合凹性和相位覆盖。可通过 `--compiler` 指定编译器。[半转径向覆盖](../ten-point-half-turn-radial-cover/README.md) · [半转径向凹性](../ten-point-half-turn-radial-concavity/README.md) · [联合凹性与相位覆盖](../ten-point-joint-angular-inner/README.md)
+
+```bash
+python -B -S -O ten-point-half-turn-radial-cover/verify_all.py
+python -B -S -O ten-point-half-turn-radial-concavity/verify_all.py
+python -B -S -O ten-point-joint-angular-inner/verify_all.py
+```
+
+接受五径向凹性后，再以 Python 标准库核对半转分支的纯角度邻域和整周覆盖。[纯角度邻域](../ten-point-half-turn-angle-neighborhoods/README.md) · [相对外角的整周覆盖](../ten-point-half-turn-phase-sweep/README.md)
+
+```bash
+python -B -S -O ten-point-half-turn-angle-neighborhoods/verify_all.py
+python -B -S -O ten-point-half-turn-phase-sweep/verify_all.py
+```
+
+接受五径向凹性、纯角度邻域和对径投影误差后，从仓库根运行以下 GNU C++20 入口。半转条件分类的全域重放访问 90,880 个节点。联合中点范数至多 \(1/86\) 的一般构型覆盖访问 214,298 个节点。两次均无未决盒。[四角完整覆盖](../ten-point-half-turn-four-angle/README.md)
+
+```bash
+python -B -S -O ten-point-half-turn-four-angle/verify_all.py
+```
+
+初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。24,681 节点的曲率核给出 1.0024 倍上界，新增角序分区重放 98,557 个节点，将其收紧到候选值的 1.0022 倍。D₂ 条件分类重放 623,198 个节点，计算范围只包括已经具有 D₂ 对称的构型。Windows 检出若会转换换行符，可用 `git clone -c core.autocrlf=false URL` 保留已有证书所固定的源文件字节。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
 
 ## 编译十二点英文论文
 

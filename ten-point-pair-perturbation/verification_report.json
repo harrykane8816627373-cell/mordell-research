@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "projected_cross_pair_distance_strict_lower": "4/7",
+  "one_cross_pair_distance_strict_lower": "99/100",
+  "uniform_quartic_energy_coefficient": 150,
+  "smaller_midpoint_norm_ceiling": "1/50",
+  "small_midpoint_quartic_energy_coefficient": 74,
+  "quadratic_force_coefficient": 38
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "projection.json": "1f79a4b470d3029673391da3453646ed5d14bd7e00708341d4dc54cc80629a84",
+    "jacobian_concavity.json": "61dd712166e14b003b3fff88f3309fda18a6db158c48bbf99d236d5c88d0a288"
+  },
+  "dependencies": {
+    "ten-point-curved-kernel/verification_report.json": "ee5f0ecd92d0ae3f2b5fe4791664085ba36ddad2439780543c7c58752d220fde",
+    "ten-point-curved-kernel/kernel.json": "4b1edebb9cdc042ec30196a32f342a9330e43a7c74683c36a99e79c6e01c9781",
+    "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+    "ten-point-outer-moments/verification_report.json": "e86737447d585320c479af2934c5bf2e2527a2a70eb5d9c226735c3f6160ad3d",
+    "ten-point-outer-moments/verify_all.py": "19f970aedbdd19abcbc0b336ec8f2d664dacd4df3d81e9d15b854f1cc4da2460",
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "ten-point-ward-inner-count/verify_radial.py": "58a1816a74d0ed0cd3dee9788ed738ef65c7084972c6f0cc13a81f728dea18cd"
+  }
+}

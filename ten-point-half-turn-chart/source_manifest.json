@@ -1,0 +1,16 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "53d965cad3144f28decbde5270e35d327bd37726e888b808b465ab70dac506d6",
+    "verify_all.py": "59afc472aaa8ea26a1ff87fa7e83e36a9283b2421ad12628694226efda08b153",
+    "search.py": "d4686cdc5035d214391bf6305aefa4f8d28d3fb29cff0929e1dad473e6ff0b01",
+    "search-results.json": "643e98465b9cbc48e7344f6743d28173fc1ffc29733706de988d42b71aa64cfb"
+  },
+  "dependencies": {
+    "ten-point-outer-gap/verification_report.json": "1da6da3f193d899b2814d8124edc1a058826a5d9c3454f62168d266da97ca89f",
+    "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
+    "ten-point-conditioned-inner/verification_report.json": "161b18e4073b893e534b5f090f465c6d95d6f283eec33c92af9d0f035cf824d2",
+    "ten-point-saddle-exclusion/verify_all.py": "a3ef35ccbd618c4b0f8389a33ee503930fa2aea20903cdfacb4c8907d35864e4",
+    "ten-point-saddle-exclusion/verification_report.json": "d9075c4a44982b240722c03bb3807f38d41d0706c9d1b986ea1accf8291eb9f6"
+  }
+}

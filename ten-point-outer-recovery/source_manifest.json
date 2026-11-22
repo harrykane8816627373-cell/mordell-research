@@ -1,0 +1,18 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "b8db10345c7cf76aae2e241ab57dd2e3ae429c5fa1c6e97689e1cd3ec5a13aee",
+    "verify_all.py": "f774f0754ceed131313a6a4ae54d4c5614fcaf596eb5814f551858a7db39d0a1",
+    "jacobian_vandermonde.json": "b058f594eaab11d6da6d7b9ec7b674be322537fc155d28b7c555af7e051d9302"
+  },
+  "dependencies": {
+    "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
+    "ten-point-inner-edge/verification_report.json": "5488f918f56f6a6a6ef2eb11f87ef030e3166701c1a433853b67345031dec7a5",
+    "ten-point-inner-midpoint/verification_report.json": "6c95aee09d0b65ce25e821084190d05123031eb30567e25d42d262de3feb05e9",
+    "ten-point-phase-sweep/verify_all.py": "23371e570b1241b82bf143bc4be934ad914cd19c02cf97164e7f3e5a4fb8657f",
+    "ten-point-quartic-midpoints/verification_report.json": "bf3d471fac884fc7d28f50c6d973b9c9ea9c815b146e80b346c469eb68378125",
+    "ten-point-saddle-exclusion/verification_report.json": "d9075c4a44982b240722c03bb3807f38d41d0706c9d1b986ea1accf8291eb9f6",
+    "ten-point-saddle-exclusion/saddle-jacobian.json": "5703f1ee57aed2656449b0202694352e079a7d4862cd739fda94164f862aad1a",
+    "ten-point-d2-cover/verification_report.json": "d5413da78971efb317f1681c1417c96cc6e5848afca80f610f50dd56c2b41d85"
+  }
+}

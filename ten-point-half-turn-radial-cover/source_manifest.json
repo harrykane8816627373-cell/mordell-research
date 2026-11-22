@@ -1,0 +1,17 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "7d337e58bc6b699523c6739123b534c355dae60ddb0ee3036e6e22b3496d6dd9",
+    "verify_all.py": "e7eb4480b29f325e29300a4b499aba5cdfb29feeb5939c549df1521a92114c6f",
+    "cover.cpp": "4bf8c60bb47ff7c920e943c504363790a16fa3a2ecfb03083d39e59e011c7c64",
+    "jacobian_resultant.json": "5e6cc47701cf2278a6b6a8db0258300f7ab792f11b620b79890ea38d3d9ed931"
+  },
+  "dependencies": {
+    "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
+    "ten-point-inner-edge/verification_report.json": "5488f918f56f6a6a6ef2eb11f87ef030e3166701c1a433853b67345031dec7a5",
+    "ten-point-half-turn-dispersion/verification_report.json": "759a1e935a1e37105b0aae28fabded1d2155466b385c038c405235e4e1a42416",
+    "ten-point-outer-gap/verification_report.json": "1da6da3f193d899b2814d8124edc1a058826a5d9c3454f62168d266da97ca89f",
+    "maximizer-domain/verification_report.json": "9b9fdfefecb79848c89c2dc26e352425b3c7ef60dde92f13f661820d6b22f738",
+    "ten-point-d2-cover/verify_all.py": "acdf9d312c81a070ebb90d6ff2b890195bf8da5e0c8d3acf4d73f7087d666582"
+  }
+}

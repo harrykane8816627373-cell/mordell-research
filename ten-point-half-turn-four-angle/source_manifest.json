@@ -1,0 +1,19 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "52c1a63c183ac3746da9150a1c098796acb1f6bb254c706a57f12eafffb8795d",
+    "verify_all.py": "9f0891c4ef60c941d516062fb3fdc32a8b25a6bf2905b0967f0d2c032290b19c",
+    "dyadic.hpp": "1f3aa4889e9248833320283f806f9829bb5913923938be54b841ba8dc378dfb7",
+    "cover.cpp": "bfd94b69e96f8745d760141abb72476b19a3ae012620f50507e0dfeb29001d45"
+  },
+  "dependencies": {
+    "ten-point-half-turn-radial-cover/verify_all.py": "e7eb4480b29f325e29300a4b499aba5cdfb29feeb5939c549df1521a92114c6f",
+    "ten-point-half-turn-radial-concavity/verify_all.py": "99b2d48e99661b6836dc7c7d72d314c9b9e8ebb7b316c26a423cf6468d1dbf5b",
+    "ten-point-half-turn-radial-concavity/verification_report.json": "1bdd252131de35fbebbdcf708a5143ac1933da6739734fd123291056eb4a3ef0",
+    "ten-point-half-turn-angle-neighborhoods/verification_report.json": "5d5d939ed7b9735f101bafd2a7fd5f9c2ba15b958837f4f55989d3a79551cd8c",
+    "ten-point-half-turn-phase-sweep/verify_all.py": "8fbab1ed3e9c6ddca513605220ea9f8c34a964360678e00840aa623ac7d12e5c",
+    "ten-point-pair-perturbation/verification_report.json": "d3f897e1d3daee8384ccee3bb73efcc1ed960b3528295c55321beb51ad8669b6",
+    "ten-point-quartic-midpoints/verification_report.json": "bf3d471fac884fc7d28f50c6d973b9c9ea9c815b146e80b346c469eb68378125",
+    "ten-point-saddle-exclusion/verification_report.json": "d9075c4a44982b240722c03bb3807f38d41d0706c9d1b986ea1accf8291eb9f6"
+  }
+}

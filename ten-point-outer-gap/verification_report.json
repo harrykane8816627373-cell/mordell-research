@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "applies_to_every_global_maximizer": true,
+  "normalization_mass": 9,
+  "outer_successive_angle_cosine_open_interval": [
+    "59/100",
+    "39/50"
+  ],
+  "outer_mean_zero_negative_angle_hessian_lower_with_old_min_distance": "317/100",
+  "outer_mean_zero_negative_angle_hessian_lower_on_successive_gap_polytope": "117/50",
+  "half_turn_from_inner_antipodes_and_matched_radii_without_branch_condition": true,
+  "nodes": 43339,
+  "cases": {
+    "short": {
+      "nodes": 20991,
+      "depth": 24
+    },
+    "long": {
+      "nodes": 4358,
+      "depth": 18
+    },
+    "too-wide": {
+      "nodes": 1685,
+      "depth": 20
+    },
+    "too-narrow": {
+      "nodes": 16305,
+      "depth": 23
+    }
+  },
+  "unresolved": 0
+}

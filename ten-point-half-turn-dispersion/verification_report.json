@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "assumption": "half-turn symmetry of a global maximizer",
+  "outer_square_plane_sum_absolute_deviations_strict_lower": "47/1000",
+  "full_outer_sum_absolute_squared_radius_deviations_strict_lower": "47/500",
+  "outer_squared_radius_span_strict_lower": "47/2000",
+  "coefficient_contradiction_margin_strict_lower": "1/1000"
+}

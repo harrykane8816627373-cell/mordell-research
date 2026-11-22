@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "phase_tangent_interval": [
+    "-1",
+    "1"
+  ],
+  "angular_hessian_gap": "161/50",
+  "phase_cells": 734,
+  "modes": {
+    "candidate": {
+      "cell_counts": {
+        "candidate_basin": 12,
+        "energy_excluded": 300
+      },
+      "maximum_cell_width": "1/64",
+      "shape_parameter_tolerance": "3/20000"
+    },
+    "saddle": {
+      "cell_counts": {
+        "candidate_basin": 0,
+        "energy_excluded": 422
+      },
+      "maximum_cell_width": "1/64",
+      "shape_parameter_tolerance": "1/500"
+    }
+  },
+  "unresolved_within_these_radial_neighborhoods": 0
+}

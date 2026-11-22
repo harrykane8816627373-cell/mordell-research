@@ -1,0 +1,18 @@
+{
+  "files": {
+    "verify_all.py": "7397f5059c57366103fdbe9ce6eb5291423e6f3bf49b3e54e68b3509304f0520",
+    "outer_endpoint.py": "4eede5e3026ebf656048bef940fa1cc1eb46ff58a371202010721f8a834be985",
+    "cover.json": "250fe32af79a3b7a19c29f4dbe3682f42994c814caa8d0263c28e7bd6b188b84"
+  },
+  "dependencies": {
+    "ten-point-curved-kernel/verify_all.py": "cdb8ed60d878991b419ad3cf60ffeb3949602ae63dbe6d249d27ad19c061a38c",
+    "ten-point-curved-kernel/verification_report.json": "ee5f0ecd92d0ae3f2b5fe4791664085ba36ddad2439780543c7c58752d220fde",
+    "ten-point-curved-kernel/kernel.json": "4b1edebb9cdc042ec30196a32f342a9330e43a7c74683c36a99e79c6e01c9781",
+    "ten-point-ward-upper/verify_all.py": "5e6b60b310bb738a6fa29d53190a1faa066a38b66422d88ff31bf97cdc92962c",
+    "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+    "ten-point-conditioned-inner/verification_report.json": "161b18e4073b893e534b5f090f465c6d95d6f283eec33c92af9d0f035cf824d2",
+    "ten-point-tight-pairing/verification_report.json": "eb70dccd9030a8dd4b97d1aa5f1634043bbb51932ae2a2e501b3772275632c31",
+    "ten-point-angular-upper/verification_report.json": "52e98c52e2a14c27c6556d84596c65d101746dd63c926f58db374c16bdb71d59",
+    "validated-maxima/certificates.json": "d7c5348ea57a65dc49be8437993aa0b23a14a0f0bb5e2e5f0e7c9d84a959df7d"
+  }
+}

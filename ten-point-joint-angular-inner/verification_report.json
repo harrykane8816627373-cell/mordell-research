@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "outer_scale_constraint": "35/4",
+  "all_global_maximizers_satisfy_domain": true,
+  "normalized_w_domain": [
+    "107/1000",
+    "133/1000"
+  ],
+  "remaining_shape_parameters": 10,
+  "mass_nine_half_difference_residual_multiplier": "33/25",
+  "joint_hessian": {
+    "phase_bins": 512,
+    "successive_bin_index_differences": [
+      55,
+      77
+    ],
+    "local_hessian_boxes": 23986176,
+    "cyclic_schur_sum_upper": "51395143/1048576",
+    "directional_hessian_weights": {
+      "inner_squared_half_difference": "5",
+      "mean_zero_angle": "1/2"
+    }
+  },
+  "full_inner_separation_phase_tubes": {
+    "candidate": {
+      "normalized_shape_tolerance": "1/20000",
+      "phase_cells": 526,
+      "candidate_basin": 32,
+      "energy_excluded": 494
+    },
+    "saddle": {
+      "normalized_shape_tolerance": "3/4000",
+      "phase_cells": 470,
+      "candidate_basin": 0,
+      "energy_excluded": 470
+    }
+  },
+  "unresolved_inside_the_two_tubes": 0
+}

@@ -16,13 +16,15 @@
 
 ## 十点全局范围与局部锐界
 
-**C₁₀ ≤ M₁₀ < (1253/1250) C₁₀。** 真实 D₂ 候选在质量 10 下的值约为 5.3823025896 × 10¹⁰。最强上界由 24,681 节点的曲率核重放给出。 [全局上界](../ten-point-curved-kernel/README.md)
+**C₁₀ ≤ M₁₀ < 1.0022 C₁₀。** 真实 D₂ 候选在质量 10 下的值约为 5.3823025896 × 10¹⁰。上界按外点的循环角序间隔分配两点缺额。 [角序分区上界](../ten-point-angular-upper/README.md)
 
-质量 9 下，任一最大构型恰有两个平方半径在 (0.074, 0.172) 内的点，其余八个平方半径在 (0.845, 1.312) 内。两内点夹角余弦小于 −0.77，中点模小于 239/2000，平方距离在 (0.41, 0.55) 内。外点平方半径跨度严格大于 1/100。 [半径与中点](../ten-point-refined-radii/README.md) · [联合内边约束](../ten-point-conditioned-inner/README.md) · [径向离散](../ten-point-radial-dispersion/README.md)
+质量 9 下，任一最大构型恰有两个平方半径在 (0.084, 0.159) 内的点，其余八个平方半径在 (0.89, 1.271) 内。两内点中点模小于 0.087，平方距离在 (0.43, 0.53) 内，夹角余弦小于 −0.87。外点平方半径跨度严格大于 1/100。 [逐点径向范围](../ten-point-angular-radii/README.md) · [内点对证书](../ten-point-inner-edge/README.md) · [径向离散](../ten-point-radial-dispersion/README.md)
 
-按圆周排序后，相隔四位的外点组成四个互不重叠的近对径点对，每对夹角的余弦小于 −0.913472。固定半径和平均外角的每个凸分支具有统一负 Hessian 界 173/100，可以用角力残差控制整条分支的最大值。 [角矩与配对](../ten-point-outer-moments/README.md) · [外角证书](../ten-point-outer-angles/README.md)
+相邻外角的余弦严格落在 (0.59, 0.78)。仅用相邻间隙构成的凸角域已给出固定平均外角的负 Hessian 下界 161/50。相隔四位的配对夹角余弦小于 −31/32。 [相邻外角](../ten-point-outer-gap/README.md) · [外角曲率](../ten-point-inner-midpoint/README.md) · [近对径配对](../ten-point-tight-pairing/README.md)
 
-候选由五变量精确方程刻画。配对中点证书在质量 9 下允许半差向量误差不超过 1/150 和中点范数不超过 0.17，等号仅在候选轨道。仍需证明全局最大构型都进入这个范围，或给出零余量全域核。 [精确候选](../ten-point-contact-geometry/README.md) · [配对局部锐界](../ten-point-pair-midpoints/README.md)
+若全局最大构型的半差向量误差不超过 7/250，四次项证书能够消去全部配对中点并恢复候选轨道。联合凹性将一般搜索降至十参数，996 个相位单元覆盖两组允许完整内边区间的径向邻域。Ward 恒等式还能只用八个外点恢复内点。 [半差判据](../ten-point-quartic-midpoints/README.md) · [联合凹性与相位覆盖](../ten-point-joint-angular-inner/README.md) · [外层恢复](../ten-point-outer-recovery/README.md)
+
+具有半转对称的任一全局最大构型都属于两矩形候选轨道。四角完整覆盖访问 90,880 个节点，未决为零。对任意全局最大构型，对径投影的对数距离积损失至多为五个中点联合范数四次方的 150 倍。一般构型另已在 214,298 个节点上证明联合中点范数至多 1/86 时，最大点也只能是候选。一般锐值的未决分支须具有更大的联合中点范数。 [半转条件分类](../ten-point-half-turn-four-angle/README.md) · [对径投影误差](../ten-point-pair-perturbation/README.md)
 
 ## 八、九点的来源与重放
 

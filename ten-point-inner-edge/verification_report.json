@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "inner_squared_distance_open_interval": [
+    "43/100",
+    "53/100"
+  ],
+  "inner_angle_cosine_strict_upper": "-87/100",
+  "inner_midpoint_axis_projection_strict_upper": "7/125",
+  "inner_squared_half_difference_negative_hessian_lower": "53/2",
+  "inner_edge_deficit_strict_upper": "1073/500000",
+  "nodes": 8833,
+  "maximum_depth": 30,
+  "unresolved": 0
+}

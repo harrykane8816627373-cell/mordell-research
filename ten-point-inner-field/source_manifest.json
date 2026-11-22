@@ -1,0 +1,15 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "f73ba74265c365e420cfc72ec51dbcd591834a628509100d0e7539840c5c6e63",
+    "verify_all.py": "26377c54cc1d8f616067d86bd907b3fb401e86bbad65b9e1bf2512f7e109d2ec"
+  },
+  "dependencies": {
+    "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
+    "ten-point-inner-edge/verification_report.json": "5488f918f56f6a6a6ef2eb11f87ef030e3166701c1a433853b67345031dec7a5",
+    "ten-point-inner-midpoint/verification_report.json": "6c95aee09d0b65ce25e821084190d05123031eb30567e25d42d262de3feb05e9",
+    "ten-point-outer-gap/verification_report.json": "1da6da3f193d899b2814d8124edc1a058826a5d9c3454f62168d266da97ca89f",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "candidate-global-screen/verify_symmetry.py": "3fd1dadd934cb5d4a918bd2c4b5171372aedb1334255dd3619c79aed6bde5283"
+  }
+}

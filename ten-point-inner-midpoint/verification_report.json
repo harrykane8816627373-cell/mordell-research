@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "applies_to_every_global_maximizer": true,
+  "inner_midpoint_norm_strict_upper": "87/1000",
+  "inner_midpoint_squared_strict_upper": "7569/1000000",
+  "outer_centroid_norm_strict_upper": "87/4000",
+  "inner_squared_half_difference_negative_hessian_lower": "219/10",
+  "outer_mean_zero_negative_angle_hessian_lower_on_successive_gap_polytope": "161/50",
+  "first_harmonic_gram_budget_strict_upper": "10981/2500000",
+  "indicator_error_covers": [
+    {
+      "interval": [
+        "21/250",
+        "159/1000"
+      ],
+      "strict_floor": "0",
+      "visited": 1,
+      "maximum_depth": 0
+    },
+    {
+      "interval": [
+        "89/100",
+        "1271/1000"
+      ],
+      "strict_floor": "0",
+      "visited": 7,
+      "maximum_depth": 3
+    }
+  ],
+  "unresolved": 0
+}

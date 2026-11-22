@@ -1,0 +1,21 @@
+{
+  "mass_nine_excluded_orbit_radius": "21/500",
+  "corrected_saddle_witness_lower": "1697/10000",
+  "corrected_witness_gradient_upper": "13/2000",
+  "quadratic_term_operator_lower": -74,
+  "third_derivative_laplacian_norm_upper": 970,
+  "positive_second_variation_lower": "156613/31250000",
+  "saddle_delta_mass_ten_coarse_interval": [
+    53745013433,
+    53745013449
+  ],
+  "reduced_force_inertia": [
+    1,
+    18,
+    0
+  ],
+  "unique_nonsingular_five_variable_root": true,
+  "contraction_norm_strict_upper": "1/1000",
+  "jacobian_inertia_crosschecks": 4,
+  "passed": true
+}

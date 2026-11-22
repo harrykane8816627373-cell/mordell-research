@@ -1,0 +1,70 @@
+{
+  "operation_id": "polynomial.root_count.compute",
+  "runtime_ms": 31,
+  "output": {
+    "source_polynomial": {
+      "domain": "QQ",
+      "variables": [
+        "s"
+      ],
+      "polynomial": {
+        "terms": [
+          {
+            "coefficient": {
+              "num": "200590587",
+              "den": "3906250"
+            },
+            "exponents": [
+              4
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-339772554",
+              "den": "1953125"
+            },
+            "exponents": [
+              3
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "13715151917",
+              "den": "62500000"
+            },
+            "exponents": [
+              2
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "-15267490721",
+              "den": "125000000"
+            },
+            "exponents": [
+              1
+            ]
+          },
+          {
+            "coefficient": {
+              "num": "12657663157",
+              "den": "500000000"
+            },
+            "exponents": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "root_count": 0,
+    "lower": {
+      "num": "0",
+      "den": "1"
+    },
+    "upper": {
+      "num": "1",
+      "den": "1"
+    }
+  }
+}

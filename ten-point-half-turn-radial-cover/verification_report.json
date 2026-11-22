@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "scope": "finite-depth partial cover conditional on half-turn symmetry",
+  "inner_squared_radius_open_interval": [
+    "43/400",
+    "53/400"
+  ],
+  "outer_squared_radius_span_strict_lower": "47/2000",
+  "radii_profile_mass_derivative_strict_lower": "3/8",
+  "max_depth": 25,
+  "mass_interval_newton_contraction": true,
+  "multidimensional_mean_value_contraction": true,
+  "multidimensional_force_exclusions": 330387,
+  "jacobian_radical_resultant_checked": true,
+  "nodes": 5997898,
+  "unresolved": 1907359,
+  "whole_half_turn_branch_closed": false,
+  "charts": {
+    "-1": {
+      "visited": 4184699,
+      "split": 2092349,
+      "geometry": 140080,
+      "force": 340536,
+      "value": 0,
+      "unresolved": 1334394,
+      "multidimensional_force": 277340
+    },
+    "1": {
+      "visited": 1813199,
+      "split": 906599,
+      "geometry": 127437,
+      "force": 153151,
+      "value": 0,
+      "unresolved": 572965,
+      "multidimensional_force": 53047
+    }
+  }
+}

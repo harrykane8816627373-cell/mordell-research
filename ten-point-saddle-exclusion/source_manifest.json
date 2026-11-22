@@ -1,0 +1,11 @@
+{
+  "files": {
+    "saddle-jacobian.json": "5703f1ee57aed2656449b0202694352e079a7d4862cd739fda94164f862aad1a",
+    "saddle-inertia-jacobian.json": "206d9ace0f8642198948d6db7fdbe9078498502c93c3a0ff6edddc2e9c855316"
+  },
+  "dependencies": {
+    "ten-point-contact-geometry/check_root_box.py": "a6d1b2887c3055e72b6b74e5ba8ce3f38ab29daa379bc874a1722531114c74ef",
+    "validated-maxima/dyadic.py": "94ab5e20011cf2742566e7aaf0af71c41e7fc4254e2320dfb4b3af97fcf07ccc",
+    "validated-maxima/verify_all.py": "4875024b8eacdc48fefdb83b447655270c2fbf8bcf785ddf53337526d5dcc6e0"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "applies_to_every_global_maximizer": true,
+  "normalization_mass": 9,
+  "exact_inner_count": 2,
+  "exact_outer_count": 8,
+  "inner_squared_radius_open_interval": [
+    "21/250",
+    "159/1000"
+  ],
+  "outer_squared_radius_open_interval": [
+    "89/100",
+    "1271/1000"
+  ],
+  "inner_squared_half_difference_negative_hessian_lower": "15",
+  "nodes": 60452,
+  "unresolved": 0,
+  "regions": {
+    "inner-low": {
+      "interval": [
+        "37/500",
+        "21/250"
+      ],
+      "cells": 7,
+      "nodes": 11591,
+      "maximum_depth": 31,
+      "strict_margin_decimal_display": 4.708000000901759e-05
+    },
+    "inner-high": {
+      "interval": [
+        "159/1000",
+        "43/250"
+      ],
+      "cells": 7,
+      "nodes": 9115,
+      "maximum_depth": 22,
+      "strict_margin_decimal_display": 2.220000000901759e-05
+    },
+    "outer-low": {
+      "interval": [
+        "169/200",
+        "89/100"
+      ],
+      "cells": 9,
+      "nodes": 14524,
+      "maximum_depth": 18,
+      "strict_margin_decimal_display": 0.0001185900000090176
+    },
+    "outer-high": {
+      "interval": [
+        "1271/1000",
+        "164/125"
+      ],
+      "cells": 9,
+      "nodes": 25222,
+      "maximum_depth": 24,
+      "strict_margin_decimal_display": 0.0001734000000090176
+    }
+  }
+}

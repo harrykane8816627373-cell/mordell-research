@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "global_over_candidate_strict_upper": "5011/5000",
+  "log_comparison_margin_strict_lower": "1/1000000",
+  "log_upper_mass_nine": "439143629086506636149/21990232555520000000",
+  "visited": 98557,
+  "unresolved": 0,
+  "classes": [
+    {
+      "class": [
+        0,
+        0,
+        0
+      ],
+      "weight": 1,
+      "deficit_floor": "-51/1000000",
+      "visited": 36273,
+      "maximum_depth": 38
+    },
+    {
+      "class": [
+        0,
+        1,
+        0
+      ],
+      "weight": 16,
+      "deficit_floor": "-97/2000000",
+      "visited": 23274,
+      "maximum_depth": 39
+    },
+    {
+      "class": [
+        1,
+        1,
+        1
+      ],
+      "weight": 8,
+      "deficit_floor": "-103/2000000",
+      "visited": 29754,
+      "maximum_depth": 42
+    },
+    {
+      "class": [
+        1,
+        1,
+        2
+      ],
+      "weight": 8,
+      "deficit_floor": "-477/10000000",
+      "visited": 4380,
+      "maximum_depth": 21
+    },
+    {
+      "class": [
+        1,
+        1,
+        3
+      ],
+      "weight": 8,
+      "deficit_floor": "-479/10000000",
+      "visited": 3833,
+      "maximum_depth": 21
+    },
+    {
+      "class": [
+        1,
+        1,
+        4
+      ],
+      "weight": 4,
+      "deficit_floor": "-481/10000000",
+      "visited": 1043,
+      "maximum_depth": 26
+    }
+  ]
+}

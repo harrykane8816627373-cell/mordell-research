@@ -1,0 +1,15 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "c715fb49a27d94815da5cedf5220d5c330ef5acd813ea6531e6c4d8ae428cfca",
+    "verify_all.py": "3269bdd29e3d57e64d89c0a16ae85eb93e081cb925e5673b69b54dbb09c4b9cd",
+    "cover.json": "42ca296df478d7a01209edbbfdf32181d020cc94695165e8a6b6afa42baf52f5"
+  },
+  "dependencies": {
+    "ten-point-curved-kernel/source_manifest.json": "e397b730788bf85211b7b986d15d8a62bb432d6959f9a61d69c230c05e980412",
+    "ten-point-refined-radii/verification_report.json": "46f96cefc70d072965006525cfc693a3a32d989921a8cd797306b02ee61ffd96",
+    "ten-point-conditioned-inner/verification_report.json": "161b18e4073b893e534b5f090f465c6d95d6f283eec33c92af9d0f035cf824d2",
+    "ten-point-tight-pairing/verify_all.py": "2ea6ce50be0005b63032842ff41e485f00dfc714a53efe013260fc12956f2088",
+    "ten-point-tight-pairing/source_manifest.json": "c9db740673e3eafaee9a79ea7a35b6e4e58d18b7415e7313a7fe0aad5a1ccbf0"
+  }
+}

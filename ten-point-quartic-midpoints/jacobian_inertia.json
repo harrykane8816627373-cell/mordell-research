@@ -1,0 +1,9 @@
+{
+  "operation_id": "matrix.inertia.compute",
+  "source_sha256": "64fbaa89f838c80a97d848847013180d33e07bb1d40e13c433479c1682a2222c",
+  "inertia": [
+    55,
+    0,
+    0
+  ]
+}

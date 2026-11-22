@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "assumption": "half-turn symmetry of a global maximizer",
+  "free_real_coordinates": 6,
+  "phase_charts": 2,
+  "initial_box": [
+    [
+      "41/400",
+      "11/80"
+    ],
+    [
+      "89/100",
+      "1271/1000"
+    ],
+    [
+      "89/100",
+      "1271/1000"
+    ],
+    [
+      "89/100",
+      "1271/1000"
+    ],
+    [
+      "7/10",
+      "39/50"
+    ],
+    [
+      "-1",
+      "1"
+    ]
+  ],
+  "doubled_gap_sine_strict_lower": "19/20",
+  "ward_sum_modulus_strict_lower": "24/5",
+  "intersection_radical_strict_lower": "1/9",
+  "known_saddle_positive_direction_preserves_half_turn": true,
+  "numerical_search": {
+    "starts": 26000,
+    "accepted": 24211,
+    "clusters": 8,
+    "clusters_within_old_global_bands": 2
+  }
+}

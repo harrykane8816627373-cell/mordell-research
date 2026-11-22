@@ -1,0 +1,18 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "verify_all.py": "8fbab1ed3e9c6ddca513605220ea9f8c34a964360678e00840aa623ac7d12e5c",
+    "README.md": "b2738b0b099d3ed3dfab378386bf4f875d7d0bf097fc223905142dac36b252a0",
+    "discover.py": "7194a876bee34611112f7046b2ea29fa70f2b46f78f174cbdb5a962b87e0dc74",
+    "candidate.json": "36ab19115f524f613eb44f70f89889d7e52635ec8a31eaa1076a4e023c2d1321",
+    "saddle.json": "6cec6606de42f19ead33f2acd9937fd27d371fc48c16c4fbbdba1660d34e5d70",
+    "square.json": "4966f60e3f56b6bb2aa1947ea6b760185d80b4088645d16d61f937cb531cf3ef"
+  },
+  "dependencies": {
+    "ten-point-half-turn-radial-concavity/verification_report.json": "1bdd252131de35fbebbdcf708a5143ac1933da6739734fd123291056eb4a3ef0",
+    "ten-point-half-turn-angle-neighborhoods/verification_report.json": "5d5d939ed7b9735f101bafd2a7fd5f9c2ba15b958837f4f55989d3a79551cd8c",
+    "ten-point-phase-sweep/verify_all.py": "23371e570b1241b82bf143bc4be934ad914cd19c02cf97164e7f3e5a4fb8657f",
+    "ten-point-saddle-exclusion/saddle-jacobian.json": "5703f1ee57aed2656449b0202694352e079a7d4862cd739fda94164f862aad1a",
+    "ten-point-quartic-midpoints/verification_report.json": "bf3d471fac884fc7d28f50c6d973b9c9ea9c815b146e80b346c469eb68378125"
+  }
+}

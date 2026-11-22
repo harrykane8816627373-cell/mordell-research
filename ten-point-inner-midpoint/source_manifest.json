@@ -1,0 +1,17 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "README.md": "21dbd8cd7642ada5c5b97298716dc4cbd18b9aee30b646517e0af231c9d3f1c0",
+    "verify_all.py": "9a3442395fd2a0dd38d4c8389bf40975b00fb532be6af3a91d3a68a01e4e54c4",
+    "jacobian_solve.json": "e2a5e1ddfae84f8ed15418459aed7337f05902e6280b996c6e06b4b92a17dc92"
+  },
+  "dependencies": {
+    "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
+    "ten-point-conditioned-inner/verification_report.json": "161b18e4073b893e534b5f090f465c6d95d6f283eec33c92af9d0f035cf824d2",
+    "ten-point-curved-kernel/verify_all.py": "cdb8ed60d878991b419ad3cf60ffeb3949602ae63dbe6d249d27ad19c061a38c",
+    "ten-point-curved-kernel/kernel.json": "4b1edebb9cdc042ec30196a32f342a9330e43a7c74683c36a99e79c6e01c9781",
+    "ten-point-angular-upper/verification_report.json": "52e98c52e2a14c27c6556d84596c65d101746dd63c926f58db374c16bdb71d59",
+    "ten-point-ward-inner-count/verify_radial.py": "58a1816a74d0ed0cd3dee9788ed738ef65c7084972c6f0cc13a81f728dea18cd",
+    "ten-point-outer-gap/verification_report.json": "1da6da3f193d899b2814d8124edc1a058826a5d9c3454f62168d266da97ca89f"
+  }
+}

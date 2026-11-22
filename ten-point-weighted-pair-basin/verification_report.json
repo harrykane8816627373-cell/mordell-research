@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "candidate_pair_amplitude_radius": "7/250",
+  "midpoint_radius_for_sharp_energy": "7/40",
+  "midpoint_radius_for_stationary_symmetry": "13/100",
+  "global_complement_covered": false,
+  "amplitude_loss_matrix_determinant": "2508707423/380197250000",
+  "midpoint_energy_loss_relative_to_quadratic": "168698562401/6583669500000",
+  "midpoint_stationary_loss_relative_to_quadratic": "14443771063/2632237875000",
+  "matrix_checks": {
+    "amplitude_curvature": {
+      "dimension": 10,
+      "dyadic_diagonal_shift": "7/1099511627776",
+      "minimum_ldl_pivot_floor": "120650047287/1099511627776"
+    },
+    "amplitude_length_4": {
+      "dimension": 5,
+      "dyadic_diagonal_shift": "1/274877906944",
+      "minimum_ldl_pivot_floor": "1483527902813/1099511627776"
+    },
+    "amplitude_even_cubic": {
+      "dimension": 5,
+      "dyadic_diagonal_shift": "3/1099511627776",
+      "minimum_ldl_pivot_floor": "10738866377681/274877906944"
+    },
+    "amplitude_mixed_cubic": {
+      "dimension": 5,
+      "dyadic_diagonal_shift": "1/274877906944",
+      "minimum_ldl_pivot_floor": "135754343132629/549755813888"
+    },
+    "midpoint_curvature": {
+      "dimension": 10,
+      "dyadic_diagonal_shift": "3/549755813888",
+      "minimum_ldl_pivot_floor": "624486289609/1099511627776"
+    },
+    "midpoint_relative_length_4": {
+      "dimension": 10,
+      "dyadic_diagonal_shift": "7/1099511627776",
+      "minimum_ldl_pivot_floor": "610002656631/549755813888"
+    },
+    "midpoint_relative_cubic": {
+      "dimension": 10,
+      "dyadic_diagonal_shift": "7/1099511627776",
+      "minimum_ldl_pivot_floor": "7518635591199/549755813888"
+    }
+  }
+}

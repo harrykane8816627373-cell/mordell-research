@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "assumption": "half-turn symmetry",
+  "phase_covers": {
+    "candidate": {
+      "relative_squared_angle_tolerance": "3/5000",
+      "cells": 118,
+      "acceptance_counts": {
+        "energy_excluded": 110,
+        "candidate_basin": 8
+      }
+    },
+    "saddle": {
+      "relative_squared_angle_tolerance": "3/250",
+      "cells": 180,
+      "acceptance_counts": {
+        "energy_excluded": 178,
+        "saddle_orbit_excluded": 2
+      }
+    },
+    "square": {
+      "relative_squared_angle_tolerance": "3/125",
+      "cells": 252,
+      "acceptance_counts": {
+        "energy_excluded": 252
+      }
+    }
+  },
+  "unresolved_inside_the_tubes": 0
+}

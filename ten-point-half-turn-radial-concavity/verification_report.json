@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "assumption": "half-turn symmetry",
+  "feasible_outer_modulus_product_lower": "269001619879/200000000000",
+  "outer_modulus_geometric_mean_domain_lower": "43/40",
+  "negative_log_radial_hessian_strict_lower": "1/4",
+  "radial_variables_eliminated": 5,
+  "remaining_angle_parameters": 4,
+  "ceiling_squared_gradient_coefficient": "2",
+  "radial_stationarity_implies_unique_radii_at_fixed_angles": true,
+  "cover": {
+    "roots": 35960,
+    "nodes": 9137660,
+    "geometry_leaves": 381913,
+    "matrix_leaves": 4204897,
+    "unresolved": 0,
+    "maximum_subdivision_depth": 42
+  }
+}

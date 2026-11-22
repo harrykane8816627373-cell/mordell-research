@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "mass": 9,
+  "assumption": "half-turn symmetry of a global maximizer",
+  "depth_limit": 30,
+  "counts": {
+    "root_boxes": 35960,
+    "visited": 90880,
+    "bisected": 27460,
+    "geometry_excluded": 35312,
+    "energy_excluded": 21752,
+    "force_excluded": 5252,
+    "krawczyk_excluded": 1080,
+    "candidate_basin": 21,
+    "saddle_excluded": 3,
+    "unresolved": 0,
+    "midpoint_stationarity_forces_zero": 0,
+    "certified_radial_inclusions": 10143,
+    "maximum_depth": 21
+  },
+  "half_turn_classification_complete": true,
+  "general_configurations_with_small_midpoints": {
+    "norm_ceiling": "1/86",
+    "counts": {
+      "root_boxes": 35960,
+      "visited": 214298,
+      "bisected": 89169,
+      "geometry_excluded": 35312,
+      "energy_excluded": 84910,
+      "force_excluded": 0,
+      "krawczyk_excluded": 0,
+      "candidate_basin": 0,
+      "saddle_excluded": 0,
+      "unresolved": 0,
+      "midpoint_stationarity_forces_zero": 4907,
+      "certified_radial_inclusions": 70412,
+      "maximum_depth": 28
+    },
+    "complete": true
+  }
+}

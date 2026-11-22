@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "applies_to_every_global_maximizer": true,
+  "normalization_mass": 9,
+  "strict_joint_midpoint_norm_upper": "149/500",
+  "lambda": "69/500",
+  "mu": "-7/12500",
+  "pair_gap_compensations": [
+    "93/200000",
+    "491/200000"
+  ],
+  "nonmatching_compensation": "2441/1250000",
+  "log_budget_margin_decimal_display": 1.7152000009017592e-05,
+  "cover": {
+    "inner": {
+      "visited": 1145,
+      "max_depth": 24,
+      "counts": {
+        "0": 187,
+        "1": 196,
+        "2": 189,
+        "A": 204,
+        "P": 284,
+        "Q": 85
+      }
+    },
+    "outer_monotonicity": {
+      "visited": 45,
+      "counts": {
+        "0": 7,
+        "1": 7,
+        "2": 8,
+        "A": 9,
+        "P": 14
+      }
+    },
+    "outer_endpoint": {
+      "visited": 585,
+      "counts": {
+        "0": 137,
+        "1": 155,
+        "A": 258,
+        "P": 35
+      }
+    }
+  },
+  "unresolved": 0
+}

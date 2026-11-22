@@ -1,0 +1,14 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    "verify_all.py": "1965d7d7524ed0d86f5636e1babf2deeca275edf180d54adc918e728c54205a8",
+    "README.md": "1e53335ab79797de0cc676ab4787845f73cdfa9a02e9204fd16a47fe635d5e01"
+  },
+  "dependencies": {
+    "ten-point-half-turn-radial-concavity/verification_report.json": "1bdd252131de35fbebbdcf708a5143ac1933da6739734fd123291056eb4a3ef0",
+    "ten-point-phase-sweep/verify_all.py": "23371e570b1241b82bf143bc4be934ad914cd19c02cf97164e7f3e5a4fb8657f",
+    "ten-point-saddle-exclusion/verification_report.json": "d9075c4a44982b240722c03bb3807f38d41d0706c9d1b986ea1accf8291eb9f6",
+    "ten-point-saddle-exclusion/saddle-jacobian.json": "5703f1ee57aed2656449b0202694352e079a7d4862cd739fda94164f862aad1a",
+    "ten-point-quartic-midpoints/verification_report.json": "bf3d471fac884fc7d28f50c6d973b9c9ea9c815b146e80b346c469eb68378125"
+  }
+}

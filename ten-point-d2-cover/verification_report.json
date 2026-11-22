@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "normalization_mass": 9,
+  "assumption": "D2 symmetry of the global maximizer",
+  "conditional_candidate_orbit_classified": true,
+  "unresolved": 0,
+  "branches": {
+    "axes": {
+      "geometry": 140,
+      "nodes": 201037,
+      "split": 100518,
+      "stationarity": 96634,
+      "value": 3745,
+      "maximum_depth": 42
+    },
+    "rectangles": {
+      "geometry": 1483,
+      "in_sharp_basin": 2193,
+      "nodes": 422161,
+      "split": 211080,
+      "stationarity": 183391,
+      "value": 24014,
+      "maximum_depth": 33
+    }
+  }
+}

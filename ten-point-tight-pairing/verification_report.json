@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "applies_to_every_global_maximizer": true,
+  "normalization_mass": 9,
+  "projection": {
+    "global_projection_modulus_strict_upper": "21/40",
+    "combined_exact_approximation_error": "2947459/7812500",
+    "dual_gram_norm_squared_decimal_display": 4.2588637739236725,
+    "two_variable_covers": [
+      {
+        "visited": 5,
+        "maximum_depth": 2
+      },
+      {
+        "visited": 1,
+        "maximum_depth": 0
+      },
+      {
+        "visited": 23,
+        "maximum_depth": 6
+      },
+      {
+        "visited": 23,
+        "maximum_depth": 6
+      }
+    ],
+    "two_variable_nodes": 52
+  },
+  "pairing": {
+    "concavity_polynomial_ascending_coefficients": [
+      "12657663157/500000000",
+      "-15267490721/125000000",
+      "13715151917/62500000",
+      "-339772554/1953125",
+      "200590587/3906250"
+    ],
+    "concavity_replay": {
+      "interval": [
+        "0",
+        "1"
+      ],
+      "strict_floor": "0",
+      "visited": 13,
+      "maximum_depth": 4
+    },
+    "jacobian_closed_unit_interval_root_count": 0,
+    "closed_arc_half_angle_cosine": "1/8",
+    "closed_arc_occupancy_upper": 4,
+    "five_point_arc_vertices_checked": 6,
+    "arc_odd_projection_lower_decimal_display": 0.5351873126947647,
+    "cyclic_rank_pairing_cosine_strict_upper": "-31/32",
+    "paired_squared_distance_strict_lower": "10647/3200",
+    "paired_outer_midpoint_squared_strict_upper": "117/4000",
+    "joint_five_pair_midpoint_norm_strict_upper": "363/1000"
+  }
+}
