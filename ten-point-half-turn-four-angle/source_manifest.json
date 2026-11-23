@@ -1,10 +1,10 @@
 {
   "files": {
     ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
-    "README.md": "9688dff5fcfb3430aa66d92fc0bc7ef2983a57daac015faf6ac21456cb83f47e",
-    "verify_all.py": "a9c9590a4bac000e9bc51506bd65d2100566f5060362c6c1ebff1d28fd9ed82e",
+    "README.md": "728dff4af1c0e96b82509d43893c48663a127ce123d3e59d2e169af1071fd5e8",
+    "verify_all.py": "6fcb1ed804884b1e09c92973eb799124b15fb0657df75ca9633f351318475333",
     "dyadic.hpp": "1f3aa4889e9248833320283f806f9829bb5913923938be54b841ba8dc378dfb7",
-    "cover.cpp": "08dde87f6a86dbd1a0a1fa041dd09808caa53cb516040e4a9dc3c3bc9b80170c"
+    "cover.cpp": "fe308cef12dc484ecefd96f652367e902b70a43bc720d3373f1dbbf15c08d1b9"
   },
   "dependencies": {
     "ten-point-half-turn-radial-cover/verify_all.py": "e7eb4480b29f325e29300a4b499aba5cdfb29feeb5939c549df1521a92114c6f",

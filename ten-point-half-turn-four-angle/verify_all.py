@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 BITS = 43
 DEFAULT_DEPTH = 30
-MIDPOINT_CEILING = F(1,44)
+MIDPOINT_CEILING = F(1,20)
 
 
 def read(path):
@@ -59,9 +59,9 @@ def inputs():
     require(local['passed'] and local['normalization_mass']==9 and
             F(local['half_difference_radius'])==F(7,250) and saddle['passed'] and
             F(saddle['mass_nine_excluded_orbit_radius'])==F(21,500), 'two mass-nine orbit tests')
-    sixth_order = check_midpoint_bridge()
+    sixth_order, energy_coefficient = check_midpoint_bridge(MIDPOINT_CEILING)
     engine = load('ten-point-half-turn-phase-sweep').Sweep()
-    data = [MIDPOINT_CEILING.denominator, sixth_order]
+    data = [MIDPOINT_CEILING.denominator, sixth_order, energy_coefficient]
     def append(interval):
         lo = engine.box.endpoint(interval,False)
         hi = engine.box.endpoint(interval)
@@ -79,22 +79,22 @@ def inputs():
     return ' '.join(map(str,data))+'\n'
 
 
-def check_midpoint_bridge():
+def check_midpoint_bridge(mu):
     proof = read(ROOT/'ten-point-pair-perturbation/verification_report.json')
     require(proof['passed'] and proof['applies_to_every_global_maximizer'] and
             proof['small_midpoint_quartic_energy_coefficient']==74 and
             proof['small_midpoint_quadratic_sixth_order_coefficient']==846 and
             F(proof['projected_cross_pair_distance_strict_lower'])==F(4,7) and
             F(proof['one_cross_pair_distance_strict_lower'])==F(99,100), 'projection estimates')
-    mu, d, amp = MIDPOINT_CEILING, F(4,7), F(9359,10000)
-    require(mu.numerator==1 and mu<=F(proof['smaller_midpoint_norm_ceiling']), 'chosen midpoint ceiling')
+    d, amp, long = F(4,7), F(9359,10000), F(99,100)
+    eta_squared = 2*mu**2
+    require(mu>0 and mu.numerator==1 and eta_squared<d**2 and mu**2<amp**2, 'chosen midpoint ceiling')
     a, l, u = F(53,400), F(89,100), F(1271,1000)
     cutoff = F(9,2)-a-mu**2
     vertices = [(edges,cutoff-sum(edges)) for edges in product((l,u),repeat=3)]
     require(min(prod(edges)*last for edges,last in vertices if l<=last<=u)>F(43,40)**4,
             'repaired radii belong to the log domain')
     require(1/(amp**2-mu**2)<F(6,5), 'angular and logarithmic repair displacement')
-    long = F(99,100)
     require(amp**2+F(43,400)>long**2 and
             2*F(1128,1000)*sum(1/(v*(v**2-2*mu**2)) for v in (d,long))<15,
             'one long edge for every pair of half differences')
@@ -105,11 +105,14 @@ def check_midpoint_bridge():
     require(raw_gradient**2>15**2*35 and displacement**2>2*F(6,5)**2*F(4,5),
             'raw gradient and repair displacement')
     require(raw_gradient+28*displacement<132, 'force residual after repair')
-    require(74+raw_gradient*displacement+14*displacement**2<242, 'energy residual after repair')
+    projection = 7*sum((1+eta_squared/v**2)/(v**4*(1-eta_squared/v**2)) for v in (d,long))
+    energy_coefficient = ceil(projection+raw_gradient*displacement+14*displacement**2)
     require(4*F(43,400)>F(13,20)**2 and 4*l>F(9,5)**2, 'inverse square-root estimate')
-    require(1/(2*amp)+F(1128,1000)*F(3,5)<F(3,2), 'representative displacement after repair')
-    require(3*mu**2<F(7,250), 'nonempty candidate orbit test')
-    return ceil(28*sum(1/(v**2*(v**2-2*mu**2)**2) for v in (d,long)))
+    require(F(4,5)*(1/(2*amp)+F(1128,1000)*F(3,5))**2<F(11,10)**2,
+            'representative displacement after repair')
+    require(F(11,10)*mu**2<F(7,250), 'nonempty candidate orbit test')
+    sixth_order = ceil(28*sum(1/(v**2*(v**2-eta_squared)**2) for v in (d,long)))
+    return sixth_order, energy_coefficient
 
 
 def replay(compiler, depth, text):
@@ -122,19 +125,24 @@ def replay(compiler, depth, text):
                    for mode in ([],['midpoints'])]
     labels = ('root_boxes','visited','bisected','geometry_excluded','energy_excluded',
               'force_excluded','krawczyk_excluded','candidate_basin','saddle_excluded',
-              'unresolved','midpoint_stationarity_forces_zero','certified_radial_inclusions',
-              'energy_radial_localizations','local_hessian_refinements','sharper_radial_inclusions','maximum_depth')
+              'unresolved','midpoint_stationarity_forces_zero','radial_subcovers','certified_radial_inclusions',
+              'energy_radial_localizations','local_hessian_refinements','sharper_radial_inclusions',
+              'radial_subcover_nodes','maximum_depth')
     def counts(output):
         numbers = list(map(int,output.split()))
         require(len(numbers)==len(labels) and all(x>=0 for x in numbers), 'counts')
         rows = dict(zip(labels,numbers))
         require(rows['root_boxes']==comb(32,4) and rows['visited']==rows['root_boxes']+2*rows['bisected']
-                and rows['visited']==sum(numbers[2:11]) and rows['maximum_depth']<=depth, 'cover accounting')
+                and rows['visited']==sum(numbers[2:12]) and rows['maximum_depth']<=depth, 'cover accounting')
         return rows
     exact, perturbed = map(counts,outputs)
+    sixth_order, energy_coefficient = map(int,text.split()[:3][1:])
     return {'passed': True, 'mass':9, 'assumption':'half-turn symmetry of a global maximizer',
             'depth_limit':depth, 'counts':exact, 'half_turn_classification_complete':exact['unresolved']==0,
-            'general_configurations_with_small_midpoints':{'norm_ceiling':str(MIDPOINT_CEILING), 'counts':perturbed,
+            'general_configurations_with_small_midpoints':{'norm_ceiling':str(MIDPOINT_CEILING),
+                                                          'sixth_order_coefficient':sixth_order,
+                                                          'repaired_energy_coefficient':energy_coefficient,
+                                                          'counts':perturbed,
                                                           'complete':perturbed['unresolved']==0}}
 
 

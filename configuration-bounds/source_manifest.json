@@ -100,9 +100,9 @@
     },
     {
       "path": "PROOF_STATUS.md",
-      "bytes": 21264,
-      "sha256": "9cb40f693e4bccef20b60f437f9883af8e8705fd21b69cdd48d06b3273eb9bc3",
-      "git_blob_sha": "f0a66ae0d1f852ce9456ac3bc4cb1eede45d330e"
+      "bytes": 21288,
+      "sha256": "ccbb0bcff15f720dc6ec28096673e9eebca597a46367cc482cff00ee9e0e47f5",
+      "git_blob_sha": "638882f536b1dce1cd9bf8e3d0bfe598af9aad42"
     },
     {
       "path": "PROVENANCE.json",
