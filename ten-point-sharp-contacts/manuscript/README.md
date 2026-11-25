@@ -6,6 +6,10 @@ Fengcan Jiang, 26 November 2026.
 
 We determine the maximum product of the 45 squared pairwise distances among ten planar points with total squared radius ten. The exact value is algebraic and is approximately 5.3823025895657 × 10¹⁰. The unique maximizing orbit consists of one antipodal pair and two concentric rectangles. The paper includes the algebraic root definition, the cyclic classes used to construct the majorant, and the proof of the equality conditions.
 
+## Cite the preprint
+
+Jiang, Fengcan. (2026). *The Sharp Ten-Point Bound for Mordell's Distance Product* (Version 1). Zenodo. [doi:10.5281/zenodo.24537890](https://doi.org/10.5281/zenodo.24537890)
+
 ## Build the paper
 
 Compile the single LaTeX source file with TeX Live from this directory.

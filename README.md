@@ -4,7 +4,7 @@
 
 **十点与十二点的全局锐界和唯一性**
 
-- 十点 · [英文论文 PDF](ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [LaTeX 源文件](ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex) · [证明与证书](ten-point-sharp-contacts/README.md)
+- 十点 · [英文论文 PDF](ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [LaTeX 源文件](ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex) · [证明与证书](ten-point-sharp-contacts/README.md) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24537890)
 - 十二点 · [英文论文 PDF](twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX 源文件](twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [证明与证书](twelve-point-sharp-global/README.md)
 
 [复现指南](docs/REPRODUCING.md)
