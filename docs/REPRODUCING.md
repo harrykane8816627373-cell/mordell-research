@@ -73,6 +73,15 @@ python -B -S -O ten-point-half-turn-four-angle/verify_all.py
 
 初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。24,681 节点的曲率核给出 1.0024 倍上界，新增角序分区重放 98,557 个节点，将其收紧到候选值的 1.0022 倍。D₂ 条件分类重放 623,198 个节点，计算范围只包括已经具有 D₂ 对称的构型。Windows 检出若会转换换行符，可用 `git clone -c core.autocrlf=false URL` 保留已有证书所固定的源文件字节。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
 
+### 十点分角类核的精确接触
+
+接受十点候选根、径向带、内边、相邻外角和近对径配对后，运行以下标准库入口。第一项重算 44 阶接触子式、两个二阶变分块、12 个 Gram 块和 15 个接触邻域，并检查一个外外负缺额见证。第二项重放整个内内类的 190 个零补偿覆盖节点。 [核及适用范围](../ten-point-sharp-contacts/README.md)
+
+```text
+python -B -S -O ten-point-sharp-contacts/verify_all.py
+python -B -S -O ten-point-sharp-contacts/cover.py
+```
+
 ## 编译十二点英文论文
 
 进入 [论文目录](../twelve-point-sharp-global/manuscript/README.md)，使用 TeX Live 编译。

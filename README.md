@@ -23,7 +23,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\prod_{1\le i<j\le n}|z_i-z_j|^2.
 |6、7 点|M₆ = 6¹⁵/5¹⁰，M₇ = 7²¹/6¹⁵，等号为原点加相应正多边形。相关证明引用 Faugère–Svarts 物理驻点分类。 [证明与依赖审计](earlier-results/six_seven_coverage_audit.md)|
 |8 点|M₈ = 8²⁸/7²¹，等号为原点加半径 √(8/7) 的正七边形。 [证书复现](eight-point-global/README.md) · [解析桥接](eight-point-global/PROOF_BRIDGE.md)|
 |9 点|M₉ = 9³⁶/8²⁸，等号为原点加半径 √(9/8) 的正八边形。 [证明与证书复现](nine-point-global/README.md)|
-|10 点|C₁₀ ≤ M₁₀ < 1.0022 C₁₀，其中 C₁₀ ≈ 5.3823025896 × 10¹⁰。全局最大构型若有半转对称，或质量九下五个配对中点的联合范数至多 1/18，必属于候选轨道。 [0.22% 全局上界](ten-point-angular-upper/README.md) · [半转与中点邻域的分类](ten-point-half-turn-four-angle/README.md) · [十点研究](docs/TEN_POINT_RESEARCH.md) · [证明链](docs/REPRODUCING.md#十点全局范围与局部锐界)|
+|10 点|C₁₀ ≤ M₁₀ < 1.0022 C₁₀，其中 C₁₀ ≈ 5.3823025896 × 10¹⁰。全局最大构型若有半转对称，或质量九下五个配对中点的联合范数至多 1/18，必属于候选轨道。 [0.22% 全局上界](ten-point-angular-upper/README.md) · [半转与中点邻域的分类](ten-point-half-turn-four-angle/README.md) · [分角类精确接触核](ten-point-sharp-contacts/README.md) · [十点研究](docs/TEN_POINT_RESEARCH.md) · [证明链](docs/REPRODUCING.md#十点全局范围与局部锐界)|
 |12 点|真实 D₃ 构型的全局锐值及唯一性。 [英文论文](twelve-point-sharp-global/manuscript/README.md)|
 |其他点数及一般结构|一般锐值仍开放。现有结果包括严格可达下界、必要几何条件、环人口刚性、相位相容性与局部稳定性证书。 [证明状态总表](configuration-bounds/PROOF_STATUS.md) · [一般结构](general-structure/README.md)|
 
