@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 BITS = 43
 DEFAULT_DEPTH = 30
-MIDPOINT_CEILING = F(1,20)
+MIDPOINT_CEILING = F(1,18)
 
 
 def read(path):
@@ -59,9 +59,9 @@ def inputs():
     require(local['passed'] and local['normalization_mass']==9 and
             F(local['half_difference_radius'])==F(7,250) and saddle['passed'] and
             F(saddle['mass_nine_excluded_orbit_radius'])==F(21,500), 'two mass-nine orbit tests')
-    sixth_order, energy_coefficient = check_midpoint_bridge(MIDPOINT_CEILING)
+    sixth_order, energy_coefficient, projection_coefficient = check_midpoint_bridge(MIDPOINT_CEILING)
     engine = load('ten-point-half-turn-phase-sweep').Sweep()
-    data = [MIDPOINT_CEILING.denominator, sixth_order, energy_coefficient]
+    data = [MIDPOINT_CEILING.denominator, sixth_order, energy_coefficient, projection_coefficient]
     def append(interval):
         lo = engine.box.endpoint(interval,False)
         hi = engine.box.endpoint(interval)
@@ -101,18 +101,26 @@ def check_midpoint_bridge(mu):
     cos_hi = F(39,50)+2*F(3,250)
     require(2/(2-2*cos_hi**2)<3 and
             4*a*u/(amp**2-a)**2<3 and 5*3+10*u<28, 'repair Hessian operator norm')
-    raw_gradient, displacement = F(89), F(38,25)
-    require(raw_gradient**2>15**2*35 and displacement**2>2*F(6,5)**2*F(4,5),
+    # At a scalar constrained extremum the coordinates satisfy a depressed
+    # cubic. In a three-value pattern the excess multiplicities force a zero.
+    fourth_moment = max(F((5-k)**2,25*k)+F(k*k,25*(5-k)) for k in (1,2))
+    require(fourth_moment==F(13,20)>max(F(1,2),F(1,4)), 'centered fourth moment')
+    edge_moment = 5*fourth_moment+3
+    require(edge_moment==F(25,4), 'pairwise fourth moment')
+    raw_gradient, displacement = F(84), F(137,100)
+    require(raw_gradient**2>15**2*(25*fourth_moment+15) and
+            displacement**2>2*F(6,5)**2*fourth_moment,
             'raw gradient and repair displacement')
-    require(raw_gradient+28*displacement<132, 'force residual after repair')
-    projection = 7*sum((1+eta_squared/v**2)/(v**4*(1-eta_squared/v**2)) for v in (d,long))
+    require(raw_gradient+28*displacement<123, 'force residual after repair')
+    projection = edge_moment*sum((1+eta_squared/v**2)/(v**4*(1-eta_squared/v**2)) for v in (d,long))
     energy_coefficient = ceil(projection+raw_gradient*displacement+14*displacement**2)
-    require(4*F(43,400)>F(13,20)**2 and 4*l>F(9,5)**2, 'inverse square-root estimate')
-    require(F(4,5)*(1/(2*amp)+F(1128,1000)*F(3,5))**2<F(11,10)**2,
+    require(4*F(43,400)>F(13,20)**2 and l>F(9,10)**2 and amp>F(9,10),
+            'inverse square-root estimate for repaired and unscaled radii')
+    require(fourth_moment*(1/(2*amp)+F(1128,1000)*F(3,5))**2<1,
             'representative displacement after repair')
-    require(F(11,10)*mu**2<F(7,250), 'nonempty candidate orbit test')
-    sixth_order = ceil(28*sum(1/(v**2*(v**2-eta_squared)**2) for v in (d,long)))
-    return sixth_order, energy_coefficient
+    require(mu**2<F(7,250), 'nonempty candidate orbit test')
+    sixth_order = ceil(4*edge_moment*sum(1/(v**2*(v**2-eta_squared)**2) for v in (d,long)))
+    return sixth_order, energy_coefficient, ceil(projection)
 
 
 def replay(compiler, depth, text):
@@ -136,12 +144,13 @@ def replay(compiler, depth, text):
                 and rows['visited']==sum(numbers[2:12]) and rows['maximum_depth']<=depth, 'cover accounting')
         return rows
     exact, perturbed = map(counts,outputs)
-    sixth_order, energy_coefficient = map(int,text.split()[:3][1:])
+    sixth_order, energy_coefficient, projection_coefficient = map(int,text.split()[1:4])
     return {'passed': True, 'mass':9, 'assumption':'half-turn symmetry of a global maximizer',
             'depth_limit':depth, 'counts':exact, 'half_turn_classification_complete':exact['unresolved']==0,
             'general_configurations_with_small_midpoints':{'norm_ceiling':str(MIDPOINT_CEILING),
                                                           'sixth_order_coefficient':sixth_order,
                                                           'repaired_energy_coefficient':energy_coefficient,
+                                                          'projection_energy_coefficient':projection_coefficient,
                                                           'counts':perturbed,
                                                           'complete':perturbed['unresolved']==0}}
 

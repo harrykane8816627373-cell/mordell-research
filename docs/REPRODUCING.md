@@ -65,7 +65,7 @@ python -B -S -O ten-point-half-turn-angle-neighborhoods/verify_all.py
 python -B -S -O ten-point-half-turn-phase-sweep/verify_all.py
 ```
 
-接受五径向凹性、纯角度邻域和对径投影误差后，从仓库根运行以下 GNU C++20 入口。半转条件分类的全域重放访问 90,880 个节点。联合中点范数至多 \(1/20\) 的一般构型覆盖访问 341,276 个角度节点，另有径向子覆盖。两次均无未决盒。[四角完整覆盖](../ten-point-half-turn-four-angle/README.md)
+接受五径向凹性、纯角度邻域和对径投影误差后，从仓库根运行以下 GNU C++20 入口。半转条件分类的全域重放访问 90,880 个节点。联合中点范数至多 \(1/18\) 的一般构型覆盖访问 566,046 个角度节点和 26,722 个径向子覆盖节点。两次均无未决盒。[四角完整覆盖](../ten-point-half-turn-four-angle/README.md)
 
 ```bash
 python -B -S -O ten-point-half-turn-four-angle/verify_all.py

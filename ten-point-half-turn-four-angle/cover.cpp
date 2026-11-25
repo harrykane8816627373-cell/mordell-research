@@ -37,7 +37,7 @@ Integer energy_radial_localizations=0, local_hessian_refinements=0, sharper_radi
 Integer radial_subcovers=0, radial_subcover_nodes=0;
 int deepest=0, max_depth=0;
 bool small_midpoints=false;
-Interval force_slack, energy_slack, midpoint_sq, individual_midpoint_sq, midpoint_test;
+Interval force_slack, energy_slack, projection_slack, midpoint_sq, individual_midpoint_sq, midpoint_test;
 
 bool outside_force_slack(Interval x) {
     return small_midpoints ? x.lo>force_slack.hi || x.hi<-force_slack.hi : nonzero(x);
@@ -142,13 +142,13 @@ int orbit(const Angles &angle) {
     return 0;
 }
 
-Turn repaired_directions(const Angles &angle) {
+Turn angle_directions(const Angles &angle) {
     Turn d;
     for (int j=0;j<4;++j) d[j]=direction(angle[j]);
     return d;
 }
 
-int paired_orbit(const Turn &d,const Radii &r) {
+int paired_orbit(const Turn &d,const Radii &r,Interval repair={}) {
     for (int k=0;k<2;++k) {
         auto diff=square((r[0]-anchor_radii[k][0])/rat(13,20));
         for (int shift=0;shift<4;++shift) {
@@ -160,7 +160,7 @@ int paired_orbit(const Turn &d,const Radii &r) {
                 total=total+square((r[j+1]-anchor_radii[k][u+1])/rat(9,5))
                       + chord*rat(1271,2000);
             }
-            const auto amplitude=point(sqrt_upper(total.hi))+midpoint_sq*11/10;
+            const auto amplitude=point(sqrt_upper(total.hi))+repair;
             if (k==0 && amplitude.hi<rat(7,250).lo) return k+1;
             if (k==1 && ((square(amplitude)+midpoint_sq)*2).hi<square(rat(21,500)).lo)
                 return k+1;
@@ -225,9 +225,8 @@ struct MidpointAngles {
     Radii movement{};
 };
 
-MidpointAngles midpoint_angles(const Angles &angle) {
+MidpointAngles midpoint_angles(const Angles &raw) {
     std::array<Interval,5> a{};
-    const auto raw=unscaled_angle_box(angle);
     for (int i=1;i<5;++i) a[i]=raw[i-1];
     MidpointAngles prepared;
     for (int i=0;i<5;++i) {
@@ -243,16 +242,14 @@ MidpointAngles midpoint_angles(const Angles &angle) {
     return prepared;
 }
 
-bool requires_zero_midpoints(const MidpointAngles &a,const Radii &repaired) {
-    // Return to the unscaled half differences using the componentwise repair bounds.
-    const auto r=unscaled_radius_box(repaired);
+bool requires_zero_midpoints(const MidpointAngles &a,const Radii &r,Interval threshold) {
     Radii radius_center{}, movement{};
     for (int i=0;i<5;++i) {
         radius_center[i]=center(r[i]);
         movement[i]=point(mag(r[i]-radius_center[i]))+r[i]*a.movement[i];
     }
     RealQuadratic lower{};
-    for (int i=0;i<10;++i) lower[i][i]=10*unit-midpoint_test.hi;
+    for (int i=0;i<10;++i) lower[i][i]=10*unit-threshold.hi;
     int edge=0;
     for (int i=0;i<5;++i) for (int j=i+1;j<5;++j,++edge) {
         const auto relative=a.relative[edge];
@@ -454,11 +451,10 @@ const Interval product_witness=rat(469765409,1LL<<26);
 struct EnergyData { Interval product,angular,radial; };
 
 EnergyData energy_data(const Derivatives &mid,const Derivatives &fixed,const Edges &edges,
-                       const Radii &ref,const Angles &a) {
+                       const Radii &ref,const Angles &a,Interval slack) {
     Vec disp{};
     for (int i=0;i<4;++i) disp[i+5]=(a[i]-center(a[i]))*tau;
-    Interval increase;
-    if (small_midpoints) increase=energy_slack;
+    Interval increase=slack;
     Interval radial;
     for (int i=0;i<5;++i) radial=radial+square(fixed.g[i])*2;
     for (int i=5;i<9;++i) increase=increase+mid.g[i]*disp[i];
@@ -556,8 +552,7 @@ bool local_energy_contraction(Radii &r,const EnergyData &data,const Edges &e,
             ellipsoid.stiffness[i]=stiffness;
             ellipsoid.center[i]=fixed.g[i]/stiffness;
             const auto radius=sqrt_upper((budget/stiffness).hi);
-            const Interval band=i==0?inner_band:outer_band;
-            if (!meet(r[i],ref[i]+(ellipsoid.center[i]+Interval{-radius,radius})*band))
+            if (!meet(r[i],ref[i]+(ellipsoid.center[i]+Interval{-radius,radius})*hull[i]))
                 return false;
         }
         ellipsoid.budget=budget;
@@ -584,8 +579,7 @@ Interval log_relative(Interval r,Interval ref) {
     return {log_relative_point(point(r.lo),ref).lo,log_relative_point(point(r.hi),ref).hi};
 }
 
-bool tighten_ellipsoid(Radii &r,const Radii &ref,const RadialEllipsoid &ellipsoid) {
-    const Interval target{mass.lo-individual_midpoint_sq.hi,mass.hi};
+bool tighten_ellipsoid(Radii &r,const Radii &ref,const RadialEllipsoid &ellipsoid,Interval target) {
     for (int i=0;i<5;++i) {
         auto remaining=target;
         for (int j=0;j<5;++j) if (j!=i) remaining=remaining-r[j];
@@ -608,11 +602,11 @@ bool tighten_ellipsoid(Radii &r,const Radii &ref,const RadialEllipsoid &ellipsoi
     return true;
 }
 
-bool radial_subcover(Radii r,const MidpointAngles &angle,const Turn &repaired,const Radii &ref,
-                     const RadialEllipsoid &ellipsoid,int depth) {
+bool radial_subcover(Radii r,const MidpointAngles &angle,const Turn &directions,const Radii &ref,
+                     const RadialEllipsoid &ellipsoid,Interval target,Interval threshold,int depth) {
     ++radial_subcover_nodes;
-    if (!tighten_ellipsoid(r,ref,ellipsoid)) return true;
-    if (requires_zero_midpoints(angle,r) || paired_orbit(repaired,r)!=0) return true;
+    if (!tighten_ellipsoid(r,ref,ellipsoid,target)) return true;
+    if (requires_zero_midpoints(angle,r,threshold) || paired_orbit(directions,r)!=0) return true;
     if (!depth) return false;
     int axis=0;
     for (int i=1;i<5;++i)
@@ -620,9 +614,64 @@ bool radial_subcover(Radii r,const MidpointAngles &angle,const Turn &repaired,co
     const auto midpoint=center(r[axis]).lo, upper=r[axis].hi;
     if (midpoint==r[axis].lo || midpoint==upper) return false;
     r[axis].hi=midpoint;
-    if (!radial_subcover(r,angle,repaired,ref,ellipsoid,depth-1)) return false;
+    if (!radial_subcover(r,angle,directions,ref,ellipsoid,target,threshold,depth-1)) return false;
     r[axis]={midpoint,upper};
-    return radial_subcover(r,angle,repaired,ref,ellipsoid,depth-1);
+    return radial_subcover(r,angle,directions,ref,ellipsoid,target,threshold,depth-1);
+}
+
+struct EdgeBounds {
+    Integer largest=0;
+    Radii incident{};
+
+    void include(int i,int j,Interval bound) {
+        largest=std::max(largest,bound.hi);
+        incident[i]=incident[i]+bound;
+        incident[j]=incident[j]+bound;
+    }
+
+    Interval quartic_bound() const {
+        const auto peak=std::max_element(incident.begin(),incident.end(),
+                                        [](Interval a,Interval b){return a.hi<b.hi;})->hi;
+        return point(std::min(ceil_ratio(Wide(25)*largest,4),4*peak))*square(midpoint_sq);
+    }
+};
+
+struct ProjectionErrors { Interval energy,stationarity; };
+
+ProjectionErrors projection_errors(const Radii &r,const Edges &edges) {
+    EdgeBounds quartic, sixth;
+    const auto eta_sq=midpoint_sq*2;
+    for (const auto &edge:edges) {
+        const auto i=edge.i, j=edge.j;
+        const auto p=r[i]*r[j]*2;
+        const auto twice_dot_sq=p*(one+edge.range.cos);
+        const auto twice_dot=Interval{std::max<Integer>(0,sqrt_upper(twice_dot_sq.lo)-1),
+                                       sqrt_upper(twice_dot_sq.hi)};
+        const auto long_dist=r[i]+r[j]+twice_dot;
+        const auto product=square(r[i]-r[j])+p*(one-edge.range.cos);
+        const auto short_dist=product/long_dist;
+        Interval energy,stationarity;
+        for (const auto floor:{point(std::max(short_dist.lo,square(rat(4,7)).lo)),
+                               point(std::max(long_dist.lo,square(rat(99,100)).lo))}) {
+            const auto rho=eta_sq/floor;
+            energy=energy+(one+rho)/(square(floor)*(one-rho));
+            stationarity=stationarity+rat(2)/(floor*square(floor-eta_sq));
+        }
+        quartic.include(i,j,energy);
+        sixth.include(i,j,stationarity);
+    }
+    return {point(std::min(projection_slack.hi,quartic.quartic_bound().hi)),
+            point(std::min(midpoint_test.hi,sixth.quartic_bound().hi*2))};
+}
+
+bool projection_energy_contraction(Radii &r,const Angles &a,const Edges &edges,const Radii &ref,
+                                   Interval slack,RadialEllipsoid &ellipsoid) {
+    // The raw projection need not belong to K. Certify its curvature only
+    // along the segment from the reference to its current radial box.
+    Derivatives mid,fixed;
+    if (!derivatives(ref,edges,true,mid) || !derivatives(ref,edges,false,fixed)) return true;
+    const auto data=energy_data(mid,fixed,edges,ref,a,slack);
+    return local_energy_contraction(r,data,edges,ref,fixed,ellipsoid);
 }
 
 Vec multiply(const Matrix &m,const Vec &x,int rows) {
@@ -850,7 +899,7 @@ void visit(Angles a,int depth,const Radii &seed) {
     Radii ref=reference(e,seed);
     Derivatives mid,fixed;
     if (derivatives(ref,e,true,mid) && derivatives(ref,e,false,fixed)) {
-        const auto energy_bound=energy_data(mid,fixed,e,ref,a);
+        const auto energy_bound=energy_data(mid,fixed,e,ref,a,small_midpoints?energy_slack:Interval{});
         if (energy_excluded(energy_bound)) { ++energy; return; }
         auto jac=float_jacobian(mid,ref,e);
         Radii r,energy_box;
@@ -877,19 +926,42 @@ void visit(Angles a,int depth,const Radii &seed) {
                         !tighten_repaired_radii(r,a,ref,e,model)) { ++force; return; }
                     RadialEllipsoid ellipsoid;
                     if (!local_energy_contraction(r,energy_bound,e,ref,fixed,ellipsoid)) { ++energy; return; }
-                    if (ellipsoid.available && !tighten_ellipsoid(r,ref,ellipsoid)) { ++energy; return; }
-                    const auto midpoint_directions=midpoint_angles(a);
-                    if (requires_zero_midpoints(midpoint_directions,r)) { ++zero_midpoints; return; }
-                    const auto repaired=repaired_directions(a);
-                    const int paired=paired_orbit(repaired,r);
+                    const Interval repaired_mass{mass.lo-individual_midpoint_sq.hi,mass.hi};
+                    if (ellipsoid.available && !tighten_ellipsoid(r,ref,ellipsoid,repaired_mass)) {
+                        ++energy; return;
+                    }
+                    const auto projected_angles=unscaled_angle_box(a);
+                    const auto midpoint_directions=midpoint_angles(projected_angles);
+                    auto projected=unscaled_radius_box(r);
+                    if (requires_zero_midpoints(midpoint_directions,projected,midpoint_test)) {
+                        ++zero_midpoints; return;
+                    }
+                    const int paired=paired_orbit(angle_directions(a),r,midpoint_sq);
                     if (paired) { ++(paired==1?basin:saddle); return; }
                     const bool small_angles=std::all_of(a.begin(),a.end(),[](Interval x){
                         return x.hi-x.lo<=unit/1024;
                     });
-                    if (small_angles && ellipsoid.available &&
-                        radial_subcover(r,midpoint_directions,repaired,ref,ellipsoid,9)) {
-                        ++radial_subcovers;
-                        return;
+                    if (small_angles) {
+                        RadialEllipsoid projection;
+                        const auto projection_edges=make_edges(projected_angles);
+                        const auto errors=projection_errors(projected,projection_edges);
+                        const Interval projected_mass{mass.lo-midpoint_sq.hi,mass.hi};
+                        if (!projection_energy_contraction(projected,projected_angles,projection_edges,ref,
+                                                           errors.energy,projection) ||
+                            (projection.available && !tighten_ellipsoid(projected,ref,projection,projected_mass))) {
+                            ++energy; return;
+                        }
+                        if (requires_zero_midpoints(midpoint_directions,projected,errors.stationarity)) {
+                            ++zero_midpoints; return;
+                        }
+                        const Turn directions=angle_directions(projected_angles);
+                        const int projected_orbit=paired_orbit(directions,projected);
+                        if (projected_orbit) { ++(projected_orbit==1?basin:saddle); return; }
+                        if (projection.available &&
+                            radial_subcover(projected,midpoint_directions,directions,ref,projection,
+                                            projected_mass,errors.stationarity,9)) {
+                            ++radial_subcovers; return;
+                        }
                     }
                 }
                 auto result=full_test(a,e,ref,r,mid,jac);
@@ -924,14 +996,15 @@ int main(int argc,char **argv) {
             direction(upper_gap).cos.hi>=gap_cos.lo)
             throw std::logic_error("gap bounds in turns");
         Integer denominator;
-        int sixth_order, energy_coefficient;
-        if (!(std::cin>>denominator>>sixth_order>>energy_coefficient) ||
-            denominator<=0 || sixth_order<=0 || energy_coefficient<=0) return 2;
+        int sixth_order, energy_coefficient, projection_coefficient;
+        if (!(std::cin>>denominator>>sixth_order>>energy_coefficient>>projection_coefficient) ||
+            denominator<=0 || sixth_order<=0 || energy_coefficient<=0 || projection_coefficient<=0) return 2;
         const auto midpoint_limit=rat(1,denominator);
         midpoint_sq=square(midpoint_limit);
         individual_midpoint_sq=midpoint_sq*4/5;
-        force_slack=midpoint_sq*132;
+        force_slack=midpoint_sq*123;
         energy_slack=square(midpoint_sq)*energy_coefficient;
+        projection_slack=square(midpoint_sq)*projection_coefficient;
         midpoint_test=square(midpoint_sq)*sixth_order;
         for (auto &row:anchors) for (auto &v:row) {
             if (!(std::cin>>v.cos.lo>>v.cos.hi>>v.sin.lo>>v.sin.hi)) return 2;
