@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "n": 10,
+  "normalization_mass": 9,
+  "pair_classes": 6,
+  "contact_classes": 15,
+  "coverage_nodes_by_class": {
+    "inner": 1122,
+    "mixed": 5030,
+    "outer_step_one": 11743,
+    "outer_step_two": 890,
+    "outer_step_three": 30653,
+    "outer_antipodal": 829
+  },
+  "total_coverage_nodes": 50267,
+  "compensation": "0",
+  "unresolved": 0,
+  "sharp_global_value_proved": true,
+  "equality": "unique up to rotation and point permutation"
+}

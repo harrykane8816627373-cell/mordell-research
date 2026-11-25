@@ -2,21 +2,21 @@
   "class": 3,
   "roots": [
     {
-      "depth": 53,
-      "visited": 2531,
-      "split": 1265,
-      "geometry": 61,
+      "depth": 32,
+      "visited": 407,
+      "split": 203,
+      "geometry": 18,
       "local": 2,
-      "bernstein": 1203,
+      "bernstein": 184,
       "unresolved": 0
     },
     {
-      "depth": 59,
-      "visited": 3333,
-      "split": 1666,
-      "geometry": 107,
-      "local": 3,
-      "bernstein": 1557,
+      "depth": 35,
+      "visited": 483,
+      "split": 241,
+      "geometry": 22,
+      "local": 4,
+      "bernstein": 216,
       "unresolved": 0
     }
   ],
@@ -24,6 +24,10 @@
     18,
     18,
     14
+  ],
+  "contact_radii": [
+    "1/4096",
+    "1/2048"
   ],
   "unresolved": 0
 }

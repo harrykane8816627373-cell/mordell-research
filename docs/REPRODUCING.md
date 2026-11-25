@@ -48,6 +48,7 @@ python -B -S -O ten-point-phase-sweep/verify_all.py
 python -B -S -O ten-point-inner-field/verify_all.py
 python -B -S -O ten-point-outer-recovery/verify_all.py
 python -B -S -O ten-point-pair-perturbation/verify_all.py
+python -B -S -O ten-point-sharp-contacts/verify_sharp.py
 ```
 
 以下入口使用支持 `__int128` 的 GNU C++ 编译器。默认半转径向覆盖重放两个参数图至深度 25，并报告未决盒数。其余两项复核半转分支的五径向严格凹性，以及任意最大构型的内边与外角联合凹性和相位覆盖。可通过 `--compiler` 指定编译器。[半转径向覆盖](../ten-point-half-turn-radial-cover/README.md) · [半转径向凹性](../ten-point-half-turn-radial-concavity/README.md) · [联合凹性与相位覆盖](../ten-point-joint-angular-inner/README.md)
@@ -73,15 +74,12 @@ python -B -S -O ten-point-half-turn-four-angle/verify_all.py
 
 初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。24,681 节点的曲率核给出 1.0024 倍上界，新增角序分区重放 98,557 个节点，将其收紧到候选值的 1.0022 倍。D₂ 条件分类重放 623,198 个节点，计算范围只包括已经具有 D₂ 对称的构型。Windows 检出若会转换换行符，可用 `git clone -c core.autocrlf=false URL` 保留已有证书所固定的源文件字节。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
 
-### 十点分角类核的精确接触
+### 十点全局锐界的最终证书
 
-接受十点候选根、径向带、内边、相邻外角和近对径配对后，运行以下标准库入口。第一项重算 44 阶接触子式、两个二阶变分块、12 个 Gram 块和 15 个接触邻域，并核验原负缺额点现为正。后三项重放整个内内类以及分别相隔两位、四位的整个外外类。 [核及适用范围](../ten-point-sharp-contacts/README.md)
+接受十点候选根、径向带、内边、相邻外角和近对径配对后，运行以下标准库入口。它重算 44 阶接触子式、两个二阶变分块、12 个 Gram 块、15 个接触邻域以及六类点对的 50,267 个零补偿覆盖节点，并逐项比对固定报告。 [完整证明](../ten-point-sharp-contacts/README.md) · [全域复核报告](../ten-point-sharp-contacts/global_verification_report.json)
 
 ```text
-python -B -S -O ten-point-sharp-contacts/verify_all.py
-python -B -S -O ten-point-sharp-contacts/cover.py
-python -B -S -O ten-point-sharp-contacts/cover.py --outer-step-two
-python -B -S -O ten-point-sharp-contacts/antipodal.py
+python -B -S -O ten-point-sharp-contacts/verify_sharp.py
 ```
 
 ## 编译十二点英文论文

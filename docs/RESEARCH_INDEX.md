@@ -2,7 +2,7 @@
 
 ## 十点全局范围与候选锐界
 
-质量 10 下的真实候选值 C₁₀ ≈ 5.3823025896 × 10¹⁰。严格证明 C₁₀ ≤ M₁₀ < (1253/1250) C₁₀。全局锐值尚未确定。
+质量 10 下，M₁₀ = C₁₀ ≈ 5.3823025895657 × 10¹⁰，且最大构型在旋转与重排下唯一。精确核在全部六类点对域上实现零补偿。 [十点全局证明](../ten-point-sharp-contacts/README.md)
 
 |阶段|证明与计算|
 |---|---|
@@ -17,8 +17,9 @@
 |外点角序与配对|[统一负曲率](../ten-point-outer-angles/README.md)给出固定数据的唯一角向驻点与残差上界。[角矩与短弧计数](../ten-point-outer-moments/README.md)确定循环次序下的四组近对径配对。|
 |精确候选与局部锐界|[五变量代数候选、15 类接触与秩 44](../ten-point-contact-geometry/README.md)；[反射抵消与 1/100 轨道邻域](../ten-point-local-basin/README.md)。|
 |配对中点|[五维中点方程与能量比较](../ten-point-pair-midpoints/README.md)给出条件中心对称和更宽的局部锐界。|
+|全局锐界与唯一性|[分角类精确核](../ten-point-sharp-contacts/README.md)在 15 类候选点对上取等，并覆盖全部六类必要域。|
 
-[后续证书路线](TEN_POINT_RESEARCH.md)说明怎样将精确人数和二阶驻点条件用于下一轮核构造。
+[十点研究过程](TEN_POINT_RESEARCH.md)记录局部归约和分角类精确核的构造。
 
 ## 十二点已证全局锐界
 

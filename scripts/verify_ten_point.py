@@ -19,21 +19,25 @@ SUITES = ('maximizer-domain', 'ten-point-collapse-domain', 'ten-point-ward-upper
           'ten-point-inner-field', 'ten-point-outer-recovery', 'ten-point-pair-perturbation')
 
 
+def replay(suite,entry='verify_all.py',record='verification_report.json'):
+    process = subprocess.run([sys.executable, '-B', '-S', '-O', str(ROOT/suite/entry)],
+                             cwd=ROOT, capture_output=True, encoding='utf-8', timeout=1200)
+    if process.returncode:
+        raise ArithmeticError(suite + ': ' + process.stderr[-3000:] + process.stdout[-2000:])
+    report = json.loads(process.stdout)
+    if report['passed'] is not True:
+        raise ArithmeticError(suite + ': acceptance flag')
+    saved = json.loads((ROOT/suite/record).read_bytes())
+    if report != saved:
+        raise ArithmeticError(suite + ': replay differs from the recorded report')
+    print('PASS '+suite+'/'+entry, flush=True)
+
+
 def main():
     for suite in SUITES:
-        process = subprocess.run([sys.executable, '-B', '-S', '-O', str(ROOT/suite/'verify_all.py')],
-                                 cwd=ROOT, capture_output=True, encoding='utf-8', timeout=1200)
-        if process.returncode:
-            raise ArithmeticError(suite + ': ' + process.stderr[-3000:] + process.stdout[-2000:])
-        report = json.loads(process.stdout)
-        if report['passed'] is not True:
-            raise ArithmeticError(suite + ': acceptance flag')
-        saved = json.loads((ROOT/suite/'verification_report.json').read_bytes())
-        if report != saved:
-            raise ArithmeticError(suite + ': replay differs from the recorded report')
-        print('PASS '+suite+'/verify_all.py', flush=True)
-    print('PASS n10 global bounds, angle and radial reductions, midpoint comparison, '
-          'D2-conditional classification, half-turn chart, phase covers, and pair perturbation.', flush=True)
+        replay(suite)
+    replay('ten-point-sharp-contacts','verify_sharp.py','global_verification_report.json')
+    print('PASS n10 sharp global value and unique maximizing orbit.', flush=True)
 
 
 if __name__ == '__main__':

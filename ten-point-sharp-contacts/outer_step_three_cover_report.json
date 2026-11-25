@@ -1,0 +1,25 @@
+{
+  "class": 4,
+  "roots": [
+    {
+      "depth": 33,
+      "visited": 30653,
+      "split": 15326,
+      "geometry": 7414,
+      "local": 31,
+      "bernstein": 7882,
+      "unresolved": 0
+    }
+  ],
+  "tensor_shape": [
+    18,
+    18,
+    14
+  ],
+  "contact_radii": [
+    "1/2048",
+    "1/512",
+    "1/512"
+  ],
+  "unresolved": 0
+}

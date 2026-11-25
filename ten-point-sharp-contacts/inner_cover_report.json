@@ -1,21 +1,21 @@
 {
   "class": 0,
   "normal": {
-    "depth": 9,
-    "visited": 81,
-    "split": 40,
-    "geometry": 20,
+    "depth": 15,
+    "visited": 613,
+    "split": 306,
+    "geometry": 176,
     "local": 0,
-    "bernstein": 21,
+    "bernstein": 131,
     "unresolved": 0
   },
   "face": {
-    "depth": 33,
-    "visited": 425,
-    "split": 212,
-    "geometry": 32,
-    "local": 1,
-    "bernstein": 180,
+    "depth": 38,
+    "visited": 509,
+    "split": 254,
+    "geometry": 34,
+    "local": 5,
+    "bernstein": 216,
     "unresolved": 0
   },
   "unresolved": 0

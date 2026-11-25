@@ -284,20 +284,43 @@ def local_boxes(contacts,nodes,transforms,weights,radii):
     return result
 
 
-def repaired_pair(nodes,transforms,weights,budget,spans):
-    u0,v0,t0 = F(119,100),F(119,100),F(3511,5000)
-    lo,hi = spans[1]
-    need(BANDS[1][0]<u0==v0<BANDS[1][1] and lo<t0/u0<hi and u0+v0-2*t0>F(2,5),
-         'rational pair strictly inside the radius, angle and distance bands')
-    u,v,t = map(exact,(u0,v0,t0))
-    c = {'u':u,'v':v,'t':t,'layers':(1,1),'class':2}
+def rational_gap(nodes,transforms,weights,budget,spans,cls,point):
+    u0,v0,t0=point
+    bands=(0,1) if cls==1 else (1,1)
+    for radius,band in zip((u0,v0),bands):
+        lo,hi=BANDS[band]
+        need(lo<radius<hi,'rational witness in its radial band')
+    need(u0<=v0 and t0*t0<u0*v0 and u0+v0-2*t0>F(2,5),'physical rational witness')
+    u,v,t=map(exact,point)
+    if cls>1:
+        lo,hi=map(exact,spans[cls-1])
+        cosine=t/sharp.sym.sqrt_ball(u*v,Ball,geometry.SCALE)
+        need(lo.hi<cosine.lo<=cosine.hi<hi.lo,'rational witness in its angular class')
+    c={'u':u,'v':v,'t':t,'layers':bands,'class':cls}
     jets = columns(c,nodes,transforms)
     h = (budget/45-1+(u+v)*exact(F(5,9))+dot(weights,[j.v for j in jets])+
          rigidity_term(Jet(u),Jet(v),nodes).v)
-    gap = h-sharp.log_ball(u+v-2*t)
+    return h-sharp.log_ball(u+v-2*t)
+
+
+def repaired_pair(nodes,transforms,weights,budget,spans):
+    point=F(119,100),F(119,100),F(3511,5000)
+    gap=rational_gap(nodes,transforms,weights,budget,spans,2,point)
     floor = F(1,250000)
     need(gap.lo>exact(floor).hi,'repaired gap is strictly positive')
-    return {'class':2,'point':list(map(str,(u0,v0,t0))),'strict_gap_lower':str(floor)}
+    return {'class':2,'point':list(map(str,point)),'strict_gap_lower':str(floor)}
+
+
+def repaired_witnesses(nodes,transforms,weights,budget,spans):
+    witnesses=((1,(F(143,1000),F(127,100),F(39,100)),F(1,5000)),
+               (4,(F(8901,10000),F(8901,10000),F(-6989,10000)),F(3,100000)),
+               (1,(F(158999,10**6),F(890001,10**6),F(47,500)),F(1,500000)))
+    result=[]
+    for cls,point,lower in witnesses:
+        gap=rational_gap(nodes,transforms,weights,budget,spans,cls,point)
+        need(gap.lo>exact(lower).hi,'positive gap at the former residual witness')
+        result.append({'class':cls,'point':list(map(str,point)),'strict_gap_lower':str(lower)})
+    return result
 
 
 def exact_kernel():
@@ -315,6 +338,7 @@ def exact_kernel():
     grams,variations=check_grams(weights)
     boxes=local_boxes(contacts,nodes,transforms,weights,list(map(F,seed['local_radii'])))
     repaired=repaired_pair(nodes,transforms,weights,budget,spans)
+    previous=repaired_witnesses(nodes,transforms,weights,budget,spans)
     report = {'passed':True,'mass':9,'angular_class_cosines':{str(k):list(map(str,r)) for k,r in spans.items()},
             'pair_counts_by_class':counts,'contact_matrix_shape':[len(matrix),len(weights)],
             'contact_rank':44,'contact_minor_pivot_lower_power':sharp.lower_power(minor)-1,
@@ -322,8 +346,7 @@ def exact_kernel():
             'positive_second_variation_blocks':len(variations),
             'second_variation_pivot_lower_power':sharp.lower_power(min(variations))-1,
             'radial_rigidity_weight':str(RIGIDITY_WEIGHT),
-            'local_boxes':boxes,'rational_repaired_pair':repaired,
-            'continuous_complement_covered':False,'sharp_global_value_proved':False}
+            'local_boxes':boxes,'rational_repaired_pair':repaired,'additional_repaired_pairs':previous}
     return report,(weights,nodes,transforms,budget,spans)
 
 

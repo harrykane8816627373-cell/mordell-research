@@ -10,10 +10,10 @@
     "1/1024"
   ],
   "depth": 23,
-  "visited": 853,
-  "split": 426,
-  "geometry": 125,
+  "visited": 829,
+  "split": 414,
+  "geometry": 121,
   "local": 2,
-  "bernstein": 300,
+  "bernstein": 292,
   "unresolved": 0
 }

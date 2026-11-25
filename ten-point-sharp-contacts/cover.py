@@ -3,7 +3,7 @@
 import argparse
 from fractions import Fraction as F
 from itertools import combinations
-from math import lcm,prod
+from math import comb,factorial,lcm,prod
 import json
 
 import verify_all as model
@@ -156,6 +156,50 @@ class Packed(packed_engine.Packed):
         return ((control+self.high-bound)&self.high)==self.high
 
 
+class CubicPacked(Packed):
+    def __init__(self,shape):
+        super().__init__(shape)
+        model.need(len(shape)==3 and min(shape)>=4,'three cubic Bernstein coordinates')
+        def falling(n,r):
+            return prod(range(n-r+1,n+1))
+        self.log_terms=[]
+        for i in range(4):
+            for j in range(4-i):
+                for k in range(4-i-j):
+                    powers=(i,j,k)
+                    degree=sum(powers)
+                    lanes=[(self.ones,1)]
+                    denominator=1
+                    for n,r,masks in zip(self.degrees,powers,self.axisones):
+                        if r:
+                            lanes=[(a&b,c*falling(p,r)) for a,c in lanes
+                                   for p,b in enumerate(masks) if p>=r]
+                            denominator*=falling(n,r)
+                    mask=sum(a*c for a,c in lanes)
+                    multinomial=factorial(degree)//prod(factorial(r) for r in powers)
+                    self.log_terms.append((powers,degree,mask,denominator,multinomial))
+
+    def dominates(self,control,box):
+        (ul,uh),(vl,vh),(tl,th)=box
+        a=uh+vh-2*tl
+        q=F(engine.log_upper_lanes(a),S)+F(3,2)
+        d=ul+vl-2*tl
+        z=d-a
+        # Taylor upper bound for d² log d, expanded at the coordinate origin.
+        coefficients=((q*d-2*a)*d+a*a/2+z**3/(3*a),2*(q*d-a)+z*z/a,q+z/a,1/(3*a))
+        widths=(uh-ul,vh-vl,-2*(th-tl))
+        threshold=BIAS*self.ones
+        lo=hi=BIAS
+        for powers,k,mask,denominator,multinomial in self.log_terms:
+            coefficient=multinomial*coefficients[k]*prod(w**r for w,r in zip(widths,powers))
+            lane=packed_engine.ceilq(S*coefficient/denominator)
+            threshold+=lane*mask
+            lo+=min(0,lane*denominator)
+            hi+=max(0,lane*denominator)
+        model.need(0<=lo<=hi<1<<(W-2),'cubic logarithm lane bounds')
+        return ((control+self.high-threshold)&self.high)==self.high
+
+
 def roots(cls,spans):
     i,j=CLASSES[cls]
     u,v=model.BANDS[i],model.BANDS[j]
@@ -231,9 +275,9 @@ def split_cover(packed,root,control,exclude,local,accept,node_limit):
     return {'depth':deepest,**counts}
 
 
-def initial_data(poly,box):
+def initial_data(poly,box,packing=Packed):
     shape=tuple(1+max(p[i] for p in poly) for i in range(len(box)))
-    packed=Packed(shape)
+    packed=packing(shape)
     model.need(len(box)!=3 or box[2][1]<=0 or box[2][0]>=0, 'fixed dot-product sign in a root box')
     negative=len(box)==3 and box[2][1]<=0
     lower={p:F(a.hi if negative and p[2]%2 else a.lo,model.geometry.SCALE) for p,a in poly.items()}
@@ -242,6 +286,72 @@ def initial_data(poly,box):
 
 def nested(box,near):
     return all(c<=a<=b<=d for (a,b),(c,d) in zip(box,near))
+
+
+def shifted_polynomial(poly,centers):
+    for axis,center in enumerate(centers):
+        powers=[model.ONE]
+        for _ in range(max(index[axis] for index in poly)):
+            powers.append(center*powers[-1])
+        shifted={}
+        for index,value in poly.items():
+            degree=index[axis]
+            for k in range(degree+1):
+                key=index[:axis]+(k,)+index[axis+1:]
+                term=value*powers[degree-k]*comb(degree,k)
+                shifted[key]=shifted.get(key,ZERO)+term
+        poly=shifted
+    return poly
+
+
+def differentiate(poly,axis):
+    return {p[:axis]+(p[axis]-1,)+p[axis+1:]:v*p[axis] for p,v in poly.items() if p[axis]}
+
+
+def cubic_contact_box(poly,row):
+    """Enclose the Hessian of the cubic lower bound at an interior contact."""
+    model.need(row['class'] in (1,2,3,4),'interior contact')
+    old=F(row['radius'])
+    grid=model.geometry.SCALE
+    centers=[]
+    for lo,hi in (tuple(map(F,pair)) for pair in row['cover_box']):
+        a,b=(hi-old)*grid,(lo+old)*grid
+        model.need(a.denominator==b.denominator==1 and a<=b,'certified contact enclosure')
+        centers.append(model.Ball(a.numerator,b.numerator))
+    d0=centers[0]+centers[1]-2*centers[2]
+    lower=shifted_polynomial(poly,centers)
+    for m,value in ((2,model.sharp.log_ball(d0)+model.exact(F(3,2))),(3,model.ONE/(3*d0))):
+        for i in range(m+1):
+            for j in range(m-i+1):
+                k=m-i-j
+                key=(i,j,k)
+                lower[key]=lower.get(key,ZERO)-value*(comb(m,i)*comb(m-i,j)*(-2)**k)
+
+    first=[differentiate(lower,i) for i in range(3)]
+    hessians={(i,j):differentiate(first[i],j) for i in range(3) for j in range(i,3)}
+    max_degree=max(max(p) for p in lower)
+    for power in range(9,25):
+        radius=F(1,2**power)
+        width=model.exact(radius).hi
+        if d0.lo<=4*width:
+            continue
+        powers=[model.ONE,model.Ball(-width,width)]
+        for k in range(2,max_degree+1):
+            upper=model.exact(radius**k).hi
+            powers.append(model.Ball(-upper if k%2 else 0,upper))
+        matrix=[[ZERO]*3 for _ in range(3)]
+        for (i,j),hessian in hessians.items():
+            bounded=sum((v*powers[a]*powers[b]*powers[c] for (a,b,c),v in hessian.items()),ZERO)
+            matrix[i][j]=matrix[j][i]=bounded
+        try:
+            model.sharp.ldl_lower(matrix,'cubic contact Hessian')
+        except ArithmeticError:
+            continue
+        box=tuple((F(z.hi,grid)-radius,F(z.lo,grid)+radius) for z in centers)
+        model.need(all(a<b for a,b in box),'nonempty cubic contact box')
+        return box,str(radius)
+    # The original box was already verified for the gap itself.
+    return tuple(tuple(map(F,p)) for p in row['cover_box']),str(old)
 
 
 def inner_cover(kernel,report,node_limit):
@@ -299,14 +409,20 @@ def cover_class(cls,kernel,report,node_limit):
     _,_,_,_,spans=kernel
     poly=numerator(cls,kernel)
     inner=inner_bounds()
-    local=[tuple(tuple(map(F,b)) for b in row['cover_box']) for row in report['local_boxes'] if row['class']==cls]
+    rows=[row for row in report['local_boxes'] if row['class']==cls]
+    if cls in (1,2,3,4):
+        contact_bounds=[cubic_contact_box(poly,row) for row in rows]
+    else:
+        contact_bounds=[(tuple(tuple(map(F,b)) for b in row['cover_box']),row['radius']) for row in rows]
+    local=[box for box,radius in contact_bounds]
     boxes=roots(cls,spans)
     counts=[]
     for root in boxes:
-        packed,control=initial_data(poly,root)
+        packed,control=initial_data(poly,root,CubicPacked)
         counts.append(split_cover(packed,root,control,lambda b:outside(b,cls,spans,inner),
                                   lambda b:any(nested(b,near) for near in local),packed.dominates,node_limit))
     return {'class':cls,'roots':counts,'tensor_shape':list(packed.shape),
+            'contact_radii':[radius for box,radius in contact_bounds],
             'unresolved':sum(row['unresolved'] for row in counts)}
 
 
@@ -315,8 +431,14 @@ def main():
     mode=parser.add_mutually_exclusive_group()
     mode.add_argument('--explore',type=int,nargs='+',choices=range(1,6),
                       help='run an exploratory cover of the selected pair classes')
-    mode.add_argument('--outer-step-two',action='store_true',
+    mode.add_argument('--outer-step-one',dest='certified',action='store_const',const=2,
+                      help='replay the complete cover for adjacent outer pairs')
+    mode.add_argument('--outer-step-two',dest='certified',action='store_const',const=3,
                       help='replay the complete cover for outer pairs two positions apart')
+    mode.add_argument('--outer-step-three',dest='certified',action='store_const',const=4,
+                      help='replay the complete cover for outer pairs three positions apart')
+    mode.add_argument('--mixed',dest='certified',action='store_const',const=1,
+                      help='replay the complete inner-outer cover')
     parser.add_argument('--node-limit',type=int,default=100000)
     parser.add_argument('--record-report',action='store_true')
     args=parser.parse_args()
@@ -327,9 +449,11 @@ def main():
         for cls in args.explore:
             print(json.dumps(cover_class(cls,kernel,report,args.node_limit)),flush=True)
         return
-    if args.outer_step_two:
-        result=cover_class(3,kernel,report,args.node_limit)
-        path=model.HERE/'outer_step_two_cover_report.json'
+    if args.certified:
+        result=cover_class(args.certified,kernel,report,args.node_limit)
+        filename={1:'mixed_cover_report.json',2:'outer_step_one_cover_report.json',3:'outer_step_two_cover_report.json',
+                  4:'outer_step_three_cover_report.json'}[args.certified]
+        path=model.HERE/filename
     else:
         result=inner_cover(kernel,report,args.node_limit)
         path=model.HERE/'inner_cover_report.json'
