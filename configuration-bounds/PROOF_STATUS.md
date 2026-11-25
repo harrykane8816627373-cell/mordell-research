@@ -14,9 +14,15 @@
 
 先前的 15%、3%、301/300、379/378 和 15000/14999 上界作为阶段证书归入[研究索引](../docs/RESEARCH_INDEX.md)。现行十二点结论由零补偿锐界给出。
 
-## 十点全局范围与局部锐界
+## 十点全局锐值与等号
 
-**M₁₀ = C₁₀。** 质量 10 下的全局锐值约为 5.3823025895657 × 10¹⁰。在旋转和重排下，内层对径点和两个同心矩形组成唯一的全局最大构型。分角类精确核用 50,267 个零补偿节点覆盖全部六类必要点对域。 [完整证明](../ten-point-sharp-contacts/README.md) · [全域复核报告](../ten-point-sharp-contacts/global_verification_report.json)
+**已证 M₁₀ = C₁₀。** 总平方半径为 10 时，锐值位于 [53823025895.656995698750, 53823025895.656995698751]。最大构型由一对内层对径点和两个同心矩形组成，三层点数为 **2、4、4**，在旋转和点重排下唯一。 [五变量代数定义与精确值](../ten-point-contact-geometry/README.md) · [全局证明](../ten-point-sharp-contacts/README.md)
+
+同一个分角类精确核在 15 类候选点对上取等，并用 50,267 个节点覆盖全部六类必要点对域。精确证书返回零补偿、零未决。等号由径向罚项和低阶谐波矩恢复。 [全域复核报告](../ten-point-sharp-contacts/global_verification_report.json) · [依赖与复现命令](../docs/REPRODUCING.md#十点全局锐界的最终证书)
+
+英文预印本第 1 版已由 Zenodo 归档。 [DOI 10.5281/zenodo.24537890](https://doi.org/10.5281/zenodo.24537890) · [英文 PDF](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [LaTeX 与引用格式](../ten-point-sharp-contacts/manuscript/README.md)
+
+### 十点必要域与阶段证书
 
 质量 9 下，任一最大构型恰有两个平方半径在 (0.084, 0.159) 内的点，其余八个平方半径在 (0.89, 1.271) 内。两内点中点模小于 0.087，平方距离在 (0.43, 0.53) 内，夹角余弦小于 −0.87。外点平方半径跨度严格大于 1/100。 [逐点径向范围](../ten-point-angular-radii/README.md) · [内点对证书](../ten-point-inner-edge/README.md) · [径向离散](../ten-point-radial-dispersion/README.md)
 
@@ -83,6 +89,8 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |六、七点含原点类|不调用上述分类的锐界与方差惩罚|[独立证明](../earlier-results/six_seven_origin_proof.tex)；结论仅适用于含原点类|
 |八点|M₈=8²⁸/7²¹，等号恰为原点加半径√(8/7)的正七边形，允许旋转与重排；质量7下非零二三阶矩挑战者系统为空|[Ji–Xu–Yu证书复现](../eight-point-global/README.md)、[既有严格子集定理接合](../eight-point-global/PROOF_BRIDGE.md)；固定外部代码、原作者署名及软件依赖明确保留，未声称外部同行评审或形式化证明|
 |九点|M₉=9³⁶/8²⁸；唯一等号形状为中心正八边形|[Ji–Xu–Yu证书复现及完整证明](../nine-point-global/README.md)；8个上游检查、完整初始域31613个盒、未决0；[实际执行记录](../nine-point-global/reports/replay.json)|
+|十点|M₁₀=C₁₀，三层点数 2、4、4；一对内层对径点与两个同心矩形给出唯一等号轨道|[六类点对全域证明](../ten-point-sharp-contacts/README.md) · [英文预印本](https://doi.org/10.5281/zenodo.24537890)|
+|十一点|本项目尚未确定全局锐值与全部最大构型|[一般点数和既有必要条件](../general-structure/README.md)|
 |十二点|M₁₂=C₁₂，三层人口3、3、6的D₃构型|[零补偿覆盖及唯一性](../twelve-point-sharp-global/README.md)|
 |n≥10|中心正 (n−1) 边形严格全局次优|[十点整数比较与转换证明](../docs/TEN_POINT_TRANSITION.md)、[Ji–Xu–Yu §5](https://arxiv.org/pdf/2611.03088v1)；n≥11 使用 Gueron–Shafrir 不稳定性定理；十点实际最优者见本页全局锐界|
 |中心正多边形类|5≤n≤10模旋转严格局部最大；n=10使用四阶项，n≥11有显式增益扰动|[一般 n 审核第6、7节](../earlier-results/general_n_proof.md)；五点中心正方形、十点中心正九边形仍全局次优|
@@ -146,7 +154,7 @@ M_n=\max_{\sum_i|z_i|^2=n}\prod_{i\lt j}|z_i-z_j|^2,\qquad N=\frac{n(n-1)}2.
 |---|---|
 |十点四阶项−510及严格局部最大|完整参数规范、横向消元、旋转切片及余项在原始/修订主稿；原入口已精确核验，仍为全局次优构型|
 |完整网格定义及误差证明|原稿量词与证明齐全；历史实际全枚举1874376集合，一般 n 大型网格未执行|
-|十点超过121/100的保存整数构型|坐标、中心化、二阶矩、全部距离乘积已完整复算；是严格可达下界，没有确定M₁₀|
+|十点超过121/100的保存整数构型|坐标、中心化、二阶矩、全部距离乘积已完整复算；给出当时的严格可达下界；现行锐值和唯一性见[十点全局证明](../ten-point-sharp-contacts/README.md)|
 |六点特定Hermite majorant障碍|原节点、插值及最大修正齐全；本轮重放verify_hermite.py通过，修正后缺口仍大于3/100；仅限制该方法|
 
 以上状态已同步到[原一般 n 审核](../earlier-results/general_n_proof.md)及[既有成果首页](../earlier-results/README.md)，不是只增设本页链接。[状态记录](STATUS_UPDATE.md)列出当前变更；原始主稿、历史ZIP和旧SHA保留原字节，当前网页及来源索引单独更新。

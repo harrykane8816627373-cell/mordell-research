@@ -72,7 +72,7 @@ python -B -S -O ten-point-half-turn-phase-sweep/verify_all.py
 python -B -S -O ten-point-half-turn-four-angle/verify_all.py
 ```
 
-初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。24,681 节点的曲率核给出 1.0024 倍上界，新增角序分区重放 98,557 个节点，将其收紧到候选值的 1.0022 倍。D₂ 条件分类重放 623,198 个节点，计算范围只包括已经具有 D₂ 对称的构型。Windows 检出若会转换换行符，可用 `git clone -c core.autocrlf=false URL` 保留已有证书所固定的源文件字节。 [研究索引](RESEARCH_INDEX.md#十点全局范围与候选锐界)
+初始上界核重放 149,817 个节点，内层人数的最后一步重放 96,752 个节点。先前两次分带覆盖分别重放 191,632 和 328,752 个节点。24,681 节点的曲率核给出 1.0024 倍上界，新增角序分区重放 98,557 个节点，将其收紧到候选值的 1.0022 倍。D₂ 条件分类重放 623,198 个节点，计算范围只包括已经具有 D₂ 对称的构型。Windows 检出若会转换换行符，可用 `git clone -c core.autocrlf=false URL` 保留已有证书所固定的源文件字节。 [研究索引](RESEARCH_INDEX.md#十点全局锐界与唯一性)
 
 ### 十点全局锐界的最终证书
 
@@ -90,7 +90,7 @@ python -B -S -O ten-point-sharp-contacts/verify_sharp.py
 latexmk -pdf mordell-n10-proof.tex
 ```
 
-[已编译 PDF](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [单文件 LaTeX 源码](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex)
+[已编译 PDF](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [单文件 LaTeX 源码](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex) · [Zenodo 第 1 版与 DOI](https://doi.org/10.5281/zenodo.24537890)
 
 ## 编译十二点英文论文
 

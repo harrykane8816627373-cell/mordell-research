@@ -1,12 +1,12 @@
 # 仓库整理与状态约定
 
-更新于 **2026-11-09**。 [证明状态](../configuration-bounds/PROOF_STATUS.md) · [研究索引](RESEARCH_INDEX.md)
+更新于 **2026-11-26**。 [证明状态](../configuration-bounds/PROOF_STATUS.md) · [研究索引](RESEARCH_INDEX.md)
 
-## 十二点论文归档
+## 十点与十二点论文归档
 
-英文论文及 LaTeX 源文件放在十二点锐界专题的 [论文子目录](../twelve-point-sharp-global/manuscript/README.md)。论文引用固定的证书提交，阅读与复现入口列在仓库首页。当前结果集中在[证明状态](../configuration-bounds/PROOF_STATUS.md)，较早的上界和局部证书按阶段收录在[研究索引](RESEARCH_INDEX.md)。
+十点全局锐界与唯一性已完成，英文预印本第 1 版由 Zenodo 归档。GitHub 的论文目录保存 PDF、LaTeX、引用格式与复现命令。 [十点论文目录](../ten-point-sharp-contacts/manuscript/README.md) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24537890)
 
-GitHub About 标注十二点全局锐界、八九点证书复现及一般构型研究。历史 Releases 对应各自快照，证明范围以当时的材料为准。 [历史发布](https://github.com/harrykane8816627373-cell/mordell-research/releases)
+十点和十二点论文分别引用固定的证书提交。仓库首页和 GitHub About 提供当前结果入口，研究索引保留各阶段的上界与局部证书。历史 Releases 记录发布时的证明范围。 [十二点论文目录](../twelve-point-sharp-global/manuscript/README.md) · [历史发布](https://github.com/harrykane8816627373-cell/mordell-research/releases)
 
 ## 2026-11-04 整理记录
 
