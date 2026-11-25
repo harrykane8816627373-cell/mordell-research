@@ -1,0 +1,29 @@
+{
+  "class": 3,
+  "roots": [
+    {
+      "depth": 53,
+      "visited": 2531,
+      "split": 1265,
+      "geometry": 61,
+      "local": 2,
+      "bernstein": 1203,
+      "unresolved": 0
+    },
+    {
+      "depth": 59,
+      "visited": 3333,
+      "split": 1666,
+      "geometry": 107,
+      "local": 3,
+      "bernstein": 1557,
+      "unresolved": 0
+    }
+  ],
+  "tensor_shape": [
+    18,
+    18,
+    14
+  ],
+  "unresolved": 0
+}

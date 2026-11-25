@@ -306,14 +306,17 @@ def cover_class(cls,kernel,report,node_limit):
         packed,control=initial_data(poly,root)
         counts.append(split_cover(packed,root,control,lambda b:outside(b,cls,spans,inner),
                                   lambda b:any(nested(b,near) for near in local),packed.dominates,node_limit))
-    return {'class':cls,'roots':counts,'tensor_shape':packed.shape,
+    return {'class':cls,'roots':counts,'tensor_shape':list(packed.shape),
             'unresolved':sum(row['unresolved'] for row in counts)}
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--explore',type=int,nargs='+',choices=range(1,6),
-                        help='run partial covers of the other five classes')
+    mode=parser.add_mutually_exclusive_group()
+    mode.add_argument('--explore',type=int,nargs='+',choices=range(1,6),
+                      help='run an exploratory cover of the selected pair classes')
+    mode.add_argument('--outer-step-two',action='store_true',
+                      help='replay the complete cover for outer pairs two positions apart')
     parser.add_argument('--node-limit',type=int,default=100000)
     parser.add_argument('--record-report',action='store_true')
     args=parser.parse_args()
@@ -324,9 +327,13 @@ def main():
         for cls in args.explore:
             print(json.dumps(cover_class(cls,kernel,report,args.node_limit)),flush=True)
         return
-    result=inner_cover(kernel,report,args.node_limit)
-    model.need(result['unresolved']==0,'complete zero-compensation inner edge cover')
-    path=model.HERE/'inner_cover_report.json'
+    if args.outer_step_two:
+        result=cover_class(3,kernel,report,args.node_limit)
+        path=model.HERE/'outer_step_two_cover_report.json'
+    else:
+        result=inner_cover(kernel,report,args.node_limit)
+        path=model.HERE/'inner_cover_report.json'
+    model.need(result['unresolved']==0,'complete zero-compensation pair cover')
     encoded=json.dumps(result,indent=2)+'\n'
     if args.record_report:
         path.write_bytes(encoded.encode())

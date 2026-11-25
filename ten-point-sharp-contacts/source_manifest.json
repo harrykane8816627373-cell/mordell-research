@@ -1,6 +1,6 @@
 {
-  "ten-point-sharp-contacts/verify_all.py": "4c89a3768cec4b69f4255e02123d4592d9563a56c787ca1ccfff90638c405fc3",
-  "ten-point-sharp-contacts/seed.json": "76bfbde20030fbec10f0df5121c35d4891207a12e6446ca14e14d1f1cd55849a",
+  "ten-point-sharp-contacts/verify_all.py": "8f9774441d2529768f7bcbb803eed504c6df85dd3f0f0fed01dbb1a5a861d72f",
+  "ten-point-sharp-contacts/seed.json": "2472db08441cdb4095de39225a4b6a9084e42c4ce64fbf32ede4ba7accb2c666",
   "ten-point-angular-radii/verification_report.json": "5e0bbeef791471392f367c747f8db15fc9576aae95591b30c1903505e180e829",
   "ten-point-outer-gap/verification_report.json": "1da6da3f193d899b2814d8124edc1a058826a5d9c3454f62168d266da97ca89f",
   "ten-point-tight-pairing/verification_report.json": "eb70dccd9030a8dd4b97d1aa5f1634043bbb51932ae2a2e501b3772275632c31",
@@ -17,10 +17,11 @@
   "candidate-global-screen/verify_symmetry.py": "3fd1dadd934cb5d4a918bd2c4b5171372aedb1334255dd3619c79aed6bde5283",
   "candidate-global-screen/symmetry_certificates.json": "29e329e70d8267885da025ca99283516395d9efe5484845d2f851c5e955e3bf8",
   "twelve-point-sharp-contacts/verify_all.py": "b83b9e456d7a41b7b0fb1b60d1742fe51e5e9af9405a258837cd94896414d3cc",
-  "ten-point-sharp-contacts/cover.py": "0eddc17415021b4ac5aadb54aaf3289e37d073a60529c2dc1d91c65b8bb2a72f",
+  "ten-point-sharp-contacts/cover.py": "2b9392b0bf0b976040f7e3b1ae0c7225c4d93f1666ec2097f7700ea8db0296dd",
   "twelve-point-sharp-global/verify_all.py": "201d2e1d93e58dd4418165992ff510d61161c087c31d7706483c730825a83270",
   "twelve-point-kernel-upper/verify_cover.py": "eae6343ff98adfe86191aa4d12b36bfc403bf7f1886b6db5da228b693e81a996",
   "ten-point-inner-edge/verification_report.json": "5488f918f56f6a6a6ef2eb11f87ef030e3166701c1a433853b67345031dec7a5",
-  "ten-point-sharp-contacts/README.md": "0ea7607f1355977e3de9ad724f78937b2b1b46b00c00668edb8b3172a6b0f461",
-  "maximizer-domain/README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db"
+  "ten-point-sharp-contacts/README.md": "b09d398c7ee0e430e36ea3fe7605dd340db99464185c7868dcba43eb638e23d5",
+  "maximizer-domain/README.md": "a6057e66dc93f3a1f46432c5d7278dd13d1b1c52beaed0a1f4f4345038a373db",
+  "ten-point-sharp-contacts/antipodal.py": "e920919a2e4df7e6b26ef6127c829b98a1119b05c03605d40f920fe74a36ad6f"
 }

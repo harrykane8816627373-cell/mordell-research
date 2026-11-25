@@ -1,0 +1,19 @@
+{
+  "class": 5,
+  "tensor_shape": [
+    35,
+    35,
+    14
+  ],
+  "contact_tube_radii": [
+    "1/256",
+    "1/1024"
+  ],
+  "depth": 23,
+  "visited": 853,
+  "split": 426,
+  "geometry": 125,
+  "local": 2,
+  "bernstein": 300,
+  "unresolved": 0
+}

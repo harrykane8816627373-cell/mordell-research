@@ -284,7 +284,7 @@ def local_boxes(contacts,nodes,transforms,weights,radii):
     return result
 
 
-def negative_pair(nodes,transforms,weights,budget,spans):
+def repaired_pair(nodes,transforms,weights,budget,spans):
     u0,v0,t0 = F(119,100),F(119,100),F(3511,5000)
     lo,hi = spans[1]
     need(BANDS[1][0]<u0==v0<BANDS[1][1] and lo<t0/u0<hi and u0+v0-2*t0>F(2,5),
@@ -295,9 +295,9 @@ def negative_pair(nodes,transforms,weights,budget,spans):
     h = (budget/45-1+(u+v)*exact(F(5,9))+dot(weights,[j.v for j in jets])+
          rigidity_term(Jet(u),Jet(v),nodes).v)
     gap = h-sharp.log_ball(u+v-2*t)
-    ceiling = F(-1,40000)
-    need(gap.hi<exact(ceiling).lo,'strict negative gap for the current seed')
-    return {'class':2,'point':list(map(str,(u0,v0,t0))),'strict_gap_upper':str(ceiling)}
+    floor = F(1,250000)
+    need(gap.lo>exact(floor).hi,'repaired gap is strictly positive')
+    return {'class':2,'point':list(map(str,(u0,v0,t0))),'strict_gap_lower':str(floor)}
 
 
 def exact_kernel():
@@ -314,7 +314,7 @@ def exact_kernel():
     weights,minor=correct(matrix,target,seed)
     grams,variations=check_grams(weights)
     boxes=local_boxes(contacts,nodes,transforms,weights,list(map(F,seed['local_radii'])))
-    obstruction=negative_pair(nodes,transforms,weights,budget,spans)
+    repaired=repaired_pair(nodes,transforms,weights,budget,spans)
     report = {'passed':True,'mass':9,'angular_class_cosines':{str(k):list(map(str,r)) for k,r in spans.items()},
             'pair_counts_by_class':counts,'contact_matrix_shape':[len(matrix),len(weights)],
             'contact_rank':44,'contact_minor_pivot_lower_power':sharp.lower_power(minor)-1,
@@ -322,7 +322,7 @@ def exact_kernel():
             'positive_second_variation_blocks':len(variations),
             'second_variation_pivot_lower_power':sharp.lower_power(min(variations))-1,
             'radial_rigidity_weight':str(RIGIDITY_WEIGHT),
-            'local_boxes':boxes,'rational_negative_pair':obstruction,
+            'local_boxes':boxes,'rational_repaired_pair':repaired,
             'continuous_complement_covered':False,'sharp_global_value_proved':False}
     return report,(weights,nodes,transforms,budget,spans)
 

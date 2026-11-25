@@ -75,11 +75,13 @@ python -B -S -O ten-point-half-turn-four-angle/verify_all.py
 
 ### 十点分角类核的精确接触
 
-接受十点候选根、径向带、内边、相邻外角和近对径配对后，运行以下标准库入口。第一项重算 44 阶接触子式、两个二阶变分块、12 个 Gram 块和 15 个接触邻域，并检查一个外外负缺额见证。第二项重放整个内内类的 190 个零补偿覆盖节点。 [核及适用范围](../ten-point-sharp-contacts/README.md)
+接受十点候选根、径向带、内边、相邻外角和近对径配对后，运行以下标准库入口。第一项重算 44 阶接触子式、两个二阶变分块、12 个 Gram 块和 15 个接触邻域，并核验原负缺额点现为正。后三项重放整个内内类以及分别相隔两位、四位的整个外外类。 [核及适用范围](../ten-point-sharp-contacts/README.md)
 
 ```text
 python -B -S -O ten-point-sharp-contacts/verify_all.py
 python -B -S -O ten-point-sharp-contacts/cover.py
+python -B -S -O ten-point-sharp-contacts/cover.py --outer-step-two
+python -B -S -O ten-point-sharp-contacts/antipodal.py
 ```
 
 ## 编译十二点英文论文
