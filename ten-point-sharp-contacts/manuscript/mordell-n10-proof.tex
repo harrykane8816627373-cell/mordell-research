@@ -1,0 +1,525 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks,allcolors=blue!50!black]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\disc}{\operatorname{Disc}}
+\newcommand{\real}{\operatorname{Re}}
+\newcommand{\certbase}{https://github.com/harrykane8816627373-cell/mordell-research}
+\newcommand{\certrev}{cf631a15c2d62b61b6f40b5e16092a4c5a189978}
+\newcommand{\certfile}[2]{\href{\certbase/blob/\certrev/#1}{#2}}
+
+\title{The Sharp Ten-Point Bound for Mordell's Distance Product}
+\author{Fengcan Jiang}
+\date{26 November 2026}
+\hypersetup{pdftitle={The Sharp Ten-Point Bound for Mordell's Distance Product},
+  pdfauthor={Fengcan Jiang},
+  pdfsubject={Sharp distance-product inequality and equality classification}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We determine the largest product of the squared pairwise distances among ten
+points in the plane with sum of squared radii equal to ten. The maximum is
+an explicitly specified algebraic number, approximately
+\(5.3823025895657\times 10^{10}\). Up to rotation and relabeling, the unique
+maximizer consists of an inner antipodal pair and two concentric rectangles.
+The proof uses a two-point majorant indexed by cyclic separation, with
+exact interpolation at fifteen pair types of the candidate. An
+integer-arithmetic verifier covers the six necessary pair domains and
+certifies the bound with zero slack.
+\end{abstract}
+
+\section{The sharp value}
+
+For \(z=(z_1,\ldots,z_n)\in\mathbb C^n\), define
+\[
+ Q(z)=\sum_{i=1}^n |z_i|^2,\qquad
+ \Delta(z)=\prod_{i<j}|z_i-z_j|^2,\qquad
+ M_n=\max_{Q(z)=n}\Delta(z).
+\]
+Ji, Xu, and Yu \cite{jxy} give the sharp values through nine points and
+an explicit ten-point configuration exceeding the product of a regular
+nonagon together with its center. We give the sharp value and equality
+classification at ten points. The proof uses their eight- and nine-point
+bounds in its initial restrictions on a global maximizer. The proof at
+twelve points \cite{n12} also uses an exact contact kernel, and here the
+cyclic order of the eight outer points supplies further zero-sum terms.
+
+Define \(a,b,c,x,y\) as the unique real root of the system
+\begin{equation}
+ E_k=2\sum_{j=0}^kS_j S_{k-j}-(2k+1)S_k-10T_k=0,
+ \qquad 0\le k\le4,                                           \label{eq:root}
+\end{equation}
+in the closed box with center
+\(2^{-20}(118037,1084060,1216217,-797427,810046)\) and coordinate
+half-width \(2^{-20}\). Here \(A_k=a^k\), and
+\[
+\begin{aligned}
+ B_0&=2, & B_1&=2x, &
+ B_k&=2xB_{k-1}-b^2 B_{k-2},\\
+ C_0&=2, & C_1&=2y, &
+ C_k&=2yC_{k-1}-c^2 C_{k-2}\qquad (k\ge2),
+\end{aligned}
+\]
+with \(S_k=A_k+B_k+C_k\) and \(T_k=aA_k+bB_k+cC_k\). Put
+\[
+ P(w)=(w-a)(w^2-2xw+b^2)(w^2-2yw+c^2).
+\]
+Let \(z^*\) be the unordered configuration
+\begin{equation}
+ \{\pm\sqrt a\}
+ \ \cup\
+ \left\{\pm\sqrt{\frac{b+x}{2}}\ \pm i\sqrt{\frac{b-x}{2}}\right\}
+ \ \cup\
+ \left\{\pm\sqrt{\frac{c+y}{2}}\ \pm i\sqrt{\frac{c-y}{2}}\right\},
+                                                               \label{eq:config}
+\end{equation}
+where the two signs in each rectangle are independent.
+
+\begin{theorem}\label{thm:main}
+Under \(Q(z)=10\), the sharp bound is
+\[
+ M_{10}=\left(\frac{10}{9}\right)^{45}
+         4^5 ab^2c^2\disc(P)^2.
+\]
+It lies in the interval
+\([53823025895.656995698750,\,53823025895.656995698751]\).
+Every maximizing configuration is a rotation and relabeling of
+\(\sqrt{10/9}\,z^*\).
+\end{theorem}
+
+\section{Normalization and the candidate}
+
+We work at \(Q=9\). The product has degree \(90\) under dilations of the
+coordinates, so the conversion to \(Q=10\) multiplies it by
+\((10/9)^{45}\). A global maximum exists on the compact mass sphere and
+has distinct entries, since some feasible configurations have positive
+product. Each such maximizer also globally maximizes the unconstrained
+function
+\[
+ L(z)=\log\Delta(z)-5Q(z).
+\]
+Indeed, along the dilates \(sz\) of any point on the mass-nine sphere,
+\(L(sz)=\log\Delta(z)+90\log s-45s^2\), with its unique maximum at \(s=1\).
+The stationarity equations are
+\begin{equation}
+ \sum_{j\ne i}\frac{1}{z_i-z_j}=5\bar z_i,\qquad 1\le i\le10.
+                                                               \label{eq:force}
+\end{equation}
+The real Hessian of \(L\) is negative semidefinite at each global
+maximizer.
+
+The five roots \(w_i\) of \(P\) are the squares of representatives of the
+five antipodal pairs in \eqref{eq:config}, with \(r_i=|w_i|\).
+Multiplication of the residual in \eqref{eq:force} by a representative
+of the \(i\)-th pair gives
+\[
+ {\cal E}_i=\tfrac12+2w_i\sum_{j\ne i}(w_i-w_j)^{-1}-5r_i.
+\]
+The two terms in the sum of forces from another antipodal pair combine
+to \(2z_i/(w_i-w_j)\). Expanding the divided difference of \(w^{k+1}\)
+gives \(E_k=2\sum_i w_i^k{\cal E}_i\). The \(w_i\) are distinct in the
+root box, so its Vandermonde matrix is invertible and \eqref{eq:root}
+implies the full force equations. The equation \(E_0=0\) gives
+\(a+2b+2c=9/2\). Thus \(z^*\) is feasible and stationary. The exact
+root check \cite{data} applies the contraction theorem to
+\(v\mapsto v-C E(v)\), where the preconditioner \(C\) is an invertible
+rational matrix. The image lies strictly inside the box and the
+verified infinity norm of \(I-C\,DE\) is less than \(21/10000\).
+
+An antipodal pair with squared representative \(w_i\) contributes
+\(4|w_i|\) to \(\Delta(z^*)\). The four distances squared across two
+antipodal pairs have product \(|w_i-w_j|^4\). Multiplying gives
+\(\Delta(z^*)=4^5 ab^2c^2\disc(P)^2\). Write \(B=\log\Delta(z^*)\).
+
+\section{Necessary pair domains and cyclic order}\label{sec:domains}
+
+For any pair \(z,w\), use
+\[
+ u=|z|^2,\qquad v=|w|^2,\qquad t=\real(z\bar w),\qquad
+ d=u+v-2t.
+\]
+The Gram condition is \(t^2\le uv\). The following necessary conditions
+hold at all global maximizers at \(Q=9\). Each entry links the
+analytic reduction and exact verifier inputs at the fixed revision
+\cite{data}.
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Necessary condition & Proof and certificate\\
+\midrule
+\(d>2/5\) for every pair
+ & \certfile{maximizer-domain/README.md}{Initial domain}\\
+Two radii squared in \(I=(21/250,159/1000)\)
+ & \certfile{ten-point-angular-radii/README.md}{Radial population and bounds}\\
+Eight radii squared in \(O=(89/100,1271/1000)\) &\\
+\(43/100<d<53/100,\ t/\sqrt{uv}<-87/100\) on the inner edge
+ & \certfile{ten-point-inner-edge/README.md}{Inner edge}\\
+\(59/100<\cos\gamma<39/50\) on adjacent outer edges
+ & \certfile{ten-point-outer-gap/README.md}{Adjacent outer gaps}\\
+\(t/\sqrt{uv}<-31/32\) at cyclic separation four
+ & \certfile{ten-point-tight-pairing/README.md}{Near-antipodal pairing}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The initial reduction uses deletion and recentering, applying the
+sharp bounds for eight and nine points to the remaining points. The
+radial and angular checks use a coarser certified upper kernel to bound
+a sum of pair deficits. They combine the deficit budget with exact
+force identities along each row of pairs, population counts and the
+fact that the eight successive outer gaps sum to \(2\pi\). The cited
+proofs give the implications from these bounds to the strict
+inequalities in the table.
+
+Set \(\alpha=\arccos(39/50)\) and \(\beta=\arccos(59/100)\).
+Successive outer directions are separated by angles in
+\((\alpha,\beta)\). Since \(3\beta<\pi\), pairs at cyclic separation
+\(k=1,2,3\) have shorter angle in \((k\alpha,k\beta)\). Their cosine
+intervals have endpoints \(\cos(k\beta)\) and \(\cos(k\alpha)\),
+which are rational by the multiple-angle formulas. These three
+intervals and the near-antipodal fourth interval are disjoint.
+Along with the inner and mixed pairs they yield six classes.
+
+Let \(E_k^{\mathrm{out}}\) be the unordered outer edges of separation
+\(k\). On each outer vertex the degrees of the four graphs are
+\(2,2,2,1\). For any scalar radial function \(f\) and \(k=1,2,3\),
+\begin{equation}
+ \sum_{ij\in E_k^{\mathrm{out}}}\bigl(f(u_i)+f(u_j)\bigr)
+ -2\sum_{ij\in E_4^{\mathrm{out}}}\bigl(f(u_i)+f(u_j)\bigr)=0.
+                                                               \label{eq:cyclic}
+\end{equation}
+These identities permit class-specific radial terms in the upper
+kernel while preserving its total over all pairs. At \(z^*\) the
+contact cosines lie strictly inside their assigned intervals when the
+Gram constraint is taken relative to its physical domain. The eight
+first-class outer edges are adjacent in cyclic order. Indeed all outer
+separations are at least \(\alpha\), and a nonadjacent edge must have
+shorter angle at least \(2\alpha>\beta\). Thus the cyclic labels
+remain consistent in a neighborhood of the candidate.
+
+\section{A kernel with a summable bound}\label{sec:kernel}
+
+For an angular order \(k\) use
+\(H_k(u,v,t)=\real((z\bar w)^k)\). The recurrence
+\(H_0=1\), \(H_1=t\), \(H_{k+1}=2tH_k-uvH_{k-1}\) makes each
+\(H_k\) polynomial in the pair coordinates. Let \(r(u)\in\mathbb R^6\)
+have the first three Chebyshev polynomials on the rescaled radial
+interval containing \(u\) in its corresponding block, with zero
+entries in the other block. The vector
+\[
+ m_k^*=\sum_i r(|z_i^*|^2)(z_i^*)^k
+\]
+is real by reflection symmetry of the candidate. For even \(k\) the
+verifier chooses a nonzero coordinate \(p\) of \(m_k^*\) and uses
+the five radial features
+\(r_j(u)-r_p(u)(m_k^*)_j/(m_k^*)_p\), \(j\ne p\). Denote the resulting
+vector by \(f_k(u)\). At odd \(k\) take \(f_k=r\), since antipodal
+symmetry gives \(m_k^*=0\). In every case the candidate moment of
+\(f_k(u)z^k\) is zero. For real symmetric positive definite matrices
+\(A_k\), the kernel
+\[
+ K(z,w)=\sum_{k=0}^{11}H_k(u,v,t)\, f_k(u)^{\mathsf T}A_k f_k(v)
+\]
+sums over all ordered pairs to a sum of nonnegative Hermitian
+quadratic forms in the corresponding moments. Add to \(K\) the
+rank-one kernel \(2^{-40}q(u)^2q(v)^2\), where
+\(q(u)=(u-a)(u-b)(u-c)\), and use the resulting \(K\) in
+\begin{equation}
+ h_0(z,w)=\frac{B}{45}-1+\frac59(u+v)-K(z,w)
+                   -\frac{K(z,z)+K(w,w)}{18}.                 \label{eq:h0}
+\end{equation}
+Because \(\sum_{i<j}(u_i+u_j)=9Q=81\), we have
+\(\sum_{i<j}h_{0,ij}=B-\tfrac12\sum_{i,j}K(z_i,z_j)\).
+
+\subsection{Terms whose pair sums vanish}
+
+Summing \eqref{eq:force}, and summing after multiplication by
+\(z_i^2,z_i^3,z_i^4\), gives the identities
+\begin{equation}
+ \sum_i z_i=0,\qquad \sum_i u_i z_i=0,\qquad
+ \sum_i (u_i-17/10)z_i^2=0,\qquad
+ \sum_i (u_i-8/5)z_i^3=0.                                    \label{eq:ward}
+\end{equation}
+In these computations the sum of divided differences of \(z^3\)
+over pairs is \((17/2)\sum_i z_i^2\), and for \(z^4\) it is
+\(8\sum_i z_i^3\), using \(\sum_i z_i=0\). The mass identity
+\(\sum_i(u_i-9/10)=0\) supplies a scalar condition.
+For each identity use the zero moment and a corresponding
+\(f_k\)-moment as factors of a real bilinear form, then distribute
+the diagonal equally among the incident edges. The sum of the resulting
+pair term vanishes. The \(f_k\)-moment at \(z^*\) also vanishes, so
+the total of each such term has zero first derivative at the candidate.
+
+The symmetrized row identities use the following expressions at
+each fixed \(i\), summing over \(j\ne i\):
+\[
+ u_j-1+u_i/9,\qquad
+ (8-\sigma_i)/9-\sigma_j,\qquad
+ \frac{u_i-t_{ij}}{d_{ij}}-\frac{5u_i}{9}.
+\]
+Here \(\sigma_i\) is the indicator of the outer band. Their row sums
+vanish by the mass, outer population, and real part of
+\eqref{eq:force} multiplied by \(z_i\), respectively. The
+multipliers of the mass rows use \(f_0\). Those of the force rows
+use the band features multiplied by a polynomial that vanishes at
+the candidate node or nodes in the band. The cyclic rows
+\eqref{eq:cyclic} use the first three Chebyshev polynomials on \(O\).
+The total of each row term has zero first derivative at the candidate.
+For the force and mass rows this follows from the vanishing of both
+factors after summing. Population and cyclic rows are identities in the
+local band and cyclic labels.
+
+\subsection{Second variations}
+
+Take a real radial function \(g\) in the span of the six radial
+features times their band-specific vanishing polynomials. Let
+\(\xi_i=g(u_i)z_i\). For a pair, define
+\[
+\begin{aligned}
+ N_g &=\tfrac59\bigl(ug(u)^2+vg(v)^2\bigr),\\
+ T_g &=\frac{[g(u)(u-t)+g(v)(v-t)]^2
+                 -(g(u)-g(v))^2(uv-t^2)}{d^2}.
+\end{aligned}
+\]
+The real part of \(((\xi_i-\xi_j)/(z_i-z_j))^2\) equals \(T_g\).
+Along the real lines with directions \(\xi\) and \(i\xi\),
+the second derivatives of \(L\) are
+\(-2\sum_{i<j}(N_g+T_g)\) and \(-2\sum_{i<j}(N_g-T_g)\).
+Consequently the pair sums of the two quadratic forms are
+nonnegative at a maximizer. Polarize both forms and contract
+with real positive definite coefficient matrices. Subtracting
+the resulting terms from \(h_0\) and including the zero-sum
+corrections gives a class-dependent kernel \(h\) with
+\begin{equation}
+ \sum_{i<j}h_{ij}\ \le\ B-\tfrac12\sum_{i,j}K(z_i,z_j)
+ \ \le\ B                                                     \label{eq:budget}
+\end{equation}
+at any global maximizer. The second-variation terms and their
+first derivatives vanish at the candidate, because all six
+displacement functions vanish there.
+
+\section{Exact contact and continuous verification}\label{sec:verify}
+
+\begin{lemma}\label{lem:verification}
+With the coefficient data in \cite{data}, the kernel of
+Section~\ref{sec:kernel} has positive definite matrices \(A_k\) and
+positive definite second-variation coefficient matrices. In each
+of the six necessary domains of Section~\ref{sec:domains},
+\(h\ge\log d\). At every candidate pair, \(h=\log d\).
+\end{lemma}
+
+\begin{proof}[Certificate verification]
+There are fifteen pair types in \eqref{eq:config}: one within the
+inner pair, three in each rectangle, two between the inner pair
+and each rectangle, and four between the two rectangles.
+Equality of \(h\) and \(\log d\) at each type, with equality
+of their first derivatives in the free directions, gives a
+linear system with fifteen value rows and thirty-five derivative
+rows. At an antipodal type with \(u=v\), exchange symmetry
+identifies the two tangential derivatives on \(t=-\sqrt{uv}\).
+At a same-radius interior type the radial derivatives are likewise
+equal.
+
+\emph{Exact coefficients.}
+The system has six compatibility relationships. One is the
+multiplicity-weighted sum of its value rows. The other five are
+the derivatives of the weighted sum along the five parameters
+of \eqref{eq:config}. For the candidate, the pair sum of \(h\)
+is \(B\), and its first derivative is \(5\,dQ\), since the
+moment penalties and all added terms have vanishing first
+variation. Equation~\eqref{eq:force} gives \(d\log\Delta=5\,dQ\).
+The five derivative relationships are independent, as the three
+antipodal rows detect \(da,db,dc\), and within-rectangle changes
+of the point products detect \(dx,dy\).
+The seed consists of 312 numerical coefficients stored as rationals.
+The exact correction is defined by solving a selected square
+system of order 44 against the logarithms and derivatives at the
+actual algebraic candidate. Directed dyadic interval elimination
+at precision \(2^{-384}\) certifies its determinant is nonzero and
+encloses the corrected coefficients. The six compatibility
+relationships make the remaining rows exact. Interval \(LDL^{\mathsf T}\)
+checks establish positivity of all twelve Gram matrices and both
+second-variation matrices.
+
+\emph{Contact neighborhoods.}
+Write \(G=h-\log d\). At each of the twelve interior contact types,
+strict positivity of the interval Hessian of \(G\), together with
+exact vanishing of its constant and linear terms, proves \(G\ge0\)
+in a neighborhood. For the three Gram-face contacts use the
+positive definite Hessian of the restriction \(t=-\sqrt{uv}\)
+and a positive inward derivative. The verifier establishes a
+positive-radius neighborhood for each type.
+Some types also use enlarged neighborhoods certified directly in
+the cleared polynomial coordinates described below.
+
+\emph{Interior and mixed domains.}
+Put \(R=d^2h\) and \(F(d)=d^2\log d\). For each class, \(R\)
+is polynomial in the pair variables. For \(d,A>0\),
+\begin{equation}
+ F(d)\le
+  (\log A+3/2)d^2-2Ad+A^2/2+\frac{(d-A)^3}{3A},               \label{eq:taylor}
+\end{equation}
+since \(F^{(4)}(d)=-2/d^2<0\). In the mixed class and the first
+three outer separation classes, the verifier starts with rational
+boxes containing the domains, splitting at \(t=0\) where
+needed. It rejects boxes disjoint from the necessary geometry.
+For the remaining boxes it uses a certified contact neighborhood,
+or takes \(A\) as the upper endpoint for \(d\), bounds
+\(\log A\) above with an outward-rounded rational, and checks
+that all tensor Bernstein coefficient lower bounds of \(R\)
+minus the right side of \eqref{eq:taylor} are nonnegative.
+An unaccepted box is divided into two. The validity of this
+check follows from nonnegativity and the partition of unity
+of the Bernstein basis. The verifier uses directed integer
+arithmetic for conversions and subdivision. For enlarged
+interior contact neighborhoods it takes \(A\) at the exact
+contact distance and checks the Hessian of the polynomial
+difference in coordinates centered at the contact.
+
+\emph{The inner edge.}
+The verifier first proves monotonicity toward increasing \(t\)
+using \(d^3 G_t=dR_t+4R+2d^2\) on the domain swept by projection
+to \(t=-\sqrt{uv}\). During this projection the initial
+upper bound \(53/100\) for \(d\) can increase by at most
+\(2(1-87/100)\sqrt{uv}\), and \(t\le-(87/100)\sqrt{uv}\)
+throughout. With \(u=p^2,v=q^2,t=-pq\), the boundary has
+\(d=(p+q)^2\). The verifier checks the resulting two-variable
+polynomial against an upper Taylor bound for \(2s^4\log s\),
+\(s=p+q\). A quadratic Taylor bound about the upper endpoint
+of \(s\) applies since the third derivative
+\(s(48\log s+52)\) is positive for \(s>1/2\). Substituting
+an upper bound for the endpoint logarithm is valid since its
+coefficient in the Taylor polynomial is positive.
+
+\emph{The fourth outer separation.}
+Write \(u=p^2,v=q^2,p\le q\) and use coordinates
+\(s=p+q\), \(y'=q-p\), \(e=t+pq\).
+Then \(0\le e\le pq/32\) and \(d=s^2-2e\).
+With \(R\) expressed in these variables, \(R\) is even in \(y'\)
+by exchange symmetry. On the axis \(y'=e=0\) the difference
+\(R-2s^4\log s\) has a double zero at each of
+\(s=2\sqrt b,2\sqrt c\). At each contact the verifier checks
+positive axial curvature, nonnegativity of the polynomial
+extension of \((R(s,y',0)-R(s,0,0))/(y')^2\), and
+\(dR_e+4R+2d^2\ge0\) for the inward direction. These three
+checks cover a box around each contact. The complement uses
+Bernstein subdivision with a quadratic Taylor upper bound for
+\(F\) about the upper endpoint of \(d\), since \(F'''(d)=2/d>0\).
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Pair domain & Edge count & Subdivision nodes visited\\
+\midrule
+Inner edge & 1 & 1,122\\
+Inner--outer & 16 & 5,030\\
+Outer separation 1 & 8 & 11,743\\
+Outer separation 2 & 8 & 890\\
+Outer separation 3 & 8 & 30,653\\
+Outer separation 4 & 4 & 829\\
+\midrule
+Total & 45 & 50,267\\
+\bottomrule
+\end{tabular}
+\end{center}
+The fixed report records the counts above and zero unresolved
+boxes. Each accepted box has certified \(G\ge0\) throughout its
+intersection with the necessary domain. Together with the
+exact coefficient construction, this proves the lemma.
+\end{proof}
+
+\section{Sharpness and uniqueness}
+
+At any global maximizer, Lemma~\ref{lem:verification} and
+\eqref{eq:budget} imply
+\[
+ \log\Delta\le \sum_{i<j}h_{ij}\le B.
+\]
+The feasible candidate attains \(B\), so both inequalities
+are equalities at every global maximizer. The positive
+rank-one radial term forces \(\sum_i q(u_i)^2=0\).
+All \(u_i\) therefore belong to \(\{a,b,c\}\).
+Of the nonnegative integer triples summing to ten, only
+\((2,4,4)\) has weighted mass nine, as follows by enumerating
+the 66 triples using the isolating intervals for \(a,b,c\).
+
+The first harmonic uses unprojected band features.
+The inner constant and two independent outer linear features
+extract a zero first moment on each radius. On the two-point
+radius the points are antipodal. For four points on a circle
+of squared radius \(r\), the elementary symmetric functions
+satisfy \(e_3=e_4\overline{e_1}/r\). Thus \(e_1=0\) implies
+that the root polynomial is even, and the four points are two
+antipodal pairs.
+
+For the second harmonic, vanishing of the projected moment
+means the full moment is a complex multiple of \(m_2^*\).
+The same radial interpolation now gives the second moment on
+each of the three radii. The inner moment has modulus \(2a\),
+so the complex multiple has modulus one. Rotate the whole
+configuration to make it one. On each four-point radius, the
+two squared images of the antipodal pairs have a fixed common
+modulus and a prescribed nonzero sum, \(2x\) or \(2y\).
+Two points on a circle with given nonzero sum have a fixed
+midpoint and hence form a unique unordered pair. Taking the
+two square roots of each of these images recovers
+\eqref{eq:config}. Rescaling now proves Theorem~\ref{thm:main}.
+
+\section*{Reproducibility}
+
+The fixed certificate revision is
+\href{\certbase/commit/\certrev}{\texttt{\certrev}}.
+Its \certfile{docs/REPRODUCING.md}{replay guide} specifies the
+dependency order and the source of the eight- and nine-point
+results. From that checkout, the following commands replay the
+ten-point dependency chain and the final check using Python's
+standard library.
+\begin{verbatim}
+python -B -S -O scripts/verify_ten_point.py
+python -B -S -O ten-point-sharp-contacts/verify_sharp.py
+\end{verbatim}
+The first command includes the second as its last stage. The
+\certfile{ten-point-contact-geometry/root_box_jacobian.json}{Jacobian
+result} supplies the fixed candidate-root data. The replay
+independently checks the enclosed root and the exact arithmetic
+certificates, without needing the numerical coefficient search
+or a running Jacobian service. It checks its output against
+the \certfile{ten-point-sharp-contacts/global_verification_report.json}
+{fixed final report}.
+
+\section*{Acknowledgments}
+
+OpenAI Codex assisted with derivations, certificate implementation,
+computation, and preparation of the manuscript. The candidate
+root computation used the Jacobian toolkit \cite{jacobian}.
+
+\begin{thebibliography}{9}
+\bibitem{jxy}
+Xiang Ji, Tiancheng Xu, and Wensheng Yu.
+\newblock \emph{Optimal Configurations for Mordell's Problem}.
+\newblock \href{https://arxiv.org/abs/2611.03088v1}{arXiv:2611.03088v1}, 2026.
+
+\bibitem{n12}
+Fengcan Jiang's Mordell research project.
+\newblock \emph{The sharp twelve-point bound in Mordell's distance-product problem}.
+\newblock \certfile{twelve-point-sharp-global/manuscript/README.md}{Manuscript and proof data}, 2026.
+
+\bibitem{data}
+Fengcan Jiang's Mordell research project.
+\newblock \emph{Ten-point proof data, analytic reductions, and exact verifier}.
+\newblock \certfile{ten-point-sharp-contacts/README.md}{Certificate archive}, 2026.
+
+\bibitem{jacobian}
+\emph{Jacobian}, composable tools for mathematical computation.
+\newblock \href{https://github.com/morluto/jacobian}{Software repository}.
+\end{thebibliography}
+\end{document}

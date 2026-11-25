@@ -82,6 +82,16 @@ python -B -S -O ten-point-half-turn-four-angle/verify_all.py
 python -B -S -O ten-point-sharp-contacts/verify_sharp.py
 ```
 
+## 编译十点英文论文
+
+在 [论文目录](../ten-point-sharp-contacts/manuscript/README.md)中使用 TeX Live。
+
+```bash
+latexmk -pdf mordell-n10-proof.tex
+```
+
+[已编译 PDF](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [单文件 LaTeX 源码](../ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex)
+
 ## 编译十二点英文论文
 
 进入 [论文目录](../twelve-point-sharp-global/manuscript/README.md)，使用 TeX Live 编译。

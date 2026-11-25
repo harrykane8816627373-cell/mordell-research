@@ -4,7 +4,10 @@
 
 **十点与十二点的全局锐界和唯一性**
 
-[英文论文 PDF](twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX 源文件](twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [证明与证书](twelve-point-sharp-global/README.md) · [复现指南](docs/REPRODUCING.md)
+- 十点 · [英文论文 PDF](ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [LaTeX 源文件](ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex) · [证明与证书](ten-point-sharp-contacts/README.md)
+- 十二点 · [英文论文 PDF](twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX 源文件](twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [证明与证书](twelve-point-sharp-global/README.md)
+
+[复现指南](docs/REPRODUCING.md)
 
 ## 十点与十二点的最大值和构型
 
@@ -35,7 +38,7 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\prod_{1\le i<j\le n}|z_i-z_j|^2.
 
 |我想找|入口|
 |---|---|
-|读论文、下载 PDF 或编译 LaTeX|[十二点论文目录](twelve-point-sharp-global/manuscript/README.md)|
+|读论文、下载 PDF 或编译 LaTeX|[十点论文目录](ten-point-sharp-contacts/manuscript/README.md) · [十二点论文目录](twelve-point-sharp-global/manuscript/README.md)|
 |核对定理、适用范围与外部依赖|[证明状态总表](configuration-bounds/PROOF_STATUS.md)|
 |运行精确证书、查软件依赖|[复现指南](docs/REPRODUCING.md)|
 |了解十二点上界到锐界的推导过程|[候选与核研究记录](docs/CANDIDATE_KERNEL_RESEARCH.md)|
@@ -44,4 +47,4 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\prod_{1\le i<j\le n}|z_i-z_j|^2.
 
 十点与十二点全域证书用 Python 标准库运行。完整依赖链的顺序，以及八、九点固定依赖和入口，见[复现指南](docs/REPRODUCING.md)。
 
-**English.** Exact computer-assisted proofs give the sharp ten- and twelve-point values and their unique maximizing orbits. [Ten-point proof](ten-point-sharp-contacts/README.md) · [Twelve-point paper](twelve-point-sharp-global/manuscript/README.md)
+**English.** Exact computer-assisted proofs give the sharp ten- and twelve-point values and their unique maximizing orbits. [Ten-point paper](ten-point-sharp-contacts/manuscript/README.md) · [Twelve-point paper](twelve-point-sharp-global/manuscript/README.md)

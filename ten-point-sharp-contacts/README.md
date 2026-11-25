@@ -12,6 +12,8 @@
 
 精确值为 $C_{10}=(10/9)^{45}4^5ab^2c^2\operatorname{Disc}(\mathcal P)^2$，其中五个参数由固定的[有理隔离盒](../ten-point-contact-geometry/root_box_jacobian.json)和[五条代数方程](../ten-point-contact-geometry/README.md#候选的精确代数定义)定义。
 
+[英文论文 PDF](manuscript/mordell-n10-proof.pdf) · [LaTeX 源文件](manuscript/mordell-n10-proof.tex) · [论文与复现说明](manuscript/README.md)
+
 ## 从角序得到精确的逐点行修正
 
 由[逐点径向界](../ten-point-angular-radii/README.md)，两个内点的平方半径在 $I=(21/250,159/1000)$，八个外点在 $O=(89/100,1271/1000)$。令 $\theta_{i+8}=\theta_i+2\pi$。[相邻角界](../ten-point-outer-gap/README.md)给出
