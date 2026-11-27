@@ -132,6 +132,19 @@ def assembledKernel {n : ℕ} {κ : Type*} [Fintype κ] (B : ℝ)
     (i j : Fin n) : ℝ :=
   baseKernel B u (gram f) i j + W i j - V i j
 
+theorem kernel_majorant {n : ℕ} {z : Configuration n}
+    (hn : 1 < n) (hz : Function.Injective z) (hq : mass z = (n : ℝ) - 1)
+    (B : ℝ) (K W V : Fin n → Fin n → ℝ) (hK : ∀ i j, K i j = K j i)
+    (hKpos : 0 ≤ ∑ i, ∑ j, K i j) (hW : pairSum W = 0) (hV : 0 ≤ pairSum V)
+    (hmajor : ∀ i j, i < j → Real.log (distanceSq z i j) ≤
+      baseKernel B (fun k => Complex.normSq (z k)) K i j + W i j - V i j) :
+    Real.log (distanceProduct z) ≤ B ∧
+      (Real.log (distanceProduct z) = B → (∑ i, ∑ j, K i j) = 0) := by
+  have hsum := pairSum_mono hmajor
+  rw [← log_distanceProduct hz, pairSum_sub, pairSum_add,
+    pairSum_baseKernel hn B _ _ hK hq, hW, add_zero] at hsum
+  exact ⟨by linarith, fun he => by rw [he] at hsum; linarith⟩
+
 /-- The pair majorant bounds the logarithmic product. Taking equality kills
     every Gram moment. The finite certificate must supply the pairwise inequalities. -/
 theorem gram_majorant {n : ℕ} {κ : Type*} [Fintype κ] {z : Configuration n}
@@ -142,16 +155,9 @@ theorem gram_majorant {n : ℕ} {κ : Type*} [Fintype κ] {z : Configuration n}
       Real.log (distanceSq z i j) ≤ assembledKernel B (fun k => Complex.normSq (z k)) f W V i j) :
     Real.log (distanceProduct z) ≤ B ∧
       (Real.log (distanceProduct z) = B → ∀ k, ∑ i, f k i = 0) := by
-  have hsum := pairSum_mono hmajor
-  rw [← log_distanceProduct hz] at hsum
-  change Real.log (distanceProduct z) ≤
-    pairSum (fun i j => baseKernel B (fun k => Complex.normSq (z k)) (gram f) i j +
-      W i j - V i j) at hsum
-  rw [pairSum_sub, pairSum_add, pairSum_baseKernel hn B _ _ (gram_symm f) hq, hW, add_zero] at hsum
-  have hgn := sum_gram_nonneg f
-  refine ⟨by linarith, fun he k => moments_zero_of_sum_gram_zero f ?_ k⟩
-  rw [he] at hsum
-  linarith
+  obtain ⟨hb, he⟩ := kernel_majorant hn hz hq B (gram f) W V (gram_symm f) (sum_gram_nonneg f)
+    hW hV hmajor
+  exact ⟨hb, fun h => moments_zero_of_sum_gram_zero f (he h)⟩
 
 /-- A certificate for a fixed configuration, with the cover inequality
     and equality reconstruction exposed as proof fields. -/

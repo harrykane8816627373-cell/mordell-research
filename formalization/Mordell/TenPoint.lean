@@ -1,5 +1,6 @@
 import Mordell.RootBox
-import Mordell.Kernel
+import Mordell.HarmonicKernel
+import Mordell.TenEquality
 
 /-! The ten-point sharp bound reduced to its mass-nine logarithmic certificate. -/
 
@@ -54,5 +55,20 @@ theorem sharp_ten_of_pair_majorants
     (candidate isolatedParameters) (by simpa only [Nat.cast_ofNat, show (10 : ℝ) - 1 = 9 by norm_num] using h)
   exact sharp_ten_of_log_certificate isolatedParameters isolatedParameters_isRoot
     (by simpa only [Nat.cast_ofNat, show (10 : ℝ) - 1 = 9 by norm_num] using hc)
+
+theorem sharp_ten_of_gram_bounds
+    (h : ∀ z : Configuration 10, IsMaximizer 9 z → Function.Injective z →
+      Nonempty {cert : BlockBound z (candidate isolatedParameters) //
+        (∀ k a, ∑ i, cert.feature k i a = 0) → TenGramMoments isolatedParameters z 4}) :
+    IsMaximizer 10 exactTenConfiguration ∧
+      (∀ z : Configuration 10, IsMaximizer 10 z → SameOrbit z exactTenConfiguration) := by
+  apply sharp_ten_of_log_certificate isolatedParameters isolatedParameters_isRoot
+  intro z hz hi
+  obtain ⟨⟨cert, he⟩⟩ := h z hz hi
+  have hp := isolatedParameters_isRoot.1
+  have hmass : mass z = (↑(10 : ℕ) : ℝ) - 1 := hz.1.trans (by norm_num)
+  obtain ⟨hb, hzero⟩ := cert.log_le_and_moments_zero (by decide) hi hmass
+  refine ⟨hb, fun hlog => ten_orbit_of_layer_moments hp hi hz.1 ?_⟩
+  exact ten_layer_moments_of_gram hp (tenSecondReference_four_ne_zero hp) (he (hzero hlog))
 
 end Mordell

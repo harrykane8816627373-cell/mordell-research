@@ -49,7 +49,7 @@ def Stationary {n : ℕ} (multiplier : ℂ) (z : Configuration n) : Prop :=
 
 def powerMoment {n : ℕ} (z : Configuration n) (k : ℕ) : ℂ := ∑ i, z i ^ k
 
-private theorem force_pairing {n : ℕ} (z : Configuration n) (v : Fin n → ℂ) :
+theorem force_pairing {n : ℕ} (z : Configuration n) (v : Fin n → ℂ) :
     2 * (∑ i, v i * force z i) =
       ∑ i, ∑ j, if i = j then 0 else (v i - v j) * (z i - z j)⁻¹ := by
   classical

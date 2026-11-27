@@ -9,3 +9,5 @@ import Mordell.Stationarity
 import Mordell.TriangleRigidity
 import Mordell.PairGeometry
 import Mordell.TwelveRadial
+import Mordell.Variational
+import Mordell.TwelveEquality
