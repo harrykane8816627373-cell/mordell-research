@@ -46,3 +46,11 @@ import Mordell
 #print axioms Mordell.cleared_cubic_log_rat
 #print axioms Mordell.GridTree.sound
 #print axioms Mordell.InnerCoverData.signed_inner_rational_bound
+#print axioms Mordell.tensorAxisMap_three
+#print axioms Mordell.rootPowerControls_sound
+#print axioms Mordell.discardedLower_sound
+#print axioms Mordell.InnerCoverData.archived_root_envelope
+#print axioms Mordell.InnerCoverData.signed_inner_archive_power_bound
+#print axioms Mordell.InnerCoverData.signed_inner_coefficients_bound
+#print axioms Mordell.twelveWard_moments
+#print axioms Mordell.twelveWard_pairSum_zero

@@ -29,14 +29,15 @@ lake exe cache get
 |十二点等号|四个三角形轨道的质量与矩。Vandermonde 恢复 \(3,3,6\) 人口及各层角矩。Newton 恒等式验证六点层的根多项式关于 \(z^3\) 为二次式，无碰撞推出两个不同的三次像。内层固定共同相位，外层的两个同模三次像由其非零和确定，恢复整个旋转和重排轨道。|
 |矩阵区间|十点 12 个 Gram 块和 2 个二阶变分块、十二点 12 个 Gram 块。Lean 对覆在接触修正系数外的有理区间验收三角合同变换的严格对角优势，并由证明推出每个区间中的全部实对称矩阵正定。|
 |覆盖规则|仿射重缩放的幂基到张量 Bernstein 系数的精确转换。中点二分和向下舍入维持逐点下界。有限奇次项有理级数给出对数上包络，并用于切线比较、十二点二次上界和十点清分母后的三次上界。|
-|十二点已有回放|核验存档 `1.txt` 的 39 个节点及其前序排列，对固定精度的有理初始 Bernstein 张量逐项检查二分、17 个切线叶和 3 个几何剔除叶。所得有理多项式在两个内层半径、非负角坐标的有序 Gram 可行域上支配对数。|
+|十二点已有回放|核验存档 `1.txt` 的 39 个节点及其前序排列，逐项检查二分、17 个切线叶和 3 个几何剔除叶。Lean 核验了 500 个初始 Bernstein 系数的三次坐标变换和向下舍入，也证明被省略高次项的常数下界。导出的有理幂基多项式在两个内层半径、非负角坐标的有序 Gram 可行域上支配距离平方的对数。|
+|十二点 Ward 修正|质量为 11 的极大构型满足前四个谐波的 Ward 矩条件。Lean 验证三个秩至多为二的块和一阶稀疏块的有序和为零，并证明分摊对角项后的逐边修正总和为零。|
 
 `sharp_ten_of_gram_bounds` 与 `sharp_twelve_of_gram_bounds` 将逐边上界和 Gram 零矩接到最大值与唯一性定理。Lean 验证了角因子在三个逐对坐标中的多项式递推，也验证了正定矩阵分块核的有序和，以及等号蕴含每个复特征的零矩。`BlockBound` 接收各块的正定性、逐边上界、零和修正与二阶变分预算。具体证书还需将所用分块特征识别为 `TenGramMoments` 或 `TwelveGramMoments` 中的径向和角向条件。十点根盒系数可用 `tools/generate_root_data.py` 重新生成，Lean 在构建时直接验证这些系数。
 
 ## 全域证书的形式化状态
 
-两案的 Lean 锐界定理仍带有显式证书前提。`sharp_ten_of_gram_bounds` 和 `TwelveRootBox.isolated_sharp_of_gram_bounds` 分别使用两案的精确候选。十二点 `InnerCoverData.signed_inner_kernel_bound` 要求在该根盒的可行域内，实际逐边核支配已核验的有理多项式。这个初始下界与精确接触系数的衔接、几何必要域、局部接触盒和其余全域叶子仍待验证。现有十点 50,267 节点与十二点 728,050 节点由 Python 精确验收器复现。 [十点全域证明](../ten-point-sharp-contacts/README.md) · [十二点全域证明](../twelve-point-sharp-global/README.md)
+两案的 Lean 锐界定理仍带有显式证书前提。`sharp_ten_of_gram_bounds` 和 `TwelveRootBox.isolated_sharp_of_gram_bounds` 分别使用两案的精确候选。十二点 `InnerCoverData.signed_inner_archive_power_bound` 已将这个根盒的逐点比较接到导出的有理幂基多项式。`signed_inner_coefficients_bound` 把后续衔接转成真实核的逐项系数下界。精确接触修正的系数区间、几何必要域、局部接触盒和其余全域叶子仍待验证。现有十点 50,267 节点与十二点 728,050 节点由 Python 精确验收器复现。 [十点全域证明](../ten-point-sharp-contacts/README.md) · [十二点全域证明](../twelve-point-sharp-global/README.md)
 
 `tools/generate_gram_data.py` 和 `tools/generate_twelve_root_data.py` 分别生成 `Mordell/GramData.lean` 和 `Mordell/TwelveRootData.lean`。生成器读取仓库已有的证书数据。Lean 重新检查导出的矩阵区间、逐对割线包络和压缩行和。
 
-`tools/generate_inner_cover.py` 生成 `Mordell/InnerCoverData.lean`，参数 `--checks` 生成 `Mordell/InnerCoverChecks.lean`。每个节点的整数不等式分开交给 Lean 核，以控制重放时的内存开销。
+`tools/generate_inner_cover.py` 生成 `Mordell/InnerCoverData.lean`，参数 `--checks` 生成 `Mordell/InnerCoverChecks.lean`，参数 `--initial` 生成 `Mordell/InnerInitData.lean` 中的幂基系数和变换见证。每个节点的整数不等式分开交给 Lean 核，以控制重放时的内存开销。

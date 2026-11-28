@@ -2,7 +2,7 @@
 
 from fractions import Fraction as Q
 from itertools import product
-from math import comb
+from math import comb, lcm
 from pathlib import Path
 import sys
 
@@ -16,6 +16,8 @@ BIAS = 1 << 48
 WIDTH = 64
 LOG_TERMS = 24
 MIN_DISTANCE = Q(1, 3)
+SOURCE_GRID = 1 << 44
+CAP = (Q(6, 25), Q(6, 25), Q(3, 40))
 
 
 def pack(values):
@@ -28,25 +30,68 @@ def pack(values):
     return packed
 
 
-def lower_power_terms(coefficients, source_scale):
-    source_grid = 1 << 44
-    weights = {power: Q((value.lo * source_grid) // source_scale, source_grid)
-               for power, value in coefficients.items()}
-    cap = (Q(6, 25), Q(6, 25), Q(3, 40))
+def rounded_source(coefficients, source_scale):
+    return {power: Q((value.lo * SOURCE_GRID) // source_scale, SOURCE_GRID)
+            for power, value in coefficients.items()}
+
+
+def lower_power_terms(weights):
     trimmed = {key: weights.get(key, Q(0)) for key in KEYS}
+    tail = Q(0)
     for (i, j, k), a in weights.items():
         if a < 0 and (i, j, k) not in trimmed:
-            trimmed[(0, 0, 0)] += a * cap[0] ** i * cap[1] ** j * cap[2] ** k
-    return trimmed
+            tail += a * CAP[0] ** i * CAP[1] ** j * CAP[2] ** k
+    trimmed[(0, 0, 0)] += tail
+    return trimmed, tail
 
 
-def initial(weights, box, transform):
-    values = weights
+def transform_stages(weights, box, transform):
+    denominator = lcm(SOURCE_GRID, *(v.denominator for v in weights.values()))
+    values = {key: v.numerator * (denominator // v.denominator) for key, v in weights.items()}
+    stages = [(values, denominator)]
+    axis_matrices = []
     for axis, (d, (lo, hi)) in enumerate(zip(DEGREES, box)):
-        matrix, denominator = transform(d, lo, hi)
-        values = {key: sum(Q(matrix[key[axis]][j], denominator) * values[key[:axis] + (j,) + key[axis+1:]]
+        matrix, scale = transform(d, lo, hi)
+        axis_matrices.append((matrix, scale))
+        values = {key: sum(matrix[key[axis]][j] * values[key[:axis] + (j,) + key[axis+1:]]
                            for j in range(d + 1)) for key in KEYS}
-    return {key: (value * GRID).__floor__() for key, value in values.items()}
+        denominator *= scale
+        stages.append((values, denominator))
+    return stages, axis_matrices
+
+
+def nested_vec(rows):
+    return "![" + ", ".join(map(str, rows)) + "]"
+
+
+def print_tensor(name, values):
+    d0, d1, d2 = (d + 1 for d in DEGREES)
+    slabs = [nested_vec(nested_vec(values[a, b, c] for c in range(d2)) for b in range(d1)) for a in range(d0)]
+    print(f"def {name} : GridIndex degree → ℤ := tensorOf3 ![\n  " + ",\n  ".join(slabs) + "]\n")
+
+
+def emit_initial(weights, tail, stages, matrices):
+    print("import Mordell.BernsteinInit\nimport Mordell.InnerCoverData\n")
+    print("/-! Generated integer witnesses for the three root-coordinate transforms. -/\n")
+    print("namespace Mordell.InnerCoverData\n")
+    print("set_option maxRecDepth 25000\nset_option maxHeartbeats 0\n")
+    print(f"def sourceDen : ℕ := {SOURCE_GRID}")
+    inside = {key: int(weights.get(key, Q(0)) * SOURCE_GRID) for key in KEYS}
+    print_tensor("sourceInside", inside)
+    outside = [(key, a) for key, a in sorted(weights.items()) if key not in inside]
+    print("def sourceOutside : PowerTerms 3 ℚ := [\n  " + ",\n  ".join(
+        "(" + nested_vec(key) + ", " + lean_rat(a) + ")" for key, a in outside) + "]\n")
+    den0 = stages[0][1]
+    print(f"def inputMultiplier : ℤ := {den0 // SOURCE_GRID}")
+    print(f"def tailNumerator : ℤ := {int(tail * den0)}\n")
+    for j, (matrix, scale) in enumerate(matrices):
+        print(f"def axisDen{j} : ℕ := {scale}")
+        print(f"def axisMatrix{j} : Fin (degree {j} + 1) → Fin (degree {j} + 1) → ℤ :=\n  "
+              + nested_vec(nested_vec(row) for row in matrix) + "\n")
+    for j, (data, den) in enumerate(stages):
+        print(f"def stageDen{j} : ℕ := {den}")
+        print_tensor(f"stage{j}", data)
+    print("end Mordell.InnerCoverData")
 
 
 def split(values, axis, right):
@@ -145,7 +190,14 @@ def main():
 
     coefficients, _, _ = kernel_bridge.reconstruct()
     box = archive.ROOTS[1]
-    coeffs = initial(lower_power_terms(coefficients, kernel_bridge.SCALE), box, archive.cover.transform)
+    weights = rounded_source(coefficients, kernel_bridge.SCALE)
+    trimmed, tail = lower_power_terms(weights)
+    stages, matrices = transform_stages(trimmed, box, archive.cover.transform)
+    if sys.argv[1:] == ["--initial"]:
+        emit_initial(weights, tail, stages, matrices)
+        return
+    controls, denominator = stages[-1]
+    coeffs = {key: value * GRID // denominator for key, value in controls.items()}
     tape = (ARCHIVE / "1.txt").read_bytes().strip()
     nodes = render(iter(tape), box, coeffs)
     if sys.argv[1:] == ["--checks"]:

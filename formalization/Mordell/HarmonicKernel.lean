@@ -66,6 +66,18 @@ def matrixGram {κ : Type*} [Fintype κ] {n : ℕ} (Q : Matrix κ κ ℝ)
   matrixForm Q (fun a => (f i a).re) (fun a => (f j a).re) +
     matrixForm Q (fun a => (f i a).im) (fun a => (f j a).im)
 
+theorem sum_matrixGram {κ : Type*} [Fintype κ] {n : ℕ} (Q : Matrix κ κ ℝ)
+    (f : Fin n → κ → ℂ) :
+    (∑ i, ∑ j, matrixGram Q f i j) =
+      matrixForm Q (fun a => (∑ i, f i a).re) (fun a => (∑ i, f i a).re) +
+      matrixForm Q (fun a => (∑ i, f i a).im) (fun a => (∑ i, f i a).im) := by
+  simp only [matrixGram, Finset.sum_add_distrib, sum_matrixForm]
+  have hRe (a : κ) : (∑ i, f i a).re = ∑ i, (f i a).re :=
+    map_sum Complex.reAddGroupHom (fun i => f i a) Finset.univ
+  have hIm (a : κ) : (∑ i, f i a).im = ∑ i, (f i a).im :=
+    map_sum Complex.imAddGroupHom (fun i => f i a) Finset.univ
+  simp only [hRe, hIm]
+
 theorem matrixGram_symm {κ : Type*} [Fintype κ] {n : ℕ} {Q : Matrix κ κ ℝ}
     (hQ : Q.IsHermitian) (f : Fin n → κ → ℂ) (i j : Fin n) :
     matrixGram Q f i j = matrixGram Q f j i := by
