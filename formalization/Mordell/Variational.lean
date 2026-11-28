@@ -1,8 +1,10 @@
 import Mordell.PairGeometry
+import Mathlib.Analysis.Calculus.DerivativeTest
 import Mathlib.Analysis.Calculus.LocalExtr.Basic
+import Mathlib.Analysis.Complex.RealDeriv
 import Mathlib.Analysis.SpecialFunctions.Log.Deriv
 
-/-! First-order calculus for the finite distance product. -/
+/-! Variational calculus for the finite distance product. -/
 
 open scoped BigOperators ComplexConjugate Topology
 
@@ -36,51 +38,72 @@ private theorem affinePath_valid_near_zero {n : ℕ} {z : Configuration n}
   filter_upwards [hp.mem_nhds hp0, hm.mem_nhds hm0] with t ht ht'
   exact ⟨injective_of_distanceProduct_pos ht, ht'⟩
 
-private theorem normSq_affine_hasDerivAt (a v : ℂ) :
+private theorem normSq_affine_hasDerivAt (a v : ℂ) (t : ℝ) :
     HasDerivAt (fun t : ℝ => Complex.normSq (a + (t : ℂ) * v))
-      (2 * realDot v a) 0 := by
-  have hr := (((hasDerivAt_id (0 : ℝ)).mul_const v.re).const_add a.re).pow 2
-  have hi := (((hasDerivAt_id (0 : ℝ)).mul_const v.im).const_add a.im).pow 2
+      (2 * realDot v (a + (t : ℂ) * v)) t := by
+  have hr := (((hasDerivAt_id t).mul_const v.re).const_add a.re).pow 2
+  have hi := (((hasDerivAt_id t).mul_const v.im).const_add a.im).pow 2
   convert hr.add hi using 1
   · funext t
     simp only [Complex.normSq_apply, Complex.add_re, Complex.add_im, Complex.mul_re,
       Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im, zero_mul, add_zero, sub_zero, id_eq,
       Pi.add_apply, Pi.pow_apply]
     ring
-  · simp only [id_eq, zero_mul, add_zero, realDot,
-      Complex.mul_re, Complex.conj_re, Complex.conj_im]
-    norm_num
+  · simp only [id_eq, realDot, Complex.mul_re, Complex.conj_re, Complex.conj_im, Complex.add_re,
+      Complex.add_im, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im, zero_mul, add_zero, sub_zero]
     ring
 
-private theorem mass_affine_hasDerivAt {n : ℕ} (z v : Configuration n) :
+private theorem mass_affine_hasDerivAt {n : ℕ} (z v : Configuration n) (t : ℝ) :
     HasDerivAt (fun t => mass (affinePath z v t))
-      (2 * ∑ i, realDot (v i) (z i)) 0 := by
+      (2 * ∑ i, realDot (v i) (affinePath z v t i)) t := by
   rw [Finset.mul_sum]
-  exact HasDerivAt.fun_sum fun i _ => normSq_affine_hasDerivAt (z i) (v i)
+  exact HasDerivAt.fun_sum fun i _ => normSq_affine_hasDerivAt (z i) (v i) t
 
-private theorem log_normSq_affine_hasDerivAt {a : ℂ} (ha : a ≠ 0) (v : ℂ) :
+private theorem log_normSq_affine_hasDerivAt (a v : ℂ) {t : ℝ} (ha : a + (t : ℂ) * v ≠ 0) :
     HasDerivAt (fun t : ℝ => Real.log (Complex.normSq (a + (t : ℂ) * v)))
-      (2 * (v / a).re) 0 := by
-  have h := normSq_affine_hasDerivAt a v
-  have hn : Complex.normSq (a + ((0 : ℝ) : ℂ) * v) ≠ 0 := by
-    simpa using (Complex.normSq_pos.mpr ha).ne'
+      (2 * (v / (a + (t : ℂ) * v)).re) t := by
+  have h := normSq_affine_hasDerivAt a v t
+  have hn := (Complex.normSq_pos.mpr ha).ne'
   convert h.log hn using 1
-  simp only [Complex.ofReal_zero, zero_mul, add_zero, Complex.div_re, realDot, Complex.mul_re,
+  generalize a + (t : ℂ) * v = w
+  simp only [Complex.div_re, realDot, Complex.mul_re,
     Complex.conj_im, Complex.conj_re]
   ring
 
 private def logDirection {n : ℕ} (z v : Configuration n) (i j : Fin n) : ℝ :=
   ((v i - v j) / (z i - z j)).re
 
-private theorem logDistance_affine_hasDerivAt {n : ℕ} {z v : Configuration n} {i j : Fin n}
-    (h : z i ≠ z j) :
-    HasDerivAt (fun t => Real.log (distanceSq (affinePath z v t) i j))
-      (2 * logDirection z v i j) 0 := by
-  convert log_normSq_affine_hasDerivAt (sub_ne_zero.mpr h) (v i - v j) using 1
-  funext t
-  simp only [affinePath, distanceSq]
-  congr 2
+private theorem affinePath_sub {n : ℕ} (z v : Configuration n) (t : ℝ) (i j : Fin n) :
+    affinePath z v t i - affinePath z v t j = z i - z j + (t : ℂ) * (v i - v j) := by
+  unfold affinePath
   ring
+
+private theorem logDistance_affine_hasDerivAt {n : ℕ} {z v : Configuration n} {i j : Fin n} {t : ℝ}
+    (h : affinePath z v t i ≠ affinePath z v t j) :
+    HasDerivAt (fun s => Real.log (distanceSq (affinePath z v s) i j))
+      (2 * logDirection (affinePath z v t) v i j) t := by
+  have hn : z i - z j + (t : ℂ) * (v i - v j) ≠ 0 := by
+    rw [← affinePath_sub]
+    exact sub_ne_zero.mpr h
+  simpa only [distanceSq, logDirection, affinePath_sub] using
+    log_normSq_affine_hasDerivAt (z i - z j) (v i - v j) hn
+
+private theorem pairSum_hasDerivAt {n : ℕ} {f : ℝ → Fin n → Fin n → ℝ} {d : Fin n → Fin n → ℝ} {t : ℝ}
+    (h : ∀ i j, i < j → HasDerivAt (fun s => f s i j) (d i j) t) :
+    HasDerivAt (fun s => pairSum (f s)) (pairSum d) t := by
+  unfold pairSum
+  apply HasDerivAt.fun_sum
+  intro i _
+  apply HasDerivAt.fun_sum
+  intro j _
+  by_cases hij : i < j
+  · simpa only [hij, if_true] using h i j hij
+  · simpa only [hij, if_false] using hasDerivAt_const t 0
+
+private theorem pairSum_const_mul {n : ℕ} (c : ℝ) (f : Fin n → Fin n → ℝ) :
+    pairSum (fun i j => c * f i j) = c * pairSum f := by
+  unfold pairSum
+  simp only [Finset.mul_sum, mul_ite, mul_zero]
 
 private theorem pairSum_logDirection_eq {n : ℕ} (z v : Configuration n) :
     pairSum (logDirection z v) = (∑ i, v i * force z i).re := by
@@ -115,21 +138,10 @@ private theorem log_product_affine_hasDerivAt {n : ℕ} {z : Configuration n}
       (2 * (∑ i, v i * force z i).re) 0 := by
   have hpair : HasDerivAt (fun t => pairSum (fun i j => Real.log (distanceSq (affinePath z v t) i j)))
       (2 * pairSum (logDirection z v)) 0 := by
-    have hscale (i j : Fin n) :
-        (if i < j then 2 * logDirection z v i j else 0) =
-          2 * (if i < j then logDirection z v i j else 0) := by split <;> simp
-    have hs : HasDerivAt (fun t => pairSum (fun i j => Real.log (distanceSq (affinePath z v t) i j)))
-        (∑ i : Fin n, ∑ j : Fin n, if i < j then 2 * logDirection z v i j else 0) 0 := by
-      apply HasDerivAt.fun_sum
-      intro i _
-      apply HasDerivAt.fun_sum
-      intro j _
-      by_cases hij : i < j
-      · simp only [hij, if_true]
-        exact logDistance_affine_hasDerivAt (hz.ne hij.ne)
-      · simp only [hij, if_false]
-        exact hasDerivAt_const _ _
-    simpa only [hscale, ← Finset.mul_sum, pairSum] using hs
+    have hd (i j : Fin n) (hij : i < j) :=
+      logDistance_affine_hasDerivAt (z := z) (v := v) (i := i) (j := j) (t := 0)
+        (by simpa only [affinePath_zero] using hz.ne hij.ne)
+    simpa only [pairSum_const_mul, affinePath_zero] using pairSum_hasDerivAt hd
   rw [pairSum_logDirection_eq] at hpair
   apply hpair.congr_of_eventuallyEq
   filter_upwards [affinePath_valid_near_zero hz hq v] with t ht
@@ -141,11 +153,11 @@ private theorem penalized_affine_hasDerivAt {n : ℕ} {q : ℝ} {z : Configurati
       (2 * (∑ i, v i * forceResidual ((pairCount n : ℝ) / q) z i).re) 0 := by
   let m := (pairCount n : ℝ) / q
   have h := (log_product_affine_hasDerivAt hz hq v).sub
-    ((mass_affine_hasDerivAt z v).const_mul m)
+    ((mass_affine_hasDerivAt z v 0).const_mul m)
   have him (f : Fin n → ℂ) : (∑ i, f i).re = ∑ i, (f i).re :=
     map_sum Complex.reAddGroupHom f Finset.univ
   convert h using 1
-  · simp only [forceResidual, mul_sub, Finset.sum_sub_distrib, Complex.sub_re, him]
+  · simp only [forceResidual, mul_sub, Finset.sum_sub_distrib, Complex.sub_re, him, affinePath_zero]
     have hterm (i : Fin n) : (v i * ((m : ℂ) * conj (z i))).re = m * realDot (v i) (z i) := by
       rw [show v i * ((m : ℂ) * conj (z i)) = (m : ℂ) * (v i * conj (z i)) by ring]
       simp [realDot]
@@ -230,5 +242,81 @@ theorem stationary_at_mass_n_sub_one {n : ℕ} {z : Configuration n} (hn : 1 < n
   rw [hcount, Complex.ofReal_div, Complex.ofReal_natCast] at h
   norm_num at h ⊢
   exact h
+
+private theorem logDirection_affine_hasDerivAt {n : ℕ} {z v : Configuration n} {i j : Fin n}
+    (h : z i ≠ z j) :
+    HasDerivAt (fun t : ℝ => logDirection (affinePath z v t) v i j)
+      (-(((v i - v j) / (z i - z j)) ^ 2).re) 0 := by
+  let a := z i - z j
+  let b := v i - v j
+  have ha : a ≠ 0 := sub_ne_zero.mpr h
+  have hd : HasDerivAt (fun w : ℂ => a + w * b) b ((0 : ℝ) : ℂ) := by
+    simpa using ((hasDerivAt_id ((0 : ℝ) : ℂ)).mul_const b).const_add a
+  have hq := ((hasDerivAt_const ((0 : ℝ) : ℂ) b).div hd (by simpa using ha)).real_of_complex
+  simp only [logDirection, affinePath_sub, div_pow]
+  simpa only [Pi.div_apply, Complex.ofReal_zero, zero_mul, add_zero, zero_sub, neg_div,
+    Complex.neg_re, pow_two, a, b] using hq
+
+private theorem realDot_affine (a v : ℂ) (t : ℝ) :
+    realDot v (a + (t : ℂ) * v) = realDot v a + t * Complex.normSq v := by
+  simp only [realDot, Complex.mul_re, Complex.conj_re, Complex.conj_im, Complex.add_re,
+    Complex.add_im, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im, zero_mul, add_zero,
+    sub_zero, Complex.normSq_apply]
+  ring
+
+/-- At a positive-mass maximizer the real second variation gives a nonnegative
+    quadratic form in every complex displacement. -/
+theorem secondVariation_nonneg {n : ℕ} {q : ℝ} {z : Configuration n} (hn : 1 < n)
+    (hq : 0 < q) (hz : IsMaximizer q z) (v : Configuration n) :
+    0 ≤ (pairCount n : ℝ) / q * mass v +
+      pairSum (fun i j => (((v i - v j) / (z i - z j)) ^ 2).re) := by
+  let m := (pairCount n : ℝ) / q
+  let f (t : ℝ) := pairSum (fun i j => Real.log (distanceSq (affinePath z v t) i j)) -
+    m * mass (affinePath z v t)
+  let g (t : ℝ) := 2 * pairSum (logDirection (affinePath z v t) v) -
+    2 * m * ((∑ i, realDot (v i) (z i)) + t * mass v)
+  let Q := pairSum (fun i j => (((v i - v j) / (z i - z j)) ^ 2).re)
+  have hi := injective_of_maximizer hn hq hz
+  have hm : 0 < mass z := hz.1.symm ▸ hq
+  have hv := affinePath_valid_near_zero hi hm v
+  have hl : IsLocalMax f 0 := by
+    filter_upwards [hv] with t ht
+    simpa only [f, ← log_distanceProduct ht.1, affinePath_zero, ← log_distanceProduct hi] using
+      penalizedLogProduct_le_of_maximizer hq hz ht.1 ht.2
+  have hf (t : ℝ) (ht : Function.Injective (affinePath z v t)) : HasDerivAt f (g t) t := by
+    have hpair := pairSum_hasDerivAt (fun i j hij =>
+      logDistance_affine_hasDerivAt (t := t) (ht.ne (ne_of_lt hij)))
+    have hd := hpair.sub ((mass_affine_hasDerivAt z v t).const_mul m)
+    convert hd using 1
+    simp only [g, pairSum_const_mul, affinePath, realDot_affine,
+      Finset.sum_add_distrib, ← Finset.mul_sum, mass]
+    ring
+  have he : deriv f =ᶠ[𝓝 0] g := hv.mono fun t ht => (hf t ht.1).deriv
+  have hg : HasDerivAt g (-2 * (m * mass v + Q)) 0 := by
+    have hpair := pairSum_hasDerivAt (fun i j hij =>
+      logDirection_affine_hasDerivAt (v := v) (hi.ne (ne_of_lt hij)))
+    have hsum := (((hasDerivAt_id (0 : ℝ)).mul_const (mass v)).const_add
+      (∑ i, realDot (v i) (z i))).const_mul (2 * m)
+    have hd := (hpair.const_mul 2).sub hsum
+    have hQ : pairSum (fun i j => -(((v i - v j) / (z i - z j)) ^ 2).re) = -Q := by
+      simpa only [neg_one_mul, Q] using pairSum_const_mul (-1) (fun i j =>
+        (((v i - v j) / (z i - z j)) ^ 2).re)
+    convert hd using 1
+    simp only [hQ, one_mul]
+    ring
+  have hs : deriv (deriv f) 0 = -2 * (m * mass v + Q) :=
+    he.deriv_eq.trans hg.deriv
+  by_contra! h
+  have hpos : 0 < deriv (deriv f) 0 := by
+    rw [hs]
+    change m * mass v + Q < 0 at h
+    linarith
+  have hmin := isLocalMin_of_deriv_deriv_pos hpos hl.deriv_eq_zero (hf 0 (by simpa using hi)).continuousAt
+  have hc : f =ᶠ[𝓝 0] fun _ => f 0 := by
+    filter_upwards [hl, hmin] with t ht ht'
+    exact le_antisymm ht ht'
+  have hzero := hc.deriv.deriv_eq
+  simp only [deriv_const', deriv_const] at hzero
+  exact hpos.ne' hzero
 
 end Mordell

@@ -10,6 +10,7 @@ import Mordell.TriangleRigidity
 import Mordell.PairGeometry
 import Mordell.TwelveRadial
 import Mordell.Variational
+import Mordell.TenVariation
 import Mordell.TwelveEquality
 import Mordell.GramReplay
 import Mordell.TwelveCandidate

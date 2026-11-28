@@ -54,3 +54,6 @@ import Mordell
 #print axioms Mordell.InnerCoverData.signed_inner_coefficients_bound
 #print axioms Mordell.twelveWard_moments
 #print axioms Mordell.twelveWard_pairSum_zero
+#print axioms Mordell.secondVariation_nonneg
+#print axioms Mordell.tenRadialVariation_pairSum_nonneg
+#print axioms Mordell.tenVariation_pairSum_nonneg
