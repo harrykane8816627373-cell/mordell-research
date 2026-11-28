@@ -1,5 +1,18 @@
 # 复现指南
 
+## Lean 形式化
+
+从仓库根目录运行。工具链和 Mathlib 版本由 `formalization/` 中的配置锁定。
+
+```bash
+cd formalization
+lake exe cache get
+lake build
+lake env lean AxiomAudit.lean
+```
+
+构建包含已接入 Lean 的证书及解析证明。各案的覆盖范围和仍需证明的前提见 [Lean 进度](../formalization/README.md)。
+
 ## 十点全局范围与局部锐界
 
 从仓库根目录运行。接受器只用 Python 标准库，接触几何还复核固定的 Jacobian 原生结果，无需安装或重启后端。

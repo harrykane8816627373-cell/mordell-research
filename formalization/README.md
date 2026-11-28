@@ -24,6 +24,7 @@ lake exe cache get
 |十点候选|五条代数方程在论文的有理盒中恰有一根。Lean 核检查预条件固定点映射的有理展开、盒内映射和压缩上界。由该根定义的构型可行且无碰撞，并给出可达下界。|
 |十点等号|径向罚项锁定三个平方半径，有限整数检查推出 \(2,4,4\) 人口。用内外带的 Chebyshev 特征恢复每层一阶与二阶矩，并验证二阶投影支点非零。两点层固定共同相位，四点层的矩确定两对对径点。Lean 验证所得构型与候选构型只相差旋转与重排。|
 |十点二阶变分|质量惩罚后的对数积沿任意复位移的二阶变分非正。Lean 将径向位移及其乘以 \(i\) 后的位移化成存档的两种逐边表达式，证明以任意两个实对称正半定矩阵加权时，两块在质量九极大构型上的总和非负。|
+|十点零和修正|在质量九的极大构型上，证书中五种 Ward 矩对应的逐边核求和为零。逐点径向力行和质量行允许任意端点权重。分带人口为八时，人口行也有加权零和。给定八个外点的循环次序，三个短程角类减去两倍对径类的端点权重总和为零。|
 |十二点分带|在已知两条径向带及 Ward 预算时，用五个有理子区间的 Bernstein 控制值验证四条仿射下界，推出内带恰有三个点。|
 |十二点驻点根盒|Lean 使用存档中的 23 个坐标、中心、半径 \(2^{-80}\) 和预条件矩阵。核检查中心残差和逐对有理割线包络，证明全盒压缩以及唯一驻点。驻点到中心的距离至多为 \(2^{-205}\)，质量为 12，由此得到可达下界。|
 |十二点候选|两种存档对称置换经旋转到规范坐标后仍落在原盒中。Lean 用唯一性推出它们固定驻点，并将质量 11 的驻点识别为四个三角形轨道。三个平方半径互异，四个种子的三次像互异，第三谐波投影支点和外层三次像之和均非零。|
@@ -37,7 +38,7 @@ lake exe cache get
 
 ## 全域证书的形式化状态
 
-两案的 Lean 锐界定理仍带有显式证书前提。`sharp_ten_of_gram_bounds` 和 `TwelveRootBox.isolated_sharp_of_gram_bounds` 分别使用两案的精确候选。十二点 `InnerCoverData.signed_inner_archive_power_bound` 已将这个根盒的逐点比较接到导出的有理幂基多项式。`signed_inner_coefficients_bound` 把后续衔接转成真实核的逐项系数下界。精确接触修正的系数区间、几何必要域、局部接触盒和其余全域叶子仍待验证。现有十点 50,267 节点与十二点 728,050 节点由 Python 精确验收器复现。 [十点全域证明](../ten-point-sharp-contacts/README.md) · [十二点全域证明](../twelve-point-sharp-global/README.md)
+两案的 Lean 锐界定理仍带有显式证书前提。`sharp_ten_of_gram_bounds` 和 `TwelveRootBox.isolated_sharp_of_gram_bounds` 分别使用两案的精确候选。十二点 `InnerCoverData.signed_inner_archive_power_bound` 已将这个根盒的逐点比较接到导出的有理幂基多项式。`signed_inner_coefficients_bound` 把后续衔接转成真实核的逐项系数下界。精确接触修正的系数区间、几何必要域、局部接触盒和其余全域叶子仍待验证。十点还需在 Lean 中证明必要角域给出的角类与外点循环次序一致。现有十点 50,267 节点与十二点 728,050 节点由 Python 精确验收器复现。 [十点全域证明](../ten-point-sharp-contacts/README.md) · [十二点全域证明](../twelve-point-sharp-global/README.md)
 
 `tools/generate_gram_data.py` 和 `tools/generate_twelve_root_data.py` 分别生成 `Mordell/GramData.lean` 和 `Mordell/TwelveRootData.lean`。生成器读取仓库已有的证书数据。Lean 重新检查导出的矩阵区间、逐对割线包络和压缩行和。
 

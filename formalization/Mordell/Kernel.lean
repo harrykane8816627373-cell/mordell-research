@@ -34,6 +34,19 @@ theorem pairSum_baseKernel {n : ℕ} (hn : 1 < n) (B : ℝ) (u : Fin n → ℝ)
       field_simp [hne, hne']
       ring
 
+theorem pairSum_diagonal_correction {n : ℕ} (hn : 1 < n) (u : Fin n → ℝ)
+    (hu : ∑ i, u i = (n : ℝ) - 1) (K : Fin n → Fin n → ℝ)
+    (hK : ∀ i j, K i j = K j i) :
+    pairSum (fun i j => -K i j - (K i i + K j j) / (2 * ((n : ℝ) - 1))) =
+      -(∑ i, ∑ j, K i j) / 2 := by
+  have h := pairSum_baseKernel hn 0 u K hK hu
+  have h₀ := pairSum_baseKernel hn 0 u (fun _ _ => 0) (fun _ _ => rfl) hu
+  have he (i j : Fin n) : -K i j - (K i i + K j j) / (2 * ((n : ℝ) - 1)) =
+      baseKernel 0 u K i j - baseKernel 0 u (fun _ _ => 0) i j := by
+    simp only [baseKernel, zero_div, sub_zero, add_zero]
+    ring
+  simp only [he, pairSum_sub, h, h₀, Finset.sum_const_zero, zero_div, sub_zero, zero_sub, neg_div]
+
 theorem pairSum_symmetrized_rows {n : ℕ} (r : Fin n → Fin n → ℝ)
     (hdiag : ∀ i, r i i = 0) (hrow : ∀ i, ∑ j, r i j = 0) :
     pairSum (fun i j => r i j + r j i) = 0 := by
@@ -44,6 +57,19 @@ theorem pairSum_symmetrized_rows {n : ℕ} (r : Fin n → Fin n → ℝ)
   simp only [Finset.sum_add_distrib, hdiag, hrow, hs, Finset.sum_const_zero, add_zero,
     sub_zero] at he
   linarith
+
+/-- Weight any zero-sum row before symmetrizing, with the diagonal excluded. -/
+theorem pairSum_weighted_rows {n : ℕ} (a : Fin n → ℝ) (r : Fin n → Fin n → ℝ)
+    (h : ∀ i, (∑ j, if i = j then 0 else r i j) = 0) :
+    pairSum (fun i j => a i * r i j + a j * r j i) = 0 := by
+  let R (i j : Fin n) := if i = j then 0 else a i * r i j
+  have hrow (i : Fin n) : (∑ j, R i j) = 0 := by
+    simpa only [R, Finset.mul_sum, mul_ite, mul_zero] using congrArg (a i * ·) (h i)
+  have he := pairSum_symmetrized_rows R (by simp [R]) hrow
+  have hEq (i j : Fin n) (hij : i < j) : a i * r i j + a j * r j i = R i j + R j i := by
+    simp only [R, if_neg hij.ne, if_neg hij.ne']
+  exact (le_antisymm (pairSum_mono fun i j hij => (hEq i j hij).le)
+    (pairSum_mono fun i j hij => (hEq i j hij).ge)).trans he
 
 theorem mass_row_zero (u : Fin 10 → ℝ) (hu : ∑ i, u i = 9) (i : Fin 10) :
     (∑ j, if j = i then 0 else u j - 1 + u i / 9) = 0 := by

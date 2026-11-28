@@ -149,15 +149,8 @@ theorem twelveWard_pairSum_zero {z : Configuration 12} (hz : IsMaximizer 11 z)
     simp only [K, twelveWardKernel, Finset.sum_add_distrib, h1, h0, h2, h3, add_zero]
   let u (i : Fin 12) := Complex.normSq (z i)
   have hu : (∑ i, u i) = (12 : ℝ) - 1 := by norm_num; exact hz.1
-  have h1 := pairSum_baseKernel (by decide : 1 < 12) 0 u K hs hu
-  have h0 := pairSum_baseKernel (by decide : 1 < 12) 0 u (fun _ _ => 0) (fun _ _ => rfl) hu
-  rw [hsum] at h1
-  have he (i j : Fin 12) : -K i j - (K i i + K j j) / 22 =
-      baseKernel 0 u K i j - baseKernel 0 u (fun _ _ => 0) i j := by
-    norm_num [baseKernel]
-    ring
-  change pairSum (fun i j => -K i j - (K i i + K j j) / 22) = 0
-  simp only [he, pairSum_sub, h1, h0]
-  norm_num
+  have hc := pairSum_diagonal_correction (by decide : 1 < 12) u hu K hs
+  norm_num [hsum] at hc
+  exact hc
 
 end Mordell

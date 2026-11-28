@@ -57,3 +57,11 @@ import Mordell
 #print axioms Mordell.secondVariation_nonneg
 #print axioms Mordell.tenRadialVariation_pairSum_nonneg
 #print axioms Mordell.tenVariation_pairSum_nonneg
+#print axioms Mordell.pairSum_diagonal_correction
+#print axioms Mordell.pairSum_weighted_rows
+#print axioms Mordell.tenWard_moments
+#print axioms Mordell.tenWardCorrection_pairSum_zero
+#print axioms Mordell.tenRadialForceCorrection_pairSum_zero
+#print axioms Mordell.tenMassCorrection_pairSum_zero
+#print axioms Mordell.tenPopulationCorrection_pairSum_zero
+#print axioms Mordell.tenOuterAngleCorrection_pairSum_zero

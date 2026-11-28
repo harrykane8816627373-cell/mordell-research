@@ -1,13 +1,13 @@
 # Mordell 距离乘积研究
 
-蒋丰灿（Fengcan Jiang）研究项目，推导、精确证书与代码包含 OpenAI Codex 协作。更新于 **2026-11-26**。
+蒋丰灿（Fengcan Jiang）研究项目，推导、精确证书与代码包含 OpenAI Codex 协作。更新于 **2026-11-28**。
 
 **十点与十二点的全局锐界和唯一性**
 
 - 十点 · [英文论文 PDF](ten-point-sharp-contacts/manuscript/mordell-n10-proof.pdf) · [LaTeX 源文件](ten-point-sharp-contacts/manuscript/mordell-n10-proof.tex) · [证明与证书](ten-point-sharp-contacts/README.md) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24537890)
 - 十二点 · [英文论文 PDF](twelve-point-sharp-global/manuscript/mordell-n12-proof.pdf) · [LaTeX 源文件](twelve-point-sharp-global/manuscript/mordell-n12-proof.tex) · [证明与证书](twelve-point-sharp-global/README.md)
 
-[当前证明状态](configuration-bounds/PROOF_STATUS.md) · [复现指南](docs/REPRODUCING.md)
+[当前证明状态](configuration-bounds/PROOF_STATUS.md) · [Lean 形式化及构建](formalization/README.md) · [复现指南](docs/REPRODUCING.md)
 
 ## 十点与十二点的最大值和构型
 
@@ -19,6 +19,8 @@ M_n=\max_{\sum_{i=1}^n|z_i|^2=n}\prod_{1\le i<j\le n}|z_i-z_j|^2.
 **M₁₀ = C₁₀ ≈ 5.3823025895657 × 10¹⁰。** 唯一最大构型由一对内层对径点和两个同心矩形组成，三层点数为 **2、4、4**，允许旋转与点重排。分角类精确核用 **50,267 个节点**覆盖全部六类必要点对域，补偿为零，未决为零。 [十点证明与复现](ten-point-sharp-contacts/README.md) · [全域复核报告](ten-point-sharp-contacts/global_verification_report.json)
 
 **M₁₂ = C₁₂ ≈ 2.599464093232166 × 10¹⁴。** 最大构型在整体旋转和点重排下唯一。三层人口为 **3、3、6**，内、中层各为正三角形，外层为两条共圆正三角形。证明用 Ward 缺额锁定径向分带，再使核在十四类点对上精确取等。最终 **728,050 个节点**的连续覆盖补偿为零，未决为零。 [论文与复现入口](twelve-point-sharp-global/manuscript/README.md) · [精确复核报告](twelve-point-sharp-global/verification_report.json)
+
+全局锐界由论文和 Python 精确证书给出。Lean 已验证两案的候选根盒、可达下界、等号恢复和部分上界证书，完整的 Lean 锐界仍待接入精确接触系数、几何必要域及剩余逐边覆盖。 [Lean 核验范围](configuration-bounds/PROOF_STATUS.md#lean-形式化进度)
 
 ## 当前结果
 
