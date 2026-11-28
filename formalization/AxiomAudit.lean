@@ -36,3 +36,13 @@ import Mordell
 #print axioms Mordell.TwelveRootBox.isolated_radii_order
 #print axioms Mordell.TwelveRootBox.isolated_thirdReference_ne
 #print axioms Mordell.TwelveRootBox.isolated_sharp_of_gram_bounds
+#print axioms Mordell.powerControls_sound
+#print axioms Mordell.splitControls_lower
+#print axioms Mordell.replayBoxes_sound
+#print axioms Mordell.gramPrune_sound
+#print axioms Mordell.logUpperRat_sound
+#print axioms Mordell.log_tangent_controls_sound
+#print axioms Mordell.log_deficit_quadratic_rat
+#print axioms Mordell.cleared_cubic_log_rat
+#print axioms Mordell.GridTree.sound
+#print axioms Mordell.InnerCoverData.signed_inner_rational_bound

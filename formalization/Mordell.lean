@@ -13,3 +13,4 @@ import Mordell.Variational
 import Mordell.TwelveEquality
 import Mordell.GramReplay
 import Mordell.TwelveCandidate
+import Mordell.TwelveInnerCover
