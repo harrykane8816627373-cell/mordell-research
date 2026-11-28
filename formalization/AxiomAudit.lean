@@ -23,3 +23,16 @@ import Mordell
 #print axioms Mordell.twelve_orbit_of_layer_moments
 #print axioms Mordell.sharp_ten_of_gram_bounds
 #print axioms Mordell.sharp_twelve_of_gram_bounds
+#print axioms Mordell.ten_gram_box_posDef
+#print axioms Mordell.twelve_gram_box_posDef
+#print axioms Mordell.TwelveRootBox.midpoint_preconditioned_small
+#print axioms Mordell.TwelveRootBox.uniform_secant_rows
+#print axioms Mordell.TwelveRootBox.existsUnique_stationary
+#print axioms Mordell.TwelveRootBox.stationary_close_to_center
+#print axioms Mordell.exactTwelveValue_le_of_maximizer
+#print axioms Mordell.massElevenTwelve_stationary
+#print axioms Mordell.TwelveRootBox.regauged_symmetry_fixed
+#print axioms Mordell.TwelveRootBox.isolated_sameOrbit_candidate
+#print axioms Mordell.TwelveRootBox.isolated_radii_order
+#print axioms Mordell.TwelveRootBox.isolated_thirdReference_ne
+#print axioms Mordell.TwelveRootBox.isolated_sharp_of_gram_bounds

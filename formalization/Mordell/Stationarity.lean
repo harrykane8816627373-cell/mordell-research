@@ -47,6 +47,21 @@ def force {n : ℕ} (z : Configuration n) (i : Fin n) : ℂ :=
 def Stationary {n : ℕ} (multiplier : ℂ) (z : Configuration n) : Prop :=
   ∀ i, force z i = multiplier * conj (z i)
 
+theorem Stationary.scale {n : ℕ} {multiplier : ℂ} {z : Configuration n}
+    (h : Stationary multiplier z) (s : ℂ) :
+    Stationary (multiplier / (Complex.normSq s : ℂ)) (Mordell.scale s z) := by
+  have hf (i : Fin n) : force (Mordell.scale s z) i = s⁻¹ * force z i := by
+    simp only [force, Finset.mul_sum]
+    refine Finset.sum_congr rfl fun j _ => ?_
+    by_cases hij : i = j
+    · simp [hij]
+    · simp only [if_neg hij, Mordell.scale, ← mul_sub, mul_inv_rev]
+      ring
+  intro i
+  rw [hf, h i, Complex.inv_def]
+  simp only [Mordell.scale, map_mul, ← Complex.ofReal_inv, div_eq_mul_inv]
+  ring
+
 def powerMoment {n : ℕ} (z : Configuration n) (k : ℕ) : ℂ := ∑ i, z i ^ k
 
 theorem force_pairing {n : ℕ} (z : Configuration n) (v : Fin n → ℂ) :
